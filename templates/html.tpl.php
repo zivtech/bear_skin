@@ -17,7 +17,7 @@
   <meta http-equiv="cleartype" content="on">
   <?php print $styles; ?>
   <?php if (theme_get_setting('sticky_footer')): ?>
-    <link href="<?php print $base_path . $path_to_bear; ?>/css/sticky-footer.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="<?php print $base_path . $path_to_bear_skin; ?>/css/sticky-footer.css" media="all" rel="stylesheet" type="text/css" />
   <?php endif; ?>
   <?php print $scripts; ?>
   <?php if ($add_respond_js): ?>
@@ -40,7 +40,7 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
 <?php if (theme_get_setting('responsive_nav')): ?>
-    <script src="<?php print $base_path . $path_to_bear; ?>/js/jquery.meanmenu.2.0.min.js"></script>
+    <script src="<?php print $base_path . $path_to_bear_skin; ?>/js/jquery.meanmenu.2.0.min.js"></script>
     <script>
     (function ($, Drupal, window, document, undefined) {
       $(function () {

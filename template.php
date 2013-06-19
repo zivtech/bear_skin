@@ -1,14 +1,14 @@
 <?php
 
 /* Adding path variables */
-function bear_preprocess_html(&$variables, $hook) {
+function bear_skin_preprocess_html(&$variables, $hook) {
   // Add variables and paths needed for HTML5 and responsive support.
   $variables['base_path'] = base_path();
-  $variables['path_to_bear'] = drupal_get_path('theme', 'bear');
+  $variables['path_to_bear'] = drupal_get_path('theme', 'bear_skin');
 }
 
 /* Enabling submenu items for main menu */ 
-function bear_links($variables) {
+function bear_skin_links($variables) {
   if (array_key_exists('id', $variables['attributes']) && $variables['attributes']['id'] == 'nav') {
       $pid = variable_get('menu_main_links_source', 'nav');
     $tree = menu_tree($pid);
@@ -21,7 +21,7 @@ function bear_links($variables) {
 Let's load some CSS on specific targets - uncomment to use
 ************************/
 
-// function bear_preprocess_node(&$vars) {
+// function bear_skin_preprocess_node(&$vars) {
 //   // Add JS & CSS by node type
 //   if( $vars['type'] == 'page') {
 //     //drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
@@ -40,7 +40,7 @@ Let's load some CSS on specific targets - uncomment to use
 //     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
 //   }
 // }
-// function bear_preprocess_page(&$vars) {
+// function bear_skin_preprocess_page(&$vars) {
 //   // Add JS & CSS by node type
 //   if (isset($vars['node']) && $vars['node']->type == 'page') {
 //     //drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
