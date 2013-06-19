@@ -1,0 +1,433 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+/* includes our social icons styles and font */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000363}}
+[class*="foundicon-"]:after {
+  position: relative;
+  top: -10px;
+  left: 10px;
+  color: #DDD;
+  font-size: 100%;
+  margin: -20px 0 0 0;
+  font-style: normal;
+  display: block;
+  text-indent: -9999px;
+  vertical-align: baseline;
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000377}}
+.foundicon-thumb-up:after {
+  content: "thumb-up";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000378}}
+.foundicon-thumb-down:after {
+  content: "thumb-down";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000379}}
+.foundicon-rss:after {
+  content: "rss";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000380}}
+.foundicon-facebook:after {
+  content: "facebook";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000381}}
+.foundicon-twitter:after {
+  content: "twitter";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000382}}
+.foundicon-pinterest:after {
+  content: "pinterest";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000383}}
+.foundicon-github:after {
+  content: "github";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000384}}
+.foundicon-path:after {
+  content: "path";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000385}}
+.foundicon-linkedin:after {
+  content: "linkedin";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000386}}
+.foundicon-dribbble:after {
+  content: "dribbble";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000387}}
+.foundicon-stumble-upon:after {
+  content: "stumble-upon";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000388}}
+.foundicon-behance:after {
+  content: "behance";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000389}}
+.foundicon-reddit:after {
+  content: "reddit";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000390}}
+.foundicon-google-plus:after {
+  content: "google-plus";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000391}}
+.foundicon-youtube:after {
+  content: "youtube";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000392}}
+.foundicon-vimeo:after {
+  content: "vimeo";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000393}}
+.foundicon-flickr:after {
+  content: "flickr";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000394}}
+.foundicon-slideshare:after {
+  content: "slideshare";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000395}}
+.foundicon-picassa:after {
+  content: "picassa";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000396}}
+.foundicon-skype:after {
+  content: "skype";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000397}}
+.foundicon-steam:after {
+  content: "steam";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000398}}
+.foundicon-instagram:after {
+  content: "instagram";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000399}}
+.foundicon-foursquare:after {
+  content: "foursquare";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003100}}
+.foundicon-delicious:after {
+  content: "delicious";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003101}}
+.foundicon-chat:after {
+  content: "chat";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003102}}
+.foundicon-torso:after {
+  content: "torso";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003103}}
+.foundicon-tumblr:after {
+  content: "tumblr";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003104}}
+.foundicon-video-chat:after {
+  content: "video-chat";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003105}}
+.foundicon-digg:after {
+  content: "digg";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003106}}
+.foundicon-wordpress:after {
+  content: "wordpress";
+}
+
+/*
+ * Body
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000317}}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000330}}
+#skip-link {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000334}}
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000351}}
+#logo {
+  /* Wrapping link for logo */
+  float: left;
+  /* LTR */
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000356}}
+#logo img {
+  vertical-align: bottom;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000361}}
+#name-and-slogan {
+  /* Wrapper for website name and slogan */
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000365}}
+#site-name {
+  /* The name of the website */
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000371}}
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000377}}
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000382}}
+#site-slogan {
+  /* The slogan (or tagline) of a website */
+  margin: 0;
+  font-size: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\0000387}}
+.region-header {
+  /* Wrapper for any blocks placed in the header region */
+  clear: both;
+  /* Clear the logo */
+}
+
+/*
+ * Main (container for everything else)
+ */
+/*
+ * Content
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003108}}
+.breadcrumb {
+  /* The path to the current page in the form of a list of links */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003109}}
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003113}}
+.breadcrumb li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003126}}
+h1.title,
+h2.node-title,
+h2.block-title,
+h2.title,
+h2.comment-form,
+h3.title {
+  /* Comment title */
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003130}}
+tr.even {
+  /* Some tables have rows marked even or odd. */
+  /* background-color: #eee; */
+  /* Drupal core uses a #eee background */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003134}}
+tr.odd {
+  /* background-color: #eee; */
+  /* Drupal core uses a #eee background */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003138}}
+div.messages {
+  /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
+  margin: 1.5em 0;
+  /* Drupal core uses "6px 0" margin */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003141}}
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003147}}
+div.status {
+  /* Normal priority messages */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003151}}
+div.warning,
+tr.warning {
+  /* Medium priority messages */
+  /* border: 1px solid #f0c020; */
+  /* Drupal core uses: 1px solid #f0c020 */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003156}}
+div.error,
+tr.error {
+  /* High priority messages. See also the .error declaration below. */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003159}}
+.error {
+  /* Errors that are separate from div.messages status messages. */
+  /* color: #e55; */
+  /* Drupal core uses a #e55 background */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003163}}
+.warning {
+  /* Warnings that are separate from div.messages status messages. */
+  /* color: #e09010; */
+  /* Drupal core uses a #e09010 background */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003167}}
+.tabs {
+  /* See also the tabs.css file. */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003170}}
+.region-help {
+  /* Help text on a page */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003173}}
+.more-help-link {
+  /* Link to more help */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003176}}
+.region-content {
+  /* Wrapper for the actual page content */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003179}}
+ul.inline {
+  /* List of links generated by theme_links() */
+  display: inline;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003183}}
+ul.inline li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 1em 0 0;
+  /* LTR */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003189}}
+span.field-label {
+  /* The inline field label used by the Fences module */
+  padding: 0 1em 0 0;
+  /* LTR */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003193}}
+.item-list .pager {
+  /* A list of page numbers when more than 1 page of content is available */
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003196}}
+.item-list .pager li {
+  /* Each page number in the pager list */
+  padding: 0 0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003201}}
+.feed-icon {
+  /* The link to the RSS or Atom feed for the current list of content */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003204}}
+.more-link {
+  /* Aggregator, blog, and forum more link */
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+/*
+ * Footer
+ */
+/*
+ * Page bottom
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/pages\.scss}line{font-family:\00003238}}
+.region-bottom {
+  /* Wrapper for any blocks placed in the page bottom region */
+}

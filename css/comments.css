@@ -1,0 +1,285 @@
+/**
+ * @file
+ * Comment Styling
+ */
+/* includes our social icons styles and font */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000363}}
+[class*="foundicon-"]:after {
+  position: relative;
+  top: -10px;
+  left: 10px;
+  color: #DDD;
+  font-size: 100%;
+  margin: -20px 0 0 0;
+  font-style: normal;
+  display: block;
+  text-indent: -9999px;
+  vertical-align: baseline;
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000377}}
+.foundicon-thumb-up:after {
+  content: "thumb-up";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000378}}
+.foundicon-thumb-down:after {
+  content: "thumb-down";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000379}}
+.foundicon-rss:after {
+  content: "rss";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000380}}
+.foundicon-facebook:after {
+  content: "facebook";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000381}}
+.foundicon-twitter:after {
+  content: "twitter";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000382}}
+.foundicon-pinterest:after {
+  content: "pinterest";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000383}}
+.foundicon-github:after {
+  content: "github";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000384}}
+.foundicon-path:after {
+  content: "path";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000385}}
+.foundicon-linkedin:after {
+  content: "linkedin";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000386}}
+.foundicon-dribbble:after {
+  content: "dribbble";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000387}}
+.foundicon-stumble-upon:after {
+  content: "stumble-upon";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000388}}
+.foundicon-behance:after {
+  content: "behance";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000389}}
+.foundicon-reddit:after {
+  content: "reddit";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000390}}
+.foundicon-google-plus:after {
+  content: "google-plus";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000391}}
+.foundicon-youtube:after {
+  content: "youtube";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000392}}
+.foundicon-vimeo:after {
+  content: "vimeo";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000393}}
+.foundicon-flickr:after {
+  content: "flickr";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000394}}
+.foundicon-slideshare:after {
+  content: "slideshare";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000395}}
+.foundicon-picassa:after {
+  content: "picassa";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000396}}
+.foundicon-skype:after {
+  content: "skype";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000397}}
+.foundicon-steam:after {
+  content: "steam";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000398}}
+.foundicon-instagram:after {
+  content: "instagram";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000399}}
+.foundicon-foursquare:after {
+  content: "foursquare";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003100}}
+.foundicon-delicious:after {
+  content: "delicious";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003101}}
+.foundicon-chat:after {
+  content: "chat";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003102}}
+.foundicon-torso:after {
+  content: "torso";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003103}}
+.foundicon-tumblr:after {
+  content: "tumblr";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003104}}
+.foundicon-video-chat:after {
+  content: "video-chat";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003105}}
+.foundicon-digg:after {
+  content: "digg";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003106}}
+.foundicon-wordpress:after {
+  content: "wordpress";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\000039}}
+.comments {
+  /* Wrapper for the list of comments and its title */
+  margin: 1.5em 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000312}}
+.comments h2.title {
+  /* Heading for the list of comments */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000315}}
+.comments h2.comment-form {
+  /* Heading for the comment form */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000319}}
+.comment {
+  /* Wrapper for a single comment */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000321}}
+.comment.comment-preview {
+  /* Preview of the comment before submitting new or updated comment */
+  background-color: #ffffea;
+  /* Drupal core will use a #ffffea background. See #1110842 */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000325}}
+.comment.new {
+  /* A new comment since the user last viewed the page. */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000328}}
+.comment.first {
+  /* The first comment in the list of comments */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000331}}
+.comment.last {
+  /* The last comment in the list of comments */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000334}}
+.comment.odd {
+  /* An odd-numbered comment in the list of comments */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000337}}
+.comment.even {
+  /* An even-numbered comment in the list of comments */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000340}}
+.comment.comment-by-anonymous {
+  /* A comment created by an anonymous user */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000343}}
+.comment.comment-by-node-author {
+  /* A comment created by the node's author */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000346}}
+.comment.comment-by-viewer {
+  /* A comment created by the current user */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000349}}
+.comment h3.comment-title {
+  /* Comment title */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000352}}
+.comment .new {
+  /* "New" marker for comments that are new for the current user */
+  color: #c00;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000356}}
+.comment .user-picture {
+  /* The picture of the comment author */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000359}}
+.comment .submitted {
+  /* The "posted by" information */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000362}}
+.comment .permalink {
+  /* Comment's permalink wrapper */
+  text-transform: uppercase;
+  font-size: 75%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000367}}
+.comment .user-signature {
+  /* The user's signature */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000370}}
+.comment ul.links {
+  /* Comment links. See also the ul.links declaration in the pages.css. */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000374}}
+.indented {
+  /* Nested comments are indented */
+  margin-left: 30px;
+  /* Drupal core uses a 25px left margin */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000378}}
+.comment-unpublished {
+  /* Unpublished comments */
+  /* background-color: #fff4f4; */
+  /* Drupal core uses a #fff4f4 background */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/comments\.scss}line{font-family:\0000381}}
+.comment-unpublished p.unpublished {
+  /* The word "Unpublished" displayed underneath the content. */
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+}

@@ -1,0 +1,391 @@
+/**
+ * @file
+ * Form Styling
+ */
+/* includes our social icons styles and font */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000363}}
+[class*="foundicon-"]:after {
+  position: relative;
+  top: -10px;
+  left: 10px;
+  color: #DDD;
+  font-size: 100%;
+  margin: -20px 0 0 0;
+  font-style: normal;
+  display: block;
+  text-indent: -9999px;
+  vertical-align: baseline;
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000377}}
+.foundicon-thumb-up:after {
+  content: "thumb-up";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000378}}
+.foundicon-thumb-down:after {
+  content: "thumb-down";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000379}}
+.foundicon-rss:after {
+  content: "rss";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000380}}
+.foundicon-facebook:after {
+  content: "facebook";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000381}}
+.foundicon-twitter:after {
+  content: "twitter";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000382}}
+.foundicon-pinterest:after {
+  content: "pinterest";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000383}}
+.foundicon-github:after {
+  content: "github";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000384}}
+.foundicon-path:after {
+  content: "path";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000385}}
+.foundicon-linkedin:after {
+  content: "linkedin";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000386}}
+.foundicon-dribbble:after {
+  content: "dribbble";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000387}}
+.foundicon-stumble-upon:after {
+  content: "stumble-upon";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000388}}
+.foundicon-behance:after {
+  content: "behance";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000389}}
+.foundicon-reddit:after {
+  content: "reddit";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000390}}
+.foundicon-google-plus:after {
+  content: "google-plus";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000391}}
+.foundicon-youtube:after {
+  content: "youtube";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000392}}
+.foundicon-vimeo:after {
+  content: "vimeo";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000393}}
+.foundicon-flickr:after {
+  content: "flickr";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000394}}
+.foundicon-slideshare:after {
+  content: "slideshare";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000395}}
+.foundicon-picassa:after {
+  content: "picassa";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000396}}
+.foundicon-skype:after {
+  content: "skype";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000397}}
+.foundicon-steam:after {
+  content: "steam";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000398}}
+.foundicon-instagram:after {
+  content: "instagram";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000399}}
+.foundicon-foursquare:after {
+  content: "foursquare";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003100}}
+.foundicon-delicious:after {
+  content: "delicious";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003101}}
+.foundicon-chat:after {
+  content: "chat";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003102}}
+.foundicon-torso:after {
+  content: "torso";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003103}}
+.foundicon-tumblr:after {
+  content: "tumblr";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003104}}
+.foundicon-video-chat:after {
+  content: "video-chat";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003105}}
+.foundicon-digg:after {
+  content: "digg";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003106}}
+.foundicon-wordpress:after {
+  content: "wordpress";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\000039}}
+.form-item {
+  /* Wrapper for a form element (or group of form elements) and its label */
+  margin: 1.5em 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000311}}
+.form-item input {
+  max-width: 99%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000316}}
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  /* Highlight the form elements that caused a form submission error */
+  border: 1px solid #c00;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000320}}
+.form-item label {
+  /* The label for a form element */
+  display: block;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000325}}
+.form-item label.option {
+  /* The label for a radio button or checkbox */
+  display: inline;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000330}}
+.form-item .form-required {
+  /* The part of the label that indicates a required field */
+  color: #c00;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000334}}
+.form-item .description {
+  /* The descriptive help text (separate from the label) */
+  font-size: 0.85em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000339}}
+.form-checkboxes .form-item, .form-radios .form-item {
+  /* Pack groups of checkboxes and radio buttons closer together */
+  margin: 0;
+  /* Drupal core uses "0.4em 0" */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000344}}
+.form-submit {
+  /* The submit button */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000349}}
+.container-inline div,
+.container-inline label {
+  /* Inline labels and form divs */
+  display: inline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000354}}
+.tips {
+  /* Tips for Drupal's input formats */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000357}}
+a.button {
+  /* Buttons used by contrib modules like Media */
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/*
+ * Password confirmation
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000366}}
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+/*
+ * Search (search-block-form.tpl.php)
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000374}}
+#block-search-form {
+  /* Wrapper for the search form */
+}
+
+/*
+ * Drupal's default login form block
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000381}}
+#user-login-form {
+  text-align: left;
+  /* LTR */
+  /*
+   * OpenID
+   *
+   * The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000391}}
+#user-login-form ul {
+  /* OpenID creates a new ul above the login form's links. */
+  margin-bottom: 0;
+  /* Position OpenID's ul next to the rest of the links. */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\0000396}}
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* The "Log in using OpenID" link. */
+  margin-top: 1.5em;
+  margin-left: -20px;
+  /* LTR */
+  /* Un-do some of the padding on the ul list. */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\00003101}}
+#user-login-form li.user-link {
+  /* The "Cancel OpenID login" link. */
+  margin-top: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\00003106}}
+#user-login ul {
+  margin: 1.5em 0;
+}
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in normalize.css, but restore them for the admin
+ * section of the site.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\00003118}}
+form th {
+  text-align: left;
+  /* LTR */
+  padding-right: 1em;
+  /* LTR */
+  border-bottom: 3px solid #ccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\00003124}}
+form tbody {
+  border-top: 1px solid #ccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\00003128}}
+form tr.even {
+  background-color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\00003132}}
+form table .item-list ul {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\00003147}}
+.form-submit {
+  font-size: 16px;
+  padding: 0.5em 1.5em;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF61AEE2', endColorstr='#FF227DBB');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #61aee2), color-stop(70%, #61aee2));
+  background: -webkit-linear-gradient(#61aee2, #61aee2 70%);
+  background: -moz-linear-gradient(#61aee2, #61aee2 70%);
+  background: -o-linear-gradient(#61aee2, #61aee2 70%);
+  background: linear-gradient(#61aee2, #61aee2 70%);
+  -webkit-box-shadow: #a2cfee 0 1px 0 inset;
+  -moz-box-shadow: #a2cfee 0 1px 0 inset;
+  box-shadow: #a2cfee 0 1px 0 inset;
+  border: 1px solid #4ba3de;
+  text-shadow: #1e6fa5 0 -1px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/sassy-buttons-0\.2\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000315}}
+.form-submit:hover {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/sassy-buttons-0\.2\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000318}}
+.form-submit:hover {
+  background-color: #4ba3de;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #4ba3de), color-stop(75%, #4ba3de));
+  background: -webkit-linear-gradient(#4ba3de 3%, #4ba3de 75%);
+  background: -moz-linear-gradient(#4ba3de 3%, #4ba3de 75%);
+  background: -o-linear-gradient(#4ba3de 3%, #4ba3de 75%);
+  background: linear-gradient(#4ba3de 3%, #4ba3de 75%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/sassy-buttons-0\.2\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000321}}
+.form-submit:active {
+  -webkit-box-shadow: #3f9cdc 0 1px 2px inset;
+  -moz-box-shadow: #3f9cdc 0 1px 2px inset;
+  box-shadow: #3f9cdc 0 1px 2px inset;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/sassy-buttons-0\.2\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\000036}}
+.form-submit.disabled, .form-submit[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #61aee2;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/sassy-buttons-0\.2\/stylesheets\/_sassy-buttons\.sass}line{font-family:\0000376}}
+.form-submit::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/*
+ * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/forms\.scss}line{font-family:\00003155}}
+td.menu-disabled {
+  background: #ccc;
+}
