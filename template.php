@@ -4,7 +4,7 @@
 function bear_skin_preprocess_html(&$variables, $hook) {
   // Add variables and paths needed for HTML5 and responsive support.
   $variables['base_path'] = base_path();
-  $variables['path_to_bear'] = drupal_get_path('theme', 'bear_skin');
+  $variables['path_to_bear_skin'] = drupal_get_path('theme', 'bear_skin');
 }
 
 /* Enabling submenu items for main menu */ 
