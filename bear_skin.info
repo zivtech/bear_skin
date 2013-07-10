@@ -49,6 +49,7 @@ stylesheets[all][] = css/comments.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
+stylesheets[all][] = css/formalize.css
 stylesheets[all][] = css/social_foundicons.css
 stylesheets[all][] = css/slideshow.css
 stylesheets[all][] = css/social_foundicons_ie7.css
@@ -69,9 +70,8 @@ stylesheets[all][] = css/bear.css
 
 ; Optionally add some JavaScripts to your theme.
 
+scripts[] = js/jquery.formalize.min.js
 scripts[] = js/script.js
-
-
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
 ; maintenance-page.tpl.php files. The name in brackets is the machine name of
