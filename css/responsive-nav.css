@@ -7,13 +7,11 @@
 
 ####################################################################### */
 /* hide the link until viewport size is reached */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000313}}
 a.meanmenu-reveal {
   display: none;
 }
 
 /* when under viewport size, .mean-container is added to body */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000318}}
 .mean-container .mean-bar {
   float: left;
   width: 100%;
@@ -24,7 +22,6 @@ a.meanmenu-reveal {
   z-index: 999999;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000327}}
 .mean-container a.meanmenu-reveal {
   width: 22px;
   height: 22px;
@@ -45,7 +42,6 @@ a.meanmenu-reveal {
   outline: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000346}}
 .mean-container a.meanmenu-reveal span {
   display: block;
   background: #fff;
@@ -53,7 +49,6 @@ a.meanmenu-reveal {
   margin-top: 3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000352}}
 .mean-container .mean-nav {
   float: left;
   width: 100%;
@@ -61,7 +56,6 @@ a.meanmenu-reveal {
   margin-top: 33px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000358}}
 .mean-container .mean-nav ul {
   padding: 0;
   margin: 0;
@@ -69,14 +63,12 @@ a.meanmenu-reveal {
   list-style-type: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000364}}
 .mean-container .mean-nav ul li {
   position: relative;
   float: left;
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000369}}
 .mean-container .mean-nav ul li a {
   display: block;
   float: left;
@@ -91,7 +83,6 @@ a.meanmenu-reveal {
   text-transform: uppercase;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000382}}
 .mean-container .mean-nav ul li li a {
   width: 80%;
   padding: 1em 10%;
@@ -104,37 +95,31 @@ a.meanmenu-reveal {
   font-size: 80%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000393}}
 .mean-container .mean-nav ul li.mean-last a {
   border-bottom: none;
   margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\0000397}}
 .mean-container .mean-nav ul li li li a {
   width: 70%;
   padding: 1em 15%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\00003101}}
 .mean-container .mean-nav ul li li li li a {
   width: 60%;
   padding: 1em 20%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\00003105}}
 .mean-container .mean-nav ul li li li li li a {
   width: 50%;
   padding: 1em 25%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\00003109}}
 .mean-container .mean-nav ul li a:hover {
   background: #252525;
   background: rgba(255, 255, 255, 0.1);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\00003113}}
 .mean-container .mean-nav ul li a.mean-expand {
   width: 26px;
   height: 26px;
@@ -150,12 +135,10 @@ a.meanmenu-reveal {
   font-size: 22px !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\00003127}}
 .mean-container .mean-nav ul li a.mean-expand:hover {
   background: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\00003130}}
 .mean-container .mean-push {
   float: left;
   width: 100%;
@@ -164,7 +147,6 @@ a.meanmenu-reveal {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/responsive-nav\.scss}line{font-family:\00003137}}
 .mean-nav .wrapper {
   width: 100%;
   padding: 0;

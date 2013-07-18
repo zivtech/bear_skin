@@ -8,7 +8,6 @@
 }
 
 /* global foundicon styles */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/social_foundicons\.scss}line{font-family:\000037}}
 [class*="foundicon-"] {
   display: inline;
   width: auto;
@@ -20,7 +19,6 @@
   background-repeat: repeat;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/social_foundicons\.scss}line{font-family:\0000317}}
 [class*="foundicon-"]:before {
   font-family: "SocialFoundicons";
   font-weight: normal;
@@ -29,152 +27,122 @@
 }
 
 /* icons */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-thumb-up:before {
   content: "\f000";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-thumb-down:before {
   content: "\f001";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-rss:before {
   content: "\f002";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-facebook:before {
   content: "\f003";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-twitter:before {
   content: "\f004";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-pinterest:before {
   content: "\f005";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-github:before {
   content: "\f006";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-path:before {
   content: "\f007";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-linkedin:before {
   content: "\f008";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-dribbble:before {
   content: "\f009";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-stumble-upon:before {
   content: "\f00a";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-behance:before {
   content: "\f00b";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-reddit:before {
   content: "\f00c";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-google-plus:before {
   content: "\f00d";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-youtube:before {
   content: "\f00e";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-vimeo:before {
   content: "\f00f";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-flickr:before {
   content: "\f010";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-slideshare:before {
   content: "\f011";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-picassa:before {
   content: "\f012";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-skype:before {
   content: "\f013";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-steam:before {
   content: "\f014";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-instagram:before {
   content: "\f015";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-foursquare:before {
   content: "\f016";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-delicious:before {
   content: "\f017";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-chat:before {
   content: "\f018";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-torso:before {
   content: "\f019";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-tumblr:before {
   content: "\f01a";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-video-chat:before {
   content: "\f01b";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-digg:before {
   content: "\f01c";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\000036}}
 .foundicon-wordpress:before {
   content: "\f01d";
 }

@@ -1,157 +1,126 @@
 /* general icons for IE7 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/social_foundicons_ie7\.scss}line{font-family:\000034}}
 [class*="foundicon-"] {
   font-family: "SocialFoundicons";
   font-weight: normal;
   font-style: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-thumb-up {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf000;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-thumb-down {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf001;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-rss {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf002;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-facebook {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf003;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-twitter {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf004;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-pinterest {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf005;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-github {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf006;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-path {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf007;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-linkedin {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf008;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-dribbble {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf009;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-stumble-upon {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00a;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-behance {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00b;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-reddit {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00c;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-google-plus {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00d;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-youtube {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00e;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-vimeo {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00f;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-flickr {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf010;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-slideshare {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf011;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-picassa {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf012;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-skype {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf013;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-steam {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf014;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-instagram {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf015;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-foursquare {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf016;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-delicious {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf017;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-chat {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf018;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-torso {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf019;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-tumblr {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf01a;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-video-chat {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf01b;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-digg {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf01c;");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bear_alban\/code\/profiles\/bear\/themes\/bear\/sass\/_settings\.scss}line{font-family:\0000312}}
 .foundicon-wordpress {
   *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf01d;");
 }

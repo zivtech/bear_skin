@@ -1,5 +1,4 @@
 /* includes our social icons styles and font */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000363}}
 [class*="foundicon-"]:after {
   position: relative;
   top: -10px;
@@ -14,162 +13,130 @@
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000377}}
 .foundicon-thumb-up:after {
   content: "thumb-up";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000378}}
 .foundicon-thumb-down:after {
   content: "thumb-down";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000379}}
 .foundicon-rss:after {
   content: "rss";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000380}}
 .foundicon-facebook:after {
   content: "facebook";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000381}}
 .foundicon-twitter:after {
   content: "twitter";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000382}}
 .foundicon-pinterest:after {
   content: "pinterest";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000383}}
 .foundicon-github:after {
   content: "github";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000384}}
 .foundicon-path:after {
   content: "path";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000385}}
 .foundicon-linkedin:after {
   content: "linkedin";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000386}}
 .foundicon-dribbble:after {
   content: "dribbble";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000387}}
 .foundicon-stumble-upon:after {
   content: "stumble-upon";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000388}}
 .foundicon-behance:after {
   content: "behance";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000389}}
 .foundicon-reddit:after {
   content: "reddit";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000390}}
 .foundicon-google-plus:after {
   content: "google-plus";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000391}}
 .foundicon-youtube:after {
   content: "youtube";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000392}}
 .foundicon-vimeo:after {
   content: "vimeo";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000393}}
 .foundicon-flickr:after {
   content: "flickr";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000394}}
 .foundicon-slideshare:after {
   content: "slideshare";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000395}}
 .foundicon-picassa:after {
   content: "picassa";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000396}}
 .foundicon-skype:after {
   content: "skype";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000397}}
 .foundicon-steam:after {
   content: "steam";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000398}}
 .foundicon-instagram:after {
   content: "instagram";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\0000399}}
 .foundicon-foursquare:after {
   content: "foursquare";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003100}}
 .foundicon-delicious:after {
   content: "delicious";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003101}}
 .foundicon-chat:after {
   content: "chat";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003102}}
 .foundicon-torso:after {
   content: "torso";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003103}}
 .foundicon-tumblr:after {
   content: "tumblr";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003104}}
 .foundicon-video-chat:after {
   content: "video-chat";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003105}}
 .foundicon-digg:after {
   content: "digg";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/_custom\.scss}line{font-family:\00003106}}
 .foundicon-wordpress:after {
   content: "wordpress";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\000039}}
 #page {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000319}}
 #header,
 #content,
 #navigation,
@@ -191,13 +158,11 @@
 /*
  * Containers for grid items and flow items.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000331}}
 #header,
 #main,
 #footer {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000352}}
 #header:before, #header:after,
 #main:before,
 #main:after,
@@ -206,14 +171,12 @@
   content: "";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000356}}
 #header:after,
 #main:after,
 #footer:after {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000335}}
 #main {
   max-width: 1000px;
   margin: 0 auto;
@@ -224,13 +187,11 @@
  * Navigation bar
  */
 @media all and (min-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000346}}
   #main {
     position: relative;
     clear: both;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000350}}
   #navigation {
     width: 100%;
     clear: both;
@@ -243,7 +204,6 @@
   /*
    * The layout when there is only one sidebar, the left one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000367}}
   .sidebar-first #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: left;
@@ -251,7 +211,6 @@
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000371}}
   .sidebar-first .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -263,7 +222,6 @@
   /*
    * The layout when there is only one sidebar, the right one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000381}}
   .sidebar-second #content {
     /* Span 2 columns, starting in 1st column from left. */
     float: left;
@@ -271,7 +229,6 @@
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000385}}
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 3rd column from left. */
     float: left;
@@ -283,7 +240,6 @@
   /*
    * The layout when there are two sidebars.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000395}}
   .two-sidebars #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: left;
@@ -291,7 +247,6 @@
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000399}}
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -299,7 +254,6 @@
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003103}}
   .two-sidebars .region-sidebar-second {
     /* Start a new row and span all 3 columns. */
     float: left;
@@ -310,7 +264,6 @@
     padding-right: 0;
     clear: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003108}}
   .two-sidebars .region-sidebar-second .block {
     padding-left: 20px;
     padding-right: 20px;
@@ -320,7 +273,6 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003111}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     /* Span 1 column, starting in the 1st column from left. */
     float: left;
@@ -329,7 +281,6 @@
     margin-right: -33.33333%;
     clear: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003115}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     /* Span 1 column, starting in the 2nd column from left. */
     float: left;
@@ -337,7 +288,6 @@
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003118}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     /* Span 1 column, starting in the 3rd column from left. */
     float: left;
@@ -353,7 +303,6 @@
   /*
    * The layout when there is only one sidebar, the left one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003136}}
   .sidebar-first #content {
     /* Span 3 columns, starting in 2nd column from left. */
     float: left;
@@ -361,7 +310,6 @@
     margin-left: 25%;
     margin-right: -100%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003140}}
   .sidebar-first .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -373,7 +321,6 @@
   /*
    * The layout when there is only one sidebar, the right one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003150}}
   .sidebar-second #content {
     /* Span 3 columns, starting in 1st column from left. */
     float: left;
@@ -381,7 +328,6 @@
     margin-left: 0%;
     margin-right: -75%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003154}}
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 5th column from left. */
     float: left;
@@ -393,7 +339,6 @@
   /*
    * The layout when there are two sidebars.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003164}}
   .two-sidebars #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: left;
@@ -401,7 +346,6 @@
     margin-left: 25%;
     margin-right: -75%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003168}}
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -409,7 +353,6 @@
     margin-left: 0%;
     margin-right: -25%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/alban\/Documents\/vagrant\/dev\/www\/bearst\/code\/profiles\/bear\/themes\/bear\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003172}}
   .two-sidebars .region-sidebar-second {
     /* Span 1 column, starting in 5th column from left. */
     float: left;

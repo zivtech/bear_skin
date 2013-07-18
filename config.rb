@@ -13,8 +13,8 @@ environment = :development
 
 # In development, we can turn on the FireSass-compatible debug_info.
 #firesass = false
-firesass = true
-Sass::Plugin.options[:debug_info] = true
+firesass = false
+Sass::Plugin.options[:debug_info] = false
 
 # Location of the theme's resources.
 css_dir         = "css"
@@ -52,7 +52,7 @@ output_style = (environment == :development) ? :expanded : :compressed
 relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
+line_comments = false
 
 # Pass options to sass. For development, we turn on the FireSass-compatible
 # debug_info if the firesass config variable above is true.
