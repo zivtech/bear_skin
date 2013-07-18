@@ -64,7 +64,7 @@ $bg-grid-color: #ffdede !default;
       }
     }
     .bgcolrev-#{$i} {
-	  @if $i == 1 {
+   @if $i == 1 {
         @include zen-clear();
       }
       @include zen-grid-item(1, $i, $column-count: $column-count, $gutter-width: $gutter-width, $float-direction: $rev, $auto-include-item-base: false);
