@@ -1,16 +1,16 @@
 /**
  * @file
- * 
+ *
  * Slideshow for Bear Starter Theme  Styling
  *
  */
 
-/*********** 
+/***********
 ~IMPORTS
 ***********/
 @import "bear";
 
-/*********** 
+/***********
 ~SLIDESHOW
 ***********/
 
@@ -22,14 +22,14 @@
     margin: 0 0 50px 0;
     position: relative;
     // @include breakpoint ($breakpoint-small-width) {
-    // 	display: none;
+    //  display: none;
     // }
 }
 .flexslider li p {
-	text-align: center;
-	@include bearfont-titles;
-	font-size: 110%;
-	background: $grey;
-	margin: 0;
-	padding: 10px 0;
+ text-align: center;
+ @include bearfont-titles;
+ font-size: 110%;
+ background: $grey;
+ margin: 0;
+ padding: 10px 0;
 }
