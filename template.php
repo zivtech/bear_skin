@@ -1,16 +1,22 @@
 <?php
 
-/* Adding path variables */
+/**
+ * Implements template_preprocess_html().
+ * Adds path variables.
+ */
 function bear_skin_preprocess_html(&$variables, $hook) {
   // Add variables and paths needed for HTML5 and responsive support.
   $variables['base_path'] = base_path();
   $variables['path_to_bear_skin'] = drupal_get_path('theme', 'bear_skin');
 }
 
-/* Enabling submenu items for main menu */ 
+/**
+ * Implements theme_links().
+ * Enables sub-menu item display for main menu.
+ */
 function bear_skin_links($variables) {
   if (array_key_exists('id', $variables['attributes']) && $variables['attributes']['id'] == 'nav') {
-      $pid = variable_get('menu_main_links_source', 'nav');
+    $pid = variable_get('menu_main_links_source', 'nav');
     $tree = menu_tree($pid);
     return drupal_render($tree);
   }
