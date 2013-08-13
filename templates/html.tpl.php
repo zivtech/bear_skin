@@ -39,6 +39,7 @@
   <?php endif; ?>
   <?php print $page_top; ?>
   <?php print $page; ?>
+  <?php print $page_bottom; ?>
 <?php if (theme_get_setting('responsive_nav')): ?>
     <script src="<?php print $base_path . $path_to_bear_skin; ?>/js/jquery.meanmenu.2.0.min.js"></script>
     <script>
