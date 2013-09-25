@@ -10,19 +10,15 @@
 ***********/
 
 .flexslider {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 0;
-    border-radius:0;
-    box-shadow:0;
-    margin: 0 0 50px 0;
-    position: relative;
-    // @include breakpoint ($breakpoint-small-width) {
-    //  display: none;
-    // }
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 0;
+  border-radius:0;
+  box-shadow:0;
+  margin: 0 0 50px 0;
+  position: relative;
 }
 .flexslider li p {
  text-align: center;
- @include bearfont-titles;
  font-size: 110%;
  background: $grey;
  margin: 0;
