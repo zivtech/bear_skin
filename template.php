@@ -23,6 +23,10 @@ function bear_skin_links($variables) {
   return theme_links($variables);
 }
 
+function bear_skin_preprocess_page(&$vars, $hook) {
+ $vars['user_menu'] =  theme('links',array('links' => menu_navigation_links('user-menu'),'attributes' => array('class'=> array('links', 'site-menu')) ));
+}
+
 /***********************
 Let's load some CSS on specific targets - uncomment to use
 ************************/
@@ -33,13 +37,13 @@ Let's load some CSS on specific targets - uncomment to use
 //     //drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
 //     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
 //   }
-   
+
 //   // Add JS & CSS to the front page
 //   if ($vars['is_front']) {
 //     drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
 //     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
 //   }
-   
+
 //   // Add JS & CSS by node ID
 //   if (drupal_get_path_alias("node/{$vars['#node']->nid}") == 'your-node-id') {
 //     //drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');

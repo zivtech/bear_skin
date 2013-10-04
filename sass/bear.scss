@@ -130,18 +130,34 @@ ul.primary {
 
 .wrapper.header {
  //border-bottom: 2px solid $blue;
- #header {
-  padding: $vertical-gutter;
-  padding-bottom: 25px;
- }
-}
-#header {
- @include clear-space;
+  #header {
+    padding: $vertical-gutter;
+    padding-bottom: 25px;
+    position: relative;
+    #bear-user-menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      ul {
+        li {
+          float: left;
+          list-style-type: none;
+          margin: 5px;
+          a {
+            @include sassy-button("matte", 5px, 16px, #999, #888, #fff, "inset");
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
 }
 h1#site-name {
  font-size: 2em;
- line-height: 1.5em;
- margin: 45px 0 0 25px;
+ line-height: .5em;
+ margin: 70px 0 0 25px;
   a:link, a:visited {
       color: #ffffff;
   }

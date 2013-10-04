@@ -16,6 +16,12 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#type'          => 'fieldset',
     '#title'         => t('Bear Theme Additional Options'),
   );
+  $form['bear_options']['user_menu'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Add  User Menu to Header (Log In, Log Out etc).'),
+    '#description'   => t('Disable to use the block system'),
+    '#default_value' => theme_get_setting('user_menu'),
+  );
   $form['bear_options']['responsive_nav'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Add  <a href="http://www.meanthemes.com/plugins/meanmenu/"" target="_blank">MeanMenu</a> jquery plugin to change your main menu into a list on mobile view.'),
