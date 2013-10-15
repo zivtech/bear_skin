@@ -10,17 +10,18 @@
   margin: 1.5em 0;
   input {
     max-width: 99%;
+    color: #333333;
   }
   input.error,
   textarea.error,
   select.error { /* Highlight the form elements that caused a form submission error */
     border: 1px solid #c00;
   }
-
   label { /* The label for a form element */
     display: block;
     font-weight: normal;
     color: #666666;
+    font-size: 90%;
   }
 
   label.option { /* The label for a radio button or checkbox */
@@ -37,13 +38,30 @@
     font-style: italic;
     color: #777777;
   }
-
+  .form-file {
+    color: #666666;
+    font-size: 90%;
+  }
   .form-checkboxes & ,
   .form-radios & { /* Pack groups of checkboxes and radio buttons closer together */
     margin: 0; /* Drupal core uses "0.4em 0" */
   }
+  .form-text {
+    min-height: 25px;
+    line-height: 25px;
+    border: 1px solid #CCCCCC;
+  }
 }
-
+.form-text, .form-textarea {
+  &:focus, &:hover, &:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  &:focus {
+    border: 1px solid #61AEE2;
+  }
+}
 .form-submit {
   @include sassy-button("matte", 5px, 90%, #999, #888, #fff, "inset");
   margin:0 5px 0 0;
@@ -57,13 +75,66 @@
   label { /* Inline labels and form divs */
     display: inline;
   }
+  .select2-container {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .select2-display-none {
+    display: none;
+  }
 }
-
+dd {
+    margin: 10px 0 10px 30px;
+}
 .tips { /* Tips for Drupal's input formats */
 }
 
 a.button { /* Buttons used by contrib modules like Media */
   @include appearance(button);
+}
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 0;
+  legend {
+    float: left;
+    background: #EEEEEE;
+    width: 100%;
+    margin-bottom: 10px;
+    .fieldset-legend {
+      padding: 5px 10px;
+      display: block;
+    }
+  }
+  .fieldset-wrapper {
+    padding: 15px;
+  }
+}
+.vertical-tabs {
+  ul.vertical-tabs-list {
+    li {
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+          outline: none;
+          color: #61AEE2;
+        }
+        strong {
+          font-weight: normal;
+        }
+        .summary {
+          font-size: 90%;
+          font-style: italic;
+          color: #777777;
+        }
+      }
+    }
+  }
+}
+html.js fieldset.collapsed {
+  border: 1px solid #CCCCCC;
+  height: 2.15em;
 }
 
 /*
@@ -123,20 +194,27 @@ a.button { /* Buttons used by contrib modules like Media */
  */
 
 form {
+  table {
+    width: 100%;
+
+  }
   th {
     text-align: left; /* LTR */
     padding-right: 1em; /* LTR */
     border-bottom: 3px solid #ccc;
+    font-weight: normal;
+    padding:5px 10px;
   }
 
   tbody {
     border-top: 1px solid #ccc;
   }
-
+  td {
+    padding: 10px;
+  }
   tr.even {
     background-color: #fff;
   }
-
   table .item-list ul {
     margin: 0;
   }

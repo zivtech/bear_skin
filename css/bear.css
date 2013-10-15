@@ -172,6 +172,7 @@ body a:visited {
 
 html, body, button, input, select, textarea {
   font-family: Arial, sans-serif;
+  font-size: 1em;
 }
 
 h1, h2, h3, h4, h5 {
@@ -326,11 +327,19 @@ ul.primary li a.active {
 /***********
 ~STRUCTURE
 ***********/
+h1 {
+  font-size: 160%;
+}
+
 .wrapper.header {
   background-color: #d1d3d2;
 }
 .wrapper.footer {
   background-color: #eff2f1;
+}
+
+.breadcrumb {
+  margin: 20px 0;
 }
 
 /***********

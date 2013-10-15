@@ -105,6 +105,9 @@ ul.primary {
 ~STRUCTURE
 ***********/
 
+h1 {
+  font-size: 160%;
+}
 .wrapper {
   &.header {
     background-color: $greyer;
@@ -113,7 +116,9 @@ ul.primary {
     background-color: $grey;
   }
 }
-
+.breadcrumb {
+  margin: 20px 0;
+}
 /***********
 ~HEADER
 ***********/
