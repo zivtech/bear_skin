@@ -32,5 +32,6 @@
  });
 });
 
+$(document).ready(function() { $('#content select.form-select').select2(); });
 
 })(jQuery, Drupal, this, this.document);

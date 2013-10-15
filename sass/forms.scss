@@ -20,6 +20,7 @@
   label { /* The label for a form element */
     display: block;
     font-weight: normal;
+    color: #666666;
   }
 
   label.option { /* The label for a radio button or checkbox */
@@ -32,7 +33,9 @@
   }
 
   .description { /* The descriptive help text (separate from the label) */
-    font-size: 0.85em;
+    font-size: 80%;
+    font-style: italic;
+    color: #777777;
   }
 
   .form-checkboxes & ,
@@ -41,7 +44,12 @@
   }
 }
 
-.form-submit { /* The submit button */
+.form-submit {
+  @include sassy-button("matte", 5px, 90%, #999, #888, #fff, "inset");
+  margin:0 5px 0 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .container-inline {
@@ -144,10 +152,6 @@ form {
   }
 }
 
-.form-submit {
-  @include sassy-button("matte", 5px, 16px, #61AEE2, #61AEE2, #fff, "inset");
-}
-
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
  */
@@ -156,78 +160,4 @@ td.menu-disabled {
   background: #ccc;
 }
 
-/* Making select Menus more attractive for the bear skin */
 
-.form-item.form-type-select {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  height: 28px;
-  width: 150px;
-  background: #f2f2f2;
-  border: 1px solid;
-  border-color: #999999;
-  border-radius: 3px;
-  moz-border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: none;
-  box-shadow: none;
-  margin: .7em 0;
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 9px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 4px dashed;
-    border-color: #888 transparent;
-    pointer-events: none;
-  }
-  &:before {
-    border-bottom-style: solid;
-    border-top: none;
-  }
-  &:after {
-    margin-top: 7px;
-    border-top-style: solid;
-    border-bottom: none;
-  }
-  .form-select {
-    position: relative;
-    width: 130%;
-    margin: 0;
-    padding: 7px 8px 6px 10px;
-    height: 28px;
-    line-height: 14px;
-    font-size: 14px;
-    color: #62717a;
-    text-shadow: 0 1px white;
-    /* Fallback for IE 8 */
-    background: #f2f2f2;
-    /* "transparent" doesn't work with Opera */
-    background: rgba(0, 0, 0, 0) !important;
-    border: 0;
-    border-radius: 0;
-    -webkit-appearance: none;
-    &:focus {
-      z-index: 3;
-      width: 100%;
-      color: #394349;
-      outline: 2px solid #49aff2;
-      outline: 2px solid -webkit-focus-ring-color;
-      outline-offset: -2px;
-    }
-    > option {
-      margin: 3px;
-      padding: 6px 8px;
-      text-shadow: none;
-      background: #f2f2f2;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-  }
-}

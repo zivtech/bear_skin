@@ -12,7 +12,6 @@
 ***********/
 @import "base";
 @import "variables";
-@import url(http://fonts.googleapis.com/css?family=Average+Sans);
 @import url(http://fonts.googleapis.com/css?family=Forum);
 @import "compass/css3/border-radius";
 
@@ -21,118 +20,107 @@
 ~GENERIC
 ***********/
 body {
- color: $dark;
- @include m-links;
+  color: $dark;
+  @include m-links;
 }
-html, button, input, select, textarea {
- @include bearfont-main;
+html, body, button, input, select, textarea {
+  @include bearfont-main;
 }
 h1, h2, h3, h4, h5 {
- @include bearfont-titles;
- font-weight: 400;
+  @include bearfont-titles;
+  font-weight: 400;
 }
 #page {
- min-width: 300px;
+  min-width: 300px;
 }
-#navigation {
- @include bearfont-main;
-}
-#content {
- @include bearfont-main;
-}
-
 #navigation ul.menu {
- li {
- text-transform: none;
- @include clear-space;
- @include m-links;
-  a {
-   background-color: $grey;
-   padding: 7px 15px 6px 15px;
-   @include bottom-border-radius;
-   display: block;
-   &:hover, &.active {
-    color: #ffffff;
-    text-decoration: underline;
-    background: $greyer;
-   }
-   &.active, &:visited {
-    text-decoration: none;
-   }
-  }
- }
- ul {
-  z-index: 100;
-  &:hover {
-   display: block;
-  }
   li {
-   a:link, a:visited, a:hover {
-    background: transparent;
-    color: $blue;
-   }
-   a:hover {
-    text-decoration: underline;
-   }
+    text-transform: none;
+    @include clear-space;
+    @include m-links;
+    a {
+      background-color: $grey;
+      padding: 7px 15px 6px 15px;
+      @include bottom-border-radius;
+      display: block;
+      &:hover, &.active {
+        color: #ffffff;
+        text-decoration: underline;
+        background: $greyer;
+      }
+      &.active, &:visited {
+        text-decoration: none;
+      }
+    }
   }
- }
-}
-.form-submit {
- @include sassy-button("matte", 5px, 16px, #61AEE2, #61AEE2, #fff, "inset");
+  ul {
+    z-index: 100;
+    &:hover {
+      display: block;
+    }
+    li {
+     a:link, a:visited, a:hover {
+      background: transparent;
+      color: $blue;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 ul.primary {
- padding: 0;
+  padding: 0;
   border-bottom: 1px solid #D9DBDB;
- @include breakpoint ($breakpoint-small-width) {
-  border-bottom: none;
- }
- li {
-  border: none;
-  margin:0 5px 0 0;
-  text-shadow: 0;
-  a:link, a:visited, a:hover {
-   text-shadow: 0;
-   @include sassy-button("matte", 0, 16px, #EFF2F1, #e6e7e7, #555, "inset");
+  @include breakpoint ($breakpoint-small-width) {
+    border-bottom: none;
   }
-  a {color: #333 !important;
-   &.active {
-    color: $blue !important;
+  li {
+    border: none;
+    margin:0 5px 0 0;
+    text-shadow: 0;
+    a:link, a:visited, a:hover {
+     text-shadow: 0;
+     @include sassy-button("matte", 0, 100%, #EFF2F1, #e6e7e7, #555, "inset");
     }
-   }
- }
+    a {
+      color: #333 !important;
+       &.active {
+        color: $blue !important;
+      }
+    }
+  }
 }
 @include breakpoint ($breakpoint-small-width) {
- ul.primary li, ul.secondary li {
-   float: none;
-   clear: both;
-   margin: 0;
-   a {
-   width: 88%;
+  ul.primary li, ul.secondary li {
+    float: none;
+    clear: both;
+    margin: 0;
+    a {
+      width: 88%;
+    }
   }
-  }
- }
+}
 /***********
 ~STRUCTURE
 ***********/
 
 .wrapper {
- &.header {
-  background-color: $greyer;
- }
- &.footer {
-  background-color: $grey;
- }
-}
-.region-header {
-  clear: none;
+  &.header {
+    background-color: $greyer;
+  }
+  &.footer {
+    background-color: $grey;
+  }
 }
 
 /***********
 ~HEADER
 ***********/
-
+.region-header {
+  clear: none;
+}
 .wrapper.header {
- //border-bottom: 2px solid $blue;
   #header {
     padding: $vertical-gutter;
     padding-bottom: 25px;
@@ -142,12 +130,14 @@ ul.primary {
       top: 0;
       right: 0;
       ul {
+        margin: 20px 0 0 0;
+        padding: 0;
         li {
           float: left;
           list-style-type: none;
-          margin: 5px;
+          margin: 0 0 0 10px;
           a {
-            @include sassy-button("matte", 5px, 16px, #999, #888, #fff, "inset");
+            @include sassy-button("matte", 5px, 90%, #999, #888, #fff, "inset");
             -moz-box-shadow: none;
             -webkit-box-shadow: none;
             box-shadow: none;
@@ -170,7 +160,7 @@ h1#site-name {
   padding: 0 0 0 10px;
   float: right;
   width: 200px;
-  margin: 50px 0 0 0;
+  margin: 60px 0 0 0;
   @include breakpoint ($breakpoint-medium-width) {
     clear: both;
     float: none;
@@ -196,27 +186,28 @@ h1#site-name {
     -webkit-box-shadow: none;
     filter: none;
     padding: 5px 15px;
-    width: 45px;
+    width: 40px;
+    height: 28px;
     text-shadow: none;
     margin: 0;
   }
 }
 @include breakpoint ($breakpoint-medium-width) {
- .wrapper.header #header {
-  text-align: center;
-  padding:0;
-  #logo {
-   float: none;
-   clear: both;
-   display: block;
+  .wrapper.header #header {
+    text-align: center;
+    padding:0;
+    #logo {
+      float: none;
+      clear: both;
+      display: block;
+    }
+    #name-and-slogan {
+      float: none;
+      h1 {
+        margin: 10px 0;
+      }
+    }
   }
-  #name-and-slogan {
-   float: none;
-   h1 {
-    margin: 10px 0;
-   }
-  }
- }
 }
 
 /***********
@@ -224,19 +215,39 @@ h1#site-name {
 ***********/
 
 aside.sidebars {
- margin: 30px 0 0 0;
- .sidebar {
-  padding-bottom: 20px;
-  h2 {
-   background: $grey;
-   text-indent: 10px;
-   margin: 0 0 10px 0;
-   font-size: 110%;
+  margin: 30px 0 0 0;
+  .sidebar {
+    padding-bottom: 20px;
+    h2 {
+      background: $grey;
+      text-indent: 10px;
+      margin: 0 0 10px 0;
+      font-size: 110%;
+      }
+    @include breakpoint ($breakpoint-large-width) {
+      padding-left: auto;
+    }
   }
-  @include breakpoint ($breakpoint-large-width) {
-   padding-left: auto;
-  }
- }
+}
+
+/***********
+~SLIDESHOW
+***********/
+
+.flexslider {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 0;
+  border-radius:0;
+  box-shadow:0;
+  margin: 0 0 50px 0;
+  position: relative;
+}
+.flexslider li p {
+  text-align: center;
+  font-size: 110%;
+  background: #DDDDDD;
+  margin: 0;
+  padding: 10px 0;
 }
 
 /***********
@@ -244,20 +255,19 @@ aside.sidebars {
 ***********/
 
 .wrapper.footer {
- #footer {
-  margin-left: auto;
-  margin-right: auto;
-  color: $dark;
-  font-size:12px;
-  //display: inline;
- }
+  #footer {
+    margin-left: auto;
+    margin-right: auto;
+    color: $dark;
+    font-size:12px;
+  }
 }
 ul.social-footer {
- @include reset-ul;
+  @include reset-ul;
   li {
-   list-style-type: none;
-   float: left;
-   margin: 0 5px 0 0;
+    list-style-type: none;
+    float: left;
+    margin: 0 5px 0 0;
     a {
      display: block;
      outline: none;
@@ -269,25 +279,25 @@ ul.social-footer {
       -webkit-transition:.5s;
       color: $dark;
       font-size: 30px;
-      span {
-      display: none;
+        span {
+          display: none;
+        }
+        &:hover {
+         color: $blue;
+        }
       }
-      &:hover {
-       color: $blue;
-      }
-     }
-   }
- }
+    }
+  }
 }
 @include breakpoint ($breakpoint-medium-width) {
- #footer {
-  text-align: center;
- }
- ul.social-footer {
-  margin-top: -10px;
-  li {
-   display: inline-block;
-   float: none;
+  #footer {
+    text-align: center;
   }
- }
+  ul.social-footer {
+    margin-top: -10px;
+    li {
+     display: inline-block;
+     float: none;
+    }
+  }
 }
