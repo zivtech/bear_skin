@@ -30,6 +30,7 @@ javascripts_dir = "js"
 
 require 'sassy-buttons'
 require 'breakpoint'
+require "rgbapng"
 
 # Assuming this theme is in sites/*/themes/THEMENAME, you can add the partials
 # included with a module by uncommenting and modifying one of the lines below:

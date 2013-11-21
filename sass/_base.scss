@@ -89,7 +89,7 @@ $indent-amount: 30px;
 //
 // Partials to be shared with all .scss files.
 //
-
+@import "rgbapng";
 @import "compass/support";  // Add Compass' IE and vendor prefix support variables.
 @import "compass/utilities/general/clearfix"; // Better than Drupal's clearfix.
 @import "compass/utilities/sprites"; // See http://compass-style.org/help/tutorials/spriting/
