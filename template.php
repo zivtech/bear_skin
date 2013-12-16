@@ -23,8 +23,11 @@ function bear_skin_links($variables) {
   return theme_links($variables);
 }
 
-function bear_skin_preprocess_page(&$vars, $hook) {
- $vars['user_menu'] =  theme('links',array('links' => menu_navigation_links('user-menu'),'attributes' => array('class'=> array('links', 'site-menu')) ));
+/**
+ * Implements template_preprocess_page().
+ */
+function bear_skin_preprocess_page(&$vars) {
+ $vars['user_menu'] =  theme('links', array('links' => menu_navigation_links('user-menu'), 'attributes' => array('class '=> array('links', 'site-menu'))));
 }
 
 /***********************

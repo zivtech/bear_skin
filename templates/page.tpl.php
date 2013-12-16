@@ -23,13 +23,7 @@
       <?php print render($page['header']); ?>
         <?php if (theme_get_setting('user_menu')): ?>
           <div id="bear-user-menu">
-            <?php  if (user_is_logged_in()): ?>
-              <?php print $user_menu;  ?>
-            <?php  else : ?>
-              <ul>
-                <li><a href="<?php global $base_url; echo $base_url.'/user/login'; ?>">Login</a></li>
-              </ul>
-            <?php endif; ?>
+            <?php print $user_menu;  ?>
         </div>
         <?php endif; ?>
     </header>

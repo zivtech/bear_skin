@@ -18,7 +18,7 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
   );
   $form['bear_options']['user_menu'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('Add  User Menu to Header (Log In, Log Out etc).'),
+    '#title'         => t('Add User Menu to Header (Log In, Log Out etc).'),
     '#description'   => t('Disable to use the block system'),
     '#default_value' => theme_get_setting('user_menu'),
   );
