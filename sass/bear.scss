@@ -127,18 +127,21 @@ h1 {
 }
 .wrapper.header {
   #header {
-    padding: $vertical-gutter;
-    padding-bottom: 25px;
+    padding: 25px 0;
     position: relative;
     #bear-user-menu {
-      position: absolute;
-      top: 0;
-      right: 0;
+      float: right;
+      margin: 0 20px 0 0;
+      @include breakpoint ($breakpoint-medium-width) {
+        float: none;
+        text-align: center;
+        margin: 0;
+      }
       ul {
         margin: 20px 0 0 0;
         padding: 0;
         li {
-          float: left;
+          display: inline;
           list-style-type: none;
           margin: 0 0 0 10px;
           a {
@@ -200,7 +203,6 @@ h1#site-name {
 @include breakpoint ($breakpoint-medium-width) {
   .wrapper.header #header {
     text-align: center;
-    padding:0;
     #logo {
       float: none;
       clear: both;

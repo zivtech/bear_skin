@@ -350,21 +350,26 @@ h1 {
 }
 
 .wrapper.header #header {
-  padding: 10px 0;
-  padding-bottom: 25px;
+  padding: 25px 0;
   position: relative;
 }
 .wrapper.header #header #bear-user-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
+  margin: 0 20px 0 0;
+}
+@media (max-width: 800px) {
+  .wrapper.header #header #bear-user-menu {
+    float: none;
+    text-align: center;
+    margin: 0;
+  }
 }
 .wrapper.header #header #bear-user-menu ul {
   margin: 20px 0 0 0;
   padding: 0;
 }
 .wrapper.header #header #bear-user-menu ul li {
-  float: left;
+  display: inline;
   list-style-type: none;
   margin: 0 0 0 10px;
 }
@@ -476,7 +481,6 @@ h1#site-name a:link, h1#site-name a:visited {
 @media (max-width: 800px) {
   .wrapper.header #header {
     text-align: center;
-    padding: 0;
   }
   .wrapper.header #header #logo {
     float: none;
