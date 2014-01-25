@@ -51,6 +51,10 @@
     line-height: 25px;
     border: 1px solid #CCCCCC;
   }
+  .field-add-more-submit {
+    text-shadow: none;
+    color: white;
+  }
 }
 .form-text, .form-textarea {
   &:focus, &:hover, &:active {
@@ -68,6 +72,26 @@
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+a.button {
+  @include sassy-button("matte", 5px, 90%, #999, #888, #fff, "inset");
+  margin:0 5px 0 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 5px;
+  &:hover {
+    color: white;
+  }
+}
+
+html.js input.form-autocomplete {
+    background-position: 100% 5px;
+}
+
+.ajax-progress .throbber {
+  background-position: 0px -18px;
 }
 
 .container-inline {
@@ -109,9 +133,29 @@ fieldset {
   .fieldset-wrapper {
     padding: 15px;
   }
+  &.filter-wrapper {
+    padding: 0;
+    font-size: 90%;
+    background: #f9f9f9;
+    .fieldset-wrapper {
+      padding: 5px;
+      border-top: 1px dotted #C0C0C0;
+    }
+    .filter-help {
+      padding: 0 20px 0 0;
+    }
+    .form-item {
+      padding-top: 0;
+      margin-top: 5px;
+    }
+  }
 }
+.ckeditor_links {
+  font-size: 90%;
+}
+
 .vertical-tabs {
-  ul.vertical-tabs-list {
+  ul.vertical-tabs-list {;
     li {
       a {
         text-decoration: none;
