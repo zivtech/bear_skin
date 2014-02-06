@@ -10,148 +10,15 @@
 /***********
 ~IMPORTS
 ***********/
-/* includes our social icons styles and font */
-[class*="foundicon-"]:after {
-  position: relative;
-  top: -10px;
-  left: 10px;
-  color: #DDD;
-  font-size: 100%;
-  margin: -20px 0 0 0;
-  font-style: normal;
-  display: block;
-  text-indent: -9999px;
-  vertical-align: baseline;
-  display: none;
-}
-
-.foundicon-thumb-up:after {
-  content: "thumb-up";
-}
-
-.foundicon-thumb-down:after {
-  content: "thumb-down";
-}
-
-.foundicon-rss:after {
-  content: "rss";
-}
-
-.foundicon-facebook:after {
-  content: "facebook";
-}
-
-.foundicon-twitter:after {
-  content: "twitter";
-}
-
-.foundicon-pinterest:after {
-  content: "pinterest";
-}
-
-.foundicon-github:after {
-  content: "github";
-}
-
-.foundicon-path:after {
-  content: "path";
-}
-
-.foundicon-linkedin:after {
-  content: "linkedin";
-}
-
-.foundicon-dribbble:after {
-  content: "dribbble";
-}
-
-.foundicon-stumble-upon:after {
-  content: "stumble-upon";
-}
-
-.foundicon-behance:after {
-  content: "behance";
-}
-
-.foundicon-reddit:after {
-  content: "reddit";
-}
-
-.foundicon-google-plus:after {
-  content: "google-plus";
-}
-
-.foundicon-youtube:after {
-  content: "youtube";
-}
-
-.foundicon-vimeo:after {
-  content: "vimeo";
-}
-
-.foundicon-flickr:after {
-  content: "flickr";
-}
-
-.foundicon-slideshare:after {
-  content: "slideshare";
-}
-
-.foundicon-picassa:after {
-  content: "picassa";
-}
-
-.foundicon-skype:after {
-  content: "skype";
-}
-
-.foundicon-steam:after {
-  content: "steam";
-}
-
-.foundicon-instagram:after {
-  content: "instagram";
-}
-
-.foundicon-foursquare:after {
-  content: "foursquare";
-}
-
-.foundicon-delicious:after {
-  content: "delicious";
-}
-
-.foundicon-chat:after {
-  content: "chat";
-}
-
-.foundicon-torso:after {
-  content: "torso";
-}
-
-.foundicon-tumblr:after {
-  content: "tumblr";
-}
-
-.foundicon-video-chat:after {
-  content: "video-chat";
-}
-
-.foundicon-digg:after {
-  content: "digg";
-}
-
-.foundicon-wordpress:after {
-  content: "wordpress";
-}
-
+/****************
+OUR CUSTOM MIXINS
+*****************/
 /***********
-~VARIABLES & MIXINS
+~VARIABLES
 ***********/
-/* Usage
-.class {
-    @include linear-gradient(#color, $color);
-} */
+/***********
+~BREAKPOINTS
+***********/
 /***********
 ~GENERIC
 ***********/
@@ -243,7 +110,7 @@ ul.primary {
   padding: 0;
   border-bottom: 1px solid #D9DBDB;
 }
-@media (min-width: 250px) and (max-width: 400px) {
+@media (max-width: 400px) {
   ul.primary {
     border-bottom: none;
   }
@@ -314,7 +181,7 @@ ul.primary li a.active {
   color: #61aee2 !important;
 }
 
-@media (min-width: 250px) and (max-width: 400px) {
+@media (max-width: 400px) {
   ul.primary li, ul.secondary li {
     float: none;
     clear: both;
@@ -509,7 +376,7 @@ aside.sidebars .sidebar h2 {
   margin: 0 0 10px 0;
   font-size: 110%;
 }
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
   aside.sidebars .sidebar {
     padding-left: auto;
   }

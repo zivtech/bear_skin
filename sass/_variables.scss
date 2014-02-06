@@ -1,5 +1,5 @@
 /***********
-~VARIABLES & MIXINS
+~VARIABLES
 ***********/
 
 $yellow: #F9B634;
@@ -11,74 +11,17 @@ $blue: #61AEE2;
 $dark: #555555;
 $whitey: #f9f9f9;
 $vertical-gutter: 10px 0;
-@mixin linear-gradient($fromColor, $toColor) {
-  background-color: $toColor; /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
-  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
-  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
-  background-image:         linear-gradient(top, $fromColor, $toColor);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$fromColor', EndColorStr='$toColor');
-}
-@mixin shadow($color: #333333) {
-  -moz-box-shadow: inset 0 0 3px $color;
-  -webkit-box-shadow: inset 0 0 3px $color;
-  box-shadow: inset 0 0 3px $color;
-}
 $sb-padding: 0.2em 1.1em 0.3em 1.2em;  // Button padding
-/* Usage
-.class {
-    @include linear-gradient(#color, $color);
-} */
-@mixin clear-space {
- div, h1, h2, h3, h4, h5 {
-  margin: 0;
-  padding: 0;
-  -webkit-margin-before: 0;
-  -webkit-margin-end: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
- }
-}
-@mixin reset-ul {
- padding: 0;
- margin: 0;
-}
-@mixin bearfont-main {
-  font-family: Arial, sans-serif;
-  font-size: 1em;
-}
-@mixin bearfont-titles {
-  font-family: 'Forum', Arial, sans-serif;
-}
-@mixin bottom-border-radius ( $value:0 0 4px 4px ) {
-  -webkit-border-radius: $value;
-  -moz-border-radius: $value;
-  border-radius: $value;
-  // keeps background from busting out of border
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-}
-@mixin m-links {
- a {
-   color: $blue;
-   text-decoration: none;
-   &:hover {
-    color: #443C45;
-    text-decoration: underline; }
-   &:visited { color: $blue; }
- }
-}
-@mixin borderRadius($radius: 8px) {
- -moz-border-radius: $radius;
- -webkit-border-radius: $radius;
- border-radius: $radius;
- -webkit-background-clip: padding-box;
-}
+
+
+/***********
+~BREAKPOINTS
+***********/
 // create $breakpoint variables like so
 // assume min-width (by default) if only a number
-$breakpoint-small-width: 250px 400px;
+
+$breakpoint-small-width: max-width 400px;
+$breakpoint-med-small-width: max-width  650px;
 $breakpoint-medium-width: max-width 800px;
-$breakpoint-large-width: 1000px;
+$breakpoint-large-width: max-width 1000px;
+$breakpoint-full-width: max-width 1200px;
