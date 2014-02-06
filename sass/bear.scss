@@ -202,10 +202,12 @@ h1#site-name {
 @include breakpoint ($breakpoint-medium-width) {
   .wrapper.header #header {
     text-align: center;
+    padding: 0;
     #logo {
       float: none;
       clear: both;
       display: block;
+      padding: 20px 0;
     }
     #name-and-slogan {
       float: none;
