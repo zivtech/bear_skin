@@ -29,7 +29,7 @@
     </header>
   </div>
   <div class="wrapper navigation">
-    <div id="navigation">
+    <div id="navigation" tabindex="-1">
       <?php print render($page['navigation']); ?>
     </div><!-- /#navigation -->
   </div>
