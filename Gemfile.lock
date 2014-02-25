@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bourbon (3.1.8)
+      sass (>= 3.2.0)
+      thor
     breakpoint (2.0.5)
       compass (>= 0.12.1)
       sass (>= 3.2.0)
@@ -15,11 +18,13 @@ GEM
     fssm (0.2.10)
     sass (3.2.9)
     sassy-buttons (0.2)
+    thor (0.18.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon
   breakpoint (>= 2.0.5)
   compass (>= 0.12.2)
   compass-rgbapng (>= 0.2.1)

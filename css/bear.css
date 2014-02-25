@@ -134,11 +134,7 @@ ul.primary li a:link, ul.primary li a:visited, ul.primary li a:hover {
   -o-border-radius: 0;
   border-radius: 0;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEFF2F1', endColorstr='#FFB7C4C0');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eff2f1), color-stop(70%, #e6e7e7));
-  background: -webkit-linear-gradient(#eff2f1, #e6e7e7 70%);
-  background: -moz-linear-gradient(#eff2f1, #e6e7e7 70%);
-  background: -o-linear-gradient(#eff2f1, #e6e7e7 70%);
-  background: linear-gradient(#eff2f1, #e6e7e7 70%);
+  background: linear, #eff2f1, #e6e7e7 70%;
   -webkit-box-shadow: white 0 1px 0 inset;
   -moz-box-shadow: white 0 1px 0 inset;
   box-shadow: white 0 1px 0 inset;
@@ -150,11 +146,7 @@ ul.primary li a:link:hover, ul.primary li a:visited:hover, ul.primary li a:hover
 }
 ul.primary li a:link:hover, ul.primary li a:visited:hover, ul.primary li a:hover:hover {
   background-color: #d9dbdb;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #e1e7e5), color-stop(75%, #d9dbdb));
-  background: -webkit-linear-gradient(#e1e7e5 3%, #d9dbdb 75%);
-  background: -moz-linear-gradient(#e1e7e5 3%, #d9dbdb 75%);
-  background: -o-linear-gradient(#e1e7e5 3%, #d9dbdb 75%);
-  background: linear-gradient(#e1e7e5 3%, #d9dbdb 75%);
+  background: linear, #e1e7e5 3%, #d9dbdb 75%;
 }
 ul.primary li a:link:active, ul.primary li a:visited:active, ul.primary li a:hover:active {
   -webkit-box-shadow: #d1d3d3 0 1px 2px inset;
@@ -253,11 +245,7 @@ h1 {
   -o-border-radius: 5px;
   border-radius: 5px;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF999999', endColorstr='#FF666666');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(70%, #888888));
-  background: -webkit-linear-gradient(#999999, #888888 70%);
-  background: -moz-linear-gradient(#999999, #888888 70%);
-  background: -o-linear-gradient(#999999, #888888 70%);
-  background: linear-gradient(#999999, #888888 70%);
+  background: linear, #999999, #888888 70%;
   -webkit-box-shadow: #bfbfbf 0 1px 0 inset;
   -moz-box-shadow: #bfbfbf 0 1px 0 inset;
   box-shadow: #bfbfbf 0 1px 0 inset;
@@ -272,11 +260,7 @@ h1 {
 }
 .wrapper.header #header #bear-user-menu ul li a:hover {
   background-color: #7b7b7b;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #8c8c8c), color-stop(75%, #7b7b7b));
-  background: -webkit-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: -moz-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: -o-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
+  background: linear, #8c8c8c 3%, #7b7b7b 75%;
 }
 .wrapper.header #header #bear-user-menu ul li a:active {
   -webkit-box-shadow: #747474 0 1px 2px inset;

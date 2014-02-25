@@ -88,11 +88,7 @@ OUR CUSTOM MIXINS
   -o-border-radius: 5px;
   border-radius: 5px;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF999999', endColorstr='#FF666666');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(70%, #888888));
-  background: -webkit-linear-gradient(#999999, #888888 70%);
-  background: -moz-linear-gradient(#999999, #888888 70%);
-  background: -o-linear-gradient(#999999, #888888 70%);
-  background: linear-gradient(#999999, #888888 70%);
+  background: linear, #999999, #888888 70%;
   -webkit-box-shadow: #bfbfbf 0 1px 0 inset;
   -moz-box-shadow: #bfbfbf 0 1px 0 inset;
   box-shadow: #bfbfbf 0 1px 0 inset;
@@ -108,11 +104,7 @@ OUR CUSTOM MIXINS
 }
 .form-submit:hover {
   background-color: #7b7b7b;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #8c8c8c), color-stop(75%, #7b7b7b));
-  background: -webkit-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: -moz-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: -o-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
+  background: linear, #8c8c8c 3%, #7b7b7b 75%;
 }
 .form-submit:active {
   -webkit-box-shadow: #747474 0 1px 2px inset;
@@ -146,11 +138,7 @@ a.button {
   -o-border-radius: 5px;
   border-radius: 5px;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF999999', endColorstr='#FF666666');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(70%, #888888));
-  background: -webkit-linear-gradient(#999999, #888888 70%);
-  background: -moz-linear-gradient(#999999, #888888 70%);
-  background: -o-linear-gradient(#999999, #888888 70%);
-  background: linear-gradient(#999999, #888888 70%);
+  background: linear, #999999, #888888 70%;
   -webkit-box-shadow: #bfbfbf 0 1px 0 inset;
   -moz-box-shadow: #bfbfbf 0 1px 0 inset;
   box-shadow: #bfbfbf 0 1px 0 inset;
@@ -167,11 +155,7 @@ a.button:hover {
 }
 a.button:hover {
   background-color: #7b7b7b;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #8c8c8c), color-stop(75%, #7b7b7b));
-  background: -webkit-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: -moz-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: -o-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
+  background: linear, #8c8c8c 3%, #7b7b7b 75%;
 }
 a.button:active {
   -webkit-box-shadow: #747474 0 1px 2px inset;

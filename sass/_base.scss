@@ -208,6 +208,7 @@ OUR CUSTOM MIXINS
 // Partials to be shared with all .scss files.
 //
 @import "variables";
+@import "../sass-extensions/bourbon/bourbon";
 @import "rgbapng";
 @import "compass/support";  // Add Compass' IE and vendor prefix support variables.
 @import "compass/utilities/general/clearfix"; // Better than Drupal's clearfix.
