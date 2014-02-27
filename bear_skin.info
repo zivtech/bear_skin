@@ -1,7 +1,6 @@
-name = Bear Skin
-
+name        = Bear Skin
 description = Bear Skin Starter Theme | Zen sub-theme
-
+screenshot  = screenshot.png
 
 
 ; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
