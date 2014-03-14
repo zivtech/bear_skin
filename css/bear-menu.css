@@ -100,7 +100,9 @@ body {
 }
 #navigation .block-menu > ul > li > a.active {
   color: #FFF;
-  text-decoration: underline;
+  -moz-box-shadow: inset 0 0 5px #666;
+  -webkit-box-shadow: inset 0 0 5px #666;
+  box-shadow: inset 0 0 10px #666;
 }
 #navigation .block-menu > ul a {
   color: #f1edee;
