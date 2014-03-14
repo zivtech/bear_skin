@@ -11,7 +11,7 @@ $secondaryMenuBackground: $blue;	// Secondary color (highlights, triangles...)
 $baseMenuColor: #F1EDEE;				// Proper menu items color
 $gutter: 1em;						// Base gutter
 $input: "input[type=checkbox]";  	// Checkbox hack selector
-$selector: "#navigation .block-menu";
+$selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
 
 // Menu background mixin
 @mixin menu-background($color, $menu-gradient: true) {
