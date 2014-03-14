@@ -74,10 +74,10 @@ h1 {
 }
 
 .wrapper.header {
-  background-color: #d1d3d2;
-  box-shadow: inset 0px -5px 6px #CCC;
-  -moz-box-shadow: inset 0px -5px 6px #CCC;
-  -webkit-box-shadow: inset 0px -5px 6px #CCC;
+  background-color: #8E8E8E;
+  box-shadow: inset 0px -3px 6px #666;
+  -moz-box-shadow: inset 0px -3px 6px #666;
+  -webkit-box-shadow: inset 0px -3px 6px #666;
 }
 .wrapper.footer {
   background-color: #eff2f1;
@@ -100,7 +100,7 @@ h1 {
 }
 .wrapper.header #header #bear-user-menu {
   float: right;
-  margin: 0 20px 0 0;
+  margin: 0;
 }
 @media (max-width: 800px) {
   .wrapper.header #header #bear-user-menu {
@@ -125,22 +125,22 @@ h1 {
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF999999', endColorstr='#FF666666');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(70%, #888888));
-  background: -webkit-linear-gradient(#999999, #888888 70%);
-  background: -moz-linear-gradient(#999999, #888888 70%);
-  background: -o-linear-gradient(#999999, #888888 70%);
-  background: linear-gradient(#999999, #888888 70%);
-  -webkit-box-shadow: #bfbfbf 0 1px 0 inset;
-  -moz-box-shadow: #bfbfbf 0 1px 0 inset;
-  box-shadow: #bfbfbf 0 1px 0 inset;
-  border: 1px solid #7b7b7b;
-  text-shadow: #585858 0 -1px 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF777777', endColorstr='#FF444444');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777777), color-stop(70%, #666666));
+  background: -webkit-linear-gradient(#777777, #666666 70%);
+  background: -moz-linear-gradient(#777777, #666666 70%);
+  background: -o-linear-gradient(#777777, #666666 70%);
+  background: linear-gradient(#777777, #666666 70%);
+  -webkit-box-shadow: #9d9d9d 0 1px 0 inset;
+  -moz-box-shadow: #9d9d9d 0 1px 0 inset;
+  box-shadow: #9d9d9d 0 1px 0 inset;
+  border: 1px solid #595959;
+  text-shadow: #363636 0 -1px 0;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -149,22 +149,22 @@ h1 {
   text-decoration: none;
 }
 .wrapper.header #header #bear-user-menu ul li a:hover {
-  background-color: #7b7b7b;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #8c8c8c), color-stop(75%, #7b7b7b));
-  background: -webkit-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: -moz-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: -o-linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
-  background: linear-gradient(#8c8c8c 3%, #7b7b7b 75%);
+  background-color: #595959;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #6a6a6a), color-stop(75%, #595959));
+  background: -webkit-linear-gradient(#6a6a6a 3%, #595959 75%);
+  background: -moz-linear-gradient(#6a6a6a 3%, #595959 75%);
+  background: -o-linear-gradient(#6a6a6a 3%, #595959 75%);
+  background: linear-gradient(#6a6a6a 3%, #595959 75%);
 }
 .wrapper.header #header #bear-user-menu ul li a:active {
-  -webkit-box-shadow: #747474 0 1px 2px inset;
-  -moz-box-shadow: #747474 0 1px 2px inset;
-  box-shadow: #747474 0 1px 2px inset;
+  -webkit-box-shadow: #525252 0 1px 2px inset;
+  -moz-box-shadow: #525252 0 1px 2px inset;
+  box-shadow: #525252 0 1px 2px inset;
 }
 .wrapper.header #header #bear-user-menu ul li a.disabled, .wrapper.header #header #bear-user-menu ul li a[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
-  background: #888888;
+  background: #666666;
   cursor: default;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;

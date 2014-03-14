@@ -99,7 +99,7 @@ body {
   text-transform: uppercase;
 }
 #navigation .block-menu > ul a {
-  color: #f9f9f9;
+  color: #f1edee;
   text-decoration: none;
   text-shadow: 0 1px 0 #848484;
 }
@@ -192,7 +192,7 @@ body {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
-    color: #f9f9f9;
+    color: #f1edee;
     text-shadow: 0 1px 0 #848484;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
