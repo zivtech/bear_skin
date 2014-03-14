@@ -42,6 +42,7 @@ stylesheets[all][] = css/tabs.css
 stylesheets[all][] = css/pages.css
 stylesheets[all][] = css/blocks.css
 stylesheets[all][] = css/navigation.css
+stylesheets[all][] = css/bear-menu.css
 stylesheets[all][] = css/views-styles.css
 stylesheets[all][] = css/comments.css
 stylesheets[all][] = css/forms.css
@@ -70,6 +71,7 @@ stylesheets[all][] = css/bear.css
 ; Optionally add some JavaScripts to your theme.
 
 scripts[] = js/jquery.formalize.min.js
+scripts[] = js/bootstrap-filestyle.js
 scripts[] = js/select2.min.js
 scripts[] = js/script.js
 

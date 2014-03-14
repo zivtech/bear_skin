@@ -10,6 +10,8 @@ Version: 3.4.1 Timestamp: Thu Jun 27 18:02:10 PDT 2013
     *display: inline;
     vertical-align: middle;
     width: 100%;
+    min-width: 150px;
+    padding-top: 4px;
 }
 
 .select2-container,

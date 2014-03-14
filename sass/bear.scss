@@ -11,7 +11,6 @@
 ~IMPORTS
 ***********/
 @import "base";
-@import url(http://fonts.googleapis.com/css?family=Forum);
 @import "compass/css3/border-radius";
 
 
@@ -32,63 +31,10 @@ h1, h2, h3, h4, h5 {
 #page {
   min-width: 300px;
 }
-#navigation ul.menu {
-  li {
-    text-transform: none;
-    @include clear-space;
-    @include m-links;
-    a {
-      background-color: $grey;
-      padding: 7px 15px 6px 15px;
-      @include bottom-border-radius;
-      display: block;
-      &:hover, &.active {
-        color: #ffffff;
-        text-decoration: underline;
-        background: $greyer;
-      }
-      &.active, &:visited {
-        text-decoration: none;
-      }
-    }
-  }
-  ul {
-    z-index: 100;
-    &:hover {
-      display: block;
-    }
-    li {
-     a:link, a:visited, a:hover {
-      background: transparent;
-      color: $blue;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-ul.primary {
-  padding: 0;
-  border-bottom: 1px solid #D9DBDB;
-  @include breakpoint ($breakpoint-small-width) {
-    border-bottom: none;
-  }
-  li {
-    border: none;
-    margin:0 5px 0 0;
-    text-shadow: 0;
-    a:link, a:visited, a:hover {
-     text-shadow: 0;
-     @include sassy-button("matte", 0, 100%, #EFF2F1, #e6e7e7, #555, "inset");
-    }
-    a {
-      color: #333 !important;
-       &.active {
-        color: $blue !important;
-      }
-    }
-  }
+.navigation {
+  float: left;
+  width: 100%;
+  padding: 15px 0;
 }
 @include breakpoint ($breakpoint-small-width) {
   ul.primary li, ul.secondary li {
@@ -110,6 +56,9 @@ h1 {
 .wrapper {
   &.header {
     background-color: $greyer;
+    box-shadow: inset 0px -5px 6px #CCC;
+    -moz-box-shadow: inset 0px -5px 6px #CCC;
+    -webkit-box-shadow: inset 0px -5px 6px #CCC;
   }
   &.footer {
     background-color: $grey;
@@ -126,7 +75,7 @@ h1 {
 }
 .wrapper.header {
   #header {
-    padding: 25px 0;
+    padding: 25px 20px;
     position: relative;
     #bear-user-menu {
       float: right;

@@ -5,6 +5,51 @@
 
 @import "base";
 
+/* IMporting some boostrap elements */
+
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../images/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+.btn {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #cccccc;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  margin-right: 10px;
+}
 
 .form-item { /* Wrapper for a form element (or group of form elements) and its label */
   margin: 1.5em 0;
@@ -22,6 +67,9 @@
     font-weight: normal;
     color: #666666;
     font-size: 90%;
+    &.btn {
+      display: inline;
+    }
   }
 
   label.option { /* The label for a radio button or checkbox */
@@ -46,14 +94,42 @@
   .form-radios & { /* Pack groups of checkboxes and radio buttons closer together */
     margin: 0; /* Drupal core uses "0.4em 0" */
   }
-  .form-text {
-    min-height: 25px;
-    line-height: 25px;
+  .form-text, .form-textarea, .form-file {
+    min-height: 30px;
+    line-height: 30px;
     border: 1px solid #CCCCCC;
+    font-size: 90%;
+    color: #666666;
   }
   .field-add-more-submit {
     text-shadow: none;
     color: white;
+  }
+  .icon-folder-open {
+    background-position: -408px -120px;
+    width: 16px;
+  }
+  .input-large {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+    transition: border linear .2s, box-shadow linear .2s;
+    display: inline-block;
+    height: 26px;
+    padding: 4px 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-bottom: 0;
   }
 }
 .form-text, .form-textarea {
@@ -64,14 +140,13 @@
   }
   &:focus {
     border: 1px solid #61AEE2;
+    background: #f9f9f9;
   }
 }
-.form-submit {
-  @include sassy-button("matte", 5px, 90%, #999, #888, #fff, "inset");
+.form-submit, button, input[type="button"], input[type="reset"], input[type="submit"] {
+  @include sassy-button("matte", 0px, 90%, #999, #888, #fff, "inset");
   margin:0 5px 0 0;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  padding: 0.4em 1.1em 0.5em 1.2em;
 }
 
 a.button {
@@ -80,7 +155,6 @@ a.button {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  padding: 5px;
   &:hover {
     color: white;
   }
@@ -231,38 +305,37 @@ html.js fieldset.collapsed {
 }
 
 /*
- * Drupal admin tables
+ * Drupal tables
  *
  * We overrode these styles in normalize.css, but restore them for the admin
  * section of the site.
  */
 
-form {
-  table {
-    width: 100%;
 
-  }
-  th {
-    text-align: left; /* LTR */
-    padding-right: 1em; /* LTR */
-    border-bottom: 3px solid #ccc;
-    font-weight: normal;
-    padding:5px 10px;
-  }
-
-  tbody {
-    border-top: 1px solid #ccc;
-  }
-  td {
-    padding: 10px;
-  }
-  tr.even {
-    background-color: #fff;
-  }
-  table .item-list ul {
-    margin: 0;
-  }
+table {
+  width: 100%;
 }
+th {
+  text-align: left; /* LTR */
+  padding-right: 1em; /* LTR */
+  border-bottom: 3px solid #ccc;
+  font-weight: normal;
+  padding:5px 10px;
+}
+
+tbody {
+  border-top: 1px solid #ccc;
+}
+td {
+  padding: 10px;
+}
+tr.even {
+  background-color: #fff;
+}
+table .item-list ul {
+  margin: 0;
+}
+
 
 @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
   .lt-ie8 tr.even,
@@ -282,4 +355,7 @@ td.menu-disabled {
   background: #ccc;
 }
 
+html.js input.form-autocomplete {
+  background-position: 100% 8px;
+}
 

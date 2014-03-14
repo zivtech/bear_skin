@@ -64,28 +64,13 @@ li a.active {
 
     li { /* A simple method to get navigation links to appear in one line. */
       float: left; /* LTR */
-      padding: 0 10px 0 0; /* LTR */
       list-style-type: none;
       list-style-image: none;
     }
   }
 }
 
-#navigation ul.menu ul {
-  position: absolute;
-  opacity: 0;
-  -webkit-transition:all 0.5s ease;
-  -moz-transition:all 0.6s ease;
-  overflow: hidden;
-  visibility: hidden;
-}
-#navigation ul.menu li {
-  &:hover > ul {
-    visibility: visible;
-    opacity: 1;
-    height: auto;
-  }
-}
+
 
 .region-navigation {
 }
@@ -116,4 +101,29 @@ li a.active {
  */
 
 .block-menu-block {
+}
+
+/* DRUPAL TABS */
+
+ul.primary {
+  padding: 0;
+  border-bottom: none;
+  @include breakpoint ($breakpoint-small-width) {
+    border-bottom: none;
+  }
+  li {
+    border: none;
+    margin:0 5px 0 0;
+    text-shadow: 0;
+    a:link, a:visited, a:hover {
+     text-shadow: 0;
+     @include sassy-button("matte", 0, 100%, #EFF2F1, #e6e7e7, #555, "inset");
+    }
+    a {
+      color: #333 !important;
+       &.active {
+        color: $blue !important;
+      }
+    }
+  }
 }

@@ -68,25 +68,8 @@ li a.active {
   /* A simple method to get navigation links to appear in one line. */
   float: left;
   /* LTR */
-  padding: 0 10px 0 0;
-  /* LTR */
   list-style-type: none;
   list-style-image: none;
-}
-
-#navigation ul.menu ul {
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.6s ease;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-#navigation ul.menu li:hover > ul {
-  visibility: visible;
-  opacity: 1;
-  height: auto;
 }
 
 /*
@@ -106,3 +89,78 @@ li a.active {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
+/* DRUPAL TABS */
+ul.primary {
+  padding: 0;
+  border-bottom: none;
+}
+@media (max-width: 400px) {
+  ul.primary {
+    border-bottom: none;
+  }
+}
+ul.primary li {
+  border: none;
+  margin: 0 5px 0 0;
+  text-shadow: 0;
+}
+ul.primary li a:link, ul.primary li a:visited, ul.primary li a:hover {
+  text-shadow: 0;
+  font-size: 100%;
+  padding: 0.2em 1.1em 0.3em 1.2em;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEFF2F1', endColorstr='#FFB7C4C0');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eff2f1), color-stop(70%, #e6e7e7));
+  background: -webkit-linear-gradient(#eff2f1, #e6e7e7 70%);
+  background: -moz-linear-gradient(#eff2f1, #e6e7e7 70%);
+  background: -o-linear-gradient(#eff2f1, #e6e7e7 70%);
+  background: linear-gradient(#eff2f1, #e6e7e7 70%);
+  -webkit-box-shadow: white 0 1px 0 inset;
+  -moz-box-shadow: white 0 1px 0 inset;
+  box-shadow: white 0 1px 0 inset;
+  border: 1px solid #d9dbdb;
+  text-shadow: white 0 1px 0;
+}
+ul.primary li a:link:hover, ul.primary li a:visited:hover, ul.primary li a:hover:hover {
+  text-decoration: none;
+}
+ul.primary li a:link:hover, ul.primary li a:visited:hover, ul.primary li a:hover:hover {
+  background-color: #d9dbdb;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #e1e7e5), color-stop(75%, #d9dbdb));
+  background: -webkit-linear-gradient(#e1e7e5 3%, #d9dbdb 75%);
+  background: -moz-linear-gradient(#e1e7e5 3%, #d9dbdb 75%);
+  background: -o-linear-gradient(#e1e7e5 3%, #d9dbdb 75%);
+  background: linear-gradient(#e1e7e5 3%, #d9dbdb 75%);
+}
+ul.primary li a:link:active, ul.primary li a:visited:active, ul.primary li a:hover:active {
+  -webkit-box-shadow: #d1d3d3 0 1px 2px inset;
+  -moz-box-shadow: #d1d3d3 0 1px 2px inset;
+  box-shadow: #d1d3d3 0 1px 2px inset;
+}
+ul.primary li a:link.disabled, ul.primary li a:link[disabled], ul.primary li a:visited.disabled, ul.primary li a:visited[disabled], ul.primary li a:hover.disabled, ul.primary li a:hover[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #e6e7e7;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+ul.primary li a:link::-moz-focus-inner, ul.primary li a:visited::-moz-focus-inner, ul.primary li a:hover::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+ul.primary li a {
+  color: #333 !important;
+}
+ul.primary li a.active {
+  color: #61aee2 !important;
+}

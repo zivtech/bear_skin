@@ -16,22 +16,34 @@
 (function ($) {
  $( window ).resize( function(){
   $('.views_slideshow_cycle_main').each(function () {
-   var img_height;
-   $(this).find('.views-slideshow-cycle-main-frame-row').each(function () {
+    var img_height;
+    $(this).find('.views-slideshow-cycle-main-frame-row').each(function () {
     var tmp_img_height = $(this).height();
     if (tmp_img_height !== 0 ) {
-     img_height = tmp_img_height;
+      img_height = tmp_img_height;
     }
     return;
-   });
-   if (img_height !== 0) {
-    $(this).height(img_height).children('.views-slideshow-cycle-main-frame').height(img_height);
-   }
-   return;
+    });
+    if (img_height !== 0) {
+      $(this).height(img_height).children('.views-slideshow-cycle-main-frame').height(img_height);
+    }
+    return;
+    });
   });
- });
 });
 
-$(document).ready(function() { $('#content select.form-select').select2(); });
+(function ($) {
+  Drupal.behaviors.BearScripts = {
+    attach: function (context, settings) {
+
+      $('#content select.form-select').select2();
+      $(":file").filestyle({buttonText: "Find file"});
+      if ($('#navigation .block-menu').length) {
+        $('#navigation .block-menu').prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
+      }
+
+    }
+  }
+}(jQuery));
 
 })(jQuery, Drupal, this, this.document);
