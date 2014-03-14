@@ -115,12 +115,16 @@ body {
 			float: left;
 			padding: $gutter 3 * $gutter;
 			text-transform: uppercase;
+			&.active {
+				color: #FFF;
+				text-decoration: underline;
+			}
 		}
 	}
 	a {
 		color: $baseMenuColor;
 		text-decoration: none;
-		@include text-shadow(0 1px 0 $baseMenuBackground);
+		text-shadow: 0 -1px 0 #585858;
 	}
 
 	// Second level

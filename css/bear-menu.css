@@ -98,10 +98,14 @@ body {
   padding: 1em 3em;
   text-transform: uppercase;
 }
+#navigation .block-menu > ul > li > a.active {
+  color: #FFF;
+  text-decoration: underline;
+}
 #navigation .block-menu > ul a {
   color: #f1edee;
   text-decoration: none;
-  text-shadow: 0 1px 0 #848484;
+  text-shadow: 0 -1px 0 #585858;
 }
 #navigation .block-menu > ul ul {
   position: absolute;
