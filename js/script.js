@@ -41,6 +41,9 @@
       if ($('#navigation .block-menu').length) {
         $('#navigation .block-menu').prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
       }
+      if ($('#navigation .menu-block-wrapper').length) {
+        $('#navigation .menu-block-wrapper').prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
+      }
 
     }
   }
