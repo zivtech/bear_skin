@@ -176,7 +176,7 @@ body {
   border-color: #61aee2;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   #navigation .block-menu > ul, #navigation .menu-block-wrapper > ul, #navigation .block-menu > ul ul, #navigation .menu-block-wrapper > ul ul {
     visibility: visible;
     opacity: 1;
@@ -239,6 +239,30 @@ body {
   }
   #navigation .block-menu > ul li, #navigation .menu-block-wrapper > ul li {
     display: block;
+    clear: both;
+  }
+  #navigation .block-menu > ul li.expanded.active, #navigation .menu-block-wrapper > ul li.expanded.active {
+    background: #666;
+    float: left;
+    width: 100%;
+  }
+  #navigation .block-menu > ul li li, #navigation .menu-block-wrapper > ul li li {
+    clear: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  #navigation .block-menu > ul li li:hover, #navigation .menu-block-wrapper > ul li li:hover {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  #navigation .block-menu > ul li li a, #navigation .menu-block-wrapper > ul li li a {
+    color: #CCC;
+  }
+  #navigation .block-menu > ul li li a:hover, #navigation .menu-block-wrapper > ul li li a:hover {
+    background: transparent;
+    color: white;
   }
   #navigation .block-menu > ul > li, #navigation .menu-block-wrapper > ul > li {
     float: none;
@@ -296,10 +320,5 @@ body {
   }
   #navigation .block-menu input[type=checkbox]:checked ~ ul ul, #navigation .menu-block-wrapper input[type=checkbox]:checked ~ ul ul {
     display: block;
-  }
-}
-@media screen and (max-width: 600px) {
-  #navigation .block-menu > li > a, #navigation .menu-block-wrapper > ul > li > a {
-    padding: 1em 2em;
   }
 }
