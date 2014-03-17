@@ -12,7 +12,7 @@
   <?php if ($default_mobile_metatags): ?>
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1">
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
   <?php print $styles; ?>
@@ -40,20 +40,5 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-<?php if (theme_get_setting('responsive_nav')): ?>
-    <script src="<?php print $base_path . $path_to_bear_skin; ?>/js/jquery.meanmenu.2.0.min.js"></script>
-    <script>
-    (function ($, Drupal, window, document, undefined) {
-      $(function () {
-        $('.menu-block-wrapper').meanmenu({
-          meanScreenWidth: "800",
-          meanShowChildren: true,
-          meanExpand: "+",
-          meanContract: "-",
-        });
-      });
-    })(jQuery, Drupal, this, this.document);
-    </script>
-  <?php endif; ?>
 </body>
 </html>
