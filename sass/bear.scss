@@ -198,16 +198,18 @@ aside.sidebars {
   background: none repeat scroll 0 0 #FFFFFF;
   border: 0;
   border-radius:0;
-  box-shadow:0;
-  margin: 0 0 50px 0;
+  border: 5px solid #FFFFFF;
+  margin: 30px 0;
   position: relative;
 }
 .flexslider li p {
   text-align: center;
   font-size: 110%;
-  background: #DDDDDD;
+  background: #f5f5f5;
   margin: 0;
   padding: 10px 0;
+  font-size: 90%;
+  @include bearfont-titles;
 }
 
 /***********
@@ -220,6 +222,28 @@ aside.sidebars {
     margin-right: auto;
     color: $dark;
     font-size:12px;
+    ul.social-footer li a {
+      &.drupal {
+        background: url("../images/drupal-grey.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+        display: block;
+        height: 40px;
+        position: relative;
+        text-indent: -9999px;
+        top: -7px;
+        width: 40px;
+        &:hover {
+          background-position: left -45px;
+        }
+      }
+      &.mip {
+        @include bearfont-titles;
+        font-size: 22px;
+        color: $dark;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
   }
 }
 ul.social-footer {
