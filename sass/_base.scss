@@ -214,6 +214,7 @@ OUR CUSTOM MIXINS
 @import "compass/utilities/sprites"; // See http://compass-style.org/help/tutorials/spriting/
 @import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "compass/typography/vertical_rhythm"; // Helps set up a vertical rhythm.
+@import "../jeet/index";
 @import "zen";              // Add the Zen Grids responsive layout mixins.
 @import "sassy-buttons"; // Add the sassy buttons
 @import "settings";   // Settings for Foundation Icons http://zurb.com/playground/foundation-icons
