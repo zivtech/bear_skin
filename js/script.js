@@ -45,6 +45,8 @@
         $('#navigation .menu-block-wrapper').prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
       }
 
+      //$('.equalheight').eqHeight();
+
     }
   }
 }(jQuery));

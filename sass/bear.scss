@@ -285,3 +285,17 @@ ul.social-footer {
     }
   }
 }
+
+/* BEARSKIN site Documentation page */
+
+#documentation {
+  p.tb {
+    @include col(1/4, $cycle: 4, $gutter: 1);
+    //@include box-sizing(border-box);
+    @include box-sizing(border-box);
+    background: #DDDDDD;
+    padding: 20px;
+  }
+}
+
+

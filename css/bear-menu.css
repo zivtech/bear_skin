@@ -105,11 +105,30 @@ body {
   -webkit-box-shadow: 1px 0 0 #b7b7b7;
   -moz-box-shadow: 1px 0 0 #b7b7b7;
   box-shadow: 1px 0 0 #b7b7b7;
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+#navigation .block-menu > li:before, #navigation .block-menu > li:after, #navigation .menu-block-wrapper > ul > li:before, #navigation .menu-block-wrapper > ul > li:after {
+  content: '';
+  display: table;
+}
+#navigation .block-menu > li:after, #navigation .menu-block-wrapper > ul > li:after {
+  clear: both;
 }
 #navigation .block-menu > li > a, #navigation .menu-block-wrapper > ul > li > a {
   float: left;
-  padding: 1em 3em;
+  padding: 1em 0;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
 }
 #navigation .block-menu > li > a.active, #navigation .menu-block-wrapper > ul > li > a.active {
   color: #FFF;
@@ -180,7 +199,7 @@ body {
 }
 #navigation .block-menu ul a, #navigation .menu-block-wrapper > ul ul a {
   padding: 1em;
-  width: 175px;
+  width: 250px;
   display: block;
   border-color: #aaaaaa;
 }
