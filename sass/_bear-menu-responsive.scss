@@ -63,6 +63,7 @@
           }
           a {
             color: #CCC;
+            text-align: left;
             &:hover {
               background: transparent;
               color: white;
@@ -72,6 +73,7 @@
       }
       > li {
         float: none;
+        width: 100%;
         border: 0;
         @include box-shadow(none);
         @include menu-background($baseMenuBackground, false);
@@ -79,6 +81,7 @@
           float: none;
           display: block;
           padding: $gutter;
+          text-align: left;
         }
       }
       // Second level

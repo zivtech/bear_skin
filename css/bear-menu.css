@@ -291,6 +291,7 @@ body {
   }
   #navigation .block-menu > ul li li a, #navigation .menu-block-wrapper > ul li li a {
     color: #CCC;
+    text-align: left;
   }
   #navigation .block-menu > ul li li a:hover, #navigation .menu-block-wrapper > ul li li a:hover {
     background: transparent;
@@ -298,6 +299,7 @@ body {
   }
   #navigation .block-menu > ul > li, #navigation .menu-block-wrapper > ul > li {
     float: none;
+    width: 100%;
     border: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -309,6 +311,7 @@ body {
     float: none;
     display: block;
     padding: 1em;
+    text-align: left;
   }
   #navigation .block-menu > ul ul, #navigation .menu-block-wrapper > ul ul {
     position: static;
