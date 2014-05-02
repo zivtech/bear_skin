@@ -286,7 +286,15 @@ ul.social-footer {
   }
 }
 
-/* BEARSKIN site Documentation page */
+/* BEARSKIN site Home page fun */
+
+#home {
+  .view-slideshow {
+    @include animate($name: fadeIn, $duration: 2s, $delay: .2s, $function: ease, $mode: both);
+  }
+}
+
+/* BEARSKIN site Documentation page fun */
 
 #documentation {
   p.tb {
@@ -297,5 +305,3 @@ ul.social-footer {
     padding: 20px;
   }
 }
-
-

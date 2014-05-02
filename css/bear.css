@@ -3092,7 +3092,16 @@ ul.social-footer li a i:hover {
     float: none;
   }
 }
-/* BEARSKIN site Documentation page */
+/* BEARSKIN site Home page fun */
+#home .view-slideshow {
+  -webkit-animation: fadeIn 2s 0.2s ease both;
+  -moz-animation: fadeIn 2s 0.2s ease both;
+  -ms-animation: fadeIn 2s 0.2s ease both;
+  -o-animation: fadeIn 2s 0.2s ease both;
+  animation: fadeIn 2s 0.2s ease both;
+}
+
+/* BEARSKIN site Documentation page fun */
 #documentation p.tb {
   *zoom: 1;
   float: left;
