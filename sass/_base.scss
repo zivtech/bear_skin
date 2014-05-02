@@ -216,6 +216,7 @@ OUR CUSTOM MIXINS
 @import "compass/typography/vertical_rhythm"; // Helps set up a vertical rhythm.
 @import "zen";              // Add the Zen Grids responsive layout mixins.
 @import "../jeet/index";
+@import "animate";
 @import "sassy-buttons"; // Add the sassy buttons
 @import "settings";   // Settings for Foundation Icons http://zurb.com/playground/foundation-icons
 @import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
