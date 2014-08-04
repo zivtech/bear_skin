@@ -34,8 +34,7 @@ h1, h2, h3, h4, h5 {
 #page {
   min-width: 300px;
 }
-.navigation {
-  float: left;
+#navigation {
   width: 100%;
   padding: 15px 0;
 }
@@ -78,7 +77,7 @@ h1 {
 }
 .wrapper.header {
   #header {
-    padding: 25px 20px;
+    padding: 25px 0;
     position: relative;
     #bear-user-menu {
       float: right;
@@ -175,9 +174,8 @@ h1#site-name {
 ***********/
 
 aside.sidebars {
-  margin: 30px 0 0 0;
   .sidebar {
-    padding-bottom: 20px;
+    padding: 5px 0 20px 0;
     h2 {
       background: $grey;
       text-indent: 10px;
@@ -222,54 +220,9 @@ aside.sidebars {
     margin-right: auto;
     color: $dark;
     font-size:12px;
-    ul.social-footer li a {
-      &.drupal {
-        background: url("../images/drupal-grey.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-        display: block;
-        height: 40px;
-        position: relative;
-        text-indent: -9999px;
-        top: -7px;
-        width: 40px;
-        &:hover {
-          background-position: left -45px;
-        }
-      }
-      &.mip {
-        @include bearfont-titles;
-        font-size: 22px;
-        color: $dark;
-        &:hover {
-          color: $blue;
-        }
-      }
-    }
-  }
-}
-ul.social-footer {
-  @include reset-ul;
-  li {
-    list-style-type: none;
-    float: left;
-    margin: 0 5px 0 0;
-    a {
-     display: block;
-     outline: none;
-     text-decoration: none;
-     i {
-      -o-transition:.5s;
-       -ms-transition:.5s;
-      -moz-transition:.5s;
-      -webkit-transition:.5s;
-      color: $dark;
-      font-size: 30px;
-        span {
-          display: none;
-        }
-        &:hover {
-         color: $blue;
-        }
-      }
+    @include breakpoint ($breakpoint-full-width) {
+      padding-left: 0 20px;
+      padding-right: 0 20px;
     }
   }
 }
@@ -283,14 +236,6 @@ ul.social-footer {
      display: inline-block;
      float: none;
     }
-  }
-}
-
-/* BEARSKIN site Home page fun */
-
-#home {
-  .view-slideshow {
-    @include animate($name: fadeIn, $duration: 2s, $delay: .2s, $function: ease, $mode: both);
   }
 }
 

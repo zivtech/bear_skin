@@ -1,0 +1,74 @@
+/**
+ *
+ * Non panel layouts (one sidebar, two sidebars, none)
+ *
+ */
+
+@import "base";
+
+$site-max-width: 1200px;
+
+#page {
+  width: 100%;
+  * {
+    @include box-sizing(border-box);
+  }
+  .wrapper {
+    @include breakpoint ($breakpoint-full-width) {
+      padding: 0 20px;
+    }
+  }
+}
+
+#header,
+#content,
+#navigation,
+#highlighted,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  max-width: $site-max-width;
+  margin: 0 auto;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+#header,
+#main,
+#footer {
+  width: 100%;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+#main {
+  max-width: $site-max-width;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+}
+
+/* ONE SIDEBAR */
+
+.sidebar-first {
+  #content {
+    @include col(2/3);
+    @include shift(1/3);
+    @include breakpoint ($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+  .region-sidebar-first {
+    @include col(1/3);
+    @include shift(-2/3);
+    @include breakpoint ($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+}

@@ -9,7 +9,6 @@ core        = 7.x
 base theme  = zen
 
 
-
 ; This section controls the CSS files for your theme. There are 3 different
 ; things you can do with a "stylesheets" line:
 ; - Add a new stylesheet for your theme.
@@ -36,13 +35,14 @@ stylesheets[all][] = system.menus.css
 ; Then we add our own stylesheets.
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/wireframes.css
-stylesheets[all][] = css/layouts/responsive-sidebars.css
-stylesheets[all][] = css/page-backgrounds.css
+stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/tabs.css
 stylesheets[all][] = css/pages.css
 stylesheets[all][] = css/blocks.css
 stylesheets[all][] = css/navigation.css
 stylesheets[all][] = css/bear-menu.css
+stylesheets[all][] = css/morphy-buttons-vendor.min.css
+stylesheets[all][] = css/morphy-buttons.min.css
 stylesheets[all][] = css/views-styles.css
 stylesheets[all][] = css/comments.css
 stylesheets[all][] = css/forms.css
@@ -51,10 +51,9 @@ stylesheets[all][] = css/sidebars.css
 stylesheets[all][] = css/print.css
 stylesheets[all][] = css/formalize.css
 stylesheets[all][] = css/select2.css
-stylesheets[all][] = css/social_foundicons.css
-stylesheets[all][] = css/social_foundicons_ie7.css
 stylesheets[all][] = css/responsive-nav.css
 stylesheets[all][] = css/bear.css
+
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -64,8 +63,7 @@ stylesheets[all][] = css/bear.css
 ;
 ; If you still wish to use conditional stylesheets, you must install the
 ; conditional stylesheets module: http://drupal.org/project/conditional_styles
-;stylesheets-conditional[lte IE 8][all][] = css/ie8.css
-
+; stylesheets-conditional[lte IE 8][all][] = css/ie8.css
 
 
 ; Optionally add some JavaScripts to your theme.
@@ -74,6 +72,8 @@ scripts[] = js/jquery.formalize.min.js
 scripts[] = js/bootstrap-filestyle.js
 scripts[] = js/jquery.eqheight.js
 scripts[] = js/select2.min.js
+scripts[] = js/morphy-buttons-vendor.min.js
+scripts[] = js/morphy-buttons.min.js
 scripts[] = js/script.js
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
@@ -108,7 +108,6 @@ regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
 
 
-
 ; Various page elements output by the theme can be toggled on and off. The
 ; "features" control which of these check boxes display on the
 ; admin/appearance config page. This is useful for suppressing check boxes
@@ -124,7 +123,6 @@ features[] = comment_user_picture
 features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
-
 
 
 ; Set the default values of settings on the theme-settings.php form.

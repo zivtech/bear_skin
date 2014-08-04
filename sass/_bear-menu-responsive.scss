@@ -46,6 +46,8 @@
       li {
         display: block;
         clear: both;
+        width: 100%;
+        text-align: left;
         &.expanded.active {
           background: #666;
           float: left;
@@ -81,12 +83,6 @@
           padding: $gutter;
         }
       }
-      // Second level
-      // <nav class="animenu">
-      //    <ul>
-      //      <ul></ul>
-      //    </ul>
-      //  </nav>
       ul {
         position: static;
         @include border-radius(0);
@@ -123,16 +119,3 @@
   } // end .animenu
 
 } //end @media
-
-
-// Adjust menu when resizing [in this case].
-// To be updated depending of menu items length.
-// @media screen and (max-width: 800px) {
-//   #{$selector} > ul {
-//     > li {
-//       > a {
-//         padding: $gutter 2 * $gutter;
-//       }
-//     }
-//   }
-// }
