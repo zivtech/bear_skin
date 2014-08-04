@@ -1,0 +1,58 @@
+.bearskin-row {
+  margin-bottom: 20px;
+  clear: both;
+  width: 100%;
+  float: left;
+}
+.bearskin-row .column {
+  float: left;
+}
+.bearskin-row .column .bearskin-row {
+  margin-bottom: 10px;
+}
+.bearskin-row .sidebar.left {
+  clear: none;
+  display: inline;
+  float: left;
+  left: -60%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  text-align: inherit;
+  width: 20%;
+}
+.bearskin-row .column.center {
+  clear: none;
+  display: inline;
+  float: left;
+  left: 20%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  text-align: inherit;
+  width: 60%;
+}
+.bearskin-row .sidebar.right {
+  clear: none;
+  display: inline;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: inherit;
+  width: 20%;
+}
+.bearskin-row .sidebar.left .col-inside {
+  margin-right: 20px;
+}
+.bearskin-row .sidebar.right .col-inside {
+  margin-left: 20px;
+}
+.bearskin-row .column.center {
+  width: 60%;
+}
