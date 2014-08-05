@@ -67,7 +67,7 @@ OUR CUSTOM MIXINS
   padding: 20px 0 0 0;
 }
 
-/* ONE SIDEBAR */
+/* LEFT SIDEBAR */
 .sidebar-first #content {
   *zoom: 1;
   float: left;
@@ -76,11 +76,11 @@ OUR CUSTOM MIXINS
   text-align: inherit;
   padding-left: 0;
   padding-right: 0;
-  width: 65.66667%;
+  width: 74.25%;
   margin-left: 0%;
   margin-right: 3%;
   position: relative;
-  left: 34.33333%;
+  left: 25.75%;
 }
 .sidebar-first #content:before, .sidebar-first #content:after {
   content: '';
@@ -126,11 +126,11 @@ OUR CUSTOM MIXINS
   text-align: inherit;
   padding-left: 0;
   padding-right: 0;
-  width: 31.33333%;
+  width: 22.75%;
   margin-left: 0%;
   margin-right: 3%;
   position: relative;
-  left: -68.66667%;
+  left: -77.25%;
 }
 .sidebar-first .region-sidebar-first:before, .sidebar-first .region-sidebar-first:after {
   content: '';
@@ -165,6 +165,254 @@ OUR CUSTOM MIXINS
     clear: both;
   }
   .sidebar-first .region-sidebar-first:last-child {
+    margin-right: 0%;
+  }
+}
+
+/* RIGHT SIDEBAR */
+.sidebar-second #content {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 74.25%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.sidebar-second #content:before, .sidebar-second #content:after {
+  content: '';
+  display: table;
+}
+.sidebar-second #content:after {
+  clear: both;
+}
+.sidebar-second #content:last-child {
+  margin-right: 0%;
+}
+@media (max-width: 800px) {
+  .sidebar-second #content {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: static;
+    left: 0;
+  }
+  .sidebar-second #content:before, .sidebar-second #content:after {
+    content: '';
+    display: table;
+  }
+  .sidebar-second #content:after {
+    clear: both;
+  }
+  .sidebar-second #content:last-child {
+    margin-right: 0%;
+  }
+}
+.sidebar-second .region-sidebar-first {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.sidebar-second .region-sidebar-first:before, .sidebar-second .region-sidebar-first:after {
+  content: '';
+  display: table;
+}
+.sidebar-second .region-sidebar-first:after {
+  clear: both;
+}
+.sidebar-second .region-sidebar-first:last-child {
+  margin-right: 0%;
+}
+@media (max-width: 800px) {
+  .sidebar-second .region-sidebar-first {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: static;
+    left: 0;
+  }
+  .sidebar-second .region-sidebar-first:before, .sidebar-second .region-sidebar-first:after {
+    content: '';
+    display: table;
+  }
+  .sidebar-second .region-sidebar-first:after {
+    clear: both;
+  }
+  .sidebar-second .region-sidebar-first:last-child {
+    margin-right: 0%;
+  }
+}
+
+/* TWO SIDEBARS */
+.two-sidebars #content {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: relative;
+  left: 25.75%;
+}
+.two-sidebars #content:before, .two-sidebars #content:after {
+  content: '';
+  display: table;
+}
+.two-sidebars #content:after {
+  clear: both;
+}
+.two-sidebars #content:last-child {
+  margin-right: 0%;
+}
+@media (max-width: 800px) {
+  .two-sidebars #content {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: static;
+    left: 0;
+  }
+  .two-sidebars #content:before, .two-sidebars #content:after {
+    content: '';
+    display: table;
+  }
+  .two-sidebars #content:after {
+    clear: both;
+  }
+  .two-sidebars #content:last-child {
+    margin-right: 0%;
+  }
+}
+.two-sidebars .region-sidebar-first {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: relative;
+  left: -51.5%;
+}
+.two-sidebars .region-sidebar-first:before, .two-sidebars .region-sidebar-first:after {
+  content: '';
+  display: table;
+}
+.two-sidebars .region-sidebar-first:after {
+  clear: both;
+}
+.two-sidebars .region-sidebar-first:last-child {
+  margin-right: 0%;
+}
+@media (max-width: 800px) {
+  .two-sidebars .region-sidebar-first {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: static;
+    left: 0;
+  }
+  .two-sidebars .region-sidebar-first:before, .two-sidebars .region-sidebar-first:after {
+    content: '';
+    display: table;
+  }
+  .two-sidebars .region-sidebar-first:after {
+    clear: both;
+  }
+  .two-sidebars .region-sidebar-first:last-child {
+    margin-right: 0%;
+  }
+}
+.two-sidebars .region-sidebar-second {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
+  content: '';
+  display: table;
+}
+.two-sidebars .region-sidebar-second:after {
+  clear: both;
+}
+.two-sidebars .region-sidebar-second:last-child {
+  margin-right: 0%;
+}
+@media (max-width: 800px) {
+  .two-sidebars .region-sidebar-second {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    position: static;
+    left: 0;
+  }
+  .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
+    content: '';
+    display: table;
+  }
+  .two-sidebars .region-sidebar-second:after {
+    clear: both;
+  }
+  .two-sidebars .region-sidebar-second:last-child {
     margin-right: 0%;
   }
 }

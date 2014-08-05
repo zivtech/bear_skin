@@ -52,20 +52,67 @@ $site-max-width: 1200px;
   padding: 20px 0 0 0;
 }
 
-/* ONE SIDEBAR */
+/* LEFT SIDEBAR */
 
 .sidebar-first {
   #content {
-    @include col(2/3);
-    @include shift(1/3);
+    @include col(3/4);
+    @include shift(1/4);
     @include breakpoint ($breakpoint-medium-width) {
       @include col();
       @include unshift();
     }
   }
   .region-sidebar-first {
-    @include col(1/3);
-    @include shift(-2/3);
+    @include col(1/4);
+    @include shift(-3/4);
+    @include breakpoint ($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+}
+
+/* RIGHT SIDEBAR */
+
+.sidebar-second {
+  #content {
+    @include col(3/4);
+    @include breakpoint ($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+  .region-sidebar-first {
+    @include col(1/4);
+    @include breakpoint ($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+}
+
+/* TWO SIDEBARS */
+
+.two-sidebars {
+  #content {
+    @include col(2/4);
+    @include shift(1/4);
+    @include breakpoint ($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+  .region-sidebar-first {
+    @include col(1/4);
+    @include shift(-2/4);
+    @include breakpoint ($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+  .region-sidebar-second {
+    @include col(1/4);
     @include breakpoint ($breakpoint-medium-width) {
       @include col();
       @include unshift();
