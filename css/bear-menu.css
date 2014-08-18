@@ -138,6 +138,17 @@ OUR CUSTOM MIXINS
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
+#navigation .block-menu ul:after, #navigation .menu-block-wrapper > ul ul:after {
+  content: '';
+  position: absolute;
+  left: 4em;
+  top: -12px;
+  border: 6px solid transparent;
+  border-bottom-color: #aaa;
+}
+#navigation .block-menu ul:after, #navigation .menu-block-wrapper > ul ul:after {
+  left: 47%;
+}
 #navigation .block-menu ul li, #navigation .menu-block-wrapper > ul ul li {
   display: block;
   width: 100%;
@@ -151,14 +162,6 @@ OUR CUSTOM MIXINS
   -ms-border-radius: 3px 3px 0 0;
   -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
-}
-#navigation .block-menu ul li:first-child > a:after, #navigation .menu-block-wrapper > ul ul li:first-child > a:after {
-  content: '';
-  position: absolute;
-  left: 4em;
-  top: -12px;
-  border: 6px solid transparent;
-  border-bottom-color: inherit;
 }
 #navigation .block-menu ul li:last-child, #navigation .menu-block-wrapper > ul ul li:last-child {
   -webkit-box-shadow: none;
@@ -243,7 +246,7 @@ OUR CUSTOM MIXINS
     left: 2em;
     top: -12px;
     border: 6px solid transparent;
-    border-bottom-color: inherit;
+    border-bottom-color: #aaa;
   }
   #navigation .block-menu > ul li, #navigation .menu-block-wrapper > ul li {
     display: block;
@@ -303,6 +306,14 @@ OUR CUSTOM MIXINS
     -moz-transition-property: none;
     -o-transition-property: none;
     transition-property: none;
+  }
+  #navigation .block-menu > ul ul:after, #navigation .menu-block-wrapper > ul ul:after {
+    content: '';
+    position: absolute;
+    left: 0em;
+    top: 0;
+    border: 0 solid transparent;
+    border-bottom-color: #aaa;
   }
   #navigation .block-menu > ul ul li:first-child > a, #navigation .menu-block-wrapper > ul ul li:first-child > a {
     -webkit-border-radius: 0;

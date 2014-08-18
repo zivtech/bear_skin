@@ -87,6 +87,7 @@
         margin: 0;
         @extend %revert-list;
         @include transition-property("none");
+        @include pseudo-triangle(0, 0);
         li {
           &:first-child > a {
             @include border-radius(0);

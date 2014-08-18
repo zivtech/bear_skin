@@ -17,8 +17,7 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
 @mixin menu-background($color, $menu-gradient: true) {
   background-color: $color;
   @if $menu-gradient == true {
-    @include background-image(linear-gradient(rgba(255, 255, 255, .2),
-                          rgba(255, 255, 255, 0)));
+    @include background-image(linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, 0)));
   }
   @else {
     background-image: none;
@@ -31,7 +30,7 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
     left: $shift-left * $gutter;
     top: -$size * 2;
     border: $size solid transparent;
-    border-bottom-color: inherit;
+    border-bottom-color: #aaa;
   }
 }
 
@@ -123,13 +122,16 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
     @include transition-property("margin, opacity");
     @include transition-duration(".15s");
     @include transition-timing-function(ease-in-out);
+    @include pseudo-triangle(6px, 4);
+    &:after {
+      left: 47%;
+    }
     li {
       display: block;
       width: 100%;
       @include box-shadow(0 1px 0 lighten($baseMenuBackground, 5%), 0 2px 0 lighten($baseMenuBackground, 25%));
       &:first-child > a {
         @include border-radius(3px 3px 0 0);
-        @include pseudo-triangle(6px, 4);
       }
       &:last-child {
         @include box-shadow(none);
