@@ -344,3 +344,49 @@ aside.sidebars .sidebar h2 {
 #documentation p.tb:nth-child(4n + 1) {
   clear: both;
 }
+
+/*
+ * CSS Animations
+ * Don't forget to add vendor prefixes!
+ */
+.m-scene .scene_element {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+}
+
+.m-scene .scene_element--fadein {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+}
+
+.m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse;
+  -webkit-animation-direction: alternate-reverse;
+}
+
+/*
+ * Keyframes
+ */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

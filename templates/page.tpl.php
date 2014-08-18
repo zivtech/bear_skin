@@ -1,4 +1,4 @@
-<div id="page">
+<div id="page" class="m-scene">
   <div class="wrapper header">
     <header id="header" role="banner">
 
@@ -34,7 +34,7 @@
     </div><!-- /#navigation -->
   </div>
   <div class="wrapper main">
-    <div id="main">
+    <div id="main" class="scene_element scene_element--fadein">
       <div id="content" class="column" role="main">
         <?php print render($page['highlighted']); ?>
         <?php print $breadcrumb; ?>

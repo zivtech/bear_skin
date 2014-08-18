@@ -73,6 +73,7 @@ scripts[] = js/bootstrap-filestyle.js
 scripts[] = js/jquery.selectorquery.min.js
 scripts[] = js/jquery.eqheight.js
 scripts[] = js/select2.min.js
+scripts[] = js/jquery.smoothState.js
 scripts[] = js/morphy-buttons-vendor.min.js
 scripts[] = js/morphy-buttons.min.js
 scripts[] = js/script.js
