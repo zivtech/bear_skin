@@ -13,20 +13,6 @@ OUR CUSTOM MIXINS
   clear: both;
 }
 
-body {
-  -webkit-animation: bugfix infinite 1s;
-}
-
-@-webkit-keyframes bugfix {
-  from {
-    padding: 0;
-  }
-
-  to {
-    padding: 0;
-  }
-}
-
 #navigation .block-menu, #navigation .menu-block-wrapper {
   font: bold 13px Arial, Helvetica;
 }
@@ -136,6 +122,7 @@ body {
   opacity: 0;
   visibility: hidden;
   margin: 2em 0 0 0;
+  width: 100%;
   background-color: #aaaaaa;
   background-image: none;
   -webkit-transition-property: margin, opacity;
@@ -153,6 +140,7 @@ body {
 }
 #navigation .block-menu ul li, #navigation .menu-block-wrapper > ul ul li {
   display: block;
+  width: 100%;
   -webkit-box-shadow: 0 1px 0 #919191, 0 2px 0 #c4c4c4;
   -moz-box-shadow: 0 1px 0 #919191, 0 2px 0 #c4c4c4;
   box-shadow: 0 1px 0 #919191, 0 2px 0 #c4c4c4;
@@ -189,6 +177,7 @@ body {
   width: 250px;
   display: block;
   border-color: #aaaaaa;
+  width: 100%;
 }
 #navigation .block-menu ul a:hover, #navigation .menu-block-wrapper > ul ul a:hover {
   background-color: #61aee2;
@@ -298,6 +287,7 @@ body {
     float: none;
     display: block;
     padding: 1em;
+    text-align: left;
   }
   #navigation .block-menu > ul ul, #navigation .menu-block-wrapper > ul ul {
     position: static;

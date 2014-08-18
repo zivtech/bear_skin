@@ -13,7 +13,7 @@ $gutter: 1em;           // Base gutter
 $input: "input[type=checkbox]";   // Checkbox hack selector
 $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
 
-// Menu background mixin
+// Mixins
 @mixin menu-background($color, $menu-gradient: true) {
   background-color: $color;
   @if $menu-gradient == true {
@@ -24,10 +24,6 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
     background-image: none;
   }
 }
-
-// Menu background mixin
-// The $size argument specifies the actual size of the triangle
-// The $shift-left helps on horizontal positioning.
 @mixin pseudo-triangle($size, $shift-left) {
   &:after {
     content: '';
@@ -39,26 +35,13 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
   }
 }
 
-// Shortest clearfix. Ever. IE8+.
 // http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
 %cf:after {
-  content:"";
-  display:table;
-  clear:both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
-// Fix for Android
-// http://timpietrusky.com/advanced-checkbox-hack
-body {
-  -webkit-animation: bugfix infinite 1s;
-}
-
-@-webkit-keyframes bugfix {
-  from { padding: 0; }
-  to { padding: 0; }
-}
-
-// New box model, small reset, global stuff
 #{$selector} {
   font: bold 13px Arial, Helvetica;
   * {
@@ -98,10 +81,6 @@ body {
   }
 }
 
-// First level -> main menu items
-// <nav class="animenu">
-//    <ul></ul>
-//  </nav>
 #{$selector} > ul {
   border: 1px solid darken($baseMenuBackground, 5%);
   @include menu-background($baseMenuBackground);
@@ -131,28 +110,23 @@ body {
     text-decoration: none;
     text-shadow: 0 -1px 0 #585858;
   }
-
-  // Second level
-  // <nav class="animenu">
-  //    <ul>
-  //      <ul></ul>
-  //    </ul>
-  //  </nav>
   ul {
     position: absolute;
-    top: 100%; left: 0;
+    top: 100%;
+    left: 0;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
     margin: 2 * $gutter 0 0 0;
+    width: 100%;
     @include menu-background(lighten($baseMenuBackground, 15%), false);
     @include transition-property("margin, opacity");
     @include transition-duration(".15s");
     @include transition-timing-function(ease-in-out);
     li {
       display: block;
-      @include box-shadow(0 1px 0 lighten($baseMenuBackground, 5%),
-                0 2px 0 lighten($baseMenuBackground, 25%));
+      width: 100%;
+      @include box-shadow(0 1px 0 lighten($baseMenuBackground, 5%), 0 2px 0 lighten($baseMenuBackground, 25%));
       &:first-child > a {
         @include border-radius(3px 3px 0 0);
         @include pseudo-triangle(6px, 4);
@@ -169,6 +143,7 @@ body {
       width: $subMenuItemWidth;
       display: block;
       border-color: lighten($baseMenuBackground, 15%);
+      width: 100%;
       &:hover {
         background-color: $secondaryMenuBackground;
         border-color: $secondaryMenuBackground;
