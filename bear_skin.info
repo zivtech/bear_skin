@@ -68,14 +68,14 @@ stylesheets[all][] = css/bear.css
 
 ; Optionally add some JavaScripts to your theme.
 
-scripts[] = js/jquery.formalize.min.js
-scripts[] = js/bootstrap-filestyle.js
-scripts[] = js/jquery.selectorquery.min.js
-scripts[] = js/jquery.eqheight.js
-scripts[] = js/select2.min.js
-scripts[] = js/jquery.smoothState.js
-scripts[] = js/morphy-buttons-vendor.min.js
-scripts[] = js/morphy-buttons.min.js
+; scripts[] = js/jquery.formalize.min.js
+; scripts[] = js/bootstrap-filestyle.js
+; scripts[] = js/jquery.selectorquery.min.js
+; scripts[] = js/jquery.eqheight.js
+; scripts[] = js/select2.min.js
+; scripts[] = js/jquery.smoothState.js
+; scripts[] = js/morphy-buttons-vendor.min.js
+; scripts[] = js/morphy-buttons.min.js
 scripts[] = js/script.js
 
 ; This section lists the regions defined in Zen's default page.tpl.php and

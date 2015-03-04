@@ -12,52 +12,74 @@
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document, undefined) {
 
-(function ($) {
-  Drupal.behaviors.BearScripts = {
+  'use strict';
+
+  Drupal.behaviors.bearScripts = {
     attach: function (context, settings) {
 
-      $('#content select.form-select').select2();
-      $(":file").filestyle({buttonText: "Find file"});
-      if ($('#navigation .block-menu').length) {
-        $('#navigation .block-menu').prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
-      }
-      if ($('#navigation .menu-block-wrapper').length) {
-        $('#navigation .menu-block-wrapper').prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
+      context = context || document;
+      settings = settings || Drupal.settings;
+
+      this.initJqueryPlugins();
+
+      var $blockMenus = $('#navigation .block-menu', context);
+      if ($blockMenus.length) {
+        $blockMenus.prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
       }
 
-      //$('.equalheight').eqHeight();
+      var $blockMenuWrappers = $('#navigation .menu-block-wrapper', context);
+      if ($blockMenuWrappers.length) {
+        $blockMenuWrappers.prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
+      }
 
+    },
+
+    initJqueryPlugins: function() {
+      if (typeof $.fn.select2 === 'function') {
+        $('#content select.form-select', context).select2();
+      }
+
+      if (typeof $.fn.filestyle === 'function') {
+        $(":file").filestyle({buttonText: "Find file"});
+      }
+
+      if (typeof $.fn.eqHeight === 'function') {
+        $('.equalheight', context).eqHeight();
+      }
     }
-  }
-}(jQuery));
+  };
 
-(function ($) {
-  Drupal.behaviors.ResponsiveScripts = {
+  Drupal.behaviors.responsiveScripts = {
     attach: function (context, settings) {
 
-      $('.cm-row, .column').selectorQuery({
-        'widthStops': [340, 680],
-        'classPrefix': 'max-'
-      });
+      context = context || document;
+      settings = settings || Drupal.settings;
 
-      'use strict';
-      var $body    = $('html, body'),
-      content  = $('#page').smoothState({
-        prefetch: true,
-        pageCacheSize: 4,
-        onStart: {
-          duration: 250,
-          render: function (url, $container) {
-            content.toggleAnimationClass('is-exiting');
-            $body.animate({
-              scrollTop: 0
-            });
-          }
-        }
-      }).data('smoothState');
+      if (typeof $.fn.selectorQuery === 'function') {
+        $('.cm-row, .column', context).selectorQuery({
+          'widthStops': [340, 680],
+          'classPrefix': 'max-'
+        });
+      }
+
+      if (typeof $.fn.smoothState === 'function') {
+        var $body = $('html, body'),
+          $content = $('#page', context).smoothState({
+            prefetch: true,
+            pageCacheSize: 4,
+            onStart: {
+              duration: 250,
+              render: function (url, $container) {
+                $content.toggleAnimationClass('is-exiting');
+                $body.animate({
+                  scrollTop: 0
+                });
+              }
+            }
+          }).data('smoothState');
+      }
 
     }
-  }
-}(jQuery));
+  };
 
 })(jQuery, Drupal, this, this.document);

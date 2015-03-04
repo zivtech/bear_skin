@@ -8,6 +8,13 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   // Add variables and paths needed for HTML5 and responsive support.
   $variables['base_path'] = base_path();
   $variables['path_to_bear_skin'] = drupal_get_path('theme', 'bear_skin');
+
+  drupal_add_js(array(
+    'bearSkin' => array(
+      'stickyFooter' => (bool) theme_get_setting('sticky_footer'),
+      'userMenu' => (bool) theme_get_setting('user_menu')
+    )
+  ), 'setting');
 }
 
 /**
@@ -15,7 +22,7 @@ function bear_skin_preprocess_html(&$variables, $hook) {
  * Enables sub-menu item display for main menu.
  */
 function bear_skin_links($variables) {
-  if (array_key_exists('id', $variables['attributes']) && $variables['attributes']['id'] == 'nav') {
+  if (array_key_exists('id', $variables['attributes']) && $variables['attributes']['id'] == 'main-menu') {
     $pid = variable_get('menu_main_links_source', 'nav');
     $tree = menu_tree($pid);
     return drupal_render($tree);
@@ -27,12 +34,28 @@ function bear_skin_links($variables) {
  * Implements template_preprocess_page().
  */
 function bear_skin_preprocess_page(&$vars) {
-  $vars['user_menu'] =  theme('links', array('links' => menu_navigation_links('user-menu'), 'attributes' => array('class '=> array('links', 'site-menu'))));
+  $vars['user_menu'] = theme('links', array(
+    'links' => menu_navigation_links('user-menu'),
+    'attributes' => array('class ' => array('links', 'site-menu'))
+  ));
+}
+
+/**
+ * Implements template_css_alter()
+ */
+function bear_skin_css_alter($css) {
+  if (theme_get_setting('bear_skin_livereload')) {
+    foreach ($css as &$item) {
+      if (file_exists($item['data'])) {
+        $item['preprocess'] = FALSE;
+      }
+    }
+  }
 }
 
 /***********************
-Let's load some CSS on specific targets - uncomment to use
-************************/
+ * Let's load some CSS on specific targets - uncomment to use
+ ************************/
 
 // function bear_skin_preprocess_node(&$vars) {
 //   // Add JS & CSS by node type
