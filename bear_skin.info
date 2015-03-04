@@ -30,7 +30,7 @@ base theme  = zen
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
 ; First we remove the system's menu styling since Zen has its own.
-stylesheets[all][] = system.menus.css
+; stylesheets[all][] = system.menus.css
 
 ; Then we add our own stylesheets.
 stylesheets[all][] = assets/css/normalize.css
