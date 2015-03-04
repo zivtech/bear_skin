@@ -1,0 +1,4 @@
+%button {
+  @include sassy-button("matte", 2px, 90%, $dark, $browner, $whitey, "inset");
+  box-shadow: none;
+}
