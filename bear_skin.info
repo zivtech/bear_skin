@@ -35,7 +35,6 @@ base theme  = zen
 ; Then we add our own stylesheets.
 stylesheets[all][] = assets/css/normalize.css
 stylesheets[all][] = assets/css/wireframes.css
-stylesheets[all][] = assets/css/layout.css
 stylesheets[all][] = assets/css/tabs.css
 stylesheets[all][] = assets/css/pages.css
 stylesheets[all][] = assets/css/blocks.css

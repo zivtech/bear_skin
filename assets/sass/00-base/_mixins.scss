@@ -1,0 +1,115 @@
+/****************
+OUR CUSTOM MIXINS
+*****************/
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$fromColor', EndColorStr='$toColor');
+}
+@mixin shadow($color: #333333) {
+  -moz-box-shadow: inset 0 0 3px $color;
+  -webkit-box-shadow: inset 0 0 3px $color;
+  box-shadow: inset 0 0 3px $color;
+}
+@mixin clear-space {
+  div, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-end: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+  }
+}
+@mixin reset-ul {
+  padding: 0;
+  margin: 0;
+}
+@mixin bearfont-main {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+@mixin bearfont-titles {
+  font-family: Georgia, Times, sans-serif;
+}
+@mixin bottom-border-radius ( $value:0 0 4px 4px ) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+  // keeps background from busting out of border
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+@mixin m-links {
+  a {
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+      color: #443C45;
+      text-decoration: underline;
+    }
+    &:visited {
+      color: $blue;
+    }
+  }
+}
+@mixin borderRadius($radius: 8px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -webkit-background-clip: padding-box;
+}
+
+// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// The word "Unpublished" displayed underneath unpublished nodes and comments.
+@mixin unpublished-div {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word; // A very nice CSS3 property
+
+  //@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  .lt-ie8 &>* {
+    position: relative; // Otherwise these elements will appear below the "Unpublished" text.
+  }
+  //}
+}
