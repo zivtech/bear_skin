@@ -19,6 +19,18 @@
   <?php if (theme_get_setting('sticky_footer')): ?>
     <link href="<?php print $base_path . $path_to_bear_skin; ?>/css/sticky-footer.css" media="all" rel="stylesheet" type="text/css" />
   <?php endif; ?>
+
+</head>
+<body class="<?php print $classes; ?>" <?php print $attributes;?>>
+  <?php if ($skip_link_text && $skip_link_anchor): ?>
+    <p id="skip-link">
+      <a href="#<?php print $skip_link_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link_text; ?></a>
+    </p>
+  <?php endif; ?>
+  <?php print $page_top; ?>
+  <?php print $page; ?>
+  <?php print $page_bottom; ?>
+
   <?php print $scripts; ?>
   <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
@@ -30,15 +42,5 @@
     <![endif]-->
   <?php endif; ?>
   <script>jQuery.noConflict();</script>
-</head>
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <?php if ($skip_link_text && $skip_link_anchor): ?>
-    <p id="skip-link">
-      <a href="#<?php print $skip_link_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link_text; ?></a>
-    </p>
-  <?php endif; ?>
-  <?php print $page_top; ?>
-  <?php print $page; ?>
-  <?php print $page_bottom; ?>
 </body>
 </html>
