@@ -30,13 +30,6 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#default_value' => theme_get_setting('sticky_footer'),
   );
 
-  $form['bear_options']['bear_skin_livereload'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Insert stylesheets as link tags rather than @import'),
-    '#description' => t('Enable Livereload to function propertly'),
-    '#default_value' => theme_get_setting('bear_skin_livereload')
-  );
-
   // Create the form using Forms API: http://api.drupal.org/api/7
 
   /* -- Delete this line if you want to use this setting

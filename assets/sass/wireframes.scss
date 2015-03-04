@@ -19,10 +19,10 @@
   .region-bottom {
     outline: 1px solid #ccc;
 
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    //@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
       .lt-ie8 & {
         border: 1px solid #ccc; /* IE6/7 do not support the outline property. */
       }
-    }
+    //}
   }
 }

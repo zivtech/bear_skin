@@ -1,0 +1,49 @@
+/****************
+OUR CUSTOM MIXINS
+*****************/
+/***********
+~VARIABLES
+***********/
+/***********
+~BREAKPOINTS
+***********/
+html, body {
+  height: 100%;
+}
+
+#page {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+/* must be same height as the footer */
+#footer {
+  position: relative;
+  margin-top: -100px;
+  /* negative value of footer height */
+  height: 100px;
+  clear: both;
+}
+@media (max-width: 1200px) {
+  #footer .block {
+    padding: 0 20px;
+  }
+}
+
+/*Opera Fix*/
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+
+.ie7 #page {
+  display: table;
+  height: 100%;
+}

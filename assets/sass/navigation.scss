@@ -11,23 +11,23 @@
  */
 
 ul li.expanded {
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    *list-style-image: url(../images/menu-expanded.png);
-  }
+  //@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *list-style-image: image-url("menu-expanded.png");
+  //}
   list-style-image: inline-image("menu-expanded.png");
   list-style-type: circle;
 }
 ul li.collapsed {
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    *list-style-image: url(../images/menu-collapsed.png); /* LTR */
-  }
+  //@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *list-style-image: image-url("menu-collapsed.png"); /* LTR */
+  //}
   list-style-image: inline-image("menu-collapsed.png"); /* LTR */
   list-style-type: disc;
 }
 ul li.leaf {
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  //@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *list-style-image: none;
-  }
+  //}
   list-style-image: none;
   list-style-type: none;
 }

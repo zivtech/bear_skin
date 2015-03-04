@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Block Styling
+ */
+/****************
+OUR CUSTOM MIXINS
+*****************/
+/***********
+~VARIABLES
+***********/
+/***********
+~BREAKPOINTS
+***********/
+#block-block-1 {
+  padding: 20px 0;
+}

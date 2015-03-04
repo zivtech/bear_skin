@@ -41,16 +41,20 @@ function bear_skin_preprocess_page(&$vars) {
 }
 
 /**
- * Implements template_css_alter()
+ * Implements hook_css_alter().
+ * Inserts stylesheets as <link> tags and no @import so that livereload & browser sync work
  */
-function bear_skin_css_alter($css) {
-  if (theme_get_setting('bear_skin_livereload')) {
-    foreach ($css as &$item) {
-      if (file_exists($item['data'])) {
-        $item['preprocess'] = FALSE;
+function bear_skin_css_alter(&$css) {
+  //if (!theme_get_setting('preprocess_css')) {
+    foreach ($css as $key => $value) {
+      // Skip core files.
+      $is_core = (strpos($value['data'], 'misc/') === 0 || strpos($value['data'], 'modules/') === 0);
+      if (!$is_core) {
+        // This option forces embeding with a link element.
+        $css[$key]['preprocess'] = FALSE;
       }
     }
-  }
+  //}
 }
 
 /***********************

@@ -33,26 +33,26 @@ base theme  = zen
 stylesheets[all][] = system.menus.css
 
 ; Then we add our own stylesheets.
-stylesheets[all][] = css/normalize.css
-stylesheets[all][] = css/wireframes.css
-stylesheets[all][] = css/layout.css
-stylesheets[all][] = css/tabs.css
-stylesheets[all][] = css/pages.css
-stylesheets[all][] = css/blocks.css
-stylesheets[all][] = css/navigation.css
-stylesheets[all][] = css/bear-menu.css
-stylesheets[all][] = css/morphy-buttons-vendor.min.css
-stylesheets[all][] = css/morphy-buttons.min.css
-stylesheets[all][] = css/views-styles.css
-stylesheets[all][] = css/comments.css
-stylesheets[all][] = css/forms.css
-stylesheets[all][] = css/panels.css
-stylesheets[all][] = css/sidebars.css
-stylesheets[all][] = css/print.css
-stylesheets[all][] = css/formalize.css
-stylesheets[all][] = css/select2.css
-stylesheets[all][] = css/responsive-nav.css
-stylesheets[all][] = css/bear.css
+stylesheets[all][] = assets/css/normalize.css
+stylesheets[all][] = assets/css/wireframes.css
+stylesheets[all][] = assets/css/layout.css
+stylesheets[all][] = assets/css/tabs.css
+stylesheets[all][] = assets/css/pages.css
+stylesheets[all][] = assets/css/blocks.css
+stylesheets[all][] = assets/css/navigation.css
+stylesheets[all][] = assets/css/bear-menu.css
+; stylesheets[all][] = assets/css/morphy-buttons-vendor.min.css
+; stylesheets[all][] = assets/css/morphy-buttons.min.css
+stylesheets[all][] = assets/css/views-styles.css
+stylesheets[all][] = assets/css/comments.css
+stylesheets[all][] = assets/css/forms.css
+stylesheets[all][] = assets/css/panels.css
+stylesheets[all][] = assets/css/sidebars.css
+stylesheets[all][] = assets/css/print.css
+; stylesheets[all][] = assets/css/formalize.css
+; stylesheets[all][] = assets/css/select2.css
+stylesheets[all][] = assets/css/responsive-nav.css
+stylesheets[all][] = assets/css/bear.css
 
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
@@ -63,20 +63,12 @@ stylesheets[all][] = css/bear.css
 ;
 ; If you still wish to use conditional stylesheets, you must install the
 ; conditional stylesheets module: http://drupal.org/project/conditional_styles
-; stylesheets-conditional[lte IE 8][all][] = css/ie8.css
+; stylesheets-conditional[lte IE 8][all][] = assets/css/ie8.css
 
 
 ; Optionally add some JavaScripts to your theme.
-
-; scripts[] = js/jquery.formalize.min.js
-; scripts[] = js/bootstrap-filestyle.js
-; scripts[] = js/jquery.selectorquery.min.js
-; scripts[] = js/jquery.eqheight.js
-; scripts[] = js/select2.min.js
-; scripts[] = js/jquery.smoothState.js
-; scripts[] = js/morphy-buttons-vendor.min.js
-; scripts[] = js/morphy-buttons.min.js
-scripts[] = js/script.js
+scripts[] = assets/js/modernizr.js
+scripts[] = assets/js/scripts.js
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
 ; maintenance-page.tpl.php files. The name in brackets is the machine name of

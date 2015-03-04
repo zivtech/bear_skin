@@ -17,12 +17,12 @@ firesass = false
 Sass::Plugin.options[:debug_info] = false
 
 # Location of the theme's resources.
-css_dir         = "css"
-sass_dir        = "sass"
-fonts_dir       = "css/fonts"
-extensions_dir  = "sass-extensions"
-images_dir      = "images"
-javascripts_dir = "js"
+css_dir         = "assets/css"
+sass_dir        = "assets/sass"
+fonts_dir       = "assets/fonts"
+extensions_dir  = "assets/sass/sass-extensions"
+images_dir      = "assets/images"
+javascripts_dir = "assets/js"
 
 
 # Require any additional compass plugins installed on your system.

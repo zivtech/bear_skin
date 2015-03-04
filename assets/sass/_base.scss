@@ -23,9 +23,9 @@
 // Zen does not require special handling for IE8 or later. But Compass uses that
 // variable for a couple edge cases. We include it for completeness sake. See
 // the documentation at http://compass-style.org/reference/compass/support/
-$legacy-support-for-ie6: false;
-$legacy-support-for-ie7: false;
-$legacy-support-for-ie8: true;
+//$legacy-support-for-ie6: false;
+//$legacy-support-for-ie7: false;
+//$legacy-support-for-ie8: true;
 
 
 //
@@ -160,9 +160,6 @@ OUR CUSTOM MIXINS
   height: 1px;
   width: 1px;
   overflow: hidden;
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
-  }
   clip: rect(1px, 1px, 1px, 1px);
 }
 
@@ -197,11 +194,11 @@ OUR CUSTOM MIXINS
   text-align: center;
   word-wrap: break-word; // A very nice CSS3 property
 
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  //@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     .lt-ie8 &>* {
       position: relative; // Otherwise these elements will appear below the "Unpublished" text.
     }
-  }
+  //}
 }
 
 //
@@ -214,7 +211,6 @@ OUR CUSTOM MIXINS
 @import "compass/utilities/sprites"; // See http://compass-style.org/help/tutorials/spriting/
 @import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "compass/typography/vertical_rhythm"; // Helps set up a vertical rhythm.
-@import "zen";              // Add the Zen Grids responsive layout mixins.
-@import "../jeet/index";
+@import "00-base/all";
 @import "sassy-buttons"; // Add the sassy buttons
 @import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint

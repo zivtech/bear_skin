@@ -341,7 +341,7 @@ table .item-list ul {
 }
 
 
-@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+//@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
   .lt-ie8 tr.even,
   .lt-ie8 tr.odd {
     th,
@@ -349,7 +349,7 @@ table .item-list ul {
       border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
     }
   }
-}
+//}
 
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.

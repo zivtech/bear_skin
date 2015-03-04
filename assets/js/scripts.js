@@ -20,7 +20,7 @@
       context = context || document;
       settings = settings || Drupal.settings;
 
-      this.initJqueryPlugins();
+      this.initJqueryPlugins(context, settings);
 
       var $blockMenus = $('#navigation .block-menu', context);
       if ($blockMenus.length) {
@@ -34,7 +34,7 @@
 
     },
 
-    initJqueryPlugins: function() {
+    initJqueryPlugins: function(context, settings) {
       if (typeof $.fn.select2 === 'function') {
         $('#content select.form-select', context).select2();
       }
