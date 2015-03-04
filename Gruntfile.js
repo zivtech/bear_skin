@@ -1,4 +1,3 @@
-'use strict';
 module.exports = function (grunt) {
   // Load all tasks
   require('load-grunt-tasks')(grunt);
@@ -77,6 +76,24 @@ module.exports = function (grunt) {
         src: '<%= app.assets %>/css/*.css',
         dest: '<%= app.assets %>/css/'
       }
+    },
+
+    jshint: {
+      options: {
+        curly: true,
+        eqeqeq: true,
+        eqnull: true,
+        browser: true,
+        globals: {
+          jQuery: true,
+          require: true,
+          module: true
+        }
+      },
+      bearskin: [
+        'Gruntfile.js',
+        '<%= app.assets %>/js/scripts.js'
+      ]
     },
 
     uglify: {
