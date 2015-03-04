@@ -90,14 +90,10 @@ h1 {
         margin: 20px 0 0 0;
         padding: 0;
         li {
-          display: inline;
-          list-style-type: none;
+          @include inline-block;
           margin: 0 0 0 10px;
           a {
-            @include sassy-button("matte", 2px, 90%, #777, #666, #fff, "inset");
-            -moz-box-shadow: none;
-            -webkit-box-shadow: none;
-            box-shadow: none;
+            @extend %button;
           }
         }
       }
