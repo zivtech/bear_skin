@@ -594,7 +594,7 @@ ul.primary li {
 ul.primary li a:link, ul.primary li a:visited, ul.primary li a:hover {
   text-shadow: 0;
   font-size: 100%;
-  padding: 0.2em 1.1em 0.3em 1.2em;
+  padding: 0.5em 1.5em;
   display: inline-block;
   cursor: pointer;
   -moz-border-radius: 0;

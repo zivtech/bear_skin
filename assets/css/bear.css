@@ -489,7 +489,7 @@ OUR CUSTOM MIXINS
 /* line 1, ../sass/01-atoms/_button.scss */
 .wrapper.header #header #bear-user-menu ul li a {
   font-size: 90%;
-  padding: 0.2em 1.1em 0.3em 1.2em;
+  padding: 0.5em 1.5em;
   display: inline-block;
   cursor: pointer;
   -moz-border-radius: 2px;
