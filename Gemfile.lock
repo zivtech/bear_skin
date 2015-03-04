@@ -17,6 +17,8 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    compass-normalize (1.5)
+      compass (>= 0.12.0)
     compass-rgbapng (0.2.1)
       chunky_png (>= 0.8.0)
       compass (>= 0.10.0)
@@ -37,5 +39,6 @@ PLATFORMS
 DEPENDENCIES
   breakpoint (>= 2.5.0)
   compass (>= 1.0.3)
+  compass-normalize
   compass-rgbapng (>= 0.2.1)
   sassy-buttons (>= 0.2.6)
