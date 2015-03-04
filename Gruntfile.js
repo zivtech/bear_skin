@@ -61,7 +61,8 @@ module.exports = function (grunt) {
     compass: {
       bearskin: {
         options: {
-          config: 'config.rb'
+          config: 'config.rb',
+          sourcemap: true
         }
       }
     },
