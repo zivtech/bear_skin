@@ -713,7 +713,7 @@ h1#site-name a:link, h1#site-name a:visited {
 /* line 137, ../sass/bear.scss */
 #block-search-form input.form-submit {
   text-indent: -9999px;
-  background: #FFFFFF url(../images/search.png) no-repeat center center;
+  background: #FFFFFF url('../images/search.png?1425402197') no-repeat center center;
   border: none;
   box-shadow: none;
   -moz-box-shadow: none;

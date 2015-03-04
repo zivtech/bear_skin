@@ -487,13 +487,11 @@ OUR CUSTOM MIXINS
   height: 14px;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../images/glyphicons-halflings.png");
-  background-position: 14px 14px;
-  background-repeat: no-repeat;
+  background: url('../images/glyphicons-halflings.png?1425402197') 14px 14px no-repeat;
   margin-top: 1px;
 }
 
-/* line 21, ../sass/forms.scss */
+/* line 19, ../sass/forms.scss */
 .btn {
   display: inline-block;
   padding: 4px 12px;
@@ -527,31 +525,31 @@ OUR CUSTOM MIXINS
   margin-right: 10px;
 }
 @media (max-width: 400px) {
-  /* line 21, ../sass/forms.scss */
+  /* line 19, ../sass/forms.scss */
   .btn {
     clear: both;
     float: left;
   }
 }
 
-/* line 58, ../sass/forms.scss */
+/* line 56, ../sass/forms.scss */
 .form-item {
   /* Wrapper for a form element (or group of form elements) and its label */
   margin: 1.5em 0;
 }
-/* line 60, ../sass/forms.scss */
+/* line 58, ../sass/forms.scss */
 .form-item input {
   max-width: 99%;
   color: #333333;
 }
-/* line 64, ../sass/forms.scss */
+/* line 62, ../sass/forms.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   /* Highlight the form elements that caused a form submission error */
   border: 1px solid #c00;
 }
-/* line 69, ../sass/forms.scss */
+/* line 67, ../sass/forms.scss */
 .form-item label {
   /* The label for a form element */
   display: block;
@@ -559,40 +557,40 @@ OUR CUSTOM MIXINS
   color: #666666;
   font-size: 90%;
 }
-/* line 74, ../sass/forms.scss */
+/* line 72, ../sass/forms.scss */
 .form-item label.btn {
   display: inline;
 }
-/* line 79, ../sass/forms.scss */
+/* line 77, ../sass/forms.scss */
 .form-item label.option {
   /* The label for a radio button or checkbox */
   display: inline;
   font-weight: normal;
 }
-/* line 84, ../sass/forms.scss */
+/* line 82, ../sass/forms.scss */
 .form-item .form-required {
   /* The part of the label that indicates a required field */
   color: #c00;
 }
-/* line 88, ../sass/forms.scss */
+/* line 86, ../sass/forms.scss */
 .form-item .description {
   /* The descriptive help text (separate from the label) */
   font-size: 80%;
   font-style: italic;
   color: #777777;
 }
-/* line 93, ../sass/forms.scss */
+/* line 91, ../sass/forms.scss */
 .form-item .form-file {
   color: #666666;
   font-size: 90%;
 }
-/* line 97, ../sass/forms.scss */
+/* line 95, ../sass/forms.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Pack groups of checkboxes and radio buttons closer together */
   margin: 0;
   /* Drupal core uses "0.4em 0" */
 }
-/* line 101, ../sass/forms.scss */
+/* line 99, ../sass/forms.scss */
 .form-item .form-text, .form-item .form-textarea, .form-item .form-file {
   min-height: 30px;
   line-height: 30px;
@@ -600,17 +598,17 @@ OUR CUSTOM MIXINS
   font-size: 90%;
   color: #666666;
 }
-/* line 108, ../sass/forms.scss */
+/* line 106, ../sass/forms.scss */
 .form-item .field-add-more-submit {
   text-shadow: none;
   color: white;
 }
-/* line 112, ../sass/forms.scss */
+/* line 110, ../sass/forms.scss */
 .form-item .icon-folder-open {
   background-position: -408px -120px;
   width: 16px;
 }
-/* line 116, ../sass/forms.scss */
+/* line 114, ../sass/forms.scss */
 .form-item .input-large {
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -634,19 +632,19 @@ OUR CUSTOM MIXINS
   margin-bottom: 0;
 }
 
-/* line 140, ../sass/forms.scss */
+/* line 138, ../sass/forms.scss */
 .form-text:focus, .form-text:hover, .form-text:active, .form-textarea:focus, .form-textarea:hover, .form-textarea:active {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 145, ../sass/forms.scss */
+/* line 143, ../sass/forms.scss */
 .form-text:focus, .form-textarea:focus {
   border: 1px solid #61AEE2;
   background: #f9f9f9;
 }
 
-/* line 150, ../sass/forms.scss */
+/* line 148, ../sass/forms.scss */
 .form-submit, button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-size: 90%;
   padding: 0.2em 1.1em 0.3em 1.2em;
@@ -706,7 +704,7 @@ OUR CUSTOM MIXINS
   margin: -1px !important;
 }
 
-/* line 156, ../sass/forms.scss */
+/* line 154, ../sass/forms.scss */
 a.button {
   font-size: 90%;
   padding: 0.2em 1.1em 0.3em 1.2em;
@@ -767,123 +765,123 @@ a.button::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
 }
-/* line 162, ../sass/forms.scss */
+/* line 160, ../sass/forms.scss */
 a.button:hover {
   color: white;
 }
 
-/* line 167, ../sass/forms.scss */
+/* line 165, ../sass/forms.scss */
 html.js input.form-autocomplete {
   background-position: 100% 5px;
 }
 
-/* line 171, ../sass/forms.scss */
+/* line 169, ../sass/forms.scss */
 .ajax-progress .throbber {
   background-position: 0px -18px;
 }
 
-/* line 176, ../sass/forms.scss */
+/* line 174, ../sass/forms.scss */
 .container-inline div,
 .container-inline label {
   /* Inline labels and form divs */
   display: inline;
 }
-/* line 180, ../sass/forms.scss */
+/* line 178, ../sass/forms.scss */
 .container-inline .select2-container {
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 184, ../sass/forms.scss */
+/* line 182, ../sass/forms.scss */
 .container-inline .select2-display-none {
   display: none;
 }
 
-/* line 188, ../sass/forms.scss */
+/* line 186, ../sass/forms.scss */
 dd {
   margin: 10px 0 10px 30px;
 }
 
-/* line 191, ../sass/forms.scss */
+/* line 189, ../sass/forms.scss */
 .tips {
   /* Tips for Drupal's input formats */
 }
 
-/* line 194, ../sass/forms.scss */
+/* line 192, ../sass/forms.scss */
 a.button {
   /* Buttons used by contrib modules like Media */
   -moz-appearance: button;
   -webkit-appearance: button;
 }
 
-/* line 198, ../sass/forms.scss */
+/* line 196, ../sass/forms.scss */
 fieldset {
   margin-bottom: 15px;
   padding: 0;
 }
-/* line 201, ../sass/forms.scss */
+/* line 199, ../sass/forms.scss */
 fieldset legend {
   float: left;
   background: #EEEEEE;
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 206, ../sass/forms.scss */
+/* line 204, ../sass/forms.scss */
 fieldset legend .fieldset-legend {
   padding: 5px 10px;
   display: block;
 }
-/* line 211, ../sass/forms.scss */
+/* line 209, ../sass/forms.scss */
 fieldset .fieldset-wrapper {
   padding: 15px;
 }
-/* line 214, ../sass/forms.scss */
+/* line 212, ../sass/forms.scss */
 fieldset.filter-wrapper {
   padding: 0;
   font-size: 90%;
   background: #f9f9f9;
 }
-/* line 218, ../sass/forms.scss */
+/* line 216, ../sass/forms.scss */
 fieldset.filter-wrapper .fieldset-wrapper {
   padding: 5px;
   border-top: 1px dotted #C0C0C0;
 }
-/* line 222, ../sass/forms.scss */
+/* line 220, ../sass/forms.scss */
 fieldset.filter-wrapper .filter-help {
   padding: 0 20px 0 0;
 }
-/* line 225, ../sass/forms.scss */
+/* line 223, ../sass/forms.scss */
 fieldset.filter-wrapper .form-item {
   padding-top: 0;
   margin-top: 5px;
 }
 
-/* line 231, ../sass/forms.scss */
+/* line 229, ../sass/forms.scss */
 .ckeditor_links {
   font-size: 90%;
 }
 
-/* line 238, ../sass/forms.scss */
+/* line 236, ../sass/forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a {
   text-decoration: none;
 }
-/* line 240, ../sass/forms.scss */
+/* line 238, ../sass/forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a:hover {
   text-decoration: none;
   outline: none;
   color: #61AEE2;
 }
-/* line 245, ../sass/forms.scss */
+/* line 243, ../sass/forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a strong {
   font-weight: normal;
 }
-/* line 248, ../sass/forms.scss */
+/* line 246, ../sass/forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a .summary {
   font-size: 90%;
   font-style: italic;
   color: #777777;
 }
 
-/* line 257, ../sass/forms.scss */
+/* line 255, ../sass/forms.scss */
 html.js fieldset.collapsed {
   border: 1px solid #CCCCCC;
   height: 2.15em;
@@ -892,7 +890,7 @@ html.js fieldset.collapsed {
 /*
  * Password confirmation
  */
-/* line 266, ../sass/forms.scss */
+/* line 264, ../sass/forms.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
@@ -901,7 +899,7 @@ html.js fieldset.collapsed {
 /*
  * Search (search-block-form.tpl.php)
  */
-/* line 275, ../sass/forms.scss */
+/* line 273, ../sass/forms.scss */
 #block-search-form {
   /* Wrapper for the search form */
 }
@@ -909,7 +907,7 @@ html.js fieldset.collapsed {
 /*
  * Drupal's default login form block
  */
-/* line 282, ../sass/forms.scss */
+/* line 280, ../sass/forms.scss */
 #user-login-form {
   text-align: left;
   /* LTR */
@@ -920,13 +918,13 @@ html.js fieldset.collapsed {
    * styling of list items.
    */
 }
-/* line 292, ../sass/forms.scss */
+/* line 290, ../sass/forms.scss */
 #user-login-form ul {
   /* OpenID creates a new ul above the login form's links. */
   margin-bottom: 0;
   /* Position OpenID's ul next to the rest of the links. */
 }
-/* line 296, ../sass/forms.scss */
+/* line 294, ../sass/forms.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* The "Log in using OpenID" link. */
@@ -935,13 +933,13 @@ html.js #user-login-form li.openid-link,
   /* LTR */
   /* Un-do some of the padding on the ul list. */
 }
-/* line 302, ../sass/forms.scss */
+/* line 300, ../sass/forms.scss */
 #user-login-form li.user-link {
   /* The "Cancel OpenID login" link. */
   margin-top: 1.5em;
 }
 
-/* line 307, ../sass/forms.scss */
+/* line 305, ../sass/forms.scss */
 #user-login ul {
   margin: 1.5em 0;
 }
@@ -952,12 +950,12 @@ html.js #user-login-form li.openid-link,
  * We overrode these styles in normalize.css, but restore them for the admin
  * section of the site.
  */
-/* line 319, ../sass/forms.scss */
+/* line 317, ../sass/forms.scss */
 table {
   width: 100%;
 }
 
-/* line 322, ../sass/forms.scss */
+/* line 320, ../sass/forms.scss */
 th {
   text-align: left;
   /* LTR */
@@ -968,27 +966,27 @@ th {
   padding: 5px 10px;
 }
 
-/* line 330, ../sass/forms.scss */
+/* line 328, ../sass/forms.scss */
 tbody {
   border-top: 1px solid #ccc;
 }
 
-/* line 333, ../sass/forms.scss */
+/* line 331, ../sass/forms.scss */
 td {
   padding: 10px;
 }
 
-/* line 336, ../sass/forms.scss */
+/* line 334, ../sass/forms.scss */
 tr.even {
   background-color: #fff;
 }
 
-/* line 339, ../sass/forms.scss */
+/* line 337, ../sass/forms.scss */
 table .item-list ul {
   margin: 0;
 }
 
-/* line 347, ../sass/forms.scss */
+/* line 345, ../sass/forms.scss */
 .lt-ie8 tr.even th,
 .lt-ie8 tr.even td,
 .lt-ie8 tr.odd th,
@@ -1000,12 +998,12 @@ table .item-list ul {
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
  */
-/* line 358, ../sass/forms.scss */
+/* line 356, ../sass/forms.scss */
 td.menu-disabled {
   background: #ccc;
 }
 
-/* line 362, ../sass/forms.scss */
+/* line 360, ../sass/forms.scss */
 html.js input.form-autocomplete {
   background-position: 100% 8px;
 }
