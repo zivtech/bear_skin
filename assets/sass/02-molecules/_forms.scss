@@ -1,5 +1,5 @@
 [class^="icon-"], [class*=" icon-"] {
-  display: inline-block;
+  @include inline-block();
   width: 14px;
   height: 14px;
   line-height: 14px;
@@ -7,6 +7,7 @@
   background: image-url("glyphicons-halflings.png") 14px 14px no-repeat;
   margin-top: 1px;
 }
+
 .btn {
   display: inline-block;
   padding: 4px 12px;
@@ -34,17 +35,18 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
   margin-right: 10px;
-  @include breakpoint ($breakpoint-small-width) {
+  @include breakpoint($breakpoint-small-width) {
     clear: both;
     float: left;
   }
 }
 
-.form-item { /* Wrapper for a form element (or group of form elements) and its label */
+.form-item {
+  /* Wrapper for a form element (or group of form elements) and its label */
   margin: 1.5em 0;
   input {
     max-width: 99%;
@@ -52,10 +54,12 @@
   }
   input.error,
   textarea.error,
-  select.error { /* Highlight the form elements that caused a form submission error */
+  select.error {
+    /* Highlight the form elements that caused a form submission error */
     border: 1px solid #c00;
   }
-  label { /* The label for a form element */
+  label {
+    /* The label for a form element */
     display: block;
     font-weight: normal;
     color: #666666;
@@ -65,16 +69,19 @@
     }
   }
 
-  label.option { /* The label for a radio button or checkbox */
+  label.option {
+    /* The label for a radio button or checkbox */
     display: inline;
     font-weight: normal;
   }
 
-  .form-required { /* The part of the label that indicates a required field */
+  .form-required {
+    /* The part of the label that indicates a required field */
     color: #c00;
   }
 
-  .description { /* The descriptive help text (separate from the label) */
+  .description {
+    /* The descriptive help text (separate from the label) */
     font-size: 80%;
     font-style: italic;
     color: #777777;
@@ -83,8 +90,9 @@
     color: #666666;
     font-size: 90%;
   }
-  .form-checkboxes & ,
-  .form-radios & { /* Pack groups of checkboxes and radio buttons closer together */
+  .form-checkboxes &,
+  .form-radios & {
+    /* Pack groups of checkboxes and radio buttons closer together */
     margin: 0; /* Drupal core uses "0.4em 0" */
   }
   .form-text, .form-textarea, .form-file {
@@ -125,6 +133,7 @@
     margin-bottom: 0;
   }
 }
+
 .form-text, .form-textarea {
   &:focus, &:hover, &:active {
     -moz-box-shadow: none;
@@ -136,15 +145,16 @@
     background: #f9f9f9;
   }
 }
+
 .form-submit, button, input[type="button"], input[type="reset"], input[type="submit"] {
   @include sassy-button("matte", 0px, 90%, #999, #888, #fff, "inset");
-  margin:0 5px 0 0;
+  margin: 0 5px 0 0;
   padding: 0.4em 1.1em 0.5em 1.2em;
 }
 
 a.button {
   @include sassy-button("matte", 5px, 90%, #999, #888, #fff, "inset");
-  margin:0 5px 0 0;
+  margin: 0 5px 0 0;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -154,7 +164,7 @@ a.button {
 }
 
 html.js input.form-autocomplete {
-    background-position: 100% 5px;
+  background-position: 100% 5px;
 }
 
 .ajax-progress .throbber {
@@ -163,7 +173,8 @@ html.js input.form-autocomplete {
 
 .container-inline {
   div,
-  label { /* Inline labels and form divs */
+  label {
+    /* Inline labels and form divs */
     display: inline;
   }
   .select2-container {
@@ -174,13 +185,17 @@ html.js input.form-autocomplete {
     display: none;
   }
 }
+
 dd {
-    margin: 10px 0 10px 30px;
-}
-.tips { /* Tips for Drupal's input formats */
+  margin: 10px 0 10px 30px;
 }
 
-a.button { /* Buttons used by contrib modules like Media */
+.tips {
+  /* Tips for Drupal's input formats */
+}
+
+a.button {
+  /* Buttons used by contrib modules like Media */
   @include appearance(button);
 }
 
@@ -217,6 +232,7 @@ fieldset {
     }
   }
 }
+
 .ckeditor_links {
   font-size: 90%;
 }
@@ -243,6 +259,7 @@ fieldset {
     }
   }
 }
+
 html.js fieldset.collapsed {
   border: 1px solid #CCCCCC;
   height: 2.15em;
@@ -261,7 +278,8 @@ html.js fieldset.collapsed {
  * Search (search-block-form.tpl.php)
  */
 
-#block-search-form { /* Wrapper for the search form */
+#block-search-form {
+  /* Wrapper for the search form */
 }
 
 /*
@@ -278,17 +296,21 @@ html.js fieldset.collapsed {
    * styling of list items.
    */
 
-  ul { /* OpenID creates a new ul above the login form's links. */
+  ul {
+    /* OpenID creates a new ul above the login form's links. */
     margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
   }
 
   html.js & li.openid-link,
-  li.openid-link { /* The "Log in using OpenID" link. */
+  li.openid-link {
+    /* The "Log in using OpenID" link. */
     margin-top: 1.5em;
-    margin-left: -20px; /* LTR */ /* Un-do some of the padding on the ul list. */
+    margin-left: -20px; /* LTR */
+    /* Un-do some of the padding on the ul list. */
   }
 
-  li.user-link { /* The "Cancel OpenID login" link. */
+  li.user-link {
+    /* The "Cancel OpenID login" link. */
     margin-top: 1.5em;
   }
 }
@@ -304,40 +326,43 @@ html.js fieldset.collapsed {
  * section of the site.
  */
 
-
 table {
   width: 100%;
 }
+
 th {
   text-align: left; /* LTR */
   padding-right: 1em; /* LTR */
   border-bottom: 3px solid #ccc;
   font-weight: normal;
-  padding:5px 10px;
+  padding: 5px 10px;
 }
 
 tbody {
   border-top: 1px solid #ccc;
 }
+
 td {
   padding: 10px;
 }
+
 tr.even {
   background-color: #fff;
 }
+
 table .item-list ul {
   margin: 0;
 }
 
-
 //@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-  .lt-ie8 tr.even,
-  .lt-ie8 tr.odd {
-    th,
-    td {
-      border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
-    }
+.lt-ie8 tr.even,
+.lt-ie8 tr.odd {
+  th,
+  td {
+    border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
   }
+}
+
 //}
 
 /*

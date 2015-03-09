@@ -24,7 +24,7 @@ $footer-height: 100px;
 
   #footer {
     position: relative;
-    margin-top: -$footer-height; // margin = - footer height
+    margin-top: $footer-height * -1; // margin = - footer height
     height: $footer-height;
     clear: both;
     .block {
@@ -46,6 +46,6 @@ $footer-height: 100px;
 
 // hack for ie7
 .ie7 .with-sticky-footer #page {
-  display:table;
-  height:100%
+  display: table;
+  height: 100%
 }

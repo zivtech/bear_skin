@@ -37,7 +37,6 @@ GEM
       compass (>= 0.12.2)
     sassy-maps (0.4.0)
       sass (~> 3.3)
-    terminal-notifier (1.6.2)
 
 PLATFORMS
   ruby
@@ -49,4 +48,3 @@ DEPENDENCIES
   compass-normalize
   compass-rgbapng (>= 0.2.1)
   sassy-buttons (>= 0.2.6)
-  terminal-notifier (>= 1.6.2)

@@ -8,24 +8,30 @@ body {
   color: $dark;
   @include m-links;
 }
+
 html, body, button, input, select, textarea {
   @include bearfont-main;
 }
+
 h1, h2, h3, h4, h5 {
   @include bearfont-titles;
   font-weight: 400;
 }
+
 #main {
   clear: both;
 }
+
 #page {
   min-width: 300px;
 }
+
 #navigation {
   width: 100%;
   padding: 15px 0;
 }
-@include breakpoint ($breakpoint-small-width) {
+
+@include breakpoint($breakpoint-small-width) {
   ul.primary li, ul.secondary li {
     float: none;
     clear: both;
@@ -35,6 +41,7 @@ h1, h2, h3, h4, h5 {
     }
   }
 }
+
 /***********
 ~STRUCTURE
 ***********/
@@ -42,26 +49,28 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 160%;
 }
+
 .wrapper {
   &.header {
     background-color: #8E8E8E;
     box-shadow: inset 0px -3px 6px #666;
-    -moz-box-shadow: inset 0px -3px 6px #666;
-    -webkit-box-shadow: inset 0px -3px 6px #666;
   }
   &.footer {
     background-color: $grey;
   }
 }
+
 .breadcrumb {
   margin: 20px 0;
 }
+
 /***********
 ~HEADER
 ***********/
 .region-header {
   clear: none;
 }
+
 .wrapper.header {
   #header {
     padding: 25px 0;
@@ -69,7 +78,7 @@ h1 {
     #bear-user-menu {
       float: right;
       margin: 0;
-      @include breakpoint ($breakpoint-medium-width) {
+      @include breakpoint($breakpoint-medium-width) {
         float: none;
         text-align: center;
         margin: 0;
@@ -88,21 +97,23 @@ h1 {
     }
   }
 }
+
 h1#site-name {
- font-size: 2em;
- line-height: .5em;
- margin: 70px 0 0 25px;
+  font-size: 2em;
+  line-height: .5em;
+  margin: 70px 0 0 25px;
   a:link, a:visited {
-      color: #ffffff;
+    color: #ffffff;
   }
 }
+
 #block-search-form {
   background: #FFFFFF;
   padding: 0 0 0 10px;
   float: right;
   width: 200px;
   margin: 60px 0 0 0;
-  @include breakpoint ($breakpoint-medium-width) {
+  @include breakpoint($breakpoint-medium-width) {
     clear: both;
     float: none;
     text-align: center;
@@ -115,7 +126,6 @@ h1#site-name {
     width: 150px;
     &:focus {
       box-shadow: none;
-      moz-box-shadow: none;
     }
   }
   input.form-submit {
@@ -123,8 +133,6 @@ h1#site-name {
     background: #FFFFFF image-url("search.png") no-repeat center center;
     border: none;
     box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
     filter: none;
     padding: 5px 15px;
     width: 40px;
@@ -133,7 +141,8 @@ h1#site-name {
     margin: 0;
   }
 }
-@include breakpoint ($breakpoint-medium-width) {
+
+@include breakpoint($breakpoint-medium-width) {
   .wrapper.header #header {
     text-align: center;
     padding: 0;
@@ -164,8 +173,8 @@ aside.sidebars {
       text-indent: 10px;
       margin: 0 0 10px 0;
       font-size: 110%;
-      }
-    @include breakpoint ($breakpoint-large-width) {
+    }
+    @include breakpoint($breakpoint-large-width) {
       padding-left: auto;
     }
   }
@@ -179,24 +188,20 @@ aside.sidebars {
   padding: 0 3px;
   .flexslider {
     background: none repeat scroll 0 0 #FFFFFF;
-    border: 0;
-    border-radius:0;
+    border-radius: 0;
     border: 4px solid #FFFFFF;
     margin: 30px 0;
     position: relative;
-    -moz-box-shadow: 0 0 5px #ccc;
-    -webkit-box-shadow: 0 0 5px #ccc;
     box-shadow: 0 0 5px #ccc;
     li {
       opacity: 1 !important;
       p {
+        @include bearfont-titles;
         text-align: center;
-        font-size: 110%;
         background: #f5f5f5;
         margin: 0;
         padding: 10px 0;
         font-size: 90%;
-        @include bearfont-titles;
       }
     }
   }
@@ -211,22 +216,23 @@ aside.sidebars {
     margin-left: auto;
     margin-right: auto;
     color: $dark;
-    font-size:12px;
-    @include breakpoint ($breakpoint-full-width) {
-      padding-left: 0 20px;
-      padding-right: 0 20px;
+    font-size: 12px;
+    @include breakpoint($breakpoint-full-width) {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }
-@include breakpoint ($breakpoint-medium-width) {
+
+@include breakpoint($breakpoint-medium-width) {
   #footer {
     text-align: center;
   }
   ul.social-footer {
     margin-top: -10px;
     li {
-     display: inline-block;
-     float: none;
+      display: inline-block;
+      float: none;
     }
   }
 }
@@ -236,8 +242,7 @@ aside.sidebars {
 #documentation {
   p.tb {
     @include col(1/4, $cycle: 4, $gutter: 1);
-    //@include box-sizing(border-box);
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     background: #DDDDDD;
     padding: 20px;
   }
@@ -245,25 +250,19 @@ aside.sidebars {
 
 /*
  * CSS Animations
- * Don't forget to add vendor prefixes!
  */
 .m-scene .scene_element {
   animation-duration: 0.25s;
   transition-timing-function: ease-in;
   animation-fill-mode: both;
-  -webkit-animation-duration: 0.25s;
-  -webkit-transition-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
 }
 
 .m-scene .scene_element--fadein {
   animation-name: fadeIn;
-  -webkit-animation-name: fadeIn;
 }
 
 .m-scene.is-exiting .scene_element {
   animation-direction: alternate-reverse;
-  -webkit-animation-direction: alternate-reverse;
 }
 
 /*
@@ -271,10 +270,19 @@ aside.sidebars {
  */
 
 @-webkit-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

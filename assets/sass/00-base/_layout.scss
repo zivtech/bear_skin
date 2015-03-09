@@ -12,7 +12,7 @@ body {
 #page {
   width: 100%;
   .wrapper {
-    @include breakpoint ($breakpoint-full-width) {
+    @include breakpoint($breakpoint-full-width) {
       padding: 0 20px;
     }
   }
@@ -44,6 +44,7 @@ body {
     clear: both;
   }
 }
+
 #main {
   max-width: $site-max-width;
   margin: 0 auto;
@@ -56,7 +57,7 @@ body {
   #content {
     @include col(3/4);
     @include shift(1/4);
-    @include breakpoint ($breakpoint-medium-width) {
+    @include breakpoint($breakpoint-medium-width) {
       @include col();
       @include unshift();
     }
@@ -64,7 +65,7 @@ body {
   .region-sidebar-first {
     @include col(1/4);
     @include shift(-3/4);
-    @include breakpoint ($breakpoint-medium-width) {
+    @include breakpoint($breakpoint-medium-width) {
       @include col();
       @include unshift();
     }
@@ -76,14 +77,14 @@ body {
 .sidebar-second {
   #content {
     @include col(3/4);
-    @include breakpoint ($breakpoint-medium-width) {
+    @include breakpoint($breakpoint-medium-width) {
       @include col();
       @include unshift();
     }
   }
   .region-sidebar-first {
     @include col(1/4);
-    @include breakpoint ($breakpoint-medium-width) {
+    @include breakpoint($breakpoint-medium-width) {
       @include col();
       @include unshift();
     }
@@ -96,7 +97,7 @@ body {
   #content {
     @include col(2/4);
     @include shift(1/4);
-    @include breakpoint ($breakpoint-medium-width) {
+    @include breakpoint($breakpoint-medium-width) {
       @include col();
       @include unshift();
     }
@@ -104,14 +105,14 @@ body {
   .region-sidebar-first {
     @include col(1/4);
     @include shift(-2/4);
-    @include breakpoint ($breakpoint-medium-width) {
+    @include breakpoint($breakpoint-medium-width) {
       @include col();
       @include unshift();
     }
   }
   .region-sidebar-second {
     @include col(1/4);
-    @include breakpoint ($breakpoint-medium-width) {
+    @include breakpoint($breakpoint-medium-width) {
       @include col();
       @include unshift();
     }

@@ -40,20 +40,17 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
 
 #{$selector} {
   font: bold 13px Arial, Helvetica;
-  * {
-    @include box-sizing(border-box);
-  }
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    @include border-radius(3px);
+    border-radius: 3px;
   }
   li {
     position: relative;
     &:hover {
       border-right-color: $baseMenuBackgroundHover;
-      @include box-shadow(0 1px 0 rgba(255, 255, 255, .2) inset);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .2) inset;
       > ul {
         opacity: 1;
         visibility: visible;
@@ -78,15 +75,15 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
 }
 
 #{$selector} > ul {
-  border: 1px solid darken($baseMenuBackground, 5%);
-  @include menu-background($baseMenuBackground);
-  @include box-shadow(0 1px 0 rgba(255, 255, 255, .2) inset);
   @extend %cf;
+  @include menu-background($baseMenuBackground);
+  border: 1px solid darken($baseMenuBackground, 5%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .2) inset;
   > li {
+    @include span(1/4);
     float: left;
     border-right: 1px solid lighten($baseMenuBackground, 5%);
-    @include box-shadow(1px 0 0 lighten($baseMenuBackground, 20%));
-    @include span(1/4);
+    box-shadow: 1px 0 0 lighten($baseMenuBackground, 20%);
     > a {
       float: left;
       padding: $gutter 0;
@@ -107,33 +104,34 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
     text-shadow: 0 -1px 0 #585858;
   }
   ul {
+    @include menu-background(lighten($baseMenuBackground, 15%), false);
+    @include pseudo-triangle(6px, 4);
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
-    margin: 2 * $gutter 0 0 0;
+    margin: $gutter 0 0 0;
     width: 100%;
-    @include menu-background(lighten($baseMenuBackground, 15%), false);
-    @include transition-property("margin, opacity");
-    @include transition-duration(".15s");
-    @include transition-timing-function(ease-in-out);
-    @include pseudo-triangle(6px, 4);
+    transition-property: margin, opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+
     &:after {
       left: 47%;
     }
     li {
       display: block;
       width: 100%;
-      @include box-shadow(0 1px 0 lighten($baseMenuBackground, 5%), 0 2px 0 lighten($baseMenuBackground, 25%));
+      box-shadow: 0 1px 0 lighten($baseMenuBackground, 5%), 0 2px 0 lighten($baseMenuBackground, 25%);
       &:first-child > a {
-        @include border-radius(3px 3px 0 0);
+        border-radius: 3px 3px 0 0;
       }
       &:last-child {
-        @include box-shadow(none);
+        box-shadow: none;
         > a {
-          @include border-radius(0 0 3px 3px);
+          border-radius: 0 0 3px 3px;
         }
       }
     }
@@ -150,6 +148,3 @@ $selector: "#navigation .block-menu, #navigation .menu-block-wrapper";
     }
   }
 }
-
-// Last but not least: the responsive stuff
-//@import "bear-menu-responsive";

@@ -9,7 +9,6 @@
 # Require any additional compass plugins installed on your system.
 # Required for post processing in post-compile hook below:
 require 'autoprefixer-rails'
-require 'terminal-notifier'
 
 # Required for sass compile
 require 'sassy-buttons'
