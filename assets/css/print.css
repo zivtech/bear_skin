@@ -23,7 +23,7 @@ body * {
 #page {
   width: 100%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 75em) {
   /* line 14, ../sass/00-base/_layout.scss */
   #page .wrapper {
     padding: 0 20px;
@@ -38,7 +38,7 @@ body * {
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
-  max-width: 1200px;
+  max-width: 75em;
   margin: 0 auto;
 }
 /* line 30, ../sass/00-base/_layout.scss */
@@ -71,7 +71,7 @@ body * {
 
 /* line 47, ../sass/00-base/_layout.scss */
 #main {
-  max-width: 1200px;
+  max-width: 75em;
   margin: 0 auto;
   padding: 20px 0 0 0;
 }
@@ -105,7 +105,7 @@ body * {
 .sidebar-first #content:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 56, ../sass/00-base/_layout.scss */
   .sidebar-first #content {
     *zoom: 1;
@@ -163,7 +163,7 @@ body * {
 .sidebar-first .region-sidebar-first:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 64, ../sass/00-base/_layout.scss */
   .sidebar-first .region-sidebar-first {
     *zoom: 1;
@@ -221,7 +221,7 @@ body * {
 .sidebar-second #content:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 77, ../sass/00-base/_layout.scss */
   .sidebar-second #content {
     *zoom: 1;
@@ -277,7 +277,7 @@ body * {
 .sidebar-second .region-sidebar-first:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 84, ../sass/00-base/_layout.scss */
   .sidebar-second .region-sidebar-first {
     *zoom: 1;
@@ -337,7 +337,7 @@ body * {
 .two-sidebars #content:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 96, ../sass/00-base/_layout.scss */
   .two-sidebars #content {
     *zoom: 1;
@@ -395,7 +395,7 @@ body * {
 .two-sidebars .region-sidebar-first:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 104, ../sass/00-base/_layout.scss */
   .two-sidebars .region-sidebar-first {
     *zoom: 1;
@@ -451,7 +451,7 @@ body * {
 .two-sidebars .region-sidebar-second:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 112, ../sass/00-base/_layout.scss */
   .two-sidebars .region-sidebar-second {
     *zoom: 1;

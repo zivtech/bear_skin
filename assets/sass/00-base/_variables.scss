@@ -9,12 +9,15 @@
 //
 //
 
+@function em($target, $context: 16) {
+  @return ($target / $context) * 1em;
+}
 
 
 //
 // Layout
 //
-$site-max-width: 1200px !default;
+$site-max-width: em(1200) !default;
 $indent-amount: 30px !default;
 $vertical-gutter: 10px 0 !default;
 
@@ -24,11 +27,11 @@ $vertical-gutter: 10px 0 !default;
 // create $breakpoint variables like so
 // assume min-width (by default) if only a number
 
-$breakpoint-small-width: max-width 400px !default;
-$breakpoint-med-small-width: max-width 650px !default;
-$breakpoint-medium-width: max-width 800px !default;
-$breakpoint-large-width: max-width 1000px !default;
-$breakpoint-full-width: max-width 1200px !default;
+$breakpoint-small-width: max-width 25em !default;
+$breakpoint-med-small-width: max-width 37.5em !default;
+$breakpoint-medium-width: max-width 50em !default;
+$breakpoint-large-width: max-width 62.5em !default;
+$breakpoint-full-width: max-width $site-max-width;
 
 
 //

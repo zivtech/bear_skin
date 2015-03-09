@@ -1,44 +1,46 @@
-<?php //dpm($content); ?>
-<!-- top row -->
-
 <div class="bearskin-template sidebar-left-top-and-bottom-rows">
 
-  <div class="bearskin-row top">
-    <div class="row-inside">
-      <?php print $content['top']; ?>
-    </div>
-  </div>
-
-  <!-- middle row -->
-
-  <div class="bearskin-row middle">
-    <div class="row-inside">
-
-      <!-- center column -->
-
-      <div class="column center">
-        <div class="col-inside">
-          <?php print $content['center']; ?>
-        </div>
+  <?php if (!empty($content['top'])): ?>
+    <div class="bearskin-row top">
+      <div class="row-inside">
+        <?php print $content['top']; ?>
       </div>
+    </div><!-- top row -->
+  <?php endif; ?>
 
-      <!-- left sidebar column -->
 
-      <div class="column sidebar left">
-        <div class="col-inside">
-          <?php print $content['left']; ?>
+  <?php if (!empty($content['center']) || !empty($content['center'])): ?>
+    <div class="bearskin-row middle">
+      <div class="row-inside">
+
+        <?php if (!empty($content['center'])): ?>
+          <div class="column center">
+            <div class="col-inside">
+              <?php print $content['center']; ?>
+            </div>
+          </div><!-- center column -->
+        <?php endif; ?>
+
+        <?php if (!empty($content['left'])): ?>
+        <div class="column sidebar left">
+          <div class="col-inside">
+            <?php print $content['left']; ?>
+          </div>
         </div>
+        <!-- left sidebar column -->
+
       </div>
+      <?php endif; ?>
 
-    </div>
-  </div>
+    </div><!-- middle row -->
+  <?php endif; ?>
 
-  <!-- bottom row -->
-
-  <div class="bearskin-row bottom">
-    <div class="col-inside">
-      <?php print $content['bottom']; ?>
-    </div>
-  </div>
+  <?php if (!empty($content['bottom'])): ?>
+    <div class="bearskin-row bottom">
+      <div class="col-inside">
+        <?php print $content['bottom']; ?>
+      </div>
+    </div><!-- bottom row -->
+  <?php endif; ?>
 
 </div>
