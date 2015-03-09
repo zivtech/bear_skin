@@ -1,21 +1,9 @@
-/**
- * @file
- *
- * Bear Starter Theme Main Styling
- *
- * Adds basic bear styles for starter theme.
- *
- */
-
-/***********
-~IMPORTS
-***********/
 @import "base";
 
+//
+// Main bear stylesheet
+//
 
-/***********
-~GENERIC
-***********/
 body {
   color: $dark;
   @include m-links;

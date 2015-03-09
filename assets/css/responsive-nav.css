@@ -31,7 +31,7 @@ OUR CUSTOM MIXINS
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
-  max-width: 1200px;
+  max-width: 1111px;
   margin: 0 auto;
 }
 /* line 28, ../sass/00-base/_layout.scss */
@@ -64,7 +64,7 @@ OUR CUSTOM MIXINS
 
 /* line 45, ../sass/00-base/_layout.scss */
 #main {
-  max-width: 1200px;
+  max-width: 1111px;
   margin: 0 auto;
   padding: 20px 0 0 0;
 }

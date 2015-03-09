@@ -33,20 +33,8 @@ base theme  = zen
 ; stylesheets[all][] = system.menus.css
 
 ; Then we add our own stylesheets.
-stylesheets[all][] = assets/css/wireframes.css
-stylesheets[all][] = assets/css/tabs.css
-stylesheets[all][] = assets/css/pages.css
-stylesheets[all][] = assets/css/blocks.css
-stylesheets[all][] = assets/css/navigation.css
-stylesheets[all][] = assets/css/bear-menu.css
-stylesheets[all][] = assets/css/views-styles.css
-stylesheets[all][] = assets/css/comments.css
-stylesheets[all][] = assets/css/forms.css
-stylesheets[all][] = assets/css/panels.css
-stylesheets[all][] = assets/css/sidebars.css
+stylesheets[screen][] = assets/css/bear.css
 stylesheets[print][] = assets/css/print.css
-stylesheets[all][] = assets/css/responsive-nav.css
-stylesheets[all][] = assets/css/bear.css
 
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.

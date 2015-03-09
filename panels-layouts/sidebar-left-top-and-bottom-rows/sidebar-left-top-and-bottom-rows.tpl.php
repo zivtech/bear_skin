@@ -1,4 +1,4 @@
-
+<?php //dpm($content); ?>
 <!-- top row -->
 
 <div class="bearskin-template sidebar-left-top-and-bottom-rows">

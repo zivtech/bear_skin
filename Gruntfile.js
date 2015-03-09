@@ -45,7 +45,7 @@ module.exports = function (grunt) {
           links: true,
           forms: true
         },
-        proxy: 'bearskin-dev.local'
+        proxy: 'bearskinner.local'
       }
     },
 

@@ -3,12 +3,14 @@
  * Non panel layouts (one sidebar, two sidebars, none)
  *
  */
-
-#page {
-  width: 100%;
+body {
   * {
     @include box-sizing(border-box);
   }
+}
+
+#page {
+  width: 100%;
   .wrapper {
     @include breakpoint ($breakpoint-full-width) {
       padding: 0 20px;

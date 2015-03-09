@@ -9,12 +9,18 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   $variables['base_path'] = base_path();
   $variables['path_to_bear_skin'] = drupal_get_path('theme', 'bear_skin');
 
+  // put some settings into javascript
   drupal_add_js(array(
-    'bearSkin' => array(
+    'bear_skin' => array(
       'stickyFooter' => (bool) theme_get_setting('sticky_footer'),
       'userMenu' => (bool) theme_get_setting('user_menu')
     )
   ), 'setting');
+
+  // if the sticky footer option is selected, set a class
+  if (theme_get_setting('sticky_footer')) {
+    $variables['classes_array'][] = 'with-sticky-footer';
+  }
 }
 
 /**
@@ -55,6 +61,10 @@ function bear_skin_css_alter(&$css) {
       }
     }
   }
+}
+
+function bear_skin_preprocess_panels_pane(&$variables) {
+  //dpm($variables);
 }
 
 /***********************

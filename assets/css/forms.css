@@ -11,23 +11,24 @@ OUR CUSTOM MIXINS
  *
  */
 /* line 7, ../sass/00-base/_layout.scss */
-#page {
-  width: 100%;
-}
-/* line 9, ../sass/00-base/_layout.scss */
-#page * {
+body * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+/* line 12, ../sass/00-base/_layout.scss */
+#page {
+  width: 100%;
+}
 @media (max-width: 1200px) {
-  /* line 12, ../sass/00-base/_layout.scss */
+  /* line 14, ../sass/00-base/_layout.scss */
   #page .wrapper {
     padding: 0 20px;
   }
 }
 
-/* line 19, ../sass/00-base/_layout.scss */
+/* line 21, ../sass/00-base/_layout.scss */
 #header,
 #content,
 #navigation,
@@ -35,10 +36,10 @@ OUR CUSTOM MIXINS
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
-  max-width: 1200px;
+  max-width: 1111px;
   margin: 0 auto;
 }
-/* line 28, ../sass/00-base/_layout.scss */
+/* line 30, ../sass/00-base/_layout.scss */
 #header:after,
 #content:after,
 #navigation:after,
@@ -51,13 +52,13 @@ OUR CUSTOM MIXINS
   clear: both;
 }
 
-/* line 35, ../sass/00-base/_layout.scss */
+/* line 37, ../sass/00-base/_layout.scss */
 #header,
 #main,
 #footer {
   width: 100%;
 }
-/* line 39, ../sass/00-base/_layout.scss */
+/* line 41, ../sass/00-base/_layout.scss */
 #header:after,
 #main:after,
 #footer:after {
@@ -66,15 +67,15 @@ OUR CUSTOM MIXINS
   clear: both;
 }
 
-/* line 45, ../sass/00-base/_layout.scss */
+/* line 47, ../sass/00-base/_layout.scss */
 #main {
-  max-width: 1200px;
+  max-width: 1111px;
   margin: 0 auto;
   padding: 20px 0 0 0;
 }
 
 /* LEFT SIDEBAR */
-/* line 54, ../sass/00-base/_layout.scss */
+/* line 56, ../sass/00-base/_layout.scss */
 .sidebar-first #content {
   *zoom: 1;
   float: left;
@@ -103,7 +104,7 @@ OUR CUSTOM MIXINS
   margin-right: 0%;
 }
 @media (max-width: 800px) {
-  /* line 54, ../sass/00-base/_layout.scss */
+  /* line 56, ../sass/00-base/_layout.scss */
   .sidebar-first #content {
     *zoom: 1;
     float: left;
@@ -132,7 +133,7 @@ OUR CUSTOM MIXINS
     margin-right: 0%;
   }
 }
-/* line 62, ../sass/00-base/_layout.scss */
+/* line 64, ../sass/00-base/_layout.scss */
 .sidebar-first .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -161,7 +162,7 @@ OUR CUSTOM MIXINS
   margin-right: 0%;
 }
 @media (max-width: 800px) {
-  /* line 62, ../sass/00-base/_layout.scss */
+  /* line 64, ../sass/00-base/_layout.scss */
   .sidebar-first .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -192,7 +193,7 @@ OUR CUSTOM MIXINS
 }
 
 /* RIGHT SIDEBAR */
-/* line 75, ../sass/00-base/_layout.scss */
+/* line 77, ../sass/00-base/_layout.scss */
 .sidebar-second #content {
   *zoom: 1;
   float: left;
@@ -219,7 +220,7 @@ OUR CUSTOM MIXINS
   margin-right: 0%;
 }
 @media (max-width: 800px) {
-  /* line 75, ../sass/00-base/_layout.scss */
+  /* line 77, ../sass/00-base/_layout.scss */
   .sidebar-second #content {
     *zoom: 1;
     float: left;
@@ -248,7 +249,7 @@ OUR CUSTOM MIXINS
     margin-right: 0%;
   }
 }
-/* line 82, ../sass/00-base/_layout.scss */
+/* line 84, ../sass/00-base/_layout.scss */
 .sidebar-second .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -275,7 +276,7 @@ OUR CUSTOM MIXINS
   margin-right: 0%;
 }
 @media (max-width: 800px) {
-  /* line 82, ../sass/00-base/_layout.scss */
+  /* line 84, ../sass/00-base/_layout.scss */
   .sidebar-second .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -306,7 +307,7 @@ OUR CUSTOM MIXINS
 }
 
 /* TWO SIDEBARS */
-/* line 94, ../sass/00-base/_layout.scss */
+/* line 96, ../sass/00-base/_layout.scss */
 .two-sidebars #content {
   *zoom: 1;
   float: left;
@@ -335,7 +336,7 @@ OUR CUSTOM MIXINS
   margin-right: 0%;
 }
 @media (max-width: 800px) {
-  /* line 94, ../sass/00-base/_layout.scss */
+  /* line 96, ../sass/00-base/_layout.scss */
   .two-sidebars #content {
     *zoom: 1;
     float: left;
@@ -364,7 +365,7 @@ OUR CUSTOM MIXINS
     margin-right: 0%;
   }
 }
-/* line 102, ../sass/00-base/_layout.scss */
+/* line 104, ../sass/00-base/_layout.scss */
 .two-sidebars .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -393,7 +394,7 @@ OUR CUSTOM MIXINS
   margin-right: 0%;
 }
 @media (max-width: 800px) {
-  /* line 102, ../sass/00-base/_layout.scss */
+  /* line 104, ../sass/00-base/_layout.scss */
   .two-sidebars .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -422,7 +423,7 @@ OUR CUSTOM MIXINS
     margin-right: 0%;
   }
 }
-/* line 110, ../sass/00-base/_layout.scss */
+/* line 112, ../sass/00-base/_layout.scss */
 .two-sidebars .region-sidebar-second {
   *zoom: 1;
   float: left;
@@ -449,7 +450,7 @@ OUR CUSTOM MIXINS
   margin-right: 0%;
 }
 @media (max-width: 800px) {
-  /* line 110, ../sass/00-base/_layout.scss */
+  /* line 112, ../sass/00-base/_layout.scss */
   .two-sidebars .region-sidebar-second {
     *zoom: 1;
     float: left;

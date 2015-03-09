@@ -1,0 +1,51 @@
+//
+// Variables
+//
+
+$footer-height: 100px;
+
+//
+// Styles
+//
+// .sticky-footer gets added to <body> in template.php
+//
+
+.with-sticky-footer {
+  height: 100%;
+
+  #page {
+    min-height: 100%;
+  }
+
+  #main {
+    overflow: auto;
+    padding-bottom: $footer-height; // padding = footer height
+  }
+
+  #footer {
+    position: relative;
+    margin-top: -$footer-height; // margin = - footer height
+    height: $footer-height;
+    clear: both;
+    .block {
+      @include breakpoint($breakpoint-full-width) {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  // hack for opera
+  &:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+  }
+}
+
+// hack for ie7
+.ie7 .with-sticky-footer #page {
+  display:table;
+  height:100%
+}

@@ -1,17 +1,7 @@
-/**
- * @file
- * Tabs Styling
- *
- * Adds styles for the primary and secondary tabs.
- *
- * Compare this with default CSS found in the system module's stylesheet (a copy
- * of which is in drupal7-reference.css.)
- */
+//
+// Tabs
+//
 
-@import "base";
-
-
-// Some variables to make altering the styling easier.
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
 
