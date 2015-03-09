@@ -83,5 +83,5 @@ on_stylesheet_saved do |file|
   end
 
   cssfile = File.basename file
-  exec( "terminal-notifier -group 'bear-skin' -title 'Autoprefixer' -subtitle 'Finished' -message 'Autoprefixer has run on " + cssfile + "' -sound 'Submarine'" )
+  system( "echo 'Autoprefixer has processed " + cssfile + "'" )
 end

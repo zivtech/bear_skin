@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Print styling
+ *
+ * We provide some sane print styling for Drupal using Zen's layout method.
+ */
 /****************
 OUR CUSTOM MIXINS
 *****************/
@@ -8,8 +14,6 @@ OUR CUSTOM MIXINS
  */
 /* line 7, ../sass/00-base/_layout.scss */
 body * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -17,7 +21,7 @@ body * {
 #page {
   width: 100%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 75em) {
   /* line 14, ../sass/00-base/_layout.scss */
   #page .wrapper {
     padding: 0 20px;
@@ -32,7 +36,7 @@ body * {
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
-  max-width: 1111px;
+  max-width: 75em;
   margin: 0 auto;
 }
 /* line 30, ../sass/00-base/_layout.scss */
@@ -65,7 +69,7 @@ body * {
 
 /* line 47, ../sass/00-base/_layout.scss */
 #main {
-  max-width: 1111px;
+  max-width: 75em;
   margin: 0 auto;
   padding: 20px 0 0 0;
 }
@@ -99,7 +103,7 @@ body * {
 .sidebar-first #content:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 56, ../sass/00-base/_layout.scss */
   .sidebar-first #content {
     *zoom: 1;
@@ -157,7 +161,7 @@ body * {
 .sidebar-first .region-sidebar-first:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 64, ../sass/00-base/_layout.scss */
   .sidebar-first .region-sidebar-first {
     *zoom: 1;
@@ -215,7 +219,7 @@ body * {
 .sidebar-second #content:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 77, ../sass/00-base/_layout.scss */
   .sidebar-second #content {
     *zoom: 1;
@@ -271,7 +275,7 @@ body * {
 .sidebar-second .region-sidebar-first:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 84, ../sass/00-base/_layout.scss */
   .sidebar-second .region-sidebar-first {
     *zoom: 1;
@@ -331,7 +335,7 @@ body * {
 .two-sidebars #content:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 96, ../sass/00-base/_layout.scss */
   .two-sidebars #content {
     *zoom: 1;
@@ -389,7 +393,7 @@ body * {
 .two-sidebars .region-sidebar-first:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 104, ../sass/00-base/_layout.scss */
   .two-sidebars .region-sidebar-first {
     *zoom: 1;
@@ -445,7 +449,7 @@ body * {
 .two-sidebars .region-sidebar-second:last-child {
   margin-right: 0%;
 }
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   /* line 112, ../sass/00-base/_layout.scss */
   .two-sidebars .region-sidebar-second {
     *zoom: 1;
@@ -476,52 +480,79 @@ body * {
   }
 }
 
-/* line 5, ../sass/sticky-footer.scss */
-html, body {
-  height: 100%;
-}
+@media print {
+  /* line 15, ../sass/print.scss */
+  a:link,
+  a:visited {
+    /* underline all links */
+    text-decoration: underline !important;
+  }
+  /* line 19, ../sass/print.scss */
+  #site-name a:link, #site-name
+  a:visited {
+    /* Don't underline header */
+    text-decoration: none !important;
+  }
 
-/* line 9, ../sass/sticky-footer.scss */
-#page {
-  min-height: 100%;
-}
+  /* line 25, ../sass/print.scss */
+  #content a[href]:after {
+    /* Add visible URL after links. */
+    content: " (" attr(href) ")";
+    font-weight: normal;
+    font-size: 16px;
+  }
+  /* line 31, ../sass/print.scss */
+  #content a[href^="javascript:"]:after,
+  #content a[href^="#"]:after {
+    /* Only display useful links. */
+    content: "";
+  }
+  /* line 36, ../sass/print.scss */
+  #content abbr[title]:after {
+    /* Add visible title after abbreviations. */
+    content: " (" attr(title) ")";
+  }
 
-/* line 13, ../sass/sticky-footer.scss */
-#main {
-  overflow: auto;
-  padding-bottom: 100px;
-}
+  /* line 41, ../sass/print.scss */
+  #content {
+    /* Un-float the content */
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
-/* must be same height as the footer */
-/* line 18, ../sass/sticky-footer.scss */
-#footer {
-  position: relative;
-  margin-top: -100px;
-  /* negative value of footer height */
-  height: 100px;
-  clear: both;
-}
-@media (max-width: 1200px) {
-  /* line 23, ../sass/sticky-footer.scss */
-  #footer .block {
-    padding: 0 20px;
+  /* line 48, ../sass/print.scss */
+  body,
+  #page,
+  #main,
+  #content {
+    /* Turn off any background colors or images */
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
+  /* line 57, ../sass/print.scss */
+  #skip-link,
+  #toolbar,
+  #navigation,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  #footer,
+  .breadcrumb,
+  .tabs,
+  .action-links,
+  .links,
+  .book-navigation,
+  .forum-topic-navigation,
+  .pager,
+  .feed-icons {
+    /* Hide sidebars and nav elements */
+    visibility: hidden;
+    display: none;
   }
 }
+/* End @media print */
 
-/*Opera Fix*/
-/* line 30, ../sass/sticky-footer.scss */
-body:before {
-  content: "";
-  height: 100%;
-  float: left;
-  width: 0;
-  margin-top: -32767px;
-}
-
-/* line 37, ../sass/sticky-footer.scss */
-.ie7 #page {
-  display: table;
-  height: 100%;
-}
-
-/*# sourceMappingURL=sticky-footer.css.map */
+/*# sourceMappingURL=print.css.map */
