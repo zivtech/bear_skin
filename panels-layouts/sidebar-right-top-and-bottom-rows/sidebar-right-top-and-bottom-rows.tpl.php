@@ -1,44 +1,44 @@
-
-<!-- top row -->
-
 <div class="bearskin-template sidebar-right-top-and-bottom-rows">
 
+  <?php if (!empty($content['top'])): ?>
   <div class="bearskin-row top">
     <div class="row-inside">
       <?php print $content['top']; ?>
     </div>
-  </div>
+  </div><!-- top row -->
+  <?php endif; ?>
 
-  <!-- middle row -->
 
+  <?php if (!empty($content['right']) || !empty($content['center'])): ?>
   <div class="bearskin-row middle">
     <div class="row-inside">
 
-      <!-- right sidebar column -->
-
+      <?php if (!empty($content['right'])): ?>
       <div class="column sidebar right">
         <div class="col-inside">
           <?php print $content['right']; ?>
         </div>
-      </div>
+      </div><!-- right sidebar column -->
+      <?php endif; ?>
 
-      <!-- center column -->
-
+      <?php if (!empty($content['center'])): ?>
       <div class="column center">
         <div class="col-inside">
           <?php print $content['center']; ?>
         </div>
-      </div>
+      </div><!-- center column -->
+      <?php endif; ?>
 
     </div>
-  </div>
+  </div><!-- middle row -->
+  <?php endif; ?>
 
-  <!-- bottom row -->
-
+  <?php if (!empty($content['bottom'])): ?>
   <div class="bearskin-row bottom">
-    <div class="col-inside">
+    <div class="row-inside">
       <?php print $content['bottom']; ?>
     </div>
-  </div>
+  </div><!-- bottom row -->
+  <?php endif; ?>
 
 </div>

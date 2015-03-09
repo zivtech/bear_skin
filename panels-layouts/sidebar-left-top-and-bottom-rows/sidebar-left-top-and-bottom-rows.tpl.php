@@ -30,13 +30,12 @@
         <?php endif; ?>
 
       </div>
-
     </div><!-- middle row -->
   <?php endif; ?>
 
   <?php if (!empty($content['bottom'])): ?>
     <div class="bearskin-row bottom">
-      <div class="col-inside">
+      <div class="row-inside">
         <?php print $content['bottom']; ?>
       </div>
     </div><!-- bottom row -->

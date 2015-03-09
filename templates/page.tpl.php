@@ -30,7 +30,7 @@
   </div>
 
   <div class="wrapper navigation">
-    <nav id="navigation" tabindex="-1" class="main-navigation">
+    <nav id="navigation" tabindex="-1" class="main-menu">
       <?php print render($page['navigation']); ?>
     </nav><!-- /#navigation -->
   </div>
