@@ -1,0 +1,9 @@
+# If you execute compass compile from this directory
+# `bundle exec compass compile`
+# Then autoprefixer will automatically run, applying prefixes
+# to support the browser list below
+# https://github.com/ai/autoprefixer-rails
+> 3%
+Last 4 versions
+IE 9
+IE 10
