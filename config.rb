@@ -6,6 +6,13 @@
 # file for more information.
 #
 
+# Require any additional compass plugins installed on your system.
+require 'autoprefixer-rails'
+require 'sassy-buttons'
+require 'breakpoint'
+require 'rgbapng'
+require 'compass-normalize'
+
 
 # Change this to :production when ready to deploy the CSS to the live server.
 environment = :development
@@ -23,13 +30,6 @@ fonts_dir       = "assets/fonts"
 extensions_dir  = "assets/sass/sass-extensions"
 images_dir      = "assets/images"
 javascripts_dir = "assets/js"
-
-
-# Require any additional compass plugins installed on your system.
-require 'sassy-buttons'
-require 'breakpoint'
-require 'rgbapng'
-require 'compass-normalize'
 
 # Assuming this theme is in sites/*/themes/THEMENAME, you can add the partials
 # included with a module by uncommenting and modifying one of the lines below:
@@ -56,4 +56,25 @@ relative_assets = true
 
 # Pass options to sass. For development, we turn on the FireSass-compatible
 # debug_info if the firesass config variable above is true.
-# sass_options = (environment == :development && firesass == true) ? {:debug_info => true} : {}
+# sass_options = (environment == :production) ? {} : {:debug_info => true}
+
+# Enable sourcemaps for development
+sourcemap = (environment == :production) ? false : true
+
+# Run autoprefixer after compass compiles
+# Using on_stylesheet_saved post-compile hook
+on_stylesheet_saved do |file|
+  css = File.read(file)
+  map = file + '.map'
+
+  if File.exists? map
+    result = AutoprefixerRails.process(css,
+      from: file,
+      to:   file,
+      map:  { prev: File.read(map), inline: false })
+    File.open(file, 'w') { |io| io << result.css }
+    File.open(map,  'w') { |io| io << result.map }
+  else
+    File.open(file, 'w') { |io| io << AutoprefixerRails.process(css) }
+  end
+end

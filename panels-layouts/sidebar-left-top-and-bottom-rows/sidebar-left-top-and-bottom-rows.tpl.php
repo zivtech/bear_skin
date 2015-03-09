@@ -22,15 +22,14 @@
         <?php endif; ?>
 
         <?php if (!empty($content['left'])): ?>
-        <div class="column sidebar left">
-          <div class="col-inside">
-            <?php print $content['left']; ?>
-          </div>
-        </div>
-        <!-- left sidebar column -->
+          <div class="column sidebar left">
+            <div class="col-inside">
+              <?php print $content['left']; ?>
+            </div>
+          </div><!-- left sidebar column -->
+        <?php endif; ?>
 
       </div>
-      <?php endif; ?>
 
     </div><!-- middle row -->
   <?php endif; ?>
