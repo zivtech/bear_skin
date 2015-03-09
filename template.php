@@ -67,6 +67,15 @@ function bear_skin_preprocess_panels_pane(&$variables) {
   //dpm($variables);
 }
 
+function bear_skin_preprocess_menu_link(&$variables, $hook) {
+  // Replace the generic link class from Zen with something more specific
+  $variables['element']['#attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__item';
+  $variables['element']['#localized_options']['attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__link';
+  //$variables['element']['#attributes']['class'] = array_map(function($i, $specific_menu_link) {
+  //  return ($i !== 'menu__item') ? $i : $specific_menu_link;
+  //}, $variables['element']['#attributes']['class']);
+}
+
 /***********************
  * Let's load some CSS on specific targets - uncomment to use
  ************************/

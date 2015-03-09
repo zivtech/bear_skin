@@ -28,11 +28,13 @@
         <?php endif; ?>
     </header>
   </div>
+
   <div class="wrapper navigation">
-    <div id="navigation" tabindex="-1">
+    <nav id="navigation" tabindex="-1" class="main-navigation">
       <?php print render($page['navigation']); ?>
-    </div><!-- /#navigation -->
+    </nav><!-- /#navigation -->
   </div>
+
   <div class="wrapper main">
     <div id="main" class="scene_element scene_element--fadein">
       <div id="content" class="column" role="main">
