@@ -48,7 +48,7 @@ li a.active {
 
   .block-menu .block-title,
   .block-menu-block .block-title {
-    @include element-invisible();
+    @extend .u-hidden;
   }
 
   ul.links, /* Main menu and secondary menu links */

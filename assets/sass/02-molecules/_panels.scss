@@ -1,8 +1,5 @@
 
 .three-columns-top-and-bottom-rows {
-  div {
-    @include box-sizing(border-box);
-  }
   .column.left {
     @include col(1/5, $gutter: 0);
     @include shift(-3/5, $gutter: 0);

@@ -1,6 +1,6 @@
 // vendor
 @import "rgbapng";
-@import "compass";
+@import "compass/utilities";
 @import "jeet/index";
 @import "sassy-buttons"; // Add the sassy buttons
 @import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
@@ -8,4 +8,5 @@
 // bearskin
 @import "variables";
 @import "mixins";
+@import "utility";
 @import "layout";

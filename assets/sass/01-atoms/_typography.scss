@@ -1,0 +1,4 @@
+a {
+  @include link-colors($link-color, $link-hover-color);
+  text-decoration: none;
+}

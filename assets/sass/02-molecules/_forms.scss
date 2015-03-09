@@ -196,7 +196,7 @@ dd {
 
 a.button {
   /* Buttons used by contrib modules like Media */
-  @include appearance(button);
+  appearance: button;
 }
 
 fieldset {
