@@ -510,6 +510,8 @@ body * {
 a {
   color: #61AEE2;
   text-decoration: none;
+  -webkit-transition: color 0.25s ease;
+          transition: color 0.25s ease;
 }
 /* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
