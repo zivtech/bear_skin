@@ -1,6 +1,39 @@
-/****************
-OUR CUSTOM MIXINS
-*****************/
+/* line 1, ../sass/00-base/_utility.scss */
+.u-hidden, #navigation .block-menu .block-title,
+#navigation .block-menu-block .block-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 5, ../sass/00-base/_utility.scss */
+.u-unhidden {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+/* line 9, ../sass/00-base/_utility.scss */
+.u-focusable {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* line 48, ../sass/00-base/_mixins.scss */
+.u-focusable:active, .u-focusable:focus {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
 /**
  *
  * Non panel layouts (one sidebar, two sidebars, none)
@@ -474,7 +507,17 @@ body * {
   }
 }
 
-/* line 1, ../sass/01-atoms/_button.scss */
+/* line 1, ../sass/01-atoms/_typography.scss */
+a {
+  color: #61AEE2;
+  text-decoration: none;
+}
+/* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: #1a6090;
+}
+
+/* line 5, ../sass/01-atoms/_button.scss */
 .wrapper.header #header #bear-user-menu ul li a {
   font-size: 90%;
   padding: 0.5em 1.5em;
@@ -816,7 +859,7 @@ body * {
   text-align: center;
   word-wrap: break-word;
 }
-/* line 111, ../sass/00-base/_mixins.scss */
+/* line 68, ../sass/00-base/_mixins.scss */
 .lt-ie8 .comment-unpublished p.unpublished > * {
   position: relative;
 }
@@ -1118,8 +1161,7 @@ dd {
 /* line 197, ../sass/02-molecules/_forms.scss */
 a.button {
   /* Buttons used by contrib modules like Media */
-  -moz-appearance: button;
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /* line 202, ../sass/02-molecules/_forms.scss */
@@ -1364,15 +1406,6 @@ li a.active {
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 49, ../sass/02-molecules/_navigation.scss */
-#navigation .block-menu .block-title,
-#navigation .block-menu-block .block-title {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
 /* line 54, ../sass/02-molecules/_navigation.scss */
 #navigation ul.links,
 #navigation ul.menu {
@@ -1486,10 +1519,6 @@ ul.primary li a.active {
 }
 
 /* line 3, ../sass/02-molecules/_panels.scss */
-.three-columns-top-and-bottom-rows div {
-  box-sizing: border-box;
-}
-/* line 6, ../sass/02-molecules/_panels.scss */
 .three-columns-top-and-bottom-rows .column.left {
   *zoom: 1;
   float: left;
@@ -1518,7 +1547,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 6, ../sass/02-molecules/_panels.scss */
+  /* line 3, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.left {
     *zoom: 1;
     float: left;
@@ -1548,7 +1577,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 6, ../sass/02-molecules/_panels.scss */
+  /* line 3, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.left {
     *zoom: 1;
     float: left;
@@ -1578,7 +1607,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 37.5em) {
-  /* line 6, ../sass/02-molecules/_panels.scss */
+  /* line 3, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.left {
     position: static;
     left: 0;
@@ -1597,12 +1626,12 @@ ul.primary li a.active {
   .three-columns-top-and-bottom-rows .column.left:last-child {
     margin-right: auto;
   }
-  /* line 20, ../sass/02-molecules/_panels.scss */
+  /* line 17, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.left .col-inside {
     margin: 0;
   }
 }
-/* line 25, ../sass/02-molecules/_panels.scss */
+/* line 22, ../sass/02-molecules/_panels.scss */
 .three-columns-top-and-bottom-rows .column.center {
   *zoom: 1;
   float: left;
@@ -1631,7 +1660,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 25, ../sass/02-molecules/_panels.scss */
+  /* line 22, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -1661,7 +1690,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 25, ../sass/02-molecules/_panels.scss */
+  /* line 22, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -1691,7 +1720,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 37.5em) {
-  /* line 25, ../sass/02-molecules/_panels.scss */
+  /* line 22, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.center {
     position: static;
     left: 0;
@@ -1711,7 +1740,7 @@ ul.primary li a.active {
     margin-right: auto;
   }
 }
-/* line 41, ../sass/02-molecules/_panels.scss */
+/* line 38, ../sass/02-molecules/_panels.scss */
 .three-columns-top-and-bottom-rows .column.right {
   *zoom: 1;
   float: left;
@@ -1738,7 +1767,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 41, ../sass/02-molecules/_panels.scss */
+  /* line 38, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.right {
     *zoom: 1;
     float: left;
@@ -1766,7 +1795,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 41, ../sass/02-molecules/_panels.scss */
+  /* line 38, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.right {
     display: block;
     clear: both;
@@ -1783,13 +1812,13 @@ ul.primary li a.active {
   .three-columns-top-and-bottom-rows .column.right:last-child {
     margin-right: auto;
   }
-  /* line 48, ../sass/02-molecules/_panels.scss */
+  /* line 45, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.right .col-inside {
     margin: 0;
   }
 }
 
-/* line 56, ../sass/02-molecules/_panels.scss */
+/* line 53, ../sass/02-molecules/_panels.scss */
 .sidebar-left-top-and-bottom-rows .column.left {
   *zoom: 1;
   float: left;
@@ -1818,7 +1847,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 56, ../sass/02-molecules/_panels.scss */
+  /* line 53, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.left {
     *zoom: 1;
     float: left;
@@ -1848,7 +1877,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 56, ../sass/02-molecules/_panels.scss */
+  /* line 53, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.left {
     *zoom: 1;
     float: left;
@@ -1878,7 +1907,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 37.5em) {
-  /* line 56, ../sass/02-molecules/_panels.scss */
+  /* line 53, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.left {
     position: static;
     left: 0;
@@ -1897,12 +1926,12 @@ ul.primary li a.active {
   .sidebar-left-top-and-bottom-rows .column.left:last-child {
     margin-right: auto;
   }
-  /* line 70, ../sass/02-molecules/_panels.scss */
+  /* line 67, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.left .col-inside {
     margin: 0;
   }
 }
-/* line 75, ../sass/02-molecules/_panels.scss */
+/* line 72, ../sass/02-molecules/_panels.scss */
 .sidebar-left-top-and-bottom-rows .column.center {
   *zoom: 1;
   float: left;
@@ -1931,7 +1960,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 75, ../sass/02-molecules/_panels.scss */
+  /* line 72, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -1961,7 +1990,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 75, ../sass/02-molecules/_panels.scss */
+  /* line 72, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -1991,7 +2020,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 37.5em) {
-  /* line 75, ../sass/02-molecules/_panels.scss */
+  /* line 72, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.center {
     position: static;
     left: 0;
@@ -2011,7 +2040,7 @@ ul.primary li a.active {
     margin-right: auto;
   }
 }
-/* line 90, ../sass/02-molecules/_panels.scss */
+/* line 87, ../sass/02-molecules/_panels.scss */
 .sidebar-left-top-and-bottom-rows .column.center .content-body {
   *zoom: 1;
   float: left;
@@ -2039,7 +2068,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 25em) {
-  /* line 90, ../sass/02-molecules/_panels.scss */
+  /* line 87, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.center .content-body {
     position: static;
     left: 0;
@@ -2060,7 +2089,7 @@ ul.primary li a.active {
   }
 }
 
-/* line 102, ../sass/02-molecules/_panels.scss */
+/* line 99, ../sass/02-molecules/_panels.scss */
 .sidebar-right-top-and-bottom-rows .column.right {
   *zoom: 1;
   float: left;
@@ -2089,7 +2118,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 102, ../sass/02-molecules/_panels.scss */
+  /* line 99, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.right {
     *zoom: 1;
     float: left;
@@ -2119,7 +2148,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 102, ../sass/02-molecules/_panels.scss */
+  /* line 99, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.right {
     position: static;
     left: 0;
@@ -2138,12 +2167,12 @@ ul.primary li a.active {
   .sidebar-right-top-and-bottom-rows .column.right:last-child {
     margin-right: auto;
   }
-  /* line 112, ../sass/02-molecules/_panels.scss */
+  /* line 109, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.right .col-inside {
     margin: 0;
   }
 }
-/* line 117, ../sass/02-molecules/_panels.scss */
+/* line 114, ../sass/02-molecules/_panels.scss */
 .sidebar-right-top-and-bottom-rows .column.center {
   *zoom: 1;
   float: left;
@@ -2172,7 +2201,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 117, ../sass/02-molecules/_panels.scss */
+  /* line 114, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -2202,7 +2231,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 117, ../sass/02-molecules/_panels.scss */
+  /* line 114, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.center {
     position: static;
     left: 0;
@@ -2222,7 +2251,7 @@ ul.primary li a.active {
     margin-right: auto;
   }
 }
-/* line 128, ../sass/02-molecules/_panels.scss */
+/* line 125, ../sass/02-molecules/_panels.scss */
 .sidebar-right-top-and-bottom-rows .column.center .content-body {
   *zoom: 1;
   float: left;
@@ -2250,7 +2279,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 25em) {
-  /* line 128, ../sass/02-molecules/_panels.scss */
+  /* line 125, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.center .content-body {
     position: static;
     left: 0;
@@ -2271,7 +2300,7 @@ ul.primary li a.active {
   }
 }
 
-/* line 140, ../sass/02-molecules/_panels.scss */
+/* line 137, ../sass/02-molecules/_panels.scss */
 .sidebar-right-cleared-top-and-bottom-rows .column.right {
   *zoom: 1;
   float: left;
@@ -2298,7 +2327,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 140, ../sass/02-molecules/_panels.scss */
+  /* line 137, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.right {
     *zoom: 1;
     float: left;
@@ -2326,7 +2355,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 140, ../sass/02-molecules/_panels.scss */
+  /* line 137, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.right {
     position: static;
     left: 0;
@@ -2345,12 +2374,12 @@ ul.primary li a.active {
   .sidebar-right-cleared-top-and-bottom-rows .column.right:last-child {
     margin-right: auto;
   }
-  /* line 148, ../sass/02-molecules/_panels.scss */
+  /* line 145, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.right .col-inside {
     margin: 0;
   }
 }
-/* line 153, ../sass/02-molecules/_panels.scss */
+/* line 150, ../sass/02-molecules/_panels.scss */
 .sidebar-right-cleared-top-and-bottom-rows .column.center {
   *zoom: 1;
   float: left;
@@ -2377,7 +2406,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 153, ../sass/02-molecules/_panels.scss */
+  /* line 150, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -2405,7 +2434,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 153, ../sass/02-molecules/_panels.scss */
+  /* line 150, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.center {
     position: static;
     left: 0;
@@ -2425,7 +2454,7 @@ ul.primary li a.active {
     margin-right: auto;
   }
 }
-/* line 162, ../sass/02-molecules/_panels.scss */
+/* line 159, ../sass/02-molecules/_panels.scss */
 .sidebar-right-cleared-top-and-bottom-rows .column.center .content-body {
   *zoom: 1;
   float: left;
@@ -2453,7 +2482,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 25em) {
-  /* line 162, ../sass/02-molecules/_panels.scss */
+  /* line 159, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.center .content-body {
     position: static;
     left: 0;
@@ -2474,7 +2503,7 @@ ul.primary li a.active {
   }
 }
 
-/* line 175, ../sass/02-molecules/_panels.scss */
+/* line 172, ../sass/02-molecules/_panels.scss */
 .two-columns-top-and-bottom-rows .column.left {
   *zoom: 1;
   float: left;
@@ -2500,7 +2529,7 @@ ul.primary li a.active {
 .two-columns-top-and-bottom-rows .column.left:last-child {
   margin-right: 0%;
 }
-/* line 178, ../sass/02-molecules/_panels.scss */
+/* line 175, ../sass/02-molecules/_panels.scss */
 .two-columns-top-and-bottom-rows .column.right {
   *zoom: 1;
   float: left;
@@ -2527,7 +2556,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 37.5em) {
-  /* line 181, ../sass/02-molecules/_panels.scss */
+  /* line 178, ../sass/02-molecules/_panels.scss */
   .two-columns-top-and-bottom-rows .column.left, .two-columns-top-and-bottom-rows .column.right {
     display: block;
     clear: both;
@@ -2544,7 +2573,7 @@ ul.primary li a.active {
   .two-columns-top-and-bottom-rows .column.left:last-child, .two-columns-top-and-bottom-rows .column.right:last-child {
     margin-right: auto;
   }
-  /* line 184, ../sass/02-molecules/_panels.scss */
+  /* line 181, ../sass/02-molecules/_panels.scss */
   .two-columns-top-and-bottom-rows .column.left .col-inside, .two-columns-top-and-bottom-rows .column.right .col-inside {
     margin: 0;
   }
@@ -3040,57 +3069,43 @@ span.field-label {
 body {
   color: #555555;
 }
-/* line 51, ../sass/00-base/_mixins.scss */
-body a {
-  color: #61AEE2;
-  text-decoration: none;
-}
-/* line 54, ../sass/00-base/_mixins.scss */
-body a:hover {
-  color: #443C45;
-  text-decoration: underline;
-}
-/* line 58, ../sass/00-base/_mixins.scss */
-body a:visited {
-  color: #61AEE2;
-}
 
-/* line 12, ../sass/bear.scss */
+/* line 11, ../sass/bear.scss */
 html, body, button, input, select, textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
 
-/* line 16, ../sass/bear.scss */
+/* line 15, ../sass/bear.scss */
 h1, h2, h3, h4, h5 {
   font-family: Georgia, Times, sans-serif;
   font-weight: 400;
 }
 
-/* line 21, ../sass/bear.scss */
+/* line 20, ../sass/bear.scss */
 #main {
   clear: both;
 }
 
-/* line 25, ../sass/bear.scss */
+/* line 24, ../sass/bear.scss */
 #page {
   min-width: 300px;
 }
 
-/* line 29, ../sass/bear.scss */
+/* line 28, ../sass/bear.scss */
 #navigation {
   width: 100%;
   padding: 15px 0;
 }
 
 @media (max-width: 25em) {
-  /* line 35, ../sass/bear.scss */
+  /* line 34, ../sass/bear.scss */
   ul.primary li, ul.secondary li {
     float: none;
     clear: both;
     margin: 0;
   }
-  /* line 39, ../sass/bear.scss */
+  /* line 38, ../sass/bear.scss */
   ul.primary li a, ul.secondary li a {
     width: 88%;
   }
@@ -3098,22 +3113,22 @@ h1, h2, h3, h4, h5 {
 /***********
 ~STRUCTURE
 ***********/
-/* line 49, ../sass/bear.scss */
+/* line 48, ../sass/bear.scss */
 h1 {
   font-size: 160%;
 }
 
-/* line 54, ../sass/bear.scss */
+/* line 53, ../sass/bear.scss */
 .wrapper.header {
   background-color: #8E8E8E;
   box-shadow: inset 0px -3px 6px #666;
 }
-/* line 58, ../sass/bear.scss */
+/* line 57, ../sass/bear.scss */
 .wrapper.footer {
   background-color: #EFF2F1;
 }
 
-/* line 63, ../sass/bear.scss */
+/* line 62, ../sass/bear.scss */
 .breadcrumb {
   margin: 20px 0;
 }
@@ -3121,35 +3136,35 @@ h1 {
 /***********
 ~HEADER
 ***********/
-/* line 70, ../sass/bear.scss */
+/* line 69, ../sass/bear.scss */
 .region-header {
   clear: none;
 }
 
-/* line 75, ../sass/bear.scss */
+/* line 74, ../sass/bear.scss */
 .wrapper.header #header {
   padding: 25px 0;
   position: relative;
 }
-/* line 78, ../sass/bear.scss */
+/* line 77, ../sass/bear.scss */
 .wrapper.header #header #bear-user-menu {
   float: right;
   margin: 0;
 }
 @media (max-width: 50em) {
-  /* line 78, ../sass/bear.scss */
+  /* line 77, ../sass/bear.scss */
   .wrapper.header #header #bear-user-menu {
     float: none;
     text-align: center;
     margin: 0;
   }
 }
-/* line 86, ../sass/bear.scss */
+/* line 85, ../sass/bear.scss */
 .wrapper.header #header #bear-user-menu ul {
   margin: 20px 0 0 0;
   padding: 0;
 }
-/* line 89, ../sass/bear.scss */
+/* line 88, ../sass/bear.scss */
 .wrapper.header #header #bear-user-menu ul li {
   display: inline-block;
   vertical-align: middle;
@@ -3159,18 +3174,18 @@ h1 {
   margin: 0 0 0 10px;
 }
 
-/* line 101, ../sass/bear.scss */
+/* line 100, ../sass/bear.scss */
 h1#site-name {
   font-size: 2em;
   line-height: .5em;
   margin: 70px 0 0 25px;
 }
-/* line 105, ../sass/bear.scss */
+/* line 104, ../sass/bear.scss */
 h1#site-name a:link, h1#site-name a:visited {
   color: #ffffff;
 }
 
-/* line 110, ../sass/bear.scss */
+/* line 109, ../sass/bear.scss */
 #block-search-form {
   background: #FFFFFF;
   padding: 0 0 0 10px;
@@ -3179,7 +3194,7 @@ h1#site-name a:link, h1#site-name a:visited {
   margin: 60px 0 0 0;
 }
 @media (max-width: 50em) {
-  /* line 110, ../sass/bear.scss */
+  /* line 109, ../sass/bear.scss */
   #block-search-form {
     clear: both;
     float: none;
@@ -3187,17 +3202,17 @@ h1#site-name a:link, h1#site-name a:visited {
     margin: 0 auto;
   }
 }
-/* line 122, ../sass/bear.scss */
+/* line 121, ../sass/bear.scss */
 #block-search-form input.form-text {
   border: none;
   border-right: 1px solid #CCCCCC;
   width: 150px;
 }
-/* line 127, ../sass/bear.scss */
+/* line 126, ../sass/bear.scss */
 #block-search-form input.form-text:focus {
   box-shadow: none;
 }
-/* line 131, ../sass/bear.scss */
+/* line 130, ../sass/bear.scss */
 #block-search-form input.form-submit {
   text-indent: -9999px;
   background: #FFFFFF url('../images/search.png?1425402197') no-repeat center center;
@@ -3213,23 +3228,23 @@ h1#site-name a:link, h1#site-name a:visited {
 }
 
 @media (max-width: 50em) {
-  /* line 146, ../sass/bear.scss */
+  /* line 145, ../sass/bear.scss */
   .wrapper.header #header {
     text-align: center;
     padding: 0;
   }
-  /* line 149, ../sass/bear.scss */
+  /* line 148, ../sass/bear.scss */
   .wrapper.header #header #logo {
     float: none;
     clear: both;
     display: block;
     padding: 20px 0;
   }
-  /* line 155, ../sass/bear.scss */
+  /* line 154, ../sass/bear.scss */
   .wrapper.header #header #name-and-slogan {
     float: none;
   }
-  /* line 157, ../sass/bear.scss */
+  /* line 156, ../sass/bear.scss */
   .wrapper.header #header #name-and-slogan h1 {
     margin: 10px 0;
   }
@@ -3237,11 +3252,11 @@ h1#site-name a:link, h1#site-name a:visited {
 /***********
 ~SIDEBARS
 ***********/
-/* line 169, ../sass/bear.scss */
+/* line 168, ../sass/bear.scss */
 aside.sidebars .sidebar {
   padding: 5px 0 20px 0;
 }
-/* line 171, ../sass/bear.scss */
+/* line 170, ../sass/bear.scss */
 aside.sidebars .sidebar h2 {
   background: #EFF2F1;
   text-indent: 10px;
@@ -3249,7 +3264,7 @@ aside.sidebars .sidebar h2 {
   font-size: 110%;
 }
 @media (max-width: 62.5em) {
-  /* line 169, ../sass/bear.scss */
+  /* line 168, ../sass/bear.scss */
   aside.sidebars .sidebar {
     padding-left: auto;
   }
@@ -3258,11 +3273,11 @@ aside.sidebars .sidebar h2 {
 /***********
 ~SLIDESHOW
 ***********/
-/* line 187, ../sass/bear.scss */
+/* line 186, ../sass/bear.scss */
 .view-slideshow {
   padding: 0 3px;
 }
-/* line 189, ../sass/bear.scss */
+/* line 188, ../sass/bear.scss */
 .view-slideshow .flexslider {
   background: none repeat scroll 0 0 #FFFFFF;
   border-radius: 0;
@@ -3271,11 +3286,11 @@ aside.sidebars .sidebar h2 {
   position: relative;
   box-shadow: 0 0 5px #ccc;
 }
-/* line 196, ../sass/bear.scss */
+/* line 195, ../sass/bear.scss */
 .view-slideshow .flexslider li {
   opacity: 1 !important;
 }
-/* line 198, ../sass/bear.scss */
+/* line 197, ../sass/bear.scss */
 .view-slideshow .flexslider li p {
   font-family: Georgia, Times, sans-serif;
   text-align: center;
@@ -3288,7 +3303,7 @@ aside.sidebars .sidebar h2 {
 /***********
 ~FOOTER
 ***********/
-/* line 215, ../sass/bear.scss */
+/* line 214, ../sass/bear.scss */
 .wrapper.footer #footer {
   margin-left: auto;
   margin-right: auto;
@@ -3296,7 +3311,7 @@ aside.sidebars .sidebar h2 {
   font-size: 12px;
 }
 @media (max-width: 75em) {
-  /* line 215, ../sass/bear.scss */
+  /* line 214, ../sass/bear.scss */
   .wrapper.footer #footer {
     padding-left: 20px;
     padding-right: 20px;
@@ -3304,23 +3319,23 @@ aside.sidebars .sidebar h2 {
 }
 
 @media (max-width: 50em) {
-  /* line 228, ../sass/bear.scss */
+  /* line 227, ../sass/bear.scss */
   #footer {
     text-align: center;
   }
 
-  /* line 231, ../sass/bear.scss */
+  /* line 230, ../sass/bear.scss */
   ul.social-footer {
     margin-top: -10px;
   }
-  /* line 233, ../sass/bear.scss */
+  /* line 232, ../sass/bear.scss */
   ul.social-footer li {
     display: inline-block;
     float: none;
   }
 }
 /* BEARSKIN site Documentation page fun */
-/* line 243, ../sass/bear.scss */
+/* line 242, ../sass/bear.scss */
 #documentation p.tb {
   *zoom: 1;
   float: left;
@@ -3358,7 +3373,7 @@ aside.sidebars .sidebar h2 {
 /*
  * CSS Animations
  */
-/* line 254, ../sass/bear.scss */
+/* line 253, ../sass/bear.scss */
 .m-scene .scene_element {
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
@@ -3368,13 +3383,13 @@ aside.sidebars .sidebar h2 {
           animation-fill-mode: both;
 }
 
-/* line 260, ../sass/bear.scss */
+/* line 259, ../sass/bear.scss */
 .m-scene .scene_element--fadein {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
 }
 
-/* line 264, ../sass/bear.scss */
+/* line 263, ../sass/bear.scss */
 .m-scene.is-exiting .scene_element {
   -webkit-animation-direction: alternate-reverse;
           animation-direction: alternate-reverse;
