@@ -14,8 +14,6 @@ OUR CUSTOM MIXINS
  */
 /* line 7, ../sass/00-base/_layout.scss */
 body * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
