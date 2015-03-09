@@ -7,7 +7,11 @@
 #
 
 # Require any additional compass plugins installed on your system.
+# Required for post processing in post-compile hook below:
 require 'autoprefixer-rails'
+require 'terminal-notifier'
+
+# Required for sass compile
 require 'sassy-buttons'
 require 'breakpoint'
 require 'rgbapng'
@@ -77,4 +81,7 @@ on_stylesheet_saved do |file|
   else
     File.open(file, 'w') { |io| io << AutoprefixerRails.process(css) }
   end
+
+  cssfile = File.basename file
+  exec( "terminal-notifier -group 'bear-skin' -title 'Autoprefixer' -subtitle 'Finished' -message 'Autoprefixer has run on " + cssfile + "' -sound 'Submarine'" )
 end

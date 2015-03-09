@@ -3,7 +3,7 @@
 # Then autoprefixer will automatically run, applying prefixes
 # to support the browser list below
 # https://github.com/ai/autoprefixer-rails
-> 3%
+> 75%
 Last 4 versions
 IE 9
 IE 10
