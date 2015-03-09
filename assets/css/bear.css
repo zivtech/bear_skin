@@ -61,7 +61,7 @@ body * {
   clear: both;
 }
 
-/* line 47, ../sass/00-base/_layout.scss */
+/* line 48, ../sass/00-base/_layout.scss */
 #main {
   max-width: 75em;
   margin: 0 auto;
@@ -69,7 +69,7 @@ body * {
 }
 
 /* LEFT SIDEBAR */
-/* line 56, ../sass/00-base/_layout.scss */
+/* line 57, ../sass/00-base/_layout.scss */
 .sidebar-first #content {
   *zoom: 1;
   float: left;
@@ -98,7 +98,7 @@ body * {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 56, ../sass/00-base/_layout.scss */
+  /* line 57, ../sass/00-base/_layout.scss */
   .sidebar-first #content {
     *zoom: 1;
     float: left;
@@ -127,7 +127,7 @@ body * {
     margin-right: 0%;
   }
 }
-/* line 64, ../sass/00-base/_layout.scss */
+/* line 65, ../sass/00-base/_layout.scss */
 .sidebar-first .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -156,7 +156,7 @@ body * {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 64, ../sass/00-base/_layout.scss */
+  /* line 65, ../sass/00-base/_layout.scss */
   .sidebar-first .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -187,7 +187,7 @@ body * {
 }
 
 /* RIGHT SIDEBAR */
-/* line 77, ../sass/00-base/_layout.scss */
+/* line 78, ../sass/00-base/_layout.scss */
 .sidebar-second #content {
   *zoom: 1;
   float: left;
@@ -214,7 +214,7 @@ body * {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 77, ../sass/00-base/_layout.scss */
+  /* line 78, ../sass/00-base/_layout.scss */
   .sidebar-second #content {
     *zoom: 1;
     float: left;
@@ -243,7 +243,7 @@ body * {
     margin-right: 0%;
   }
 }
-/* line 84, ../sass/00-base/_layout.scss */
+/* line 85, ../sass/00-base/_layout.scss */
 .sidebar-second .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -270,7 +270,7 @@ body * {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 84, ../sass/00-base/_layout.scss */
+  /* line 85, ../sass/00-base/_layout.scss */
   .sidebar-second .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -301,7 +301,7 @@ body * {
 }
 
 /* TWO SIDEBARS */
-/* line 96, ../sass/00-base/_layout.scss */
+/* line 97, ../sass/00-base/_layout.scss */
 .two-sidebars #content {
   *zoom: 1;
   float: left;
@@ -330,7 +330,7 @@ body * {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 96, ../sass/00-base/_layout.scss */
+  /* line 97, ../sass/00-base/_layout.scss */
   .two-sidebars #content {
     *zoom: 1;
     float: left;
@@ -359,7 +359,7 @@ body * {
     margin-right: 0%;
   }
 }
-/* line 104, ../sass/00-base/_layout.scss */
+/* line 105, ../sass/00-base/_layout.scss */
 .two-sidebars .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -388,7 +388,7 @@ body * {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 104, ../sass/00-base/_layout.scss */
+  /* line 105, ../sass/00-base/_layout.scss */
   .two-sidebars .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -417,7 +417,7 @@ body * {
     margin-right: 0%;
   }
 }
-/* line 112, ../sass/00-base/_layout.scss */
+/* line 113, ../sass/00-base/_layout.scss */
 .two-sidebars .region-sidebar-second {
   *zoom: 1;
   float: left;
@@ -444,7 +444,7 @@ body * {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 112, ../sass/00-base/_layout.scss */
+  /* line 113, ../sass/00-base/_layout.scss */
   .two-sidebars .region-sidebar-second {
     *zoom: 1;
     float: left;
@@ -535,43 +535,39 @@ body * {
   font: bold 13px Arial, Helvetica;
 }
 /* line 43, ../sass/02-molecules/_bear-menu.scss */
-#navigation .block-menu *, #navigation .menu-block-wrapper * {
-  box-sizing: border-box;
-}
-/* line 46, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul, #navigation .menu-block-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
   border-radius: 3px;
 }
-/* line 52, ../sass/02-molecules/_bear-menu.scss */
+/* line 49, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu li, #navigation .menu-block-wrapper li {
   position: relative;
 }
-/* line 54, ../sass/02-molecules/_bear-menu.scss */
+/* line 51, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu li:hover, #navigation .menu-block-wrapper li:hover {
   border-right-color: #666666;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
-/* line 57, ../sass/02-molecules/_bear-menu.scss */
+/* line 54, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu li:hover > ul, #navigation .menu-block-wrapper li:hover > ul {
   opacity: 1;
   visibility: visible;
   margin: 0;
 }
-/* line 62, ../sass/02-molecules/_bear-menu.scss */
+/* line 59, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu li:hover > a, #navigation .menu-block-wrapper li:hover > a {
   color: white;
   background: #666666;
 }
-/* line 68, ../sass/02-molecules/_bear-menu.scss */
+/* line 65, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu input[type=checkbox], #navigation .menu-block-wrapper input[type=checkbox] {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-/* line 73, ../sass/02-molecules/_bear-menu.scss */
+/* line 70, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu label, #navigation .menu-block-wrapper label {
   display: none;
   cursor: pointer;
@@ -581,22 +577,19 @@ body * {
           user-select: none;
 }
 
-/* line 80, ../sass/02-molecules/_bear-menu.scss */
+/* line 77, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu, #navigation .menu-block-wrapper > ul {
-  border: 1px solid #777777;
   background-color: #848484;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  border: 1px solid #777777;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
-/* line 85, ../sass/02-molecules/_bear-menu.scss */
+/* line 82, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu > li, #navigation .menu-block-wrapper > ul > li {
-  float: left;
-  border-right: 1px solid #919191;
-  box-shadow: 1px 0 0 #b7b7b7;
   *zoom: 1;
   float: left;
   display: inline;
@@ -607,6 +600,9 @@ body * {
   width: 25%;
   margin-left: 0%;
   margin-right: 0%;
+  float: left;
+  border-right: 1px solid #919191;
+  box-shadow: 1px 0 0 #b7b7b7;
 }
 /* line 196, ../sass/00-base/jeet/_grid.scss */
 #navigation .block-menu > li:before, #navigation .block-menu > li:after, #navigation .menu-block-wrapper > ul > li:before, #navigation .menu-block-wrapper > ul > li:after {
@@ -617,7 +613,7 @@ body * {
 #navigation .block-menu > li:after, #navigation .menu-block-wrapper > ul > li:after {
   clear: both;
 }
-/* line 90, ../sass/02-molecules/_bear-menu.scss */
+/* line 87, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu > li > a, #navigation .menu-block-wrapper > ul > li > a {
   float: left;
   padding: 1em 0;
@@ -625,35 +621,35 @@ body * {
   text-align: center;
   width: 100%;
 }
-/* line 96, ../sass/02-molecules/_bear-menu.scss */
+/* line 93, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu > li > a.active, #navigation .menu-block-wrapper > ul > li > a.active {
   color: #FFF;
   box-shadow: inset 0 0 10px #666;
 }
-/* line 104, ../sass/02-molecules/_bear-menu.scss */
+/* line 101, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu a, #navigation .menu-block-wrapper > ul a {
   color: #F1EDEE;
   text-decoration: none;
   text-shadow: 0 -1px 0 #585858;
 }
-/* line 109, ../sass/02-molecules/_bear-menu.scss */
+/* line 106, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul, #navigation .menu-block-wrapper > ul ul {
+  background-color: #aaaaaa;
+  background-image: none;
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 1;
   opacity: 0;
   visibility: hidden;
-  margin: 2em 0 0 0;
+  margin: 1em 0 0 0;
   width: 100%;
-  background-color: #aaaaaa;
-  background-image: none;
-  -webkit-transition-property: "margin, opacity";
-  transition-property: "margin, opacity";
-  -webkit-transition-duration: ".15s";
-  transition-duration: ".15s";
+  -webkit-transition-property: margin, opacity;
+          transition-property: margin, opacity;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
   -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 /* line 24, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul:after, #navigation .menu-block-wrapper > ul ul:after {
@@ -664,29 +660,29 @@ body * {
   border: 6px solid transparent;
   border-bottom-color: #aaa;
 }
-/* line 123, ../sass/02-molecules/_bear-menu.scss */
+/* line 121, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul:after, #navigation .menu-block-wrapper > ul ul:after {
   left: 47%;
 }
-/* line 126, ../sass/02-molecules/_bear-menu.scss */
+/* line 124, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul li, #navigation .menu-block-wrapper > ul ul li {
   display: block;
   width: 100%;
   box-shadow: 0 1px 0 #919191, 0 2px 0 #c4c4c4;
 }
-/* line 130, ../sass/02-molecules/_bear-menu.scss */
+/* line 128, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul li:first-child > a, #navigation .menu-block-wrapper > ul ul li:first-child > a {
   border-radius: 3px 3px 0 0;
 }
-/* line 133, ../sass/02-molecules/_bear-menu.scss */
+/* line 131, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul li:last-child, #navigation .menu-block-wrapper > ul ul li:last-child {
   box-shadow: none;
 }
-/* line 135, ../sass/02-molecules/_bear-menu.scss */
+/* line 133, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul li:last-child > a, #navigation .menu-block-wrapper > ul ul li:last-child > a {
   border-radius: 0 0 3px 3px;
 }
-/* line 140, ../sass/02-molecules/_bear-menu.scss */
+/* line 138, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul a, #navigation .menu-block-wrapper > ul ul a {
   padding: 1em;
   width: 250px;
@@ -694,7 +690,7 @@ body * {
   border-color: #aaaaaa;
   width: 100%;
 }
-/* line 146, ../sass/02-molecules/_bear-menu.scss */
+/* line 144, ../sass/02-molecules/_bear-menu.scss */
 #navigation .block-menu ul a:hover, #navigation .menu-block-wrapper > ul ul a:hover {
   background-color: #61AEE2;
   border-color: #61AEE2;
@@ -710,103 +706,103 @@ body * {
   /* Wrapper for the list of comments and its title */
   margin: 1.5em 0;
 }
-/* line 4, ../sass/02-molecules/_comments.scss */
+/* line 5, ../sass/02-molecules/_comments.scss */
 .comments h2.title {
   /* Heading for the list of comments */
 }
-/* line 7, ../sass/02-molecules/_comments.scss */
+/* line 9, ../sass/02-molecules/_comments.scss */
 .comments h2.comment-form {
   /* Heading for the comment form */
 }
 
-/* line 11, ../sass/02-molecules/_comments.scss */
+/* line 14, ../sass/02-molecules/_comments.scss */
 .comment {
   /* Wrapper for a single comment */
 }
-/* line 13, ../sass/02-molecules/_comments.scss */
+/* line 17, ../sass/02-molecules/_comments.scss */
 .comment.comment-preview {
   /* Preview of the comment before submitting new or updated comment */
   background-color: #ffffea;
   /* Drupal core will use a #ffffea background. See #1110842 */
 }
-/* line 17, ../sass/02-molecules/_comments.scss */
+/* line 22, ../sass/02-molecules/_comments.scss */
 .comment.new {
   /* A new comment since the user last viewed the page. */
 }
-/* line 20, ../sass/02-molecules/_comments.scss */
+/* line 26, ../sass/02-molecules/_comments.scss */
 .comment.first {
   /* The first comment in the list of comments */
 }
-/* line 23, ../sass/02-molecules/_comments.scss */
+/* line 30, ../sass/02-molecules/_comments.scss */
 .comment.last {
   /* The last comment in the list of comments */
 }
-/* line 26, ../sass/02-molecules/_comments.scss */
+/* line 34, ../sass/02-molecules/_comments.scss */
 .comment.odd {
   /* An odd-numbered comment in the list of comments */
 }
-/* line 29, ../sass/02-molecules/_comments.scss */
+/* line 38, ../sass/02-molecules/_comments.scss */
 .comment.even {
   /* An even-numbered comment in the list of comments */
 }
-/* line 32, ../sass/02-molecules/_comments.scss */
+/* line 42, ../sass/02-molecules/_comments.scss */
 .comment.comment-by-anonymous {
   /* A comment created by an anonymous user */
 }
-/* line 35, ../sass/02-molecules/_comments.scss */
+/* line 46, ../sass/02-molecules/_comments.scss */
 .comment.comment-by-node-author {
   /* A comment created by the node's author */
 }
-/* line 38, ../sass/02-molecules/_comments.scss */
+/* line 50, ../sass/02-molecules/_comments.scss */
 .comment.comment-by-viewer {
   /* A comment created by the current user */
 }
-/* line 41, ../sass/02-molecules/_comments.scss */
+/* line 54, ../sass/02-molecules/_comments.scss */
 .comment h3.comment-title {
   /* Comment title */
 }
-/* line 44, ../sass/02-molecules/_comments.scss */
+/* line 58, ../sass/02-molecules/_comments.scss */
 .comment .new {
   /* "New" marker for comments that are new for the current user */
   color: #c00;
 }
-/* line 48, ../sass/02-molecules/_comments.scss */
+/* line 63, ../sass/02-molecules/_comments.scss */
 .comment .user-picture {
   /* The picture of the comment author */
 }
-/* line 51, ../sass/02-molecules/_comments.scss */
+/* line 67, ../sass/02-molecules/_comments.scss */
 .comment .submitted {
   /* The "posted by" information */
 }
-/* line 54, ../sass/02-molecules/_comments.scss */
+/* line 71, ../sass/02-molecules/_comments.scss */
 .comment .permalink {
   /* Comment's permalink wrapper */
   text-transform: uppercase;
   font-size: 75%;
 }
-/* line 59, ../sass/02-molecules/_comments.scss */
+/* line 77, ../sass/02-molecules/_comments.scss */
 .comment .user-signature {
   /* The user's signature */
 }
-/* line 62, ../sass/02-molecules/_comments.scss */
+/* line 81, ../sass/02-molecules/_comments.scss */
 .comment ul.links {
   /* Comment links. See also the ul.links declaration in the pages.css. */
 }
 
-/* line 66, ../sass/02-molecules/_comments.scss */
+/* line 86, ../sass/02-molecules/_comments.scss */
 .indented {
   /* Nested comments are indented */
   margin-left: 30px;
   /* Drupal core uses a 25px left margin */
 }
 
-/* line 70, ../sass/02-molecules/_comments.scss */
+/* line 91, ../sass/02-molecules/_comments.scss */
 .comment-unpublished {
   /* Unpublished comments */
   /* background-color: #fff4f4; */
   /* Drupal core uses a #fff4f4 background */
 }
-/* line 73, ../sass/02-molecules/_comments.scss */
+/* line 96, ../sass/02-molecules/_comments.scss */
 .comment-unpublished p.unpublished {
   /* The word "Unpublished" displayed underneath the content. */
   height: 0;
@@ -828,6 +824,10 @@ body * {
 /* line 1, ../sass/02-molecules/_forms.scss */
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
   width: 14px;
   height: 14px;
   line-height: 14px;
@@ -836,7 +836,7 @@ body * {
   margin-top: 1px;
 }
 
-/* line 10, ../sass/02-molecules/_forms.scss */
+/* line 11, ../sass/02-molecules/_forms.scss */
 .btn {
   display: inline-block;
   padding: 4px 12px;
@@ -864,31 +864,31 @@ body * {
   margin-right: 10px;
 }
 @media (max-width: 25em) {
-  /* line 10, ../sass/02-molecules/_forms.scss */
+  /* line 11, ../sass/02-molecules/_forms.scss */
   .btn {
     clear: both;
     float: left;
   }
 }
 
-/* line 47, ../sass/02-molecules/_forms.scss */
+/* line 48, ../sass/02-molecules/_forms.scss */
 .form-item {
   /* Wrapper for a form element (or group of form elements) and its label */
   margin: 1.5em 0;
 }
-/* line 49, ../sass/02-molecules/_forms.scss */
+/* line 51, ../sass/02-molecules/_forms.scss */
 .form-item input {
   max-width: 99%;
   color: #333333;
 }
-/* line 53, ../sass/02-molecules/_forms.scss */
+/* line 55, ../sass/02-molecules/_forms.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   /* Highlight the form elements that caused a form submission error */
   border: 1px solid #c00;
 }
-/* line 58, ../sass/02-molecules/_forms.scss */
+/* line 61, ../sass/02-molecules/_forms.scss */
 .form-item label {
   /* The label for a form element */
   display: block;
@@ -896,40 +896,40 @@ body * {
   color: #666666;
   font-size: 90%;
 }
-/* line 63, ../sass/02-molecules/_forms.scss */
+/* line 67, ../sass/02-molecules/_forms.scss */
 .form-item label.btn {
   display: inline;
 }
-/* line 68, ../sass/02-molecules/_forms.scss */
+/* line 72, ../sass/02-molecules/_forms.scss */
 .form-item label.option {
   /* The label for a radio button or checkbox */
   display: inline;
   font-weight: normal;
 }
-/* line 73, ../sass/02-molecules/_forms.scss */
+/* line 78, ../sass/02-molecules/_forms.scss */
 .form-item .form-required {
   /* The part of the label that indicates a required field */
   color: #c00;
 }
-/* line 77, ../sass/02-molecules/_forms.scss */
+/* line 83, ../sass/02-molecules/_forms.scss */
 .form-item .description {
   /* The descriptive help text (separate from the label) */
   font-size: 80%;
   font-style: italic;
   color: #777777;
 }
-/* line 82, ../sass/02-molecules/_forms.scss */
+/* line 89, ../sass/02-molecules/_forms.scss */
 .form-item .form-file {
   color: #666666;
   font-size: 90%;
 }
-/* line 86, ../sass/02-molecules/_forms.scss */
+/* line 93, ../sass/02-molecules/_forms.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Pack groups of checkboxes and radio buttons closer together */
   margin: 0;
   /* Drupal core uses "0.4em 0" */
 }
-/* line 90, ../sass/02-molecules/_forms.scss */
+/* line 98, ../sass/02-molecules/_forms.scss */
 .form-item .form-text, .form-item .form-textarea, .form-item .form-file {
   min-height: 30px;
   line-height: 30px;
@@ -937,17 +937,17 @@ body * {
   font-size: 90%;
   color: #666666;
 }
-/* line 97, ../sass/02-molecules/_forms.scss */
+/* line 105, ../sass/02-molecules/_forms.scss */
 .form-item .field-add-more-submit {
   text-shadow: none;
   color: white;
 }
-/* line 101, ../sass/02-molecules/_forms.scss */
+/* line 109, ../sass/02-molecules/_forms.scss */
 .form-item .icon-folder-open {
   background-position: -408px -120px;
   width: 16px;
 }
-/* line 105, ../sass/02-molecules/_forms.scss */
+/* line 113, ../sass/02-molecules/_forms.scss */
 .form-item .input-large {
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -965,17 +965,17 @@ body * {
   margin-bottom: 0;
 }
 
-/* line 129, ../sass/02-molecules/_forms.scss */
+/* line 138, ../sass/02-molecules/_forms.scss */
 .form-text:focus, .form-text:hover, .form-text:active, .form-textarea:focus, .form-textarea:hover, .form-textarea:active {
   box-shadow: none;
 }
-/* line 134, ../sass/02-molecules/_forms.scss */
+/* line 143, ../sass/02-molecules/_forms.scss */
 .form-text:focus, .form-textarea:focus {
   border: 1px solid #61AEE2;
   background: #f9f9f9;
 }
 
-/* line 139, ../sass/02-molecules/_forms.scss */
+/* line 149, ../sass/02-molecules/_forms.scss */
 .form-submit, button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-size: 90%;
   padding: 0.5em 1.5em;
@@ -1025,7 +1025,7 @@ body * {
   margin: -1px !important;
 }
 
-/* line 145, ../sass/02-molecules/_forms.scss */
+/* line 155, ../sass/02-molecules/_forms.scss */
 a.button {
   font-size: 90%;
   padding: 0.5em 1.5em;
@@ -1074,123 +1074,123 @@ a.button::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
 }
-/* line 151, ../sass/02-molecules/_forms.scss */
+/* line 161, ../sass/02-molecules/_forms.scss */
 a.button:hover {
   color: white;
 }
 
-/* line 156, ../sass/02-molecules/_forms.scss */
+/* line 166, ../sass/02-molecules/_forms.scss */
 html.js input.form-autocomplete {
   background-position: 100% 5px;
 }
 
-/* line 160, ../sass/02-molecules/_forms.scss */
+/* line 170, ../sass/02-molecules/_forms.scss */
 .ajax-progress .throbber {
   background-position: 0px -18px;
 }
 
-/* line 165, ../sass/02-molecules/_forms.scss */
+/* line 175, ../sass/02-molecules/_forms.scss */
 .container-inline div,
 .container-inline label {
   /* Inline labels and form divs */
   display: inline;
 }
-/* line 169, ../sass/02-molecules/_forms.scss */
+/* line 180, ../sass/02-molecules/_forms.scss */
 .container-inline .select2-container {
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 173, ../sass/02-molecules/_forms.scss */
+/* line 184, ../sass/02-molecules/_forms.scss */
 .container-inline .select2-display-none {
   display: none;
 }
 
-/* line 177, ../sass/02-molecules/_forms.scss */
+/* line 189, ../sass/02-molecules/_forms.scss */
 dd {
   margin: 10px 0 10px 30px;
 }
 
-/* line 180, ../sass/02-molecules/_forms.scss */
+/* line 193, ../sass/02-molecules/_forms.scss */
 .tips {
   /* Tips for Drupal's input formats */
 }
 
-/* line 183, ../sass/02-molecules/_forms.scss */
+/* line 197, ../sass/02-molecules/_forms.scss */
 a.button {
   /* Buttons used by contrib modules like Media */
   -moz-appearance: button;
   -webkit-appearance: button;
 }
 
-/* line 187, ../sass/02-molecules/_forms.scss */
+/* line 202, ../sass/02-molecules/_forms.scss */
 fieldset {
   margin-bottom: 15px;
   padding: 0;
 }
-/* line 190, ../sass/02-molecules/_forms.scss */
+/* line 205, ../sass/02-molecules/_forms.scss */
 fieldset legend {
   float: left;
   background: #EEEEEE;
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 195, ../sass/02-molecules/_forms.scss */
+/* line 210, ../sass/02-molecules/_forms.scss */
 fieldset legend .fieldset-legend {
   padding: 5px 10px;
   display: block;
 }
-/* line 200, ../sass/02-molecules/_forms.scss */
+/* line 215, ../sass/02-molecules/_forms.scss */
 fieldset .fieldset-wrapper {
   padding: 15px;
 }
-/* line 203, ../sass/02-molecules/_forms.scss */
+/* line 218, ../sass/02-molecules/_forms.scss */
 fieldset.filter-wrapper {
   padding: 0;
   font-size: 90%;
   background: #f9f9f9;
 }
-/* line 207, ../sass/02-molecules/_forms.scss */
+/* line 222, ../sass/02-molecules/_forms.scss */
 fieldset.filter-wrapper .fieldset-wrapper {
   padding: 5px;
   border-top: 1px dotted #C0C0C0;
 }
-/* line 211, ../sass/02-molecules/_forms.scss */
+/* line 226, ../sass/02-molecules/_forms.scss */
 fieldset.filter-wrapper .filter-help {
   padding: 0 20px 0 0;
 }
-/* line 214, ../sass/02-molecules/_forms.scss */
+/* line 229, ../sass/02-molecules/_forms.scss */
 fieldset.filter-wrapper .form-item {
   padding-top: 0;
   margin-top: 5px;
 }
 
-/* line 220, ../sass/02-molecules/_forms.scss */
+/* line 236, ../sass/02-molecules/_forms.scss */
 .ckeditor_links {
   font-size: 90%;
 }
 
-/* line 227, ../sass/02-molecules/_forms.scss */
+/* line 243, ../sass/02-molecules/_forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a {
   text-decoration: none;
 }
-/* line 229, ../sass/02-molecules/_forms.scss */
+/* line 245, ../sass/02-molecules/_forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a:hover {
   text-decoration: none;
   outline: none;
   color: #61AEE2;
 }
-/* line 234, ../sass/02-molecules/_forms.scss */
+/* line 250, ../sass/02-molecules/_forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a strong {
   font-weight: normal;
 }
-/* line 237, ../sass/02-molecules/_forms.scss */
+/* line 253, ../sass/02-molecules/_forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a .summary {
   font-size: 90%;
   font-style: italic;
   color: #777777;
 }
 
-/* line 246, ../sass/02-molecules/_forms.scss */
+/* line 263, ../sass/02-molecules/_forms.scss */
 html.js fieldset.collapsed {
   border: 1px solid #CCCCCC;
   height: 2.15em;
@@ -1199,7 +1199,7 @@ html.js fieldset.collapsed {
 /*
  * Password confirmation
  */
-/* line 255, ../sass/02-molecules/_forms.scss */
+/* line 272, ../sass/02-molecules/_forms.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
@@ -1208,7 +1208,7 @@ html.js fieldset.collapsed {
 /*
  * Search (search-block-form.tpl.php)
  */
-/* line 264, ../sass/02-molecules/_forms.scss */
+/* line 281, ../sass/02-molecules/_forms.scss */
 #block-search-form {
   /* Wrapper for the search form */
 }
@@ -1216,7 +1216,7 @@ html.js fieldset.collapsed {
 /*
  * Drupal's default login form block
  */
-/* line 271, ../sass/02-molecules/_forms.scss */
+/* line 289, ../sass/02-molecules/_forms.scss */
 #user-login-form {
   text-align: left;
   /* LTR */
@@ -1227,13 +1227,13 @@ html.js fieldset.collapsed {
    * styling of list items.
    */
 }
-/* line 281, ../sass/02-molecules/_forms.scss */
+/* line 299, ../sass/02-molecules/_forms.scss */
 #user-login-form ul {
   /* OpenID creates a new ul above the login form's links. */
   margin-bottom: 0;
   /* Position OpenID's ul next to the rest of the links. */
 }
-/* line 285, ../sass/02-molecules/_forms.scss */
+/* line 304, ../sass/02-molecules/_forms.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* The "Log in using OpenID" link. */
@@ -1242,13 +1242,13 @@ html.js #user-login-form li.openid-link,
   /* LTR */
   /* Un-do some of the padding on the ul list. */
 }
-/* line 291, ../sass/02-molecules/_forms.scss */
+/* line 312, ../sass/02-molecules/_forms.scss */
 #user-login-form li.user-link {
   /* The "Cancel OpenID login" link. */
   margin-top: 1.5em;
 }
 
-/* line 296, ../sass/02-molecules/_forms.scss */
+/* line 318, ../sass/02-molecules/_forms.scss */
 #user-login ul {
   margin: 1.5em 0;
 }
@@ -1259,12 +1259,12 @@ html.js #user-login-form li.openid-link,
  * We overrode these styles in normalize.css, but restore them for the admin
  * section of the site.
  */
-/* line 308, ../sass/02-molecules/_forms.scss */
+/* line 329, ../sass/02-molecules/_forms.scss */
 table {
   width: 100%;
 }
 
-/* line 311, ../sass/02-molecules/_forms.scss */
+/* line 333, ../sass/02-molecules/_forms.scss */
 th {
   text-align: left;
   /* LTR */
@@ -1275,27 +1275,27 @@ th {
   padding: 5px 10px;
 }
 
-/* line 319, ../sass/02-molecules/_forms.scss */
+/* line 341, ../sass/02-molecules/_forms.scss */
 tbody {
   border-top: 1px solid #ccc;
 }
 
-/* line 322, ../sass/02-molecules/_forms.scss */
+/* line 345, ../sass/02-molecules/_forms.scss */
 td {
   padding: 10px;
 }
 
-/* line 325, ../sass/02-molecules/_forms.scss */
+/* line 349, ../sass/02-molecules/_forms.scss */
 tr.even {
   background-color: #fff;
 }
 
-/* line 328, ../sass/02-molecules/_forms.scss */
+/* line 353, ../sass/02-molecules/_forms.scss */
 table .item-list ul {
   margin: 0;
 }
 
-/* line 336, ../sass/02-molecules/_forms.scss */
+/* line 360, ../sass/02-molecules/_forms.scss */
 .lt-ie8 tr.even th,
 .lt-ie8 tr.even td,
 .lt-ie8 tr.odd th,
@@ -1307,12 +1307,12 @@ table .item-list ul {
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
  */
-/* line 347, ../sass/02-molecules/_forms.scss */
+/* line 372, ../sass/02-molecules/_forms.scss */
 td.menu-disabled {
   background: #ccc;
 }
 
-/* line 351, ../sass/02-molecules/_forms.scss */
+/* line 376, ../sass/02-molecules/_forms.scss */
 html.js input.form-autocomplete {
   background-position: 100% 8px;
 }
@@ -1320,14 +1320,14 @@ html.js input.form-autocomplete {
 /*
  * Markup generated by theme_menu_tree().
  */
-/* line 8, ../sass/02-molecules/_navigation.scss */
+/* line 5, ../sass/02-molecules/_navigation.scss */
 ul li.expanded {
   *list-style-image: url('../images/menu-expanded.png?1425402197');
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   list-style-type: circle;
 }
 
-/* line 15, ../sass/02-molecules/_navigation.scss */
+/* line 13, ../sass/02-molecules/_navigation.scss */
 ul li.collapsed {
   *list-style-image: url('../images/menu-collapsed.png?1425402197');
   /* LTR */
@@ -1336,7 +1336,7 @@ ul li.collapsed {
   list-style-type: disc;
 }
 
-/* line 22, ../sass/02-molecules/_navigation.scss */
+/* line 21, ../sass/02-molecules/_navigation.scss */
 ul li.leaf {
   *list-style-image: none;
   list-style-image: none;
@@ -1346,7 +1346,7 @@ ul li.leaf {
 /*
  * The active item in a Drupal menu
  */
-/* line 34, ../sass/02-molecules/_navigation.scss */
+/* line 33, ../sass/02-molecules/_navigation.scss */
 li a.active {
   color: #000;
 }
@@ -1354,7 +1354,7 @@ li a.active {
 /*
  * Navigation bar
  */
-/* line 42, ../sass/02-molecules/_navigation.scss */
+/* line 41, ../sass/02-molecules/_navigation.scss */
 #navigation {
   /* overflow: hidden; */
   /* Sometimes you want to prevent overlapping with main div. */
@@ -1382,7 +1382,7 @@ li a.active {
   text-align: left;
   /* LTR */
 }
-/* line 60, ../sass/02-molecules/_navigation.scss */
+/* line 61, ../sass/02-molecules/_navigation.scss */
 #navigation ul.links li,
 #navigation ul.menu li {
   /* A simple method to get navigation links to appear in one line. */
@@ -1485,11 +1485,11 @@ ul.primary li a.active {
   color: #61AEE2 !important;
 }
 
-/* line 4, ../sass/02-molecules/_panels.scss */
+/* line 3, ../sass/02-molecules/_panels.scss */
 .three-columns-top-and-bottom-rows div {
   box-sizing: border-box;
 }
-/* line 7, ../sass/02-molecules/_panels.scss */
+/* line 6, ../sass/02-molecules/_panels.scss */
 .three-columns-top-and-bottom-rows .column.left {
   *zoom: 1;
   float: left;
@@ -1518,7 +1518,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 7, ../sass/02-molecules/_panels.scss */
+  /* line 6, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.left {
     *zoom: 1;
     float: left;
@@ -1548,7 +1548,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 7, ../sass/02-molecules/_panels.scss */
+  /* line 6, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.left {
     *zoom: 1;
     float: left;
@@ -1578,7 +1578,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 37.5em) {
-  /* line 7, ../sass/02-molecules/_panels.scss */
+  /* line 6, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.left {
     position: static;
     left: 0;
@@ -1597,12 +1597,12 @@ ul.primary li a.active {
   .three-columns-top-and-bottom-rows .column.left:last-child {
     margin-right: auto;
   }
-  /* line 21, ../sass/02-molecules/_panels.scss */
+  /* line 20, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.left .col-inside {
     margin: 0;
   }
 }
-/* line 26, ../sass/02-molecules/_panels.scss */
+/* line 25, ../sass/02-molecules/_panels.scss */
 .three-columns-top-and-bottom-rows .column.center {
   *zoom: 1;
   float: left;
@@ -1631,7 +1631,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 26, ../sass/02-molecules/_panels.scss */
+  /* line 25, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -1661,7 +1661,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 26, ../sass/02-molecules/_panels.scss */
+  /* line 25, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -1691,7 +1691,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 37.5em) {
-  /* line 26, ../sass/02-molecules/_panels.scss */
+  /* line 25, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.center {
     position: static;
     left: 0;
@@ -1711,7 +1711,7 @@ ul.primary li a.active {
     margin-right: auto;
   }
 }
-/* line 42, ../sass/02-molecules/_panels.scss */
+/* line 41, ../sass/02-molecules/_panels.scss */
 .three-columns-top-and-bottom-rows .column.right {
   *zoom: 1;
   float: left;
@@ -1738,7 +1738,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 42, ../sass/02-molecules/_panels.scss */
+  /* line 41, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.right {
     *zoom: 1;
     float: left;
@@ -1766,7 +1766,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 42, ../sass/02-molecules/_panels.scss */
+  /* line 41, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.right {
     display: block;
     clear: both;
@@ -1783,13 +1783,13 @@ ul.primary li a.active {
   .three-columns-top-and-bottom-rows .column.right:last-child {
     margin-right: auto;
   }
-  /* line 49, ../sass/02-molecules/_panels.scss */
+  /* line 48, ../sass/02-molecules/_panels.scss */
   .three-columns-top-and-bottom-rows .column.right .col-inside {
     margin: 0;
   }
 }
 
-/* line 57, ../sass/02-molecules/_panels.scss */
+/* line 56, ../sass/02-molecules/_panels.scss */
 .sidebar-left-top-and-bottom-rows .column.left {
   *zoom: 1;
   float: left;
@@ -1818,7 +1818,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 57, ../sass/02-molecules/_panels.scss */
+  /* line 56, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.left {
     *zoom: 1;
     float: left;
@@ -1848,7 +1848,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 57, ../sass/02-molecules/_panels.scss */
+  /* line 56, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.left {
     *zoom: 1;
     float: left;
@@ -1878,7 +1878,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 37.5em) {
-  /* line 57, ../sass/02-molecules/_panels.scss */
+  /* line 56, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.left {
     position: static;
     left: 0;
@@ -1897,12 +1897,12 @@ ul.primary li a.active {
   .sidebar-left-top-and-bottom-rows .column.left:last-child {
     margin-right: auto;
   }
-  /* line 71, ../sass/02-molecules/_panels.scss */
+  /* line 70, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.left .col-inside {
     margin: 0;
   }
 }
-/* line 76, ../sass/02-molecules/_panels.scss */
+/* line 75, ../sass/02-molecules/_panels.scss */
 .sidebar-left-top-and-bottom-rows .column.center {
   *zoom: 1;
   float: left;
@@ -1931,7 +1931,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 76, ../sass/02-molecules/_panels.scss */
+  /* line 75, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -1961,7 +1961,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 76, ../sass/02-molecules/_panels.scss */
+  /* line 75, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -1991,7 +1991,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 37.5em) {
-  /* line 76, ../sass/02-molecules/_panels.scss */
+  /* line 75, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.center {
     position: static;
     left: 0;
@@ -2011,7 +2011,7 @@ ul.primary li a.active {
     margin-right: auto;
   }
 }
-/* line 91, ../sass/02-molecules/_panels.scss */
+/* line 90, ../sass/02-molecules/_panels.scss */
 .sidebar-left-top-and-bottom-rows .column.center .content-body {
   *zoom: 1;
   float: left;
@@ -2039,7 +2039,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 25em) {
-  /* line 91, ../sass/02-molecules/_panels.scss */
+  /* line 90, ../sass/02-molecules/_panels.scss */
   .sidebar-left-top-and-bottom-rows .column.center .content-body {
     position: static;
     left: 0;
@@ -2060,7 +2060,7 @@ ul.primary li a.active {
   }
 }
 
-/* line 103, ../sass/02-molecules/_panels.scss */
+/* line 102, ../sass/02-molecules/_panels.scss */
 .sidebar-right-top-and-bottom-rows .column.right {
   *zoom: 1;
   float: left;
@@ -2089,7 +2089,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 103, ../sass/02-molecules/_panels.scss */
+  /* line 102, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.right {
     *zoom: 1;
     float: left;
@@ -2119,7 +2119,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 103, ../sass/02-molecules/_panels.scss */
+  /* line 102, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.right {
     position: static;
     left: 0;
@@ -2138,12 +2138,12 @@ ul.primary li a.active {
   .sidebar-right-top-and-bottom-rows .column.right:last-child {
     margin-right: auto;
   }
-  /* line 113, ../sass/02-molecules/_panels.scss */
+  /* line 112, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.right .col-inside {
     margin: 0;
   }
 }
-/* line 118, ../sass/02-molecules/_panels.scss */
+/* line 117, ../sass/02-molecules/_panels.scss */
 .sidebar-right-top-and-bottom-rows .column.center {
   *zoom: 1;
   float: left;
@@ -2172,7 +2172,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 118, ../sass/02-molecules/_panels.scss */
+  /* line 117, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -2202,7 +2202,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 118, ../sass/02-molecules/_panels.scss */
+  /* line 117, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.center {
     position: static;
     left: 0;
@@ -2222,7 +2222,7 @@ ul.primary li a.active {
     margin-right: auto;
   }
 }
-/* line 129, ../sass/02-molecules/_panels.scss */
+/* line 128, ../sass/02-molecules/_panels.scss */
 .sidebar-right-top-and-bottom-rows .column.center .content-body {
   *zoom: 1;
   float: left;
@@ -2250,7 +2250,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 25em) {
-  /* line 129, ../sass/02-molecules/_panels.scss */
+  /* line 128, ../sass/02-molecules/_panels.scss */
   .sidebar-right-top-and-bottom-rows .column.center .content-body {
     position: static;
     left: 0;
@@ -2271,7 +2271,7 @@ ul.primary li a.active {
   }
 }
 
-/* line 141, ../sass/02-molecules/_panels.scss */
+/* line 140, ../sass/02-molecules/_panels.scss */
 .sidebar-right-cleared-top-and-bottom-rows .column.right {
   *zoom: 1;
   float: left;
@@ -2298,7 +2298,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 141, ../sass/02-molecules/_panels.scss */
+  /* line 140, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.right {
     *zoom: 1;
     float: left;
@@ -2326,7 +2326,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 141, ../sass/02-molecules/_panels.scss */
+  /* line 140, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.right {
     position: static;
     left: 0;
@@ -2345,12 +2345,12 @@ ul.primary li a.active {
   .sidebar-right-cleared-top-and-bottom-rows .column.right:last-child {
     margin-right: auto;
   }
-  /* line 149, ../sass/02-molecules/_panels.scss */
+  /* line 148, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.right .col-inside {
     margin: 0;
   }
 }
-/* line 154, ../sass/02-molecules/_panels.scss */
+/* line 153, ../sass/02-molecules/_panels.scss */
 .sidebar-right-cleared-top-and-bottom-rows .column.center {
   *zoom: 1;
   float: left;
@@ -2377,7 +2377,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 62.5em) {
-  /* line 154, ../sass/02-molecules/_panels.scss */
+  /* line 153, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.center {
     *zoom: 1;
     float: left;
@@ -2405,7 +2405,7 @@ ul.primary li a.active {
   }
 }
 @media (max-width: 50em) {
-  /* line 154, ../sass/02-molecules/_panels.scss */
+  /* line 153, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.center {
     position: static;
     left: 0;
@@ -2425,7 +2425,7 @@ ul.primary li a.active {
     margin-right: auto;
   }
 }
-/* line 163, ../sass/02-molecules/_panels.scss */
+/* line 162, ../sass/02-molecules/_panels.scss */
 .sidebar-right-cleared-top-and-bottom-rows .column.center .content-body {
   *zoom: 1;
   float: left;
@@ -2453,7 +2453,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 25em) {
-  /* line 163, ../sass/02-molecules/_panels.scss */
+  /* line 162, ../sass/02-molecules/_panels.scss */
   .sidebar-right-cleared-top-and-bottom-rows .column.center .content-body {
     position: static;
     left: 0;
@@ -2474,7 +2474,7 @@ ul.primary li a.active {
   }
 }
 
-/* line 176, ../sass/02-molecules/_panels.scss */
+/* line 175, ../sass/02-molecules/_panels.scss */
 .two-columns-top-and-bottom-rows .column.left {
   *zoom: 1;
   float: left;
@@ -2500,7 +2500,7 @@ ul.primary li a.active {
 .two-columns-top-and-bottom-rows .column.left:last-child {
   margin-right: 0%;
 }
-/* line 179, ../sass/02-molecules/_panels.scss */
+/* line 178, ../sass/02-molecules/_panels.scss */
 .two-columns-top-and-bottom-rows .column.right {
   *zoom: 1;
   float: left;
@@ -2527,7 +2527,7 @@ ul.primary li a.active {
   margin-right: 0%;
 }
 @media (max-width: 37.5em) {
-  /* line 182, ../sass/02-molecules/_panels.scss */
+  /* line 181, ../sass/02-molecules/_panels.scss */
   .two-columns-top-and-bottom-rows .column.left, .two-columns-top-and-bottom-rows .column.right {
     display: block;
     clear: both;
@@ -2544,7 +2544,7 @@ ul.primary li a.active {
   .two-columns-top-and-bottom-rows .column.left:last-child, .two-columns-top-and-bottom-rows .column.right:last-child {
     margin-right: auto;
   }
-  /* line 185, ../sass/02-molecules/_panels.scss */
+  /* line 184, ../sass/02-molecules/_panels.scss */
   .two-columns-top-and-bottom-rows .column.left .col-inside, .two-columns-top-and-bottom-rows .column.right .col-inside {
     margin: 0;
   }
@@ -2596,7 +2596,7 @@ ul.primary li a.active {
 /*
  * Basic positioning styles shared by primary and secondary tabs.
  */
-/* line 13, ../sass/02-molecules/_tabs.scss */
+/* line 12, ../sass/02-molecules/_tabs.scss */
 ul.primary,
 ul.secondary {
   overflow: hidden;
@@ -2607,14 +2607,14 @@ ul.secondary {
   padding: 0 2px;
   white-space: nowrap;
 }
-/* line 22, ../sass/02-molecules/_tabs.scss */
+/* line 21, ../sass/02-molecules/_tabs.scss */
 ul.primary li,
 ul.secondary li {
   float: left;
   /* LTR */
   margin: 0.5em 3px 0;
 }
-/* line 27, ../sass/02-molecules/_tabs.scss */
+/* line 26, ../sass/02-molecules/_tabs.scss */
 ul.primary a,
 ul.secondary a {
   border: 1px solid #e9e9e9;
@@ -2628,11 +2628,11 @@ ul.secondary a {
 /*
  * Primary tabs
  */
-/* line 42, ../sass/02-molecules/_tabs.scss */
+/* line 41, ../sass/02-molecules/_tabs.scss */
 ul.primary li {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  text-shadow: 1px 1px 0 #fff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  text-shadow: 1px 1px 0 #f9f9f9;
   border: 1px solid #bbb;
   border-bottom: 0;
   margin: 0.5em 0 0 3px;
@@ -2647,23 +2647,22 @@ ul.primary li.active {
 /* line 54, ../sass/02-molecules/_tabs.scss */
 ul.primary a:link,
 ul.primary a:visited {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;
   color: #333;
   background-color: #dedede;
-  letter-spacing: auto;
   padding: 0 1em;
   text-align: center;
 }
-/* line 64, ../sass/02-molecules/_tabs.scss */
+/* line 65, ../sass/02-molecules/_tabs.scss */
 ul.primary a:hover,
 ul.primary a:focus {
   background-color: #e9e9e9;
   border-color: #f2f2f2;
 }
-/* line 69, ../sass/02-molecules/_tabs.scss */
+/* line 70, ../sass/02-molecules/_tabs.scss */
 ul.primary a.active {
   background-color: transparent;
   *zoom: 1;
@@ -2679,35 +2678,35 @@ ul.primary a.active {
 /*
  * Secondary tabs
  */
-/* line 81, ../sass/02-molecules/_tabs.scss */
+/* line 82, ../sass/02-molecules/_tabs.scss */
 ul.secondary {
   font-size: .9em;
   margin-top: -1.5em;
   /* Collapse bottom margin of ul.primary. */
   padding-bottom: .5em;
 }
-/* line 86, ../sass/02-molecules/_tabs.scss */
+/* line 87, ../sass/02-molecules/_tabs.scss */
 ul.secondary a:link,
 ul.secondary a:visited {
   border-radius: 0.75em;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  text-shadow: 1px 1px 0 #fff;
+  -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 0 #f9f9f9;
   background-color: #f2f2f2;
   color: #666;
   padding: 0 .5em;
 }
-/* line 95, ../sass/02-molecules/_tabs.scss */
+/* line 96, ../sass/02-molecules/_tabs.scss */
 ul.secondary a:hover,
 ul.secondary a:focus {
   background-color: #dedede;
   border-color: #999;
   color: #333;
 }
-/* line 101, ../sass/02-molecules/_tabs.scss */
+/* line 102, ../sass/02-molecules/_tabs.scss */
 ul.secondary a.active,
 ul.secondary a:active {
-  text-shadow: 1px 1px 0 #333;
+  text-shadow: 1px 1px 0 #f9f9f9;
   background-color: #666;
   border-color: #000;
   color: #fff;
@@ -2721,34 +2720,34 @@ ul.secondary a:active {
  * pages. If your sub-theme isn't used for admin pages, you can remove this
  * entire section.
  */
-/* line 13, ../sass/02-molecules/_views-styles.scss */
+/* line 10, ../sass/02-molecules/_views-styles.scss */
 .views-displays .secondary li {
   float: none;
   margin: 0 6px 0;
 }
-/* line 18, ../sass/02-molecules/_views-styles.scss */
+/* line 15, ../sass/02-molecules/_views-styles.scss */
 .views-displays .secondary a:link,
 .views-displays .secondary a:visited {
   text-shadow: none;
   padding: 2px 7px 3px;
 }
-/* line 24, ../sass/02-molecules/_views-styles.scss */
+/* line 21, ../sass/02-molecules/_views-styles.scss */
 .views-displays .secondary .open > a {
   border-radius: 7px 7px 0 0;
 }
-/* line 26, ../sass/02-molecules/_views-styles.scss */
+/* line 23, ../sass/02-molecules/_views-styles.scss */
 .views-displays .secondary .open > a:hover {
   color: #333;
 }
-/* line 31, ../sass/02-molecules/_views-styles.scss */
+/* line 28, ../sass/02-molecules/_views-styles.scss */
 .views-displays .secondary .action-list li {
   margin: 0;
 }
-/* line 33, ../sass/02-molecules/_views-styles.scss */
+/* line 30, ../sass/02-molecules/_views-styles.scss */
 .views-displays .secondary .action-list li:first-child {
   border-radius: 0 7px 0 0;
 }
-/* line 36, ../sass/02-molecules/_views-styles.scss */
+/* line 33, ../sass/02-molecules/_views-styles.scss */
 .views-displays .secondary .action-list li:last-child {
   border-radius: 0 0 7px 7px;
 }
@@ -3056,42 +3055,42 @@ body a:visited {
   color: #61AEE2;
 }
 
-/* line 11, ../sass/bear.scss */
+/* line 12, ../sass/bear.scss */
 html, body, button, input, select, textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
 
-/* line 14, ../sass/bear.scss */
+/* line 16, ../sass/bear.scss */
 h1, h2, h3, h4, h5 {
   font-family: Georgia, Times, sans-serif;
   font-weight: 400;
 }
 
-/* line 18, ../sass/bear.scss */
+/* line 21, ../sass/bear.scss */
 #main {
   clear: both;
 }
 
-/* line 21, ../sass/bear.scss */
+/* line 25, ../sass/bear.scss */
 #page {
   min-width: 300px;
 }
 
-/* line 24, ../sass/bear.scss */
+/* line 29, ../sass/bear.scss */
 #navigation {
   width: 100%;
   padding: 15px 0;
 }
 
 @media (max-width: 25em) {
-  /* line 29, ../sass/bear.scss */
+  /* line 35, ../sass/bear.scss */
   ul.primary li, ul.secondary li {
     float: none;
     clear: both;
     margin: 0;
   }
-  /* line 33, ../sass/bear.scss */
+  /* line 39, ../sass/bear.scss */
   ul.primary li a, ul.secondary li a {
     width: 88%;
   }
@@ -3099,24 +3098,22 @@ h1, h2, h3, h4, h5 {
 /***********
 ~STRUCTURE
 ***********/
-/* line 42, ../sass/bear.scss */
+/* line 49, ../sass/bear.scss */
 h1 {
   font-size: 160%;
 }
 
-/* line 46, ../sass/bear.scss */
+/* line 54, ../sass/bear.scss */
 .wrapper.header {
   background-color: #8E8E8E;
   box-shadow: inset 0px -3px 6px #666;
-  -moz-box-shadow: inset 0px -3px 6px #666;
-  -webkit-box-shadow: inset 0px -3px 6px #666;
 }
-/* line 52, ../sass/bear.scss */
+/* line 58, ../sass/bear.scss */
 .wrapper.footer {
   background-color: #EFF2F1;
 }
 
-/* line 56, ../sass/bear.scss */
+/* line 63, ../sass/bear.scss */
 .breadcrumb {
   margin: 20px 0;
 }
@@ -3124,35 +3121,35 @@ h1 {
 /***********
 ~HEADER
 ***********/
-/* line 62, ../sass/bear.scss */
+/* line 70, ../sass/bear.scss */
 .region-header {
   clear: none;
 }
 
-/* line 66, ../sass/bear.scss */
+/* line 75, ../sass/bear.scss */
 .wrapper.header #header {
   padding: 25px 0;
   position: relative;
 }
-/* line 69, ../sass/bear.scss */
+/* line 78, ../sass/bear.scss */
 .wrapper.header #header #bear-user-menu {
   float: right;
   margin: 0;
 }
 @media (max-width: 50em) {
-  /* line 69, ../sass/bear.scss */
+  /* line 78, ../sass/bear.scss */
   .wrapper.header #header #bear-user-menu {
     float: none;
     text-align: center;
     margin: 0;
   }
 }
-/* line 77, ../sass/bear.scss */
+/* line 86, ../sass/bear.scss */
 .wrapper.header #header #bear-user-menu ul {
   margin: 20px 0 0 0;
   padding: 0;
 }
-/* line 80, ../sass/bear.scss */
+/* line 89, ../sass/bear.scss */
 .wrapper.header #header #bear-user-menu ul li {
   display: inline-block;
   vertical-align: middle;
@@ -3162,18 +3159,18 @@ h1 {
   margin: 0 0 0 10px;
 }
 
-/* line 91, ../sass/bear.scss */
+/* line 101, ../sass/bear.scss */
 h1#site-name {
   font-size: 2em;
   line-height: .5em;
   margin: 70px 0 0 25px;
 }
-/* line 95, ../sass/bear.scss */
+/* line 105, ../sass/bear.scss */
 h1#site-name a:link, h1#site-name a:visited {
   color: #ffffff;
 }
 
-/* line 99, ../sass/bear.scss */
+/* line 110, ../sass/bear.scss */
 #block-search-form {
   background: #FFFFFF;
   padding: 0 0 0 10px;
@@ -3182,7 +3179,7 @@ h1#site-name a:link, h1#site-name a:visited {
   margin: 60px 0 0 0;
 }
 @media (max-width: 50em) {
-  /* line 99, ../sass/bear.scss */
+  /* line 110, ../sass/bear.scss */
   #block-search-form {
     clear: both;
     float: none;
@@ -3190,25 +3187,22 @@ h1#site-name a:link, h1#site-name a:visited {
     margin: 0 auto;
   }
 }
-/* line 111, ../sass/bear.scss */
+/* line 122, ../sass/bear.scss */
 #block-search-form input.form-text {
   border: none;
   border-right: 1px solid #CCCCCC;
   width: 150px;
 }
-/* line 116, ../sass/bear.scss */
+/* line 127, ../sass/bear.scss */
 #block-search-form input.form-text:focus {
   box-shadow: none;
-  moz-box-shadow: none;
 }
-/* line 121, ../sass/bear.scss */
+/* line 131, ../sass/bear.scss */
 #block-search-form input.form-submit {
   text-indent: -9999px;
   background: #FFFFFF url('../images/search.png?1425402197') no-repeat center center;
   border: none;
   box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
   -webkit-filter: none;
           filter: none;
   padding: 5px 15px;
@@ -3219,23 +3213,23 @@ h1#site-name a:link, h1#site-name a:visited {
 }
 
 @media (max-width: 50em) {
-  /* line 137, ../sass/bear.scss */
+  /* line 146, ../sass/bear.scss */
   .wrapper.header #header {
     text-align: center;
     padding: 0;
   }
-  /* line 140, ../sass/bear.scss */
+  /* line 149, ../sass/bear.scss */
   .wrapper.header #header #logo {
     float: none;
     clear: both;
     display: block;
     padding: 20px 0;
   }
-  /* line 146, ../sass/bear.scss */
+  /* line 155, ../sass/bear.scss */
   .wrapper.header #header #name-and-slogan {
     float: none;
   }
-  /* line 148, ../sass/bear.scss */
+  /* line 157, ../sass/bear.scss */
   .wrapper.header #header #name-and-slogan h1 {
     margin: 10px 0;
   }
@@ -3243,11 +3237,11 @@ h1#site-name a:link, h1#site-name a:visited {
 /***********
 ~SIDEBARS
 ***********/
-/* line 160, ../sass/bear.scss */
+/* line 169, ../sass/bear.scss */
 aside.sidebars .sidebar {
   padding: 5px 0 20px 0;
 }
-/* line 162, ../sass/bear.scss */
+/* line 171, ../sass/bear.scss */
 aside.sidebars .sidebar h2 {
   background: #EFF2F1;
   text-indent: 10px;
@@ -3255,7 +3249,7 @@ aside.sidebars .sidebar h2 {
   font-size: 110%;
 }
 @media (max-width: 62.5em) {
-  /* line 160, ../sass/bear.scss */
+  /* line 169, ../sass/bear.scss */
   aside.sidebars .sidebar {
     padding-left: auto;
   }
@@ -3264,39 +3258,37 @@ aside.sidebars .sidebar h2 {
 /***********
 ~SLIDESHOW
 ***********/
-/* line 178, ../sass/bear.scss */
+/* line 187, ../sass/bear.scss */
 .view-slideshow {
   padding: 0 3px;
 }
-/* line 180, ../sass/bear.scss */
+/* line 189, ../sass/bear.scss */
 .view-slideshow .flexslider {
   background: none repeat scroll 0 0 #FFFFFF;
-  border: 0;
   border-radius: 0;
   border: 4px solid #FFFFFF;
   margin: 30px 0;
   position: relative;
   box-shadow: 0 0 5px #ccc;
 }
-/* line 190, ../sass/bear.scss */
+/* line 196, ../sass/bear.scss */
 .view-slideshow .flexslider li {
   opacity: 1 !important;
 }
-/* line 192, ../sass/bear.scss */
+/* line 198, ../sass/bear.scss */
 .view-slideshow .flexslider li p {
+  font-family: Georgia, Times, sans-serif;
   text-align: center;
-  font-size: 110%;
   background: #f5f5f5;
   margin: 0;
   padding: 10px 0;
   font-size: 90%;
-  font-family: Georgia, Times, sans-serif;
 }
 
 /***********
 ~FOOTER
 ***********/
-/* line 210, ../sass/bear.scss */
+/* line 215, ../sass/bear.scss */
 .wrapper.footer #footer {
   margin-left: auto;
   margin-right: auto;
@@ -3304,31 +3296,31 @@ aside.sidebars .sidebar h2 {
   font-size: 12px;
 }
 @media (max-width: 75em) {
-  /* line 210, ../sass/bear.scss */
+  /* line 215, ../sass/bear.scss */
   .wrapper.footer #footer {
-    padding-left: 0 20px;
-    padding-right: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (max-width: 50em) {
-  /* line 222, ../sass/bear.scss */
+  /* line 228, ../sass/bear.scss */
   #footer {
     text-align: center;
   }
 
-  /* line 225, ../sass/bear.scss */
+  /* line 231, ../sass/bear.scss */
   ul.social-footer {
     margin-top: -10px;
   }
-  /* line 227, ../sass/bear.scss */
+  /* line 233, ../sass/bear.scss */
   ul.social-footer li {
     display: inline-block;
     float: none;
   }
 }
 /* BEARSKIN site Documentation page fun */
-/* line 237, ../sass/bear.scss */
+/* line 243, ../sass/bear.scss */
 #documentation p.tb {
   *zoom: 1;
   float: left;
@@ -3365,9 +3357,8 @@ aside.sidebars .sidebar h2 {
 
 /*
  * CSS Animations
- * Don't forget to add vendor prefixes!
  */
-/* line 250, ../sass/bear.scss */
+/* line 254, ../sass/bear.scss */
 .m-scene .scene_element {
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
@@ -3375,21 +3366,18 @@ aside.sidebars .sidebar h2 {
           transition-timing-function: ease-in;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-duration: 0.25s;
-  -webkit-transition-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
 }
 
-/* line 259, ../sass/bear.scss */
+/* line 260, ../sass/bear.scss */
 .m-scene .scene_element--fadein {
-  animation-name: fadeIn;
   -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
 }
 
 /* line 264, ../sass/bear.scss */
 .m-scene.is-exiting .scene_element {
-  animation-direction: alternate-reverse;
   -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse;
 }
 
 /*
