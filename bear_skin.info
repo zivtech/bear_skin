@@ -33,6 +33,18 @@ base theme  = zen
 ; stylesheets[all][] = system.menus.css
 
 ; Then we add our own stylesheets.
+stylesheets[screen][] = assets/css/bear-menu.css
+stylesheets[screen][] = assets/css/blocks.css
+stylesheets[screen][] = assets/css/comments.css
+stylesheets[screen][] = assets/css/forms.css
+stylesheets[screen][] = assets/css/navigation.css
+stylesheets[screen][] = assets/css/pages.css
+stylesheets[screen][] = assets/css/panels.css
+stylesheets[screen][] = assets/css/sidebars.css
+stylesheets[screen][] = assets/css/sticky-footer.css
+stylesheets[screen][] = assets/css/tabs.css
+stylesheets[screen][] = assets/css/views-styles.css
+stylesheets[screen][] = assets/css/wireframes.css
 stylesheets[screen][] = assets/css/bear.css
 stylesheets[print][] = assets/css/print.css
 

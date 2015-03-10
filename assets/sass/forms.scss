@@ -1,3 +1,5 @@
+@import "base";
+
 [class^="icon-"], [class*=" icon-"] {
   @include inline-block();
   width: 14px;
