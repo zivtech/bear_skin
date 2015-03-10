@@ -1,0 +1,36 @@
+@import "bear-base";
+
+//
+// Button styles
+//
+.button {
+  @extend %button;
+
+  &.secondary {
+    @extend %button.secondary;
+  }
+
+  &.highlight {
+    @extend %button.highlight;
+  }
+
+  &.success {
+    @extend %button.success;
+  }
+}
+
+.button-nude {
+  @include bear-button-nude;
+
+  &.secondary {
+    @extend %button-nude.secondary;
+  }
+
+  &.highlight {
+    @extend %button-nude.highlight;
+  }
+
+  &.success {
+    @extend %button-nude.success;
+  }
+}

@@ -6,4 +6,11 @@
 @import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
 
 // bearskin
-@import "vars/all";
+@import "colors";
+
+// vars, mixins, reusable classes
+@import "button";
+@import "mixins";
+@import "typography";
+@import "layout";
+@import "utility";

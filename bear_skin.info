@@ -34,7 +34,10 @@ base theme  = zen
 
 ; Then we add our own stylesheets.
 stylesheets[screen][] = assets/css/reset.css
-stylesheets[screen][] = assets/css/atoms.css
+stylesheets[screen][] = assets/css/utilty.css
+stylesheets[screen][] = assets/css/alert.css
+stylesheets[screen][] = assets/css/typography.css
+stylesheets[screen][] = assets/css/buttons.css
 stylesheets[screen][] = assets/css/layout.css
 stylesheets[screen][] = assets/css/bear-menu.css
 stylesheets[screen][] = assets/css/blocks.css

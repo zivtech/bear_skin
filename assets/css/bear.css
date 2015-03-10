@@ -1,40 +1,28 @@
-/* line 1, ../sass/atoms/_typography.scss */
-a {
-  color: #61AEE2;
-  text-decoration: none;
-  -webkit-transition: color 0.25s ease;
-          transition: color 0.25s ease;
-}
-/* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-a:hover {
-  color: #3698da;
-}
-
-/* line 4, ../sass/atoms/_button.scss */
-.button, .wrapper.header header #bear-user-menu ul li a {
+/* line 68, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a {
   position: relative;
   display: block;
   overflow: hidden;
   border: 1px solid #3b3b3b;
   outline: none;
-  -webkit-transition: background-color 0.3s;
-          transition: background-color 0.3s;
+  -webkit-transition: background-color 0.4s;
+          transition: background-color 0.4s;
   background-color: #555555;
   color: #f9f9f9;
   padding: 0.7em 1.5em;
   border-radius: 2px;
 }
-/* line 28, ../sass/base/vars/_button.scss */
-.button *, .wrapper.header header #bear-user-menu ul li a * {
+/* line 28, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a * {
   position: relative;
 }
-/* line 31, ../sass/base/vars/_button.scss */
-.button:hover, .wrapper.header header #bear-user-menu ul li a:hover, .button:focus, .wrapper.header header #bear-user-menu ul li a:focus {
+/* line 31, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a:hover, .wrapper.header header #bear-user-menu ul li a:focus {
   background-color: #3b3b3b;
   text-decoration: none;
 }
-/* line 35, ../sass/base/vars/_button.scss */
-.button:before, .wrapper.header header #bear-user-menu ul li a:before {
+/* line 35, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -48,107 +36,42 @@ a:hover {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-/* line 47, ../sass/base/vars/_button.scss */
-.button:active:before, .wrapper.header header #bear-user-menu ul li a:active:before {
+/* line 47, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a:active:before {
   width: 120%;
   padding-top: 120%;
   -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
           transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
-/* line 8, ../sass/atoms/_button.scss */
-.secondary.button, .wrapper.header header #bear-user-menu ul li a.secondary {
+/* line 72, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.secondary {
   background-color: #4C1B01;
   color: #f9f9f9;
 }
-/* line 11, ../sass/atoms/_button.scss */
-.secondary.button:hover, .wrapper.header header #bear-user-menu ul li a.secondary:hover, .secondary.button:focus, .wrapper.header header #bear-user-menu ul li a.secondary:focus {
+/* line 75, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.secondary:hover, .wrapper.header header #bear-user-menu ul li a.secondary:focus {
   background-color: #1a0900;
 }
 
-/* line 16, ../sass/atoms/_button.scss */
-.highlight.button, .wrapper.header header #bear-user-menu ul li a.highlight {
+/* line 80, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.highlight {
   background-color: #F9B634;
   color: #f9f9f9;
 }
-/* line 19, ../sass/atoms/_button.scss */
-.highlight.button:hover, .wrapper.header header #bear-user-menu ul li a.highlight:hover, .highlight.button:focus, .wrapper.header header #bear-user-menu ul li a.highlight:focus {
+/* line 83, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.highlight:hover, .wrapper.header header #bear-user-menu ul li a.highlight:focus {
   background-color: #f3a307;
 }
 
-/* line 28, ../sass/atoms/_button.scss */
-.button-nude.secondary {
-  border-color: #4C1B01;
-  color: #4C1B01;
+/* line 88, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.success {
+  background-color: #5cb85c;
+  color: #f9f9f9;
 }
-/* line 31, ../sass/atoms/_button.scss */
-.button-nude.secondary:before {
-  background-color: rgba(76, 27, 1, 0.2);
-}
-
-/* line 36, ../sass/atoms/_button.scss */
-.button-nude.highlight {
-  border-color: #F9B634;
-  color: #F9B634;
-}
-/* line 39, ../sass/atoms/_button.scss */
-.button-nude.highlight:before {
-  background-color: rgba(249, 182, 52, 0.2);
-}
-
-/* line 57, ../sass/atoms/_button.scss */
-.button-nude {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  border: 1px solid transparent;
-  outline: none;
-  -webkit-transition: background-color 0.3s;
-          transition: background-color 0.3s;
-  background-color: transparent;
-  color: #555555;
-  padding: 0.7em 1.5em;
-  border-radius: 2px;
-  border: 2px solid #555555;
-}
-/* line 28, ../sass/base/vars/_button.scss */
-.button-nude * {
-  position: relative;
-}
-/* line 31, ../sass/base/vars/_button.scss */
-.button-nude:hover, .button-nude:focus {
-  background-color: transparent;
-  text-decoration: none;
-}
-/* line 35, ../sass/base/vars/_button.scss */
-.button-nude:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0;
-  padding-top: 0;
-  border-radius: 100%;
-  background-color: rgba(236, 240, 241, 0.3);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-/* line 47, ../sass/base/vars/_button.scss */
-.button-nude:active:before {
-  width: 120%;
-  padding-top: 120%;
-  -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
-          transition: width .2s ease-out, padding-top .2s ease-out;
-}
-/* line 57, ../sass/base/vars/_button.scss */
-.button-nude:hover {
-  background-color: transparent;
-}
-/* line 60, ../sass/base/vars/_button.scss */
-.button-nude:before {
-  background-color: rgba(85, 85, 85, 0.2);
+/* line 91, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.success:hover, .wrapper.header header #bear-user-menu ul li a.success:focus {
+  background-color: #449d44;
 }
 
 /* line 7, ../sass/bear.scss */

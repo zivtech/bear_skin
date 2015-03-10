@@ -61,3 +61,62 @@ $button-highlight-font-color: $whitey !default;
     background-color: rgba($color, 0.2);
   }
 }
+
+//
+// Extendable classes
+//
+%button {
+  @include bear-button;
+}
+
+%button.secondary {
+  background-color: $button-secondary-color;
+  color: $button-secondary-font-color;
+  &:hover, &:focus {
+    background-color: darken($button-secondary-color, 10%);
+  }
+}
+
+%button.highlight {
+  background-color: $button-highlight-color;
+  color: $button-highlight-font-color;
+  &:hover, &:focus {
+    background-color: darken($button-highlight-color, 10%);
+  }
+}
+
+%button.success {
+  background-color: $color-success;
+  color: $button-highlight-font-color;
+  &:hover, &:focus {
+    background-color: darken($color-success, 10%);
+  }
+}
+
+%button-nude {
+  @include bear-button-nude;
+}
+
+%button-nude.secondary {
+  border-color: $button-secondary-color;
+  color: $button-secondary-color;
+  &:before {
+    background-color: rgba($button-secondary-color, 0.2);
+  }
+}
+
+%button-nude.highlight {
+  border-color: $button-highlight-color;
+  color: $button-highlight-color;
+  &:before {
+    background-color: rgba($button-highlight-color, 0.2);
+  }
+}
+
+%button-nude.success {
+  border-color: $color-success;
+  color: $color-success;
+  &:before {
+    background-color: rgba($color-success, 0.2);
+  }
+}

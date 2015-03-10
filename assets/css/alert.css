@@ -1,0 +1,15 @@
+/* line 6, ../sass/alert.scss */
+.messages {
+  position: relative;
+}
+/* line 9, ../sass/alert.scss */
+.messages:before {
+  display: block;
+  content: "";
+  width: 5px;
+  background: #337ab7;
+  background: -webkit-repeating-linear-gradient(145deg, #337ab7 2px, #f9f9f9 2px);
+  background: repeating-linear-gradient(-55deg, #337ab7 2px, #f9f9f9 2px);
+}
+
+/*# sourceMappingURL=alert.css.map */
