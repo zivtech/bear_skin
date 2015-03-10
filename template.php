@@ -39,8 +39,17 @@ function bear_skin_links($variables) {
 /**
  * Implements template_preprocess_page().
  */
-function bear_skin_preprocess_page(&$vars) {
-  $vars['user_menu'] = theme('links', array(
+function bear_skin_preprocess_page(&$variables) {
+  $page = $variables['page'];
+  $variables['has_sidebar_first'] = false;
+  $variables['has_sidebar_second'] = false;
+  if (!empty($page['sidebar_first'])) {
+    $variables['has_sidebar_first'] = true;
+  }
+  if (!empty($page['sidebar_second'])) {
+    $variables['has_sidebar_second'] = true;
+  }
+  $variables['user_menu'] = theme('links', array(
     'links' => menu_navigation_links('user-menu'),
     'attributes' => array('class ' => array('links', 'site-menu'))
   ));
@@ -71,9 +80,6 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   // Replace the generic link class from Zen with something more specific
   $variables['element']['#attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__item';
   $variables['element']['#localized_options']['attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__link';
-  //$variables['element']['#attributes']['class'] = array_map(function($i, $specific_menu_link) {
-  //  return ($i !== 'menu__item') ? $i : $specific_menu_link;
-  //}, $variables['element']['#attributes']['class']);
 }
 
 /***********************

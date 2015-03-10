@@ -56,16 +56,10 @@
         <?php print $feed_icons; ?>
       </div><!-- /#content -->
 
-      <?php
-        // Render the sidebars to see if there's anything in them.
-        $sidebar_first  = render($page['sidebar_first']);
-        $sidebar_second = render($page['sidebar_second']);
-      ?>
-
-      <?php if (!empty($sidebar_first) || $sidebar_second): ?>
+      <?php if ($has_sidebar_first || $has_sidebar_second): ?>
         <aside class="sidebars">
-          <?php print $sidebar_first; ?>
-          <?php print $sidebar_second; ?>
+          <?php print render($page['sidebar_first']); ?>
+          <?php print render($page['sidebar_second']); ?>
         </aside><!-- /.sidebars -->
       <?php endif; ?>
 
