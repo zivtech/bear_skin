@@ -1,4 +1,4 @@
-@import "base";
+@import "bear-base";
 
 
 /*
@@ -23,6 +23,8 @@ body {
 
   a,
   a:visited {
+    @extend %u-hidden;
+    @extend %u-focusable;
     display: block;
     width: 100%;
     padding: 2px 0 3px 0;

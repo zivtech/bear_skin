@@ -24,23 +24,12 @@ function bear_skin_preprocess_html(&$variables, $hook) {
 }
 
 /**
- * Implements theme_links().
- * Enables sub-menu item display for main menu.
- */
-function bear_skin_links($variables) {
-  if (array_key_exists('id', $variables['attributes']) && $variables['attributes']['id'] == 'main-menu') {
-    $pid = variable_get('menu_main_links_source', 'nav');
-    $tree = menu_tree($pid);
-    return drupal_render($tree);
-  }
-  return theme_links($variables);
-}
-
-/**
  * Implements template_preprocess_page().
  */
 function bear_skin_preprocess_page(&$variables) {
   $page = $variables['page'];
+
+  // check if there is content in the sidebars
   $variables['has_sidebar_first'] = false;
   $variables['has_sidebar_second'] = false;
   if (!empty($page['sidebar_first'])) {
@@ -49,9 +38,13 @@ function bear_skin_preprocess_page(&$variables) {
   if (!empty($page['sidebar_second'])) {
     $variables['has_sidebar_second'] = true;
   }
+
+  // setup the user menu to display in the header
   $variables['user_menu'] = theme('links', array(
     'links' => menu_navigation_links('user-menu'),
-    'attributes' => array('class ' => array('links', 'site-menu'))
+    'attributes' => array(
+      'class ' => array('links-list', 'site-menu')
+    )
   ));
 }
 
@@ -72,14 +65,27 @@ function bear_skin_css_alter(&$css) {
   }
 }
 
-function bear_skin_preprocess_panels_pane(&$variables) {
-  //dpm($variables);
-}
-
+/**
+ * Implements template_preprocess_menu_link()
+ * @param $variables
+ * @param $hook
+ */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
   // Replace the generic link class from Zen with something more specific
   $variables['element']['#attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__item';
   $variables['element']['#localized_options']['attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__link';
+}
+
+/**
+ * Implements hook_preprocess_links()
+ */
+function bear_skin_links(&$variables) {
+  // for any menu that runs drupal's default render
+  // add a class to help with styling
+  foreach ($variables['links'] as $key => &$link) {
+    $link['attributes'] = array('class' => 'links-list__link');
+  }
+  return theme_links($variables);
 }
 
 /***********************

@@ -1,0 +1,63 @@
+//
+// Button Variables
+// Customize your theme by copying the variable name into _custom.scss and remove !default
+//
+$button-padding: 0.7em 1.5em !default;
+$button-border-radius: 2px !default;
+$button-primary-color: $dark !default;
+$button-primary-font-color: $whitey !default;
+$button-secondary-color: $brown !default;
+$button-secondary-font-color: $whitey !default;
+$button-highlight-color: $yellow !default;
+$button-highlight-font-color: $whitey !default;
+
+//
+// Button mixin
+//
+@mixin bear-button($color: $button-primary-color, $font-color: $button-primary-font-color, $radius: $button-border-radius, $padding: $button-padding) {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid darken($color, 10%);
+  outline: none;
+  transition: background-color 0.4s;
+  background-color: $color;
+  color: $font-color;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  * {
+    position: relative;
+  }
+  &:hover, &:focus {
+    background-color: darken($color, 10%);
+    text-decoration: none;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0;
+    padding-top: 0;
+    border-radius: 100%;
+    background-color: rgba(236,240,241,0.3);
+    transform: translate(-50%,-50%);
+  }
+  &:active:before {
+    width: 120%;
+    padding-top: 120%;
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+}
+
+@mixin bear-button-nude($color: $button-primary-color, $font-color: $button-primary-color, $radius: $button-border-radius, $padding: $button-padding) {
+  @include bear-button(transparent, $font-color, $radius, $padding);
+  border: 2px solid $color;
+  &:hover {
+    background-color: transparent;
+  }
+  &:before {
+    background-color: rgba($color, 0.2);
+  }
+}

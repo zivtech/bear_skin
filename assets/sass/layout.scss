@@ -1,10 +1,10 @@
-/**
- *
- * Non panel layouts (one sidebar, two sidebars, none)
- *
- */
+@import "bear-base";
+
+//
+// Layout styles
+//
 body {
-  * {
+  *, *:before, *:after {
     box-sizing: border-box;
   }
 }

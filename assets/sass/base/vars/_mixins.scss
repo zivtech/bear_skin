@@ -1,8 +1,13 @@
 //
 //
-// BEAR mixins
+// BEAR mixins / functions
 //
 //
+
+@function em($target, $context: 16) {
+  @return ($target / $context) * 1em;
+}
+
 
 @mixin bear-linear-gradient($fromColor, $toColor) {
   background-color: $toColor;

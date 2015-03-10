@@ -1,5 +1,4 @@
 // vendor
-@import "normalize";
 @import "rgbapng";
 @import "compass/utilities";
 @import "jeet/index";
@@ -7,8 +6,4 @@
 @import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
 
 // bearskin
-@import "colors";
-@import "variables";
-@import "mixins";
-@import "utility";
-@import "layout";
+@import "vars/all";

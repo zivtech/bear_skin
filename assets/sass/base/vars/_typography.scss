@@ -1,40 +1,4 @@
 //
-//
-//
-//
-//
-// To override these variables, create variables with the same name
-// in _custom.scss
-//
-//
-//
-
-@function em($target, $context: 16) {
-  @return ($target / $context) * 1em;
-}
-
-
-//
-// Layout
-//
-$site-max-width: em(1200) !default;
-$indent-amount: 30px !default;
-$vertical-gutter: 10px 0 !default;
-
-//
-// Breakpoints
-//
-// create $breakpoint variables like so
-// assume min-width (by default) if only a number
-
-$breakpoint-small-width: max-width 25em !default;
-$breakpoint-med-small-width: max-width 37.5em !default;
-$breakpoint-medium-width: max-width 50em !default;
-$breakpoint-large-width: max-width 62.5em !default;
-$breakpoint-full-width: max-width $site-max-width;
-
-
-//
 // Font faces, stacks and sizes.
 //
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
@@ -82,9 +46,8 @@ $base-font-family: $verdana !default; // The font family set on the html element
 $font-body:        $verdana !default;
 $font-monospace:   $courier !default;
 
-
 //
-// Buttons
+// Typography variables
 //
-$sb-padding: 0.2em 1.1em 0.3em 1.2em !default;  // Sassy-Button padding
-
+$link-color: $blue !default;
+$link-color-hover: darken($link-color, 10%);

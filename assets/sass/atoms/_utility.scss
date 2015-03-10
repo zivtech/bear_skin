@@ -1,0 +1,26 @@
+%u-hidden {
+  @include bear-element-invisible;
+}
+
+%u-unhidden {
+  @include bear-element-invisible-off;
+}
+
+%u-focusable {
+  @include bear-element-focusable;
+}
+
+%u-no-box-shadow {
+  box-shadow: none;
+}
+
+%u-no-text-shadow {
+  text-shadow: none;
+}
+
+%is-phone {
+  display: none;
+  @include breakpoint($breakpoint-small-width) {
+    display: block;
+  }
+}
