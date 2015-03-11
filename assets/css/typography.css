@@ -19,13 +19,14 @@ a {
   text-decoration: none;
   -webkit-transition: color 0.25s ease;
           transition: color 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 /* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
   color: #3698da;
 }
 
-/* line 24, ../sass/typography.scss */
+/* line 25, ../sass/typography.scss */
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -35,37 +36,37 @@ h6, .h6 {
   font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
 }
 
-/* line 33, ../sass/typography.scss */
+/* line 34, ../sass/typography.scss */
 h1 {
   font-size: 32px;
   font-size: 3.2rem;
 }
 
-/* line 37, ../sass/typography.scss */
+/* line 38, ../sass/typography.scss */
 h2 {
   font-size: 24px;
   font-size: 2.4rem;
 }
 
-/* line 41, ../sass/typography.scss */
+/* line 42, ../sass/typography.scss */
 h3 {
   font-size: 19px;
   font-size: 1.872rem;
 }
 
-/* line 45, ../sass/typography.scss */
+/* line 46, ../sass/typography.scss */
 h4 {
   font-size: 16px;
   font-size: 1.6rem;
 }
 
-/* line 49, ../sass/typography.scss */
+/* line 50, ../sass/typography.scss */
 h5 {
   font-size: 13px;
   font-size: 1.328rem;
 }
 
-/* line 53, ../sass/typography.scss */
+/* line 54, ../sass/typography.scss */
 h6 {
   font-size: 12px;
   font-size: 1.2rem;

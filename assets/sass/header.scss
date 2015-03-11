@@ -22,27 +22,6 @@ h1#site-name {
   }
 }
 
-.nav-user {
-  float: right;
-  margin: 0;
-  @include breakpoint($breakpoint-medium-width) {
-    float: none;
-    text-align: center;
-    margin: 0;
-  }
-  &__list {
-    margin: 20px 0 0 0;
-    padding: 0;
-    li {
-      @include inline-block;
-      margin: 0 0 0 10px;
-    }
-  }
-  &__link {
-    @extend %button;
-  }
-}
-
 @include breakpoint($breakpoint-medium-width) {
   .wrapper.header #header {
     text-align: center;

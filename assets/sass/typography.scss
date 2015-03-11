@@ -19,6 +19,7 @@ a {
   @include link-colors($link-color, $link-color-hover);
   text-decoration: none;
   transition: color 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1, .h1,

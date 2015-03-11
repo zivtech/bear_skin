@@ -20,7 +20,7 @@ $button-highlight-font-color: $whitey !default;
   overflow: hidden;
   border: 1px solid darken($color, 10%);
   outline: none;
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
   background-color: $color;
   color: $font-color;
   padding: $padding;
@@ -31,6 +31,7 @@ $button-highlight-font-color: $whitey !default;
   &:hover, &:focus {
     background-color: darken($color, 10%);
     text-decoration: none;
+    color: $font-color;
   }
   &:before {
     content: "";
@@ -51,10 +52,11 @@ $button-highlight-font-color: $whitey !default;
   }
 }
 
-@mixin bear-button-nude($color: $button-primary-color, $font-color: $button-primary-color, $radius: $button-border-radius, $padding: $button-padding) {
+@mixin bear-button-inverted($color: $button-primary-color, $font-color: $button-primary-color, $radius: $button-border-radius, $padding: $button-padding) {
   @include bear-button(transparent, $font-color, $radius, $padding);
   border: 2px solid $color;
   &:hover {
+    color: $font-color;
     background-color: transparent;
   }
   &:before {
@@ -69,7 +71,7 @@ $button-highlight-font-color: $whitey !default;
   @include bear-button;
 }
 
-%button.secondary {
+%button-secondary {
   background-color: $button-secondary-color;
   color: $button-secondary-font-color;
   &:hover, &:focus {
@@ -77,7 +79,7 @@ $button-highlight-font-color: $whitey !default;
   }
 }
 
-%button.highlight {
+%button-highlight {
   background-color: $button-highlight-color;
   color: $button-highlight-font-color;
   &:hover, &:focus {
@@ -85,7 +87,7 @@ $button-highlight-font-color: $whitey !default;
   }
 }
 
-%button.success {
+%button-success {
   background-color: $color-success;
   color: $button-highlight-font-color;
   &:hover, &:focus {
@@ -93,30 +95,39 @@ $button-highlight-font-color: $whitey !default;
   }
 }
 
-%button-nude {
-  @include bear-button-nude;
+%button-inverted {
+  @include bear-button-inverted;
 }
 
-%button-nude.secondary {
+%button-inverted-secondary {
   border-color: $button-secondary-color;
   color: $button-secondary-color;
   &:before {
     background-color: rgba($button-secondary-color, 0.2);
   }
+  &:hover {
+    color: $button-secondary-color;
+  }
 }
 
-%button-nude.highlight {
+%button-inverted-highlight {
   border-color: $button-highlight-color;
   color: $button-highlight-color;
   &:before {
     background-color: rgba($button-highlight-color, 0.2);
   }
+  &:hover {
+    color: $button-highlight-color;
+  }
 }
 
-%button-nude.success {
+%button-inverted-success {
   border-color: $color-success;
   color: $color-success;
   &:before {
     background-color: rgba($color-success, 0.2);
+  }
+  &:hover {
+    color: $color-success;
   }
 }

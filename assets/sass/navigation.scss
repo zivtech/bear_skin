@@ -71,6 +71,30 @@ li a.active {
   }
 }
 
+//
+// Header user menu
+//
+.nav-user {
+  float: right;
+  margin: 0;
+  @include breakpoint($breakpoint-medium-width) {
+    float: none;
+    text-align: center;
+    margin: 0;
+  }
+  &__list {
+    margin: 20px 0 0 0;
+    padding: 0;
+    li {
+      @include inline-block;
+      margin: 0 0 0 10px;
+    }
+  }
+  &__link {
+    @extend %button;
+  }
+}
+
 .region-navigation {
 }
 
@@ -100,31 +124,6 @@ li a.active {
  */
 
 .block-menu-block {
-}
-
-/* DRUPAL TABS */
-
-ul.primary {
-  padding: 0;
-  border-bottom: none;
-  @include breakpoint($breakpoint-small-width) {
-    border-bottom: none;
-  }
-  li {
-    border: none;
-    margin: 0 5px 0 0;
-    text-shadow: 0;
-    a:link, a:visited, a:hover {
-      text-shadow: 0;
-      @include sassy-button("matte", 0, 100%, #EFF2F1, #e6e7e7, #555, "inset");
-    }
-    a {
-      color: #333 !important;
-      &.active {
-        color: $blue !important;
-      }
-    }
-  }
 }
 
 .breadcrumbs {

@@ -7,30 +7,30 @@
   @extend %button;
 
   &.secondary {
-    @extend %button.secondary;
+    @extend %button-secondary;
   }
 
   &.highlight {
-    @extend %button.highlight;
+    @extend %button-highlight;
   }
 
   &.success {
-    @extend %button.success;
+    @extend %button-success;
   }
 }
 
-.button-nude {
-  @include bear-button-nude;
+.button-inverted {
+  @include bear-button-inverted;
 
   &.secondary {
-    @extend %button-nude.secondary;
+    @extend %button-inverted-secondary;
   }
 
   &.highlight {
-    @extend %button-nude.highlight;
+    @extend %button-inverted-highlight;
   }
 
   &.success {
-    @extend %button-nude.success;
+    @extend %button-inverted-success;
   }
 }

@@ -56,6 +56,7 @@ function bear_skin_preprocess_page(&$variables) {
 function bear_skin_css_alter(&$css) {
   // remove drupal's default message css
   unset($css['modules/system/system.messages.css']);
+  unset($css['modules/system/system.menus.css']);
   unset($css['profiles/bear/themes/zen/system.menus.css']);
 
   // if css aggregation is off, include css as link tags

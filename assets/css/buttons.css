@@ -1,12 +1,12 @@
-/* line 68, ../sass/base/_button.scss */
+/* line 70, ../sass/base/_button.scss */
 .button {
   position: relative;
   display: block;
   overflow: hidden;
   border: 1px solid #3b3b3b;
   outline: none;
-  -webkit-transition: background-color 0.4s;
-          transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+          transition: background-color 0.4s, color 0.4s;
   background-color: #555555;
   color: #f9f9f9;
   padding: 0.4em 1.5em;
@@ -20,8 +20,9 @@
 .button:hover, .button:focus {
   background-color: #3b3b3b;
   text-decoration: none;
+  color: #f9f9f9;
 }
-/* line 35, ../sass/base/_button.scss */
+/* line 36, ../sass/base/_button.scss */
 .button:before {
   content: "";
   position: absolute;
@@ -36,7 +37,7 @@
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-/* line 47, ../sass/base/_button.scss */
+/* line 48, ../sass/base/_button.scss */
 .button:active:before {
   width: 120%;
   padding-top: 120%;
@@ -44,75 +45,87 @@
           transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
-/* line 72, ../sass/base/_button.scss */
-.secondary.button {
+/* line 74, ../sass/base/_button.scss */
+.button.secondary {
   background-color: #4C1B01;
   color: #f9f9f9;
 }
-/* line 75, ../sass/base/_button.scss */
-.secondary.button:hover, .secondary.button:focus {
+/* line 77, ../sass/base/_button.scss */
+.button.secondary:hover, .button.secondary:focus {
   background-color: #1a0900;
 }
 
-/* line 80, ../sass/base/_button.scss */
-.highlight.button {
+/* line 82, ../sass/base/_button.scss */
+.button.highlight {
   background-color: #F9B634;
   color: #f9f9f9;
 }
-/* line 83, ../sass/base/_button.scss */
-.highlight.button:hover, .highlight.button:focus {
+/* line 85, ../sass/base/_button.scss */
+.button.highlight:hover, .button.highlight:focus {
   background-color: #f3a307;
 }
 
-/* line 88, ../sass/base/_button.scss */
-.success.button {
+/* line 90, ../sass/base/_button.scss */
+.button.success {
   background-color: #5cb85c;
   color: #f9f9f9;
 }
-/* line 91, ../sass/base/_button.scss */
-.success.button:hover, .success.button:focus {
+/* line 93, ../sass/base/_button.scss */
+.button.success:hover, .button.success:focus {
   background-color: #449d44;
 }
 
-/* line 100, ../sass/base/_button.scss */
-.button-nude.secondary {
+/* line 102, ../sass/base/_button.scss */
+.button-inverted.secondary {
   border-color: #4C1B01;
   color: #4C1B01;
 }
-/* line 103, ../sass/base/_button.scss */
-.button-nude.secondary:before {
+/* line 105, ../sass/base/_button.scss */
+.button-inverted.secondary:before {
   background-color: rgba(76, 27, 1, 0.2);
 }
-
 /* line 108, ../sass/base/_button.scss */
-.button-nude.highlight {
+.button-inverted.secondary:hover {
+  color: #4C1B01;
+}
+
+/* line 113, ../sass/base/_button.scss */
+.button-inverted.highlight {
   border-color: #F9B634;
   color: #F9B634;
 }
-/* line 111, ../sass/base/_button.scss */
-.button-nude.highlight:before {
+/* line 116, ../sass/base/_button.scss */
+.button-inverted.highlight:before {
   background-color: rgba(249, 182, 52, 0.2);
 }
+/* line 119, ../sass/base/_button.scss */
+.button-inverted.highlight:hover {
+  color: #F9B634;
+}
 
-/* line 116, ../sass/base/_button.scss */
-.button-nude.success {
+/* line 124, ../sass/base/_button.scss */
+.button-inverted.success {
   border-color: #5cb85c;
   color: #5cb85c;
 }
-/* line 119, ../sass/base/_button.scss */
-.button-nude.success:before {
+/* line 127, ../sass/base/_button.scss */
+.button-inverted.success:before {
   background-color: rgba(92, 184, 92, 0.2);
+}
+/* line 130, ../sass/base/_button.scss */
+.button-inverted.success:hover {
+  color: #5cb85c;
 }
 
 /* line 22, ../sass/buttons.scss */
-.button-nude {
+.button-inverted {
   position: relative;
   display: block;
   overflow: hidden;
   border: 1px solid transparent;
   outline: none;
-  -webkit-transition: background-color 0.4s;
-          transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+          transition: background-color 0.4s, color 0.4s;
   background-color: transparent;
   color: #555555;
   padding: 0.4em 1.5em;
@@ -120,16 +133,17 @@
   border: 2px solid #555555;
 }
 /* line 28, ../sass/base/_button.scss */
-.button-nude * {
+.button-inverted * {
   position: relative;
 }
 /* line 31, ../sass/base/_button.scss */
-.button-nude:hover, .button-nude:focus {
+.button-inverted:hover, .button-inverted:focus {
   background-color: transparent;
   text-decoration: none;
+  color: #555555;
 }
-/* line 35, ../sass/base/_button.scss */
-.button-nude:before {
+/* line 36, ../sass/base/_button.scss */
+.button-inverted:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -143,19 +157,20 @@
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-/* line 47, ../sass/base/_button.scss */
-.button-nude:active:before {
+/* line 48, ../sass/base/_button.scss */
+.button-inverted:active:before {
   width: 120%;
   padding-top: 120%;
   -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
           transition: width .2s ease-out, padding-top .2s ease-out;
 }
-/* line 57, ../sass/base/_button.scss */
-.button-nude:hover {
+/* line 58, ../sass/base/_button.scss */
+.button-inverted:hover {
+  color: #555555;
   background-color: transparent;
 }
-/* line 60, ../sass/base/_button.scss */
-.button-nude:before {
+/* line 62, ../sass/base/_button.scss */
+.button-inverted:before {
   background-color: rgba(85, 85, 85, 0.2);
 }
 

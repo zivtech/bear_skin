@@ -1,117 +1,70 @@
 /* line 6, ../sass/tabs.scss */
-ul.primary,
-ul.secondary {
-  overflow: hidden;
-  *zoom: 1;
-  border-bottom: 1px solid #bbb;
-  list-style: none;
-  margin: 1em 0 1.5em;
-  padding: 0 2px;
+.tabs-primary,
+.tabs-secondary {
   white-space: nowrap;
-}
-/* line 15, ../sass/tabs.scss */
-ul.primary li,
-ul.secondary li {
-  float: left;
-  /* LTR */
-  margin: 0.5em 3px 0;
-}
-/* line 20, ../sass/tabs.scss */
-ul.primary a,
-ul.secondary a {
-  border: 1px solid #e9e9e9;
-  border-right: 0;
-  border-bottom: 0;
-  display: block;
-  line-height: 1.5em;
-  text-decoration: none;
-}
-
-/*
- * Primary tabs
- */
-/* line 35, ../sass/tabs.scss */
-ul.primary li {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  text-shadow: 1px 1px 0 #f9f9f9;
-  border: 1px solid #bbb;
-  border-bottom: 0;
-  margin: 0.5em 0 0 3px;
-  /* LTR */
-}
-/* line 43, ../sass/tabs.scss */
-ul.primary li.active {
-  border-bottom: 1px solid #fff;
-  margin-bottom: -1px;
-  /* Overlap the ul's border. */
-}
-/* line 48, ../sass/tabs.scss */
-ul.primary a:link,
-ul.primary a:visited {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  -webkit-transition: background-color 0.3s ease;
-          transition: background-color 0.3s ease;
-  color: #333;
-  background-color: #dedede;
-  padding: 0 1em;
-  text-align: center;
-}
-/* line 59, ../sass/tabs.scss */
-ul.primary a:hover,
-ul.primary a:focus {
-  background-color: #e9e9e9;
-  border-color: #f2f2f2;
-}
-/* line 64, ../sass/tabs.scss */
-ul.primary a.active {
-  background-color: transparent;
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, rgba(233, 233, 233, 0)));
-  background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  border-color: #fff;
+  position: relative;
+  height: 48px;
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+  margin: 1em 0 1.5em;
+  border-bottom: 1px solid #EFF2F1;
 }
-
-/*
- * Secondary tabs
- */
-/* line 76, ../sass/tabs.scss */
-ul.secondary {
-  font-size: .9em;
-  margin-top: -1.5em;
-  /* Collapse bottom margin of ul.primary. */
-  padding-bottom: .5em;
+/* line 196, ../sass/base/jeet/_grid.scss */
+.tabs-primary:before, .tabs-primary:after,
+.tabs-secondary:before,
+.tabs-secondary:after {
+  content: '';
+  display: table;
 }
-/* line 81, ../sass/tabs.scss */
-ul.secondary a:link,
-ul.secondary a:visited {
-  border-radius: 0.75em;
-  -webkit-transition: background-color 0.3s ease;
-          transition: background-color 0.3s ease;
-  text-shadow: 1px 1px 0 #f9f9f9;
-  background-color: #f2f2f2;
-  color: #666;
-  padding: 0 .5em;
+/* line 200, ../sass/base/jeet/_grid.scss */
+.tabs-primary:after,
+.tabs-secondary:after {
+  clear: both;
 }
-/* line 90, ../sass/tabs.scss */
-ul.secondary a:hover,
-ul.secondary a:focus {
-  background-color: #dedede;
-  border-color: #999;
-  color: #333;
+/* line 10, ../sass/tabs.scss */
+.tabs-primary__tab,
+.tabs-secondary__tab {
+  display: block;
+  float: left;
+  text-align: center;
+  background-color: #EFF2F1;
+  line-height: 48px;
+  height: 48px;
+  padding: 0;
+  text-transform: uppercase;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-right: 1px solid #EFF2F1;
+  -webkit-transition: background-color 0.5s ease;
+          transition: background-color 0.5s ease;
 }
-/* line 96, ../sass/tabs.scss */
-ul.secondary a.active,
-ul.secondary a:active {
-  text-shadow: 1px 1px 0 #f9f9f9;
-  background-color: #666;
-  border-color: #000;
-  color: #fff;
+/* line 38, ../sass/base/_tab.scss */
+.tabs-primary__tab:hover,
+.tabs-secondary__tab:hover {
+  background-color: #e1e7e5;
+}
+/* line 14, ../sass/tabs.scss */
+.tabs-primary__tab-link,
+.tabs-secondary__tab-link {
+  color: #555555;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
+  padding: 0 1em;
+}
+/* line 50, ../sass/base/_tab.scss */
+.tabs-primary__tab-link:hover,
+.tabs-secondary__tab-link:hover {
+  color: #6e6e6e;
+}
+/* line 53, ../sass/base/_tab.scss */
+.tabs-primary__tab-link.active,
+.tabs-secondary__tab-link.active {
+  border-bottom: 1px solid #555555;
 }
 
 /*# sourceMappingURL=tabs.css.map */
