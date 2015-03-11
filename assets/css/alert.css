@@ -50,5 +50,9 @@
 .messages__item:last-of-type {
   margin-bottom: 0;
 }
+/* line 37, ../sass/alert.scss */
+.messages .krumo-root {
+  color: #555555;
+}
 
 /*# sourceMappingURL=alert.css.map */

@@ -99,6 +99,8 @@ function bear_skin_links__user_menu(&$variables) {
 
 /**
  * Implements theme_status_messages()
+ * 1. Add some additional CSS classes
+ * 2. Make the alerts accessible using WAI standards
  */
 function bear_skin_status_messages($variables) {
   $display = $variables['display'];
@@ -114,18 +116,13 @@ function bear_skin_status_messages($variables) {
     $type = ($type === 'status') ? 'success' : $type;
     $output .= "<div class=\"messages--$type messages $type\">\n";
     if (!empty($status_heading[$type])) {
-      $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+      $output .= '<h2 class="u-hidden">' . $status_heading[$type] . "</h2>\n";
     }
-    if (count($messages) > 1) {
-      $output .= " <ul class=\"messages__list\">\n";
-      foreach ($messages as $message) {
-        $output .= "  <li class=\"messages__item\">" . $message . "</li>\n";
-      }
-      $output .= " </ul>\n";
+    $output .= " <ul class=\"messages__list\">\n";
+    foreach ($messages as $message) {
+      $output .= "  <li class=\"messages__item\" role=\"alert\" aria-live=\"assertive\">" . $message . "</li>\n";
     }
-    else {
-      $output .= $messages[0];
-    }
+    $output .= " </ul>\n";
     $output .= "</div>\n";
   }
   return $output;
@@ -141,7 +138,7 @@ function bear_skin_breadcrumb(&$variables) {
   $crumbs = '';
   if (!empty($breadcrumb)) {
     $crumbs = '<nav role="navigation" aria-label="breadcrumbs">' . "\n";
-    $crumbs .= '<h3 class="u-hidden" id="breadcrumbLabel">' . t('You are here:') . '</h3>';
+    $crumbs .= '<h2 class="u-hidden" id="breadcrumbLabel">' . t('You are here:') . '</h2>';
     $crumbs .= '<ul class="breadcrumbs" aria-labelledby="breadcrumbLabel">' . "\n";
     foreach ($breadcrumb as $value) {
       $value = str_replace('<a', '<a class="breadcrumbs__link"', $value);
@@ -152,6 +149,87 @@ function bear_skin_breadcrumb(&$variables) {
     $crumbs .= '</nav>' . "\n";
   }
   return $crumbs;
+}
+
+/**
+ * Implements theme_menu_local_tasks()
+ * Make the tabs more accessible using WAI standards
+ */
+function bear_skin_menu_local_tasks(&$variables) {
+  $output = '';
+
+  // Add theme hook suggestions for tab type.
+  foreach (array('primary', 'secondary') as $type) {
+    if (!empty($variables[$type])) {
+      foreach (array_keys($variables[$type]) as $key) {
+        if (isset($variables[$type][$key]['#theme']) && ($variables[$type][$key]['#theme'] == 'menu_local_task' || is_array($variables[$type][$key]['#theme']) && in_array('menu_local_task', $variables[$type][$key]['#theme']))) {
+          $variables[$type][$key]['#theme'] = array('menu_local_task__' . $type, 'menu_local_task');
+        }
+      }
+    }
+  }
+
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<h2 class="u-hidden" id="primaryTabsLabel">' . t('Primary tabs') . '</h2>';
+    $variables['primary']['#prefix'] .= '<ul class="tabs-primary tabs primary" role="tablist" aria-labelledby="primaryTabsLabel">';
+    $variables['primary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['primary']);
+  }
+  if (!empty($variables['secondary'])) {
+    $variables['secondary']['#prefix'] = '<h2 class="u-hidden" id="secondaryTabsLabel">' . t('Secondary tabs') . '</h2>';
+    $variables['secondary']['#prefix'] .= '<ul class="tabs-secondary tabs secondary" role="tablist" aria-labelledby="secondarTabsLabel">';
+    $variables['secondary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['secondary']);
+  }
+  
+  return $output;
+}
+
+/**
+ * Implements theme_menu_local_task()
+ * Make the tab items more accessible using WAI standards
+ */
+function bear_skin_menu_local_task($variables) {
+  $type = $class = FALSE;
+
+  $link = $variables['element']['#link'];
+  $link_text = $link['title'];
+
+  // Check for tab type set in zen_menu_local_tasks().
+  if (is_array($variables['element']['#theme'])) {
+    $type = in_array('menu_local_task__secondary', $variables['element']['#theme']) ? 'tabs-secondary' : 'tabs-primary';
+  }
+
+  // Add SMACSS-style class names.
+  if ($type) {
+    $link['localized_options']['attributes']['class'][] = $type . '__tab-link';
+    $class = $type . '__tab';
+  }
+
+  $link['localized_options']['attributes']['role'] = 'tab';
+
+  if (!empty($variables['element']['#active'])) {
+    // Add text to indicate active tab for non-visual users.
+    $active = ' <span class="element-invisible">' . t('(active tab)') . '</span>';
+
+    // If the link does not contain HTML already, check_plain() it now.
+    // After we set 'html'=TRUE the link will not be sanitized by l().
+    if (empty($link['localized_options']['html'])) {
+      $link['title'] = check_plain($link['title']);
+    }
+    $link['localized_options']['html'] = TRUE;
+    $link_text = t('!local-task-title!active', array('!local-task-title' => $link['title'], '!active' => $active));
+
+    if (!$type) {
+      $class = 'active';
+    }
+    else {
+      $link['localized_options']['attributes']['class'][] = 'is-active';
+      $class .= ' is-active';
+    }
+  }
+
+  return '<li' . ($class ? ' class="' . $class . '"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . "</li>\n";
 }
 
 /***********************

@@ -31,4 +31,10 @@
       margin-bottom: 0;
     }
   }
+
+  // the output of dpm() gets put into a messages
+  // we need to set its color here
+  .krumo-root {
+    color: $base-font-color;
+  }
 }
