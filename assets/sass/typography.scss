@@ -31,26 +31,26 @@ h6, .h6 {
   font-family: $base-font-family-serif;
 }
 
-h1 {
+h1, .h1 {
   @include rem(font-size, $h1-font-size);
 }
 
-h2 {
+h2, .h2 {
   @include rem(font-size, $h2-font-size);
 }
 
-h3 {
+h3, .h3 {
   @include rem(font-size, $h3-font-size);
 }
 
-h4 {
+h4, .h4 {
   @include rem(font-size, $h4-font-size);
 }
 
-h5 {
+h5, .h5 {
   @include rem(font-size, $h5-font-size);
 }
 
-h6 {
+h6, .h6 {
   @include rem(font-size, $h6-font-size);
 }

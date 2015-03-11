@@ -37,37 +37,37 @@ h6, .h6 {
 }
 
 /* line 34, ../sass/typography.scss */
-h1 {
+h1, .h1 {
   font-size: 32px;
   font-size: 3.2rem;
 }
 
 /* line 38, ../sass/typography.scss */
-h2 {
+h2, .h2 {
   font-size: 24px;
   font-size: 2.4rem;
 }
 
 /* line 42, ../sass/typography.scss */
-h3 {
+h3, .h3 {
   font-size: 19px;
   font-size: 1.872rem;
 }
 
 /* line 46, ../sass/typography.scss */
-h4 {
+h4, .h4 {
   font-size: 16px;
   font-size: 1.6rem;
 }
 
 /* line 50, ../sass/typography.scss */
-h5 {
+h5, .h5 {
   font-size: 13px;
   font-size: 1.328rem;
 }
 
 /* line 54, ../sass/typography.scss */
-h6 {
+h6, .h6 {
   font-size: 12px;
   font-size: 1.2rem;
 }
