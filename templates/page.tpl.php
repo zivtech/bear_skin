@@ -22,15 +22,19 @@
 
       <?php print render($page['header']); ?>
         <?php if (theme_get_setting('user_menu')): ?>
-          <div id="bear-user-menu">
+          <nav id="bear-user-menu" role="navigation" class="nav-user">
+            <?php // provide userMenu label here for WAI accessibility ?>
+            <h3 class="u-hidden" id="userMenuLabel"><?php print t('My Account Menu:') ?></h3>
             <?php print $user_menu;  ?>
-        </div>
+          </nav>
         <?php endif; ?>
     </header>
   </div>
 
   <div class="wrapper navigation">
     <nav id="navigation" tabindex="-1" class="main-menu">
+      <?php // provide userMenu label here for WAI accessibility ?>
+      <h3 class="u-hidden" id="mainMenuLabel"><?php print t('Main Navigation Menu:') ?></h3>
       <?php print render($page['navigation']); ?>
     </nav><!-- /#navigation -->
   </div>

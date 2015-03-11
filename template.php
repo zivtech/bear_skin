@@ -30,20 +30,21 @@ function bear_skin_preprocess_page(&$variables) {
   $page = $variables['page'];
 
   // check if there is content in the sidebars
-  $variables['has_sidebar_first'] = false;
-  $variables['has_sidebar_second'] = false;
+  $variables['has_sidebar_first'] = FALSE;
+  $variables['has_sidebar_second'] = FALSE;
   if (!empty($page['sidebar_first'])) {
-    $variables['has_sidebar_first'] = true;
+    $variables['has_sidebar_first'] = TRUE;
   }
   if (!empty($page['sidebar_second'])) {
-    $variables['has_sidebar_second'] = true;
+    $variables['has_sidebar_second'] = TRUE;
   }
 
   // setup the user menu to display in the header
-  $variables['user_menu'] = theme('links', array(
+  $variables['user_menu'] = theme('links__user_menu', array(
     'links' => menu_navigation_links('user-menu'),
     'attributes' => array(
-      'class ' => array('links-list', 'site-menu')
+      'class ' => array('nav-user__list'),
+      'aria-labelledby' => 'userMenuLabel'
     )
   ));
 }
@@ -55,6 +56,7 @@ function bear_skin_preprocess_page(&$variables) {
 function bear_skin_css_alter(&$css) {
   // remove drupal's default message css
   unset($css['modules/system/system.messages.css']);
+  unset($css['profiles/bear/themes/zen/system.menus.css']);
 
   // if css aggregation is off, include css as link tags
   // this allows livereload to inject css
@@ -82,13 +84,14 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
 }
 
 /**
- * Implements theme_preprocess_links()
+ * Implements theme_links()
+ * specifically for the user_menu only!
  */
-function bear_skin_links(&$variables) {
-  // for any menu that runs drupal's default render
-  // add a class to help with styling
+function bear_skin_links__user_menu(&$variables) {
+  $variables['header']['title'] = 'user-menu';
   foreach ($variables['links'] as $key => &$link) {
-    $link['attributes'] = array('class' => 'links-list__link');
+    $link['html'] = TRUE;
+    $link['attributes'] = array('class' => 'nav-user__link');
   }
   return theme_links($variables);
 }
@@ -139,7 +142,7 @@ function bear_skin_breadcrumb(&$variables) {
     $crumbs = '<nav role="navigation" aria-label="breadcrumbs">' . "\n";
     $crumbs .= '<h3 class="u-hidden" id="breadcrumbLabel">' . t('You are here:') . '</h3>';
     $crumbs .= '<ul class="breadcrumbs" aria-labelledby="breadcrumbLabel">' . "\n";
-    foreach($breadcrumb as $value) {
+    foreach ($breadcrumb as $value) {
       $value = str_replace('<a', '<a class="breadcrumbs__link"', $value);
       // the breadcrumb divider has aria-hidden, which should make it ignored by screen readers
       $crumbs .= '<li class="breadcrumbs__item">' . $value . ' <span class="breadcrumbs__divider" aria-hidden="true">&raquo;</span></li>' . "\n";

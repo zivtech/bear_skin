@@ -3,14 +3,6 @@
 //
 // Tabs
 //
-
-$tabs-container-bg: #fff;
-$tabs-border: #bbb;
-
-/*
- * Basic positioning styles shared by primary and secondary tabs.
- */
-
 ul.primary,
 ul.secondary {
   @include clearfix;

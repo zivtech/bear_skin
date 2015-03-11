@@ -6,31 +6,10 @@
 
 .wrapper.header {
   background-color: #8E8E8E;
-  box-shadow: inset 0px -3px 6px #666;
 
   header {
     padding: 25px 0;
     position: relative;
-    #bear-user-menu {
-      float: right;
-      margin: 0;
-      @include breakpoint($breakpoint-medium-width) {
-        float: none;
-        text-align: center;
-        margin: 0;
-      }
-      ul {
-        margin: 20px 0 0 0;
-        padding: 0;
-        li {
-          @include inline-block;
-          margin: 0 0 0 10px;
-          a {
-            @extend %button;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -43,7 +22,26 @@ h1#site-name {
   }
 }
 
-
+.nav-user {
+  float: right;
+  margin: 0;
+  @include breakpoint($breakpoint-medium-width) {
+    float: none;
+    text-align: center;
+    margin: 0;
+  }
+  &__list {
+    margin: 20px 0 0 0;
+    padding: 0;
+    li {
+      @include inline-block;
+      margin: 0 0 0 10px;
+    }
+  }
+  &__link {
+    @extend %button;
+  }
+}
 
 @include breakpoint($breakpoint-medium-width) {
   .wrapper.header #header {
