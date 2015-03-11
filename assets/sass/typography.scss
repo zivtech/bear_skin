@@ -1,7 +1,55 @@
 @import "bear-base";
 
+html {
+  height: 100%;
+  // if the browser default size is 16px
+  // 62.5% resets that to 10px
+  // this makes using rem units easier
+  font-size: 62.5%;
+}
+
+body {
+  @include rem(font-size, 16px);
+  color: $base-font-color;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+}
+
 a {
   @include link-colors($link-color, $link-color-hover);
   text-decoration: none;
   transition: color 0.25s ease;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $base-font-family-serif;
+}
+
+h1 {
+  @include rem(font-size, $h1-font-size);
+}
+
+h2 {
+  @include rem(font-size, $h2-font-size);
+}
+
+h3 {
+  @include rem(font-size, $h3-font-size);
+}
+
+h4 {
+  @include rem(font-size, $h4-font-size);
+}
+
+h5 {
+  @include rem(font-size, $h5-font-size);
+}
+
+h6 {
+  @include rem(font-size, $h6-font-size);
 }

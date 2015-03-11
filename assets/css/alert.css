@@ -1,15 +1,105 @@
-/* line 6, ../sass/alert.scss */
+/* line 36, ../sass/base/_alert.scss */
 .messages {
-  position: relative;
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+  background-color: #8bb8df;
+  color: #f9f9f9;
+  border: 1px solid #63a0d4;
+  border-left-width: 10px;
+  margin: 1em 0;
 }
-/* line 9, ../sass/alert.scss */
-.messages:before {
-  display: block;
-  content: "";
-  width: 5px;
-  background: #337ab7;
-  background: -webkit-repeating-linear-gradient(145deg, #337ab7 2px, #f9f9f9 2px);
-  background: repeating-linear-gradient(-55deg, #337ab7 2px, #f9f9f9 2px);
+/* line 21, ../sass/base/_alert.scss */
+.messages a {
+  color: #f9f9f9;
+  border-bottom: 1px dotted #f9f9f9;
+}
+/* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+.messages a:hover {
+  color: #f9f9f9;
+}
+/* line 26, ../sass/base/_alert.scss */
+.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.5em;
+}
+
+/* line 40, ../sass/base/_alert.scss */
+.error.messages {
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+  background-color: #d9534f;
+  color: #f9f9f9;
+  border: 1px solid #c9302c;
+  border-left-width: 10px;
+  margin: 1em 0;
+}
+/* line 21, ../sass/base/_alert.scss */
+.error.messages a {
+  color: #f9f9f9;
+  border-bottom: 1px dotted #f9f9f9;
+}
+/* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+.error.messages a:hover {
+  color: #f9f9f9;
+}
+/* line 26, ../sass/base/_alert.scss */
+.error.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.5em;
+}
+
+/* line 44, ../sass/base/_alert.scss */
+.success.messages, .messages.status {
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+  background-color: #5cb85c;
+  color: #f9f9f9;
+  border: 1px solid #449d44;
+  border-left-width: 10px;
+  margin: 1em 0;
+}
+/* line 21, ../sass/base/_alert.scss */
+.success.messages a, .messages.status a {
+  color: #f9f9f9;
+  border-bottom: 1px dotted #f9f9f9;
+}
+/* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+.success.messages a:hover, .messages.status a:hover {
+  color: #f9f9f9;
+}
+/* line 26, ../sass/base/_alert.scss */
+.success.messages ul, .messages.status ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.5em;
+}
+
+/* line 48, ../sass/base/_alert.scss */
+.warning.messages {
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+  background-color: #f0ad4e;
+  color: #f9f9f9;
+  border: 1px solid #ec971f;
+  border-left-width: 10px;
+  margin: 1em 0;
+}
+/* line 21, ../sass/base/_alert.scss */
+.warning.messages a {
+  color: #f9f9f9;
+  border-bottom: 1px dotted #f9f9f9;
+}
+/* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+.warning.messages a:hover {
+  color: #f9f9f9;
+}
+/* line 26, ../sass/base/_alert.scss */
+.warning.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.5em;
 }
 
 /*# sourceMappingURL=alert.css.map */

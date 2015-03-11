@@ -4,19 +4,6 @@
 // Main bear stylesheet
 //
 
-body {
-  color: $dark;
-}
-
-html, body, button, input, select, textarea {
-  @include bear-font-main;
-}
-
-h1, h2, h3, h4, h5 {
-  @include bear-font-titles;
-  font-weight: 400;
-}
-
 #main {
   clear: both;
 }
@@ -195,7 +182,7 @@ aside.sidebars {
     li {
       opacity: 1 !important;
       p {
-        @include bear-font-titles;
+        font-family: $base-font-family-serif;
         text-align: center;
         background: #f5f5f5;
         margin: 0;

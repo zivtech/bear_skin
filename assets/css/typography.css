@@ -1,4 +1,18 @@
 /* line 3, ../sass/typography.scss */
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+/* line 11, ../sass/typography.scss */
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #555555;
+  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+}
+
+/* line 17, ../sass/typography.scss */
 a {
   color: #61AEE2;
   text-decoration: none;
@@ -8,6 +22,17 @@ a {
 /* line 24, ../../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
   color: #3698da;
+}
+
+/* line 23, ../sass/typography.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
+}
+
+/* line 27, ../sass/typography.scss */
+h1 {
+  font-size: 32px;
+  font-size: 3.2rem;
 }
 
 /*# sourceMappingURL=typography.css.map */

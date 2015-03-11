@@ -3,18 +3,19 @@
 //
 // Alert styles
 //
-%alert {
-  position: relative;
-
-  &:before {
-    display: block;
-    content: "";
-    width: 5px;
-    background: $color-primary;
-    background: repeating-linear-gradient(-55deg, $color-primary 2px, $whitey 2px);
-  }
-}
-
 .messages {
   @extend %alert;
+
+  &.error {
+    @extend %alert.error;
+  }
+
+  &.success,
+  &.status {
+    @extend %alert.success;
+  }
+
+  &.warning {
+    @extend %alert.warning;
+  }
 }

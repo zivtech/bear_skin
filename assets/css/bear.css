@@ -75,46 +75,29 @@
 }
 
 /* line 7, ../sass/bear.scss */
-body {
-  color: #555555;
-}
-
-/* line 11, ../sass/bear.scss */
-html, body, button, input, select, textarea {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-}
-
-/* line 15, ../sass/bear.scss */
-h1, h2, h3, h4, h5 {
-  font-family: Georgia, Times, sans-serif;
-  font-weight: 400;
-}
-
-/* line 20, ../sass/bear.scss */
 #main {
   clear: both;
 }
 
-/* line 24, ../sass/bear.scss */
+/* line 11, ../sass/bear.scss */
 #page {
   min-width: 300px;
 }
 
-/* line 28, ../sass/bear.scss */
+/* line 15, ../sass/bear.scss */
 #navigation {
   width: 100%;
   padding: 15px 0;
 }
 
 @media (max-width: 25em) {
-  /* line 34, ../sass/bear.scss */
+  /* line 21, ../sass/bear.scss */
   ul.primary li, ul.secondary li {
     float: none;
     clear: both;
     margin: 0;
   }
-  /* line 38, ../sass/bear.scss */
+  /* line 25, ../sass/bear.scss */
   ul.primary li a, ul.secondary li a {
     width: 88%;
   }
@@ -122,22 +105,22 @@ h1, h2, h3, h4, h5 {
 /***********
 ~STRUCTURE
 ***********/
-/* line 48, ../sass/bear.scss */
+/* line 35, ../sass/bear.scss */
 h1 {
   font-size: 160%;
 }
 
-/* line 53, ../sass/bear.scss */
+/* line 40, ../sass/bear.scss */
 .wrapper.header {
   background-color: #8E8E8E;
   box-shadow: inset 0px -3px 6px #666;
 }
-/* line 57, ../sass/bear.scss */
+/* line 44, ../sass/bear.scss */
 .wrapper.footer {
   background-color: #EFF2F1;
 }
 
-/* line 62, ../sass/bear.scss */
+/* line 49, ../sass/bear.scss */
 .breadcrumb {
   margin: 20px 0;
 }
@@ -145,35 +128,35 @@ h1 {
 /***********
 ~HEADER
 ***********/
-/* line 69, ../sass/bear.scss */
+/* line 56, ../sass/bear.scss */
 .region-header {
   clear: none;
 }
 
-/* line 74, ../sass/bear.scss */
+/* line 61, ../sass/bear.scss */
 .wrapper.header header {
   padding: 25px 0;
   position: relative;
 }
-/* line 77, ../sass/bear.scss */
+/* line 64, ../sass/bear.scss */
 .wrapper.header header #bear-user-menu {
   float: right;
   margin: 0;
 }
 @media (max-width: 50em) {
-  /* line 77, ../sass/bear.scss */
+  /* line 64, ../sass/bear.scss */
   .wrapper.header header #bear-user-menu {
     float: none;
     text-align: center;
     margin: 0;
   }
 }
-/* line 85, ../sass/bear.scss */
+/* line 72, ../sass/bear.scss */
 .wrapper.header header #bear-user-menu ul {
   margin: 20px 0 0 0;
   padding: 0;
 }
-/* line 88, ../sass/bear.scss */
+/* line 75, ../sass/bear.scss */
 .wrapper.header header #bear-user-menu ul li {
   display: inline-block;
   vertical-align: middle;
@@ -183,18 +166,18 @@ h1 {
   margin: 0 0 0 10px;
 }
 
-/* line 100, ../sass/bear.scss */
+/* line 87, ../sass/bear.scss */
 h1#site-name {
   font-size: 2em;
   line-height: .5em;
   margin: 70px 0 0 25px;
 }
-/* line 104, ../sass/bear.scss */
+/* line 91, ../sass/bear.scss */
 h1#site-name a:link, h1#site-name a:visited {
   color: #ffffff;
 }
 
-/* line 109, ../sass/bear.scss */
+/* line 96, ../sass/bear.scss */
 #block-search-form {
   background: #FFFFFF;
   padding: 0 0 0 10px;
@@ -203,7 +186,7 @@ h1#site-name a:link, h1#site-name a:visited {
   margin: 60px 0 0 0;
 }
 @media (max-width: 50em) {
-  /* line 109, ../sass/bear.scss */
+  /* line 96, ../sass/bear.scss */
   #block-search-form {
     clear: both;
     float: none;
@@ -211,17 +194,17 @@ h1#site-name a:link, h1#site-name a:visited {
     margin: 0 auto;
   }
 }
-/* line 121, ../sass/bear.scss */
+/* line 108, ../sass/bear.scss */
 #block-search-form input.form-text {
   border: none;
   border-right: 1px solid #CCCCCC;
   width: 150px;
 }
-/* line 126, ../sass/bear.scss */
+/* line 113, ../sass/bear.scss */
 #block-search-form input.form-text:focus {
   box-shadow: none;
 }
-/* line 130, ../sass/bear.scss */
+/* line 117, ../sass/bear.scss */
 #block-search-form input.form-submit {
   text-indent: -9999px;
   background: #FFFFFF url('../images/search.png?1425402197') no-repeat center center;
@@ -237,23 +220,23 @@ h1#site-name a:link, h1#site-name a:visited {
 }
 
 @media (max-width: 50em) {
-  /* line 145, ../sass/bear.scss */
+  /* line 132, ../sass/bear.scss */
   .wrapper.header #header {
     text-align: center;
     padding: 0;
   }
-  /* line 148, ../sass/bear.scss */
+  /* line 135, ../sass/bear.scss */
   .wrapper.header #header #logo {
     float: none;
     clear: both;
     display: block;
     padding: 20px 0;
   }
-  /* line 154, ../sass/bear.scss */
+  /* line 141, ../sass/bear.scss */
   .wrapper.header #header #name-and-slogan {
     float: none;
   }
-  /* line 156, ../sass/bear.scss */
+  /* line 143, ../sass/bear.scss */
   .wrapper.header #header #name-and-slogan h1 {
     margin: 10px 0;
   }
@@ -261,11 +244,11 @@ h1#site-name a:link, h1#site-name a:visited {
 /***********
 ~SIDEBARS
 ***********/
-/* line 168, ../sass/bear.scss */
+/* line 155, ../sass/bear.scss */
 aside.sidebars .sidebar {
   padding: 5px 0 20px 0;
 }
-/* line 170, ../sass/bear.scss */
+/* line 157, ../sass/bear.scss */
 aside.sidebars .sidebar h2 {
   background: #EFF2F1;
   text-indent: 10px;
@@ -273,7 +256,7 @@ aside.sidebars .sidebar h2 {
   font-size: 110%;
 }
 @media (max-width: 62.5em) {
-  /* line 168, ../sass/bear.scss */
+  /* line 155, ../sass/bear.scss */
   aside.sidebars .sidebar {
     padding-left: auto;
   }
@@ -282,11 +265,11 @@ aside.sidebars .sidebar h2 {
 /***********
 ~SLIDESHOW
 ***********/
-/* line 186, ../sass/bear.scss */
+/* line 173, ../sass/bear.scss */
 .view-slideshow {
   padding: 0 3px;
 }
-/* line 188, ../sass/bear.scss */
+/* line 175, ../sass/bear.scss */
 .view-slideshow .flexslider {
   background: none repeat scroll 0 0 #FFFFFF;
   border-radius: 0;
@@ -295,13 +278,13 @@ aside.sidebars .sidebar h2 {
   position: relative;
   box-shadow: 0 0 5px #ccc;
 }
-/* line 195, ../sass/bear.scss */
+/* line 182, ../sass/bear.scss */
 .view-slideshow .flexslider li {
   opacity: 1 !important;
 }
-/* line 197, ../sass/bear.scss */
+/* line 184, ../sass/bear.scss */
 .view-slideshow .flexslider li p {
-  font-family: Georgia, Times, sans-serif;
+  font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
   text-align: center;
   background: #f5f5f5;
   margin: 0;
@@ -312,7 +295,7 @@ aside.sidebars .sidebar h2 {
 /***********
 ~FOOTER
 ***********/
-/* line 214, ../sass/bear.scss */
+/* line 201, ../sass/bear.scss */
 .wrapper.footer #footer {
   margin-left: auto;
   margin-right: auto;
@@ -320,7 +303,7 @@ aside.sidebars .sidebar h2 {
   font-size: 12px;
 }
 @media (max-width: 75em) {
-  /* line 214, ../sass/bear.scss */
+  /* line 201, ../sass/bear.scss */
   .wrapper.footer #footer {
     padding-left: 20px;
     padding-right: 20px;
@@ -328,23 +311,23 @@ aside.sidebars .sidebar h2 {
 }
 
 @media (max-width: 50em) {
-  /* line 227, ../sass/bear.scss */
+  /* line 214, ../sass/bear.scss */
   #footer {
     text-align: center;
   }
 
-  /* line 230, ../sass/bear.scss */
+  /* line 217, ../sass/bear.scss */
   ul.social-footer {
     margin-top: -10px;
   }
-  /* line 232, ../sass/bear.scss */
+  /* line 219, ../sass/bear.scss */
   ul.social-footer li {
     display: inline-block;
     float: none;
   }
 }
 /* BEARSKIN site Documentation page fun */
-/* line 242, ../sass/bear.scss */
+/* line 229, ../sass/bear.scss */
 #documentation p.tb {
   *zoom: 1;
   float: left;
@@ -382,7 +365,7 @@ aside.sidebars .sidebar h2 {
 /*
  * CSS Animations
  */
-/* line 253, ../sass/bear.scss */
+/* line 240, ../sass/bear.scss */
 .m-scene .scene_element {
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
@@ -392,13 +375,13 @@ aside.sidebars .sidebar h2 {
           animation-fill-mode: both;
 }
 
-/* line 259, ../sass/bear.scss */
+/* line 246, ../sass/bear.scss */
 .m-scene .scene_element--fadein {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
 }
 
-/* line 263, ../sass/bear.scss */
+/* line 250, ../sass/bear.scss */
 .m-scene.is-exiting .scene_element {
   -webkit-animation-direction: alternate-reverse;
           animation-direction: alternate-reverse;

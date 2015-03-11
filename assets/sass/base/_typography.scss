@@ -1,20 +1,25 @@
 //
 // Font faces, stacks and sizes.
+// override these variables in _custom.scss
 //
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   16px !default; // The font size set on the root html element.
-$base-line-height: 24px !default; // This line-height determines the basic unit of vertical rhythm.
+$base-font-size: 62.5% !default;
+// The font size set on the root html element.
+$base-line-height: 1.5 !default;
+// This line-height determines the basic unit of vertical rhythm.
+$body-font-size: 16px !default;
+// The font size of regular paragraph text
 
-$h1-font-size: 2    * $base-font-size !default;
-$h2-font-size: 1.5  * $base-font-size !default;
-$h3-font-size: 1.17 * $base-font-size !default;
-$h4-font-size: 1    * $base-font-size !default;
-$h5-font-size: 0.83 * $base-font-size !default;
-$h6-font-size: 0.75 * $base-font-size !default;
+$h1-font-size: 2    * $body-font-size !default;
+$h2-font-size: 1.5  * $body-font-size !default;
+$h3-font-size: 1.17 * $body-font-size !default;
+$h4-font-size: 1    * $body-font-size !default;
+$h5-font-size: 0.83 * $body-font-size !default;
+$h6-font-size: 0.75 * $body-font-size !default;
 
 // The following font family declarations are based on the Microsoft core web
 // fonts which are common fonts available on most computer systems. The DejaVu
@@ -27,27 +32,30 @@ $h6-font-size: 0.75 * $base-font-size !default;
 // monospace) hints at what type of font to use if the web browser doesn't
 // find any of the fonts in the list.
 
-// First, let's create some font stacks.
+// Serif font stacks
 $times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif !default;
-$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif !default;
-$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif !default;
+$times: Times, "Times New Roman", Georgia, "DejaVu Serif", serif !default;
+$georgia: Georgia, "Times New Roman", "DejaVu Serif", serif !default;
 
-$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif !default;
-$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif !default;
-$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif !default;
-$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif !default;
+// Sans-serif font stacks
+$verdana: Verdana, Tahoma, "DejaVu Sans", sans-serif !default;
+$tahoma: Tahoma, Verdana, "DejaVu Sans", sans-serif !default;
+$helvetica: Helvetica, Arial, "Nimbus Sans L", sans-serif !default;
+$arial: Arial, Helvetica, "Nimbus Sans L", sans-serif !default;
 
+// Monospace font stacks
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif !default;
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif !default;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana !default; // The font family set on the html element.
-$font-body:        $verdana !default;
-$font-monospace:   $courier !default;
+$base-font-family: $verdana !default;
+$base-font-family-monospace: $courier !default;
+$base-font-family-serif: $georgia !default;
 
 //
-// Typography variables
+// Typography colors
 //
+$base-font-color: $dark !default;
 $link-color: $blue !default;
-$link-color-hover: darken($link-color, 10%);
+$link-color-hover: darken($link-color, 10%) !default;

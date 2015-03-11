@@ -3,7 +3,7 @@
 // Customize your theme by copying the variable name into _custom.scss and remove !default
 //
 $button-padding: 0.7em 1.5em !default;
-$button-border-radius: 2px !default;
+$button-border-radius: $border-radius !default;
 $button-primary-color: $dark !default;
 $button-primary-font-color: $whitey !default;
 $button-secondary-color: $brown !default;
@@ -23,8 +23,8 @@ $button-highlight-font-color: $whitey !default;
   transition: background-color 0.4s;
   background-color: $color;
   color: $font-color;
-  padding: $button-padding;
-  border-radius: $button-border-radius;
+  padding: $padding;
+  border-radius: $radius;
   * {
     position: relative;
   }
