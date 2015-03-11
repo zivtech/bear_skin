@@ -480,15 +480,57 @@ table .item-list ul {
   /* IE doesn't display borders on table rows */
 }
 
+/* line 368, ../sass/forms.scss */
+#block-search-form {
+  background: #FFFFFF;
+  padding: 0 0 0 10px;
+  float: right;
+  width: 200px;
+  margin: 60px 0 0 0;
+}
+@media (max-width: 50em) {
+  /* line 368, ../sass/forms.scss */
+  #block-search-form {
+    clear: both;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+/* line 380, ../sass/forms.scss */
+#block-search-form input.form-text {
+  border: none;
+  border-right: 1px solid #CCCCCC;
+  width: 150px;
+}
+/* line 385, ../sass/forms.scss */
+#block-search-form input.form-text:focus {
+  box-shadow: none;
+}
+/* line 389, ../sass/forms.scss */
+#block-search-form input.form-submit {
+  text-indent: -9999px;
+  background: #FFFFFF url('../images/search.png?1425402197') no-repeat center center;
+  border: none;
+  box-shadow: none;
+  -webkit-filter: none;
+          filter: none;
+  padding: 5px 15px;
+  width: 40px;
+  height: 28px;
+  text-shadow: none;
+  margin: 0;
+}
+
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
  */
-/* line 374, ../sass/forms.scss */
+/* line 407, ../sass/forms.scss */
 td.menu-disabled {
   background: #ccc;
 }
 
-/* line 378, ../sass/forms.scss */
+/* line 411, ../sass/forms.scss */
 html.js input.form-autocomplete {
   background-position: 100% 8px;
 }

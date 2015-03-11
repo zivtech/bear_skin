@@ -1,3 +1,154 @@
+/* line 68, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid #3b3b3b;
+  outline: none;
+  -webkit-transition: background-color 0.4s;
+          transition: background-color 0.4s;
+  background-color: #555555;
+  color: #f9f9f9;
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+}
+/* line 28, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a * {
+  position: relative;
+}
+/* line 31, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a:hover, .wrapper.header header #bear-user-menu ul li a:focus {
+  background-color: #3b3b3b;
+  text-decoration: none;
+}
+/* line 35, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/* line 47, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a:active:before {
+  width: 120%;
+  padding-top: 120%;
+  -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
+          transition: width .2s ease-out, padding-top .2s ease-out;
+}
 
+/* line 72, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.secondary {
+  background-color: #4C1B01;
+  color: #f9f9f9;
+}
+/* line 75, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.secondary:hover, .wrapper.header header #bear-user-menu ul li a.secondary:focus {
+  background-color: #1a0900;
+}
+
+/* line 80, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.highlight {
+  background-color: #F9B634;
+  color: #f9f9f9;
+}
+/* line 83, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.highlight:hover, .wrapper.header header #bear-user-menu ul li a.highlight:focus {
+  background-color: #f3a307;
+}
+
+/* line 88, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.success {
+  background-color: #5cb85c;
+  color: #f9f9f9;
+}
+/* line 91, ../sass/base/_button.scss */
+.wrapper.header header #bear-user-menu ul li a.success:hover, .wrapper.header header #bear-user-menu ul li a.success:focus {
+  background-color: #449d44;
+}
+
+/* line 3, ../sass/header.scss */
+.region-header {
+  clear: none;
+}
+
+/* line 7, ../sass/header.scss */
+.wrapper.header {
+  background-color: #8E8E8E;
+  box-shadow: inset 0px -3px 6px #666;
+}
+/* line 11, ../sass/header.scss */
+.wrapper.header header {
+  padding: 25px 0;
+  position: relative;
+}
+/* line 14, ../sass/header.scss */
+.wrapper.header header #bear-user-menu {
+  float: right;
+  margin: 0;
+}
+@media (max-width: 50em) {
+  /* line 14, ../sass/header.scss */
+  .wrapper.header header #bear-user-menu {
+    float: none;
+    text-align: center;
+    margin: 0;
+  }
+}
+/* line 22, ../sass/header.scss */
+.wrapper.header header #bear-user-menu ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+/* line 25, ../sass/header.scss */
+.wrapper.header header #bear-user-menu ul li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin: 0 0 0 10px;
+}
+
+/* line 37, ../sass/header.scss */
+h1#site-name {
+  font-size: 2em;
+  line-height: .5em;
+  margin: 70px 0 0 25px;
+}
+/* line 41, ../sass/header.scss */
+h1#site-name a:link, h1#site-name a:visited {
+  color: #ffffff;
+}
+
+@media (max-width: 50em) {
+  /* line 49, ../sass/header.scss */
+  .wrapper.header #header {
+    text-align: center;
+    padding: 0;
+  }
+  /* line 52, ../sass/header.scss */
+  .wrapper.header #header #logo {
+    float: none;
+    clear: both;
+    display: block;
+    padding: 20px 0;
+  }
+  /* line 58, ../sass/header.scss */
+  .wrapper.header #header #name-and-slogan {
+    float: none;
+  }
+  /* line 60, ../sass/header.scss */
+  .wrapper.header #header #name-and-slogan h1 {
+    margin: 10px 0;
+  }
+}
 
 /*# sourceMappingURL=header.css.map */

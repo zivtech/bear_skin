@@ -33,24 +33,25 @@ base theme  = zen
 ; stylesheets[all][] = system.menus.css
 
 ; Then we add our own stylesheets.
-stylesheets[screen][] = assets/css/reset.css
-stylesheets[screen][] = assets/css/alert.css
-stylesheets[screen][] = assets/css/typography.css
-stylesheets[screen][] = assets/css/buttons.css
-stylesheets[screen][] = assets/css/layout.css
-stylesheets[screen][] = assets/css/bear-menu.css
-stylesheets[screen][] = assets/css/blocks.css
-stylesheets[screen][] = assets/css/comments.css
-stylesheets[screen][] = assets/css/forms.css
-stylesheets[screen][] = assets/css/navigation.css
-stylesheets[screen][] = assets/css/pages.css
-stylesheets[screen][] = assets/css/panels.css
-stylesheets[screen][] = assets/css/sidebars.css
-stylesheets[screen][] = assets/css/sticky-footer.css
-stylesheets[screen][] = assets/css/tabs.css
-stylesheets[screen][] = assets/css/views-styles.css
-stylesheets[screen][] = assets/css/wireframes.css
-stylesheets[screen][] = assets/css/bear.css
+stylesheets[all][] = assets/css/reset.css
+stylesheets[all][] = assets/css/alert.css
+stylesheets[all][] = assets/css/typography.css
+stylesheets[all][] = assets/css/buttons.css
+stylesheets[all][] = assets/css/layout.css
+stylesheets[all][] = assets/css/bear-menu.css
+stylesheets[all][] = assets/css/blocks.css
+stylesheets[all][] = assets/css/comments.css
+stylesheets[all][] = assets/css/forms.css
+stylesheets[all][] = assets/css/navigation.css
+stylesheets[all][] = assets/css/pages.css
+stylesheets[all][] = assets/css/panels.css
+stylesheets[all][] = assets/css/sidebars.css
+stylesheets[all][] = assets/css/sticky-footer.css
+stylesheets[all][] = assets/css/tabs.css
+stylesheets[all][] = assets/css/views-styles.css
+stylesheets[all][] = assets/css/wireframes.css
+stylesheets[all][] = assets/css/header.css
+stylesheets[all][] = assets/css/footer.css
 stylesheets[print][] = assets/css/print.css
 
 

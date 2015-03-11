@@ -1,4 +1,4 @@
-@import "bear-base";
+@import "bear";
 
 [class^="icon-"], [class*=" icon-"] {
   @include inline-block();
@@ -356,7 +356,7 @@ table .item-list ul {
   margin: 0;
 }
 
-//@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+
 .lt-ie8 tr.even,
 .lt-ie8 tr.odd {
   th,
@@ -365,7 +365,40 @@ table .item-list ul {
   }
 }
 
-//}
+#block-search-form {
+  background: #FFFFFF;
+  padding: 0 0 0 10px;
+  float: right;
+  width: 200px;
+  margin: 60px 0 0 0;
+  @include breakpoint($breakpoint-medium-width) {
+    clear: both;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+  input.form-text {
+    border: none;
+    border-right: 1px solid #CCCCCC;
+
+    width: 150px;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  input.form-submit {
+    text-indent: -9999px;
+    background: #FFFFFF image-url("search.png") no-repeat center center;
+    border: none;
+    box-shadow: none;
+    filter: none;
+    padding: 5px 15px;
+    width: 40px;
+    height: 28px;
+    text-shadow: none;
+    margin: 0;
+  }
+}
 
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.

@@ -22,12 +22,6 @@ $alert-border-radius: $border-radius !default;
     @include link-colors($font-color, $font-color);
     border-bottom: 1px dotted $font-color;
   }
-
-  ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 1.5em;
-  }
 }
 
 //
@@ -37,14 +31,20 @@ $alert-border-radius: $border-radius !default;
   @include alert;
 }
 
-%alert.error {
-  @include alert($color-error);
+%alert-error {
+  $darker-color: darken($color-error, 10%);
+  border-color: $darker-color;
+  background-color: $color-error;
 }
 
-%alert.success {
-  @include alert($color-success);
+%alert-success {
+  $darker-color: darken($color-success, 10%);
+  border-color: $darker-color;
+  background-color: $color-success;
 }
 
-%alert.warning {
-  @include alert($color-warning);
+%alert-warning {
+  $darker-color: darken($color-warning, 10%);
+  border-color: $darker-color;
+  background-color: $color-warning;
 }

@@ -1,4 +1,4 @@
-@import "bear-base";
+@import "bear";
 
 //
 // Alert styles
@@ -6,16 +6,29 @@
 .messages {
   @extend %alert;
 
-  &.error {
-    @extend %alert.error;
+  &--error {
+    @extend %alert-error;
   }
 
-  &.success,
-  &.status {
-    @extend %alert.success;
+  &--success,
+  &--status {
+    @extend %alert-success;
   }
 
-  &.warning {
-    @extend %alert.warning;
+  &--warning {
+    @extend %alert-warning;
+  }
+
+  &__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1.5em;
+  }
+
+  &__item {
+    margin-bottom: 0.8em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

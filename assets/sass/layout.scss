@@ -1,4 +1,4 @@
-@import "bear-base";
+@import "bear";
 
 //
 // Layout styles
@@ -11,6 +11,7 @@ body {
 
 #page {
   width: 100%;
+  min-width: 300px;
   .wrapper {
     @include breakpoint($breakpoint-full-width) {
       padding: 0 20px;
@@ -51,8 +52,9 @@ body {
   padding: 20px 0 0 0;
 }
 
-/* LEFT SIDEBAR */
-
+//
+// Left Sidebar
+//
 .sidebar-first {
   #content {
     @include col(3/4);
@@ -72,8 +74,9 @@ body {
   }
 }
 
-/* RIGHT SIDEBAR */
-
+//
+// Right sidebar
+//
 .sidebar-second {
   #content {
     @include col(3/4);
@@ -91,8 +94,9 @@ body {
   }
 }
 
-/* TWO SIDEBARS */
-
+//
+// Two sidebars
+//
 .two-sidebars {
   #content {
     @include col(2/4);
@@ -116,5 +120,17 @@ body {
       @include col();
       @include unshift();
     }
+  }
+}
+
+//
+// Bearskin documentation page
+//
+#documentation {
+  p.tb {
+    @include col(1/4, $cycle: 4, $gutter: 1);
+    box-sizing: border-box;
+    background: #DDDDDD;
+    padding: 20px;
   }
 }

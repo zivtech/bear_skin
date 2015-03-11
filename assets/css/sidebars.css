@@ -1,3 +1,21 @@
+/* line 4, ../sass/sidebars.scss */
+aside.sidebars .sidebar {
+  padding: 5px 0 20px 0;
+}
+/* line 6, ../sass/sidebars.scss */
+aside.sidebars .sidebar h2 {
+  background: #EFF2F1;
+  text-indent: 10px;
+  margin: 0 0 10px 0;
+  font-size: 110%;
+}
+@media (max-width: 62.5em) {
+  /* line 4, ../sass/sidebars.scss */
+  aside.sidebars .sidebar {
+    padding-left: auto;
+  }
+}
+
 /* MAIN NODE SIDEBARS */
 /* PANEL SIDEBARS */
 

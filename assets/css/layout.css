@@ -6,15 +6,16 @@ body *, body *:before, body *:after {
 /* line 12, ../sass/layout.scss */
 #page {
   width: 100%;
+  min-width: 300px;
 }
 @media (max-width: 75em) {
-  /* line 14, ../sass/layout.scss */
+  /* line 15, ../sass/layout.scss */
   #page .wrapper {
     padding: 0 20px;
   }
 }
 
-/* line 21, ../sass/layout.scss */
+/* line 22, ../sass/layout.scss */
 #header,
 #content,
 #navigation,
@@ -25,7 +26,7 @@ body *, body *:before, body *:after {
   max-width: 75em;
   margin: 0 auto;
 }
-/* line 30, ../sass/layout.scss */
+/* line 31, ../sass/layout.scss */
 #header:after,
 #content:after,
 #navigation:after,
@@ -38,13 +39,13 @@ body *, body *:before, body *:after {
   clear: both;
 }
 
-/* line 37, ../sass/layout.scss */
+/* line 38, ../sass/layout.scss */
 #header,
 #main,
 #footer {
   width: 100%;
 }
-/* line 41, ../sass/layout.scss */
+/* line 42, ../sass/layout.scss */
 #header:after,
 #main:after,
 #footer:after {
@@ -53,15 +54,14 @@ body *, body *:before, body *:after {
   clear: both;
 }
 
-/* line 48, ../sass/layout.scss */
+/* line 49, ../sass/layout.scss */
 #main {
   max-width: 75em;
   margin: 0 auto;
   padding: 20px 0 0 0;
 }
 
-/* LEFT SIDEBAR */
-/* line 57, ../sass/layout.scss */
+/* line 59, ../sass/layout.scss */
 .sidebar-first #content {
   *zoom: 1;
   float: left;
@@ -90,7 +90,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 57, ../sass/layout.scss */
+  /* line 59, ../sass/layout.scss */
   .sidebar-first #content {
     *zoom: 1;
     float: left;
@@ -119,7 +119,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 65, ../sass/layout.scss */
+/* line 67, ../sass/layout.scss */
 .sidebar-first .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -148,7 +148,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 65, ../sass/layout.scss */
+  /* line 67, ../sass/layout.scss */
   .sidebar-first .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -178,8 +178,7 @@ body *, body *:before, body *:after {
   }
 }
 
-/* RIGHT SIDEBAR */
-/* line 78, ../sass/layout.scss */
+/* line 81, ../sass/layout.scss */
 .sidebar-second #content {
   *zoom: 1;
   float: left;
@@ -206,7 +205,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 78, ../sass/layout.scss */
+  /* line 81, ../sass/layout.scss */
   .sidebar-second #content {
     *zoom: 1;
     float: left;
@@ -235,7 +234,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 85, ../sass/layout.scss */
+/* line 88, ../sass/layout.scss */
 .sidebar-second .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -262,7 +261,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 85, ../sass/layout.scss */
+  /* line 88, ../sass/layout.scss */
   .sidebar-second .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -292,8 +291,7 @@ body *, body *:before, body *:after {
   }
 }
 
-/* TWO SIDEBARS */
-/* line 97, ../sass/layout.scss */
+/* line 101, ../sass/layout.scss */
 .two-sidebars #content {
   *zoom: 1;
   float: left;
@@ -322,7 +320,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 97, ../sass/layout.scss */
+  /* line 101, ../sass/layout.scss */
   .two-sidebars #content {
     *zoom: 1;
     float: left;
@@ -351,7 +349,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 105, ../sass/layout.scss */
+/* line 109, ../sass/layout.scss */
 .two-sidebars .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -380,7 +378,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 105, ../sass/layout.scss */
+  /* line 109, ../sass/layout.scss */
   .two-sidebars .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -409,7 +407,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 113, ../sass/layout.scss */
+/* line 117, ../sass/layout.scss */
 .two-sidebars .region-sidebar-second {
   *zoom: 1;
   float: left;
@@ -436,7 +434,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 113, ../sass/layout.scss */
+  /* line 117, ../sass/layout.scss */
   .two-sidebars .region-sidebar-second {
     *zoom: 1;
     float: left;
@@ -464,6 +462,41 @@ body *, body *:before, body *:after {
   .two-sidebars .region-sidebar-second:last-child {
     margin-right: 0%;
   }
+}
+
+/* line 130, ../sass/layout.scss */
+#documentation p.tb {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 24.25%;
+  margin-left: 0%;
+  margin-right: 1%;
+  box-sizing: border-box;
+  background: #DDDDDD;
+  padding: 20px;
+}
+/* line 196, ../sass/base/jeet/_grid.scss */
+#documentation p.tb:before, #documentation p.tb:after {
+  content: '';
+  display: table;
+}
+/* line 200, ../sass/base/jeet/_grid.scss */
+#documentation p.tb:after {
+  clear: both;
+}
+/* line 40, ../sass/base/jeet/_grid.scss */
+#documentation p.tb:nth-child(4n) {
+  margin-right: 0%;
+  float: right;
+}
+/* line 45, ../sass/base/jeet/_grid.scss */
+#documentation p.tb:nth-child(4n + 1) {
+  clear: both;
 }
 
 /*# sourceMappingURL=layout.css.map */

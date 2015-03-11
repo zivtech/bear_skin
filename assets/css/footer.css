@@ -1,0 +1,37 @@
+/* line 3, ../sass/footer.scss */
+.wrapper.footer {
+  background-color: #EFF2F1;
+}
+/* line 6, ../sass/footer.scss */
+.wrapper.footer #footer {
+  margin-left: auto;
+  margin-right: auto;
+  color: #555555;
+  font-size: 12px;
+}
+@media (max-width: 75em) {
+  /* line 6, ../sass/footer.scss */
+  .wrapper.footer #footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 50em) {
+  /* line 19, ../sass/footer.scss */
+  #footer {
+    text-align: center;
+  }
+
+  /* line 22, ../sass/footer.scss */
+  ul.social-footer {
+    margin-top: -10px;
+  }
+  /* line 24, ../sass/footer.scss */
+  ul.social-footer li {
+    display: inline-block;
+    float: none;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

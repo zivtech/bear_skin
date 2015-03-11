@@ -10,9 +10,10 @@ body {
   font-size: 1.6rem;
   color: #555555;
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  line-height: 24px;
 }
 
-/* line 17, ../sass/typography.scss */
+/* line 18, ../sass/typography.scss */
 a {
   color: #61AEE2;
   text-decoration: none;
@@ -24,15 +25,50 @@ a:hover {
   color: #3698da;
 }
 
-/* line 23, ../sass/typography.scss */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+/* line 24, ../sass/typography.scss */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
 }
 
-/* line 27, ../sass/typography.scss */
+/* line 33, ../sass/typography.scss */
 h1 {
   font-size: 32px;
   font-size: 3.2rem;
+}
+
+/* line 37, ../sass/typography.scss */
+h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+/* line 41, ../sass/typography.scss */
+h3 {
+  font-size: 19px;
+  font-size: 1.872rem;
+}
+
+/* line 45, ../sass/typography.scss */
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* line 49, ../sass/typography.scss */
+h5 {
+  font-size: 13px;
+  font-size: 1.328rem;
+}
+
+/* line 53, ../sass/typography.scss */
+h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=typography.css.map */

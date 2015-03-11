@@ -1,4 +1,19 @@
-@import "bear-base";
+@import "bear";
+
+aside.sidebars {
+  .sidebar {
+    padding: 5px 0 20px 0;
+    h2 {
+      background: $grey;
+      text-indent: 10px;
+      margin: 0 0 10px 0;
+      font-size: 110%;
+    }
+    @include breakpoint($breakpoint-large-width) {
+      padding-left: auto;
+    }
+  }
+}
 
 /* MAIN NODE SIDEBARS */
 .sidebar {

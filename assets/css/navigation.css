@@ -50,12 +50,14 @@ li a.active {
   /* overflow: hidden; */
   /* Sometimes you want to prevent overlapping with main div. */
   outline: 0;
+  width: 100%;
+  padding: 15px 0;
 }
-/* line 47, ../sass/navigation.scss */
+/* line 49, ../sass/navigation.scss */
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 56, ../sass/navigation.scss */
+/* line 58, ../sass/navigation.scss */
 #navigation ul.links,
 #navigation ul.menu {
   /* Menu block links */
@@ -64,7 +66,7 @@ li a.active {
   text-align: left;
   /* LTR */
 }
-/* line 63, ../sass/navigation.scss */
+/* line 65, ../sass/navigation.scss */
 #navigation ul.links li,
 #navigation ul.menu li {
   /* A simple method to get navigation links to appear in one line. */
@@ -77,7 +79,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 82, ../sass/navigation.scss */
+/* line 84, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */
@@ -93,24 +95,24 @@ li a.active {
  * these limitations, see http://drupal.org/project/menu_block
  */
 /* DRUPAL TABS */
-/* line 105, ../sass/navigation.scss */
+/* line 107, ../sass/navigation.scss */
 ul.primary {
   padding: 0;
   border-bottom: none;
 }
 @media (max-width: 25em) {
-  /* line 105, ../sass/navigation.scss */
+  /* line 107, ../sass/navigation.scss */
   ul.primary {
     border-bottom: none;
   }
 }
-/* line 111, ../sass/navigation.scss */
+/* line 113, ../sass/navigation.scss */
 ul.primary li {
   border: none;
   margin: 0 5px 0 0;
   text-shadow: 0;
 }
-/* line 115, ../sass/navigation.scss */
+/* line 117, ../sass/navigation.scss */
 ul.primary li a:link, ul.primary li a:visited, ul.primary li a:hover {
   text-shadow: 0;
   font-size: 100%;
@@ -158,13 +160,18 @@ ul.primary li a:link::-moz-focus-inner, ul.primary li a:visited::-moz-focus-inne
   padding: 0 !important;
   margin: -1px !important;
 }
-/* line 119, ../sass/navigation.scss */
+/* line 121, ../sass/navigation.scss */
 ul.primary li a {
   color: #333 !important;
 }
-/* line 121, ../sass/navigation.scss */
+/* line 123, ../sass/navigation.scss */
 ul.primary li a.active {
   color: #61AEE2 !important;
+}
+
+/* line 130, ../sass/navigation.scss */
+.breadcrumb {
+  margin: 20px 0;
 }
 
 /*# sourceMappingURL=navigation.css.map */
