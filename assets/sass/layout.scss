@@ -134,3 +134,14 @@ body {
     padding: 20px;
   }
 }
+
+//
+// Helper classes
+//
+.u-hidden {
+  @extend %u-hidden;
+}
+
+.u-focusable {
+  @extend %u-focusable;
+}

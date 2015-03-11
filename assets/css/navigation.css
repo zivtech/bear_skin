@@ -1,9 +1,9 @@
 /* line 54, ../sass/base/_utility.scss */
 #navigation .block-menu .block-title,
-#navigation .block-menu-block .block-title {
+#navigation .block-menu-block .block-title, .breadcrumbs__item:last-of-type .breadcrumbs__divider {
   position: absolute !important;
-  height: 1px;
-  width: 1px;
+  height: 0px;
+  width: 0px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
@@ -170,8 +170,24 @@ ul.primary li a.active {
 }
 
 /* line 130, ../sass/navigation.scss */
-.breadcrumb {
+.breadcrumbs {
   margin: 20px 0;
+  padding-left: 0;
+}
+/* line 134, ../sass/navigation.scss */
+.breadcrumbs__item {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  list-style-type: none;
+  margin-right: 0.5em;
+}
+/* line 146, ../sass/navigation.scss */
+.breadcrumbs__divider {
+  font-size: 80%;
+  padding-left: 0.5em;
 }
 
 /*# sourceMappingURL=navigation.css.map */

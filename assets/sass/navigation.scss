@@ -127,6 +127,24 @@ ul.primary {
   }
 }
 
-.breadcrumb {
+.breadcrumbs {
   margin: 20px 0;
+  padding-left: 0;
+
+  &__item {
+    @include inline-block;
+    list-style-type: none;
+    margin-right: 0.5em; // LTR
+
+    &:last-of-type {
+      .breadcrumbs__divider {
+        @extend %u-hidden; // hide the last breadcrumb divider
+      }
+    }
+  }
+
+  &__divider {
+    font-size: 80%;
+    padding-left: 0.5em; // LTR
+  }
 }

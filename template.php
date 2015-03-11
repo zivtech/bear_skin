@@ -127,6 +127,29 @@ function bear_skin_status_messages($variables) {
   return $output;
 }
 
+/**
+ * Implements theme_breadcrumb()
+ * Make the breadcrumbs more accessible using WAI standards
+ */
+function bear_skin_breadcrumb(&$variables) {
+  $breadcrumb = $variables['breadcrumb'];
+
+  $crumbs = '';
+  if (!empty($breadcrumb)) {
+    $crumbs = '<nav role="navigation" aria-label="breadcrumbs">' . "\n";
+    $crumbs .= '<h3 class="u-hidden" id="breadcrumbLabel">' . t('You are here:') . '</h3>';
+    $crumbs .= '<ul class="breadcrumbs" aria-labelledby="breadcrumbLabel">' . "\n";
+    foreach($breadcrumb as $value) {
+      $value = str_replace('<a', '<a class="breadcrumbs__link"', $value);
+      // the breadcrumb divider has aria-hidden, which should make it ignored by screen readers
+      $crumbs .= '<li class="breadcrumbs__item">' . $value . ' <span class="breadcrumbs__divider" aria-hidden="true">&raquo;</span></li>' . "\n";
+    }
+    $crumbs .= '</ul>' . "\n";
+    $crumbs .= '</nav>' . "\n";
+  }
+  return $crumbs;
+}
+
 /***********************
  * Let's load some CSS on specific targets - uncomment to use
  ************************/
