@@ -53,6 +53,11 @@ function bear_skin_preprocess_page(&$variables) {
  *
  */
 function bear_skin_css_alter(&$css) {
+  // remove drupal's default message css
+  unset($css['modules/system/system.messages.css']);
+
+  // if css aggregation is off, include css as link tags
+  // this allows livereload to inject css
   if (!variable_get('preprocess_css')) {
     foreach ($css as $key => $value) {
       // Skip core files.
@@ -77,7 +82,7 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
 }
 
 /**
- * Implements hook_preprocess_links()
+ * Implements theme_preprocess_links()
  */
 function bear_skin_links(&$variables) {
   // for any menu that runs drupal's default render
@@ -86,6 +91,40 @@ function bear_skin_links(&$variables) {
     $link['attributes'] = array('class' => 'links-list__link');
   }
   return theme_links($variables);
+}
+
+/**
+ * Implements theme_status_messages()
+ */
+function bear_skin_status_messages($variables) {
+  $display = $variables['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+    'success' => t('Status message')
+  );
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $type = ($type === 'status') ? 'success' : $type;
+    $output .= "<div class=\"messages--$type messages $type\">\n";
+    if (!empty($status_heading[$type])) {
+      $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+    }
+    if (count($messages) > 1) {
+      $output .= " <ul class=\"messages__list\">\n";
+      foreach ($messages as $message) {
+        $output .= "  <li class=\"messages__item\">" . $message . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= $messages[0];
+    }
+    $output .= "</div>\n";
+  }
+  return $output;
 }
 
 /***********************
