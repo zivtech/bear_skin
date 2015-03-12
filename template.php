@@ -81,26 +81,15 @@ function bear_skin_css_alter(&$css) {
 
 /**
  * Implements template_preprocess_menu_link()
- * 1. Make a more specific CSS class for menu lists <li>
- * 2. Make a more specific CSS class for menu links <a>
+ * 1. Make a more specific CSS class for menu list items <li>
+ * 2. Make a CSS class on menu list items <li> referencing their level depth
+ * 3. Make a more specific CSS class for menu links <a>
  */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
-  // Replace the generic link class from Zen with something more specific
-  $variables['element']['#attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__item';
+  $menu_name = $variables['element']['#original_link']['menu_name'];
+  $variables['element']['#attributes']['class'][] = 'level-' . _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
+  $variables['element']['#attributes']['class'][0] = $menu_name . '__item';
   $variables['element']['#localized_options']['attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__link';
-}
-
-function bear_skin_menu_link(&$variables) {
-  $element = $variables['element'];
-  $sub_menu = '';
-
-  if ($element['#below']) {
-    $sub_menu = drupal_render($element['#below']);
-  }
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-
-  $element['#attributes']['class'][] = 'level-' . _bear_skin_number_to_text($element['#original_link']['depth']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
 /**
@@ -310,6 +299,8 @@ function _bear_skin_number_to_text($number) {
       return 'four';
     case 5:
       return 'five';
+    case 6:
+      return 'six';
     default:
       return '';
   }
