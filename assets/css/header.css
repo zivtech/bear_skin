@@ -5,43 +5,44 @@
 
 /* line 7, ../sass/header.scss */
 .wrapper.header {
-  background-color: #8E8E8E;
+  background-color: #7b7b7b;
+  border-bottom: 2px solid #555555;
 }
-/* line 10, ../sass/header.scss */
+/* line 11, ../sass/header.scss */
 .wrapper.header header {
   padding: 25px 0;
   position: relative;
 }
 
-/* line 16, ../sass/header.scss */
+/* line 17, ../sass/header.scss */
 h1#site-name {
   font-size: 2em;
   line-height: .5em;
   margin: 70px 0 0 25px;
 }
-/* line 20, ../sass/header.scss */
+/* line 21, ../sass/header.scss */
 h1#site-name a:link, h1#site-name a:visited {
   color: #ffffff;
 }
 
 @media (max-width: 50em) {
-  /* line 26, ../sass/header.scss */
+  /* line 27, ../sass/header.scss */
   .wrapper.header #header {
     text-align: center;
     padding: 0;
   }
-  /* line 29, ../sass/header.scss */
+  /* line 30, ../sass/header.scss */
   .wrapper.header #header #logo {
     float: none;
     clear: both;
     display: block;
     padding: 20px 0;
   }
-  /* line 35, ../sass/header.scss */
+  /* line 36, ../sass/header.scss */
   .wrapper.header #header #name-and-slogan {
     float: none;
   }
-  /* line 37, ../sass/header.scss */
+  /* line 38, ../sass/header.scss */
   .wrapper.header #header #name-and-slogan h1 {
     margin: 10px 0;
   }

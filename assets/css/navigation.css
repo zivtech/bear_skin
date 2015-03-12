@@ -49,8 +49,8 @@
 #navigation .block-menu .block-title,
 #navigation .block-menu-block .block-title, .breadcrumbs__item:last-of-type .breadcrumbs__divider {
   position: absolute !important;
-  height: 0px;
-  width: 0px;
+  height: 0;
+  width: 0;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }

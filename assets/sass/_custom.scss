@@ -8,6 +8,20 @@
 //
 // Bearskin variables
 //
+//
+//
+// Bearskin theme colors
+// you can override these here, or just ignore them ...
+$bear-yellow: #F9B634;
+$bear-brown: #4C1B01;
+$bear-browner: #454147;
+$bear-grey: #EFF2F1;
+$bear-greyer: #d1d3d2;
+$bear-blue: #61AEE2;
+$bear-dark: #555555;
+$bear-whitey: #f9f9f9;
+
+
 // Uncomment a variable and change it. After rebuilding with compass,
 // you will override the default values!
 //
@@ -29,6 +43,7 @@
 //
 // $alert-padding: 0.7em 1.5em;
 // $alert-border-radius: $border-radius;
+// $alert-font-color: $bear-whitey;
 
 
 //
@@ -41,12 +56,12 @@
 //
 // $button-padding: 0.4em 1.5em;
 // $button-border-radius: $border-radius;
-// $button-primary-color: $dark;
-// $button-primary-font-color: $whitey;
-// $button-secondary-color: $brown;
-// $button-secondary-font-color: $whitey;
-// $button-highlight-color: $yellow;
-// $button-highlight-font-color: $whitey;
+// $button-primary-color: $bear-dark;
+// $button-primary-font-color: $bear-whitey;
+// $button-secondary-color: $bear-brown;
+// $button-secondary-font-color: $bear-whitey;
+// $button-highlight-color: $bear-yellow;
+// $button-highlight-font-color: $bear-whitey;
 
 
 //
@@ -67,9 +82,9 @@
 //
 // $tabs-container-margin: 1em 0 1.5em;
 // $tabs-container-bg-color: transparent;
-// $tabs-border-color: $grey;
-// $tabs-height: 48px;
-// $tabs-bg-color: $grey;
+// $tabs-border-color: $bear-grey;
+// $tabs-height: 40px;
+// $tabs-bg-color: $bear-grey;
 // $tabs-bg-color-hover: darken($tabs-bg-color, 5%);
 // $tabs-border-radius: $border-radius;
 
@@ -95,6 +110,6 @@
 //
 // $header-font-family: $base-font-family-serif;
 // $body-text-font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-// $base-font-color: $dark;
-// $link-color: $blue;
+// $base-font-color: $bear-dark;
+// $link-color: $bear-blue;
 // $link-color-hover: darken($link-color, 10%);

@@ -160,12 +160,11 @@
 /* line 140, ../sass/bear-menu.scss */
 #navigation .block-menu ul a, #navigation .menu-block-wrapper > ul ul a {
   padding: 1em;
-  width: 250px;
   display: block;
   border-color: #aaaaaa;
   width: 100%;
 }
-/* line 146, ../sass/bear-menu.scss */
+/* line 145, ../sass/bear-menu.scss */
 #navigation .block-menu ul a:hover, #navigation .menu-block-wrapper > ul ul a:hover {
   background-color: #61AEE2;
   border-color: #61AEE2;

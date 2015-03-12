@@ -1,8 +1,8 @@
 /* line 54, ../sass/base/_utility.scss */
 .u-hidden {
   position: absolute !important;
-  height: 0px;
-  width: 0px;
+  height: 0;
+  width: 0;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
@@ -10,8 +10,8 @@
 /* line 62, ../sass/base/_utility.scss */
 .u-focusable {
   position: absolute !important;
-  height: 0px;
-  width: 0px;
+  height: 0;
+  width: 0;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }

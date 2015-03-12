@@ -4,8 +4,8 @@
 // element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin bear-element-invisible {
   position: absolute !important;
-  height: 0px;
-  width: 0px;
+  height: 0;
+  width: 0;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }

@@ -4,7 +4,7 @@
   white-space: nowrap;
   *zoom: 1;
   position: relative;
-  height: 48px;
+  height: 40px;
   background-color: transparent;
   width: 100%;
   padding: 0;
@@ -30,8 +30,8 @@
   float: left;
   text-align: center;
   background-color: #EFF2F1;
-  line-height: 48px;
-  height: 48px;
+  line-height: 40px;
+  height: 40px;
   padding: 0;
   text-transform: uppercase;
   border-top-left-radius: 2px;

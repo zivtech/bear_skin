@@ -6,16 +6,6 @@
 @import "sassy-buttons"; // Add the sassy buttons
 @import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
 
-// bearskin theme colors
-$yellow: #F9B634;
-$brown: #4C1B01;
-$browner: #454147;
-$grey: #EFF2F1;
-$greyer: #d1d3d2;
-$blue: #61AEE2;
-$dark: #555555;
-$whitey: #f9f9f9;
-
 // vars, mixins, reusable classes
 @import "global";
 @import "button";

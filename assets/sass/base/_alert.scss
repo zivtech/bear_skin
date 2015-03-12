@@ -4,12 +4,12 @@
 //
 $alert-padding: 0.7em 1.5em !default;
 $alert-border-radius: $border-radius !default;
-
+$alert-font-color: $bear-whitey !default;
 
 //
 // Mixins
 //
-@mixin alert($color: lighten($color-primary, 25%), $font-color: $whitey, $padding: $alert-padding, $radius: $alert-border-radius) {
+@mixin alert($color: lighten($color-primary, 25%), $font-color: $alert-font-color, $padding: $alert-padding, $radius: $alert-border-radius) {
   $darker-color: darken($color, 10%);
   padding: $padding;
   border-radius: $radius;
