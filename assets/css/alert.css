@@ -19,38 +19,38 @@
 }
 
 /* line 34, ../sass/base/_alert.scss */
-.messages--error {
+.messages--error, .messages.error {
   border-color: #c9302c;
   background-color: #d9534f;
 }
 
 /* line 40, ../sass/base/_alert.scss */
-.messages--success, .messages--status {
+.messages--success, .messages--status, .messages.status, .messages.ok {
   border-color: #449d44;
   background-color: #5cb85c;
 }
 
 /* line 46, ../sass/base/_alert.scss */
-.messages--warning {
+.messages--warning, .messages.warning {
   border-color: #ec971f;
   background-color: #f0ad4e;
 }
 
-/* line 22, ../sass/alert.scss */
+/* line 26, ../sass/alert.scss */
 .messages__list {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 1.5em;
 }
-/* line 28, ../sass/alert.scss */
+/* line 32, ../sass/alert.scss */
 .messages__item {
   margin-bottom: 0.8em;
 }
-/* line 30, ../sass/alert.scss */
+/* line 34, ../sass/alert.scss */
 .messages__item:last-of-type {
   margin-bottom: 0;
 }
-/* line 37, ../sass/alert.scss */
+/* line 41, ../sass/alert.scss */
 .messages .krumo-root {
   color: #555555;
 }

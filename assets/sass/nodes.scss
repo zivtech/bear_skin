@@ -1,0 +1,20 @@
+@import "bear";
+
+//
+// Node styles
+// Add more css classes for view_modes inside template.php in bear_skin_preprocess_node()
+//
+
+// Teaser view
+.node-teaser {
+
+  // teaser title
+  &__title {
+
+  }
+
+  &__content {
+
+  }
+
+}

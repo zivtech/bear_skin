@@ -10,7 +10,7 @@ body {
   font-size: 1.6rem;
   color: #555555;
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
-  line-height: 24px;
+  line-height: 1.5;
 }
 
 /* line 18, ../sass/typography.scss */
@@ -34,39 +34,40 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
+  line-height: 1.2;
 }
 
-/* line 34, ../sass/typography.scss */
+/* line 35, ../sass/typography.scss */
 h1, .h1 {
   font-size: 32px;
   font-size: 3.2rem;
 }
 
-/* line 38, ../sass/typography.scss */
+/* line 39, ../sass/typography.scss */
 h2, .h2 {
   font-size: 24px;
   font-size: 2.4rem;
 }
 
-/* line 42, ../sass/typography.scss */
+/* line 43, ../sass/typography.scss */
 h3, .h3 {
   font-size: 19px;
   font-size: 1.872rem;
 }
 
-/* line 46, ../sass/typography.scss */
+/* line 47, ../sass/typography.scss */
 h4, .h4 {
   font-size: 16px;
   font-size: 1.6rem;
 }
 
-/* line 50, ../sass/typography.scss */
+/* line 51, ../sass/typography.scss */
 h5, .h5 {
   font-size: 13px;
   font-size: 1.328rem;
 }
 
-/* line 54, ../sass/typography.scss */
+/* line 55, ../sass/typography.scss */
 h6, .h6 {
   font-size: 12px;
   font-size: 1.2rem;

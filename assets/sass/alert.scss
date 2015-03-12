@@ -6,16 +6,20 @@
 .messages {
   @extend %alert;
 
-  &--error {
+  &--error,
+  &.error {
     @extend %alert-error;
   }
 
   &--success,
-  &--status {
+  &--status,
+  &.status,
+  &.ok {
     @extend %alert-success;
   }
 
-  &--warning {
+  &--warning,
+  &.warning {
     @extend %alert-warning;
   }
 
@@ -33,7 +37,7 @@
   }
 
   // the output of dpm() gets put into a messages
-  // we need to set its color here
+  // we need to set its font color here
   .krumo-root {
     color: $base-font-color;
   }

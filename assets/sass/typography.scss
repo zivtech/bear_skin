@@ -12,7 +12,7 @@ body {
   @include rem(font-size, 16px);
   color: $base-font-color;
   font-family: $base-font-family;
-  line-height: $base-line-height;
+  line-height: 1.5;
 }
 
 a {
@@ -29,6 +29,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   font-family: $base-font-family-serif;
+  line-height: 1.2;
 }
 
 h1, .h1 {
