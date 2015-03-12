@@ -2,7 +2,9 @@
 
 /**
  * Implements template_preprocess_html().
- * Adds path variables.
+ * 1. Adds path variables.
+ * 2. Include bear skin theme options in Drupal's JS object
+ * 3. Include a CSS class on the body tag if the site uses sticky footer
  */
 function bear_skin_preprocess_html(&$variables, $hook) {
   // Add variables and paths needed for HTML5 and responsive support.
@@ -25,6 +27,8 @@ function bear_skin_preprocess_html(&$variables, $hook) {
 
 /**
  * Implements template_preprocess_page().
+ * 1. Check if sidebars have content; Add boolean to $variables
+ * 2. Setup the user menu (by default displayed in header)
  */
 function bear_skin_preprocess_page(&$variables) {
   $page = $variables['page'];
@@ -51,7 +55,9 @@ function bear_skin_preprocess_page(&$variables) {
 
 /**
  * Implements hook_css_alter().
- *
+ * 1. Remove some of Drupal's default CSS
+ * 2. Force insertion of CSS as <link> tags instead of @import
+ *    if CSS aggregation is turned off
  */
 function bear_skin_css_alter(&$css) {
   // remove drupal's default message css
@@ -60,7 +66,7 @@ function bear_skin_css_alter(&$css) {
   unset($css['profiles/bear/themes/zen/system.menus.css']);
 
   // if css aggregation is off, include css as link tags
-  // this allows livereload to inject css
+  // this allows livereload / guard to inject css
   if (!variable_get('preprocess_css')) {
     foreach ($css as $key => $value) {
       // Skip core files.
@@ -75,8 +81,8 @@ function bear_skin_css_alter(&$css) {
 
 /**
  * Implements template_preprocess_menu_link()
- * @param $variables
- * @param $hook
+ * 1. Make a more specific CSS class for menu lists <li>
+ * 2. Make a more specific CSS class for menu links <a>
  */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
   // Replace the generic link class from Zen with something more specific
@@ -84,12 +90,25 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $variables['element']['#localized_options']['attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__link';
 }
 
+function bear_skin_menu_link(&$variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+  $element['#attributes']['class'][] = 'level-' . _bear_skin_number_to_text($element['#original_link']['depth']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
 /**
  * Implements theme_links()
  * specifically for the user_menu only!
+ * 1. Add a SMACCS / BEM style CSS class to <a> items
  */
 function bear_skin_links__user_menu(&$variables) {
-  $variables['header']['title'] = 'user-menu';
   foreach ($variables['links'] as $key => &$link) {
     $link['html'] = TRUE;
     $link['attributes'] = array('class' => 'nav-user__link');
@@ -130,7 +149,8 @@ function bear_skin_status_messages($variables) {
 
 /**
  * Implements theme_breadcrumb()
- * Make the breadcrumbs more accessible using WAI standards
+ * 1. Make the breadcrumbs more accessible using WAI standards
+ * 2. Add SMACCS / BEM style CSS classes to HTML elements in breadcrumbs
  */
 function bear_skin_breadcrumb(&$variables) {
   $breadcrumb = $variables['breadcrumb'];
@@ -153,7 +173,8 @@ function bear_skin_breadcrumb(&$variables) {
 
 /**
  * Implements theme_menu_local_tasks()
- * Make the tabs more accessible using WAI standards
+ * 1. Make the tabs more accessible using WAI standards
+ * 2. Add SMACCS / BEM style CSS classes to HTML elements in tab containers
  */
 function bear_skin_menu_local_tasks(&$variables) {
   $output = '';
@@ -181,13 +202,14 @@ function bear_skin_menu_local_tasks(&$variables) {
     $variables['secondary']['#suffix'] = '</ul>';
     $output .= drupal_render($variables['secondary']);
   }
-  
+
   return $output;
 }
 
 /**
  * Implements theme_menu_local_task()
- * Make the tab items more accessible using WAI standards
+ * 1. Make the tab items more accessible using WAI standards
+ * 2. Add SMACCS / BEM style CSS classes to HTML elements in individual tabs
  */
 function bear_skin_menu_local_task($variables) {
   $type = $class = FALSE;
@@ -210,7 +232,7 @@ function bear_skin_menu_local_task($variables) {
 
   if (!empty($variables['element']['#active'])) {
     // Add text to indicate active tab for non-visual users.
-    $active = ' <span class="element-invisible">' . t('(active tab)') . '</span>';
+    $active = ' <span class="u-hidden">' . t('(active tab)') . '</span>';
 
     // If the link does not contain HTML already, check_plain() it now.
     // After we set 'html'=TRUE the link will not be sanitized by l().
@@ -267,3 +289,28 @@ function bear_skin_menu_local_task($variables) {
 //     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
 //   }
 // }
+
+/**
+ * Convert a number to its word
+ * @param $number
+ * @return string
+ */
+function _bear_skin_number_to_text($number) {
+  $number = (int) $number;
+  switch ($number) {
+    case 0:
+      return 'top';
+    case 1:
+      return 'one';
+    case 2:
+      return 'two';
+    case 3:
+      return 'three';
+    case 4:
+      return 'four';
+    case 5:
+      return 'five';
+    default:
+      return '';
+  }
+}
