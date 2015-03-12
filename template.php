@@ -173,7 +173,10 @@ function bear_skin_menu_local_tasks(&$variables) {
     if (!empty($variables[$type])) {
       foreach (array_keys($variables[$type]) as $key) {
         if (isset($variables[$type][$key]['#theme']) && ($variables[$type][$key]['#theme'] == 'menu_local_task' || is_array($variables[$type][$key]['#theme']) && in_array('menu_local_task', $variables[$type][$key]['#theme']))) {
-          $variables[$type][$key]['#theme'] = array('menu_local_task__' . $type, 'menu_local_task');
+          $variables[$type][$key]['#theme'] = array(
+            'menu_local_task__' . $type,
+            'menu_local_task'
+          );
         }
       }
     }
@@ -229,7 +232,10 @@ function bear_skin_menu_local_task($variables) {
       $link['title'] = check_plain($link['title']);
     }
     $link['localized_options']['html'] = TRUE;
-    $link_text = t('!local-task-title!active', array('!local-task-title' => $link['title'], '!active' => $active));
+    $link_text = t('!local-task-title!active', array(
+      '!local-task-title' => $link['title'],
+      '!active' => $active
+    ));
 
     if (!$type) {
       $class = 'active';
@@ -243,29 +249,86 @@ function bear_skin_menu_local_task($variables) {
   return '<li' . ($class ? ' class="' . $class . '"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . "</li>\n";
 }
 
+/**
+ * Implements theme_preprocess_node()
+ */
+function bear_skin_preprocess_node(&$variables) {
+  $view_mode = $variables['view_mode'];
+  $type = $variables['type'];
+
+  // add theme suggestion for node teasers
+  // add teaser CSS classes
+  if ($view_mode === 'teaser') {
+    $variables['classes_array'][] = 'node-' . $type . '-teaser';
+    $variables['title_attributes_array']['class'][] = 'node-teaser__title';
+    $variables['title_attributes_array']['class'][] = 'node-' . $type . '-teaser__title';
+    array_unshift($variables['theme_hook_suggestions'], 'node__teaser');
+  }
+
+}
+
+/**
+ * Implements theme_field()
+ * In order to get to the least amount of CSS nesting possible:
+ * 1. Very specific classes for fields
+ *    examples:
+ *      the 'body' field of a 'page' node in full view has a class of node-page-body
+ *      the 'date' field of a 'event' node in teaser view is node-event-date-teaser
+ * 2. SMACCS / BEM style CSS classes for multiple field groups, single fields, and field labels
+ *    examples:
+ *      the label of a 'date' field for an 'event' node is node-event-date__label
+ *      if a field has multiple items, they are inside a div with class node-event-date__group
+ *      each item of a field has a class like node-event-date__item
+ * 3. Add aria labels for WAI accessibility
+ */
+function bear_skin_field(&$variables) {
+  // create a CSS class
+  // the type of object this field is inside
+  if ($variables['element']['#entity_type'] === 'node') {
+    $object_class = 'node-' . $variables['element']['#object']->type;
+  } else {
+    $object_class = $variables['element']['#entity_type'];
+  }
+  $object_class = $object_class . '-' . $variables['field_name_css'];
+  $object_class = ($variables['element']['#view_mode'] === 'full') ? $object_class : $object_class . '-' . $variables['element']['#view_mode'];
+
+  $variables['classes'] = $variables['classes'] . ' ' . $object_class;
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label ' . $object_class . '__label"' . $variables['title_attributes'] . ' id="label-for-' . $object_class . '">' . $variables['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items
+  // Add a group wrapper if there is more than one item
+  if (count($variables['items']) > 1) {
+    $output .= '<div class="field-items ' . $object_class . '__group"' . $variables['content_attributes'] . '>';
+    foreach ($variables['items'] as $delta => $item) {
+      $classes = 'field-item ' . $object_class . '__item';
+      $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+    }
+    $output .= '</div>';
+  } else {
+    $item = reset($variables['items']);
+    $classes = 'field-item ' . $object_class . '__item';
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][0] . '>' . drupal_render($item) . '</div>';
+  }
+
+  // Render the top-level DIV.
+  if (!$variables['label_hidden']) {
+    $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . ' aria-labelledby="label-for-' . $object_class . '">' . $output . '</div>';
+  } else {
+    $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+  }
+
+  return $output;
+}
+
 /***********************
  * Let's load some CSS on specific targets - uncomment to use
  ************************/
 
-// function bear_skin_preprocess_node(&$vars) {
-//   // Add JS & CSS by node type
-//   if( $vars['type'] == 'page') {
-//     //drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
-//     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
-//   }
-
-//   // Add JS & CSS to the front page
-//   if ($vars['is_front']) {
-//     drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
-//     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
-//   }
-
-//   // Add JS & CSS by node ID
-//   if (drupal_get_path_alias("node/{$vars['#node']->nid}") == 'your-node-id') {
-//     //drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
-//     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
-//   }
-// }
 // function bear_skin_preprocess_page(&$vars) {
 //   // Add JS & CSS by node type
 //   if (isset($vars['node']) && $vars['node']->type == 'page') {
