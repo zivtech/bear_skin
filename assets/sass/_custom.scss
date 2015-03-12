@@ -1,13 +1,100 @@
 //
-// Colors
+// Theme colors
 //
-$yellow: #F9B634;
-$brown: #4C1B01;
-$browner: #454147;
-$grey: #EFF2F1;
-$greyer: #d1d3d2;
-$blue: #61AEE2;
-$dark: #555555;
-$whitey: #f9f9f9;
 
 
+
+
+//
+// Bearskin variables
+//
+// Uncomment a variable and change it. After rebuilding with compass,
+// you will override the default values!
+//
+
+
+//
+// GLOBALS
+//
+// $color-primary: #337ab7;
+// $color-success: #5cb85c;
+// $color-info: #5bc0de;
+// $color-warning: #f0ad4e;
+// $color-error: #d9534f;
+// $border-radius: 2px;
+
+
+//
+// ALERTS
+//
+// $alert-padding: 0.7em 1.5em;
+// $alert-border-radius: $border-radius;
+
+
+//
+// ANIMATIONS
+//
+
+
+//
+// BUTTONS
+//
+// $button-padding: 0.4em 1.5em;
+// $button-border-radius: $border-radius;
+// $button-primary-color: $dark;
+// $button-primary-font-color: $whitey;
+// $button-secondary-color: $brown;
+// $button-secondary-font-color: $whitey;
+// $button-highlight-color: $yellow;
+// $button-highlight-font-color: $whitey;
+
+
+//
+// LAYOUT
+//
+// $site-max-width: 1200px / 16px * 1em;
+// $indent-amount: 30px;
+// $vertical-gutter: 10px 0;
+// $breakpoint-small-width: max-width 25em;
+// $breakpoint-med-small-width: max-width 37.5em;
+// $breakpoint-medium-width: max-width 50em;
+// $breakpoint-large-width: max-width 62.5em;
+// $breakpoint-full-width: max-width $site-max-width;
+
+
+//
+// TABS
+//
+// $tabs-container-margin: 1em 0 1.5em;
+// $tabs-container-bg-color: transparent;
+// $tabs-border-color: $grey;
+// $tabs-height: 48px;
+// $tabs-bg-color: $grey;
+// $tabs-bg-color-hover: darken($tabs-bg-color, 5%);
+// $tabs-border-radius: $border-radius;
+
+
+//
+// TYPOGRAPHY
+//
+// Bearskin uses rem units for fonts. Setting <html> font size ($bear-font-size) to 62.5% resets
+// the browser default font size to 10px, then everything in <body> uses rems (with pixel fallbacks).
+// As a result, with the exception of $bear-font-size, the other font sizes should be listed here
+// in pixel units.
+//
+//
+// $bear-font-size: 62.5%;
+// $bear-line-height: 1.5;
+// $body-font-size: 16px;
+// $h1-font-size: 2    * $body-font-size;
+// $h2-font-size: 1.5  * $body-font-size;
+// $h3-font-size: 1.17 * $body-font-size;
+// $h4-font-size: 1    * $body-font-size;
+// $h5-font-size: 0.83 * $body-font-size;
+// $h6-font-size: 0.75 * $body-font-size;
+//
+// $header-font-family: $base-font-family-serif;
+// $body-text-font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+// $base-font-color: $dark;
+// $link-color: $blue;
+// $link-color-hover: darken($link-color, 10%);

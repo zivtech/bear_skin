@@ -251,6 +251,8 @@ function bear_skin_menu_local_task($variables) {
 
 /**
  * Implements theme_preprocess_node()
+ * 1. Add SMACCS / BEM style CSS classes for nodes and node titles
+ * 2. Let node teasers have a tpl file called node--teaser.tpl.php
  */
 function bear_skin_preprocess_node(&$variables) {
   $view_mode = $variables['view_mode'];
@@ -278,7 +280,7 @@ function bear_skin_preprocess_node(&$variables) {
  *    examples:
  *      the label of a 'date' field for an 'event' node is node-event-date__label
  *      if a field has multiple items, they are inside a div with class node-event-date__group
- *      each item of a field has a class like node-event-date__item
+ *      each item of a field has a class like node-event-date__content
  * 3. Add aria labels for WAI accessibility
  */
 function bear_skin_field(&$variables) {
@@ -305,13 +307,13 @@ function bear_skin_field(&$variables) {
   if (count($variables['items']) > 1) {
     $output .= '<div class="field-items ' . $object_class . '__group"' . $variables['content_attributes'] . '>';
     foreach ($variables['items'] as $delta => $item) {
-      $classes = 'field-item ' . $object_class . '__item';
+      $classes = 'field-item ' . $object_class . '__content';
       $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
     }
     $output .= '</div>';
   } else {
     $item = reset($variables['items']);
-    $classes = 'field-item ' . $object_class . '__item';
+    $classes = 'field-item ' . $object_class . '__content';
     $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][0] . '>' . drupal_render($item) . '</div>';
   }
 

@@ -15,7 +15,7 @@
   background-image: linear-gradient(top, $fromColor, $toColor);
 }
 
-@mixin bear-border-radius($radius: 8px) {
+@mixin bear-border-radius($radius: $border-radius) {
   border-radius: $radius;
   background-clip: padding-box;
 }

@@ -145,3 +145,7 @@ body {
 .u-focusable {
   @extend %u-focusable;
 }
+
+.is-phone {
+  @extend %is-phone;
+}

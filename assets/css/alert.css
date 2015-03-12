@@ -1,4 +1,4 @@
-/* line 30, ../sass/base/_alert.scss */
+/* line 31, ../sass/base/_alert.scss */
 .messages {
   padding: 0.7em 1.5em;
   border-radius: 2px;
@@ -8,7 +8,7 @@
   border-left-width: 10px;
   margin: 1em 0;
 }
-/* line 21, ../sass/base/_alert.scss */
+/* line 22, ../sass/base/_alert.scss */
 .messages a {
   color: #f9f9f9;
   border-bottom: 1px dotted #f9f9f9;
@@ -18,19 +18,19 @@
   color: #f9f9f9;
 }
 
-/* line 34, ../sass/base/_alert.scss */
+/* line 35, ../sass/base/_alert.scss */
 .messages--error, .messages.error {
   border-color: #c9302c;
   background-color: #d9534f;
 }
 
-/* line 40, ../sass/base/_alert.scss */
+/* line 41, ../sass/base/_alert.scss */
 .messages--success, .messages--status, .messages.status, .messages.ok {
   border-color: #449d44;
   background-color: #5cb85c;
 }
 
-/* line 46, ../sass/base/_alert.scss */
+/* line 47, ../sass/base/_alert.scss */
 .messages--warning, .messages.warning {
   border-color: #ec971f;
   background-color: #f0ad4e;

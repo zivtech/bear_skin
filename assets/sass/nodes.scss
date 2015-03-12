@@ -5,16 +5,28 @@
 // Add more css classes for view_modes inside template.php in bear_skin_preprocess_node()
 //
 
-// Teaser view
-.node-teaser {
-
-  // teaser title
-  &__title {
-
-  }
-
-  &__content {
-
-  }
-
-}
+// For example, a node of type event
+// "full" view mode
+//
+// .node-event {
+//
+//  the title
+//  &__title {  }
+//
+//  a field called body
+//  &-body__content {  }
+//
+//  a group of fields for dates
+//  &-date__group {  }
+//  &-date__content {  }
+//
+// }
+//
+// "teaser" view mode
+//
+// .node-event-teaser {
+//
+//  the title
+//  &__title {  }
+//
+// }

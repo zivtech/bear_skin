@@ -2,7 +2,7 @@
 // Layout Variables
 // Customize your theme by copying the variable name into _custom.scss and remove !default
 //
-$site-max-width: em(1200) !default;
+$site-max-width: 1200px / 16px * 1em !default;
 $indent-amount: 30px !default;
 $vertical-gutter: 10px 0 !default;
 

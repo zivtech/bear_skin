@@ -24,6 +24,17 @@
   overflow: auto;
 }
 
+/* line 74, ../sass/base/_utility.scss */
+.is-phone {
+  display: none;
+}
+@media (max-width: 25em) {
+  /* line 74, ../sass/base/_utility.scss */
+  .is-phone {
+    display: block;
+  }
+}
+
 /* line 7, ../sass/layout.scss */
 body *, body *:before, body *:after {
   box-sizing: border-box;
