@@ -5,6 +5,13 @@
 // Add more css classes for view_modes inside template.php in bear_skin_preprocess_node()
 //
 
+// Generic node style
+.node {
+  &__title {
+    @extend %no-margins;
+  }
+}
+
 // For example, a node of type event
 // "full" view mode
 //

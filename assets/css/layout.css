@@ -46,48 +46,38 @@ body *, body *:before, body *:after {
   box-sizing: border-box;
 }
 
-/* line 16, ../sass/layout.scss */
-#page {
-  width: 100%;
-  min-width: 300px;
-}
-
 @media (max-width: 75em) {
-  /* line 21, ../sass/layout.scss */
+  /* line 16, ../sass/layout.scss */
   .wrapper {
     padding: 0 20px;
   }
 }
 
-/* line 27, ../sass/layout.scss */
+/* line 22, ../sass/layout.scss */
 .site-header,
 .site-navigation,
-#navigation,
-#main,
-#highlighted,
-#footer {
+.site-main,
+.site-footer {
   max-width: 75em;
   margin: 0 auto;
 }
-/* line 35, ../sass/layout.scss */
+/* line 28, ../sass/layout.scss */
 .site-header:after,
 .site-navigation:after,
-#navigation:after,
-#main:after,
-#highlighted:after,
-#footer:after {
+.site-main:after,
+.site-footer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 42, ../sass/layout.scss */
-#main {
+/* line 35, ../sass/layout.scss */
+.site-main {
   padding: 20px 0 0 0;
 }
 
-/* line 50, ../sass/layout.scss */
-.sidebar-first #content {
+/* line 43, ../sass/layout.scss */
+.sidebar-first main {
   *zoom: 1;
   float: left;
   display: inline;
@@ -102,21 +92,21 @@ body *, body *:before, body *:after {
   left: 25.75%;
 }
 /* line 196, ../sass/base/jeet/_grid.scss */
-.sidebar-first #content:before, .sidebar-first #content:after {
+.sidebar-first main:before, .sidebar-first main:after {
   content: '';
   display: table;
 }
 /* line 200, ../sass/base/jeet/_grid.scss */
-.sidebar-first #content:after {
+.sidebar-first main:after {
   clear: both;
 }
 /* line 49, ../sass/base/jeet/_grid.scss */
-.sidebar-first #content:last-child {
+.sidebar-first main:last-child {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 50, ../sass/layout.scss */
-  .sidebar-first #content {
+  /* line 43, ../sass/layout.scss */
+  .sidebar-first main {
     *zoom: 1;
     float: left;
     display: inline;
@@ -131,20 +121,20 @@ body *, body *:before, body *:after {
     left: 0;
   }
   /* line 196, ../sass/base/jeet/_grid.scss */
-  .sidebar-first #content:before, .sidebar-first #content:after {
+  .sidebar-first main:before, .sidebar-first main:after {
     content: '';
     display: table;
   }
   /* line 200, ../sass/base/jeet/_grid.scss */
-  .sidebar-first #content:after {
+  .sidebar-first main:after {
     clear: both;
   }
   /* line 49, ../sass/base/jeet/_grid.scss */
-  .sidebar-first #content:last-child {
+  .sidebar-first main:last-child {
     margin-right: 0%;
   }
 }
-/* line 58, ../sass/layout.scss */
+/* line 51, ../sass/layout.scss */
 .sidebar-first .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -173,7 +163,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 58, ../sass/layout.scss */
+  /* line 51, ../sass/layout.scss */
   .sidebar-first .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -203,8 +193,8 @@ body *, body *:before, body *:after {
   }
 }
 
-/* line 72, ../sass/layout.scss */
-.sidebar-second #content {
+/* line 65, ../sass/layout.scss */
+.sidebar-second main {
   *zoom: 1;
   float: left;
   display: inline;
@@ -217,21 +207,21 @@ body *, body *:before, body *:after {
   margin-right: 3%;
 }
 /* line 196, ../sass/base/jeet/_grid.scss */
-.sidebar-second #content:before, .sidebar-second #content:after {
+.sidebar-second main:before, .sidebar-second main:after {
   content: '';
   display: table;
 }
 /* line 200, ../sass/base/jeet/_grid.scss */
-.sidebar-second #content:after {
+.sidebar-second main:after {
   clear: both;
 }
 /* line 49, ../sass/base/jeet/_grid.scss */
-.sidebar-second #content:last-child {
+.sidebar-second main:last-child {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 72, ../sass/layout.scss */
-  .sidebar-second #content {
+  /* line 65, ../sass/layout.scss */
+  .sidebar-second main {
     *zoom: 1;
     float: left;
     display: inline;
@@ -246,20 +236,20 @@ body *, body *:before, body *:after {
     left: 0;
   }
   /* line 196, ../sass/base/jeet/_grid.scss */
-  .sidebar-second #content:before, .sidebar-second #content:after {
+  .sidebar-second main:before, .sidebar-second main:after {
     content: '';
     display: table;
   }
   /* line 200, ../sass/base/jeet/_grid.scss */
-  .sidebar-second #content:after {
+  .sidebar-second main:after {
     clear: both;
   }
   /* line 49, ../sass/base/jeet/_grid.scss */
-  .sidebar-second #content:last-child {
+  .sidebar-second main:last-child {
     margin-right: 0%;
   }
 }
-/* line 79, ../sass/layout.scss */
+/* line 72, ../sass/layout.scss */
 .sidebar-second .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -286,7 +276,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 79, ../sass/layout.scss */
+  /* line 72, ../sass/layout.scss */
   .sidebar-second .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -316,8 +306,8 @@ body *, body *:before, body *:after {
   }
 }
 
-/* line 92, ../sass/layout.scss */
-.two-sidebars #content {
+/* line 85, ../sass/layout.scss */
+.two-sidebars main {
   *zoom: 1;
   float: left;
   display: inline;
@@ -332,21 +322,21 @@ body *, body *:before, body *:after {
   left: 25.75%;
 }
 /* line 196, ../sass/base/jeet/_grid.scss */
-.two-sidebars #content:before, .two-sidebars #content:after {
+.two-sidebars main:before, .two-sidebars main:after {
   content: '';
   display: table;
 }
 /* line 200, ../sass/base/jeet/_grid.scss */
-.two-sidebars #content:after {
+.two-sidebars main:after {
   clear: both;
 }
 /* line 49, ../sass/base/jeet/_grid.scss */
-.two-sidebars #content:last-child {
+.two-sidebars main:last-child {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 92, ../sass/layout.scss */
-  .two-sidebars #content {
+  /* line 85, ../sass/layout.scss */
+  .two-sidebars main {
     *zoom: 1;
     float: left;
     display: inline;
@@ -361,20 +351,20 @@ body *, body *:before, body *:after {
     left: 0;
   }
   /* line 196, ../sass/base/jeet/_grid.scss */
-  .two-sidebars #content:before, .two-sidebars #content:after {
+  .two-sidebars main:before, .two-sidebars main:after {
     content: '';
     display: table;
   }
   /* line 200, ../sass/base/jeet/_grid.scss */
-  .two-sidebars #content:after {
+  .two-sidebars main:after {
     clear: both;
   }
   /* line 49, ../sass/base/jeet/_grid.scss */
-  .two-sidebars #content:last-child {
+  .two-sidebars main:last-child {
     margin-right: 0%;
   }
 }
-/* line 100, ../sass/layout.scss */
+/* line 93, ../sass/layout.scss */
 .two-sidebars .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -403,7 +393,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 100, ../sass/layout.scss */
+  /* line 93, ../sass/layout.scss */
   .two-sidebars .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -432,7 +422,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 108, ../sass/layout.scss */
+/* line 101, ../sass/layout.scss */
 .two-sidebars .region-sidebar-second {
   *zoom: 1;
   float: left;
@@ -459,7 +449,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 108, ../sass/layout.scss */
+  /* line 101, ../sass/layout.scss */
   .two-sidebars .region-sidebar-second {
     *zoom: 1;
     float: left;
@@ -489,7 +479,7 @@ body *, body *:before, body *:after {
   }
 }
 
-/* line 121, ../sass/layout.scss */
+/* line 114, ../sass/layout.scss */
 #documentation p.tb {
   *zoom: 1;
   float: left;

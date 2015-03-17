@@ -12,14 +12,9 @@
   a:visited {
     // underline all links
     text-decoration: underline !important;
-
-    #site-name & {
-      // Don't underline header
-      text-decoration: none !important;
-    }
   }
 
-  #content {
+  main {
     a[href]:after {
       // Add visible URL after links.
       content: " (" attr(href) ")";
@@ -39,7 +34,7 @@
     }
   }
 
-  #content {
+  main {
     // Un-float the content
     float: none !important;
     width: 100% !important;
@@ -48,21 +43,21 @@
   }
 
   body,
-  #page,
-  #main,
-  #content {
+  .page-wrap,
+  .site-main,
+  main {
     // Turn off any background colors or images
     color: #000;
     background-color: transparent !important;
     background-image: none !important;
   }
 
-  #skip-link,
+  .skip-link,
   #toolbar,
-  #navigation,
+  .site-navigation,
   .region-sidebar-first,
   .region-sidebar-second,
-  #footer,
+  .site-footer,
   .breadcrumb,
   .tabs,
   .action-links,
@@ -70,7 +65,8 @@
   .book-navigation,
   .forum-topic-navigation,
   .pager,
-  .feed-icons {
+  .feed-icons,
+  .messages {
     // Hide sidebars and nav elements
     visibility: hidden;
     display: none;

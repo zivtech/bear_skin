@@ -28,3 +28,22 @@ $body-text-font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif !default;
 $base-font-color: $bear-dark !default;
 $link-color: $bear-blue !default;
 $link-color-hover: darken($link-color, 10%) !default;
+
+
+//
+// Reusable classes
+//
+%no-margins {
+  margin: 0;
+}
+
+%no-dangling {
+  &:first-child,
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &:last-child,
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

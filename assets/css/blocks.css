@@ -1,4 +1,13 @@
-/* line 3, ../sass/blocks.scss */
+/* line 8, ../sass/blocks.scss */
+.block__title {
+  font-size: 19px;
+  font-size: 1.872rem;
+  background: #EFF2F1;
+  padding: 10px;
+  margin: 0 0 10px 0;
+}
+
+/* line 17, ../sass/blocks.scss */
 #block-block-1 {
   padding: 20px 0;
 }

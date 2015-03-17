@@ -15,16 +15,16 @@ $footer-height: 100px;
 .with-sticky-footer {
   height: 100%;
 
-  #page {
+  .page-wrap {
     min-height: 100%;
   }
 
-  #main {
+  .site-main {
     overflow: auto;
     padding-bottom: $footer-height; // padding = footer height
   }
 
-  #footer {
+  .site-footer {
     position: relative;
     margin-top: $footer-height * -1; // margin = - footer height
     height: $footer-height;
@@ -47,7 +47,7 @@ $footer-height: 100px;
 }
 
 // hack for ie7
-.ie7 .with-sticky-footer #page {
+.ie7 .with-sticky-footer .page-wrap {
   display: table;
   height: 100%
 }

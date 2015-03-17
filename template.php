@@ -54,6 +54,15 @@ function bear_skin_preprocess_page(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_region()
+ * 1. Add SMACCS / BEM style CSS class to regions
+ */
+function bear_skin_preprocess_region(&$variables) {
+  $region = $variables['region'];
+  $variables['classes_array'][] = 'region--' . str_replace('_', '-', $region);
+}
+
+/**
  * Implements template_preprocess_block()
  * 1. Add a class to the block to indicate its type and region placement
  */

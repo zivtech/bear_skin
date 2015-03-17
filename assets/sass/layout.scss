@@ -13,11 +13,6 @@ body {
   }
 }
 
-#page {
-  width: 100%;
-  min-width: 300px;
-}
-
 .wrapper {
   @include breakpoint($breakpoint-full-width) {
     padding: 0 20px;
@@ -26,10 +21,8 @@ body {
 
 .site-header,
 .site-navigation,
-#navigation,
-#main,
-#highlighted,
-#footer {
+.site-main,
+.site-footer {
   max-width: $site-max-width;
   margin: 0 auto;
   &:after {
@@ -39,7 +32,7 @@ body {
   }
 }
 
-#main {
+.site-main {
   padding: 20px 0 0 0;
 }
 
@@ -47,7 +40,7 @@ body {
 // Left Sidebar
 //
 .sidebar-first {
-  #content {
+  main {
     @include col(3/4);
     @include shift(1/4);
     @include breakpoint($breakpoint-medium-width) {
@@ -69,7 +62,7 @@ body {
 // Right sidebar
 //
 .sidebar-second {
-  #content {
+  main {
     @include col(3/4);
     @include breakpoint($breakpoint-medium-width) {
       @include col();
@@ -89,7 +82,7 @@ body {
 // Two sidebars
 //
 .two-sidebars {
-  #content {
+  main {
     @include col(2/4);
     @include shift(1/4);
     @include breakpoint($breakpoint-medium-width) {

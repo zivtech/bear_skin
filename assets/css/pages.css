@@ -1,35 +1,25 @@
-/* line 29, ../sass/pages.scss */
-h1.title,
-h2.node-title,
-h2.block-title,
-h2.title,
-h2.comment-form,
-h3.title {
-  margin: 0;
-}
-
-/* line 64, ../sass/pages.scss */
+/* line 18, ../sass/pages.scss */
 ul.inline {
   display: inline;
   padding: 0;
 }
-/* line 69, ../sass/pages.scss */
+/* line 23, ../sass/pages.scss */
 ul.inline li {
   display: inline;
   list-style-type: none;
   padding: 0 1em 0 0;
 }
 
-/* line 76, ../sass/pages.scss */
+/* line 30, ../sass/pages.scss */
 span.field-label {
   padding: 0 1em 0 0;
 }
 
-/* line 81, ../sass/pages.scss */
+/* line 35, ../sass/pages.scss */
 .item-list .pager {
   padding: 0;
 }
-/* line 85, ../sass/pages.scss */
+/* line 39, ../sass/pages.scss */
 .item-list .pager li {
   padding: 0 0.5em;
 }

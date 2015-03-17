@@ -4,53 +4,48 @@
   a:visited {
     text-decoration: underline !important;
   }
-  /* line 16, ../sass/print.scss */
-  #site-name a:link, #site-name
-  a:visited {
-    text-decoration: none !important;
-  }
 
-  /* line 23, ../sass/print.scss */
-  #content a[href]:after {
+  /* line 18, ../sass/print.scss */
+  main a[href]:after {
     content: " (" attr(href) ")";
     font-weight: normal;
     font-size: 16px;
   }
-  /* line 30, ../sass/print.scss */
-  #content a[href^="javascript:"]:after,
-  #content a[href^="#"]:after {
+  /* line 25, ../sass/print.scss */
+  main a[href^="javascript:"]:after,
+  main a[href^="#"]:after {
     content: "";
   }
-  /* line 36, ../sass/print.scss */
-  #content abbr[title]:after {
+  /* line 31, ../sass/print.scss */
+  main abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 42, ../sass/print.scss */
-  #content {
+  /* line 37, ../sass/print.scss */
+  main {
     float: none !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* line 50, ../sass/print.scss */
+  /* line 45, ../sass/print.scss */
   body,
-  #page,
-  #main,
-  #content {
+  .page-wrap,
+  .site-main,
+  main {
     color: #000;
     background-color: transparent !important;
     background-image: none !important;
   }
 
-  /* line 60, ../sass/print.scss */
-  #skip-link,
+  /* line 55, ../sass/print.scss */
+  .skip-link,
   #toolbar,
-  #navigation,
+  .site-navigation,
   .region-sidebar-first,
   .region-sidebar-second,
-  #footer,
+  .site-footer,
   .breadcrumb,
   .tabs,
   .action-links,
@@ -58,7 +53,8 @@
   .book-navigation,
   .forum-topic-navigation,
   .pager,
-  .feed-icons {
+  .feed-icons,
+  .messages {
     visibility: hidden;
     display: none;
   }

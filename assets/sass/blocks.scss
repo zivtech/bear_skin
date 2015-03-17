@@ -1,5 +1,19 @@
 @import "bear";
 
+//
+// Generic block styles
+//
+.block {
+
+  &__title {
+    @include rem(font-size, $h3-font-size);
+    background: $bear-grey;
+    padding: 10px;
+    margin: 0 0 10px 0;
+  }
+
+}
+
 #block-block-1 {
   padding: 20px 0;
 }

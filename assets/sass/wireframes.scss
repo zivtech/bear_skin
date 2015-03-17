@@ -1,13 +1,13 @@
 @import "bear";
 
 .with-wireframes {
-  #header,
-  #main,
-  #content,
-  #navigation,
+  .site-header,
+  .site-main,
+  .main,
+  .site-navigation,
   .region-sidebar-first,
   .region-sidebar-second,
-  #footer,
+  .site-footer,
   .region-bottom {
     outline: 1px solid #ccc;
   }

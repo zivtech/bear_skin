@@ -3,16 +3,16 @@
   height: 100%;
 }
 /* line 18, ../sass/sticky-footer.scss */
-.with-sticky-footer #page {
+.with-sticky-footer .page-wrap {
   min-height: 100%;
 }
 /* line 22, ../sass/sticky-footer.scss */
-.with-sticky-footer #main {
+.with-sticky-footer .site-main {
   overflow: auto;
   padding-bottom: 100px;
 }
 /* line 27, ../sass/sticky-footer.scss */
-.with-sticky-footer #footer {
+.with-sticky-footer .site-footer {
   position: relative;
   margin-top: -100px;
   height: 100px;
@@ -20,7 +20,7 @@
 }
 @media (max-width: 75em) {
   /* line 32, ../sass/sticky-footer.scss */
-  .with-sticky-footer #footer .block {
+  .with-sticky-footer .site-footer .block {
     padding: 0 20px;
   }
 }
@@ -34,7 +34,7 @@
 }
 
 /* line 50, ../sass/sticky-footer.scss */
-.ie7 .with-sticky-footer #page {
+.ie7 .with-sticky-footer .page-wrap {
   display: table;
   height: 100%;
 }
