@@ -8,7 +8,11 @@
 //
 // Sidebar containers
 //
-// .sidebar { }
+.sidebar {
+  .block {
+    margin-bottom: $vertical-gutter;
+  }
+}
 // .region--sidebar-first {  }
 // .region--sidebar-second {  }
 

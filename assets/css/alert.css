@@ -36,21 +36,25 @@
   background-color: #f0ad4e;
 }
 
-/* line 26, ../sass/alert.scss */
+/* line 9, ../sass/alert.scss */
+.messages:first-of-type {
+  margin-top: 0;
+}
+/* line 30, ../sass/alert.scss */
 .messages__list {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 1.5em;
 }
-/* line 32, ../sass/alert.scss */
+/* line 36, ../sass/alert.scss */
 .messages__item {
   margin-bottom: 0.8em;
 }
-/* line 34, ../sass/alert.scss */
+/* line 38, ../sass/alert.scss */
 .messages__item:last-of-type {
   margin-bottom: 0;
 }
-/* line 41, ../sass/alert.scss */
+/* line 45, ../sass/alert.scss */
 .messages .krumo-root {
   color: #555555;
 }

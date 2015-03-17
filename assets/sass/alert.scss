@@ -6,6 +6,10 @@
 .messages {
   @extend %alert;
 
+  &:first-of-type {
+    margin-top: 0;
+  }
+
   &--error,
   &.error {
     @extend %alert-error;

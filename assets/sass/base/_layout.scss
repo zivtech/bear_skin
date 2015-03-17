@@ -4,7 +4,7 @@
 //
 $site-max-width: 1200px / 16px * 1em !default;
 $indent-amount: 30px !default;
-$vertical-gutter: 10px 0 !default;
+$vertical-gutter: 30px / 16px * 1em !default;
 
 // Breakpoints
 $breakpoint-small-width: max-width 25em !default;

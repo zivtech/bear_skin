@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"sidebars.css"}
+{"version":3,"sources":["sidebars.css","../sass/sidebars.scss","../sass/base/_layout.scss"],"names":[],"mappings":"AAAA,qCAAoC;ACWlC;EACE,wBCN+B;EFHlC","file":"sidebars.css"}
