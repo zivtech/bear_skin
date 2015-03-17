@@ -48,7 +48,7 @@
 }
 
 .form-item {
-  /* Wrapper for a form element (or group of form elements) and its label */
+  /// Wrapper for a form element (or group of form elements) and its label ///
   margin: 1.5em 0;
   input {
     max-width: 99%;
@@ -57,11 +57,11 @@
   input.error,
   textarea.error,
   select.error {
-    /* Highlight the form elements that caused a form submission error */
+    /// Highlight the form elements that caused a form submission error ///
     border: 1px solid #c00;
   }
   label {
-    /* The label for a form element */
+    /// The label for a form element ///
     display: block;
     font-weight: normal;
     color: #666666;
@@ -72,18 +72,18 @@
   }
 
   label.option {
-    /* The label for a radio button or checkbox */
+    /// The label for a radio button or checkbox ///
     display: inline;
     font-weight: normal;
   }
 
   .form-required {
-    /* The part of the label that indicates a required field */
+    /// The part of the label that indicates a required field ///
     color: #c00;
   }
 
   .description {
-    /* The descriptive help text (separate from the label) */
+    /// The descriptive help text (separate from the label) ///
     font-size: 80%;
     font-style: italic;
     color: #777777;
@@ -94,8 +94,8 @@
   }
   .form-checkboxes &,
   .form-radios & {
-    /* Pack groups of checkboxes and radio buttons closer together */
-    margin: 0; /* Drupal core uses "0.4em 0" */
+    /// Pack groups of checkboxes and radio buttons closer together ///
+    margin: 0; /// Drupal core uses "0.4em 0" ///
   }
   .form-text, .form-textarea, .form-file {
     min-height: 30px;
@@ -176,7 +176,7 @@ html.js input.form-autocomplete {
 .container-inline {
   div,
   label {
-    /* Inline labels and form divs */
+    /// Inline labels and form divs ///
     display: inline;
   }
   .select2-container {
@@ -193,11 +193,11 @@ dd {
 }
 
 .tips {
-  /* Tips for Drupal's input formats */
+  /// Tips for Drupal's input formats ///
 }
 
 a.button {
-  /* Buttons used by contrib modules like Media */
+  /// Buttons used by contrib modules like Media ///
   appearance: button;
 }
 
@@ -267,52 +267,52 @@ html.js fieldset.collapsed {
   height: 2.15em;
 }
 
-/*
- * Password confirmation
- */
+///
+ // Password confirmation
+ ///
 
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
-/*
- * Search (search-block-form.tpl.php)
- */
+///
+ // Search (search-block-form.tpl.php)
+ ///
 
 #block-search-form {
-  /* Wrapper for the search form */
+  /// Wrapper for the search form ///
 }
 
-/*
- * Drupal's default login form block
- */
+///
+ // Drupal's default login form block
+ ///
 
 #user-login-form {
-  text-align: left; /* LTR */
+  text-align: left; /// LTR ///
 
-  /*
-   * OpenID
-   *
-   * The default styling for the OpenID login link seems to assume Garland's
-   * styling of list items.
-   */
+  ///
+   // OpenID
+   //
+   // The default styling for the OpenID login link seems to assume Garland's
+   // styling of list items.
+   ///
 
   ul {
-    /* OpenID creates a new ul above the login form's links. */
-    margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
+    /// OpenID creates a new ul above the login form's links. ///
+    margin-bottom: 0; /// Position OpenID's ul next to the rest of the links. ///
   }
 
   html.js & li.openid-link,
   li.openid-link {
-    /* The "Log in using OpenID" link. */
+    /// The "Log in using OpenID" link. ///
     margin-top: 1.5em;
-    margin-left: -20px; /* LTR */
-    /* Un-do some of the padding on the ul list. */
+    margin-left: -20px; /// LTR ///
+    /// Un-do some of the padding on the ul list. ///
   }
 
   li.user-link {
-    /* The "Cancel OpenID login" link. */
+    /// The "Cancel OpenID login" link. ///
     margin-top: 1.5em;
   }
 }
@@ -321,20 +321,19 @@ html.js fieldset.collapsed {
   margin: 1.5em 0;
 }
 
-/*
- * Drupal tables
- *
- * We overrode these styles in normalize.css, but restore them for the admin
- * section of the site.
- */
+///
+ // Drupal tables
+ //
+ // We overrode these styles in normalize.css, but restore them for the admin
+ // section of the site.
+ ///
 
 table {
   width: 100%;
 }
 
 th {
-  text-align: left; /* LTR */
-  padding-right: 1em; /* LTR */
+  text-align: left; /// LTR ///
   border-bottom: 3px solid #ccc;
   font-weight: normal;
   padding: 5px 10px;
@@ -361,7 +360,7 @@ table .item-list ul {
 .lt-ie8 tr.odd {
   th,
   td {
-    border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
+    border-bottom: 1px solid #ccc; /// IE doesn't display borders on table rows ///
   }
 }
 
@@ -400,9 +399,9 @@ table .item-list ul {
   }
 }
 
-/*
- * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
- */
+///
+ // Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+ ///
 
 td.menu-disabled {
   background: #ccc;

@@ -54,6 +54,15 @@ function bear_skin_preprocess_page(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_block()
+ * 1. Add a class to the block to indicate its type and region placement
+ */
+function bear_skin_preprocess_block(&$variables) {
+  $module = str_replace('_', '-', $variables['block']->module) .'-'. $variables['block']->delta;
+  $region = str_replace('_', '-', $variables['block']->region);
+  $variables['classes_array'][] = 'block__' . $module . '--' . $region;
+}
+/**
  * Implements hook_css_alter().
  * 1. Remove some of Drupal's default CSS
  * 2. Force insertion of CSS as <link> tags instead of @import
@@ -88,7 +97,6 @@ function bear_skin_css_alter(&$css) {
  */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $menu_name = $variables['element']['#original_link']['menu_name'];
-  $element = $variables['element'];
   $depth_word = _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
 
   $variables['element']['#attributes']['class'][] = $menu_name . '__item';

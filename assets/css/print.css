@@ -2,19 +2,16 @@
   /* line 11, ../sass/print.scss */
   a:link,
   a:visited {
-    /* underline all links */
     text-decoration: underline !important;
   }
   /* line 16, ../sass/print.scss */
   #site-name a:link, #site-name
   a:visited {
-    /* Don't underline header */
     text-decoration: none !important;
   }
 
   /* line 23, ../sass/print.scss */
   #content a[href]:after {
-    /* Add visible URL after links. */
     content: " (" attr(href) ")";
     font-weight: normal;
     font-size: 16px;
@@ -22,18 +19,15 @@
   /* line 30, ../sass/print.scss */
   #content a[href^="javascript:"]:after,
   #content a[href^="#"]:after {
-    /* Only display useful links. */
     content: "";
   }
   /* line 36, ../sass/print.scss */
   #content abbr[title]:after {
-    /* Add visible title after abbreviations. */
     content: " (" attr(title) ")";
   }
 
   /* line 42, ../sass/print.scss */
   #content {
-    /* Un-float the content */
     float: none !important;
     width: 100% !important;
     margin: 0 !important;
@@ -45,7 +39,6 @@
   #page,
   #main,
   #content {
-    /* Turn off any background colors or images */
     color: #000;
     background-color: transparent !important;
     background-image: none !important;
@@ -66,7 +59,6 @@
   .forum-topic-navigation,
   .pager,
   .feed-icons {
-    /* Hide sidebars and nav elements */
     visibility: hidden;
     display: none;
   }

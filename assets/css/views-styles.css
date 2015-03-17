@@ -1,11 +1,3 @@
-/*
- * Views' admin tabs
- *
- * The views admin tabs use the same classes as the secondary tabs. We prevent
- * some of our tab styling from bleeding into (and breaking) the Views admin
- * pages. If your sub-theme isn't used for admin pages, you can remove this
- * entire section.
- */
 /* line 12, ../sass/views-styles.scss */
 .views-displays .secondary li {
   float: none;

@@ -33,14 +33,13 @@
   line-height: 40px;
   height: 40px;
   padding: 0;
-  text-transform: uppercase;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border-right: 1px solid #EFF2F1;
   -webkit-transition: background-color 0.5s ease;
           transition: background-color 0.5s ease;
 }
-/* line 38, ../sass/base/_tab.scss */
+/* line 37, ../sass/base/_tab.scss */
 .tabs-primary__tab:hover,
 .tabs-secondary__tab:hover {
   background-color: #e1e7e5;
@@ -56,12 +55,12 @@
           transition: color 0.3s ease;
   padding: 0 1em;
 }
-/* line 50, ../sass/base/_tab.scss */
+/* line 49, ../sass/base/_tab.scss */
 .tabs-primary__tab-link:hover,
 .tabs-secondary__tab-link:hover {
   color: #6e6e6e;
 }
-/* line 53, ../sass/base/_tab.scss */
+/* line 52, ../sass/base/_tab.scss */
 .tabs-primary__tab-link.active,
 .tabs-secondary__tab-link.active {
   border-bottom: 1px solid #555555;
