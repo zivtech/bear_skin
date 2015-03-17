@@ -8,7 +8,10 @@ $vertical-gutter: 10px 0 !default;
 
 // Breakpoints
 $breakpoint-small-width: max-width 25em !default;
-$breakpoint-med-small-width: max-width 37.5em !default;
+$breakpoint-med-small-width: max-width 30em !default;
 $breakpoint-medium-width: max-width 50em !default;
 $breakpoint-large-width: max-width 62.5em !default;
 $breakpoint-full-width: max-width $site-max-width;
+
+// Header layout
+$header-padding: 25px 0 !default;

@@ -1,43 +1,63 @@
 @import "bear";
 
 .region-header {
-  clear: none;
+  clear: both;
 }
 
-.wrapper.header {
-  background-color: lighten($bear-dark, 15%);
-  border-bottom: 2px solid $bear-dark;
+.wrapper--header {
+  background-color: $bear-lighten-dark;
+  color: $bear-whitey;
+}
 
-  header {
-    padding: 25px 0;
-    position: relative;
+.site-header {
+  padding: $header-padding;
+
+  &__logo,
+  &__name-and-slogan {
+    float: left;
   }
-}
 
-h1#site-name {
-  font-size: 2em;
-  line-height: .5em;
-  margin: 70px 0 0 25px;
-  a:link, a:visited {
-    color: #ffffff;
+  &__logo {
+    margin-right: 1em;
   }
-}
 
-@include breakpoint($breakpoint-medium-width) {
-  .wrapper.header #header {
-    text-align: center;
-    padding: 0;
-    #logo {
-      float: none;
-      clear: both;
-      display: block;
-      padding: 20px 0;
-    }
-    #name-and-slogan {
-      float: none;
-      h1 {
-        margin: 10px 0;
+  &__name-and-slogan {
+    margin: 0.5em 0;
+  }
+
+  &__name {
+    font-size: 2em;
+    margin: 0;
+    a {
+      @include link-colors($bear-whitey);
+      &:hover, &:focus {
+        text-decoration: underline;
       }
     }
   }
+
+  &__slogan {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  .nav-user {
+    float: right;
+  }
+
+  @include breakpoint($breakpoint-medium-width) {
+    &__logo,
+    &__name-and-slogan,
+    .nav-user {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &__name-and-slogan {
+      margin-bottom: 1em;
+    }
+  }
+
 }

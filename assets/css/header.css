@@ -1,50 +1,64 @@
 /* line 3, ../sass/header.scss */
 .region-header {
-  clear: none;
+  clear: both;
 }
 
 /* line 7, ../sass/header.scss */
-.wrapper.header {
+.wrapper--header {
   background-color: #7b7b7b;
-  border-bottom: 2px solid #555555;
+  color: #f9f9f9;
 }
-/* line 11, ../sass/header.scss */
-.wrapper.header header {
+
+/* line 12, ../sass/header.scss */
+.site-header {
   padding: 25px 0;
-  position: relative;
 }
-
-/* line 17, ../sass/header.scss */
-h1#site-name {
+/* line 15, ../sass/header.scss */
+.site-header__logo, .site-header__name-and-slogan {
+  float: left;
+}
+/* line 20, ../sass/header.scss */
+.site-header__logo {
+  margin-right: 1em;
+}
+/* line 24, ../sass/header.scss */
+.site-header__name-and-slogan {
+  margin: 0.5em 0;
+}
+/* line 28, ../sass/header.scss */
+.site-header__name {
   font-size: 2em;
-  line-height: .5em;
-  margin: 70px 0 0 25px;
+  margin: 0;
 }
-/* line 21, ../sass/header.scss */
-h1#site-name a:link, h1#site-name a:visited {
-  color: #ffffff;
+/* line 31, ../sass/header.scss */
+.site-header__name a {
+  color: #f9f9f9;
 }
-
+/* line 33, ../sass/header.scss */
+.site-header__name a:hover, .site-header__name a:focus {
+  text-decoration: underline;
+}
+/* line 39, ../sass/header.scss */
+.site-header__slogan {
+  margin: 0;
+  font-size: 1em;
+}
+/* line 44, ../sass/header.scss */
+.site-header .nav-user {
+  float: right;
+}
 @media (max-width: 50em) {
-  /* line 27, ../sass/header.scss */
-  .wrapper.header #header {
-    text-align: center;
-    padding: 0;
-  }
-  /* line 30, ../sass/header.scss */
-  .wrapper.header #header #logo {
+  /* line 49, ../sass/header.scss */
+  .site-header__logo, .site-header__name-and-slogan,
+  .site-header .nav-user {
     float: none;
-    clear: both;
     display: block;
-    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
   }
-  /* line 36, ../sass/header.scss */
-  .wrapper.header #header #name-and-slogan {
-    float: none;
-  }
-  /* line 38, ../sass/header.scss */
-  .wrapper.header #header #name-and-slogan h1 {
-    margin: 10px 0;
+  /* line 58, ../sass/header.scss */
+  .site-header__name-and-slogan {
+    margin-bottom: 1em;
   }
 }
 

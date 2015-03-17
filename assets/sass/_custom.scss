@@ -19,6 +19,7 @@ $bear-grey: #EFF2F1;
 $bear-greyer: #d1d3d2;
 $bear-blue: #61AEE2;
 $bear-dark: #555555;
+$bear-lighten-dark: lighten($bear-dark, 15%);
 $bear-whitey: #f9f9f9;
 
 
@@ -75,6 +76,25 @@ $bear-whitey: #f9f9f9;
 // $breakpoint-medium-width: max-width 50em;
 // $breakpoint-large-width: max-width 62.5em;
 // $breakpoint-full-width: max-width $site-max-width;
+// $header-padding: 25px 0;
+
+
+//
+// MAIN MENU NAVIGATION
+//
+// $nav-container-bg-color: $bear-dark;
+// $nav-container-height: 50px;
+// $nav-drop-down-bg-color: $bear-greyer;
+// $nav-drop-down-link-color: $bear-dark;
+// $nav-drop-down-link-color-hover: $bear-yellow;
+// $nav-drop-down-border-radius: $border-radius;
+// $nav-drop-down-min-width: 250px;
+// $nav-link-text-transform: capitalize;
+// $nav-link-padding: 0 1em;
+// $nav-link-bg-color: $nav-container-bg-color;
+// $nav-link-bg-color-hover: $bear-whitey;
+// $nav-link-color: $bear-whitey;
+// $nav-link-color-hover: $nav-container-bg-color;
 
 
 //

@@ -4,6 +4,10 @@
 // Layout styles
 //
 body {
+  margin: 0;
+  padding: 0;
+  background: $bear-whitey;
+
   *, *:before, *:after {
     box-sizing: border-box;
   }
@@ -12,33 +16,22 @@ body {
 #page {
   width: 100%;
   min-width: 300px;
-  .wrapper {
-    @include breakpoint($breakpoint-full-width) {
-      padding: 0 20px;
-    }
+}
+
+.wrapper {
+  @include breakpoint($breakpoint-full-width) {
+    padding: 0 20px;
   }
 }
 
-#header,
-#content,
+.site-header,
+.site-navigation,
 #navigation,
+#main,
 #highlighted,
-.region-sidebar-first,
-.region-sidebar-second,
 #footer {
   max-width: $site-max-width;
   margin: 0 auto;
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-#header,
-#main,
-#footer {
-  width: 100%;
   &:after {
     content: "";
     display: table;
@@ -47,8 +40,6 @@ body {
 }
 
 #main {
-  max-width: $site-max-width;
-  margin: 0 auto;
   padding: 20px 0 0 0;
 }
 

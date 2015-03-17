@@ -5,81 +5,12 @@
  * Body
  */
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#page {
-}
 
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
  */
 
-#skip-link {
-  margin: 0;
-
-  a,
-  a:visited {
-    @extend %u-hidden;
-    @extend %u-focusable;
-    display: block;
-    width: 100%;
-    padding: 2px 0 3px 0;
-    text-align: center;
-    background-color: #666;
-    color: #fff;
-  }
-}
-
-/*
- * Header
- */
-
-#header {
-}
-
-#logo { /* Wrapping link for logo */
-  float: left; /* LTR */
-  margin: 0;
-  padding: 0;
-
-  img {
-    vertical-align: bottom;
-  }
-}
-
-#name-and-slogan { /* Wrapper for website name and slogan */
-  float: left;
-}
-
-#site-name { /* The name of the website */
-  margin: 0;
-  font-size: 2em;
-  line-height: 1.5em;
-
-  a:link,
-  a:visited {
-    color: #000;
-    text-decoration: none;
-  }
-
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-  }
-}
-
-#site-slogan { /* The slogan (or tagline) of a website */
-  margin: 0;
-  font-size: 1em;
-}
-
-.region-header { /* Wrapper for any blocks placed in the header region */
-  clear: both; /* Clear the logo */
-}
 
 /*
  * Main (container for everything else)

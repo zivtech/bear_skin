@@ -38,7 +38,6 @@ stylesheets[all][] = assets/css/alert.css
 stylesheets[all][] = assets/css/typography.css
 stylesheets[all][] = assets/css/buttons.css
 stylesheets[all][] = assets/css/layout.css
-stylesheets[all][] = assets/css/bear-menu.css
 stylesheets[all][] = assets/css/blocks.css
 stylesheets[all][] = assets/css/comments.css
 stylesheets[all][] = assets/css/forms.css

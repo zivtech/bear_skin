@@ -84,12 +84,55 @@ function bear_skin_css_alter(&$css) {
  * 1. Make a more specific CSS class for menu list items <li>
  * 2. Make a CSS class on menu list items <li> referencing their level depth
  * 3. Make a more specific CSS class for menu links <a>
+ * 4. Save the menu name and depth as attributes
  */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $menu_name = $variables['element']['#original_link']['menu_name'];
-  $variables['element']['#attributes']['class'][] = 'level-' . _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
-  $variables['element']['#attributes']['class'][0] = $menu_name . '__item';
-  $variables['element']['#localized_options']['attributes']['class'][0] = $variables['element']['#original_link']['menu_name'] . '__link';
+  $element = $variables['element'];
+  $depth_word = _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
+
+  $variables['element']['#attributes']['class'][] = $menu_name . '__item';
+  $variables['element']['#attributes']['class'][] = $menu_name . '__item--level-' . $depth_word;
+  $variables['element']['#localized_options']['attributes']['class'][] = $menu_name . '__link';
+
+  // save the menu name and depth as data attributes
+  // this is a hack so that the <ul class="menu"> element can ultimately have
+  // CSS classes that reflect the specific menu name and its depth in the tree
+  $variables['element']['#attributes']['data-menu-name'] = $menu_name;
+  $variables['element']['#attributes']['data-menu-depth'] = $depth_word;
+
+}
+
+/**
+ * Implements template_preprocess_menu_tree()
+ * 1. Pick the data attributes for menu name and depth,
+ *    save them as elements in the $variables array
+ *    then the template_menu_tree hook can add them as CSS classes
+ */
+function bear_skin_preprocess_menu_tree(&$variables) {
+  $tree = new DOMDocument();
+  @$tree->loadHTML($variables['tree']);
+  $links = $tree->getElementsByTagname('li');
+  $menu_name = '';
+  $menu_depth = '';
+
+  foreach ($links as $link) {
+    $menu_name = $link->getAttribute('data-menu-name');
+    $menu_depth = $link->getAttribute('data-menu-depth');
+    break;
+  }
+
+  $variables['menu_name'] = $menu_name;
+  $variables['menu_depth'] = $menu_depth;
+}
+
+/**
+ * Implements template_menu_tree()
+ * 1. Make CSS classes out of the data attributes stored in
+ *    the template_preprocess_menu_tree hook
+ */
+function bear_skin_menu_tree(&$variables) {
+  return '<ul class="menu ' . $variables['menu_name'] . '--level-' . $variables['menu_depth'] . '">' . $variables['tree'] . '</ul>';
 }
 
 /**
