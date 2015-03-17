@@ -5,7 +5,7 @@
 @import "jeet/index";
 @import "sassy-buttons"; // Add the sassy buttons
 @import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
-@import "modernizr-mixin"; // Modernizr mixin https://github.com/danielguillan/modernizr-mixin
+@import "modernizr"; // Modernizr mixin https://github.com/danielguillan/modernizr-mixin
 
 // vars, mixins, reusable classes
 @import "global";
@@ -17,3 +17,4 @@
 @import "alert";
 @import "tab";
 @import "navigation";
+@import "form";

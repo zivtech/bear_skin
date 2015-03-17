@@ -1,3 +1,12 @@
+/* line 41, ../sass/base/_typography.scss */
+p:first-child, p:first-of-type {
+  margin-top: 0;
+}
+/* line 45, ../sass/base/_typography.scss */
+p:last-child, p:last-of-type {
+  margin-bottom: 0;
+}
+
 /* line 3, ../sass/typography.scss */
 html {
   height: 100%;
@@ -65,12 +74,43 @@ h4, .h4 {
 h5, .h5 {
   font-size: 13px;
   font-size: 1.328rem;
+  text-transform: uppercase;
 }
 
-/* line 55, ../sass/typography.scss */
+/* line 56, ../sass/typography.scss */
 h6, .h6 {
   font-size: 12px;
   font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* line 65, ../sass/typography.scss */
+mark {
+  padding: 2px;
+  background-color: #F9B634;
+}
+/* line 69, ../sass/typography.scss */
+mark.new {
+  background-color: transparent;
+  color: #d9534f;
+}
+/* line 73, ../sass/typography.scss */
+mark.new:before {
+  content: "**";
+  display: inline-block;
+  margin-right: 2px;
+}
+
+/* line 81, ../sass/typography.scss */
+blockquote {
+  background-color: #EFF2F1;
+  font-size: 110%;
+  padding: 1em;
+}
+
+/* line 87, ../sass/typography.scss */
+.progress {
+  font-size: 80%;
 }
 
 /*# sourceMappingURL=typography.css.map */

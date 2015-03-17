@@ -50,8 +50,40 @@ h4, .h4 {
 
 h5, .h5 {
   @include rem(font-size, $h5-font-size);
+  text-transform: uppercase;
 }
 
 h6, .h6 {
   @include rem(font-size, $h6-font-size);
+  text-transform: uppercase;
+}
+
+p {
+  @extend %no-dangling;
+}
+
+mark {
+  padding: 2px;
+  background-color: $bear-yellow;
+
+  &.new {
+    background-color: transparent;
+    color: $color-error;
+
+    &:before {
+      content: "**";
+      display: inline-block;
+      margin-right: 2px; // LTR
+    }
+  }
+}
+
+blockquote {
+  background-color: $bear-grey;
+  font-size: 110%;
+  padding: 1em;
+}
+
+.progress {
+  font-size: 80%;
 }

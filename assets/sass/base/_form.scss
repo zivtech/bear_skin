@@ -1,0 +1,50 @@
+//
+// Variables
+//
+$form-input-padding: 0.5em 0.75em !default;
+$form-input-font-color: $base-font-color !default;
+$form-input-bg-color: $bear-whitey !default;
+$form-input-active-color: $color-primary !default;
+$form-input-border-color: lighten($base-font-color, 50%) !default;
+$form-input-container-margin: 1em 0 !default;
+
+//
+// Mixins
+//
+@mixin form-container($margin: $form-input-container-margin) {
+  @include cf;
+  margin: $margin;
+  width: 100%;
+  float: none;
+
+  // if it's the only container
+  // no reason to have the margin!
+  &:only-of-type {
+    margin: 0;
+  }
+}
+
+@mixin form-element($padding: $form-input-padding, $color: $form-input-font-color, $bg-color: $form-input-bg-color, $border-color: $form-input-border-color) {
+  color: $color;
+  background-color: $bg-color;
+  padding: $padding;
+  border: $border-color 1px solid;
+  border-radius: $border-radius;
+
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+  &:focus {
+    border: 1px solid $form-input-active-color;
+  }
+
+  &.error {
+    border: 1px solid $color-error;
+  }
+}
+
+//
+// Reusable classes
+//

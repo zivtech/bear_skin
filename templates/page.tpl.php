@@ -78,7 +78,6 @@
         <?php endif; ?>
 
         <?php if (!empty($tabs['#primary']) || !empty($tabs['#secondary'])): ?>
-          <?php dpm($tabs); ?>
           <div class="main__tabs">
             <?php print render($tabs); ?>
           </div>

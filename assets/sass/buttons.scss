@@ -17,6 +17,10 @@
   &.success {
     @extend %button-success;
   }
+
+  &.error {
+    @extend %button-error;
+  }
 }
 
 .button-inverted {

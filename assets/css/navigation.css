@@ -1,7 +1,7 @@
 /* line 70, ../sass/base/_button.scss */
 .nav-user__link {
   position: relative;
-  display: block;
+  display: inline-block;
   overflow: hidden;
   border: 1px solid #3b3b3b;
   outline: none;
