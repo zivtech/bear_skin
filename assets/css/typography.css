@@ -93,22 +93,27 @@ mark {
 mark.new {
   background-color: transparent;
   color: #d9534f;
+  font-size: 75%;
 }
-/* line 73, ../sass/typography.scss */
+/* line 74, ../sass/typography.scss */
 mark.new:before {
   content: "**";
   display: inline-block;
   margin-right: 2px;
 }
-
 /* line 81, ../sass/typography.scss */
+mark.updated {
+  font-size: 75%;
+}
+
+/* line 86, ../sass/typography.scss */
 blockquote {
   background-color: #EFF2F1;
   font-size: 110%;
   padding: 1em;
 }
 
-/* line 87, ../sass/typography.scss */
+/* line 92, ../sass/typography.scss */
 .progress {
   font-size: 80%;
 }

@@ -69,12 +69,17 @@ mark {
   &.new {
     background-color: transparent;
     color: $color-error;
+    font-size: 75%;
 
     &:before {
       content: "**";
       display: inline-block;
       margin-right: 2px; // LTR
     }
+  }
+
+  &.updated {
+    font-size: 75%;
   }
 }
 

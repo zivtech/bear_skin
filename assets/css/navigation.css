@@ -242,4 +242,25 @@
   color: #fff;
 }
 
+/* line 220, ../sass/navigation.scss */
+.item-list .pager {
+  padding: 0;
+}
+/* line 224, ../sass/navigation.scss */
+.item-list .pager li {
+  padding: 0 0.5em;
+}
+
+/* line 233, ../sass/navigation.scss */
+ul.inline {
+  display: inline;
+  padding: 0;
+}
+/* line 237, ../sass/navigation.scss */
+ul.inline li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 1em 0 0;
+}
+
 /*# sourceMappingURL=navigation.css.map */

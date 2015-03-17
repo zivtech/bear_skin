@@ -1,27 +1,3 @@
-/* line 18, ../sass/pages.scss */
-ul.inline {
-  display: inline;
-  padding: 0;
-}
-/* line 23, ../sass/pages.scss */
-ul.inline li {
-  display: inline;
-  list-style-type: none;
-  padding: 0 1em 0 0;
-}
 
-/* line 30, ../sass/pages.scss */
-span.field-label {
-  padding: 0 1em 0 0;
-}
-
-/* line 35, ../sass/pages.scss */
-.item-list .pager {
-  padding: 0;
-}
-/* line 39, ../sass/pages.scss */
-.item-list .pager li {
-  padding: 0 0.5em;
-}
 
 /*# sourceMappingURL=pages.css.map */
