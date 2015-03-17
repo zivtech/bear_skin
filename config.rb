@@ -15,6 +15,7 @@ require 'sassy-buttons'
 require 'breakpoint'
 require 'rgbapng'
 require 'compass-normalize'
+require 'modernizr-mixin'
 
 
 # Change this to :production when ready to deploy the CSS to the live server.

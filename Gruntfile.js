@@ -49,15 +49,6 @@ module.exports = function (grunt) {
       }
     },
 
-    modernizr: {
-      dist: {
-        outputFile: '<%= app.assets %>/js/modernizr.js',
-        tests: ['respond', 'svg', 'mq', 'touch', 'localstorage', 'inputtypes'],
-        uglify: false,
-        parseFiles: false
-      }
-    },
-
     compass: {
       bearskin: {
         options: {
