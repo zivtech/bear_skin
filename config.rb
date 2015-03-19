@@ -11,7 +11,6 @@
 require 'autoprefixer-rails'
 
 # Required for sass compile
-require 'sassy-buttons'
 require 'breakpoint'
 require 'rgbapng'
 require 'compass-normalize'
