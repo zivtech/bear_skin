@@ -27,12 +27,12 @@ firesass = false
 Sass::Plugin.options[:debug_info] = true
 
 # Location of the theme's resources.
-css_dir         = "assets/css"
-sass_dir        = "assets/sass"
-fonts_dir       = "assets/fonts"
-extensions_dir  = "assets/sass/sass-extensions"
-images_dir      = "assets/images"
-javascripts_dir = "assets/js"
+css_dir         = "css"
+sass_dir        = "sass"
+fonts_dir       = "fonts"
+extensions_dir  = "sass/sass-extensions"
+images_dir      = "images"
+javascripts_dir = "js"
 
 # Assuming this theme is in sites/*/themes/THEMENAME, you can add the partials
 # included with a module by uncommenting and modifying one of the lines below:

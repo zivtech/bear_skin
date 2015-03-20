@@ -1,0 +1,55 @@
+@import "bear";
+
+//
+// Button
+//
+.button {
+  @extend %button;
+
+  &.secondary {
+    @extend %button-secondary;
+  }
+
+  &.highlight {
+    @extend %button-highlight;
+  }
+
+  &.success {
+    @extend %button-success;
+  }
+
+  &.warning {
+    @extend %button-warning;
+  }
+
+  &.error {
+    @extend %button-error;
+  }
+}
+
+//
+// Inverted Button
+//
+.button-inverted {
+  @include bear-button-inverted;
+
+  &.secondary {
+    @extend %button-inverted-secondary;
+  }
+
+  &.highlight {
+    @extend %button-inverted-highlight;
+  }
+
+  &.success {
+    @extend %button-inverted-success;
+  }
+
+  &.warning {
+    @extend %button-inverted-warning;
+  }
+
+  &.error {
+    @extend %button-inverted-error;
+  }
+}

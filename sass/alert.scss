@@ -1,0 +1,48 @@
+@import "bear";
+
+//
+// Messages
+//
+.messages {
+  @extend %alert;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &--error,
+  &.error {
+    @extend %alert-error;
+  }
+
+  &--ok,
+  &--status,
+  &.status,
+  &.ok {
+    @extend %alert-success;
+  }
+
+  &--warning,
+  &.warning {
+    @extend %alert-warning;
+  }
+
+  &__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1.5em;
+  }
+
+  &__item {
+    margin-bottom: 0.8em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // the output of dpm() gets put into a messages
+  // we need to set its font color here
+  .krumo-root {
+    color: $base-font-color;
+  }
+}

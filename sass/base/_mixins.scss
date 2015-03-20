@@ -1,0 +1,21 @@
+//
+//
+// BEAR mixins / functions
+//
+//
+
+@function em($target, $context: 16) {
+  @return ($target / $context) * 1em;
+}
+
+
+@mixin bear-linear-gradient($fromColor, $toColor) {
+  background-color: $toColor;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='$fromColor', EndColorStr='$toColor');
+  background-image: linear-gradient(top, $fromColor, $toColor);
+}
+
+@mixin bear-border-radius($radius: $border-radius) {
+  border-radius: $radius;
+  background-clip: padding-box;
+}

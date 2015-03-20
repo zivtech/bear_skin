@@ -5,6 +5,6 @@ group :development do
 
   guard :compass, configuration_file: 'config.rb',
         compile_on_start: true do
-    watch(%r{..\/assets\/sass\/.*\.scss$})
+    watch(%r{..\/sass\/.*\.scss$})
   end
 end
