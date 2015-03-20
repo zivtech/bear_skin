@@ -1,7 +1,7 @@
 //
 // Variables
 //
-$table-border: 1px solid $bear-grey !default;
+$table-border: 1px solid $bear-lighten-dark !default;
 $table-border-radius: $border-radius !default;
 
 $table-header-vertical-align: bottom !default;
@@ -17,7 +17,7 @@ $table-row-transition: background .2s ease, border-color .2s ease, color .2s eas
 
 $table-cell-vertical-align: middle !default;
 $table-cell-font-color: $base-font-color !default;
-$table-cell-border: 1px solid $bear-grey !default;
+$table-cell-border: 1px solid $bear-lighten-dark !default;
 $table-cell-padding: .7em .8em !default;
 $table-cell-text-align: left !default;
 // LTR
@@ -25,11 +25,13 @@ $table-cell-text-align: left !default;
 //
 // Table mixin
 //
-@mixin table($striped: true, $bordered: true) {
+@mixin table($striped: true, $bordered: true, $celled: false) {
   max-width: 100% !important;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  background-color: transparent;
+  border: none;
 
   @if ($bordered) {
     border: $table-border;
@@ -42,9 +44,14 @@ $table-cell-text-align: left !default;
     font-weight: $table-header-font-weight;
     vertical-align: $table-header-vertical-align;
     text-transform: $table-header-text-transform;
+    padding: $table-cell-padding;
+    border: none;
 
     @if ($bordered) {
       border-bottom: $table-cell-border;
+    }
+
+    @if ($bordered and $celled) {
       border-left: $table-cell-border;
 
       &:first-child,
@@ -56,6 +63,7 @@ $table-cell-text-align: left !default;
 
   tr {
     transition: $table-row-transition;
+    background-color: transparent;
 
     @if ($striped) {
       &:nth-child(2n),
@@ -69,6 +77,7 @@ $table-cell-text-align: left !default;
     }
     &:hover {
       background-color: $table-row-hover-color;
+      color: darken($table-cell-font-color, 15%);
     }
   }
 
@@ -76,7 +85,24 @@ $table-cell-text-align: left !default;
     padding: $table-cell-padding;
     vertical-align: $table-cell-vertical-align;
     text-align: $table-cell-text-align;
+    background-color: transparent;
+    border: none;
 
+    @if ($celled) {
+      border-left: $table-cell-border;
+      border-bottom: $table-cell-border;
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  @if ($celled) {
+    tr:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
   }
 }
 

@@ -4,158 +4,244 @@ table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid #EFF2F1;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #7b7b7b;
   border-radius: 2px;
 }
-/* line 39, ../sass/base/_table.scss */
+/* line 41, ../sass/base/_table.scss */
 table th {
   background-color: #d1d3d2;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
-  border-bottom: 1px solid #EFF2F1;
-  border-left: 1px solid #EFF2F1;
+  padding: 0.7em 0.8em;
+  border: none;
+  border-bottom: 1px solid #7b7b7b;
 }
-/* line 50, ../sass/base/_table.scss */
-table th:first-child, table th:first-of-type {
-  border-left: none;
-}
-/* line 57, ../sass/base/_table.scss */
+/* line 64, ../sass/base/_table.scss */
 table tr {
   -webkit-transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
           transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: transparent;
 }
-/* line 61, ../sass/base/_table.scss */
+/* line 69, ../sass/base/_table.scss */
 table tr:nth-child(2n), table tr.even {
   background-color: #EFF2F1;
 }
-/* line 65, ../sass/base/_table.scss */
+/* line 73, ../sass/base/_table.scss */
 table tr:nth-child(2n + 1), table tr.odd {
   background-color: #f9f9f9;
 }
-/* line 70, ../sass/base/_table.scss */
+/* line 78, ../sass/base/_table.scss */
 table tr:hover {
   background-color: #EFF2F1;
+  color: #2f2f2f;
 }
-/* line 75, ../sass/base/_table.scss */
+/* line 84, ../sass/base/_table.scss */
 table td {
   padding: 0.7em 0.8em;
   vertical-align: middle;
   text-align: left;
+  background-color: transparent;
+  border: none;
 }
-/* line 9, ../sass/table.scss */
+/* line 10, ../sass/table.scss */
 table.no-stripes {
   max-width: 100% !important;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid #EFF2F1;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #7b7b7b;
   border-radius: 2px;
 }
-/* line 39, ../sass/base/_table.scss */
+/* line 41, ../sass/base/_table.scss */
 table.no-stripes th {
   background-color: #d1d3d2;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
-  border-bottom: 1px solid #EFF2F1;
-  border-left: 1px solid #EFF2F1;
+  padding: 0.7em 0.8em;
+  border: none;
+  border-bottom: 1px solid #7b7b7b;
 }
-/* line 50, ../sass/base/_table.scss */
-table.no-stripes th:first-child, table.no-stripes th:first-of-type {
-  border-left: none;
-}
-/* line 57, ../sass/base/_table.scss */
+/* line 64, ../sass/base/_table.scss */
 table.no-stripes tr {
   -webkit-transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
           transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: transparent;
 }
-/* line 70, ../sass/base/_table.scss */
+/* line 78, ../sass/base/_table.scss */
 table.no-stripes tr:hover {
   background-color: #EFF2F1;
+  color: #2f2f2f;
 }
-/* line 75, ../sass/base/_table.scss */
+/* line 84, ../sass/base/_table.scss */
 table.no-stripes td {
   padding: 0.7em 0.8em;
   vertical-align: middle;
   text-align: left;
+  background-color: transparent;
+  border: none;
 }
-/* line 13, ../sass/table.scss */
-table.no-border {
+/* line 15, ../sass/table.scss */
+table.no-borders {
   max-width: 100% !important;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  background-color: transparent;
+  border: none;
 }
-/* line 39, ../sass/base/_table.scss */
-table.no-border th {
+/* line 41, ../sass/base/_table.scss */
+table.no-borders th {
   background-color: #d1d3d2;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
+  padding: 0.7em 0.8em;
+  border: none;
 }
-/* line 57, ../sass/base/_table.scss */
-table.no-border tr {
+/* line 64, ../sass/base/_table.scss */
+table.no-borders tr {
   -webkit-transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
           transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: transparent;
 }
-/* line 61, ../sass/base/_table.scss */
-table.no-border tr:nth-child(2n), table.no-border tr.even {
+/* line 69, ../sass/base/_table.scss */
+table.no-borders tr:nth-child(2n), table.no-borders tr.even {
   background-color: #EFF2F1;
 }
-/* line 65, ../sass/base/_table.scss */
-table.no-border tr:nth-child(2n + 1), table.no-border tr.odd {
+/* line 73, ../sass/base/_table.scss */
+table.no-borders tr:nth-child(2n + 1), table.no-borders tr.odd {
   background-color: #f9f9f9;
 }
-/* line 70, ../sass/base/_table.scss */
-table.no-border tr:hover {
+/* line 78, ../sass/base/_table.scss */
+table.no-borders tr:hover {
   background-color: #EFF2F1;
+  color: #2f2f2f;
 }
-/* line 75, ../sass/base/_table.scss */
-table.no-border td {
+/* line 84, ../sass/base/_table.scss */
+table.no-borders td {
   padding: 0.7em 0.8em;
   vertical-align: middle;
   text-align: left;
+  background-color: transparent;
+  border: none;
 }
-/* line 17, ../sass/table.scss */
+/* line 20, ../sass/table.scss */
+table.celled {
+  max-width: 100% !important;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #7b7b7b;
+  border-radius: 2px;
+}
+/* line 41, ../sass/base/_table.scss */
+table.celled th {
+  background-color: #d1d3d2;
+  color: #555555;
+  font-weight: 600;
+  vertical-align: bottom;
+  text-transform: none;
+  padding: 0.7em 0.8em;
+  border: none;
+  border-bottom: 1px solid #7b7b7b;
+  border-left: 1px solid #7b7b7b;
+}
+/* line 57, ../sass/base/_table.scss */
+table.celled th:first-child, table.celled th:first-of-type {
+  border-left: none;
+}
+/* line 64, ../sass/base/_table.scss */
+table.celled tr {
+  -webkit-transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+          transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: transparent;
+}
+/* line 69, ../sass/base/_table.scss */
+table.celled tr:nth-child(2n), table.celled tr.even {
+  background-color: #EFF2F1;
+}
+/* line 73, ../sass/base/_table.scss */
+table.celled tr:nth-child(2n + 1), table.celled tr.odd {
+  background-color: #f9f9f9;
+}
+/* line 78, ../sass/base/_table.scss */
+table.celled tr:hover {
+  background-color: #EFF2F1;
+  color: #2f2f2f;
+}
+/* line 84, ../sass/base/_table.scss */
+table.celled td {
+  padding: 0.7em 0.8em;
+  vertical-align: middle;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #7b7b7b;
+  border-bottom: 1px solid #7b7b7b;
+}
+/* line 94, ../sass/base/_table.scss */
+table.celled td:first-child {
+  border-left: none;
+}
+/* line 102, ../sass/base/_table.scss */
+table.celled tr:last-child td {
+  border-bottom: none;
+}
+/* line 24, ../sass/table.scss */
 table.no-border-radius {
   border-radius: 0;
 }
-/* line 22, ../sass/table.scss */
+/* line 29, ../sass/table.scss */
 table.plain {
   max-width: 100% !important;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  background-color: transparent;
+  border: none;
 }
-/* line 39, ../sass/base/_table.scss */
+/* line 41, ../sass/base/_table.scss */
 table.plain th {
   background-color: #d1d3d2;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
+  padding: 0.7em 0.8em;
+  border: none;
 }
-/* line 57, ../sass/base/_table.scss */
+/* line 64, ../sass/base/_table.scss */
 table.plain tr {
   -webkit-transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
           transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: transparent;
 }
-/* line 70, ../sass/base/_table.scss */
+/* line 78, ../sass/base/_table.scss */
 table.plain tr:hover {
   background-color: #EFF2F1;
+  color: #2f2f2f;
 }
-/* line 75, ../sass/base/_table.scss */
+/* line 84, ../sass/base/_table.scss */
 table.plain td {
   padding: 0.7em 0.8em;
   vertical-align: middle;
   text-align: left;
+  background-color: transparent;
+  border: none;
 }
 @media (max-width: 25em) {
-  /* line 85, ../sass/base/_table.scss */
+  /* line 111, ../sass/base/_table.scss */
   table:not(.unstackable) tbody,
   table:not(.unstackable) tr,
   table:not(.unstackable) th,
@@ -163,7 +249,7 @@ table.plain td {
     display: block !important;
     width: auto !important;
   }
-  /* line 93, ../sass/base/_table.scss */
+  /* line 119, ../sass/base/_table.scss */
   table:not(.unstackable) td {
     background-color: transparent !important;
   }
