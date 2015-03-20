@@ -263,4 +263,29 @@ th {
   padding: 0;
 }
 
+/* line 9, ../sass/reset.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 12, ../sass/reset.scss */
+th {
+  border-bottom: none;
+  padding-right: 0;
+  text-align: left;
+}
+
+/* line 17, ../sass/reset.scss */
+tbody {
+  border-top: none;
+}
+
+/* line 20, ../sass/reset.scss */
+tr.even,
+tr.odd {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}
+
 /*# sourceMappingURL=reset.css.map */

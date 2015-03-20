@@ -576,48 +576,7 @@ html.js #user-login-form li.openid-link,
   margin: 1.5em 0;
 }
 
-/* line 303, ../sass/forms.scss */
-table {
-  width: 100%;
-}
-
-/* line 307, ../sass/forms.scss */
-th {
-  text-align: left;
-  border-bottom: 3px solid #ccc;
-  font-weight: normal;
-  padding: 5px 10px;
-}
-
-/* line 314, ../sass/forms.scss */
-tbody {
-  border-top: 1px solid #ccc;
-}
-
-/* line 318, ../sass/forms.scss */
-td {
-  padding: 10px;
-}
-
-/* line 322, ../sass/forms.scss */
-tr.even {
-  background-color: #fff;
-}
-
-/* line 326, ../sass/forms.scss */
-table .item-list ul {
-  margin: 0;
-}
-
-/* line 332, ../sass/forms.scss */
-.lt-ie8 tr.even th,
-.lt-ie8 tr.even td,
-.lt-ie8 tr.odd th,
-.lt-ie8 tr.odd td {
-  border-bottom: 1px solid #ccc;
-}
-
-/* line 338, ../sass/forms.scss */
+/* line 296, ../sass/forms.scss */
 #block-search-form {
   background: #FFFFFF;
   padding: 0 0 0 10px;
@@ -626,7 +585,7 @@ table .item-list ul {
   margin: 60px 0 0 0;
 }
 @media (max-width: 50em) {
-  /* line 338, ../sass/forms.scss */
+  /* line 296, ../sass/forms.scss */
   #block-search-form {
     clear: both;
     float: none;
@@ -634,17 +593,17 @@ table .item-list ul {
     margin: 0 auto;
   }
 }
-/* line 350, ../sass/forms.scss */
+/* line 308, ../sass/forms.scss */
 #block-search-form input.form-text {
   border: none;
   border-right: 1px solid #CCCCCC;
   width: 150px;
 }
-/* line 355, ../sass/forms.scss */
+/* line 313, ../sass/forms.scss */
 #block-search-form input.form-text:focus {
   box-shadow: none;
 }
-/* line 359, ../sass/forms.scss */
+/* line 317, ../sass/forms.scss */
 #block-search-form input.form-submit {
   text-indent: -9999px;
   background: #FFFFFF url('../images/search.png?1425402197') no-repeat center center;
@@ -659,7 +618,7 @@ table .item-list ul {
   margin: 0;
 }
 
-/* line 376, ../sass/forms.scss */
+/* line 334, ../sass/forms.scss */
 td.menu-disabled {
   background: #ccc;
 }

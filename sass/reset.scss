@@ -1,1 +1,25 @@
 @import "normalize";
+
+//
+// Reset Drupal styles here!
+//
+// Just zero-out the styles you don't like here,
+// then set them to the values you want somewhere else.
+//
+table {
+  border-collapse: collapse;
+}
+th {
+  border-bottom: none;
+  padding-right: 0;
+  text-align: left;
+}
+tbody {
+  border-top: none;
+}
+tr.even,
+tr.odd {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}

@@ -1,1 +1,1 @@
-{"version":3,"sources":["blocks.css","../sass/blocks.scss","../sass/base/_global.scss","../sass/base/_tab.scss"],"names":[],"mappings":"AAAA,kCAAiC;ACO/B;EC4DA,iBAd+C;EAe/C,qBAdwD;ED7CtD,qBEDsB;EFEtB,eAAa;EACb,WAAS;EDJZ","file":"blocks.css"}
+{"version":3,"sources":["blocks.css","../sass/blocks.scss","../sass/base/_global.scss","../sass/base/_table.scss"],"names":[],"mappings":"AAAA,kCAAiC;ACO/B;EC4DA,iBAd+C;EAe/C,qBAdwD;ED7CtD,qBEK8B;EFJ9B,eAAa;EACb,WAAS;EDJZ","file":"blocks.css"}

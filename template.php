@@ -69,6 +69,7 @@ function bear_skin_preprocess_region(&$variables) {
 function bear_skin_preprocess_block(&$variables) {
   $module = str_replace('_', '-', $variables['block']->module) .'-'. $variables['block']->delta;
   $region = str_replace('_', '-', $variables['block']->region);
+  $variables['classes_array'][] = 'block__' . $module;
   $variables['classes_array'][] = 'block__' . $module . '--' . $region;
 }
 /**

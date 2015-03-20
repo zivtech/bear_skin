@@ -1,0 +1,32 @@
+@import "bear";
+
+//
+// Tables
+//
+table {
+  @include table;
+
+  &.no-stripes {
+    @include table(false, true);
+  }
+
+  &.no-border {
+    @include table(true, false);
+  }
+
+  &.no-border-radius {
+    border-radius: 0;
+  }
+
+  // no border, no stripes
+  &.plain {
+    @include table(false, false);
+  }
+
+  // put the class "unstackable" on a table that
+  // should NOT respond to small viewports
+  &:not(.unstackable) {
+    @include table-responsive;
+  }
+
+}

@@ -25,7 +25,7 @@
 }
 
 /* line 41, ../sass/base/_alert.scss */
-.messages--ok, .messages--status, .messages.status, .messages.ok {
+.messages--success, .messages--status, .messages.status, .messages.ok {
   border-color: #449d44;
   background-color: #5cb85c;
 }

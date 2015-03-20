@@ -41,6 +41,7 @@ stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/pages.css
 stylesheets[all][] = css/panels.css
 stylesheets[all][] = css/sidebars.css
+stylesheets[all][] = css/table.css
 stylesheets[all][] = css/images.css
 stylesheets[all][] = css/blocks.css
 stylesheets[all][] = css/comments.css

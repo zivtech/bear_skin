@@ -293,48 +293,6 @@ html.js fieldset.collapsed {
   margin: 1.5em 0;
 }
 
-//
-// Drupal tables
-//
-// We overrode these styles in normalize.css, but restore them for the admin
-// section of the site.
-//
-
-table {
-  width: 100%;
-}
-
-th {
-  text-align: left; // LTR
-  border-bottom: 3px solid #ccc;
-  font-weight: normal;
-  padding: 5px 10px;
-}
-
-tbody {
-  border-top: 1px solid #ccc;
-}
-
-td {
-  padding: 10px;
-}
-
-tr.even {
-  background-color: #fff;
-}
-
-table .item-list ul {
-  margin: 0;
-}
-
-.lt-ie8 tr.even,
-.lt-ie8 tr.odd {
-  th,
-  td {
-    border-bottom: 1px solid #ccc; // IE doesn't display borders on table rows
-  }
-}
-
 #block-search-form {
   background: #FFFFFF;
   padding: 0 0 0 10px;
