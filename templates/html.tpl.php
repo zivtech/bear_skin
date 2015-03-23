@@ -5,7 +5,7 @@
 <!--[if IE 8]><html class="lt-ie9" <?php print $html_attributes; ?>><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html <?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 
-<head profile="<?php print $grddl_profile; ?>">
+<head class="no-js" lang="<?php echo $language; ?>" xmlns="http://www.w3.org/1999/xhtml">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
@@ -14,7 +14,9 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1">
   <?php endif; ?>
-  <meta http-equiv="cleartype" content="on">
+
+  <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
+
   <?php print $styles; ?>
   <?php if (theme_get_setting('sticky_footer')): ?>
     <link href="<?php print $base_path . $path_to_bear_skin; ?>/css/sticky-footer.css" media="all" rel="stylesheet" type="text/css" />

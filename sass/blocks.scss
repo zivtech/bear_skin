@@ -4,6 +4,7 @@
 // Generic block styles
 //
 .block {
+  @include cf;
 
   &__title {
     @include rem(font-size, $h3-font-size);

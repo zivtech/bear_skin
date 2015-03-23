@@ -43,7 +43,7 @@
   </div>
 
   <div class="wrapper wrapper--navigation">
-    <nav tabindex="-1" class="site-navigation main-menu">
+    <nav tabindex="-1" class="site-navigation main-menu" aria-labelledby="mainMenuLabel">
       <?php // provide userMenu label here for WAI accessibility ?>
       <h3 class="u-hidden"
           id="mainMenuLabel"><?php print t('Main Navigation Menu:') ?></h3>
@@ -72,13 +72,13 @@
         <?php endif; ?>
 
         <?php if (!empty($messages)): ?>
-          <section class="main__messages">
+          <section class="main__messages" role="region">
             <?php print $messages; ?>
           </section>
         <?php endif; ?>
 
         <?php if (!empty($tabs['#primary']) || !empty($tabs['#secondary'])): ?>
-          <nav class="main__tabs">
+          <nav class="main__tabs" role="navigation">
             <?php print render($tabs); ?>
           </nav>
         <?php endif; ?>

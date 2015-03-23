@@ -1,4 +1,17 @@
-/* line 8, ../sass/blocks.scss */
+/* line 6, ../sass/blocks.scss */
+.block {
+  *zoom: 1;
+}
+/* line 196, ../sass/base/jeet/_grid.scss */
+.block:before, .block:after {
+  content: '';
+  display: table;
+}
+/* line 200, ../sass/base/jeet/_grid.scss */
+.block:after {
+  clear: both;
+}
+/* line 9, ../sass/blocks.scss */
 .block__title {
   font-size: 19px;
   font-size: 1.872rem;

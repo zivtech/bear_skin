@@ -23,6 +23,10 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   if (theme_get_setting('sticky_footer')) {
     $variables['classes_array'][] = 'with-sticky-footer';
   }
+
+  // include the selected language
+  global $language;
+  $variables['language'] = $language->language;
 }
 
 /**
@@ -60,6 +64,7 @@ function bear_skin_preprocess_page(&$variables) {
 function bear_skin_preprocess_region(&$variables) {
   $region = $variables['region'];
   $variables['classes_array'][] = 'region--' . str_replace('_', '-', $region);
+  $variables['attributes_array']['role'] = 'region';
 }
 
 /**
@@ -111,7 +116,7 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $depth_word = _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
 
   $is_active = in_array('active', $variables['element']['#attributes']['class']);
-  $has_children = $variables['element']['#original_link']['menu_name']['expanded'] && $variables['element']['#original_link']['menu_name']['has_children'];
+  $has_children = $variables['element']['#original_link']['expanded'] && $variables['element']['#original_link']['has_children'];
 
   // <li> elements
   $variables['element']['#attributes']['class'][] = $menu_name . '__item';
@@ -121,7 +126,6 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   // <a> elements
   $variables['element']['#localized_options']['attributes']['class'][] = $menu_name . '__link';
   $variables['element']['#localized_options']['attributes']['role'] = 'menuitem';
-  $variables['element']['#localized_options']['attributes']['aria-selected'] = ($is_active) ? 'true' : 'false';
   $variables['element']['#localized_options']['attributes']['aria-haspopup'] = ($has_children) ? 'true' : 'false';
 
   // save the menu name and depth as data attributes
@@ -161,7 +165,7 @@ function bear_skin_preprocess_menu_tree(&$variables) {
  *    the template_preprocess_menu_tree hook
  */
 function bear_skin_menu_tree(&$variables) {
-  $role = ($variables['menu_depth'] === 'one') ? 'menubar' : 'menu';
+  $role = ($variables['menu_depth'] === 'top' || $variables['menu_depth'] === 'one') ? 'menubar' : 'menu';
   return '<ul class="menu ' . $variables['menu_name'] . '--level-' . $variables['menu_depth'] . '" role="' . $role . '">' . $variables['tree'] . '</ul>';
 }
 
@@ -173,13 +177,13 @@ function bear_skin_menu_tree(&$variables) {
  */
 function bear_skin_links__user_menu(&$variables) {
   // add the ARIA role for accessibility
-  $variables['attributes']['class'] = (!empty($variables['attributes']['class'])) ? $variables['attributes']['class'] : array();
-  $variables['attributes']['class'][] = 'nav-user__list';
   $variables['attributes']['role'] = 'menubar';
 
   foreach ($variables['links'] as $key => &$link) {
+    if (!is_array($link)) {
+      continue;
+    }
     $link['attributes'] = (!empty($link['attributes'])) ? $link['attributes'] : array();
-    $link['attributes']['class'] = (!empty($link['attributes']['class'])) ? $link['attributes']['class'] : array();
     $link['attributes']['class'][] = 'nav-user__link';
     $link['attributes']['role'] = 'menuitem';
   }
@@ -235,13 +239,14 @@ function bear_skin_status_messages($variables) {
   );
   foreach (drupal_get_messages($display) as $type => $messages) {
     $type = ($type === 'status') ? 'success' : $type;
+    $role = ($type === 'error') ? 'assertive' : 'polite';
     $output .= "<div class=\"messages--$type messages $type\">\n";
     if (!empty($status_heading[$type])) {
       $output .= '<h2 class="u-hidden">' . $status_heading[$type] . "</h2>\n";
     }
-    $output .= " <ul class=\"messages__list\">\n";
+    $output .= " <ul class=\"messages__list\" role=\"list\">\n";
     foreach ($messages as $message) {
-      $output .= "  <li class=\"messages__item\" role=\"alert\" aria-live=\"assertive\">" . $message . "</li>\n";
+      $output .= "  <li class=\"messages__item\" role=\"listitem\"><span role=\"status\" aria-live=\"" . $role . "\">" . $message . "</span></li>\n";
     }
     $output .= " </ul>\n";
     $output .= "</div>\n";
