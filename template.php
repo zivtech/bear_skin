@@ -250,6 +250,66 @@ function bear_skin_status_messages($variables) {
 }
 
 /**
+ * Implements theme_item_list()
+ * 1. Add some additional CSS classes
+ * 2. Make the alerts accessible using WAI standards
+ */
+function bear_skin_item_list(&$variables) {
+  $items = $variables['items'];
+  $title = $variables['title'];
+  $type = $variables['type'];
+  $attributes = $variables['attributes'];
+  // create a more unique CSS identifier for this list
+  if (!empty($attributes['class'])) {
+    $list_class = implode('-', $attributes['class']);
+  } else {
+    // since the classes array on the menu is empty
+    // we'll just give this a class of theme-item-list since
+    // that is the generating function of this item list
+    $list_class = 'theme-item-list';
+    $variables['attributes']['class'] = array();
+  }
+  $variables['attributes']['class'][] = $list_class . '__list';
+
+  // determine if this is the pagination element
+  $pager = false;
+  if (in_array('pager', $variables['attributes']['class'])) {
+    $pager = true;
+  }
+
+  // add ARIA role to <ul> element
+  $variables['attributes']['role'] = ($pager) ? 'menubar' : 'list';
+
+  // add ARIA roles and SMACCS classes to list items
+  if (!empty($items)) {
+    foreach ($variables['items'] as &$item) {
+      if (!is_array($item)) {
+        continue;
+      }
+
+      $item['role'] = ($pager) ? 'presentation' : 'listitem';
+      $item['class'] = (!empty($item['class'])) ? $item['class'] : array();
+      $item['class'][] = $list_class . '__item';
+
+      if ($pager) {
+        $has_label = preg_match('/title="(.*?)"/', $item['data'], $label_text);
+        if ($has_label) {
+          // this is a bit ugly
+          // TODO: find a way to do this that doesn't use str_replace
+          $item['data'] = str_replace('<a ', '<a aria-label="' . $label_text[1] . '" class="' . $list_class . '__link" ', $item['data']);
+        }
+      }
+    }
+  }
+
+  if ($pager) {
+    return '<nav class="' . $list_class . '" role="navigation" aria-label="Pagination">' . theme_item_list($variables) . '</nav>' . "\n";
+  } else {
+    return theme_item_list($variables);
+  }
+}
+
+/**
  * Implements theme_breadcrumb()
  * 1. Make the breadcrumbs more accessible using WAI standards
  * 2. Add SMACCS / BEM style CSS classes to HTML elements in breadcrumbs
