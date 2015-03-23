@@ -168,7 +168,8 @@ function bear_skin_menu_tree(&$variables) {
 /**
  * Implements theme_links()
  * specifically for the user_menu only!
- * 1. Add a SMACCS / BEM style CSS class to <a> items
+ * 1. Add a SMACCS / BEM style CSS classes
+ * 2. Add ARIA roles for accessibility
  */
 function bear_skin_links__user_menu(&$variables) {
   // add the ARIA role for accessibility
@@ -185,6 +186,12 @@ function bear_skin_links__user_menu(&$variables) {
   return theme_links($variables);
 }
 
+/**
+ * Implements theme_links()
+ * for all others with the exception of user_menu (see bear_skin_links__user_menu)
+ * 1. Add SMACCS / BEM style CSS classes
+ * 2. Add ARIA roles for accessibility
+ */
 function bear_skin_links(&$variables) {
   // create a more unique CSS class for the menu
   if (!empty($variables['attributes']['class'])) {
