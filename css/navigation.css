@@ -197,12 +197,12 @@
   }
 }
 
-/* line 143, ../sass/navigation.scss */
+/* line 142, ../sass/navigation.scss */
 .nav-user__list {
   margin: 0;
   padding: 0;
 }
-/* line 146, ../sass/navigation.scss */
+/* line 145, ../sass/navigation.scss */
 .nav-user__list li {
   display: inline-block;
   vertical-align: middle;
@@ -212,12 +212,12 @@
   margin: 0 0 0 10px;
 }
 
-/* line 176, ../sass/navigation.scss */
+/* line 173, ../sass/navigation.scss */
 .breadcrumbs {
   margin: 20px 0;
   padding-left: 0;
 }
-/* line 180, ../sass/navigation.scss */
+/* line 177, ../sass/navigation.scss */
 .breadcrumbs__item {
   display: inline-block;
   vertical-align: middle;
@@ -227,17 +227,17 @@
   list-style-type: none;
   margin-right: 0.5em;
 }
-/* line 192, ../sass/navigation.scss */
+/* line 189, ../sass/navigation.scss */
 .breadcrumbs__divider {
   font-size: 80%;
   padding-left: 0.5em;
 }
 
-/* line 201, ../sass/navigation.scss */
+/* line 198, ../sass/navigation.scss */
 .skip-link {
   margin: 0;
 }
-/* line 204, ../sass/navigation.scss */
+/* line 201, ../sass/navigation.scss */
 .skip-link a,
 .skip-link a:visited {
   display: block;
@@ -248,22 +248,22 @@
   color: #fff;
 }
 
-/* line 220, ../sass/navigation.scss */
+/* line 217, ../sass/navigation.scss */
 .item-list .pager {
   padding: 0;
 }
-/* line 224, ../sass/navigation.scss */
+/* line 221, ../sass/navigation.scss */
 .item-list .pager li {
   padding: 0 0.5em;
 }
 
-/* line 233, ../sass/navigation.scss */
-ul.inline {
+/* line 232, ../sass/navigation.scss */
+.links-inline__list {
   display: inline;
   padding: 0;
 }
-/* line 237, ../sass/navigation.scss */
-ul.inline li {
+/* line 235, ../sass/navigation.scss */
+.links-inline__list li {
   display: inline;
   list-style-type: none;
   padding: 0 1em 0 0;

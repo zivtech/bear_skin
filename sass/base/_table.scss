@@ -1,13 +1,13 @@
 //
 // Variables
 //
-$table-border: 1px solid $bear-lighten-dark !default;
+$table-border: 1px solid $bear-greyer !default;
 $table-border-radius: $border-radius !default;
 
 $table-header-vertical-align: bottom !default;
 $table-header-font-color: $base-font-color !default;
 $table-header-font-weight: 600 !default;
-$table-header-bg-color: $bear-greyer !default;
+$table-header-bg-color: darken($bear-greyer, 10%) !default;
 $table-header-text-transform: none !default;
 
 $table-row-bg-color: $bear-whitey !default;
@@ -17,7 +17,7 @@ $table-row-transition: background .2s ease, border-color .2s ease, color .2s eas
 
 $table-cell-vertical-align: middle !default;
 $table-cell-font-color: $base-font-color !default;
-$table-cell-border: 1px solid $bear-lighten-dark !default;
+$table-cell-border: 1px solid $bear-greyer !default;
 $table-cell-padding: .7em .8em !default;
 $table-cell-text-align: left !default;
 // LTR
@@ -25,7 +25,7 @@ $table-cell-text-align: left !default;
 //
 // Table mixin
 //
-@mixin table($striped: true, $bordered: true, $celled: false) {
+@mixin table($striped: true, $bordered: false, $celled: false) {
   max-width: 100% !important;
   width: 100%;
   border-collapse: separate;

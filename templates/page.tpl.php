@@ -56,9 +56,9 @@
     <div id="main" class="site-main">
       <main id="content" class="column main" role="main">
         <?php if (!empty($page['highlighted'])): ?>
-          <div class="main__highlighted">
+          <section class="main__highlighted">
             <?php print render($page['highlighted']); ?>
-          </div>
+          </section>
         <?php endif; ?>
 
         <?php print $breadcrumb; ?>
@@ -67,42 +67,42 @@
 
         <?php if (!empty($title)): ?>
           <?php print render($title_prefix); ?>
-          <h1 class="title main__title" id="page-title"><?php print $title; ?></h1>
+          <h1 class="title main__title" role="heading"><?php print $title; ?></h1>
           <?php print render($title_suffix); ?>
         <?php endif; ?>
 
         <?php if (!empty($messages)): ?>
-          <div class="main__messages">
+          <section class="main__messages">
             <?php print $messages; ?>
-          </div>
+          </section>
         <?php endif; ?>
 
         <?php if (!empty($tabs['#primary']) || !empty($tabs['#secondary'])): ?>
-          <div class="main__tabs">
+          <nav class="main__tabs">
             <?php print render($tabs); ?>
-          </div>
+          </nav>
         <?php endif; ?>
 
         <?php if (!empty($page['help'])): ?>
-          <div class="main__help">
+          <aside class="main__help" role="note">
             <?php print render($page['help']); ?>
-          </div>
+          </aside>
         <?php endif; ?>
 
         <?php if (!empty($action_links)): ?>
-          <div class="main__action-links">
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          </div>
+          <nav class="main__action-links" role="navigation">
+            <ul class="action-links" role="menubar"><?php print render($action_links); ?></ul>
+          </nav>
         <?php endif; ?>
 
-        <div class="main__content">
+        <section class="main__content">
           <?php print render($page['content']); ?>
-        </div>
+        </section>
 
         <?php if (!empty($feed_icons)): ?>
-          <div class="main__feed-icons">
+          <nav class="main__feed-icons" role="navigation">
             <?php print $feed_icons; ?>
-          </div>
+          </nav>
         <?php endif; ?>
 
       </main>

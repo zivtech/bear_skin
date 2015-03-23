@@ -6,19 +6,16 @@ table {
   border-spacing: 0;
   background-color: transparent;
   border: none;
-  border: 1px solid #7b7b7b;
-  border-radius: 2px;
 }
 /* line 41, ../sass/base/_table.scss */
 table th {
-  background-color: #d1d3d2;
+  background-color: #b7bab8;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
   padding: 0.7em 0.8em;
   border: none;
-  border-bottom: 1px solid #7b7b7b;
 }
 /* line 64, ../sass/base/_table.scss */
 table tr {
@@ -55,19 +52,19 @@ table.no-stripes {
   border-spacing: 0;
   background-color: transparent;
   border: none;
-  border: 1px solid #7b7b7b;
+  border: 1px solid #d1d3d2;
   border-radius: 2px;
 }
 /* line 41, ../sass/base/_table.scss */
 table.no-stripes th {
-  background-color: #d1d3d2;
+  background-color: #b7bab8;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
   padding: 0.7em 0.8em;
   border: none;
-  border-bottom: 1px solid #7b7b7b;
+  border-bottom: 1px solid #d1d3d2;
 }
 /* line 64, ../sass/base/_table.scss */
 table.no-stripes tr {
@@ -99,7 +96,7 @@ table.no-borders {
 }
 /* line 41, ../sass/base/_table.scss */
 table.no-borders th {
-  background-color: #d1d3d2;
+  background-color: #b7bab8;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;
@@ -142,20 +139,20 @@ table.celled {
   border-spacing: 0;
   background-color: transparent;
   border: none;
-  border: 1px solid #7b7b7b;
+  border: 1px solid #d1d3d2;
   border-radius: 2px;
 }
 /* line 41, ../sass/base/_table.scss */
 table.celled th {
-  background-color: #d1d3d2;
+  background-color: #b7bab8;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
   padding: 0.7em 0.8em;
   border: none;
-  border-bottom: 1px solid #7b7b7b;
-  border-left: 1px solid #7b7b7b;
+  border-bottom: 1px solid #d1d3d2;
+  border-left: 1px solid #d1d3d2;
 }
 /* line 57, ../sass/base/_table.scss */
 table.celled th:first-child, table.celled th:first-of-type {
@@ -187,8 +184,8 @@ table.celled td {
   text-align: left;
   background-color: transparent;
   border: none;
-  border-left: 1px solid #7b7b7b;
-  border-bottom: 1px solid #7b7b7b;
+  border-left: 1px solid #d1d3d2;
+  border-bottom: 1px solid #d1d3d2;
 }
 /* line 94, ../sass/base/_table.scss */
 table.celled td:first-child {
@@ -213,7 +210,7 @@ table.plain {
 }
 /* line 41, ../sass/base/_table.scss */
 table.plain th {
-  background-color: #d1d3d2;
+  background-color: #b7bab8;
   color: #555555;
   font-weight: 600;
   vertical-align: bottom;

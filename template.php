@@ -103,15 +103,26 @@ function bear_skin_css_alter(&$css) {
  * 1. Make a more specific CSS class for menu list items <li>
  * 2. Make a CSS class on menu list items <li> referencing their level depth
  * 3. Make a more specific CSS class for menu links <a>
- * 4. Save the menu name and depth as attributes
+ * 4. Set ARIA roles and properties for accessibility
+ * 5. Save the menu name and depth as attributes
  */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $menu_name = $variables['element']['#original_link']['menu_name'];
   $depth_word = _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
 
+  $is_active = in_array('active', $variables['element']['#attributes']['class']);
+  $has_children = $variables['element']['#original_link']['menu_name']['expanded'] && $variables['element']['#original_link']['menu_name']['has_children'];
+
+  // <li> elements
   $variables['element']['#attributes']['class'][] = $menu_name . '__item';
   $variables['element']['#attributes']['class'][] = $menu_name . '__item--level-' . $depth_word;
+  $variables['element']['#attributes']['role'] = 'presentation';
+
+  // <a> elements
   $variables['element']['#localized_options']['attributes']['class'][] = $menu_name . '__link';
+  $variables['element']['#localized_options']['attributes']['role'] = 'menuitem';
+  $variables['element']['#localized_options']['attributes']['aria-selected'] = ($is_active) ? 'true' : 'false';
+  $variables['element']['#localized_options']['attributes']['aria-haspopup'] = ($has_children) ? 'true' : 'false';
 
   // save the menu name and depth as data attributes
   // this is a hack so that the <ul class="menu"> element can ultimately have
@@ -150,7 +161,8 @@ function bear_skin_preprocess_menu_tree(&$variables) {
  *    the template_preprocess_menu_tree hook
  */
 function bear_skin_menu_tree(&$variables) {
-  return '<ul class="menu ' . $variables['menu_name'] . '--level-' . $variables['menu_depth'] . '">' . $variables['tree'] . '</ul>';
+  $role = ($variables['menu_depth'] === 'one') ? 'menubar' : 'menu';
+  return '<ul class="menu ' . $variables['menu_name'] . '--level-' . $variables['menu_depth'] . '" role="' . $role . '">' . $variables['tree'] . '</ul>';
 }
 
 /**
@@ -159,11 +171,44 @@ function bear_skin_menu_tree(&$variables) {
  * 1. Add a SMACCS / BEM style CSS class to <a> items
  */
 function bear_skin_links__user_menu(&$variables) {
+  // add the ARIA role for accessibility
+  $variables['attributes']['class'] = (!empty($variables['attributes']['class'])) ? $variables['attributes']['class'] : array();
+  $variables['attributes']['class'][] = 'nav-user__list';
+  $variables['attributes']['role'] = 'menubar';
+
   foreach ($variables['links'] as $key => &$link) {
-    $link['html'] = TRUE;
-    $link['attributes'] = array('class' => 'nav-user__link');
+    $link['attributes'] = (!empty($link['attributes'])) ? $link['attributes'] : array();
+    $link['attributes']['class'] = (!empty($link['attributes']['class'])) ? $link['attributes']['class'] : array();
+    $link['attributes']['class'][] = 'nav-user__link';
+    $link['attributes']['role'] = 'menuitem';
   }
   return theme_links($variables);
+}
+
+function bear_skin_links(&$variables) {
+  // create a more unique CSS class for the menu
+  if (!empty($variables['attributes']['class'])) {
+    $menu_class = implode('-', $variables['attributes']['class']);
+    $variables['attributes']['class'][] = $menu_class . '__list';
+  } else {
+    // since the classes array on the menu is empty
+    // we'll just give this a class of theme-links since
+    // that is the generating function of this menu
+    $menu_class = 'theme-links';
+    $variables['attributes']['class'] = array($menu_class);
+  }
+
+  // add the ARIA role for accessibility
+  $variables['attributes']['role'] = 'menubar';
+
+  if (!empty($variables['links'])) {
+    foreach ($variables['links'] as $key => &$link) {
+      $link['attributes']['role'] = 'menuitem';
+      $link['attributes']['class'] = (!empty($link['attributes']['class'])) ? $link['attributes']['class'] : array();
+      $link['attributes']['class'][] = $menu_class . '__link';
+    }
+  }
+  return '<nav role="navigation" class="' . $menu_class . '">' . theme_links($variables) . '</nav>' . "\n";
 }
 
 /**
