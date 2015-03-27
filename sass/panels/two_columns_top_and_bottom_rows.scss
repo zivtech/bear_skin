@@ -1,0 +1,42 @@
+@import "../bear";
+@import "panels";
+
+.panel-display--two-eq-column {
+
+  .column.left {
+    @include col(1/2, $gutter: 0);
+    padding-right: $vertical-gutter / 2;
+
+    @include breakpoint($breakpoint-medium-width) {
+      @include stack();
+      padding-right: 0;
+    }
+  }
+
+  .column.right {
+    @include col(1/2, $gutter: 0);
+    padding-left: $vertical-gutter / 2;
+
+    @include breakpoint($breakpoint-medium-width) {
+      @include stack();
+      padding-left: 0;
+    }
+  }
+}
+
+.main__content {
+  .empty-right {
+    .column.left {
+      @include stack();
+      @include unshift();
+      padding: 0;
+    }
+  }
+  .empty-left {
+    .column.right {
+      @include stack();
+      @include unshift();
+      padding: 0;
+    }
+  }
+}

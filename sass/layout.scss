@@ -48,7 +48,7 @@ body {
       @include unshift();
     }
   }
-  .region-sidebar-first {
+  .site-sidebars {
     @include col(1/4);
     @include shift(-3/4);
     @include breakpoint($breakpoint-medium-width) {

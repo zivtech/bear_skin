@@ -9,6 +9,8 @@
 // Sidebar containers
 //
 .sidebar {
+  overflow: hidden;
+
   .block {
     margin-bottom: $vertical-gutter;
   }
