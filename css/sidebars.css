@@ -1,4 +1,8 @@
-/* line 12, ../sass/sidebars.scss */
+/* line 11, ../sass/sidebars.scss */
+.sidebar {
+  overflow: hidden;
+}
+/* line 14, ../sass/sidebars.scss */
 .sidebar .block {
   margin-bottom: 1.875em;
 }
