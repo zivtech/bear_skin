@@ -11,14 +11,14 @@
   margin: 1em 0 1.5em;
   border-bottom: 1px solid #EFF2F1;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .tabs-primary:before, .tabs-primary:after,
 .tabs-secondary:before,
 .tabs-secondary:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .tabs-primary:after,
 .tabs-secondary:after {
   clear: both;

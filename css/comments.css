@@ -58,7 +58,8 @@
 .comment .comment-reply a:before, .comment .comment-delete a:active,
 .comment .comment-edit a:active,
 .comment .comment-reply a:active {
-  background-color: rgba(85, 85, 85, 0.2);
+  background: url('../images/rgbapng/55555533-5.png?1427736330');
+  background: rgba(85, 85, 85, 0.2);
 }
 
 /* line 130, ../sass/base/_button.scss */
@@ -68,7 +69,8 @@
 }
 /* line 133, ../sass/base/_button.scss */
 .comment .comment-edit a:before, .comment .comment-edit a:active {
-  background-color: rgba(76, 27, 1, 0.2);
+  background: url('../images/rgbapng/4c1b0133-5.png?1427736330');
+  background: rgba(76, 27, 1, 0.2);
 }
 /* line 136, ../sass/base/_button.scss */
 .comment .comment-edit a:hover {
@@ -82,7 +84,8 @@
 }
 /* line 155, ../sass/base/_button.scss */
 .comment .comment-reply a:before, .comment .comment-reply a:active {
-  background-color: rgba(92, 184, 92, 0.2);
+  background: url('../images/rgbapng/5cb85c33-5.png?1427736330');
+  background: rgba(92, 184, 92, 0.2);
 }
 /* line 158, ../sass/base/_button.scss */
 .comment .comment-reply a:hover {
@@ -96,7 +99,8 @@
 }
 /* line 177, ../sass/base/_button.scss */
 .comment .comment-delete a:before, .comment .comment-delete a:active {
-  background-color: rgba(217, 83, 79, 0.2);
+  background: url('../images/rgbapng/d9534f33-5.png?1427736330');
+  background: rgba(217, 83, 79, 0.2);
 }
 /* line 180, ../sass/base/_button.scss */
 .comment .comment-delete a:hover {
@@ -131,7 +135,8 @@
 }
 /* line 59, ../sass/comments.scss */
 .comment.comment-by-viewer {
-  background-color: rgba(249, 182, 52, 0.1);
+  background: url('../images/rgbapng/f9b6341a-5.png?1427736051');
+  background: rgba(249, 182, 52, 0.1);
   padding-left: 5px;
 }
 

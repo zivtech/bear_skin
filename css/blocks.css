@@ -2,12 +2,12 @@
 .block {
   *zoom: 1;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .block:before, .block:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .block:after {
   clear: both;
 }

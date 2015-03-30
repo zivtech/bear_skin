@@ -16,12 +16,12 @@
   width: 100%;
   float: none;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .form-item:before, .form-item:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .form-item:after {
   clear: both;
 }
@@ -153,12 +153,12 @@ label.option {
 .form-managed-file {
   *zoom: 1;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .form-managed-file:before, .form-managed-file:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .form-managed-file:after {
   clear: both;
 }
@@ -236,12 +236,12 @@ input[type="submit"]:focus {
 .form-actions {
   *zoom: 1;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .form-actions:before, .form-actions:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .form-actions:after {
   clear: both;
 }
@@ -327,7 +327,8 @@ input[type="submit"]:focus {
 }
 /* line 68, ../sass/base/_button.scss */
 .form-actions #edit-cancel:before, .form-actions #edit-cancel:active {
-  background-color: rgba(217, 83, 79, 0.2);
+  background: url('../images/rgbapng/d9534f33-5.png?1427736330');
+  background: rgba(217, 83, 79, 0.2);
 }
 @media (max-width: 50em) {
   /* line 144, ../sass/forms.scss */
@@ -351,12 +352,12 @@ html.js input.form-autocomplete {
 .container-inline {
   *zoom: 1;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .container-inline:before, .container-inline:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .container-inline:after {
   clear: both;
 }

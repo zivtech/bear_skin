@@ -105,8 +105,7 @@
 // Edit Mode
 @mixin edit() {
   * {
-    background: #eee;
-    background: rgba(#000, .05);
+    @include rgba-background(rgba(0,0,0,0.05));
   }
 }
 

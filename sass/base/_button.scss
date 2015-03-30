@@ -39,6 +39,7 @@ $button-highlight-font-color: $bear-whitey !default;
   }
   @if ($transitions) {
     &:before {
+      @include rgba-background(rgba(36, 240, 241, 0.3));
       content: "";
       position: absolute;
       top: 50%;
@@ -47,7 +48,6 @@ $button-highlight-font-color: $bear-whitey !default;
       width: 0;
       padding-top: 0;
       border-radius: 100%;
-      background-color: rgba(236, 240, 241, 0.3);
       transform: translate(-50%, -50%);
     }
     &:active:before {
@@ -67,7 +67,7 @@ $button-highlight-font-color: $bear-whitey !default;
   }
   &:before,
   &:active {
-    background-color: rgba($color, 0.2);
+    @include rgba-background(rgba($color, 0.2));
   }
 }
 
@@ -131,7 +131,7 @@ $button-highlight-font-color: $bear-whitey !default;
   border-color: $button-secondary-color;
   color: $button-secondary-color;
   &:before, &:active {
-    background-color: rgba($button-secondary-color, 0.2);
+    @include rgba-background(rgba($button-secondary-color, 0.2));
   }
   &:hover {
     color: $button-secondary-color;
@@ -142,7 +142,7 @@ $button-highlight-font-color: $bear-whitey !default;
   border-color: $button-highlight-color;
   color: $button-highlight-color;
   &:before, &:active {
-    background-color: rgba($button-highlight-color, 0.2);
+    @include rgba-background(rgba($button-highlight-color, 0.2));
   }
   &:hover {
     color: $button-highlight-color;
@@ -153,7 +153,7 @@ $button-highlight-font-color: $bear-whitey !default;
   border-color: $color-success;
   color: $color-success;
   &:before, &:active {
-    background-color: rgba($color-success, 0.2);
+    @include rgba-background(rgba($color-success, 0.2));
   }
   &:hover {
     color: $color-success;
@@ -164,7 +164,7 @@ $button-highlight-font-color: $bear-whitey !default;
   border-color: $color-warning;
   color: $color-warning;
   &:before, &:active {
-    background-color: rgba($color-warning, 0.2);
+    @include rgba-background(rgba($color-warning, 0.2));
   }
   &:hover {
     color: $color-warning;
@@ -175,7 +175,7 @@ $button-highlight-font-color: $bear-whitey !default;
   border-color: $color-error;
   color: $color-error;
   &:before, &:active {
-    background-color: rgba($color-error, 0.2);
+    @include rgba-background(rgba($color-error, 0.2));
   }
   &:hover {
     color: $color-error;

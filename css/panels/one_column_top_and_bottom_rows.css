@@ -3,12 +3,12 @@
   *zoom: 1;
   margin-bottom: 3.75em;
 }
-/* line 196, ../../sass/base/jeet/_grid.scss */
+/* line 195, ../../sass/base/jeet/_grid.scss */
 .panel-display:before, .panel-display:after {
   content: '';
   display: table;
 }
-/* line 200, ../../sass/base/jeet/_grid.scss */
+/* line 199, ../../sass/base/jeet/_grid.scss */
 .panel-display:after {
   clear: both;
 }
@@ -18,12 +18,12 @@
   margin-bottom: 1.875em;
   box-sizing: border-box;
 }
-/* line 196, ../../sass/base/jeet/_grid.scss */
+/* line 195, ../../sass/base/jeet/_grid.scss */
 .panel-display .column:before, .panel-display .column:after, .panel-display .row:before, .panel-display .row:after {
   content: '';
   display: table;
 }
-/* line 200, ../../sass/base/jeet/_grid.scss */
+/* line 199, ../../sass/base/jeet/_grid.scss */
 .panel-display .column:after, .panel-display .row:after {
   clear: both;
 }

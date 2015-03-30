@@ -91,12 +91,12 @@ body *, body *:before, body *:after {
   position: relative;
   left: 25.75%;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .sidebar-first main:before, .sidebar-first main:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .sidebar-first main:after {
   clear: both;
 }
@@ -120,12 +120,12 @@ body *, body *:before, body *:after {
     position: static;
     left: 0;
   }
-  /* line 196, ../sass/base/jeet/_grid.scss */
+  /* line 195, ../sass/base/jeet/_grid.scss */
   .sidebar-first main:before, .sidebar-first main:after {
     content: '';
     display: table;
   }
-  /* line 200, ../sass/base/jeet/_grid.scss */
+  /* line 199, ../sass/base/jeet/_grid.scss */
   .sidebar-first main:after {
     clear: both;
   }
@@ -149,12 +149,12 @@ body *, body *:before, body *:after {
   position: relative;
   left: -77.25%;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .sidebar-first .site-sidebars:before, .sidebar-first .site-sidebars:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .sidebar-first .site-sidebars:after {
   clear: both;
 }
@@ -178,12 +178,12 @@ body *, body *:before, body *:after {
     position: static;
     left: 0;
   }
-  /* line 196, ../sass/base/jeet/_grid.scss */
+  /* line 195, ../sass/base/jeet/_grid.scss */
   .sidebar-first .site-sidebars:before, .sidebar-first .site-sidebars:after {
     content: '';
     display: table;
   }
-  /* line 200, ../sass/base/jeet/_grid.scss */
+  /* line 199, ../sass/base/jeet/_grid.scss */
   .sidebar-first .site-sidebars:after {
     clear: both;
   }
@@ -206,12 +206,12 @@ body *, body *:before, body *:after {
   margin-left: 0%;
   margin-right: 3%;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .sidebar-second main:before, .sidebar-second main:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .sidebar-second main:after {
   clear: both;
 }
@@ -235,12 +235,12 @@ body *, body *:before, body *:after {
     position: static;
     left: 0;
   }
-  /* line 196, ../sass/base/jeet/_grid.scss */
+  /* line 195, ../sass/base/jeet/_grid.scss */
   .sidebar-second main:before, .sidebar-second main:after {
     content: '';
     display: table;
   }
-  /* line 200, ../sass/base/jeet/_grid.scss */
+  /* line 199, ../sass/base/jeet/_grid.scss */
   .sidebar-second main:after {
     clear: both;
   }
@@ -262,12 +262,12 @@ body *, body *:before, body *:after {
   margin-left: 0%;
   margin-right: 3%;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .sidebar-second .region-sidebar-first:before, .sidebar-second .region-sidebar-first:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .sidebar-second .region-sidebar-first:after {
   clear: both;
 }
@@ -291,12 +291,12 @@ body *, body *:before, body *:after {
     position: static;
     left: 0;
   }
-  /* line 196, ../sass/base/jeet/_grid.scss */
+  /* line 195, ../sass/base/jeet/_grid.scss */
   .sidebar-second .region-sidebar-first:before, .sidebar-second .region-sidebar-first:after {
     content: '';
     display: table;
   }
-  /* line 200, ../sass/base/jeet/_grid.scss */
+  /* line 199, ../sass/base/jeet/_grid.scss */
   .sidebar-second .region-sidebar-first:after {
     clear: both;
   }
@@ -321,12 +321,12 @@ body *, body *:before, body *:after {
   position: relative;
   left: 25.75%;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .two-sidebars main:before, .two-sidebars main:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .two-sidebars main:after {
   clear: both;
 }
@@ -350,12 +350,12 @@ body *, body *:before, body *:after {
     position: static;
     left: 0;
   }
-  /* line 196, ../sass/base/jeet/_grid.scss */
+  /* line 195, ../sass/base/jeet/_grid.scss */
   .two-sidebars main:before, .two-sidebars main:after {
     content: '';
     display: table;
   }
-  /* line 200, ../sass/base/jeet/_grid.scss */
+  /* line 199, ../sass/base/jeet/_grid.scss */
   .two-sidebars main:after {
     clear: both;
   }
@@ -379,12 +379,12 @@ body *, body *:before, body *:after {
   position: relative;
   left: -51.5%;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .two-sidebars .region-sidebar-first:before, .two-sidebars .region-sidebar-first:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .two-sidebars .region-sidebar-first:after {
   clear: both;
 }
@@ -408,12 +408,12 @@ body *, body *:before, body *:after {
     position: static;
     left: 0;
   }
-  /* line 196, ../sass/base/jeet/_grid.scss */
+  /* line 195, ../sass/base/jeet/_grid.scss */
   .two-sidebars .region-sidebar-first:before, .two-sidebars .region-sidebar-first:after {
     content: '';
     display: table;
   }
-  /* line 200, ../sass/base/jeet/_grid.scss */
+  /* line 199, ../sass/base/jeet/_grid.scss */
   .two-sidebars .region-sidebar-first:after {
     clear: both;
   }
@@ -435,12 +435,12 @@ body *, body *:before, body *:after {
   margin-left: 0%;
   margin-right: 3%;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 .two-sidebars .region-sidebar-second:after {
   clear: both;
 }
@@ -464,12 +464,12 @@ body *, body *:before, body *:after {
     position: static;
     left: 0;
   }
-  /* line 196, ../sass/base/jeet/_grid.scss */
+  /* line 195, ../sass/base/jeet/_grid.scss */
   .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
     content: '';
     display: table;
   }
-  /* line 200, ../sass/base/jeet/_grid.scss */
+  /* line 199, ../sass/base/jeet/_grid.scss */
   .two-sidebars .region-sidebar-second:after {
     clear: both;
   }
@@ -495,12 +495,12 @@ body *, body *:before, body *:after {
   background: #DDDDDD;
   padding: 20px;
 }
-/* line 196, ../sass/base/jeet/_grid.scss */
+/* line 195, ../sass/base/jeet/_grid.scss */
 #documentation p.tb:before, #documentation p.tb:after {
   content: '';
   display: table;
 }
-/* line 200, ../sass/base/jeet/_grid.scss */
+/* line 199, ../sass/base/jeet/_grid.scss */
 #documentation p.tb:after {
   clear: both;
 }
