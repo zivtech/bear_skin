@@ -23,6 +23,7 @@
   .form-item {
     label {
       font-size: 80%;
+      font-weight: normal;
     }
   }
 }
@@ -30,7 +31,7 @@
 label {
   // The label for a form element
   display: block;
-  font-weight: normal;
+  font-weight: 600;
   color: #666666;
   font-size: 90%;
   &.btn {
@@ -98,9 +99,21 @@ label.option {
 }
 
 .form-managed-file {
+  @include cf;
   .form-file,
   .form-submit {
     @include inline-block;
+    float: left;
+  }
+  .form-file {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .form-submit {
+    padding-top: .25em;
+    padding-bottom: .3em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 
@@ -117,6 +130,10 @@ input[type="submit"] {
 
   input, a {
     @include inline-block;
+    margin-right: $vertical-gutter /2;
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   // drupal's "confirm" button
@@ -125,13 +142,16 @@ input[type="submit"] {
   }
   // cancel link
   #edit-cancel {
-    @include bear-button-inverted($color-error, $button-primary-color, $button-border-radius, 2px 20px);
+    @include bear-button-inverted($color-error);
     float: right;
 
     @include breakpoint($breakpoint-medium-width) {
       float: none;
       margin-left: 5px; // LTR
     }
+  }
+  #edit-submit {
+    @extend %button-success;
   }
 }
 

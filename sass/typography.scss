@@ -97,20 +97,20 @@ blockquote {
 // Generic sizing classes
 //
 .tiny {
-  @include rem(font-size, 0.6 * $body-font-size);
+  @extend %tiny;
 }
 .smaller {
-  @include rem(font-size, 0.7 * $body-font-size);
+  @extend %smaller;
 }
 .small {
-  @include rem(font-size, 0.9 * $body-font-size);
+  @extend %small;
 }
 .large {
-  @include rem(font-size, 1.1 * $body-font-size);
+  @extend %large;
 }
 .larger {
-  @include rem(font-size, 1.2 * $body-font-size);
+  @extend %larger;
 }
 .largest {
-  @include rem(font-size, 1.3 * $body-font-size);
+  @extend %largest;
 }

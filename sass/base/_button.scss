@@ -14,7 +14,7 @@ $button-highlight-font-color: $bear-whitey !default;
 //
 // Button mixin
 //
-@mixin bear-button($color: $button-primary-color, $font-color: $button-primary-font-color, $radius: $button-border-radius, $padding: $button-padding) {
+@mixin bear-button($color: $button-primary-color, $font-color: $button-primary-font-color, $radius: $button-border-radius, $padding: $button-padding, $transitions: false) {
   @include bear-appearance(none);
   position: relative;
   display: inline-block;
@@ -37,22 +37,24 @@ $button-highlight-font-color: $bear-whitey !default;
     text-decoration: none;
     color: $font-color;
   }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    width: 0;
-    padding-top: 0;
-    border-radius: 100%;
-    background-color: rgba(236,240,241,0.3);
-    transform: translate(-50%,-50%);
-  }
-  &:active:before {
-    width: 120%;
-    padding-top: 120%;
-    transition: width .2s ease-out, padding-top .2s ease-out;
+  @if ($transitions) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 0;
+      padding-top: 0;
+      border-radius: 100%;
+      background-color: rgba(236, 240, 241, 0.3);
+      transform: translate(-50%, -50%);
+    }
+    &:active:before {
+      width: 120%;
+      padding-top: 120%;
+      transition: width .2s ease-out, padding-top .2s ease-out;
+    }
   }
 }
 
@@ -63,7 +65,8 @@ $button-highlight-font-color: $bear-whitey !default;
     color: $font-color;
     background-color: transparent;
   }
-  &:before {
+  &:before,
+  &:active {
     background-color: rgba($color, 0.2);
   }
 }
@@ -127,7 +130,7 @@ $button-highlight-font-color: $bear-whitey !default;
 %button-inverted-secondary {
   border-color: $button-secondary-color;
   color: $button-secondary-color;
-  &:before {
+  &:before, &:active {
     background-color: rgba($button-secondary-color, 0.2);
   }
   &:hover {
@@ -138,7 +141,7 @@ $button-highlight-font-color: $bear-whitey !default;
 %button-inverted-highlight {
   border-color: $button-highlight-color;
   color: $button-highlight-color;
-  &:before {
+  &:before, &:active {
     background-color: rgba($button-highlight-color, 0.2);
   }
   &:hover {
@@ -149,7 +152,7 @@ $button-highlight-font-color: $bear-whitey !default;
 %button-inverted-success {
   border-color: $color-success;
   color: $color-success;
-  &:before {
+  &:before, &:active {
     background-color: rgba($color-success, 0.2);
   }
   &:hover {
@@ -160,7 +163,7 @@ $button-highlight-font-color: $bear-whitey !default;
 %button-inverted-warning {
   border-color: $color-warning;
   color: $color-warning;
-  &:before {
+  &:before, &:active {
     background-color: rgba($color-warning, 0.2);
   }
   &:hover {
@@ -171,7 +174,7 @@ $button-highlight-font-color: $bear-whitey !default;
 %button-inverted-error {
   border-color: $color-error;
   color: $color-error;
-  &:before {
+  &:before, &:active {
     background-color: rgba($color-error, 0.2);
   }
   &:hover {

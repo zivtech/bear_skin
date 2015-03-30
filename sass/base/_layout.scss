@@ -3,7 +3,7 @@
 // Customize your theme by copying the variable name into _custom.scss and remove !default
 //
 $site-max-width: 1200px / 16px * 1em !default;
-$indent-amount: 30px !default;
+$indent-amount: 30px / 16px * 1em !default;
 $vertical-gutter: 30px / 16px * 1em !default;
 
 // Breakpoints

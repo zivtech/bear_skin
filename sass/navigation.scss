@@ -22,6 +22,11 @@
     text-transform: $nav-link-text-transform;
     &:hover {
       background-color: $nav-link-bg-color-hover;
+      color: $nav-link-color-hover;
+    }
+    &.active {
+      background-color: $nav-link-bg-color-hover;
+      color: $nav-link-color-hover;
     }
   }
 
@@ -76,6 +81,9 @@
     list-style-type: none;
 
     // Active items
+    &.active {
+
+    }
 
     // First level <li> elements
     &.level-one {
