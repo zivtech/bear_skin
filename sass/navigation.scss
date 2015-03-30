@@ -25,28 +25,8 @@
     }
   }
 
-  // All <li> elements in the menu
-  &__item {
-    position: relative;
-    transition: background-color 0.3s ease;
-    list-style-image: none;
-    list-style-type: none;
-  }
-
-  // Menu block container
-  .block {
-    margin-bottom: 0;
-  }
-
-  // Menu block title
-  .block-menu .block-title,
-  .block-menu-block .block-title {
-    @extend %u-hidden;
-  }
-
   // Menu <ul> containers
-  .menu,
-  .links {
+  .menu {
     padding: 0;
     margin: 0;
     z-index: 100;
@@ -55,22 +35,6 @@
   // First level <ul> elements
   &--level-one {
     background-color: $nav-container-bg-color;
-  }
-
-  // First level <li> elements
-  &__item--level-one {
-    @include inline-block;
-    height: $nav-container-height;
-    line-height: $nav-container-height;
-    border-bottom-left-radius: $nav-drop-down-border-radius;
-    border-bottom-right-radius: $nav-drop-down-border-radius;
-    float: left;
-
-    &:hover {
-      .main-menu--level-two {
-        display: block;
-      }
-    }
   }
 
   // Second level <ul> elements
@@ -86,21 +50,6 @@
     background-clip: padding-box;
   }
 
-  // Second level <li> elements
-  &__item--level-two {
-    &:hover {
-      .main-menu--level-three {
-        display: block;
-      }
-    }
-    a {
-      color: $nav-drop-down-link-color;
-      &:hover {
-        background-color: $nav-drop-down-link-color-hover;
-      }
-    }
-  }
-
   // Third level <ul> elements
   &--level-three {
     display: none;
@@ -114,19 +63,50 @@
     background-clip: padding-box;
   }
 
-  // Third level <li> elements
-  &__item--level-three {
-
-  }
-
   // Fourth level <ul> elements
   &--level-four {
     display: none;
   }
 
-  // Fourth level <li> elements
-  &__item--level-four {
+  // All <li> elements in the menu
+  &__item {
+    position: relative;
+    transition: background-color 0.3s ease;
+    list-style-image: none;
+    list-style-type: none;
 
+    // Active items
+
+    // First level <li> elements
+    &.level-one {
+      @include inline-block;
+      height: $nav-container-height;
+      line-height: $nav-container-height;
+      border-bottom-left-radius: $nav-drop-down-border-radius;
+      border-bottom-right-radius: $nav-drop-down-border-radius;
+      float: left;
+
+      &:hover {
+        .main-menu--level-two {
+          display: block;
+        }
+      }
+    }
+
+    // Second level <li> elements
+    &.level-two {
+      &:hover {
+        .main-menu--level-three {
+          display: block;
+        }
+      }
+      a {
+        color: $nav-drop-down-link-color;
+        &:hover {
+          background-color: $nav-drop-down-link-color-hover;
+        }
+      }
+    }
   }
 
   @include breakpoint($breakpoint-med-small-width) {

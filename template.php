@@ -165,9 +165,6 @@ function bear_skin_links__user_menu(&$variables) {
  * 5. Save the menu name and depth as attributes
  */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
-  // an array of CSS classes from drupal we want to keep
-  $classes = array('active');
-
   $menu_name = $variables['element']['#original_link']['menu_name'];
   $depth_word = _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
 
@@ -177,9 +174,9 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   // <li> elements
   $variables['element']['#attributes']['class'] = array();
   $variables['element']['#attributes']['class'][] = $menu_name . '__item';
-  $variables['element']['#attributes']['class'][] = $menu_name . '__item--level-' . $depth_word;
+  $variables['element']['#attributes']['class'][] = 'level-' . $depth_word;
   if ($is_active) {
-    $variables['element']['#attributes']['class'][] = $menu_name . '__item--active';
+    $variables['element']['#attributes']['class'][] = 'active';
   }
   $variables['element']['#attributes']['role'] = 'presentation';
 
@@ -187,7 +184,7 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $variables['element']['#localized_options']['attributes']['class'] = array();
   $variables['element']['#localized_options']['attributes']['class'][] = $menu_name . '__link';
   if ($is_active) {
-    $variables['element']['#localized_options']['attributes']['class'][] = $menu_name . '__link--active';
+    $variables['element']['#localized_options']['attributes']['class'][] = 'active';
   }
   $variables['element']['#localized_options']['attributes']['role'] = 'menuitem';
   $variables['element']['#localized_options']['attributes']['aria-haspopup'] = ($has_children) ? 'true' : 'false';
