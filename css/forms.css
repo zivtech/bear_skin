@@ -1,3 +1,14 @@
+/* line 99, ../sass/base/_button.scss */
+.form-actions #edit-submit {
+  background-color: #5cb85c;
+  color: #f9f9f9;
+  border-color: #47a447;
+}
+/* line 103, ../sass/base/_button.scss */
+.form-actions #edit-submit:hover, .form-actions #edit-submit:focus {
+  background-color: #4cae4c;
+}
+
 /* line 3, ../sass/forms.scss */
 .form-item {
   *zoom: 1;
@@ -31,27 +42,28 @@
 /* line 24, ../sass/forms.scss */
 .form-item .form-item label {
   font-size: 80%;
+  font-weight: normal;
 }
 
-/* line 30, ../sass/forms.scss */
+/* line 31, ../sass/forms.scss */
 label {
   display: block;
-  font-weight: normal;
+  font-weight: 600;
   color: #666666;
   font-size: 90%;
 }
-/* line 36, ../sass/forms.scss */
+/* line 37, ../sass/forms.scss */
 label.btn {
   display: inline;
 }
 
-/* line 41, ../sass/forms.scss */
+/* line 42, ../sass/forms.scss */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
-/* line 47, ../sass/forms.scss */
+/* line 48, ../sass/forms.scss */
 .form-text,
 .form-textarea,
 .form-file {
@@ -84,12 +96,12 @@ label.option {
   border: 1px solid #d9534f;
 }
 
-/* line 53, ../sass/forms.scss */
+/* line 54, ../sass/forms.scss */
 .form-textarea {
   max-width: 100%;
 }
 
-/* line 57, ../sass/forms.scss */
+/* line 58, ../sass/forms.scss */
 .form-checkbox,
 .form-checkboxes,
 .form-radio,
@@ -97,30 +109,30 @@ label.option {
   margin: 0;
 }
 
-/* line 65, ../sass/forms.scss */
+/* line 66, ../sass/forms.scss */
 .form-required {
   color: #d9534f;
 }
 
-/* line 70, ../sass/forms.scss */
+/* line 71, ../sass/forms.scss */
 .form-file {
   color: #666666;
   font-size: 90%;
 }
 
-/* line 75, ../sass/forms.scss */
+/* line 76, ../sass/forms.scss */
 .field-add-more-submit {
   text-shadow: none;
   color: white;
 }
 
-/* line 80, ../sass/forms.scss */
+/* line 81, ../sass/forms.scss */
 .icon-folder-open {
   background-position: -408px -120px;
   width: 16px;
 }
 
-/* line 85, ../sass/forms.scss */
+/* line 86, ../sass/forms.scss */
 .input-large {
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -138,6 +150,19 @@ label.option {
 }
 
 /* line 101, ../sass/forms.scss */
+.form-managed-file {
+  *zoom: 1;
+}
+/* line 196, ../sass/base/jeet/_grid.scss */
+.form-managed-file:before, .form-managed-file:after {
+  content: '';
+  display: table;
+}
+/* line 200, ../sass/base/jeet/_grid.scss */
+.form-managed-file:after {
+  clear: both;
+}
+/* line 103, ../sass/forms.scss */
 .form-managed-file .form-file,
 .form-managed-file .form-submit {
   display: inline-block;
@@ -145,9 +170,22 @@ label.option {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  float: left;
+}
+/* line 108, ../sass/forms.scss */
+.form-managed-file .form-file {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 112, ../sass/forms.scss */
+.form-managed-file .form-submit {
+  padding-top: .25em;
+  padding-bottom: .3em;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
-/* line 107, ../sass/forms.scss */
+/* line 120, ../sass/forms.scss */
 .form-submit,
 button,
 input[type="button"],
@@ -193,38 +231,8 @@ input[type="submit"]:focus {
   text-decoration: none;
   color: #f9f9f9;
 }
-/* line 40, ../sass/base/_button.scss */
-.form-submit:before,
-button:before,
-input[type="button"]:before,
-input[type="reset"]:before,
-input[type="submit"]:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0;
-  padding-top: 0;
-  border-radius: 100%;
-  background-color: rgba(236, 240, 241, 0.3);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-/* line 52, ../sass/base/_button.scss */
-.form-submit:active:before,
-button:active:before,
-input[type="button"]:active:before,
-input[type="reset"]:active:before,
-input[type="submit"]:active:before {
-  width: 120%;
-  padding-top: 120%;
-  -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
-          transition: width .2s ease-out, padding-top .2s ease-out;
-}
 
-/* line 115, ../sass/forms.scss */
+/* line 128, ../sass/forms.scss */
 .form-actions {
   *zoom: 1;
 }
@@ -237,15 +245,20 @@ input[type="submit"]:active:before {
 .form-actions:after {
   clear: both;
 }
-/* line 118, ../sass/forms.scss */
+/* line 131, ../sass/forms.scss */
 .form-actions input, .form-actions a {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  margin-right: 0.9375em;
 }
-/* line 123, ../sass/forms.scss */
+/* line 134, ../sass/forms.scss */
+.form-actions input:last-of-type, .form-actions a:last-of-type {
+  margin-right: 0;
+}
+/* line 140, ../sass/forms.scss */
 .form-actions input[value=Confirm] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -275,29 +288,7 @@ input[type="submit"]:active:before {
   text-decoration: none;
   color: #f9f9f9;
 }
-/* line 40, ../sass/base/_button.scss */
-.form-actions input[value=Confirm]:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0;
-  padding-top: 0;
-  border-radius: 100%;
-  background-color: rgba(236, 240, 241, 0.3);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-/* line 52, ../sass/base/_button.scss */
-.form-actions input[value=Confirm]:active:before {
-  width: 120%;
-  padding-top: 120%;
-  -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
-          transition: width .2s ease-out, padding-top .2s ease-out;
-}
-/* line 127, ../sass/forms.scss */
+/* line 144, ../sass/forms.scss */
 .form-actions #edit-cancel {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -311,7 +302,7 @@ input[type="submit"]:active:before {
           transition: background-color 0.4s, color 0.4s;
   background-color: transparent;
   color: #555555;
-  padding: 2px 20px;
+  padding: 0.4em 1.5em;
   border-radius: 2px;
   text-decoration: none;
   cursor: pointer;
@@ -329,56 +320,34 @@ input[type="submit"]:active:before {
   text-decoration: none;
   color: #555555;
 }
-/* line 40, ../sass/base/_button.scss */
-.form-actions #edit-cancel:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0;
-  padding-top: 0;
-  border-radius: 100%;
-  background-color: rgba(236, 240, 241, 0.3);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-/* line 52, ../sass/base/_button.scss */
-.form-actions #edit-cancel:active:before {
-  width: 120%;
-  padding-top: 120%;
-  -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
-          transition: width .2s ease-out, padding-top .2s ease-out;
-}
-/* line 62, ../sass/base/_button.scss */
+/* line 64, ../sass/base/_button.scss */
 .form-actions #edit-cancel:hover {
   color: #555555;
   background-color: transparent;
 }
-/* line 66, ../sass/base/_button.scss */
-.form-actions #edit-cancel:before {
+/* line 68, ../sass/base/_button.scss */
+.form-actions #edit-cancel:before, .form-actions #edit-cancel:active {
   background-color: rgba(217, 83, 79, 0.2);
 }
 @media (max-width: 50em) {
-  /* line 127, ../sass/forms.scss */
+  /* line 144, ../sass/forms.scss */
   .form-actions #edit-cancel {
     float: none;
     margin-left: 5px;
   }
 }
 
-/* line 138, ../sass/forms.scss */
+/* line 158, ../sass/forms.scss */
 html.js input.form-autocomplete {
   background-position: 100% 8px;
 }
 
-/* line 142, ../sass/forms.scss */
+/* line 162, ../sass/forms.scss */
 .ajax-progress .throbber {
   background-position: 0px -18px;
 }
 
-/* line 146, ../sass/forms.scss */
+/* line 166, ../sass/forms.scss */
 .container-inline {
   *zoom: 1;
 }
@@ -391,7 +360,7 @@ html.js input.form-autocomplete {
 .container-inline:after {
   clear: both;
 }
-/* line 149, ../sass/forms.scss */
+/* line 169, ../sass/forms.scss */
 .container-inline .form-item,
 .container-inline label {
   display: inline;
@@ -400,7 +369,7 @@ html.js input.form-autocomplete {
   margin: 0;
   margin-right: 5px;
 }
-/* line 158, ../sass/forms.scss */
+/* line 178, ../sass/forms.scss */
 .container-inline .select2-container {
   display: inline-block;
   vertical-align: middle;
@@ -409,17 +378,17 @@ html.js input.form-autocomplete {
   *display: inline;
   margin-bottom: 10px;
 }
-/* line 162, ../sass/forms.scss */
+/* line 182, ../sass/forms.scss */
 .container-inline .select2-display-none {
   display: none;
 }
 
-/* line 167, ../sass/forms.scss */
+/* line 187, ../sass/forms.scss */
 dd {
   margin: 10px 0 10px 30px;
 }
 
-/* line 175, ../sass/forms.scss */
+/* line 195, ../sass/forms.scss */
 a.button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -449,134 +418,112 @@ a.button:hover, a.button:focus {
   text-decoration: none;
   color: #f9f9f9;
 }
-/* line 40, ../sass/base/_button.scss */
-a.button:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0;
-  padding-top: 0;
-  border-radius: 100%;
-  background-color: rgba(236, 240, 241, 0.3);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-/* line 52, ../sass/base/_button.scss */
-a.button:active:before {
-  width: 120%;
-  padding-top: 120%;
-  -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
-          transition: width .2s ease-out, padding-top .2s ease-out;
-}
 
-/* line 180, ../sass/forms.scss */
+/* line 200, ../sass/forms.scss */
 fieldset {
   margin-bottom: 15px;
   padding: 0;
 }
-/* line 183, ../sass/forms.scss */
+/* line 203, ../sass/forms.scss */
 fieldset legend {
   float: left;
   background: #EEEEEE;
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 188, ../sass/forms.scss */
+/* line 208, ../sass/forms.scss */
 fieldset legend .fieldset-legend {
   padding: 5px 10px;
   display: block;
 }
-/* line 193, ../sass/forms.scss */
+/* line 213, ../sass/forms.scss */
 fieldset .fieldset-wrapper {
   padding: 15px;
 }
-/* line 196, ../sass/forms.scss */
+/* line 216, ../sass/forms.scss */
 fieldset.filter-wrapper {
   padding: 0;
   font-size: 90%;
   background: #f9f9f9;
 }
-/* line 200, ../sass/forms.scss */
+/* line 220, ../sass/forms.scss */
 fieldset.filter-wrapper .fieldset-wrapper {
   padding: 5px;
   border-top: 1px dotted #C0C0C0;
 }
-/* line 204, ../sass/forms.scss */
+/* line 224, ../sass/forms.scss */
 fieldset.filter-wrapper .filter-help {
   padding: 0 20px 0 0;
 }
-/* line 207, ../sass/forms.scss */
+/* line 227, ../sass/forms.scss */
 fieldset.filter-wrapper .form-item {
   padding-top: 0;
   margin-top: 5px;
 }
 
-/* line 214, ../sass/forms.scss */
+/* line 234, ../sass/forms.scss */
 .ckeditor_links {
   font-size: 90%;
 }
 
-/* line 221, ../sass/forms.scss */
+/* line 241, ../sass/forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a {
   text-decoration: none;
 }
-/* line 223, ../sass/forms.scss */
+/* line 243, ../sass/forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a:hover {
   text-decoration: none;
   outline: none;
   color: #61AEE2;
 }
-/* line 228, ../sass/forms.scss */
+/* line 248, ../sass/forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a strong {
   font-weight: normal;
 }
-/* line 231, ../sass/forms.scss */
+/* line 251, ../sass/forms.scss */
 .vertical-tabs ul.vertical-tabs-list li a .summary {
   font-size: 90%;
   font-style: italic;
   color: #777777;
 }
 
-/* line 241, ../sass/forms.scss */
+/* line 261, ../sass/forms.scss */
 html.js fieldset.collapsed {
   border: 1px solid #CCCCCC;
   height: 2.15em;
 }
 
-/* line 249, ../sass/forms.scss */
+/* line 269, ../sass/forms.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
-/* line 264, ../sass/forms.scss */
+/* line 284, ../sass/forms.scss */
 #user-login-form {
   text-align: left;
 }
-/* line 273, ../sass/forms.scss */
+/* line 293, ../sass/forms.scss */
 #user-login-form ul {
   margin-bottom: 0;
 }
-/* line 278, ../sass/forms.scss */
+/* line 298, ../sass/forms.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   margin-top: 1.5em;
   margin-left: -20px;
 }
-/* line 286, ../sass/forms.scss */
+/* line 306, ../sass/forms.scss */
 #user-login-form li.user-link {
   margin-top: 1.5em;
 }
 
-/* line 292, ../sass/forms.scss */
+/* line 312, ../sass/forms.scss */
 #user-login ul {
   margin: 1.5em 0;
 }
 
-/* line 296, ../sass/forms.scss */
+/* line 316, ../sass/forms.scss */
 #block-search-form {
   background: #FFFFFF;
   padding: 0 0 0 10px;
@@ -585,7 +532,7 @@ html.js #user-login-form li.openid-link,
   margin: 60px 0 0 0;
 }
 @media (max-width: 50em) {
-  /* line 296, ../sass/forms.scss */
+  /* line 316, ../sass/forms.scss */
   #block-search-form {
     clear: both;
     float: none;
@@ -593,17 +540,17 @@ html.js #user-login-form li.openid-link,
     margin: 0 auto;
   }
 }
-/* line 308, ../sass/forms.scss */
+/* line 328, ../sass/forms.scss */
 #block-search-form input.form-text {
   border: none;
   border-right: 1px solid #CCCCCC;
   width: 150px;
 }
-/* line 313, ../sass/forms.scss */
+/* line 333, ../sass/forms.scss */
 #block-search-form input.form-text:focus {
   box-shadow: none;
 }
-/* line 317, ../sass/forms.scss */
+/* line 337, ../sass/forms.scss */
 #block-search-form input.form-submit {
   text-indent: -9999px;
   background: #FFFFFF url('../images/search.png?1425402197') no-repeat center center;
@@ -618,7 +565,7 @@ html.js #user-login-form li.openid-link,
   margin: 0;
 }
 
-/* line 334, ../sass/forms.scss */
+/* line 354, ../sass/forms.scss */
 td.menu-disabled {
   background: #ccc;
 }

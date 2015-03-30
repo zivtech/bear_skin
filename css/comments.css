@@ -1,28 +1,153 @@
+/* line 57, ../sass/base/_typography.scss */
+.comment .comment-delete a,
+.comment .comment-edit a,
+.comment .comment-reply a {
+  font-size: 11px;
+  font-size: 1.12rem;
+}
+
+/* line 126, ../sass/base/_button.scss */
+.comment .comment-delete a,
+.comment .comment-edit a,
+.comment .comment-reply a {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 1px solid transparent;
+  outline: none;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+          transition: background-color 0.4s, color 0.4s;
+  background-color: transparent;
+  color: #555555;
+  padding: 0.4em 1.5em;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.5;
+  border: 2px solid #555555;
+}
+/* line 32, ../sass/base/_button.scss */
+.comment .comment-delete a *,
+.comment .comment-edit a *,
+.comment .comment-reply a * {
+  position: relative;
+}
+/* line 35, ../sass/base/_button.scss */
+.comment .comment-delete a:hover,
+.comment .comment-edit a:hover,
+.comment .comment-reply a:hover, .comment .comment-delete a:focus,
+.comment .comment-edit a:focus,
+.comment .comment-reply a:focus {
+  background-color: transparent;
+  text-decoration: none;
+  color: #555555;
+}
+/* line 64, ../sass/base/_button.scss */
+.comment .comment-delete a:hover,
+.comment .comment-edit a:hover,
+.comment .comment-reply a:hover {
+  color: #555555;
+  background-color: transparent;
+}
+/* line 68, ../sass/base/_button.scss */
+.comment .comment-delete a:before,
+.comment .comment-edit a:before,
+.comment .comment-reply a:before, .comment .comment-delete a:active,
+.comment .comment-edit a:active,
+.comment .comment-reply a:active {
+  background-color: rgba(85, 85, 85, 0.2);
+}
+
+/* line 130, ../sass/base/_button.scss */
+.comment .comment-edit a {
+  border-color: #4C1B01;
+  color: #4C1B01;
+}
+/* line 133, ../sass/base/_button.scss */
+.comment .comment-edit a:before, .comment .comment-edit a:active {
+  background-color: rgba(76, 27, 1, 0.2);
+}
+/* line 136, ../sass/base/_button.scss */
+.comment .comment-edit a:hover {
+  color: #4C1B01;
+}
+
+/* line 152, ../sass/base/_button.scss */
+.comment .comment-reply a {
+  border-color: #5cb85c;
+  color: #5cb85c;
+}
+/* line 155, ../sass/base/_button.scss */
+.comment .comment-reply a:before, .comment .comment-reply a:active {
+  background-color: rgba(92, 184, 92, 0.2);
+}
+/* line 158, ../sass/base/_button.scss */
+.comment .comment-reply a:hover {
+  color: #5cb85c;
+}
+
+/* line 174, ../sass/base/_button.scss */
+.comment .comment-delete a {
+  border-color: #d9534f;
+  color: #d9534f;
+}
+/* line 177, ../sass/base/_button.scss */
+.comment .comment-delete a:before, .comment .comment-delete a:active {
+  background-color: rgba(217, 83, 79, 0.2);
+}
+/* line 180, ../sass/base/_button.scss */
+.comment .comment-delete a:hover {
+  color: #d9534f;
+}
+
 /* line 3, ../sass/comments.scss */
 .comments {
-  margin: 1.5em 0;
+  margin: 1.875em 0;
 }
 
-/* line 19, ../sass/comments.scss */
-.comment.comment-preview {
-  background-color: #ffffea;
+/* line 18, ../sass/comments.scss */
+.comment {
+  margin-bottom: 3px;
 }
-/* line 60, ../sass/comments.scss */
-.comment .new {
-  color: #c00;
+/* line 21, ../sass/comments.scss */
+.comment__title {
+  margin-bottom: 0.625em;
 }
-/* line 73, ../sass/comments.scss */
-.comment .permalink {
-  text-transform: uppercase;
-  font-size: 75%;
+/* line 24, ../sass/comments.scss */
+.comment .submitted {
+  font-size: 80%;
+  margin: 0;
+}
+/* line 28, ../sass/comments.scss */
+.comment .field {
+  margin-bottom: 0.625em;
+}
+/* line 32, ../sass/comments.scss */
+.comment .links-inline li {
+  float: left;
+}
+/* line 59, ../sass/comments.scss */
+.comment.comment-by-viewer {
+  background-color: rgba(249, 182, 52, 0.1);
+  padding-left: 5px;
 }
 
-/* line 88, ../sass/comments.scss */
+/* line 65, ../sass/comments.scss */
 .indented {
-  margin-left: 30px;
+  margin-left: 0.9375em;
+  border-left: 3px solid #d1d3d2;
+  padding-left: 0.9375em;
+}
+/* line 71, ../sass/comments.scss */
+.indented .comment {
+  padding-top: 0.625em;
+  padding-bottom: 0.625em;
 }
 
-/* line 98, ../sass/comments.scss */
+/* line 82, ../sass/comments.scss */
 .comment-unpublished p.unpublished {
   height: 0;
   overflow: visible;

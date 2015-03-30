@@ -7,6 +7,42 @@ p:last-child, p:last-of-type {
   margin-bottom: 0;
 }
 
+/* line 54, ../sass/base/_typography.scss */
+.tiny {
+  font-size: 10px;
+  font-size: 0.96rem;
+}
+
+/* line 57, ../sass/base/_typography.scss */
+.smaller {
+  font-size: 11px;
+  font-size: 1.12rem;
+}
+
+/* line 60, ../sass/base/_typography.scss */
+.small {
+  font-size: 14px;
+  font-size: 1.44rem;
+}
+
+/* line 63, ../sass/base/_typography.scss */
+.large {
+  font-size: 18px;
+  font-size: 1.76rem;
+}
+
+/* line 66, ../sass/base/_typography.scss */
+.larger {
+  font-size: 19px;
+  font-size: 1.92rem;
+}
+
+/* line 69, ../sass/base/_typography.scss */
+.largest {
+  font-size: 21px;
+  font-size: 2.08rem;
+}
+
 /* line 3, ../sass/typography.scss */
 html {
   height: 100%;
@@ -116,42 +152,6 @@ blockquote {
 /* line 92, ../sass/typography.scss */
 .progress {
   font-size: 80%;
-}
-
-/* line 99, ../sass/typography.scss */
-.tiny {
-  font-size: 10px;
-  font-size: 0.96rem;
-}
-
-/* line 102, ../sass/typography.scss */
-.smaller {
-  font-size: 11px;
-  font-size: 1.12rem;
-}
-
-/* line 105, ../sass/typography.scss */
-.small {
-  font-size: 14px;
-  font-size: 1.44rem;
-}
-
-/* line 108, ../sass/typography.scss */
-.large {
-  font-size: 18px;
-  font-size: 1.76rem;
-}
-
-/* line 111, ../sass/typography.scss */
-.larger {
-  font-size: 19px;
-  font-size: 1.92rem;
-}
-
-/* line 114, ../sass/typography.scss */
-.largest {
-  font-size: 21px;
-  font-size: 2.08rem;
 }
 
 /*# sourceMappingURL=typography.css.map */

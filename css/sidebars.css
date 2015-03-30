@@ -6,5 +6,9 @@
 .sidebar .block {
   margin-bottom: 1.875em;
 }
+/* line 17, ../sass/sidebars.scss */
+.sidebar .block:last-child {
+  margin-bottom: 0;
+}
 
 /*# sourceMappingURL=sidebars.css.map */

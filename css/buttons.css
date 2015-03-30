@@ -1,4 +1,4 @@
-/* line 74, ../sass/base/_button.scss */
+/* line 77, ../sass/base/_button.scss */
 .button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -28,150 +28,128 @@
   text-decoration: none;
   color: #f9f9f9;
 }
-/* line 40, ../sass/base/_button.scss */
-.button:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0;
-  padding-top: 0;
-  border-radius: 100%;
-  background-color: rgba(236, 240, 241, 0.3);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-/* line 52, ../sass/base/_button.scss */
-.button:active:before {
-  width: 120%;
-  padding-top: 120%;
-  -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
-          transition: width .2s ease-out, padding-top .2s ease-out;
-}
 
-/* line 78, ../sass/base/_button.scss */
+/* line 81, ../sass/base/_button.scss */
 .button.secondary {
   background-color: #4C1B01;
   color: #f9f9f9;
   border-color: #240d00;
 }
-/* line 82, ../sass/base/_button.scss */
+/* line 85, ../sass/base/_button.scss */
 .button.secondary:hover, .button.secondary:focus {
   background-color: #331201;
 }
 
-/* line 87, ../sass/base/_button.scss */
+/* line 90, ../sass/base/_button.scss */
 .button.highlight {
   background-color: #F9B634;
   color: #f9f9f9;
   border-color: #f8a80c;
 }
-/* line 91, ../sass/base/_button.scss */
+/* line 94, ../sass/base/_button.scss */
 .button.highlight:hover, .button.highlight:focus {
   background-color: #f8ad1b;
 }
 
-/* line 96, ../sass/base/_button.scss */
+/* line 99, ../sass/base/_button.scss */
 .button.success {
   background-color: #5cb85c;
   color: #f9f9f9;
   border-color: #47a447;
 }
-/* line 100, ../sass/base/_button.scss */
+/* line 103, ../sass/base/_button.scss */
 .button.success:hover, .button.success:focus {
   background-color: #4cae4c;
 }
 
-/* line 105, ../sass/base/_button.scss */
+/* line 108, ../sass/base/_button.scss */
 .button.warning {
   background-color: #f0ad4e;
   color: #f9f9f9;
   border-color: #ed9c28;
 }
-/* line 109, ../sass/base/_button.scss */
+/* line 112, ../sass/base/_button.scss */
 .button.warning:hover, .button.warning:focus {
   background-color: #eea236;
 }
 
-/* line 114, ../sass/base/_button.scss */
+/* line 117, ../sass/base/_button.scss */
 .button.error {
   background-color: #d9534f;
   color: #f9f9f9;
   border-color: #d2322d;
 }
-/* line 118, ../sass/base/_button.scss */
+/* line 121, ../sass/base/_button.scss */
 .button.error:hover, .button.error:focus {
   background-color: #d43f3a;
 }
 
-/* line 127, ../sass/base/_button.scss */
+/* line 130, ../sass/base/_button.scss */
 .button-inverted.secondary {
   border-color: #4C1B01;
   color: #4C1B01;
 }
-/* line 130, ../sass/base/_button.scss */
-.button-inverted.secondary:before {
+/* line 133, ../sass/base/_button.scss */
+.button-inverted.secondary:before, .button-inverted.secondary:active {
   background-color: rgba(76, 27, 1, 0.2);
 }
-/* line 133, ../sass/base/_button.scss */
+/* line 136, ../sass/base/_button.scss */
 .button-inverted.secondary:hover {
   color: #4C1B01;
 }
 
-/* line 138, ../sass/base/_button.scss */
+/* line 141, ../sass/base/_button.scss */
 .button-inverted.highlight {
   border-color: #F9B634;
   color: #F9B634;
 }
-/* line 141, ../sass/base/_button.scss */
-.button-inverted.highlight:before {
+/* line 144, ../sass/base/_button.scss */
+.button-inverted.highlight:before, .button-inverted.highlight:active {
   background-color: rgba(249, 182, 52, 0.2);
 }
-/* line 144, ../sass/base/_button.scss */
+/* line 147, ../sass/base/_button.scss */
 .button-inverted.highlight:hover {
   color: #F9B634;
 }
 
-/* line 149, ../sass/base/_button.scss */
+/* line 152, ../sass/base/_button.scss */
 .button-inverted.success {
   border-color: #5cb85c;
   color: #5cb85c;
 }
-/* line 152, ../sass/base/_button.scss */
-.button-inverted.success:before {
+/* line 155, ../sass/base/_button.scss */
+.button-inverted.success:before, .button-inverted.success:active {
   background-color: rgba(92, 184, 92, 0.2);
 }
-/* line 155, ../sass/base/_button.scss */
+/* line 158, ../sass/base/_button.scss */
 .button-inverted.success:hover {
   color: #5cb85c;
 }
 
-/* line 160, ../sass/base/_button.scss */
+/* line 163, ../sass/base/_button.scss */
 .button-inverted.warning {
   border-color: #f0ad4e;
   color: #f0ad4e;
 }
-/* line 163, ../sass/base/_button.scss */
-.button-inverted.warning:before {
+/* line 166, ../sass/base/_button.scss */
+.button-inverted.warning:before, .button-inverted.warning:active {
   background-color: rgba(240, 173, 78, 0.2);
 }
-/* line 166, ../sass/base/_button.scss */
+/* line 169, ../sass/base/_button.scss */
 .button-inverted.warning:hover {
   color: #f0ad4e;
 }
 
-/* line 171, ../sass/base/_button.scss */
+/* line 174, ../sass/base/_button.scss */
 .button-inverted.error {
   border-color: #d9534f;
   color: #d9534f;
 }
-/* line 174, ../sass/base/_button.scss */
-.button-inverted.error:before {
+/* line 177, ../sass/base/_button.scss */
+.button-inverted.error:before, .button-inverted.error:active {
   background-color: rgba(217, 83, 79, 0.2);
 }
-/* line 177, ../sass/base/_button.scss */
+/* line 180, ../sass/base/_button.scss */
 .button-inverted.error:hover {
   color: #d9534f;
 }
@@ -207,35 +185,13 @@
   text-decoration: none;
   color: #555555;
 }
-/* line 40, ../sass/base/_button.scss */
-.button-inverted:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0;
-  padding-top: 0;
-  border-radius: 100%;
-  background-color: rgba(236, 240, 241, 0.3);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-/* line 52, ../sass/base/_button.scss */
-.button-inverted:active:before {
-  width: 120%;
-  padding-top: 120%;
-  -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
-          transition: width .2s ease-out, padding-top .2s ease-out;
-}
-/* line 62, ../sass/base/_button.scss */
+/* line 64, ../sass/base/_button.scss */
 .button-inverted:hover {
   color: #555555;
   background-color: transparent;
 }
-/* line 66, ../sass/base/_button.scss */
-.button-inverted:before {
+/* line 68, ../sass/base/_button.scss */
+.button-inverted:before, .button-inverted:active {
   background-color: rgba(85, 85, 85, 0.2);
 }
 
