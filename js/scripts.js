@@ -14,23 +14,16 @@
 
   'use strict';
 
-  Drupal.behaviors.bearScripts = {
-    attach: function (context, settings) {
-
-      context = context || document;
-      settings = settings || Drupal.settings;
-
-      var $blockMenus = $('#navigation .block-menu', context);
-      if ($blockMenus.length) {
-        $blockMenus.prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
-      }
-
-      var $blockMenuWrappers = $('#navigation .menu-block-wrapper', context);
-      if ($blockMenuWrappers.length) {
-        $blockMenuWrappers.prepend('<input type="checkbox" id="button"><label for="button" onclick>Menu</label>');
-      }
-
-    }
-  };
+  //
+  // Use the sample behavior pattern below
+  // 
+  //
+  //Drupal.behaviors.bear = {
+  //  attach: function (context, settings) {
+  //    context = context || document;
+  //    settings = settings || Drupal.settings;
+  //
+  //  }
+  //};
 
 })(jQuery, Drupal, this, this.document);
