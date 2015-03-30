@@ -13,41 +13,11 @@ $footer-height: 100px;
 //
 
 .with-sticky-footer {
-  height: 100%;
-
-  .page-wrap {
-    min-height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  .wrapper {
+    flex: 1 0 auto;
+    overflow: hidden;
   }
-
-  .site-main {
-    overflow: auto;
-    padding-bottom: $footer-height; // padding = footer height
-  }
-
-  .site-footer {
-    position: relative;
-    margin-top: $footer-height * -1; // margin = - footer height
-    height: $footer-height;
-    clear: both;
-    .block {
-      @include breakpoint($breakpoint-full-width) {
-        padding: 0 20px;
-      }
-    }
-  }
-
-  // hack for opera
-  &:before {
-    content: "";
-    height: 100%;
-    float: left;
-    width: 0;
-    margin-top: -32767px;
-  }
-}
-
-// hack for ie7
-.ie7 .with-sticky-footer .page-wrap {
-  display: table;
-  height: 100%
 }

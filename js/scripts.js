@@ -16,7 +16,7 @@
 
   //
   // Use the sample behavior pattern below
-  // 
+  //
   //
   //Drupal.behaviors.bear = {
   //  attach: function (context, settings) {
