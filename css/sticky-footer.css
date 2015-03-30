@@ -12,7 +12,7 @@
           flex-direction: column;
 }
 /* line 19, ../sass/sticky-footer.scss */
-.with-sticky-footer .wrapper {
+.with-sticky-footer .wrapper--main {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;

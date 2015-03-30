@@ -65,9 +65,8 @@
 /* line 10, ../sass/navigation.scss */
 .main-menu {
   outline: 0;
-  margin-bottom: 1em;
 }
-/* line 15, ../sass/navigation.scss */
+/* line 14, ../sass/navigation.scss */
 .main-menu__link {
   color: #f9f9f9;
   display: block;
@@ -82,27 +81,27 @@
 .main-menu__link:hover {
   color: #555555;
 }
-/* line 23, ../sass/navigation.scss */
+/* line 22, ../sass/navigation.scss */
 .main-menu__link:hover {
   background-color: #f9f9f9;
   color: #555555;
 }
-/* line 27, ../sass/navigation.scss */
+/* line 26, ../sass/navigation.scss */
 .main-menu__link.active {
   background-color: #f9f9f9;
   color: #555555;
 }
-/* line 34, ../sass/navigation.scss */
+/* line 33, ../sass/navigation.scss */
 .main-menu .menu {
   padding: 0;
   margin: 0;
   z-index: 100;
 }
-/* line 41, ../sass/navigation.scss */
+/* line 40, ../sass/navigation.scss */
 .main-menu--level-one {
   background-color: #555555;
 }
-/* line 46, ../sass/navigation.scss */
+/* line 45, ../sass/navigation.scss */
 .main-menu--level-two {
   display: none;
   background-color: #d1d3d2;
@@ -114,7 +113,7 @@
   min-width: 250px;
   background-clip: padding-box;
 }
-/* line 59, ../sass/navigation.scss */
+/* line 58, ../sass/navigation.scss */
 .main-menu--level-three {
   display: none;
   background-color: #d1d3d2;
@@ -126,11 +125,11 @@
   min-width: 125px;
   background-clip: padding-box;
 }
-/* line 72, ../sass/navigation.scss */
+/* line 71, ../sass/navigation.scss */
 .main-menu--level-four {
   display: none;
 }
-/* line 77, ../sass/navigation.scss */
+/* line 76, ../sass/navigation.scss */
 .main-menu__item {
   position: relative;
   -webkit-transition: background-color 0.3s ease;
@@ -138,7 +137,7 @@
   list-style-image: none;
   list-style-type: none;
 }
-/* line 89, ../sass/navigation.scss */
+/* line 88, ../sass/navigation.scss */
 .main-menu__item.level-one {
   display: inline-block;
   vertical-align: middle;
@@ -151,19 +150,19 @@
   border-bottom-right-radius: 2px;
   float: left;
 }
-/* line 98, ../sass/navigation.scss */
+/* line 97, ../sass/navigation.scss */
 .main-menu__item.level-one:hover .main-menu--level-two {
   display: block;
 }
-/* line 107, ../sass/navigation.scss */
+/* line 106, ../sass/navigation.scss */
 .main-menu__item.level-two:hover .main-menu--level-three {
   display: block;
 }
-/* line 111, ../sass/navigation.scss */
+/* line 110, ../sass/navigation.scss */
 .main-menu__item.level-two a {
   color: #555555;
 }
-/* line 113, ../sass/navigation.scss */
+/* line 112, ../sass/navigation.scss */
 .main-menu__item.level-two a:hover {
   background-color: #F9B634;
 }
@@ -175,12 +174,12 @@
   }
 }
 
-/* line 130, ../sass/navigation.scss */
+/* line 129, ../sass/navigation.scss */
 .nav-user__list {
   margin: 0;
   padding: 0;
 }
-/* line 133, ../sass/navigation.scss */
+/* line 132, ../sass/navigation.scss */
 .nav-user__list li {
   display: inline-block;
   vertical-align: middle;
@@ -190,12 +189,12 @@
   margin: 0 0 0 10px;
 }
 
-/* line 161, ../sass/navigation.scss */
+/* line 160, ../sass/navigation.scss */
 .breadcrumbs {
   margin: 20px 0;
   padding-left: 0;
 }
-/* line 165, ../sass/navigation.scss */
+/* line 164, ../sass/navigation.scss */
 .breadcrumbs__item {
   display: inline-block;
   vertical-align: middle;
@@ -205,17 +204,17 @@
   list-style-type: none;
   margin-right: 0.5em;
 }
-/* line 177, ../sass/navigation.scss */
+/* line 176, ../sass/navigation.scss */
 .breadcrumbs__divider {
   font-size: 80%;
   padding-left: 0.5em;
 }
 
-/* line 186, ../sass/navigation.scss */
+/* line 185, ../sass/navigation.scss */
 .skip-link {
   margin: 0;
 }
-/* line 189, ../sass/navigation.scss */
+/* line 188, ../sass/navigation.scss */
 .skip-link a,
 .skip-link a:visited {
   display: block;
@@ -226,21 +225,21 @@
   color: #fff;
 }
 
-/* line 205, ../sass/navigation.scss */
+/* line 204, ../sass/navigation.scss */
 .item-list .pager {
   padding: 0;
 }
-/* line 209, ../sass/navigation.scss */
+/* line 208, ../sass/navigation.scss */
 .item-list .pager li {
   padding: 0 0.5em;
 }
 
-/* line 220, ../sass/navigation.scss */
+/* line 219, ../sass/navigation.scss */
 .links-inline__list {
   display: inline;
   padding: 0;
 }
-/* line 223, ../sass/navigation.scss */
+/* line 222, ../sass/navigation.scss */
 .links-inline__list li {
   display: inline;
   list-style-type: none;
