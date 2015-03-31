@@ -24,9 +24,11 @@
   .submitted {
     font-size: 80%;
     margin: 0;
+    color: $bear-lighten-dark;
+    font-style: italic;
   }
   .field {
-    margin-bottom: $vertical-gutter / 3;
+    margin-bottom: $vertical-gutter / 3;    
   }
   .links-inline {
     li {
@@ -55,7 +57,10 @@
     a {
       @extend %button-inverted-success;
     }
-  }
+  }  
+  .comment_forbidden {
+      @include bear-element-invisible;
+    }
   &.comment-by-viewer {
     @include rgba-background(rgba($bear-yellow, 0.1));
     padding-left: 5px;
@@ -71,7 +76,7 @@
   .comment {
     padding-top: $vertical-gutter / 3;
     padding-bottom: $vertical-gutter / 3;
-  }
+  }  
 }
 
 .comment-unpublished {

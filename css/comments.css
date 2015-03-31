@@ -124,35 +124,45 @@
 .comment .submitted {
   font-size: 80%;
   margin: 0;
+  color: #7b7b7b;
+  font-style: italic;
 }
-/* line 28, ../sass/comments.scss */
+/* line 30, ../sass/comments.scss */
 .comment .field {
   margin-bottom: 0.625em;
 }
-/* line 32, ../sass/comments.scss */
+/* line 34, ../sass/comments.scss */
 .comment .links-inline li {
   float: left;
 }
-/* line 59, ../sass/comments.scss */
+/* line 61, ../sass/comments.scss */
+.comment .comment_forbidden {
+  position: absolute !important;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* line 64, ../sass/comments.scss */
 .comment.comment-by-viewer {
   background: url('../images/rgbapng/f9b6341a-5.png?1427736051');
   background: rgba(249, 182, 52, 0.1);
   padding-left: 5px;
 }
 
-/* line 65, ../sass/comments.scss */
+/* line 70, ../sass/comments.scss */
 .indented {
   margin-left: 0.9375em;
   border-left: 3px solid #d1d3d2;
   padding-left: 0.9375em;
 }
-/* line 71, ../sass/comments.scss */
+/* line 76, ../sass/comments.scss */
 .indented .comment {
   padding-top: 0.625em;
   padding-bottom: 0.625em;
 }
 
-/* line 82, ../sass/comments.scss */
+/* line 87, ../sass/comments.scss */
 .comment-unpublished p.unpublished {
   height: 0;
   overflow: visible;

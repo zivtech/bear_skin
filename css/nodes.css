@@ -3,4 +3,40 @@
   margin: 0;
 }
 
+/* line 31, ../sass/base/_alert.scss */
+.node .links-inline__list .comment_forbidden {
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+  background-color: #8bb8df;
+  color: #f9f9f9;
+  border: 1px solid #63a0d4;
+  border-left-width: 10px;
+  margin: 1em 0;
+}
+/* line 22, ../sass/base/_alert.scss */
+.node .links-inline__list .comment_forbidden a {
+  color: #f9f9f9;
+  border-bottom: 1px dotted #f9f9f9;
+}
+/* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+.node .links-inline__list .comment_forbidden a:hover {
+  color: #f9f9f9;
+}
+
+/* line 47, ../sass/base/_alert.scss */
+.node .links-inline__list .comment_forbidden {
+  border-color: #ec971f;
+  background-color: #f0ad4e;
+}
+
+/* line 15, ../sass/nodes.scss */
+.node .links-inline__list .comment_forbidden {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  padding: 0.2em 1em;
+}
+
 /*# sourceMappingURL=nodes.css.map */
