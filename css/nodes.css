@@ -4,7 +4,7 @@
 }
 
 /* line 31, ../sass/base/_alert.scss */
-.node .links-inline__list .comment_forbidden {
+.node-full .links-inline__list .comment_forbidden {
   padding: 0.7em 1.5em;
   border-radius: 2px;
   background-color: #8bb8df;
@@ -14,29 +14,42 @@
   margin: 1em 0;
 }
 /* line 22, ../sass/base/_alert.scss */
-.node .links-inline__list .comment_forbidden a {
+.node-full .links-inline__list .comment_forbidden a {
   color: #f9f9f9;
   border-bottom: 1px dotted #f9f9f9;
 }
 /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-.node .links-inline__list .comment_forbidden a:hover {
+.node-full .links-inline__list .comment_forbidden a:hover {
   color: #f9f9f9;
 }
 
 /* line 47, ../sass/base/_alert.scss */
-.node .links-inline__list .comment_forbidden {
+.node-full .links-inline__list .comment_forbidden {
   border-color: #ec971f;
   background-color: #f0ad4e;
 }
 
-/* line 15, ../sass/nodes.scss */
-.node .links-inline__list .comment_forbidden {
+/* line 43, ../sass/nodes.scss */
+.node-full .links-inline__list .comment_forbidden {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
   padding: 0.2em 1em;
+}
+
+/* line 53, ../sass/nodes.scss */
+.node-teaser {
+  margin-bottom: 2.34375em;
+}
+/* line 58, ../sass/nodes.scss */
+.node-teaser__title {
+  margin-bottom: 0.46875em;
+}
+/* line 62, ../sass/nodes.scss */
+.node-teaser .links-inline {
+  margin-top: 0.46875em;
 }
 
 /*# sourceMappingURL=nodes.css.map */

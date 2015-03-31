@@ -5,6 +5,12 @@
 //
 .wrapper--navigation {
   background-color: $nav-container-bg-color;
+  margin-bottom: $vertical-gutter;
+
+  @include breakpoint($breakpoint-medium-width) {
+    border-bottom: 4px solid $bear-dark;
+    margin-bottom: 0;
+  }
 }
 
 .main-menu {
@@ -116,9 +122,8 @@
     }
   }
 
-  @include breakpoint($breakpoint-med-small-width) {
-    height: 0;
-    border-bottom: 2px solid $bear-dark;
+  @include breakpoint($breakpoint-medium-width) {
+    @include bear-element-invisible;
   }
 }
 

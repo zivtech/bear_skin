@@ -71,12 +71,7 @@ body *, body *:before, body *:after {
   clear: both;
 }
 
-/* line 35, ../sass/layout.scss */
-.site-main {
-  padding: 20px 0 0 0;
-}
-
-/* line 43, ../sass/layout.scss */
+/* line 39, ../sass/layout.scss */
 .sidebar-first main {
   *zoom: 1;
   float: left;
@@ -105,7 +100,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 43, ../sass/layout.scss */
+  /* line 39, ../sass/layout.scss */
   .sidebar-first main {
     *zoom: 1;
     float: left;
@@ -134,7 +129,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 51, ../sass/layout.scss */
+/* line 47, ../sass/layout.scss */
 .sidebar-first .site-sidebars {
   *zoom: 1;
   float: left;
@@ -163,7 +158,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 51, ../sass/layout.scss */
+  /* line 47, ../sass/layout.scss */
   .sidebar-first .site-sidebars {
     *zoom: 1;
     float: left;
@@ -193,7 +188,7 @@ body *, body *:before, body *:after {
   }
 }
 
-/* line 65, ../sass/layout.scss */
+/* line 61, ../sass/layout.scss */
 .sidebar-second main {
   *zoom: 1;
   float: left;
@@ -220,7 +215,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 65, ../sass/layout.scss */
+  /* line 61, ../sass/layout.scss */
   .sidebar-second main {
     *zoom: 1;
     float: left;
@@ -249,7 +244,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 72, ../sass/layout.scss */
+/* line 68, ../sass/layout.scss */
 .sidebar-second .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -276,7 +271,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 72, ../sass/layout.scss */
+  /* line 68, ../sass/layout.scss */
   .sidebar-second .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -306,7 +301,7 @@ body *, body *:before, body *:after {
   }
 }
 
-/* line 85, ../sass/layout.scss */
+/* line 81, ../sass/layout.scss */
 .two-sidebars main {
   *zoom: 1;
   float: left;
@@ -335,7 +330,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 85, ../sass/layout.scss */
+  /* line 81, ../sass/layout.scss */
   .two-sidebars main {
     *zoom: 1;
     float: left;
@@ -364,7 +359,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 93, ../sass/layout.scss */
+/* line 89, ../sass/layout.scss */
 .two-sidebars .region-sidebar-first {
   *zoom: 1;
   float: left;
@@ -393,7 +388,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 93, ../sass/layout.scss */
+  /* line 89, ../sass/layout.scss */
   .two-sidebars .region-sidebar-first {
     *zoom: 1;
     float: left;
@@ -422,7 +417,7 @@ body *, body *:before, body *:after {
     margin-right: 0%;
   }
 }
-/* line 101, ../sass/layout.scss */
+/* line 97, ../sass/layout.scss */
 .two-sidebars .region-sidebar-second {
   *zoom: 1;
   float: left;
@@ -449,7 +444,7 @@ body *, body *:before, body *:after {
   margin-right: 0%;
 }
 @media (max-width: 50em) {
-  /* line 101, ../sass/layout.scss */
+  /* line 97, ../sass/layout.scss */
   .two-sidebars .region-sidebar-second {
     *zoom: 1;
     float: left;
@@ -479,7 +474,7 @@ body *, body *:before, body *:after {
   }
 }
 
-/* line 114, ../sass/layout.scss */
+/* line 110, ../sass/layout.scss */
 #documentation p.tb {
   *zoom: 1;
   float: left;
