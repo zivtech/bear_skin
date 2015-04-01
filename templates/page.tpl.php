@@ -41,14 +41,7 @@
 </div>
 
 <div class="wrapper wrapper--navigation">
-  <nav tabindex="-1" class="site-navigation main-menu"
-       aria-labelledby="mainMenuLabel">
-    <?php // provide userMenu label here for WAI accessibility ?>
-    <h3 class="u-hidden"
-        id="mainMenuLabel"><?php print t('Main Navigation Menu:')?></h3>
-    <?php print render($page['navigation']);?>
-  </nav>
-  <!-- /#navigation -->
+  <?php print render($page['navigation']); ?>
 </div>
 
 <div class="wrapper wrapper--main">

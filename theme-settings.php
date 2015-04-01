@@ -22,6 +22,12 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#description' => t('Disable to use the block system'),
     '#default_value' => theme_get_setting('user_menu'),
   );
+  $form['bear_options']['sticky_navbar'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add sticky navigation bar.'),
+    '#description' => t('Let the header include a sticky navigation bar that sticks to the top when scrolling.'),
+    '#default_value' => theme_get_setting('sticky_navbar'),
+  );
   $form['bear_options']['sticky_footer'] = array(
     '#type' => 'checkbox',
     '#title' => t('Add sticky footer.'),

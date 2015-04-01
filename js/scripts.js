@@ -26,4 +26,19 @@
   //  }
   //};
 
-})(jQuery, Drupal, this, this.document);
+  Drupal.behaviors.bearStickyNav = {
+    attach: function(context, settings) {
+      context = context || document;
+      settings = settings || Drupal.settings;
+
+      settings.bearStickyNav = settings.bearStickyNav || {};
+
+      $.extend(settings.bearStickyNav, {
+        enabled: settings.bear_skin.stickyNavbar || true, // enabled by default!
+        menuSelector: '.menu'
+      });
+
+    }
+  };
+
+})(jQuery, Drupal, window, document);

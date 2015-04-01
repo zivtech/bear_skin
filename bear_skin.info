@@ -136,6 +136,7 @@ settings[zen_rebuild_registry]     = 0
 settings[zen_wireframes]           = 0
 settings[user_menu]                = 1
 settings[responsive_nav]           = 1
+settings[sticky_navbar]            = 1
 settings[sticky_footer]            = 0
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
