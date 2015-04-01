@@ -26,7 +26,7 @@ $body-text-font-family: "Helvetica Neue", Helvetica, sans-serif !default;
 
 // Typography colors
 $base-font-color: $bear-dark !default;
-$link-color: $bear-blue !default;
+$link-color: darken($bear-yellow, 5%) !default;
 $link-color-hover: darken($link-color, 10%) !default;
 
 

@@ -12,14 +12,14 @@
 //
 // Bearskin theme colors
 // you can override these here, or just ignore them ...
-$bear-yellow: #F9B634;
-$bear-brown: #4C1B01;
-$bear-browner: #454147;
-$bear-grey: #EFF2F1;
-$bear-greyer: #d1d3d2;
+$bear-yellow: #DCB97F;
+$bear-brown: #82705B;
+$bear-browner: #5F5555;
+$bear-greyer: #837B80;
+$bear-grey: lighten($bear-greyer, 40%);
 $bear-blue: #61AEE2;
-$bear-dark: #555555;
-$bear-lighten-dark: lighten($bear-dark, 15%);
+$bear-dark: #545452;
+$bear-lighten-dark: #6C6C6C;
 $bear-whitey: #f9f9f9;
 
 

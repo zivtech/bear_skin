@@ -25,14 +25,6 @@
     padding: $nav-link-padding;
     transition: none;
     text-transform: $nav-link-text-transform;
-    &:hover {
-      background-color: $nav-link-bg-color-hover;
-      color: $nav-link-color-hover;
-    }
-    &.active {
-      background-color: $nav-link-bg-color-hover;
-      color: $nav-link-color-hover;
-    }
   }
 
   // Menu <ul> containers
@@ -86,8 +78,12 @@
     list-style-type: none;
 
     // Active items
-    &.active {
-
+    &.active, &:hover {
+      background-color: $nav-drop-down-bg-color-hover;
+      color: $nav-drop-down-link-color-hover;
+      & > .main-menu__link {
+        color: $nav-link-color-hover;
+      }
     }
 
     // First level <li> elements
@@ -95,8 +91,6 @@
       @include inline-block;
       height: $nav-container-height;
       line-height: $nav-container-height;
-      border-bottom-left-radius: $nav-drop-down-border-radius;
-      border-bottom-right-radius: $nav-drop-down-border-radius;
       float: left;
 
       &:hover {
@@ -108,15 +102,11 @@
 
     // Second level <li> elements
     &.level-two {
+      border-bottom-left-radius: $nav-drop-down-border-radius;
+      border-bottom-right-radius: $nav-drop-down-border-radius;
       &:hover {
         .main-menu--level-three {
           display: block;
-        }
-      }
-      a {
-        color: $nav-drop-down-link-color;
-        &:hover {
-          background-color: $nav-drop-down-link-color-hover;
         }
       }
     }
@@ -184,7 +174,7 @@
 // Breadcrumbs
 //
 .breadcrumbs {
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   padding-left: 0;
 
   &__item {
