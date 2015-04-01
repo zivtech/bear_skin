@@ -186,11 +186,31 @@
 }
 
 /* line 134, ../sass/navigation.scss */
+.js-menu-clone {
+  background: url('../images/rgbapng/555555e5-5.png?1427914868');
+  background: rgba(85, 85, 85, 0.9);
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+}
+/* line 140, ../sass/navigation.scss */
+.js-menu-clone .site-header__logo {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  margin-left: -675px;
+}
+/* line 145, ../sass/navigation.scss */
+.js-menu-clone .site-header__logo img {
+  height: 30px;
+}
+
+/* line 155, ../sass/navigation.scss */
 .nav-user__list {
   margin: 0;
   padding: 0;
 }
-/* line 137, ../sass/navigation.scss */
+/* line 158, ../sass/navigation.scss */
 .nav-user__list li {
   display: inline-block;
   vertical-align: middle;
@@ -200,12 +220,12 @@
   margin: 0 0 0 10px;
 }
 
-/* line 165, ../sass/navigation.scss */
+/* line 186, ../sass/navigation.scss */
 .breadcrumbs {
   margin: 20px 0;
   padding-left: 0;
 }
-/* line 169, ../sass/navigation.scss */
+/* line 190, ../sass/navigation.scss */
 .breadcrumbs__item {
   display: inline-block;
   vertical-align: middle;
@@ -215,17 +235,17 @@
   list-style-type: none;
   margin-right: 0.5em;
 }
-/* line 181, ../sass/navigation.scss */
+/* line 202, ../sass/navigation.scss */
 .breadcrumbs__divider {
   font-size: 80%;
   padding-left: 0.5em;
 }
 
-/* line 190, ../sass/navigation.scss */
+/* line 211, ../sass/navigation.scss */
 .skip-link {
   margin: 0;
 }
-/* line 193, ../sass/navigation.scss */
+/* line 214, ../sass/navigation.scss */
 .skip-link a,
 .skip-link a:visited {
   display: block;
@@ -236,21 +256,21 @@
   color: #fff;
 }
 
-/* line 209, ../sass/navigation.scss */
+/* line 230, ../sass/navigation.scss */
 .item-list .pager {
   padding: 0;
 }
-/* line 213, ../sass/navigation.scss */
+/* line 234, ../sass/navigation.scss */
 .item-list .pager li {
   padding: 0 0.5em;
 }
 
-/* line 224, ../sass/navigation.scss */
+/* line 245, ../sass/navigation.scss */
 .links-inline__list {
   display: inline;
   padding: 0;
 }
-/* line 227, ../sass/navigation.scss */
+/* line 248, ../sass/navigation.scss */
 .links-inline__list li {
   display: inline;
   list-style-type: none;
