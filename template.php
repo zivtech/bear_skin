@@ -129,10 +129,9 @@ function bear_skin_preprocess_menu_block_wrapper(&$variables) {
   $delta = $variables['delta'];
   $variables['theme_hook_suggestions'][] = 'menu_block_wrapper__menu_' . str_replace('-', '_', $variables['config']['menu_name']);
   $variables['classes_array'] = array($variables['config']['menu_name']);
-  switch ($delta) {
-    case 'bear_necessities-1':
-      array_unshift($variables['classes_array'], 'site-navigation');
-      break;
+
+  if ($variables['config']['menu_name'] === 'main-menu') {
+    array_unshift($variables['classes_array'], 'site-navigation');
   }
 }
 
