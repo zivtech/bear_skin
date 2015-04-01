@@ -34,10 +34,47 @@
       settings.bearStickyNav = settings.bearStickyNav || {};
 
       $.extend(settings.bearStickyNav, {
-        enabled: settings.bear_skin.stickyNavbar || true, // enabled by default!
-        menuSelector: '.menu'
+        enabled: Drupal.settings.bear_skin.stickyNavbar,
+        menuSelector: '.wrapper--navigation',
+        logoSelector: '.site-header__logo'
       });
 
+      var sticky = this;
+
+      if (context === document && settings.bearStickyNav.enabled) {
+        var $logo = $(settings.bearStickyNav.logoSelector).clone();
+        var $desktopNav = $(settings.bearStickyNav.menuSelector);
+
+        if ($desktopNav.length) {
+          var top = (Drupal.settings.bear_skin.userLoggedIn) ? '29px' : '0px';
+          $desktopNav.addClass('js-menu-original').clone().insertAfter(settings.bearStickyNav.menuSelector).addClass('js-menu-clone').css('top', top).removeClass('js-menu-original').hide();
+          var $cloneMenu = $('.js-menu-clone');
+          if ($logo.length) {
+            $cloneMenu.append($logo);
+          }
+        }
+
+        $(window).scroll(function(e) {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop >= 340) {
+            sticky.activate(true);
+          } else {
+            sticky.activate(false);
+          }
+        });
+      }
+
+    },
+    activate: function(shouldStick) {
+      var $original = $('.js-menu-original');
+      var $stuck = $('.js-menu-clone');
+      if (shouldStick) {
+        $original.css('visibility', 'hidden');
+        $stuck.css('left', '0').css('right', '0').fadeIn('slow');
+      } else {
+        $stuck.fadeOut('fast');
+        $original.css('visibility', 'visible');
+      }
     }
   };
 

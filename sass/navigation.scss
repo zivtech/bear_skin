@@ -128,6 +128,27 @@
 }
 
 //
+// The sticky navigation menu (if enabled in theme settings)
+// you will probably want to tweak this for your theme
+//
+.js-menu-clone {
+  @include rgba-background(rgba($nav-container-bg-color, 0.9));
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+
+  .site-header__logo {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    margin-left: -675px; // LTR
+    img {
+      height: 30px;
+    }
+  }
+}
+
+//
 // Header user menu
 //
 .nav-user {

@@ -17,6 +17,7 @@ function bear_skin_preprocess_html(&$variables, $hook) {
       'stickyFooter' => (bool) theme_get_setting('sticky_footer'),
       'stickyNavbar' => (bool) theme_get_setting('sticky_navbar'),
       'userMenu' => (bool) theme_get_setting('user_menu'),
+      'userLoggedIn' => (bool) user_is_logged_in()
     ),
   ), 'setting');
 
