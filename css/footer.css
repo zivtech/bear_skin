@@ -1,12 +1,12 @@
 /* line 3, ../sass/footer.scss */
 .wrapper--footer {
-  background-color: #EFF2F1;
+  background-color: #e6e4e5;
 }
 /* line 6, ../sass/footer.scss */
 .wrapper--footer footer {
   margin-left: auto;
   margin-right: auto;
-  color: #555555;
+  color: #545452;
   font-size: 12px;
   padding-top: 1em;
   padding-bottom: 1em;

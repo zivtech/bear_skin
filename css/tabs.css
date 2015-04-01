@@ -9,7 +9,7 @@
   width: 100%;
   padding: 0;
   margin: 1em 0 1.5em;
-  border-bottom: 1px solid #EFF2F1;
+  border-bottom: 1px solid #e6e4e5;
 }
 /* line 195, ../sass/base/jeet/_grid.scss */
 .tabs-primary:before, .tabs-primary:after,
@@ -29,25 +29,25 @@
   display: block;
   float: left;
   text-align: center;
-  background-color: #EFF2F1;
+  background-color: #e6e4e5;
   line-height: 40px;
   height: 40px;
   padding: 0;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  border-right: 1px solid #EFF2F1;
+  border-right: 1px solid #e6e4e5;
   -webkit-transition: background-color 0.5s ease;
           transition: background-color 0.5s ease;
 }
 /* line 37, ../sass/base/_tab.scss */
 .tabs-primary__tab:hover,
 .tabs-secondary__tab:hover {
-  background-color: #e1e7e5;
+  background-color: #d9d7d9;
 }
 /* line 14, ../sass/tabs.scss */
 .tabs-primary__tab-link,
 .tabs-secondary__tab-link {
-  color: #555555;
+  color: #545452;
   display: block;
   width: 100%;
   height: 100%;
@@ -58,12 +58,12 @@
 /* line 49, ../sass/base/_tab.scss */
 .tabs-primary__tab-link:hover,
 .tabs-secondary__tab-link:hover {
-  color: #6e6e6e;
+  color: #6e6e6b;
 }
 /* line 52, ../sass/base/_tab.scss */
 .tabs-primary__tab-link.active,
 .tabs-secondary__tab-link.active {
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #545452;
 }
 
 /*# sourceMappingURL=tabs.css.map */

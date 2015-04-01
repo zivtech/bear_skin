@@ -6,11 +6,11 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
-  border: 1px solid #3b3b3b;
+  border: 1px solid #3a3a39;
   outline: none;
   -webkit-transition: background-color 0.4s, color 0.4s;
           transition: background-color 0.4s, color 0.4s;
-  background-color: #555555;
+  background-color: #545452;
   color: #f9f9f9;
   padding: 0.4em 1.5em;
   border-radius: 2px;
@@ -24,31 +24,31 @@
 }
 /* line 35, ../sass/base/_button.scss */
 .button:hover, .button:focus {
-  background-color: #3b3b3b;
+  background-color: #3a3a39;
   text-decoration: none;
   color: #f9f9f9;
 }
 
 /* line 81, ../sass/base/_button.scss */
 .button.secondary {
-  background-color: #4C1B01;
+  background-color: #82705B;
   color: #f9f9f9;
-  border-color: #240d00;
+  border-color: #6a5b4a;
 }
 /* line 85, ../sass/base/_button.scss */
 .button.secondary:hover, .button.secondary:focus {
-  background-color: #331201;
+  background-color: #736351;
 }
 
 /* line 90, ../sass/base/_button.scss */
 .button.highlight {
-  background-color: #F9B634;
+  background-color: #DCB97F;
   color: #f9f9f9;
-  border-color: #f8a80c;
+  border-color: #d3a75f;
 }
 /* line 94, ../sass/base/_button.scss */
 .button.highlight:hover, .button.highlight:focus {
-  background-color: #f8ad1b;
+  background-color: #d7ae6b;
 }
 
 /* line 99, ../sass/base/_button.scss */
@@ -86,32 +86,32 @@
 
 /* line 130, ../sass/base/_button.scss */
 .button-inverted.secondary {
-  border-color: #4C1B01;
-  color: #4C1B01;
+  border-color: #82705B;
+  color: #82705B;
 }
 /* line 133, ../sass/base/_button.scss */
 .button-inverted.secondary:before, .button-inverted.secondary:active {
-  background: url('../images/rgbapng/4c1b0133-5.png?1427736330');
-  background: rgba(76, 27, 1, 0.2);
+  background: url('../images/rgbapng/82705b33-5.png?1427919388');
+  background: rgba(130, 112, 91, 0.2);
 }
 /* line 136, ../sass/base/_button.scss */
 .button-inverted.secondary:hover {
-  color: #4C1B01;
+  color: #82705B;
 }
 
 /* line 141, ../sass/base/_button.scss */
 .button-inverted.highlight {
-  border-color: #F9B634;
-  color: #F9B634;
+  border-color: #DCB97F;
+  color: #DCB97F;
 }
 /* line 144, ../sass/base/_button.scss */
 .button-inverted.highlight:before, .button-inverted.highlight:active {
-  background: url('../images/rgbapng/f9b63433-5.png?1427736330');
-  background: rgba(249, 182, 52, 0.2);
+  background: url('../images/rgbapng/dcb97f33-5.png?1427919370');
+  background: rgba(220, 185, 127, 0.2);
 }
 /* line 147, ../sass/base/_button.scss */
 .button-inverted.highlight:hover {
-  color: #F9B634;
+  color: #DCB97F;
 }
 
 /* line 152, ../sass/base/_button.scss */
@@ -172,13 +172,13 @@
   -webkit-transition: background-color 0.4s, color 0.4s;
           transition: background-color 0.4s, color 0.4s;
   background-color: transparent;
-  color: #555555;
+  color: #545452;
   padding: 0.4em 1.5em;
   border-radius: 2px;
   text-decoration: none;
   cursor: pointer;
   line-height: 1.5;
-  border: 2px solid #555555;
+  border: 2px solid #545452;
 }
 /* line 32, ../sass/base/_button.scss */
 .button-inverted * {
@@ -188,17 +188,17 @@
 .button-inverted:hover, .button-inverted:focus {
   background-color: transparent;
   text-decoration: none;
-  color: #555555;
+  color: #545452;
 }
 /* line 64, ../sass/base/_button.scss */
 .button-inverted:hover {
-  color: #555555;
+  color: #545452;
   background-color: transparent;
 }
 /* line 68, ../sass/base/_button.scss */
 .button-inverted:before, .button-inverted:active {
-  background: url('../images/rgbapng/55555533-5.png?1427736330');
-  background: rgba(85, 85, 85, 0.2);
+  background: url('../images/rgbapng/54545233-5.png?1427919344');
+  background: rgba(84, 84, 82, 0.2);
 }
 
 /*# sourceMappingURL=buttons.css.map */

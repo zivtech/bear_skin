@@ -21,13 +21,13 @@
   -webkit-transition: background-color 0.4s, color 0.4s;
           transition: background-color 0.4s, color 0.4s;
   background-color: transparent;
-  color: #555555;
+  color: #545452;
   padding: 0.4em 1.5em;
   border-radius: 2px;
   text-decoration: none;
   cursor: pointer;
   line-height: 1.5;
-  border: 2px solid #555555;
+  border: 2px solid #545452;
 }
 /* line 32, ../sass/base/_button.scss */
 .comment .comment-delete a *,
@@ -43,13 +43,13 @@
 .comment .comment-reply a:focus {
   background-color: transparent;
   text-decoration: none;
-  color: #555555;
+  color: #545452;
 }
 /* line 64, ../sass/base/_button.scss */
 .comment .comment-delete a:hover,
 .comment .comment-edit a:hover,
 .comment .comment-reply a:hover {
-  color: #555555;
+  color: #545452;
   background-color: transparent;
 }
 /* line 68, ../sass/base/_button.scss */
@@ -58,23 +58,23 @@
 .comment .comment-reply a:before, .comment .comment-delete a:active,
 .comment .comment-edit a:active,
 .comment .comment-reply a:active {
-  background: url('../images/rgbapng/55555533-5.png?1427736330');
-  background: rgba(85, 85, 85, 0.2);
+  background: url('../images/rgbapng/54545233-5.png?1427919344');
+  background: rgba(84, 84, 82, 0.2);
 }
 
 /* line 130, ../sass/base/_button.scss */
 .comment .comment-edit a {
-  border-color: #4C1B01;
-  color: #4C1B01;
+  border-color: #82705B;
+  color: #82705B;
 }
 /* line 133, ../sass/base/_button.scss */
 .comment .comment-edit a:before, .comment .comment-edit a:active {
-  background: url('../images/rgbapng/4c1b0133-5.png?1427736330');
-  background: rgba(76, 27, 1, 0.2);
+  background: url('../images/rgbapng/82705b33-5.png?1427919388');
+  background: rgba(130, 112, 91, 0.2);
 }
 /* line 136, ../sass/base/_button.scss */
 .comment .comment-edit a:hover {
-  color: #4C1B01;
+  color: #82705B;
 }
 
 /* line 152, ../sass/base/_button.scss */
@@ -124,7 +124,7 @@
 .comment .submitted {
   font-size: 80%;
   margin: 0;
-  color: #7b7b7b;
+  color: #6C6C6C;
   font-style: italic;
 }
 /* line 30, ../sass/comments.scss */
@@ -145,15 +145,15 @@
 }
 /* line 64, ../sass/comments.scss */
 .comment.comment-by-viewer {
-  background: url('../images/rgbapng/f9b6341a-5.png?1427736051');
-  background: rgba(249, 182, 52, 0.1);
+  background: url('../images/rgbapng/dcb97f1a-5.png?1427919380');
+  background: rgba(220, 185, 127, 0.1);
   padding-left: 5px;
 }
 
 /* line 70, ../sass/comments.scss */
 .indented {
   margin-left: 0.9375em;
-  border-left: 3px solid #d1d3d2;
+  border-left: 3px solid #837B80;
   padding-left: 0.9375em;
 }
 /* line 76, ../sass/comments.scss */

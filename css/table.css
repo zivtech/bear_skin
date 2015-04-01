@@ -9,8 +9,8 @@ table {
 }
 /* line 41, ../sass/base/_table.scss */
 table th {
-  background-color: #b7bab8;
-  color: #555555;
+  background-color: #696266;
+  color: #545452;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
@@ -25,7 +25,7 @@ table tr {
 }
 /* line 69, ../sass/base/_table.scss */
 table tr:nth-child(2n), table tr.even {
-  background-color: #EFF2F1;
+  background-color: #e6e4e5;
 }
 /* line 73, ../sass/base/_table.scss */
 table tr:nth-child(2n + 1), table tr.odd {
@@ -33,8 +33,8 @@ table tr:nth-child(2n + 1), table tr.odd {
 }
 /* line 78, ../sass/base/_table.scss */
 table tr:hover {
-  background-color: #EFF2F1;
-  color: #2f2f2f;
+  background-color: #e6e4e5;
+  color: #2d2d2c;
 }
 /* line 84, ../sass/base/_table.scss */
 table td {
@@ -52,19 +52,19 @@ table.no-stripes {
   border-spacing: 0;
   background-color: transparent;
   border: none;
-  border: 1px solid #d1d3d2;
+  border: 1px solid #837B80;
   border-radius: 2px;
 }
 /* line 41, ../sass/base/_table.scss */
 table.no-stripes th {
-  background-color: #b7bab8;
-  color: #555555;
+  background-color: #696266;
+  color: #545452;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
   padding: 0.7em 0.8em;
   border: none;
-  border-bottom: 1px solid #d1d3d2;
+  border-bottom: 1px solid #837B80;
 }
 /* line 64, ../sass/base/_table.scss */
 table.no-stripes tr {
@@ -74,8 +74,8 @@ table.no-stripes tr {
 }
 /* line 78, ../sass/base/_table.scss */
 table.no-stripes tr:hover {
-  background-color: #EFF2F1;
-  color: #2f2f2f;
+  background-color: #e6e4e5;
+  color: #2d2d2c;
 }
 /* line 84, ../sass/base/_table.scss */
 table.no-stripes td {
@@ -96,8 +96,8 @@ table.no-borders {
 }
 /* line 41, ../sass/base/_table.scss */
 table.no-borders th {
-  background-color: #b7bab8;
-  color: #555555;
+  background-color: #696266;
+  color: #545452;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
@@ -112,7 +112,7 @@ table.no-borders tr {
 }
 /* line 69, ../sass/base/_table.scss */
 table.no-borders tr:nth-child(2n), table.no-borders tr.even {
-  background-color: #EFF2F1;
+  background-color: #e6e4e5;
 }
 /* line 73, ../sass/base/_table.scss */
 table.no-borders tr:nth-child(2n + 1), table.no-borders tr.odd {
@@ -120,8 +120,8 @@ table.no-borders tr:nth-child(2n + 1), table.no-borders tr.odd {
 }
 /* line 78, ../sass/base/_table.scss */
 table.no-borders tr:hover {
-  background-color: #EFF2F1;
-  color: #2f2f2f;
+  background-color: #e6e4e5;
+  color: #2d2d2c;
 }
 /* line 84, ../sass/base/_table.scss */
 table.no-borders td {
@@ -139,20 +139,20 @@ table.celled {
   border-spacing: 0;
   background-color: transparent;
   border: none;
-  border: 1px solid #d1d3d2;
+  border: 1px solid #837B80;
   border-radius: 2px;
 }
 /* line 41, ../sass/base/_table.scss */
 table.celled th {
-  background-color: #b7bab8;
-  color: #555555;
+  background-color: #696266;
+  color: #545452;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
   padding: 0.7em 0.8em;
   border: none;
-  border-bottom: 1px solid #d1d3d2;
-  border-left: 1px solid #d1d3d2;
+  border-bottom: 1px solid #837B80;
+  border-left: 1px solid #837B80;
 }
 /* line 57, ../sass/base/_table.scss */
 table.celled th:first-child, table.celled th:first-of-type {
@@ -166,7 +166,7 @@ table.celled tr {
 }
 /* line 69, ../sass/base/_table.scss */
 table.celled tr:nth-child(2n), table.celled tr.even {
-  background-color: #EFF2F1;
+  background-color: #e6e4e5;
 }
 /* line 73, ../sass/base/_table.scss */
 table.celled tr:nth-child(2n + 1), table.celled tr.odd {
@@ -174,8 +174,8 @@ table.celled tr:nth-child(2n + 1), table.celled tr.odd {
 }
 /* line 78, ../sass/base/_table.scss */
 table.celled tr:hover {
-  background-color: #EFF2F1;
-  color: #2f2f2f;
+  background-color: #e6e4e5;
+  color: #2d2d2c;
 }
 /* line 84, ../sass/base/_table.scss */
 table.celled td {
@@ -184,8 +184,8 @@ table.celled td {
   text-align: left;
   background-color: transparent;
   border: none;
-  border-left: 1px solid #d1d3d2;
-  border-bottom: 1px solid #d1d3d2;
+  border-left: 1px solid #837B80;
+  border-bottom: 1px solid #837B80;
 }
 /* line 94, ../sass/base/_table.scss */
 table.celled td:first-child {
@@ -210,8 +210,8 @@ table.plain {
 }
 /* line 41, ../sass/base/_table.scss */
 table.plain th {
-  background-color: #b7bab8;
-  color: #555555;
+  background-color: #696266;
+  color: #545452;
   font-weight: 600;
   vertical-align: bottom;
   text-transform: none;
@@ -226,8 +226,8 @@ table.plain tr {
 }
 /* line 78, ../sass/base/_table.scss */
 table.plain tr:hover {
-  background-color: #EFF2F1;
-  color: #2f2f2f;
+  background-color: #e6e4e5;
+  color: #2d2d2c;
 }
 /* line 84, ../sass/base/_table.scss */
 table.plain td {

@@ -33,7 +33,7 @@
 .form-item .description {
   font-size: 80%;
   font-style: italic;
-  color: #7b7b7b;
+  color: #6C6C6C;
 }
 /* line 18, ../sass/forms.scss */
 .form-item.form-type-checkbox .description, .form-item.form-type-checkboxes .description, .form-item.form-type-radio .description, .form-item.form-type-radios .description {
@@ -67,10 +67,10 @@ label.option {
 .form-text,
 .form-textarea,
 .form-file {
-  color: #555555;
+  color: #545452;
   background-color: #f9f9f9;
   padding: 0.5em 0.75em;
-  border: #d4d4d4 1px solid;
+  border: #d3d3d2 1px solid;
   border-radius: 2px;
 }
 /* line 34, ../sass/base/_form.scss */
@@ -197,11 +197,11 @@ input[type="submit"] {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  border: 1px solid #3b3b3b;
+  border: 1px solid #3a3a39;
   outline: none;
   -webkit-transition: background-color 0.4s, color 0.4s;
           transition: background-color 0.4s, color 0.4s;
-  background-color: #555555;
+  background-color: #545452;
   color: #f9f9f9;
   padding: 0.4em 1.5em;
   border-radius: 2px;
@@ -227,7 +227,7 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #3b3b3b;
+  background-color: #3a3a39;
   text-decoration: none;
   color: #f9f9f9;
 }
@@ -301,7 +301,7 @@ input[type="submit"]:focus {
   -webkit-transition: background-color 0.4s, color 0.4s;
           transition: background-color 0.4s, color 0.4s;
   background-color: transparent;
-  color: #555555;
+  color: #545452;
   padding: 0.4em 1.5em;
   border-radius: 2px;
   text-decoration: none;
@@ -318,11 +318,11 @@ input[type="submit"]:focus {
 .form-actions #edit-cancel:hover, .form-actions #edit-cancel:focus {
   background-color: transparent;
   text-decoration: none;
-  color: #555555;
+  color: #545452;
 }
 /* line 64, ../sass/base/_button.scss */
 .form-actions #edit-cancel:hover {
-  color: #555555;
+  color: #545452;
   background-color: transparent;
 }
 /* line 68, ../sass/base/_button.scss */
@@ -397,11 +397,11 @@ a.button {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  border: 1px solid #3b3b3b;
+  border: 1px solid #3a3a39;
   outline: none;
   -webkit-transition: background-color 0.4s, color 0.4s;
           transition: background-color 0.4s, color 0.4s;
-  background-color: #555555;
+  background-color: #545452;
   color: #f9f9f9;
   padding: 0.4em 1.5em;
   border-radius: 2px;
@@ -415,7 +415,7 @@ a.button * {
 }
 /* line 35, ../sass/base/_button.scss */
 a.button:hover, a.button:focus {
-  background-color: #3b3b3b;
+  background-color: #3a3a39;
   text-decoration: none;
   color: #f9f9f9;
 }
