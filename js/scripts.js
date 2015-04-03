@@ -36,7 +36,8 @@
       $.extend(settings.bearStickyNav, {
         enabled: Drupal.settings.bear_skin.stickyNavbar,
         menuSelector: '.wrapper--navigation',
-        logoSelector: '.site-header__logo'
+        logoSelector: '.site-header__logo',
+        displayHeight: Drupal.settings.bear_skin.stickyNavbarHeight
       });
 
       var sticky = this;
@@ -56,7 +57,7 @@
 
         $(window).scroll(function(e) {
           var scrollTop = $(window).scrollTop();
-          if (scrollTop >= 340) {
+          if (scrollTop >= settings.bearStickyNav.displayHeight) {
             sticky.activate(true);
           } else {
             sticky.activate(false);
@@ -75,6 +76,15 @@
         $stuck.fadeOut('fast');
         $original.css('visibility', 'visible');
       }
+    }
+  };
+
+  //
+  // Polyfill things where needed
+  //
+  Drupal.behaviors.bearPolyfill = {
+    attach: function(context, settings) {
+
     }
   };
 

@@ -16,18 +16,37 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#type' => 'fieldset',
     '#title' => t('Bear Theme Additional Options'),
   );
+
+  // create an option to display the user menu
   $form['bear_options']['user_menu'] = array(
     '#type' => 'checkbox',
     '#title' => t('Add User Menu to Header (Log In, Log Out etc).'),
     '#description' => t('Disable to use the block system'),
     '#default_value' => theme_get_setting('user_menu'),
   );
+
+  // create an option for a sticky header
   $form['bear_options']['sticky_navbar'] = array(
     '#type' => 'checkbox',
     '#title' => t('Add sticky navigation bar.'),
     '#description' => t('Let the header include a sticky navigation bar that sticks to the top when scrolling.'),
     '#default_value' => theme_get_setting('sticky_navbar'),
   );
+  // if the sticky header is selected, allow height assignment
+  $form['bear_options']['sticky_navbar_height'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Fade-in height for sticky navigation bar'),
+    '#description' => t('If you selected a sticky navigation bar, at what scroll height should it appear?'),
+    '#size' => 4,
+    '#default_value' => theme_get_setting('sticky_navbar_height'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="sticky_navbar"]' => array('checked', TRUE)
+      )
+    )
+  );
+
+  // create an option for sticky footers
   $form['bear_options']['sticky_footer'] = array(
     '#type' => 'checkbox',
     '#title' => t('Add sticky footer.'),
@@ -35,6 +54,7 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
       You can change these settings in the the sticky-footer.css file located in the css folder.'),
     '#default_value' => theme_get_setting('sticky_footer'),
   );
+
 
   // Create the form using Forms API: http://api.drupal.org/api/7
 
