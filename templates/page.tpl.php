@@ -3,7 +3,7 @@
 
     <?php if ($logo): ?>
       <a href="<?php print $front_page;?>" title="<?php print t('Home');?>"
-         rel="home" id="logo" class="site-header__logo">
+         rel="home" class="site-header__logo">
         <img src="<?php print $logo;?>" alt="<?php print t('Home');?>"/>
       </a>
     <?php endif;?>
@@ -11,12 +11,12 @@
     <?php if ($site_name || $site_slogan): ?>
       <div class="site-header__name-and-slogan">
         <?php if ($site_name): ?>
-          <h1 class="site-header__name">
+          <span class="site-header__name">
             <a href="<?php print $front_page;?>"
                title="<?php print t('Home');?>" rel="home">
               <span><?php print $site_name;?></span>
             </a>
-          </h1>
+          </span>
         <?php endif;?>
 
         <?php if ($site_slogan): ?>
@@ -61,6 +61,8 @@
         <?php print render($title_prefix);?>
         <h1 class="main__title" role="heading"><?php print $title;?></h1>
         <?php print render($title_suffix);?>
+      <?php else: // this is needed for ARIA ?>
+        <h1 class="u-hidden"><?php print $bear_page_title; ?></h1>
       <?php endif;?>
 
       <?php if (!empty($messages)): ?>

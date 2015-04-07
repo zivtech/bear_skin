@@ -60,7 +60,7 @@ body {
 
 /* line 18, ../sass/typography.scss */
 a {
-  color: #d7ae6b;
+  color: #61AEE2;
   text-decoration: none;
   -webkit-transition: color 0.25s ease;
           transition: color 0.25s ease;
@@ -68,7 +68,7 @@ a {
 }
 /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
-  color: #cc9843;
+  color: #3698da;
 }
 
 /* line 25, ../sass/typography.scss */

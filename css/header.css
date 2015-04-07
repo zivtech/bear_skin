@@ -29,26 +29,27 @@
 .site-header__name {
   font-size: 2em;
   margin: 0;
+  display: block;
 }
-/* line 31, ../sass/header.scss */
+/* line 32, ../sass/header.scss */
 .site-header__name a {
   color: #f9f9f9;
 }
-/* line 33, ../sass/header.scss */
+/* line 34, ../sass/header.scss */
 .site-header__name a:hover, .site-header__name a:focus {
   text-decoration: underline;
 }
-/* line 39, ../sass/header.scss */
+/* line 40, ../sass/header.scss */
 .site-header__slogan {
   margin: 0;
   font-size: 1em;
 }
-/* line 44, ../sass/header.scss */
+/* line 45, ../sass/header.scss */
 .site-header .nav-user {
   float: right;
 }
 @media (max-width: 50em) {
-  /* line 49, ../sass/header.scss */
+  /* line 50, ../sass/header.scss */
   .site-header__logo, .site-header__name-and-slogan,
   .site-header .nav-user {
     float: none;
@@ -56,7 +57,7 @@
     margin: 0 auto;
     text-align: center;
   }
-  /* line 58, ../sass/header.scss */
+  /* line 59, ../sass/header.scss */
   .site-header__name-and-slogan {
     margin-bottom: 1em;
   }

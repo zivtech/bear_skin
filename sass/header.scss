@@ -28,6 +28,7 @@
   &__name {
     font-size: 2em;
     margin: 0;
+    display: block;
     a {
       @include link-colors($bear-whitey);
       &:hover, &:focus {

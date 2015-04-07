@@ -10,6 +10,7 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   // Add variables and paths needed for HTML5 and responsive support.
   $variables['base_path'] = base_path();
   $variables['path_to_bear_skin'] = drupal_get_path('theme', 'bear_skin');
+  $variables['skip_link_anchor'] = 'main-content';
 
   // put some settings into javascript
   drupal_add_js(array(
@@ -39,6 +40,15 @@ function bear_skin_preprocess_html(&$variables, $hook) {
  */
 function bear_skin_preprocess_page(&$variables) {
   $page = $variables['page'];
+
+  // set the page title for the homepage
+  // for accessibility purposes
+  $title = drupal_get_title();
+  if (drupal_is_front_page() && empty($title)) {
+    $variables['bear_page_title'] = variable_get('site_name', '') . ' Homepage';
+  } else {
+    $variables['bear_page_title'] = $title;
+  }
 
   // check if there is content in the sidebars
   $variables['has_sidebar_first'] = FALSE;
@@ -120,6 +130,25 @@ function bear_skin_form_alter(&$form, &$form_state, $form_id) {
       $form['search_block_form']['#attributes']['placeholder'] = t('Search');
       $form['search_block_form']['#attributes']['required'] = 'required';
       break;
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view()
+ */
+function bear_skin_preprocess_views_view(&$variables) {
+  $name = $variables['css_name'];
+  $display = drupal_clean_css_identifier($variables['view']->current_display);
+  $variables['classes_array'][] = $name . '-' . $display . '-view';
+}
+
+/**
+ * Implements template_preprocess_views_view_unformatted()
+ */
+function bear_skin_preprocess_views_view_unformatted(&$variables) {
+  $id = drupal_clean_css_identifier($variables['view']->name) . '-' . drupal_clean_css_identifier($variables['view']->current_display);
+  foreach ($variables['classes_array'] as $key => $class) {
+    $variables['classes_array'][$key] .= ' view-row ' . $id . '-view__row';
   }
 }
 

@@ -52,6 +52,7 @@
           var $cloneMenu = $('.js-menu-clone');
           if ($logo.length) {
             $cloneMenu.append($logo);
+            $logo.children('img').attr('alt', 'mobile logo');
           }
         }
 
