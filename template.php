@@ -148,7 +148,7 @@ function bear_skin_preprocess_views_view(&$variables) {
 function bear_skin_preprocess_views_view_unformatted(&$variables) {
   $id = drupal_clean_css_identifier($variables['view']->name) . '-' . drupal_clean_css_identifier($variables['view']->current_display);
   foreach ($variables['classes_array'] as $key => $class) {
-    $variables['classes_array'][$key] .= ' view-row ' . $id . '-view__row';
+    $variables['classes_array'][$key] .= ' ' . $id . '-view__row';
   }
 }
 
