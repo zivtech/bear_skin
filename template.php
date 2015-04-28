@@ -173,7 +173,7 @@ function bear_skin_preprocess_menu_block_wrapper(&$variables) {
  */
 function bear_skin_links(&$variables) {
   // create a more unique CSS class for the menu
-  if (!empty($variables['attributes']['class'])) {
+  if (!empty($variables['attributes']['class']) && is_array($variables['attributes']['class'])) {
     $menu_class = implode('-', $variables['attributes']['class']);
     $variables['attributes']['class'][] = $menu_class . '__list';
   }
@@ -188,7 +188,7 @@ function bear_skin_links(&$variables) {
   // add the ARIA role for accessibility
   $variables['attributes']['role'] = 'menubar';
 
-  if (!empty($variables['links'])) {
+  if (!empty($variables['links']) && is_array($variables['links'])) {
     foreach ($variables['links'] as $key => &$link) {
       $link['attributes']['role'] = 'menuitem';
       $link['attributes']['class'] = (!empty($link['attributes']['class'])) ? $link['attributes']['class'] : array();
