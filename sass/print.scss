@@ -3,8 +3,12 @@
 // Print styles
 //
 //
-
-@import "bear";
+@import "vendor";
+@import "variables";
+@import "mixins";
+@import "reusable";
+@import "base/*";
+@import "components/*";
 
 @media print {
 
@@ -27,13 +31,11 @@
       // Only display useful links.
       content: "";
     }
-
     abbr[title]:after {
       // Add visible title after abbreviations.
       content: " (" attr(title) ")";
     }
   }
-
   main {
     // Un-float the content
     float: none !important;
@@ -41,7 +43,6 @@
     margin: 0 !important;
     padding: 0 !important;
   }
-
   body,
   .page-wrap,
   .site-main,
@@ -51,7 +52,6 @@
     background-color: transparent !important;
     background-image: none !important;
   }
-
   .skip-link,
   #toolbar,
   .site-navigation,
@@ -71,5 +71,4 @@
     visibility: hidden;
     display: none;
   }
-
 }

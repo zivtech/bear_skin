@@ -1,28 +1,4 @@
 //
-// Variables
-//
-$table-border: 1px solid $bear-greyer !default;
-$table-border-radius: $border-radius !default;
-
-$table-header-vertical-align: bottom !default;
-$table-header-font-color: $base-font-color !default;
-$table-header-font-weight: 600 !default;
-$table-header-bg-color: darken($bear-greyer, 10%) !default;
-$table-header-text-transform: none !default;
-
-$table-row-bg-color: $bear-whitey !default;
-$table-row-alt-bg-color: $bear-grey !default;
-$table-row-hover-color: $bear-grey !default;
-$table-row-transition: background .2s ease, border-color .2s ease, color .2s ease !default;
-
-$table-cell-vertical-align: middle !default;
-$table-cell-font-color: $base-font-color !default;
-$table-cell-border: 1px solid $bear-greyer !default;
-$table-cell-padding: .7em .8em !default;
-$table-cell-text-align: left !default;
-// LTR
-
-//
 // Table mixin
 //
 @mixin table($striped: true, $bordered: false, $celled: false) {

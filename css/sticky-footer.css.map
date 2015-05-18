@@ -1,1 +1,0 @@
-{"version":3,"sources":["sticky-footer.css","../sass/sticky-footer.scss"],"names":[],"mappings":"AAAA,0CAAyC;ACczC;EACE,sBAAa;EAAb,uBAAa;EAAb,sBAAa;EAAb,eAAa;EACb,mBAAiB;EACjB,8BAAsB;EAAtB,+BAAsB;EAAtB,gCAAsB;MAAtB,4BAAsB;UAAtB,wBAAsB;EDZvB;AACD,0CAAyC;ACYvC;EACE,qBAAc;EAAd,wBAAc;MAAd,oBAAc;UAAd,gBAAc;EACd,kBAAgB;EDVnB","file":"sticky-footer.css"}

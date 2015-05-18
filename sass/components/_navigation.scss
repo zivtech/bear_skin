@@ -1,0 +1,65 @@
+.skip-link {
+  @include bear-element-invisible;
+  @include bear-element-focusable;
+}
+
+.main-menu {
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    &:not(.main-menu--level-one) {
+      display: none;
+    }
+  }
+
+  &__item {
+    @include inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    font-family: $header-font-family;
+    color: $bear-whitey;
+    line-height: 30px;
+    padding: 0 10px;
+
+    &.active {
+      background-color: $bear-dark;
+    }
+  }
+}
+
+.links-inline {
+  margin: $vertical-gutter / 2 0;
+
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    li {
+      @include inline-block;
+      list-style-type: none;
+      margin-right: $vertical-gutter / 2;
+    }
+  }
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    @include inline-block;
+    list-style-type: none;
+  }
+  &__link {
+    text-transform: capitalize;
+  }
+  &__divider {
+    @include inline-block;
+    margin: 0 5px;
+  }
+}

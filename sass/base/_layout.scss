@@ -1,17 +1,94 @@
-//
-// Layout Variables
-// Customize your theme by copying the variable name into _custom.scss and remove !default
-//
-$site-max-width: 1200px / 16px * 1em !default;
-$indent-amount: 30px / 16px * 1em !default;
-$vertical-gutter: 30px / 16px * 1em !default;
+body {
+  margin: 0;
+  padding: 0;
 
-// Breakpoints
-$breakpoint-small-width: max-width 25em !default;
-$breakpoint-med-small-width: max-width 30em !default;
-$breakpoint-medium-width: max-width 50em !default;
-$breakpoint-large-width: max-width 62.5em !default;
-$breakpoint-full-width: max-width $site-max-width;
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+}
 
-// Header layout
-$header-padding: 25px 0 !default;
+.wrapper {
+  @include breakpoint($breakpoint-full-width) {
+    padding: 0 20px;
+  }
+}
+
+.site-header,
+.region--navigation,
+.site-main,
+#footer {
+  @include cf;
+  max-width: $site-max-width;
+  margin: 0 auto;
+}
+
+//
+// Left Sidebar
+//
+.sidebar-first {
+  main {
+    @include col(3/4);
+    @include shift(1/4);
+    @include breakpoint($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+  .site-sidebars {
+    @include col(1/4);
+    @include shift(-3/4);
+    @include breakpoint($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+}
+
+//
+// Right sidebar
+//
+.sidebar-second {
+  main {
+    @include col(3/4);
+    @include breakpoint($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+  .region-sidebar-first {
+    @include col(1/4);
+    @include breakpoint($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+}
+
+//
+// Two sidebars
+//
+.two-sidebars {
+  main {
+    @include col(2/4);
+    @include shift(1/4);
+    @include breakpoint($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+  .region-sidebar-first {
+    @include col(1/4);
+    @include shift(-2/4);
+    @include breakpoint($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+  .region-sidebar-second {
+    @include col(1/4);
+    @include breakpoint($breakpoint-medium-width) {
+      @include col();
+      @include unshift();
+    }
+  }
+}

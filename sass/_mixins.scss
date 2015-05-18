@@ -1,0 +1,181 @@
+@function em($target, $context: 16) {
+  @return ($target / $context) * 1em;
+}
+
+// https://gist.github.com/webgefrickel/4530526
+// usage:
+// @include rem(font-size, 16px)
+// @include rem(margin, 0 auto 10px)
+// @include rem(padding, inherit)
+@mixin rem($property, $values) {
+  // Create a couple of empty lists as output buffers.
+  $default-browser-font-size: 10px;
+  $px-values: ();
+  $rem-values: ();
+
+  // Loop through the $values list
+  @each $value in $values {
+    // For each property value, if it's in rem or px, derive both rem and
+    // px values for it and add those to the end of the appropriate buffer.
+    // Ensure all pixel values are rounded to the nearest pixel.
+    @if $value == 0 or $value == 0px {
+      // 0 -- use it without a unit
+      $px-values: join($px-values, 0);
+      $rem-values: join($rem-values, 0);
+    } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+      // px value given - calculate rem value from base-font-size
+      $new-rem-value: $value / $default-browser-font-size;
+      $px-values: join($px-values, round($value));
+      $rem-values: join($rem-values, #{$new-rem-value}rem);
+    } @else if $value == auto or $value == inherit {
+      // auto or inherit - don't add px or rem
+      $px-values: join($px-values, $value);
+      $rem-values: join($rem-values, $value);
+    } @else {
+      // unitless value - use those directly as rem and calculate the px-fallback
+      $px-values: join($px-values, round($value * $default-browser-font-size));
+      $rem-values: join($rem-values, #{$value}rem);
+    }
+  }
+
+  // output the converted rules
+  #{$property}: $px-values;
+  #{$property}: $rem-values;
+}
+
+@mixin link-colors($color, $hover: $color, $active: $color, $focus: $color) {
+  color: $color;
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
+  &:focus {
+    color: $focus;
+  }
+}
+
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+@mixin bear-appearance($appearance) {
+  -webkit-appearance: $appearance;
+  -moz-appearance: $appearance;
+  appearance: $appearance;
+}
+
+@mixin bear-button($color: $button-primary-color, $font-color: $button-primary-font-color, $radius: $button-border-radius, $padding: $button-padding, $transitions: false) {
+  @include bear-appearance(none);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 1px solid darken($color, 10%);
+  outline: none;
+  transition: background-color 0.4s, color 0.4s;
+  background-color: $color;
+  color: $font-color;
+  padding: $padding;
+  border-radius: $radius;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: $bear-line-height;
+  * {
+    position: relative;
+  }
+  &:hover, &:focus {
+    background-color: darken($color, 5%);
+    text-decoration: none;
+    color: $font-color;
+  }
+  @if ($transitions) {
+    &:before {
+      @include rgba-background(rgba(36, 240, 241, 0.3));
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 0;
+      padding-top: 0;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+    }
+    &:active:before {
+      width: 120%;
+      padding-top: 120%;
+      transition: width .2s ease-out, padding-top .2s ease-out;
+    }
+  }
+}
+
+@mixin bear-button-inverted($color: $button-primary-color, $font-color: $button-primary-color, $radius: $button-border-radius, $padding: $button-padding) {
+  @include bear-button(transparent, $font-color, $radius, $padding);
+  border: 2px solid $color;
+  &:hover {
+    color: $font-color;
+    background-color: transparent;
+  }
+  &:before,
+  &:active {
+    @include rgba-background(rgba($color, 0.2));
+  }
+}
+
+@mixin bear-linear-gradient($fromColor, $toColor) {
+  background-color: $toColor;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='$fromColor', EndColorStr='$toColor');
+  background-image: linear-gradient(top, $fromColor, $toColor);
+}
+
+// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin bear-element-invisible {
+  position: absolute !important;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin bear-element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+@mixin bear-element-focusable {
+  @include bear-element-invisible;
+
+  &:active,
+  &:focus {
+    @include bear-element-invisible-off;
+  }
+}
+
+// The word "Unpublished" displayed underneath unpublished nodes and comments.
+@mixin unpublished-div {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word; // A very nice CSS3 property
+
+  @at-root {
+    .lt-ie8 & > * {
+      position: relative; // Otherwise these elements will appear below the "Unpublished" text.
+    }
+  }
+}

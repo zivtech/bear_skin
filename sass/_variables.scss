@@ -1,9 +1,16 @@
 //
-// Theme colors
+// Zivtech theme variables
 //
-
-
-
+$zivtech-blue: #728EAD;
+$zivtech-light-blue: lighten($zivtech-blue, 10%);
+$zivtech-drenched-blue: saturate($zivtech-blue, 30%);
+$zivtech-green: #40C27A;
+$zivtech-yellow: #F9B634;
+$zivtech-off-black: #404040;
+$zivtech-dark: #261D19;
+$zivtech-pale: #F7F7F7;
+$zivtech-white: white;
+$zivtech-brown-gray: #7C7775;
 
 //
 // Bearskin variables
@@ -12,39 +19,43 @@
 //
 // Bearskin theme colors
 // you can override these here, or just ignore them ...
-$bear-yellow: #DCB97F;
+$bear-yellow: $zivtech-yellow;
 $bear-brown: #82705B;
 $bear-browner: #5F5555;
 $bear-greyer: #837B80;
 $bear-grey: lighten($bear-greyer, 40%);
-$bear-blue: #61AEE2;
+$bear-blue: $zivtech-blue;
 $bear-dark: #545452;
 $bear-lighten-dark: #6C6C6C;
-$bear-whitey: #f9f9f9;
+$bear-whitey: $zivtech-white;
 
-
-// Uncomment a variable and change it. After rebuilding with compass,
-// you will override the default values!
+//
+//
+//
+// Default variables below
+// Feel free to change
+//
+//
 //
 
 
 //
 // GLOBALS
 //
-// $color-primary: #337ab7;
-// $color-success: #5cb85c;
-// $color-info: #5bc0de;
-// $color-warning: #f0ad4e;
-// $color-error: #d9534f;
-// $border-radius: 2px;
+$color-primary: $zivtech-blue;
+$color-success: $zivtech-green;
+$color-info: #5bc0de;
+$color-warning: #f0ad4e;
+$color-error: #d9534f;
+$border-radius: 2px;
 
 
 //
 // ALERTS
 //
-// $alert-padding: 0.7em 1.5em;
-// $alert-border-radius: $border-radius;
-// $alert-font-color: $bear-whitey;
+$alert-padding: 0.7em 1.5em;
+$alert-border-radius: $border-radius;
+$alert-font-color: $bear-whitey;
 
 
 //
@@ -55,90 +66,72 @@ $bear-whitey: #f9f9f9;
 //
 // BUTTONS
 //
-// $button-padding: 0.4em 1.5em;
-// $button-border-radius: $border-radius;
-// $button-primary-color: $bear-dark;
-// $button-primary-font-color: $bear-whitey;
-// $button-secondary-color: $bear-brown;
-// $button-secondary-font-color: $bear-whitey;
-// $button-highlight-color: $bear-yellow;
-// $button-highlight-font-color: $bear-whitey;
+$button-padding: .8em 5em;
+$button-border-radius: $border-radius;
+$button-primary-color: $zivtech-green;
+$button-primary-font-color: $bear-whitey;
+$button-secondary-color: $zivtech-blue;
+$button-secondary-font-color: $bear-whitey;
+$button-highlight-color: $bear-yellow;
+$button-highlight-font-color: $bear-whitey;
 
 
 //
 // FORMS
 //
-// $form-input-padding: 0.5em 0.75em;
-// $form-input-font-color: $base-font-color;
-// $form-input-bg-color: $bear-whitey;
-// $form-input-active-color: $color-primary;
-// $form-input-border-color: lighten($base-font-color, 50%);
-// $form-input-container-margin: 1em 0;
+$form-input-padding: 0.5em 0.75em;
+$form-input-font-color: $zivtech-off-black;
+$form-input-bg-color: $bear-whitey;
+$form-input-active-color: $color-primary;
+$form-input-border-color: lighten($zivtech-off-black, 50%);
+$form-input-container-margin: 1em 0;
 
 //
 // LAYOUT
 //
-// $site-max-width: 1200px / 16px * 1em;
-// $indent-amount: 30px;
-// $vertical-gutter: 10px 0;
-// $breakpoint-small-width: max-width 25em;
-// $breakpoint-med-small-width: max-width 37.5em;
-// $breakpoint-medium-width: max-width 50em;
-// $breakpoint-large-width: max-width 62.5em;
-// $breakpoint-full-width: max-width $site-max-width;
-// $header-padding: 25px 0;
-
-
-//
-// MAIN MENU NAVIGATION
-//
-// $nav-container-bg-color: $bear-dark;
-// $nav-container-height: 50px;
-// $nav-drop-down-bg-color: $bear-greyer;
-// $nav-drop-down-link-color: $bear-dark;
-// $nav-drop-down-link-color-hover: $bear-yellow;
-// $nav-drop-down-border-radius: $border-radius;
-// $nav-drop-down-min-width: 250px;
-// $nav-link-text-transform: capitalize;
-// $nav-link-padding: 0 1em;
-// $nav-link-bg-color: $nav-container-bg-color;
-// $nav-link-bg-color-hover: $bear-whitey;
-// $nav-link-color: $bear-whitey;
-// $nav-link-color-hover: $nav-container-bg-color;
+$site-max-width: 1200px / 16px * 1em;
+$content-max-width: 875px / 16px * 1em;
+$vertical-gutter: 30px / 16px * 1em;
+$breakpoint-small-width: max-width 25em;
+$breakpoint-med-small-width: max-width 37.5em;
+$breakpoint-medium-width: max-width 50em;
+$breakpoint-large-width: max-width 62.5em;
+$breakpoint-full-width: max-width $site-max-width;
+$header-padding: 25px 0;
 
 
 
 //
 // TABLES
 //
-// $table-border: 1px solid $bear-grey;
-// $table-border-radius: $border-radius;
-// $table-header-vertical-align: bottom;
-// $table-header-font-color: $base-font-color;
-// $table-header-font-weight: 600;
-// $table-header-bg-color: $bear-greyer;
-// $table-header-text-transform: none;
-// $table-row-bg-color: $bear-whitey;
-// $table-row-alt-bg-color: $bear-grey;
-// $table-row-hover-color: $bear-grey;
-// $table-row-transition: background .2s ease, border-color .2s ease, color .2s ease;
-// $table-cell-vertical-align: middle;
-// $table-cell-font-color: $base-font-color;
-// $table-cell-border: 1px solid $bear-grey;
-// $table-cell-padding: .7em .8em;
-// $table-cell-text-align: left; // LTR
+$table-border: 1px solid $bear-grey;
+$table-border-radius: $border-radius;
+$table-header-vertical-align: bottom;
+$table-header-font-color: $zivtech-off-black;
+$table-header-font-weight: 600;
+$table-header-bg-color: $bear-greyer;
+$table-header-text-transform: none;
+$table-row-bg-color: $bear-whitey;
+$table-row-alt-bg-color: $bear-grey;
+$table-row-hover-color: $bear-grey;
+$table-row-transition: background .2s ease, border-color .2s ease, color .2s ease;
+$table-cell-vertical-align: middle;
+$table-cell-font-color: $zivtech-off-black;
+$table-cell-border: 1px solid $bear-grey;
+$table-cell-padding: .7em .8em;
+$table-cell-text-align: left; // LTR
 
 
 //
 // TABS
 //
-// $tabs-container-margin: 1em 0 1.5em;
-// $tabs-container-bg-color: transparent;
-// $tabs-border-color: $bear-grey;
-// $tabs-height: 40px;
-// $tabs-bg-color: $bear-grey;
-// $tabs-bg-color-hover: darken($tabs-bg-color, 5%);
-// $tabs-border-radius: $border-radius;
+$tabs-container-margin: 1em 0 1.5em;
+$tabs-container-bg-color: transparent;
+$tabs-border-color: none;
+$tabs-height: 40px;
+$tabs-bg-color: transparent;
+$tabs-bg-color-hover: darken($tabs-bg-color, 5%);
+$tabs-border-radius: $border-radius;
 
 
 //
@@ -150,18 +143,18 @@ $bear-whitey: #f9f9f9;
 // in pixel units.
 //
 //
-// $bear-font-size: 62.5%;
-// $bear-line-height: 1.5;
-// $body-font-size: 16px;
-// $h1-font-size: 2    * $body-font-size;
-// $h2-font-size: 1.5  * $body-font-size;
-// $h3-font-size: 1.17 * $body-font-size;
-// $h4-font-size: 1    * $body-font-size;
-// $h5-font-size: 0.83 * $body-font-size;
-// $h6-font-size: 0.75 * $body-font-size;
-//
-// $header-font-family: "Helvetica Neue", Helvetica, sans-serif;
-// $body-text-font-family: "Helvetica Neue", Helvetica, sans-serif;
-// $base-font-color: $bear-dark;
-// $link-color: $bear-blue;
-// $link-color-hover: darken($link-color, 10%);
+$bear-font-size: 62.5%;
+$bear-line-height: 1.5;
+$body-font-size: 16px;
+$base-font-size: $body-font-size;
+$h1-font-size: 60px;
+$h2-font-size: 36px;
+$h3-font-size: 1.3  * $body-font-size;
+$h4-font-size: 1.2  * $body-font-size;
+$h5-font-size: 0.83 * $body-font-size;
+$h6-font-size: 0.75 * $body-font-size;
+$header-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$body-text-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$base-font-color: $zivtech-off-black;
+$link-color: $zivtech-blue;
+$link-color-hover: darken($link-color, 10%);

@@ -1,6 +1,7 @@
 group :development do
   guard 'livereload' do
-    watch(%r{.+\.(css|png|jpg|gif?)$})
+    watch(%r{css/styles.css})
+    watch(%r{images/*.(png|jpg|gif)$})
   end
 
   guard :compass, configuration_file: 'config.rb',

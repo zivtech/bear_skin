@@ -1,17 +1,7 @@
 //
-// Tabs variables
+// Mixins
 //
-$tabs-container-margin: 1em 0 1.5em;
-$tabs-container-bg-color: transparent !default;
-$tabs-border-color: $bear-grey !default;
-
-$tabs-height: 40px !default;
-$tabs-bg-color: $bear-grey !default;
-$tabs-bg-color-hover: darken($tabs-bg-color, 5%) !default;
-$tabs-border-radius: $border-radius !default;
-
 @mixin tab-container() {
-  @include nowrap;
   @include cf;
   position: relative;
   height: $tabs-height;
@@ -20,6 +10,7 @@ $tabs-border-radius: $border-radius !default;
   padding: 0;
   margin: $tabs-container-margin;
   border-bottom: 1px solid $tabs-border-color;
+  white-space: nowrap;
 }
 
 @mixin tab($font-color: $base-font-color) {
@@ -51,5 +42,21 @@ $tabs-border-radius: $border-radius !default;
   }
   &.active {
     border-bottom: 1px solid $font-color;
+  }
+}
+
+//
+// CSS classes
+//
+.tabs-primary,
+.tabs-secondary {
+  @include tab-container;
+  background: $zivtech-pale;
+  &__tab {
+    @include tab;
+  }
+
+  &__tab-link {
+    @include tab-link;
   }
 }

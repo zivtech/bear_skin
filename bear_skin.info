@@ -33,26 +33,7 @@ base theme  = zen
 ; stylesheets[all][] = system.menus.css
 
 ; Then we add our own stylesheets.
-stylesheets[all][] = css/reset.css
-stylesheets[all][] = css/alert.css
-stylesheets[all][] = css/typography.css
-stylesheets[all][] = css/buttons.css
-stylesheets[all][] = css/layout.css
-stylesheets[all][] = css/tabs.css
-stylesheets[all][] = css/table.css
-stylesheets[all][] = css/images.css
-stylesheets[all][] = css/blocks.css
-stylesheets[all][] = css/comments.css
-stylesheets[all][] = css/forms.css
-stylesheets[all][] = css/navigation.css
-stylesheets[all][] = css/header.css
-stylesheets[all][] = css/footer.css
-stylesheets[all][] = css/sidebars.css
-stylesheets[all][] = css/views-styles.css
-stylesheets[all][] = css/nodes.css
-stylesheets[all][] = css/pages.css
-stylesheets[all][] = css/sticky-footer.css
-stylesheets[all][] = css/wireframes.css
+stylesheets[all][] = css/styles.css
 stylesheets[print][] = css/print.css
 
 
@@ -136,7 +117,7 @@ settings[zen_rebuild_registry]     = 0
 settings[zen_wireframes]           = 0
 settings[user_menu]                = 1
 settings[responsive_nav]           = 1
-settings[sticky_navbar]            = 1
+settings[sticky_navbar]            = 0
 settings[sticky_footer]            = 0
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,

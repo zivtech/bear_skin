@@ -1,36 +1,4 @@
 //
-// Font faces, stacks and sizes.
-// override these variables in _custom.scss
-//
-
-// The font size set on the root html element.
-$bear-font-size: 62.5% !default;
-
-// This line-height determines the basic unit of vertical rhythm.
-$bear-line-height: 1.5 !default;
-
-// The font size of regular paragraph text
-$body-font-size: 16px !default;
-
-// Header font sizes
-$h1-font-size: 2    * $body-font-size !default;
-$h2-font-size: 1.5  * $body-font-size !default;
-$h3-font-size: 1.17 * $body-font-size !default;
-$h4-font-size: 1    * $body-font-size !default;
-$h5-font-size: 0.83 * $body-font-size !default;
-$h6-font-size: 0.75 * $body-font-size !default;
-
-// Base font families
-$header-font-family: "Helvetica Neue", Helvetica, sans-serif !default;
-$body-text-font-family: "Helvetica Neue", Helvetica, sans-serif !default;
-
-// Typography colors
-$base-font-color: $bear-dark !default;
-$link-color: $bear-blue !default;
-$link-color-hover: darken($link-color, 10%) !default;
-
-
-//
 // Reusable classes
 //
 %no-margins {
@@ -68,4 +36,125 @@ $link-color-hover: darken($link-color, 10%) !default;
 }
 %largest {
   @include rem(font-size, 1.3 * $body-font-size);
+}
+
+
+
+
+//
+// CSS
+//
+html {
+  height: 100%;
+  // if the browser default size is 16px
+  // 62.5% resets that to 10px
+  // this makes using rem units easier
+  font-size: 62.5%;
+}
+
+body {
+  @include rem(font-size, 16px);
+  color: $base-font-color;
+  font-family: $body-text-font-family;
+  line-height: 1.5;
+}
+
+a {
+  @include link-colors($link-color, $link-color-hover);
+  text-decoration: none;
+  transition: color 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $header-font-family;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  @include rem(font-size, $h1-font-size);
+}
+
+h2, .h2 {
+  @include rem(font-size, $h2-font-size);
+}
+
+h3, .h3 {
+  @include rem(font-size, $h3-font-size);
+}
+
+h4, .h4 {
+  @include rem(font-size, $h4-font-size);
+}
+
+h5, .h5 {
+  @include rem(font-size, $h5-font-size);
+  text-transform: uppercase;
+}
+
+h6, .h6 {
+  @include rem(font-size, $h6-font-size);
+  text-transform: uppercase;
+}
+
+p {
+  @extend %no-dangling;
+}
+
+mark {
+  padding: 2px;
+  background-color: $bear-yellow;
+
+  &.new {
+    background-color: transparent;
+    color: $color-error;
+    font-size: 75%;
+
+    &:before {
+      content: "**";
+      display: inline-block;
+      margin-right: 2px; // LTR
+    }
+  }
+
+  &.updated {
+    font-size: 75%;
+  }
+}
+
+blockquote {
+  background-color: $bear-grey;
+  font-size: 110%;
+  padding: 1em;
+}
+
+.progress {
+  font-size: 80%;
+}
+
+//
+// Generic sizing classes
+//
+.tiny {
+  @extend %tiny;
+}
+.smaller {
+  @extend %smaller;
+}
+.small {
+  @extend %small;
+}
+.large {
+  @extend %large;
+}
+.larger {
+  @extend %larger;
+}
+.largest {
+  @extend %largest;
 }

@@ -1,77 +1,27 @@
 //
-// Utility mixins
-//
-// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-@mixin bear-element-invisible {
-  position: absolute !important;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-// Turns off the element-invisible effect.
-@mixin bear-element-invisible-off {
-  position: static !important;
-  clip: auto;
-  height: auto;
-  width: auto;
-  overflow: auto;
-}
-
-@mixin bear-element-focusable {
-  @include bear-element-invisible;
-
-  &:active,
-  &:focus {
-    @include bear-element-invisible-off;
-  }
-}
-
-// The word "Unpublished" displayed underneath unpublished nodes and comments.
-@mixin unpublished-div {
-  height: 0;
-  overflow: visible;
-  color: #d8d8d8;
-  font-size: 75px;
-  line-height: 1;
-  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  word-wrap: break-word; // A very nice CSS3 property
-
-  @at-root {
-    .lt-ie8 & > * {
-      position: relative; // Otherwise these elements will appear below the "Unpublished" text.
-    }
-  }
-}
-
-//
 // Reusable classes
 //
-%u-hidden {
+.u-hidden {
   @include bear-element-invisible;
 }
 
-%u-unhidden {
+.u-unhidden {
   @include bear-element-invisible-off;
 }
 
-%u-focusable {
+.u-focusable {
   @include bear-element-focusable;
 }
 
-%u-no-box-shadow {
+.u-no-box-shadow {
   box-shadow: none;
 }
 
-%u-no-text-shadow {
+.u-no-text-shadow {
   text-shadow: none;
 }
 
-%is-phone {
+.is-phone {
   display: none;
   @include breakpoint($breakpoint-small-width) {
     display: block;
