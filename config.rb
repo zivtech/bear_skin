@@ -11,6 +11,7 @@
 require 'autoprefixer-rails'
 
 # Required for sass compile
+require 'sass-globbing'
 require 'breakpoint'
 require 'rgbapng'
 require 'compass-normalize'
@@ -55,7 +56,7 @@ output_style = (environment == :development) ? :expanded : :compressed
 relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
+line_comments = false
 
 # Pass options to sass. For development, we turn on the FireSass-compatible
 # debug_info if the firesass config variable above is true.
