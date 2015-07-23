@@ -63,24 +63,13 @@ line_comments = false
 # sass_options = (environment == :production) ? {} : {:debug_info => true}
 
 # Enable sourcemaps for development
-sourcemap = (environment == :production) ? false : true
+# sourcemap = (environment == :production) ? false : true
 
 # Run autoprefixer after compass compiles
 # Using on_stylesheet_saved post-compile hook
 on_stylesheet_saved do |file|
   css = File.read(file)
-  map = file + '.map'
-
-  if File.exists? map
-    result = AutoprefixerRails.process(css,
-      from: file,
-      to:   file,
-      map:  { prev: File.read(map), inline: false })
-    File.open(file, 'w') { |io| io << result.css }
-    File.open(map,  'w') { |io| io << result.map }
-  else
-    File.open(file, 'w') { |io| io << AutoprefixerRails.process(css) }
-  end
+  File.open(file, 'w') { |io| io << AutoprefixerRails.process(css) }
 
   cssfile = File.basename file
   system( "echo 'Autoprefixer has processed " + cssfile + "'" )
