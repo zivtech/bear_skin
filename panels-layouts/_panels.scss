@@ -1,0 +1,29 @@
+@import "rgbapng"; // https://github.com/aaronrussell/compass-rgbapng
+@import "../sass/jeet/index"; // http://jeet.gs/
+@import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
+@import "modernizr"; // Modernizr mixin https://github.com/danielguillan/modernizr-mixin
+
+@import "../sass/variables";
+@import "../sass/mixins";
+@import "../sass/reusable";
+
+// These style apply to all panels-layouts
+
+.panel-display {
+  @include cf;
+  margin-bottom: 2 * $vertical-gutter;
+
+  .column, .row {
+    @include cf;
+    margin-bottom: $vertical-gutter;
+    box-sizing: border-box;
+  }
+
+  .row {
+    clear: both;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
