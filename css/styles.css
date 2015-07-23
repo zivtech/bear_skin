@@ -718,7 +718,7 @@ body *, body *:before, body *:after {
   margin: 1em 0 1.5em;
   border-bottom: 1px solid none;
   white-space: nowrap;
-  background: #F7F7F7;
+  background: #eaeaea;
 }
 .tabs-primary:before, .tabs-primary:after,
 .tabs-secondary:before,
@@ -1048,5 +1048,3 @@ blockquote {
 .wrapper--navigation {
   background-color: #545452;
 }
-
-/*# sourceMappingURL=styles.css.map */
