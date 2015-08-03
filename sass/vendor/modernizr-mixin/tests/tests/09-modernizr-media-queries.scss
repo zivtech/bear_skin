@@ -1,0 +1,26 @@
+@import '../../stylesheets/modernizr';
+
+// No media query
+.modernizr-single-supports {
+    @include _modernizr(true, opacity) {
+        test: ok;
+    }
+}
+
+// Inside
+@media screen and (min-width: 600px) {
+    .modernizr-single-supports {
+        @include _modernizr(true, opacity) {
+            test: ok;
+        }
+    }
+}
+
+// Outside
+.modernizr-single-supports {
+    @include _modernizr(true, opacity) {
+        @media screen and (min-width: 800px) {
+            test: ok;
+        }
+    }
+}

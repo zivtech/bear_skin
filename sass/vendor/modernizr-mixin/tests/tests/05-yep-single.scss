@@ -1,0 +1,25 @@
+@import '../../stylesheets/modernizr';
+
+// Simple
+.yep-single {
+    @include yep(opacity) {
+        test: ok;
+    }
+}
+
+// Nested
+.yep-single {
+    .yep-single2 {
+        @include yep(opacity) {
+            test: ok;
+        }
+    }
+}
+
+// Multiple
+.yep-single,
+.yep-single2 {
+    @include yep(opacity) {
+        test: ok;
+    }
+}

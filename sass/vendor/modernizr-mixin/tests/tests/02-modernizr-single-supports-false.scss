@@ -1,0 +1,25 @@
+@import '../../stylesheets/modernizr';
+
+// Simple
+.modernizr-single-supports-false {
+    @include _modernizr(false, opacity) {
+        test: ok;
+    }
+}
+
+// Nested
+.modernizr-single-supports-false {
+    .modernizr-single-supports-false2 {
+        @include _modernizr(false, opacity) {
+            test: ok;
+        }
+    }
+}
+
+// Multiple
+.modernizr-single-supports-false,
+.modernizr-single-supports-false2 {
+    @include _modernizr(false, opacity) {
+        test: ok;
+    }
+}

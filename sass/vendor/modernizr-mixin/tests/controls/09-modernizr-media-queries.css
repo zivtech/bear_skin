@@ -1,0 +1,14 @@
+.opacity .modernizr-single-supports {
+  test: ok;
+}
+
+@media screen and (min-width: 600px) {
+  .opacity .modernizr-single-supports {
+    test: ok;
+  }
+}
+@media screen and (min-width: 800px) {
+  .opacity .modernizr-single-supports {
+    test: ok;
+  }
+}

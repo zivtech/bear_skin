@@ -1,6 +1,5 @@
 // vendor
-@import "normalize"; // https://github.com/ksmandersen/compass-normalize
-@import "rgbapng"; // https://github.com/aaronrussell/compass-rgbapng
-@import "jeet/index"; // http://jeet.gs/
-@import "breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
-@import "modernizr"; // Modernizr mixin https://github.com/danielguillan/modernizr-mixin
+@import "vendor/compass-normalize/stylesheets/normalize"; // https://github.com/ksmandersen/compass-normalize
+@import "vendor/compass-rgbapng/lib/stylesheets/rgbapng"; // https://github.com/aaronrussell/compass-rgbapng
+@import "vendor/jeet/index"; // http://jeet.gs/
+@import "vendor/breakpoint/stylesheets/breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint

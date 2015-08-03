@@ -49,7 +49,7 @@ stylesheets[print][] = css/print.css
 
 
 ; Optionally add some JavaScripts to your theme.
-scripts[] = js/modernizr.js
+scripts[] = js/vendor/modernizr.js
 scripts[] = js/scripts.js
 
 ; This section lists the regions defined in Zen's default page.tpl.php and

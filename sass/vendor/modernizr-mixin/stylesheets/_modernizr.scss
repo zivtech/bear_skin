@@ -1,0 +1,138 @@
+// -----------------------------------------------------------------------------
+// Modernizr mixin
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Modernizr
+// -----------------------------------------------------------------------------
+/// Prints classes for supported or unsupported features
+/// @access private
+/// @param {Bool}      $supports   - Whether to check for supported features or not
+/// @param {ArgList}   $features   - List of features
+
+@mixin _modernizr($supports, $features...) {
+
+  // Use the 'no-' prefix if checking for unsuported features (e.g. `.no-translate3d`)
+  $prefix: if($supports, '', 'no-');
+
+  // Features selector
+  // a) create a string if checking for supported features. We'll concatenate class names later on (e.g. `.translate3d.opacity selector`)
+  // b) create a list if checking for unsuported features. We'll append the class names later on (e.g. `.no-js selector, .no-translate3d selector`)
+  $selector: if($supports, '', unquote('.no-js'));
+
+  // Make sure the mixin has been called within a selector
+  @if not & {
+    @error 'Modernizr mixin should be called within a selector.';
+  }
+
+  // Generate placeholder and selectors
+  @each $feature in $features {
+
+    // Making sure $feature is a string
+    @if type-of($feature) != 'string' {
+
+      @error '`#{$feature}` is not a string for `modernizr`.';
+
+    } @else {
+
+      // Define the new selector string (e.g. `.translate3d` or `.no-translate3d`)
+      $new-selector: #{'.' + $prefix + $feature};
+
+      // Append the new selector
+      // a) to the string if yep (e.g. `.translate3d.opacity`)
+      // b) to the list if nope (e.g. `.no-translate3d, .no-opacity`)
+      $selector: if($supports, $selector + $new-selector, append($selector, $new-selector, 'comma'));
+
+    }
+  }
+
+  // Generate selector and print content
+  // @todo remove workaround once Libsass supports selector functions.
+
+  // RubySass 3.4+
+  @if function-exists('selector-nest') {
+
+    // Generate selector by nesting features classes and the parent selector
+    $selector: selector-nest($selector, &);
+
+    @at-root #{$selector} {
+      @content;
+    }
+
+  } @else {
+
+    // Libsass 3.2 workaround using Modernizr Mixin v1.0' placeholder technique
+    // with a randomly generated placeholder name.
+    $placeholder: '%' + rand + random(100000000);
+
+    // Use placeholder technique generating a new placeholder each time.
+    #{$placeholder} & {
+      @content;
+    }
+
+    @at-root #{$selector} {
+      @extend #{$placeholder};
+    }
+  }
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Yep mixin
+// -----------------------------------------------------------------------------
+/// Prints classes for supported features
+/// @access public
+/// @param {ArgList} $features - List of features
+/// @example scss
+/// .my-selector {
+///   @include yep(opacity, csstransforms) {
+///     // ...
+///   }
+/// }
+
+@mixin yep($features...) {
+  @include _modernizr(true, $features...) {
+    @content;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Nope mixin
+// -----------------------------------------------------------------------------
+/// Prints classes for unsupported features and lack of JS
+/// @access public
+/// @param {ArgList} $features - List of features
+/// @example scss
+/// .my-selector {
+///   @include nope(opacity, csstransforms) {
+///     // ...
+///   }
+/// }
+
+@mixin nope($features...) {
+  @include _modernizr(false, $features...) {
+    @content;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Libsass error check
+// -----------------------------------------------------------------------------
+/// There is a known bug in Libsass 3.2.3 / 3.2.4 that makes Modernizr mixin
+/// output incorrect selectors. This test throws an error for versions of Libsass
+/// that contain said bug.
+/// @todo Remove once the Libsass bug is patched
+
+%_modernizr-libsass-bug-test {
+  $a: '%foo#{&}';
+
+  @at-root #{$a} {
+    $b: #{&};
+    @if $b == '%_modernizr-libsass-bug-test %foo%_modernizr-libsass-bug-test' {
+      @error '[Modernizr mixin]: There is a known bug in Libsass 3.2.3 / 3.2.4 that makes Modernizr mixin output incorrect selectors. If you want to keep using the Modernizr Mixin you need to stick to Libsass 3.2.2 until the bug is patched, hopefully in 3.2.5. Learn more at https://github.com/danielguillan/modernizr-mixin/issues/24';
+    }
+  }
+}

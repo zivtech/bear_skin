@@ -1,0 +1,28 @@
+@import '../../stylesheets/modernizr';
+
+// Simple
+.modernizr-multi-supports-false {
+    $features: (opacity, csstransforms);
+    @include _modernizr(false, $features...) {
+        test: ok;
+    }
+}
+
+// Nested
+.modernizr-multi-supports-false {
+    .modernizr-multi-supports-false2 {
+        $features: (opacity, csstransforms);
+        @include _modernizr(false, $features...) {
+            test: ok;
+        }
+    }
+}
+
+// Multiple
+.modernizr-multi-supports-false,
+.modernizr-multi-supports-false2 {
+    $features: (opacity, csstransforms);
+    @include _modernizr(false, $features...) {
+        test: ok;
+    }
+}
