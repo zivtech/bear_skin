@@ -1,6 +1,11 @@
 
 Bear Skin, a fully responsive Drupal starter theme packed with features and Sass goodies. 
 
+Getting started
+-----------------
+To start building CSS, you have to install all the gulp dependencies first. After changing to the project directory in your terminal, just "npm install". After the process finishes, you'll be able to run all the gulp tasks (see below).
+
+
 Gulp tasks
 ------------
 1. gulp watch - watches sass, images, js, and php files. Activate the LiveReload browser plugin to trigger a refresh when files change.
