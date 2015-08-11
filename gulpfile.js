@@ -28,8 +28,8 @@ var buildSourceMaps = !!argv.sourcemaps;
 
 // post CSS processors
 var processors = [
-  autoprefixer({browsers: ['last 2 version', 'IE 8']}),
-  mqpacker
+  autoprefixer({browsers: ['last 2 version', 'IE 9']}), // specify browser compatibility with https://github.com/ai/browserslist
+  mqpacker // this will reorganize css into media query groups, better for performance
 ];
 
 // error notifications

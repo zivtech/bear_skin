@@ -1,24 +1,11 @@
 
-Bear Skin, a fully responsive Drupal starter theme packed with features and SASS goodies. 
+Bear Skin, a fully responsive Drupal starter theme packed with features and Sass goodies. 
 
-
-Features
+Gulp tasks
 ------------
-
-Bear Skin is a sub theme of ZEN , which features an extensive documentation.  These might be good places to start if you have the desire to have a more in-depth knowledge about this release. The choice to use to ZEN was made when thinking about the best way to develop and extend on top of a very solid and well-supported base. This allows the Bear Skin to do some minimal skinning but more importantly, integrate well with the contributed modules included in the bear profile as well as providing an intuitive sass structure and various compass gems.
-
-
-Known Issues
-------------
-
-If you want to rename the theme (folder and .info file) do not forget to change your variables in template.php and line 20 of html.tpl.php in your templates folder
-
-Author
-------------
-
-Alioso at Zivtech
-
-Thanks
-------------
-
-Everyone, really. 
+1. gulp watch - watches sass, images, js, and php files. Activate the LiveReload browser plugin to trigger a refresh when files change.
+2. gulp sass - compiles Sass into CSS. This is the theme's styles. You shouldn't need to add vendor prefixes for CSS because Autoprefixer will do that for you.
+3. gulp panels - compiles Sass in the panels-layouts directory. This is CSS for the panel layouts only, but it does use the variables from the theme styles in order to keep paddings, margins, and breakpoints consistent with the theme.
+4. gulp scripts - checks your JS for errors.
+5. gulp images - optimizes images.
+6. gulp build - combines tasks #2 - #5 into a single build process.
