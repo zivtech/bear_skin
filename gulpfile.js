@@ -107,5 +107,6 @@ gulp.task('watch', function() {
   gulp.watch("./templates/**/*.php").on('change', function() { livereload.reload() });
 });
 
+gulp.task('default', ['sass', 'panels', 'watch']);
 gulp.task('styles', ['sass', 'panels']);
 gulp.task('build', ['sass', 'panels', 'scripts', 'images']);
