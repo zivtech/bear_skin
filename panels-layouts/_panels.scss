@@ -1,9 +1,5 @@
 // vendor
-@import "../sass/vendor/compass-normalize/stylesheets/normalize"; // https://github.com/ksmandersen/compass-normalize
-@import "../sass/vendor/compass-rgbapng/lib/stylesheets/rgbapng"; // https://github.com/aaronrussell/compass-rgbapng
-@import "../sass/vendor/jeet/index"; // http://jeet.gs/
-@import "../sass/vendor/breakpoint/stylesheets/breakpoint";  // Breakpoint gem: https://github.com/canarymason/breakpoint
-
+@import "../sass/vendor";
 @import "../sass/variables";
 @import "../sass/mixins";
 @import "../sass/reusable";

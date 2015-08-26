@@ -16,8 +16,6 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   drupal_add_js(array(
     'bear_skin' => array(
       'stickyFooter' => (bool) theme_get_setting('sticky_footer'),
-      'stickyNavbar' => (bool) theme_get_setting('sticky_navbar'),
-      'stickyNavbarHeight' => (int) theme_get_setting('sticky_navbar_height'),
       'userMenu' => (bool) theme_get_setting('user_menu'),
       'userLoggedIn' => (bool) user_is_logged_in()
     ),
