@@ -27,5 +27,8 @@
     "gulp-watch": "^4.3.4",
     "jshint-stylish": "^2.0.1",
     "yargs": "^3.16.1"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
   }
 }
