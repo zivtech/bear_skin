@@ -14,12 +14,14 @@ body {
 }
 
 .site-header,
-.region--navigation,
 .site-main,
 #footer {
   @include cf;
   max-width: $site-max-width;
   margin: 0 auto;
+}
+.region--navigation {
+  display: inline-block;
 }
 
 //

@@ -4,9 +4,9 @@
 }
 
 .main-menu {
-
+  float: left;
   .menu {
-    padding: 0;
+    padding: 0 30px;
     margin: 0;
     &:not(.main-menu--level-one) {
       display: none;
@@ -22,12 +22,11 @@
 
   &__link {
     font-family: $header-font-family;
-    color: $bear-whitey;
+    color: $zivtech-dark;
     line-height: 30px;
     padding: 0 10px;
-
     &.active {
-      background-color: $bear-dark;
+      text-decoration: underline;
     }
   }
 }

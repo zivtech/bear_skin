@@ -8,6 +8,8 @@
       </a>
     <?php endif;?>
 
+    <?php print render($page['navigation']); ?>
+
     <?php if ($site_name || $site_slogan): ?>
       <div class="site-header__name-and-slogan">
         <?php if ($site_name): ?>
@@ -41,7 +43,9 @@
 </div>
 
 <div class="wrapper wrapper--navigation">
-  <?php print render($page['navigation']); ?>
+  <!-- ****** Delete this comment on production *****
+  move <?php //print render($page['navigation']); ?> to render navigation on separate row 
+  ****** -->
 </div>
 
 <div class="wrapper wrapper--main">

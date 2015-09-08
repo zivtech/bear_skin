@@ -276,7 +276,6 @@ body {
     box-sizing: border-box; }
 
 .site-header,
-.region--navigation,
 .site-main,
 #footer {
   *zoom: 1;
@@ -284,18 +283,18 @@ body {
   margin: 0 auto; }
   .site-header:before,
   .site-header:after,
-  .region--navigation:before,
-  .region--navigation:after,
   .site-main:before,
   .site-main:after,
   #footer:before, #footer:after {
     content: '';
     display: table; }
   .site-header:after,
-  .region--navigation:after,
   .site-main:after,
   #footer:after {
     clear: both; }
+
+.region--navigation {
+  display: inline-block; }
 
 .tabs-primary,
 .tabs-secondary {
@@ -513,29 +512,29 @@ blockquote {
     width: auto;
     overflow: auto; }
 
-.main-menu .menu {
-  padding: 0;
-  margin: 0; }
-  .main-menu .menu:not(.main-menu--level-one) {
-    display: none; }
-
-.main-menu__item {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-.main-menu__link {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  color: white;
-  line-height: 30px;
-  padding: 0 10px; }
-  .main-menu__link.active {
-    background-color: #545452; }
+.main-menu {
+  float: left; }
+  .main-menu .menu {
+    padding: 0 30px;
+    margin: 0; }
+    .main-menu .menu:not(.main-menu--level-one) {
+      display: none; }
+  .main-menu__item {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .main-menu__link {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #261D19;
+    line-height: 30px;
+    padding: 0 10px; }
+    .main-menu__link.active {
+      text-decoration: underline; }
 
 .links-inline {
   margin: 0.9375em 0; }
@@ -572,10 +571,7 @@ blockquote {
     margin: 0 5px; }
 
 .wrapper--header {
-  background-color: #82705B; }
-
-.wrapper--navigation {
-  background-color: #545452; }
+  background-color: #eaeaea; }
 
 @media (max-width: 75em) {
   .wrapper {
