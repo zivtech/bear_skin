@@ -1,0 +1,120 @@
+.panel-display {
+  *zoom: 1;
+  margin-bottom: 3.75em; }
+  .panel-display:before, .panel-display:after {
+    content: '';
+    display: table; }
+  .panel-display:after {
+    clear: both; }
+  .panel-display .column, .panel-display .row {
+    *zoom: 1;
+    margin-bottom: 1.875em;
+    box-sizing: border-box; }
+    .panel-display .column:before, .panel-display .column:after, .panel-display .row:before, .panel-display .row:after {
+      content: '';
+      display: table; }
+    .panel-display .column:after, .panel-display .row:after {
+      clear: both; }
+  .panel-display .row {
+    clear: both; }
+    .panel-display .row:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 40.5em) {
+  .panel-display--grid-with-featured-item .column.main {
+    zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 0.9375em; }
+  .panel-display--grid-with-featured-item .column.main:before, .panel-display--grid-with-featured-item .column.main:after {
+    content: '';
+    display: table; }
+  .panel-display--grid-with-featured-item .column.main:after {
+    clear: both; }
+  .panel-display--grid-with-featured-item .column.main:last-child {
+    margin-right: 0%; }
+  .panel-display--grid-with-featured-item .column.secondary {
+    zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 0.9375em; }
+  .panel-display--grid-with-featured-item .column.secondary:before, .panel-display--grid-with-featured-item .column.secondary:after {
+    content: '';
+    display: table; }
+  .panel-display--grid-with-featured-item .column.secondary:after {
+    clear: both; }
+  .panel-display--grid-with-featured-item .column.secondary:last-child {
+    margin-right: 0%; } }
+    @media (min-width: 50em) {
+  .panel-display--grid-with-featured-item .column.lower-first {
+    zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 0.9375em;
+    clear: left; }
+  .panel-display--grid-with-featured-item .column.lower-first:before, .panel-display--grid-with-featured-item .column.lower-first:after {
+    content: '';
+    display: table; }
+  .panel-display--grid-with-featured-item .column.lower-first:after {
+    clear: both; }
+  .panel-display--grid-with-featured-item .column.lower-first:last-child {
+    margin-right: 0%; }
+  .panel-display--grid-with-featured-item .column.lower-second {
+    zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-right: 0.9375em;
+    padding-left: 0.9375em; }
+  .panel-display--grid-with-featured-item .column.lower-second:before, .panel-display--grid-with-featured-item .column.lower-second:after {
+    content: '';
+    display: table; }
+  .panel-display--grid-with-featured-item .column.lower-second:after {
+    clear: both; }
+  .panel-display--grid-with-featured-item .column.lower-second:last-child {
+    margin-right: 0%; }
+  .panel-display--grid-with-featured-item .column.lower-third {
+    zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-left: 0.9375em; }
+  .panel-display--grid-with-featured-item .column.lower-third:before, .panel-display--grid-with-featured-item .column.lower-third:after {
+    content: '';
+    display: table; }
+  .panel-display--grid-with-featured-item .column.lower-third:after {
+    clear: both; }
+  .panel-display--grid-with-featured-item .column.lower-third:last-child {
+    margin-right: 0%; } }

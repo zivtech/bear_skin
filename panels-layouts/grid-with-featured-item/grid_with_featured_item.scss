@@ -1,0 +1,42 @@
+@import "../panels";
+
+.panel-display--grid-with-featured-item {
+
+  .column.main {
+    @include breakpoint($breakpoint-med-small-width) {
+      @include col(4/6, $gutter: 0);
+      padding-right: $vertical-gutter / 2;
+    }
+  }
+
+  .column.secondary {
+    @include breakpoint($breakpoint-med-small-width) {
+      @include col(2/6, $gutter: 0);
+      padding-right: $vertical-gutter / 2;
+    }
+  }
+
+  .column.lower-first {
+    @include breakpoint($breakpoint-medium-width) {
+      @include col(2/6, $gutter: 0);
+      padding-right: $vertical-gutter / 2;
+      clear: left;
+    }
+  }
+
+  .column.lower-second {
+    @include breakpoint($breakpoint-medium-width) {
+      @include col(2/6, $gutter: 0);
+      padding-right: $vertical-gutter / 2;
+      padding-left: $vertical-gutter / 2;
+    }
+  }
+
+  .column.lower-third {
+    @include breakpoint($breakpoint-medium-width) {
+      @include col(2/6, $gutter: 0);
+      padding-left: $vertical-gutter / 2;
+    }
+  }
+
+}

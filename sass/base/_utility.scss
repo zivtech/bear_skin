@@ -22,8 +22,7 @@
 }
 
 .is-phone {
-  display: none;
   @include breakpoint($breakpoint-small-width) {
-    display: block;
+    display: none;
   }
 }

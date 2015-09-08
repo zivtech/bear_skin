@@ -27,19 +27,15 @@ body {
 //
 .sidebar-first {
   main {
-    @include col(3/4);
-    @include shift(1/4);
     @include breakpoint($breakpoint-medium-width) {
-      @include col();
-      @include unshift();
+      @include col(3/4);
+      @include shift(1/4);
     }
   }
   .site-sidebars {
-    @include col(1/4);
-    @include shift(-3/4);
     @include breakpoint($breakpoint-medium-width) {
-      @include col();
-      @include unshift();
+      @include col(1/4);
+      @include shift(-3/4);
     }
   }
 }
@@ -49,17 +45,13 @@ body {
 //
 .sidebar-second {
   main {
-    @include col(3/4);
     @include breakpoint($breakpoint-medium-width) {
-      @include col();
-      @include unshift();
+      @include col(3/4);
     }
   }
   .region-sidebar-first {
-    @include col(1/4);
     @include breakpoint($breakpoint-medium-width) {
-      @include col();
-      @include unshift();
+      @include col(1/4);
     }
   }
 }
@@ -69,26 +61,20 @@ body {
 //
 .two-sidebars {
   main {
-    @include col(2/4);
-    @include shift(1/4);
     @include breakpoint($breakpoint-medium-width) {
-      @include col();
-      @include unshift();
+      @include col(2/4);
+      @include shift(1/4);
     }
   }
   .region-sidebar-first {
-    @include col(1/4);
-    @include shift(-2/4);
     @include breakpoint($breakpoint-medium-width) {
-      @include col();
-      @include unshift();
+      @include col(1/4);
+      @include shift(-2/4);
     }
   }
   .region-sidebar-second {
-    @include col(1/4);
     @include breakpoint($breakpoint-medium-width) {
-      @include col();
-      @include unshift();
+      @include col(1/4);
     }
   }
 }

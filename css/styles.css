@@ -297,147 +297,6 @@ body {
   #footer:after {
     clear: both; }
 
-.sidebar-first main {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 74.25%;
-  margin-left: 0%;
-  margin-right: 3%;
-  position: relative;
-  left: 25.75%; }
-  .sidebar-first main:before, .sidebar-first main:after {
-    content: '';
-    display: table; }
-  .sidebar-first main:after {
-    clear: both; }
-  .sidebar-first main:last-child {
-    margin-right: 0%; }
-
-.sidebar-first .site-sidebars {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-  position: relative;
-  left: -77.25%; }
-  .sidebar-first .site-sidebars:before, .sidebar-first .site-sidebars:after {
-    content: '';
-    display: table; }
-  .sidebar-first .site-sidebars:after {
-    clear: both; }
-  .sidebar-first .site-sidebars:last-child {
-    margin-right: 0%; }
-
-.sidebar-second main {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 74.25%;
-  margin-left: 0%;
-  margin-right: 3%; }
-  .sidebar-second main:before, .sidebar-second main:after {
-    content: '';
-    display: table; }
-  .sidebar-second main:after {
-    clear: both; }
-  .sidebar-second main:last-child {
-    margin-right: 0%; }
-
-.sidebar-second .region-sidebar-first {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%; }
-  .sidebar-second .region-sidebar-first:before, .sidebar-second .region-sidebar-first:after {
-    content: '';
-    display: table; }
-  .sidebar-second .region-sidebar-first:after {
-    clear: both; }
-  .sidebar-second .region-sidebar-first:last-child {
-    margin-right: 0%; }
-
-.two-sidebars main {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 48.5%;
-  margin-left: 0%;
-  margin-right: 3%;
-  position: relative;
-  left: 25.75%; }
-  .two-sidebars main:before, .two-sidebars main:after {
-    content: '';
-    display: table; }
-  .two-sidebars main:after {
-    clear: both; }
-  .two-sidebars main:last-child {
-    margin-right: 0%; }
-
-.two-sidebars .region-sidebar-first {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-  position: relative;
-  left: -51.5%; }
-  .two-sidebars .region-sidebar-first:before, .two-sidebars .region-sidebar-first:after {
-    content: '';
-    display: table; }
-  .two-sidebars .region-sidebar-first:after {
-    clear: both; }
-  .two-sidebars .region-sidebar-first:last-child {
-    margin-right: 0%; }
-
-.two-sidebars .region-sidebar-second {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%; }
-  .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
-    content: '';
-    display: table; }
-  .two-sidebars .region-sidebar-second:after {
-    clear: both; }
-  .two-sidebars .region-sidebar-second:last-child {
-    margin-right: 0%; }
-
 .tabs-primary,
 .tabs-secondary {
   *zoom: 1;
@@ -635,9 +494,6 @@ blockquote {
 .u-no-text-shadow {
   text-shadow: none; }
 
-.is-phone {
-  display: none; }
-
 .skip-link {
   position: absolute !important;
   height: 0;
@@ -725,7 +581,7 @@ blockquote {
   .wrapper {
     padding: 0 20px; } }
 
-@media (max-width: 50em) {
+@media (min-width: 50em) {
   .sidebar-first main {
     zoom: 1;
     float: left;
@@ -734,11 +590,11 @@ blockquote {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    width: 74.25%;
     margin-left: 0%;
     margin-right: 3%;
-    position: static;
-    left: 0; }
+    position: relative;
+    left: 25.75%; }
   .sidebar-first main:before, .sidebar-first main:after {
     content: '';
     display: table; }
@@ -754,11 +610,11 @@ blockquote {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    width: 22.75%;
     margin-left: 0%;
     margin-right: 3%;
-    position: static;
-    left: 0; }
+    position: relative;
+    left: -77.25%; }
   .sidebar-first .site-sidebars:before, .sidebar-first .site-sidebars:after {
     content: '';
     display: table; }
@@ -774,11 +630,9 @@ blockquote {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    width: 74.25%;
     margin-left: 0%;
-    margin-right: 3%;
-    position: static;
-    left: 0; }
+    margin-right: 3%; }
   .sidebar-second main:before, .sidebar-second main:after {
     content: '';
     display: table; }
@@ -794,11 +648,9 @@ blockquote {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    width: 22.75%;
     margin-left: 0%;
-    margin-right: 3%;
-    position: static;
-    left: 0; }
+    margin-right: 3%; }
   .sidebar-second .region-sidebar-first:before, .sidebar-second .region-sidebar-first:after {
     content: '';
     display: table; }
@@ -814,11 +666,11 @@ blockquote {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    width: 48.5%;
     margin-left: 0%;
     margin-right: 3%;
-    position: static;
-    left: 0; }
+    position: relative;
+    left: 25.75%; }
   .two-sidebars main:before, .two-sidebars main:after {
     content: '';
     display: table; }
@@ -834,11 +686,11 @@ blockquote {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    width: 22.75%;
     margin-left: 0%;
     margin-right: 3%;
-    position: static;
-    left: 0; }
+    position: relative;
+    left: -51.5%; }
   .two-sidebars .region-sidebar-first:before, .two-sidebars .region-sidebar-first:after {
     content: '';
     display: table; }
@@ -854,11 +706,9 @@ blockquote {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    width: 22.75%;
     margin-left: 0%;
-    margin-right: 3%;
-    position: static;
-    left: 0; }
+    margin-right: 3%; }
   .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
     content: '';
     display: table; }
@@ -867,6 +717,6 @@ blockquote {
   .two-sidebars .region-sidebar-second:last-child {
     margin-right: 0%; } }
 
-@media (max-width: 25em) {
+@media (min-width: 25em) {
   .is-phone {
-    display: block; } }
+    display: none; } }

@@ -1,11 +1,11 @@
 <?php
 
 $plugin = array(
-  'title' => t('Featured'),
+  'title' => t('Grid with Featured Item'),
   'icon' => 'icon.png',
   'category' => t('Bear Skin responsive panel layouts'),
-  'theme' => 'featured',
-  'css' => 'featured.css',
+  'theme' => 'grid_with_featured_item',
+  'css' => 'grid_with_featured_item.css',
   'regions' => array(
     'main' => t('Main'),
     'secondary' => t('Secondary'),
@@ -18,9 +18,9 @@ $plugin = array(
 /**
  * Implements hook_preprocess_featured().
  */
-function template_preprocess_featured(&$variables) {
+function template_preprocess_grid_with_featured_item(&$variables) {
   $variables['attributes_array']['class'][] = 'panel-display';
-  $variables['attributes_array']['class'][] = 'panel-display--featured';
+  $variables['attributes_array']['class'][] = 'panel-display--grid-with-featured-item';
 
   foreach($variables['content'] as $name => $item) {
     $variables['region_attributes_array'][$name]['class'][] = 'column';

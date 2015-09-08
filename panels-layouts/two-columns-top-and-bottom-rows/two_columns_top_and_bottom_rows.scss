@@ -3,22 +3,16 @@
 .panel-display--two-eq-column {
 
   .column.left {
-    @include col(1/2, $gutter: 0);
-    padding-right: $vertical-gutter / 2;
-
     @include breakpoint($breakpoint-medium-width) {
-      @include stack();
-      padding-right: 0;
+      @include col(1/2, $gutter: 0);
+      padding-right: $vertical-gutter / 2;
     }
   }
 
   .column.right {
-    @include col(1/2, $gutter: 0);
-    padding-left: $vertical-gutter / 2;
-
     @include breakpoint($breakpoint-medium-width) {
-      @include stack();
-      padding-left: 0;
+      @include col(1/2, $gutter: 0);
+      padding-left: $vertical-gutter / 2;
     }
   }
 }

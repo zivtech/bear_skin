@@ -82,7 +82,7 @@
   }
 }
 
-@mixin table-responsive($bp: $breakpoint-small-width) {
+@mixin table-responsive($bp: $breakpoint-min-width) {
   @include breakpoint($bp) {
     tbody,
     tr,
