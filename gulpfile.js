@@ -99,7 +99,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('watch', function() {
-  livereload.listen();
+  livereload.listen(4002);
 
   gulp.watch("./sass/**/*.scss", ['sass']);
   gulp.watch("./js/*.js", ['scripts']);
