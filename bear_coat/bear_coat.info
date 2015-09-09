@@ -95,10 +95,12 @@ features[] = secondary_menu
 
 ; Set the default values of settings on the theme-settings.php form.
 
+settings[toggle_slogan] 		   = 0
+settings[toggle_name]  			   = 0
 settings[zen_breadcrumb]           = yes
 settings[zen_breadcrumb_separator] = ' › '
 settings[zen_breadcrumb_home]      = 1
-settings[zen_breadcrumb_trailing]  = 1
+settings[zen_breadcrumb_trailing]  = 0
 settings[zen_breadcrumb_title]     = 0
 settings[zen_skip_link_anchor]     = main-menu
 settings[zen_skip_link_text]       = Jump to navigation
@@ -108,8 +110,6 @@ settings[zen_html5_respond_meta][] = meta
 settings[zen_rebuild_registry]     = 0
 settings[zen_wireframes]           = 0
 settings[user_menu]                = 1
-settings[responsive_nav]           = 1
-settings[sticky_navbar]            = 0
 settings[sticky_footer]            = 0
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,

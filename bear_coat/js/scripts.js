@@ -15,16 +15,27 @@
   'use strict';
 
   //
-  // Use the sample behavior pattern below
-  //
-  //
-  //Drupal.behaviors.bear = {
-  //  attach: function (context, settings) {
-  //    context = context || document;
-  //    settings = settings || Drupal.settings;
-  //
-  //  }
-  //};
+  //Use the sample behavior pattern below
+  
+  
+  Drupal.behaviors.bearCoat = {
+   attach: function (context, settings) {
+     context = context || document;
+     settings = settings || Drupal.settings;
+
+      $(window).on('load scroll', function () {
+        // this is to prevent IOS and safari to trigger the global menu hide with elastic scroll
+        var $top = $(window).scrollTop();
+        if ($top >= 50) {
+          $('.wrapper--header').addClass('compressed');
+        }
+        else {
+          $('.wrapper--header').removeClass('compressed');
+        }
+      });
+  
+   }
+  };
 
   //
   // Polyfill things where needed

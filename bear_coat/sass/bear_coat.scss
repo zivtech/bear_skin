@@ -4,3 +4,118 @@
 // or create a new sub theme based on this one 
 // if not choosing to theme straight from Bear Skin
 // ********
+
+//***********
+// Typography
+//***********
+
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/reusable";
+@import "../../sass/vendor";
+@import url('//fonts.googleapis.com/css?family=Droid+Sans');
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Droid Sans', sans-serif;
+	font-weight: normal;
+}
+h1 {
+	font-size: 4rem;
+}
+h2 {
+	font-size: 2.5rem;
+}
+h3 {
+	font-size: 2rem;
+}
+
+
+//*********
+// Wrappers
+//*********
+
+$header-height: 145px;
+$header-compressed-height: 75px;
+$logo-width: 120px; 
+
+#header {
+	position: relative;
+	.region-navigation {
+		@include align(v);
+	}
+}
+.wrapper--header {
+	position: fixed;
+	width: 100%;
+	padding: 30px 0;
+	-webkit-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.1));
+  filter: url('../images/shadow.svg#drop-shadow');
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
+  background: #f5f5f5;
+  height: $header-height;
+  z-index: 100;
+  transition: height .3s ease-in-out;
+  .site-header__logo {
+  	display: block;
+		transition: all .3s ease-in-out;
+		width: $logo-width;
+		float: left;
+  }
+  .site-header__logo img {
+  	width: 100%;
+  	max-width: 100%;
+  }
+  &.compressed {
+		height: $header-compressed-height;
+		padding: 20px 0;
+		.site-header__logo {
+			width: 50px;
+		}
+  }
+}
+.wrapper--main {
+	padding-top: $header-height;
+}
+.main__content .column {
+	&.right {
+		padding-left: 50px;
+	}
+	&.left {
+		padding-right: 50px;
+	}
+}
+
+//***********
+// Navigation
+//***********
+
+nav.wrapper--breadcrumbs {
+	padding: 20px 0;
+}
+nav {
+	.main-menu__link {
+		font-family: 'Droid Sans', sans-serif;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 8px 12px;
+		transition: all .2s ease-in-out;
+		border-radius: 6px;
+		&:hover,
+		&:focus,
+		&.active {
+			background: $zivtech-dark;
+			color: #fff;
+			text-decoration: none;
+			
+		}
+	}
+}
+
+//**************
+// Form elements
+//**************
+
+.ui.form {
+	font-size: 100%;
+	padding: 0;
+}

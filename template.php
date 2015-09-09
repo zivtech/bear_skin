@@ -396,7 +396,7 @@ function bear_skin_breadcrumb(&$variables) {
   $crumbs = '';
   if (!empty($breadcrumb)) {
     $separator = theme_get_setting('zen_breadcrumb_separator');
-    $crumbs = '<nav role="navigation" aria-label="breadcrumbs">' . "\n";
+    $crumbs = '<nav role="navigation" aria-label="breadcrumbs" class="wrapper--breadcrumbs">' . "\n";
     $crumbs .= '<h2 class="u-hidden" id="breadcrumbLabel">' . t('You are here:') . '</h2>';
     $crumbs .= '<ul class="breadcrumbs" aria-labelledby="breadcrumbLabel">' . "\n";
     foreach ($breadcrumb as $value) {

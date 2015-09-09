@@ -1,0 +1,77 @@
+@import url("//fonts.googleapis.com/css?family=Droid+Sans");
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: normal; }
+
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2rem; }
+
+#header {
+  position: relative; }
+  #header .region-navigation {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.wrapper--header {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  -webkit-filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.1));
+  filter: url("../images/shadow.svg#drop-shadow");
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
+  background: #f5f5f5;
+  height: 145px;
+  z-index: 100;
+  transition: height 0.3s ease-in-out; }
+  .wrapper--header .site-header__logo {
+    display: block;
+    transition: all 0.3s ease-in-out;
+    width: 120px;
+    float: left; }
+  .wrapper--header .site-header__logo img {
+    width: 100%;
+    max-width: 100%; }
+  .wrapper--header.compressed {
+    height: 75px;
+    padding: 20px 0; }
+    .wrapper--header.compressed .site-header__logo {
+      width: 50px; }
+
+.wrapper--main {
+  padding-top: 145px; }
+
+.main__content .column.right {
+  padding-left: 50px; }
+
+.main__content .column.left {
+  padding-right: 50px; }
+
+nav.wrapper--breadcrumbs {
+  padding: 20px 0; }
+
+nav .main-menu__link {
+  font-family: 'Droid Sans', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px; }
+  nav .main-menu__link:hover,
+  nav .main-menu__link:focus,
+  nav .main-menu__link.active {
+    background: #261D19;
+    color: #fff;
+    text-decoration: none; }
+
+.ui.form {
+  font-size: 100%;
+  padding: 0; }
