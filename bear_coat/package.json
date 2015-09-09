@@ -1,0 +1,34 @@
+{
+  "name": "bearskin",
+  "version": "7.2.3",
+  "authors": [
+    "Allie Jones <ajones@zivtech.com>",
+    "Sean Wolfe <sean@zivtech.com>",
+    "Alban Bailly <alban@zivtech.com>",
+    "James Cole <jcole@zivtech.com>"
+  ],
+  "private": true,
+  "description": "The base theme for Drupal websites built by Zivtech",
+  "devDependencies": {
+    "autoprefixer": "^5.2.0",
+    "browser-sync": "^2.8.2",
+    "css-mqpacker": "^3.1.0",
+    "gulp": "^3.9.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^5.1.10",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.4",
+    "jshint-stylish": "^2.0.1",
+    "yargs": "^3.16.1"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  }
+}
