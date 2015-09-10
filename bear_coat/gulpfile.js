@@ -38,11 +38,15 @@ var handleError = function (task) {
     gutil.beep();
 
     notify.onError({
-      message: task + ' failed',
-      sound: false
+      title: task,
+      message: err.message,
+      sound: false,
+      icon: false
     })(err);
 
     gutil.log(gutil.colors.bgRed(task + ' error:'), gutil.colors.red(err));
+
+    this.emit('end');
   };
 };
 
