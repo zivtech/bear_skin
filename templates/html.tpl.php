@@ -19,7 +19,9 @@
 
   <?php print $styles; ?>
   <?php if (theme_get_setting('sticky_footer')): ?>
-    <link href="<?php print $base_path . $path_to_bear_skin; ?>/css/sticky-footer.css" media="all" rel="stylesheet" type="text/css" />
+  <?php print $scripts; ?>
+  
+    <link href="<?php print $base_path . $path_to_bear_skin; ?>/css/sticky_footer.css" media="all" rel="stylesheet" type="text/css" />
   <?php endif; ?>
 
 </head>
@@ -33,7 +35,6 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
-  <?php print $scripts; ?>
   <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
     <script src="<?php print $base_path . $path_to_zen; ?>/js/html5-respond.js"></script>

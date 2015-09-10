@@ -28,14 +28,20 @@ h2 {
 h3 {
 	font-size: 2rem;
 }
+h4 {
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1.2rem;
+}
 
 
 //*********
 // Wrappers
 //*********
 
-$header-height: 145px;
-$header-compressed-height: 75px;
+$header-height: 125px;
+$header-compressed-height: 55px;
 $logo-width: 120px; 
 
 #header {
@@ -47,7 +53,7 @@ $logo-width: 120px;
 .wrapper--header {
 	position: fixed;
 	width: 100%;
-	padding: 30px 0;
+	padding: 20px 0;
 	-webkit-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.1));
   filter: url('../images/shadow.svg#drop-shadow');
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
@@ -67,7 +73,7 @@ $logo-width: 120px;
   }
   &.compressed {
 		height: $header-compressed-height;
-		padding: 20px 0;
+		padding: 10px 0;
 		.site-header__logo {
 			width: 50px;
 		}
@@ -82,6 +88,14 @@ $logo-width: 120px;
 	}
 	&.left {
 		padding-right: 50px;
+	}
+}
+
+.wrapper--footer {
+	background: $zivtech-dark;
+	color: #fff;
+	footer {
+		padding: 30px 0;
 	}
 }
 
@@ -100,6 +114,7 @@ nav {
 		padding: 8px 12px;
 		transition: all .2s ease-in-out;
 		border-radius: 6px;
+		font-size: 14px;
 		&:hover,
 		&:focus,
 		&.active {
@@ -110,12 +125,45 @@ nav {
 		}
 	}
 }
+.nav-user__list {
+	right: 0;
+	margin: 0;
+	padding: 0;
+	@include align(v);
+	li {
+		list-style-type: none;
+		font-size: 1.5rem;
+	}
+}
 
 //**************
 // Form elements
 //**************
 
 .ui.form {
-	font-size: 100%;
 	padding: 0;
+	font-size: 16px;
+	.form-item, 
+	fieldset {
+		max-width: 600px;
+		position: relative;
+	}
+	legend {
+		font-size: 16px;
+		margin-left: 0;
+	}
+	label {
+		font-size: 16px;
+		display: block;
+		clear: both;
+		margin-bottom: 5px;
+		font-weight: normal;
+		color: $zivtech-dark;
+	} 
+	.ui.dropdown .menu {
+		> .item {
+			font-size: 14px;
+			padding-left: 1.1em !important;
+		}
+	}
 }

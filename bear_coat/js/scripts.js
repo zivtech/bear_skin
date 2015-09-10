@@ -24,7 +24,6 @@
      settings = settings || Drupal.settings;
 
       $(window).on('load scroll', function () {
-        // this is to prevent IOS and safari to trigger the global menu hide with elastic scroll
         var $top = $(window).scrollTop();
         if ($top >= 50) {
           $('.wrapper--header').addClass('compressed');
@@ -33,7 +32,10 @@
           $('.wrapper--header').removeClass('compressed');
         }
       });
-  
+
+      // Material (would be better to add markup to form elements, but going faster here)
+      //$('input[type="checkbox"]').checkbox();
+      $('select').dropdown();
    }
   };
 
