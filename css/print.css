@@ -350,6 +350,15 @@ blockquote {
         margin: 0; }
     .main-menu .menu .parent {
       position: relative; }
+      .main-menu .menu .parent ul {
+        border-top: 1px solid #261D19; }
+        .main-menu .menu .parent ul a {
+          line-height: 140%;
+          display: block;
+          padding: 0;
+          margin-bottom: 10px; }
+    .main-menu .menu .parent:hover > .main-menu__link {
+      color: #728EAD; }
     .main-menu .menu .parent:hover > .menu {
       position: static !important;
       clip: auto;

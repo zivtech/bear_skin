@@ -70,7 +70,7 @@ h5 {
 nav.wrapper--breadcrumbs {
   padding: 20px 0; }
 
-nav .main-menu__link {
+nav.main-menu .main-menu__link {
   font-family: 'Droid Sans', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
@@ -78,12 +78,75 @@ nav .main-menu__link {
   transition: all 0.2s ease-in-out;
   border-radius: 6px;
   font-size: 14px; }
-  nav .main-menu__link:hover,
-  nav .main-menu__link:focus,
-  nav .main-menu__link.active {
+  nav.main-menu .main-menu__link:hover,
+  nav.main-menu .main-menu__link:focus,
+  nav.main-menu .main-menu__link.active {
     background: #261D19;
     color: #fff;
     text-decoration: none; }
+
+nav.main-menu .main-menu--level-one > li {
+  padding: 20px 0; }
+
+nav.main-menu .main-menu--level-one li.parent:hover:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #261D19;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 5px; }
+
+nav.main-menu .main-menu--level-one ul {
+  border-top: 1px solid #261D19;
+  padding: 10px 0 !important; }
+  nav.main-menu .main-menu--level-one ul li {
+    margin-bottom: 8px;
+    padding: 0 10px; }
+    nav.main-menu .main-menu--level-one ul li:last-child {
+      margin-bottom: 0; }
+  nav.main-menu .main-menu--level-one ul .main-menu__link {
+    text-transform: initial;
+    margin-bottom: 0; }
+    nav.main-menu .main-menu--level-one ul .main-menu__link:hover,
+    nav.main-menu .main-menu--level-one ul .main-menu__link:focus,
+    nav.main-menu .main-menu--level-one ul .main-menu__link.active {
+      background: transparent;
+      color: #728EAD; }
+    nav.main-menu .main-menu--level-one ul .main-menu__link:after {
+      display: none; }
+
+nav.main-menu .menu .main-menu--level-two {
+  top: 65px; }
+  nav.main-menu .menu .main-menu--level-two a {
+    position: relative; }
+  nav.main-menu .menu .main-menu--level-two li.parent > a:after,
+  nav.main-menu .menu .main-menu--level-two li.parent:hover > a:after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #261D19;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    bottom: 0;
+    left: inherit;
+    margin: 3px 0 0 0;
+    display: inline-block; }
+  nav.main-menu .menu .main-menu--level-two li.parent:hover:after {
+    display: none; }
+
+nav.main-menu .menu .main-menu--level-three {
+  top: -10px; }
 
 .nav-user__list {
   right: 0;

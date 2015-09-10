@@ -23,10 +23,24 @@
     }
     .parent {
       position: relative;
+      ul {
+        border-top: 1px solid $zivtech-dark;
+        a {
+          line-height: 140%;
+          display: block;
+          padding: 0;
+          margin-bottom: 10px;
+        }
+      }
     }
-    .parent:hover > .menu {
-      @include bear-element-invisible-off;
-      position: absolute !important;
+    .parent:hover {
+      > .main-menu__link {
+        color: $zivtech-blue;
+      }
+      > .menu {
+        @include bear-element-invisible-off;
+        position: absolute !important;
+      }
     }
     &.main-menu--level-three {
       left: 100%;

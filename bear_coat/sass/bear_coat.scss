@@ -106,7 +106,7 @@ $logo-width: 120px;
 nav.wrapper--breadcrumbs {
 	padding: 20px 0;
 }
-nav {
+nav.main-menu {
 	.main-menu__link {
 		font-family: 'Droid Sans', sans-serif;
 		text-transform: uppercase;
@@ -121,10 +121,90 @@ nav {
 			background: $zivtech-dark;
 			color: #fff;
 			text-decoration: none;
-			
+		}
+	}
+	.main-menu--level-one {
+		> li {
+			padding: 20px 0;
+		}
+		li.parent {
+			&:hover {
+				&:after {
+					content: "";
+					width: 0; 
+					height: 0; 
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-bottom: 8px solid $zivtech-dark;
+					position: absolute;
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+					bottom: 5px;
+				}
+			}
+		}
+		ul {
+			border-top: 1px solid $zivtech-dark;
+			padding: 10px 0 !important;
+			li {
+				margin-bottom: 8px;
+				padding: 0 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			.main-menu__link {
+				text-transform: initial;
+				margin-bottom: 0;
+				&:hover,
+				&:focus,
+				&.active {
+					background: transparent;
+					color: $zivtech-blue;
+				}
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	.menu {
+		.main-menu--level-two {
+			top: 65px;
+			a {
+				position : relative;
+			}
+			li.parent > a:after,
+			li.parent:hover > a:after {
+				content: "";
+				height: 0; 
+				width: 0; 
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;	
+				border-left: 5px solid $zivtech-dark;
+				@include align(v);
+				right: 0;
+				bottom: 0;
+				left: inherit;
+				margin: 3px 0 0 0;
+				display: inline-block;
+			}
+			li.parent:hover:after {
+				display: none;
+			}
+		}
+		.main-menu--level-three {
+			top: -10px;
 		}
 	}
 }
+// #header {
+// 	.main-menu .menu:not(.main-menu--level-one) {
+// 		@include bear-element-invisible-off;
+// 		position: absolute !important;
+// 	}
+// }
 .nav-user__list {
 	right: 0;
 	margin: 0;
