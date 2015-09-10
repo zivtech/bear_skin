@@ -232,10 +232,19 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $is_active = in_array('active', $variables['element']['#attributes']['class']);
   $has_children = $variables['element']['#original_link']['expanded'] && $variables['element']['#original_link']['has_children'];
 
+  $menuParent = menu_get_active_trail();
+        // Assign $menuParent to top or "hero" menu item then strip all spaces (replaces them with hyphens) and remove all special characters
+        $menuParent = $menuParent[1]['link_title'];
+        $menuParent = strtolower(str_replace( " ", "-", $menuParent));
+        $menuParent = preg_replace('/[^\w\d_ -]/si', '', $menuParent);
+
   // <li> elements
   $variables['element']['#attributes']['class'] = array();
   $variables['element']['#attributes']['class'][] = $menu_name . '__item';
   $variables['element']['#attributes']['class'][] = 'level-' . $depth_word;
+  if ($has_children) {
+    $variables['element']['#attributes']['class'][] = "parent";
+  }
   if ($is_active) {
     $variables['element']['#attributes']['class'][] = 'active';
   }

@@ -34,7 +34,6 @@
       });
 
       // Material (would be better to add markup to form elements, but going faster here)
-      //$('input[type="checkbox"]').checkbox();
       $('select').dropdown();
    }
   };

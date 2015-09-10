@@ -9,7 +9,28 @@
     padding: 0 30px;
     margin: 0;
     &:not(.main-menu--level-one) {
-      display: none;
+      @include bear-element-invisible;
+      overflow: visible !important;
+      position: absolute;
+      margin: 0;
+      padding: 10px;
+      background: #fff;
+      min-width: 200px;
+      a {
+        padding: 5px 0;
+        margin: 0;
+      }
+    }
+    .parent {
+      position: relative;
+    }
+    .parent:hover > .menu {
+      @include bear-element-invisible-off;
+      position: absolute !important;
+    }
+    &.main-menu--level-three {
+      left: 100%;
+      top: 0;
     }
   }
 

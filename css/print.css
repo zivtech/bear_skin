@@ -334,7 +334,32 @@ blockquote {
     padding: 0 30px;
     margin: 0; }
     .main-menu .menu:not(.main-menu--level-one) {
-      display: none; }
+      position: absolute !important;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      overflow: visible !important;
+      position: absolute;
+      margin: 0;
+      padding: 10px;
+      background: #fff;
+      min-width: 200px; }
+      .main-menu .menu:not(.main-menu--level-one) a {
+        padding: 5px 0;
+        margin: 0; }
+    .main-menu .menu .parent {
+      position: relative; }
+    .main-menu .menu .parent:hover > .menu {
+      position: static !important;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+      position: absolute !important; }
+    .main-menu .menu.main-menu--level-three {
+      left: 100%;
+      top: 0; }
   .main-menu__item {
     display: inline-block;
     vertical-align: middle;
