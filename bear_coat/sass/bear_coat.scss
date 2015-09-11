@@ -142,7 +142,7 @@ nav.main-menu {
 			&:hover {
 				.main-menu--level-two {
 					top: 65px;
-					opacity: 1;
+					opacity: .9;
 				}
 			} 
 		}
@@ -164,32 +164,36 @@ nav.main-menu {
 			}
 			&:hover {
 				&:after {
-					opacity: 1;
+					opacity: .8;
 					bottom: 5px;
 				}
 			}
-		}
-		ul {
-			padding: 10px 0 !important;
-			border-radius: 0 0 8px 8px;
-			li {
-				margin-bottom: 8px;
-				padding: 0 10px;
-				&:last-child {
+			ul.menu {
+				border-radius: 8px;
+				background: $zivtech-off-black;
+				border: 0;
+				li {
+					margin-bottom: 8px;
+					padding: 0 10px;
+					a {
+						@include link-colors($zivtech-white, $hover: $zivtech-pale, $active: $zivtech-pale, $focus: $zivtech-pale);
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				.main-menu__link {
+					text-transform: initial;
 					margin-bottom: 0;
-				}
-			}
-			.main-menu__link {
-				text-transform: initial;
-				margin-bottom: 0;
-				&:hover,
-				&:focus,
-				&.active {
-					background: transparent;
-					color: $zivtech-blue;
-				}
-				&:after {
-					display: none;
+					&:hover,
+					&:focus,
+					&.active {
+						background: transparent;
+						color: $zivtech-blue;
+					}
+					&:after {
+						display: none;
+					}
 				}
 			}
 		}
@@ -209,15 +213,16 @@ nav.main-menu {
 				width: 0; 
 				border-top: 5px solid transparent;
 				border-bottom: 5px solid transparent;	
-				border-left: 5px solid $zivtech-dark;
+				border-left: 5px solid $zivtech-white;
 				@include align(v);
-				right: 0;
+				right: -5px;
 				bottom: 0;
 				left: inherit;
 				margin: 3px 0 0 0;
-				display: inline-block;
+				display: inline-block !important;
+				opacity: 1 !important;
 			}
-			li.parent:hover:after {
+			li.parent:after {
 				display: none;
 			}
 		}
