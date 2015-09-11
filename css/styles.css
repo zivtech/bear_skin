@@ -275,9 +275,15 @@ body {
   body *, body *:before, body *:after {
     box-sizing: border-box; }
 
+#skip-link {
+  margin: 0;
+  padding: 0; }
+  #skip-link li {
+    list-style-type: none; }
+
 .site-header,
 .site-main,
-#footer {
+.region--footer {
   *zoom: 1;
   max-width: 75em;
   margin: 0 auto; }
@@ -285,12 +291,12 @@ body {
   .site-header:after,
   .site-main:before,
   .site-main:after,
-  #footer:before, #footer:after {
+  .region--footer:before, .region--footer:after {
     content: '';
     display: table; }
   .site-header:after,
   .site-main:after,
-  #footer:after {
+  .region--footer:after {
     clear: both; }
 
 .region--navigation {

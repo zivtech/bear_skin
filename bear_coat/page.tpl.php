@@ -10,6 +10,29 @@
 
     <?php print render($page['navigation']); ?>
 
+    <?php print render($page['header']);?>
+
+    <?php if (theme_get_setting('user_menu')): ?>
+      <nav id="bear-user-menu" role="navigation" class="nav-user">
+        <?php // provide userMenu label here for WAI accessibility ?>
+        <h3 class="u-hidden"
+            id="userMenuLabel"><?php print t('My Account Menu:')?></h3>
+        <?php print $user_menu;?>
+      </nav>
+    <?php endif;?>
+
+  </header>
+</div>
+
+<div class="wrapper wrapper--navigation">
+  <!-- ****** Delete this comment on production *****
+  move <?php //print render($page['navigation']); ?> to render navigation on separate row 
+  ****** -->
+</div>
+
+<div class="wrapper wrapper--main">
+  <div id="main" class="site-main">
+  <div class="site-info">
     <?php if ($site_name || $site_slogan): ?>
       <div class="site-header__name-and-slogan">
         <?php if ($site_name): ?>
@@ -22,42 +45,19 @@
         <?php endif;?>
 
         <?php if ($site_slogan): ?>
-          <h2 class="site-header__slogan">
+          <span class="site-header__slogan">
             <?php print $site_slogan;?>
-          </h2>
+          </span>
         <?php endif;?>
       </div><!-- /.site-header__name-and-slogan -->
     <?php endif;?>
-
-    <?php print render($page['header']);?>
-
-    <?php if (theme_get_setting('user_menu')): ?>
-      <nav id="bear-user-menu" role="navigation" class="nav-user">
-        <?php // provide userMenu label here for WAI accessibility ?>
-        <h3 class="u-hidden"
-            id="userMenuLabel"><?php print t('My Account Menu:')?></h3>
-        <?php print $user_menu;?>
-      </nav>
-    <?php endif;?>
-  </header>
-</div>
-
-<div class="wrapper wrapper--navigation">
-  <!-- ****** Delete this comment on production *****
-  move <?php //print render($page['navigation']); ?> to render navigation on separate row 
-  ****** -->
-</div>
-
-<div class="wrapper wrapper--main">
-  <div id="main" class="site-main">
+    </div>
     <main id="content" class="column main" role="main">
       <?php if (!empty($page['highlighted'])): ?>
         <section class="main__highlighted">
           <?php print render($page['highlighted']);?>
         </section>
       <?php endif;?>
-
-      <?php print $breadcrumb;?>
 
       <a id="main-content"></a>
 
@@ -119,7 +119,12 @@
 </div>
 
 <div class="wrapper wrapper--footer">
+  <div class="breadcrumbs-wrapper">
+    <?php print $breadcrumb;?>
+  </div>
   <div class="site-footer">
-    <?php print render($page['footer']);?>
+     <footer id="footer">
+      <?php print render($page['footer']);?>
+    </footer>
   </div>
 </div>

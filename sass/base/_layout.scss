@@ -13,9 +13,17 @@ body {
   }
 }
 
+#skip-link {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
 .site-header,
 .site-main,
-#footer {
+.region--footer {
   @include cf;
   max-width: $site-max-width;
   margin: 0 auto;

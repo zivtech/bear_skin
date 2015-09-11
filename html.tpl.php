@@ -25,24 +25,22 @@
 
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <?php if ($skip_link_text && $skip_link_anchor): ?>
-    <p class="skip-link">
-      <a href="#<?php print $skip_link_anchor; ?>"><?php print $skip_link_text; ?></a>
-    </p>
-  <?php endif; ?>
+  <ul id="skip-link">
+    <li><a href="#mainMenuLabel" class="element-invisible element-focusable">Navigation</a></li>
+    <li><a href="#content" class="element-invisible element-focusable">Content</a></li>
+    <li><a href="#footer" class="element-invisible element-focusable">Footer</a></li>
+  </ul>
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
-  <?php if ($add_respond_js): ?>
-    <!--[if lt IE 9]>
-    <script src="<?php print $base_path . $path_to_zen; ?>/js/html5-respond.js"></script>
-    <![endif]-->
-  <?php elseif ($add_html5_shim): ?>
-    <!--[if lt IE 9]>
-    <script src="<?php print $base_path . $path_to_zen; ?>/js/html5.js"></script>
-    <![endif]-->
-  <?php endif; ?>
+  <!--[if lt IE 9]>
+  <script src="<?php print $base_path . $path_to_bear_skin; ?>/js/vendor/html5-respond.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="<?php print $base_path . $path_to_bear_skin; ?>/js/vendor/html5.js"></script>
+  <![endif]-->
+
   <script>jQuery.noConflict();</script>
 </body>
 </html>

@@ -29,6 +29,83 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   // include the selected language
   global $language;
   $variables['language'] = $language->language;
+
+  // ************************************************************
+  // taken from Zen so we can keep our templates variables active
+  // ************************************************************
+
+  // Get settings for HTML5 and responsive support. array_filter() removes
+  // items from the array that have been disabled.
+  $html5_respond_meta = array_filter((array) theme_get_setting('zen_html5_respond_meta'));
+  $variables['add_respond_js']          = in_array('respond', $html5_respond_meta);
+  $variables['add_html5_shim']          = in_array('html5', $html5_respond_meta);
+  $variables['default_mobile_metatags'] = in_array('meta', $html5_respond_meta);
+
+  // Attributes for html element.
+  $variables['html_attributes_array'] = array(
+    $variables['language'] => $language->language,
+  );
+
+  // Send X-UA-Compatible HTTP header to force IE to use the most recent
+  // rendering engine or use Chrome's frame rendering engine if available.
+  // This also prevents the IE compatibility mode button to appear when using
+  // conditional classes on the html tag.
+  if (is_null(drupal_get_http_header('X-UA-Compatible'))) {
+    drupal_add_http_header('X-UA-Compatible', 'IE=edge,chrome=1');
+  }
+
+  // Return early, so the maintenance page does not call any of the code below.
+  if ($hook != 'html') {
+    return;
+  }
+
+  // Serialize RDF Namespaces into an RDFa 1.1 prefix attribute.
+  if ($variables['rdf_namespaces']) {
+    $prefixes = array();
+    foreach (explode("\n  ", ltrim($variables['rdf_namespaces'])) as $namespace) {
+      // Remove xlmns: and ending quote and fix prefix formatting.
+      $prefixes[] = str_replace('="', ': ', substr($namespace, 6, -1));
+    }
+    $variables['rdf_namespaces'] = ' prefix="' . implode(' ', $prefixes) . '"';
+  }
+
+  // Classes for body element. Allows advanced theming based on context
+  // (home page, node of certain type, etc.)
+  if (!$variables['is_front']) {
+    // Add unique class for each page.
+    $path = drupal_get_path_alias($_GET['q']);
+    // Add unique class for each website section.
+    list($section, ) = explode('/', $path, 2);
+    $arg = explode('/', $_GET['q']);
+    if ($arg[0] == 'node' && isset($arg[1])) {
+      if ($arg[1] == 'add') {
+        $section = 'node-add';
+      }
+      elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
+        $section = 'node-' . $arg[2];
+      }
+    }
+    $variables['classes_array'][] = drupal_html_class('section-' . $section);
+  }
+}
+
+function bear_skin_html_head_alter(&$head_elements) {
+  $head_elements['system_meta_content_type']['#attributes'] = array(
+    'charset' => 'utf-8'
+  );
+}
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+function bear_skin_process_html(&$variables, $hook) {
+  // Flatten out html_attributes.
+  $variables['html_attributes'] = drupal_attributes($variables['html_attributes_array']);
 }
 
 /**
@@ -38,6 +115,11 @@ function bear_skin_preprocess_html(&$variables, $hook) {
  */
 function bear_skin_preprocess_page(&$variables) {
   $page = $variables['page'];
+
+  if (isset($variables['node']->type)) {
+    $nodetype = $variables['node']->type;
+    $variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
+  }
 
   // set the page title for the homepage
   // for accessibility purposes
@@ -562,23 +644,6 @@ function bear_skin_field(&$variables) {
 
   return $output;
 }
-
-/***********************
- * Let's load some CSS on specific targets - uncomment to use
- ************************/
-
-// function bear_skin_preprocess_page(&$vars) {
-//   // Add JS & CSS by node type
-//   if (isset($vars['node']) && $vars['node']->type == 'page') {
-//     //drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
-//     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
-//   }
-//   // Add JS & CSS by node ID
-//   if (isset($vars['node']) && $vars['node']->nid == '1') {
-//     //drupal_add_js(path_to_theme(). '/js/supercool_scripts.js');
-//     //drupal_add_css(path_to_theme(). '/css/supercool_sheet.css');
-//   }
-// }
 
 /**
  * Implements hook_css_alter().
