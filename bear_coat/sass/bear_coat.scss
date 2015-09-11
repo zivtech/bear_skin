@@ -97,6 +97,14 @@ $logo-width: 120px;
 }
 
 .wrapper--footer {
+	border-top: 1px solid #dedede;
+}
+.breadcrumbs-wrapper {
+	@include cf;
+  max-width: $site-max-width;
+  margin: 0 auto;
+}
+.site-footer {
 	background: $zivtech-off-black;
 	color: #fff;
 	footer {
@@ -131,6 +139,11 @@ nav.main-menu {
 	.main-menu--level-one {
 		> li {
 			padding: 20px 0;
+			&:hover {
+				.main-menu--level-two {
+					top: 65px;
+				}
+			} 
 		}
 		li.parent {
 			&:hover {
@@ -146,6 +159,7 @@ nav.main-menu {
 					right: 0;
 					margin: 0 auto;
 					bottom: 5px;
+					transition: all .05s ease-in-out;
 				}
 			}
 		}
@@ -176,7 +190,8 @@ nav.main-menu {
 	}
 	.menu {
 		.main-menu--level-two {
-			top: 65px;
+			top: 100px;
+			transition: all .1s ease-in-out;
 			a {
 				position : relative;
 			}

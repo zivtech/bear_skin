@@ -66,9 +66,22 @@ h5 {
   padding-right: 50px; }
 
 .wrapper--footer {
+  border-top: 1px solid #dedede; }
+
+.breadcrumbs-wrapper {
+  *zoom: 1;
+  max-width: 75em;
+  margin: 0 auto; }
+  .breadcrumbs-wrapper:before, .breadcrumbs-wrapper:after {
+    content: '';
+    display: table; }
+  .breadcrumbs-wrapper:after {
+    clear: both; }
+
+.site-footer {
   background: #404040;
   color: #fff; }
-  .wrapper--footer footer {
+  .site-footer footer {
     padding: 30px 0; }
 
 nav.wrapper--breadcrumbs {
@@ -91,6 +104,8 @@ nav.main-menu .main-menu__link {
 
 nav.main-menu .main-menu--level-one > li {
   padding: 20px 0; }
+  nav.main-menu .main-menu--level-one > li:hover .main-menu--level-two {
+    top: 65px; }
 
 nav.main-menu .main-menu--level-one li.parent:hover:after {
   content: "";
@@ -103,7 +118,8 @@ nav.main-menu .main-menu--level-one li.parent:hover:after {
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 5px; }
+  bottom: 5px;
+  transition: all 0.05s ease-in-out; }
 
 nav.main-menu .main-menu--level-one ul {
   border-top: 1px solid #261D19;
@@ -125,7 +141,8 @@ nav.main-menu .main-menu--level-one ul {
       display: none; }
 
 nav.main-menu .menu .main-menu--level-two {
-  top: 65px; }
+  top: 100px;
+  transition: all 0.1s ease-in-out; }
   nav.main-menu .menu .main-menu--level-two a {
     position: relative; }
   nav.main-menu .menu .main-menu--level-two li.parent > a:after,
