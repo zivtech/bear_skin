@@ -19,10 +19,10 @@
 
   <?php print $styles; ?>
   <?php if (theme_get_setting('sticky_footer')): ?>
-  <?php print $scripts; ?>
-  
     <link href="<?php print $base_path . $path_to_bear_skin; ?>/css/sticky_footer.css" media="all" rel="stylesheet" type="text/css" />
   <?php endif; ?>
+  <?php print $scripts; ?>
+  
 
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>

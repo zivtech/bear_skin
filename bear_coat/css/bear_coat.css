@@ -7,10 +7,12 @@ h1 {
   font-size: 4rem; }
 
 h2 {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  margin: 3rem 0 2rem 0; }
 
 h3 {
-  font-size: 2rem; }
+  font-size: 2rem;
+  margin: 2.5rem 0 1rem 0; }
 
 h4 {
   font-size: 1.5rem; }
@@ -54,6 +56,8 @@ h5 {
 
 .wrapper--main {
   padding-top: 125px; }
+  .wrapper--main .site-info {
+    padding-top: 30px; }
 
 .main__content .column.right {
   padding-left: 50px; }
@@ -62,7 +66,7 @@ h5 {
   padding-right: 50px; }
 
 .wrapper--footer {
-  background: #261D19;
+  background: #404040;
   color: #fff; }
   .wrapper--footer footer {
     padding: 30px 0; }

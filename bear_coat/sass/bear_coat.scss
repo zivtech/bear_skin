@@ -24,9 +24,11 @@ h1 {
 }
 h2 {
 	font-size: 2.5rem;
+	margin: 3rem 0 2rem 0;
 }
 h3 {
 	font-size: 2rem;
+	margin: 2.5rem 0 1rem 0;
 }
 h4 {
 	font-size: 1.5rem;
@@ -81,6 +83,9 @@ $logo-width: 120px;
 }
 .wrapper--main {
 	padding-top: $header-height;
+	.site-info {
+		padding-top: 30px;
+	}
 }
 .main__content .column {
 	&.right {
@@ -92,7 +97,7 @@ $logo-width: 120px;
 }
 
 .wrapper--footer {
-	background: $zivtech-dark;
+	background: $zivtech-off-black;
 	color: #fff;
 	footer {
 		padding: 30px 0;
