@@ -142,30 +142,36 @@ nav.main-menu {
 			&:hover {
 				.main-menu--level-two {
 					top: 65px;
+					opacity: 1;
 				}
 			} 
 		}
 		li.parent {
+			&:after {
+				content: "";
+				width: 0; 
+				height: 0; 
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-bottom: 8px solid $zivtech-dark;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				bottom: -30px;
+				transition: all .2s ease-in-out;
+				opacity: 0;
+			}
 			&:hover {
 				&:after {
-					content: "";
-					width: 0; 
-					height: 0; 
-					border-left: 8px solid transparent;
-					border-right: 8px solid transparent;
-					border-bottom: 8px solid $zivtech-dark;
-					position: absolute;
-					left: 0;
-					right: 0;
-					margin: 0 auto;
+					opacity: 1;
 					bottom: 5px;
-					transition: all .05s ease-in-out;
 				}
 			}
 		}
 		ul {
-			border-top: 1px solid $zivtech-dark;
 			padding: 10px 0 !important;
+			border-radius: 0 0 8px 8px;
 			li {
 				margin-bottom: 8px;
 				padding: 0 10px;
@@ -191,7 +197,8 @@ nav.main-menu {
 	.menu {
 		.main-menu--level-two {
 			top: 100px;
-			transition: all .1s ease-in-out;
+			transition: all .2s ease-in-out;
+			opacity: 0;
 			a {
 				position : relative;
 			}

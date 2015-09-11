@@ -105,9 +105,10 @@ nav.main-menu .main-menu__link {
 nav.main-menu .main-menu--level-one > li {
   padding: 20px 0; }
   nav.main-menu .main-menu--level-one > li:hover .main-menu--level-two {
-    top: 65px; }
+    top: 65px;
+    opacity: 1; }
 
-nav.main-menu .main-menu--level-one li.parent:hover:after {
+nav.main-menu .main-menu--level-one li.parent:after {
   content: "";
   width: 0;
   height: 0;
@@ -118,12 +119,17 @@ nav.main-menu .main-menu--level-one li.parent:hover:after {
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 5px;
-  transition: all 0.05s ease-in-out; }
+  bottom: -30px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0; }
+
+nav.main-menu .main-menu--level-one li.parent:hover:after {
+  opacity: 1;
+  bottom: 5px; }
 
 nav.main-menu .main-menu--level-one ul {
-  border-top: 1px solid #261D19;
-  padding: 10px 0 !important; }
+  padding: 10px 0 !important;
+  border-radius: 0 0 8px 8px; }
   nav.main-menu .main-menu--level-one ul li {
     margin-bottom: 8px;
     padding: 0 10px; }
@@ -142,7 +148,8 @@ nav.main-menu .main-menu--level-one ul {
 
 nav.main-menu .menu .main-menu--level-two {
   top: 100px;
-  transition: all 0.1s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  opacity: 0; }
   nav.main-menu .menu .main-menu--level-two a {
     position: relative; }
   nav.main-menu .menu .main-menu--level-two li.parent > a:after,
