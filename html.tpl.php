@@ -22,7 +22,7 @@
     <link href="<?php print $base_path . $path_to_bear_skin; ?>/css/sticky_footer.css" media="all" rel="stylesheet" type="text/css" />
   <?php endif; ?>
   <?php print $scripts; ?>
-
+  <script>jQuery.noConflict();</script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <ul id="skip-link">
@@ -39,8 +39,6 @@
   <![endif]-->
   <!--[if lt IE 9]>
   <script src="<?php print $base_path . $path_to_bear_skin; ?>/js/vendor/html5.js"></script>
-  <![endif]-->
-
-  <script>jQuery.noConflict();</script>
+  <![endif]-->  
 </body>
 </html>
