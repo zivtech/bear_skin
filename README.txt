@@ -1,5 +1,5 @@
 
-Bear Skin, a fully responsive Drupal starter theme packed with features and Sass goodies. 
+Bear Skin D8, a fully responsive Drupal starter theme. 
 
 Getting started
 -----------------
