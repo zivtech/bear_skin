@@ -1,0 +1,11 @@
+global_scripts:
+	version: 1.x
+  js:
+  	js/vendor/modernizr.js: {}
+  	js/scripts.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
