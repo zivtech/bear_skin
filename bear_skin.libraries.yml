@@ -1,11 +1,18 @@
-global_scripts:
-	version: 1.x
+global-scripts:
+  version: 1.x
   js:
-  	js/vendor/modernizr.js: {}
-  	js/scripts.js: {}
+    js/vendor/modernizr.js: {}
+    js/scripts.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+
+global-styling:
+  version: 1.x
+  css: 
+    theme:
+      css/styles.css: {}
+      css/print.css: { media: print }

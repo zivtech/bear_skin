@@ -3,26 +3,32 @@ type: theme
 description: 'Bear Skin Starter Theme.'
 package: Custom
 core: 8.x
+engine: twig
 screenshot: screenshot.png
 
-stylesheets: 
-  all:
-    - css/styles.css
-  print:
-    - css/print.css
+stylesheets-remove:
+  - '@classy/css/layout.css'
 
 libraries:
-  - bear_skin/global_scripts
+  - bear_skin/global-styling
+  - bear_skin/global-scripts
 
 regions:
-  header: Header
-	navigation: 'Navigation bar'
-	highlighted: Highlighted
-	help: Help
-	content: Content
-	sidebar_first: 'First sidebar'
-	sidebar_second: 'Second sidebar'
-	footer: Footer
+  header: 'Header'
+  navigation: 'Navigation bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  footer: 'Footer'
 
 settings:
-  shortcut_module_link: '0'
+  user_menu: '1'
+  responsive_nav: '1'
+  sticky_navbar: '0'
+  sticky_footer: '0'
+
+parameters:
+  twig.config:
+    debug: true 
