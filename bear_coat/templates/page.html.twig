@@ -1,0 +1,130 @@
+<div class="wrapper wrapper--header">
+  <header id="header" role="banner" class="site-header">
+
+    {% if logo  %}
+      <a href="{{ front_page }}" title="{{ 'Home'|t }}"
+         rel="home" class="site-header__logo">
+        <img src="../themes/custom/bear_skin/logo.png" alt="{{ 'Home'|t }}"/>
+      </a>
+    {% endif %}
+
+    {{ page.navigation }}
+
+    {% if site_name or site_slogan  %}
+      <div class="site-header__name-and-slogan">
+        {% if site_name  %}
+          <span class="site-header__name">
+            <a href="{{ front_page }}"
+               title="{{ 'Home'|t }}" rel="home">
+              <span>{{ site_name }}</span>
+            </a>
+          </span>
+        {% endif %}
+
+        {% if site_slogan  %}
+          <h2 class="site-header__slogan">
+            {{ site_slogan }}
+          </h2>
+        {% endif %}
+      </div><!-- /.site-header__name-and-slogan -->
+    {% endif %}
+
+    {{ page.header }}
+
+    {# {% if theme_get_setting('user_menu' ) %} #}
+      <nav id="bear-user-menu" role="navigation" class="nav-user">
+        {# // provide userMenu label here for WAI accessibility #}
+        <h3 class="u-hidden"
+            id="userMenuLabel">{{ 'My Account Menu:'|t }}</h3>
+        {{ user_menu }}
+      </nav>
+    {# {% endif %} #}
+  </header>
+</div>
+
+<div class="wrapper wrapper--navigation">
+  <!-- ****** Delete this comment on production *****
+  move {# //print render($page['navigation']); #} to render navigation on separate row 
+  ****** -->
+</div>
+
+<div class="wrapper wrapper--main">
+  <div id="main" class="site-main">
+    <main id="content" class="column main" role="main">
+      {% if page is not empty %}
+        <section class="main__highlighted">
+          {{ page.highlighted }}
+        </section>
+      {% endif %}
+
+      {{ breadcrumb }}
+
+      <a id="main-content"></a>
+
+      {% if title is not empty %}
+        {{ title_prefix }}
+        <h1 class="main__title" role="heading">{{ title }}</h1>
+        {{ title_suffix }}
+      {% else %} {#// this is needed for ARIA #}
+        <h1 class="u-hidden">{{ bear_page_title }}</h1>
+      {% endif %}
+
+      {% if messages is not empty %}
+        <section class="main__messages" role="region">
+          {{ messages }}
+        </section>
+      {% endif %}
+
+      {% if tabs is not empty or tabs is not empty %}
+        <nav class="main__tabs" role="navigation">
+          {{ tabs }}
+        </nav>
+      {% endif %}
+
+      {% if page is not empty %}
+        <aside class="main__help" role="note">
+          {{ page.help }}
+        </aside>
+      {% endif %}
+
+      {% if action_links is not empty %}
+        <nav class="main__action-links" role="navigation">
+          <ul class="action-links"
+              role="menubar">{{ action_links }}</ul>
+        </nav>
+      {% endif %}
+
+      <section class="main__content">
+        {{ page.content }}
+      </section>
+
+      {% if feed_icons is not empty %}
+        <nav class="main__feed-icons" role="navigation">
+          {{ feed_icons }}
+        </nav>
+      {% endif %}
+
+    </main>
+    <!-- /#content -->
+
+    {% if has_sidebar_first or has_sidebar_second  %}
+      <aside class="site-sidebars">
+        {{ page.sidebar_first }}
+        {{ page.sidebar_second }}
+      </aside><!-- /.sidebars -->
+    {% endif %}
+
+  </div>
+  <!-- /#main -->
+</div>
+
+<div class="wrapper wrapper--footer">
+  <div class="breadcrumbs-wrapper">
+    <?php print $breadcrumb;?>
+  </div>
+  <div class="site-footer">
+     <footer id="footer">
+      <?php print render($page['footer']);?>
+    </footer>
+  </div>
+</div>

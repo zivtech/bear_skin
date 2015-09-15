@@ -1,0 +1,11 @@
+global-scripts:
+  version: 1.x
+  js:
+    js/scripts.js: {}
+
+global-styling:
+  version: 1.x
+  css: 
+    theme:
+      css/styles.css: {}
+      css/print.css: { media: print }
