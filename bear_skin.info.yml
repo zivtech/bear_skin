@@ -7,7 +7,8 @@ engine: twig
 screenshot: screenshot.png
 
 stylesheets-remove:
-  - '@classy/css/layout.css'
+  - core/modules/system/css/components/messages.theme.css
+  - core/modules/system/css/components/menu.theme.css
 
 libraries:
   - bear_skin/global-styling
