@@ -23,13 +23,16 @@ body {
 
 .site-header,
 .site-main,
-.region--footer {
+.site-footer {
   @include cf;
   max-width: $site-max-width;
   margin: 0 auto;
 }
 .region--navigation {
   display: inline-block;
+}
+#footer {
+  padding: 30px 0;
 }
 
 //

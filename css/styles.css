@@ -283,7 +283,7 @@ body {
 
 .site-header,
 .site-main,
-.region--footer {
+.site-footer {
   *zoom: 1;
   max-width: 75em;
   margin: 0 auto; }
@@ -291,16 +291,19 @@ body {
   .site-header:after,
   .site-main:before,
   .site-main:after,
-  .region--footer:before, .region--footer:after {
+  .site-footer:before, .site-footer:after {
     content: '';
     display: table; }
   .site-header:after,
   .site-main:after,
-  .region--footer:after {
+  .site-footer:after {
     clear: both; }
 
 .region--navigation {
   display: inline-block; }
+
+#footer {
+  padding: 30px 0; }
 
 .tabs-primary,
 .tabs-secondary {
