@@ -121,6 +121,21 @@ body {
 #footer {
   padding: 30px 0; }
 
+body.with-sticky-footer {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 100vh;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+body.with-sticky-footer .wrapper--main {
+  position: relative;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto; }
+
 .tabs-primary,
 .tabs-secondary {
   *zoom: 1;

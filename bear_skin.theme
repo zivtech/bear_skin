@@ -18,10 +18,10 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   // if the sticky footer option is selected, set a class
   //**********************
   // TODO: we need classes based on node, logged-in/out, etc
-  // the code below does not work well
+  // the code below does not do what we want.
   //**********************
   if (theme_get_setting('sticky_footer')) {
-    $variables['attributes']['class'][] = 'with-sticky-footer';
+    $variables['attributes']['class'][] = 'with-sticky-footer'; // working
   }
 
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {

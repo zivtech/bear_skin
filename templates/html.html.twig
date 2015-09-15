@@ -4,9 +4,6 @@
   {{ head }}
   <title>{{ head_title|safe_join(' | ') }}</title>
   {{ styles }}
-  {#  {% if theme_get_setting('sticky_footer' ) %} #}
-    <!-- <link href="/css/sticky_footer.css" media="all" rel="stylesheet" type="text/css" /> -->
-  {# {% endif %} #}
   {{ scripts }}
 </head>
 <body{{ attributes }}>
