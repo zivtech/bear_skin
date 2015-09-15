@@ -1,122 +1,98 @@
-// <?php 
-// /**
-//  * Implements bear_skin_preprocess_html function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
-// function bear_skin_preprocess_html(&$variables, $hook) {
-//   // Add variables and paths needed for HTML5 and responsive support.
-//   $variables['base_path'] = base_path();
-//   $variables['path_to_bear_skin'] = drupal_get_path('theme', 'bear_skin');
-//   $variables['skip_link_anchor'] = 'main-content';
+<?php 
+/**
+ * Implements bear_skin_preprocess_html function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
+function bear_skin_preprocess_html(&$variables, $hook) {
+  // Add variables and paths needed for HTML5 and responsive support.
+  $variables['base_path'] = base_path();
+  $variables['path_to_bear_skin'] = drupal_get_path('theme','bear_skin');
+  $variables['skip_link_anchor'] = 'main-content';
 
-//   // put some settings into javascript
-//   // @Deprecated:    drupal_add_js(array(
-//   //   'bear_skin' => array(
-//   //     'stickyFooter' => (bool) theme_get_setting('sticky_footer'),
-//   //     'userMenu' => (bool) theme_get_setting('user_menu'),
-//   //     'userLoggedIn' => (bool) user_is_logged_in()
-//   //   ),
-//   // ), 'setting');
+  // if the sticky footer option is selected, set a class
+  if (theme_get_setting('sticky_footer')) {
+    $variables['classes_array'][] = 'with-sticky-footer';
+  }
 
-//   // if the sticky footer option is selected, set a class
-//   if (theme_get_setting('sticky_footer')) {
-//     $variables['classes_array'][] = 'with-sticky-footer';
-//   }
+  // ************************************************************
+  // taken from Zen so we can keep our templates variables active
+  // ************************************************************
 
-//   // include the selected language
-//   global $language;
-//   $variables['language'] = $language->language;
+  // Get settings for HTML5 and responsive support. array_filter() removes
+  // items from the array that have been disabled.
+  $html5_respond_meta = array_filter((array) theme_get_setting('zen_html5_respond_meta'));
+  $variables['add_respond_js']          = in_array('respond', $html5_respond_meta);
+  $variables['add_html5_shim']          = in_array('html5', $html5_respond_meta);
+  $variables['default_mobile_metatags'] = in_array('meta', $html5_respond_meta);
 
-//   // ************************************************************
-//   // taken from Zen so we can keep our templates variables active
-//   // ************************************************************
+  // Send X-UA-Compatible HTTP header to force IE to use the most recent
+  // rendering engine or use Chrome's frame rendering engine if available.
+  // This also prevents the IE compatibility mode button to appear when using
+  // conditional classes on the html tag.
+  //*********** DEPRECATED
+  //  - FIND DRUPAL 8 EQUIVALENT
+  // if (is_null(drupal_get_http_header('X-UA-Compatible'))) {
+  //   drupal_add_http_header('X-UA-Compatible', 'IE=edge,chrome=1');
+  // }
+  //*********** END DEPRECATED
 
-//   // Get settings for HTML5 and responsive support. array_filter() removes
-//   // items from the array that have been disabled.
-//   $html5_respond_meta = array_filter((array) theme_get_setting('zen_html5_respond_meta'));
-//   $variables['add_respond_js']          = in_array('respond', $html5_respond_meta);
-//   $variables['add_html5_shim']          = in_array('html5', $html5_respond_meta);
-//   $variables['default_mobile_metatags'] = in_array('meta', $html5_respond_meta);
+  // Return early, so the maintenance page does not call any of the code below.
+  if ($hook != 'html') {
+    return;
+  }
 
-//   // Attributes for html element.
-//   $variables['html_attributes_array'] = array(
-//     $variables['language'] => $language->language,
-//   );
+  // Classes for body element. Allows advanced theming based on context
+  // (home page, node of certain type, etc.)
+  if (!$variables['is_front']) {
+    // Add unique class for each page.
+    $current_path = \Drupal::request()->getRequestUri();
+    $path = $current_path;
+    // Add unique class for each website section.
+    list($section, ) = explode('/', $path, 2);
+    $arg = explode('/', $_GET['q']);
+    if ($arg[0] == 'node' && isset($arg[1])) {
+      if ($arg[1] == 'add') {
+        $section = 'node-add';
+      }
+      elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
+        $section = 'node-' . $arg[2];
+      }
+    }
+    $variables['classes_array'][] = 'section-' . $section;
+  }
+}
 
-//   // Send X-UA-Compatible HTTP header to force IE to use the most recent
-//   // rendering engine or use Chrome's frame rendering engine if available.
-//   // This also prevents the IE compatibility mode button to appear when using
-//   // conditional classes on the html tag.
-//   // if (is_null(drupal_get_http_header('X-UA-Compatible'))) {
-//   //   // @Deprecated:      drupal_add_http_header('X-UA-Compatible', 'IE=edge,chrome=1');
-//   // }
-
-//   // Return early, so the maintenance page does not call any of the code below.
-//   if ($hook != 'html') {
-//     return;
-//   }
-
-//   // Serialize RDF Namespaces into an RDFa 1.1 prefix attribute.
-//   if ($variables['rdf_namespaces']) {
-//     $prefixes = array();
-//     foreach (explode("\n  ", ltrim($variables['rdf_namespaces'])) as $namespace) {
-//       // Remove xlmns: and ending quote and fix prefix formatting.
-//       $prefixes[] = str_replace('="', ': ', substr($namespace, 6, -1));
-//     }
-//     $variables['rdf_namespaces'] = ' prefix="' . implode(' ', $prefixes) . '"';
-//   }
-
-//   // Classes for body element. Allows advanced theming based on context
-//   // (home page, node of certain type, etc.)
-//   // if (!$variables['is_front']) {
-//   //   // Add unique class for each page.
-//   //   $path = drupal_get_path_alias($_GET['q']);
-//   //   // Add unique class for each website section.
-//   //   list($section, ) = explode('/', $path, 2);
-//   //   $arg = explode('/', $_GET['q']);
-//   //   if ($arg[0] == 'node' && isset($arg[1])) {
-//   //     if ($arg[1] == 'add') {
-//   //       $section = 'node-add';
-//   //     }
-//   //     elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
-//   //       $section = 'node-' . $arg[2];
-//   //     }
-//   //   }
-//   //   $variables['classes_array'][] = drupal_html_class('section-' . $section);
-//   // }
-// }
-
-// /**
-//  * Implements bear_skin_html_head_alter function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_html_head_alter function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_html_head_alter(&$head_elements) {
 //   $head_elements['system_meta_content_type']['#attributes'] = array(
 //     'charset' => 'utf-8'
 //   );
 // }
 
-// /**
-//  * Implements bear_skin_process_html function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_process_html function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_process_html(&$variables, $hook) {
 //   // Flatten out html_attributes.
 //   $variables['html_attributes'] = drupal_attributes($variables['html_attributes_array']);
 // }
 
-// /**
-//  * Implements bear_skin_preprocess_page function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_preprocess_page function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_preprocess_page(&$variables) {
 //   $page = $variables['page'];
 
@@ -125,14 +101,14 @@
 //     $variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
 //   }
 
-//   // set the page title for the homepage
-//   // for accessibility purposes
-//   // $title = drupal_get_title();
-//   // if (drupal_is_front_page() && empty($title)) {
-//   //   // @Deprecated:      $variables['bear_page_title'] = variable_get('site_name', '') . ' Homepage';
-//   // } else {
-//   //   $variables['bear_page_title'] = $title;
-//   // }
+//   //set the page title for the homepage
+//   //for accessibility purposes
+//   $title = drupal_get_title();
+//   if (drupal_is_front_page() && empty($title)) {
+//     // @Deprecated:      $variables['bear_page_title'] = variable_get('site_name', '') . ' Homepage';
+//   } else {
+//     $variables['bear_page_title'] = $title;
+//   }
 
 //   // check if there is content in the sidebars
 //   $variables['has_sidebar_first'] = FALSE;
@@ -144,40 +120,40 @@
 //     $variables['has_sidebar_second'] = TRUE;
 //   }
 
-//   // setup the user menu to display in the header
-//   // @Deprecated:    $variables['user_menu'] = theme('links__user_menu', array(
-//   //   'links' => menu_navigation_links('user-menu'),
-//   //   'attributes' => array(
-//   //     'class ' => array('nav-user__list'),
-//   //     'aria-labelledby' => 'userMenuLabel',
-//   //   ),
-//   // ));
+//   //setup the user menu to display in the header
+//   @Deprecated:    $variables['user_menu'] = theme('links__user_menu', array(
+//     'links' => menu_navigation_links('user-menu'),
+//     'attributes' => array(
+//       'class ' => array('nav-user__list'),
+//       'aria-labelledby' => 'userMenuLabel',
+//     ),
+//   ));
 
-//   // include the basic search form if one exists
-//   //if (module_exists('search')) {
-//     //$bear_search_form = module_invoke('search', 'block_view', 'search');
-//     //$variables['page']['bear_search_form'] = render($bear_search_form);
-//   //}
+//   //include the basic search form if one exists
+//   if (module_exists('search')) {
+//     $bear_search_form = module_invoke('search', 'block_view', 'search');
+//     $variables['page']['bear_search_form'] = render($bear_search_form);
+//   }
 // }
 
-// /**
-//  * Implements bear_skin_preprocess_region function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_preprocess_region function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_preprocess_region(&$variables) {
 //   $region = $variables['region'];
 //   $variables['classes_array'][] = 'region--' . str_replace('_', '-', $region);
 //   $variables['attributes_array']['role'] = 'region';
 // }
 
-// /**
-//  * Implements bear_skin_preprocess_node function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_preprocess_node function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_preprocess_node(&$variables) {
 //   $view_mode = $variables['view_mode'];
 //   $type = $variables['type'];
@@ -197,12 +173,12 @@
 //   }
 // }
 
-// /**
-//  * Implements bear_skin_preprocess_block function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_preprocess_block function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_preprocess_block(&$variables) {
 //   $module = str_replace('_', '-', $variables['block']->module) . '-' . $variables['block']->delta;
 //   $region = str_replace('_', '-', $variables['block']->region);
@@ -210,12 +186,12 @@
 //   $variables['classes_array'][] = 'block__' . $module . '--' . $region;
 // }
 
-// /**
-//  * Implements bear_skin_form_alter function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_form_alter function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_form_alter(&$form, &$form_state, $form_id) {
 //   switch ($form_id) {
 //     case 'search_block_form':
@@ -225,24 +201,24 @@
 //   }
 // }
 
-// /**
-//  * Implements bear_skin_preprocess_views_view function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
-// // function bear_skin_preprocess_views_view(&$variables) {
-// //   $name = $variables['css_name'];
-// //   $display = drupal_clean_css_identifier($variables['view']->current_display);
-// //   $variables['classes_array'][] = $name . '-' . $display . '-view';
-// // }
+/**
+ * Implements bear_skin_preprocess_views_view function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
+// function bear_skin_preprocess_views_view(&$variables) {
+//   $name = $variables['css_name'];
+//   $display = drupal_clean_css_identifier($variables['view']->current_display);
+//   $variables['classes_array'][] = $name . '-' . $display . '-view';
+// }
 
-// /**
-//  * Implements bear_skin_preprocess_views_view_unformatted function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_preprocess_views_view_unformatted function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_preprocess_views_view_unformatted(&$variables) {
 //   $id = drupal_clean_css_identifier($variables['view']->name) . '-' . drupal_clean_css_identifier($variables['view']->current_display);
 //   foreach ($variables['classes_array'] as $key => $class) {
@@ -250,12 +226,12 @@
 //   }
 // }
 
-// /**
-//  * Implements bear_skin_preprocess_menu_block_wrapper function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_preprocess_menu_block_wrapper function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_preprocess_menu_block_wrapper(&$variables) {
 //   $delta = $variables['delta'];
 //   $variables['theme_hook_suggestions'][] = 'menu_block_wrapper__menu_' . str_replace('-', '_', $variables['config']['menu_name']);
@@ -266,12 +242,12 @@
 //   }
 // }
 
-// /**
-//  * Implements bear_skin_preprocess_menu_link function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_preprocess_menu_link function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_preprocess_menu_link(&$variables, $hook) {
 //   $menu_name = $variables['element']['#original_link']['menu_name'];
 //   $depth_word = _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
@@ -307,12 +283,12 @@
 //   $variables['element']['#attributes']['data-menu-depth'] = $depth_word;
 // }
 
-// /**
-//  * Implements bear_skin_preprocess_menu_tree function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_preprocess_menu_tree function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_preprocess_menu_tree(&$variables) {
 //   $tree = new DOMDocument();
 //   @$tree->loadHTML($variables['tree']);
@@ -331,38 +307,38 @@
 //   $variables['menu_depth'] = $menu_depth;
 // }
 
-// /**
-//  * Implements bear_skin_css_alter function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements bear_skin_css_alter function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function bear_skin_css_alter(&$css) {
 //   // remove drupal's default message css
 //   unset($css['modules/system/system.messages.css']);
 //   unset($css['modules/system/system.menus.css']);
 //   unset($css['profiles/bear/themes/zen/system.menus.css']);
 
-//   // if css aggregation is off, include css as link tags
-//   // this allows livereload / guard to inject css
-//   // @Deprecated:    if (!variable_get('preprocess_css')) {
-//     // foreach ($css as $key => $value) {
-//     //   // Skip core files.
-//     //   $is_core = (strpos($value['data'], 'misc/') === 0 || strpos($value['data'], 'modules/') === 0);
-//     //   if (!$is_core) {
-//     //     // This option forces embeding with a link element.
-//     //     $css[$key]['preprocess'] = FALSE;
-//     //   }
-//     // }
-//   //}
+//   if css aggregation is off, include css as link tags
+//   this allows livereload / guard to inject css
+//   @Deprecated:    if (!variable_get('preprocess_css')) {
+//     foreach ($css as $key => $value) {
+//       // Skip core files.
+//       $is_core = (strpos($value['data'], 'misc/') === 0 || strpos($value['data'], 'modules/') === 0);
+//       if (!$is_core) {
+//         // This option forces embeding with a link element.
+//         $css[$key]['preprocess'] = FALSE;
+//       }
+//     }
+//   }
 // }
 
-// /**
-//  * Implements _bear_skin_number_to_text function.
-//  *
-//  * @param array <<any params>>
-//  *   <<describe the params and what they do here>>
-//  */
+/**
+ * Implements _bear_skin_number_to_text function.
+ *
+ * @param array <<any params>>
+ *   <<describe the params and what they do here>>
+ */
 // function _bear_skin_number_to_text($number) {
 //   $number = (int) $number;
 //   switch ($number) {
@@ -384,15 +360,15 @@
 //       return '';
 //   }
 // }
-// /**
-//  * Prepares variables for [description of status_messages] templates.
-//  *
-//  * Default template: status-messages.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_status_messages: the markup outputted by the original bear_skin_status_messages theme function.
-//  */
+/**
+ * Prepares variables for [description of status_messages] templates.
+ *
+ * Default template: status-messages.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_status_messages: the markup outputted by the original bear_skin_status_messages theme function.
+ */
 // function bear_skin_status_messages(&$Array) {
 //   $display = $variables['display'];
 //   $output = '';
@@ -419,21 +395,21 @@
 //   }
 //   $Array['bear_skin_status_messages'] = $output;
 // }
-// /**
-//  * The following could probably be moved to status-messages.html.twig:
-//  *   4 call(s) to t(); can also use t as a filter in Twig
-//  *   approximately 23 strings of markup
-//  */
+/**
+ * The following could probably be moved to status-messages.html.twig:
+ *   4 call(s) to t(); can also use t as a filter in Twig
+ *   approximately 23 strings of markup
+ */
 
-// /**
-//  * Prepares variables for [description of links__user_menu] templates.
-//  *
-//  * Default template: links--user-menu.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_links__user_menu: the markup outputted by the original bear_skin_links__user_menu theme function.
-//  */
+/**
+ * Prepares variables for [description of links__user_menu] templates.
+ *
+ * Default template: links--user-menu.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_links__user_menu: the markup outputted by the original bear_skin_links__user_menu theme function.
+ */
 // function bear_skin_links__user_menu(&$Array) {
 //   // add the ARIA role for accessibility
 //   $variables['attributes']['role'] = 'menubar';
@@ -448,20 +424,20 @@
 //   }
 //   $Array['bear_skin_links__user_menu'] = theme_links($variables);
 // }
-// /**
-//  * The following could probably be moved to links--user-menu.html.twig:
-//  *   approximately 13 strings of markup
-//  */
+/**
+ * The following could probably be moved to links--user-menu.html.twig:
+ *   approximately 13 strings of markup
+ */
 
-// /**
-//  * Prepares variables for [description of links] templates.
-//  *
-//  * Default template: links.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_links: the markup outputted by the original bear_skin_links theme function.
-//  */
+/**
+ * Prepares variables for [description of links] templates.
+ *
+ * Default template: links.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_links: the markup outputted by the original bear_skin_links theme function.
+ */
 // function bear_skin_links(&$Array) {
 //   // create a more unique CSS class for the menu
 //   if (!empty($variables['attributes']['class']) && is_array($variables['attributes']['class'])) {
@@ -486,22 +462,22 @@
 //       $link['attributes']['class'][] = $menu_class . '__link';
 //     }
 //   }
-//   // $Array['bear_skin_links'] = '<nav role="navigation" class="' . $menu_class . '">' . theme_links($variables) . '</nav>' . "\n";
+//   $Array['bear_skin_links'] = '<nav role="navigation" class="' . $menu_class . '">' . theme_links($variables) . '</nav>' . "\n";
 // }
-// /**
-//  * The following could probably be moved to links.html.twig:
-//  *   approximately 35 strings of markup
-//  */
+/**
+ * The following could probably be moved to links.html.twig:
+ *   approximately 35 strings of markup
+ */
 
-// /**
-//  * Prepares variables for [description of breadcrumb] templates.
-//  *
-//  * Default template: breadcrumb.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_breadcrumb: the markup outputted by the original bear_skin_breadcrumb theme function.
-//  */
+/**
+ * Prepares variables for [description of breadcrumb] templates.
+ *
+ * Default template: breadcrumb.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_breadcrumb: the markup outputted by the original bear_skin_breadcrumb theme function.
+ */
 // function bear_skin_breadcrumb(&$Array) {
 //   $breadcrumb = $variables['breadcrumb'];
 
@@ -521,21 +497,21 @@
 //   }
 //   $Array['bear_skin_breadcrumb'] = $crumbs;
 // }
-// /**
-//  * The following could probably be moved to breadcrumb.html.twig:
-//  *   1 call(s) to t(); can also use t as a filter in Twig
-//  *   approximately 20 strings of markup
-//  */
+/**
+ * The following could probably be moved to breadcrumb.html.twig:
+ *   1 call(s) to t(); can also use t as a filter in Twig
+ *   approximately 20 strings of markup
+ */
 
-// /**
-//  * Prepares variables for [description of item_list] templates.
-//  *
-//  * Default template: item-list.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_item_list: the markup outputted by the original bear_skin_item_list theme function.
-//  */
+/**
+ * Prepares variables for [description of item_list] templates.
+ *
+ * Default template: item-list.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_item_list: the markup outputted by the original bear_skin_item_list theme function.
+ */
 // function bear_skin_item_list(&$Array) {
 //   $items = $variables['items'];
 //   $title = $variables['title'];
@@ -585,45 +561,45 @@
 //     }
 //   }
 
-//   // if ($pager) {
-//   //   $Array['bear_skin_item_list'] = '<nav class="' . $list_class . '" role="navigation" aria-label="Pagination">' . theme_item_list($variables) . '</nav>' . "\n";
-//   // }
-//   // else {
-//   //   $Array['bear_skin_item_list'] = theme_item_list($variables);
-//   // }
-// }
-// /**
-//  * The following could probably be moved to item-list.html.twig:
-//  *   approximately 41 strings of markup
-//  */
+//   if ($pager) {
+//     $Array['bear_skin_item_list'] = '<nav class="' . $list_class . '" role="navigation" aria-label="Pagination">' . theme_item_list($variables) . '</nav>' . "\n";
+//   }
+//   else {
+//     $Array['bear_skin_item_list'] = theme_item_list($variables);
+//   }
+//}
+/**
+ * The following could probably be moved to item-list.html.twig:
+ *   approximately 41 strings of markup
+ */
 
-// /**
-//  * Prepares variables for [description of menu_tree] templates.
-//  *
-//  * Default template: menu-tree.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_menu_tree: the markup outputted by the original bear_skin_menu_tree theme function.
-//  */
+/**
+ * Prepares variables for [description of menu_tree] templates.
+ *
+ * Default template: menu-tree.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_menu_tree: the markup outputted by the original bear_skin_menu_tree theme function.
+ */
 // function bear_skin_menu_tree(&$Array) {
 //   $role = ($variables['menu_depth'] === 'top' || $variables['menu_depth'] === 'one') ? 'menubar' : 'menu';
 //   $Array['bear_skin_menu_tree'] = '<ul class="menu ' . $variables['menu_name'] . '--level-' . $variables['menu_depth'] . '" role="' . $role . '">' . $variables['tree'] . '</ul>';
 // }
-// /**
-//  * The following could probably be moved to menu-tree.html.twig:
-//  *   approximately 14 strings of markup
-//  */
+/**
+ * The following could probably be moved to menu-tree.html.twig:
+ *   approximately 14 strings of markup
+ */
 
-// /**
-//  * Prepares variables for [description of menu_local_task] templates.
-//  *
-//  * Default template: menu-local-task.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_menu_local_task: the markup outputted by the original bear_skin_menu_local_task theme function.
-//  */
+/**
+ * Prepares variables for [description of menu_local_task] templates.
+ *
+ * Default template: menu-local-task.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_menu_local_task: the markup outputted by the original bear_skin_menu_local_task theme function.
+ */
 // function bear_skin_menu_local_task(&$Array) {
 //   $type = $class = FALSE;
 
@@ -669,21 +645,21 @@
 
 //   $Array['bear_skin_menu_local_task'] = '<li' . ($class ? ' class="' . $class . '"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . "</li>\n";
 // }
-// /**
-//  * The following could probably be moved to menu-local-task.html.twig:
-//  *   2 call(s) to t(); can also use t as a filter in Twig
-//  *   approximately 46 strings of markup
-//  */
+/**
+ * The following could probably be moved to menu-local-task.html.twig:
+ *   2 call(s) to t(); can also use t as a filter in Twig
+ *   approximately 46 strings of markup
+ */
 
-// /**
-//  * Prepares variables for [description of menu_local_tasks] templates.
-//  *
-//  * Default template: menu-local-tasks.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_menu_local_tasks: the markup outputted by the original bear_skin_menu_local_tasks theme function.
-//  */
+/**
+ * Prepares variables for [description of menu_local_tasks] templates.
+ *
+ * Default template: menu-local-tasks.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_menu_local_tasks: the markup outputted by the original bear_skin_menu_local_tasks theme function.
+ */
 // function bear_skin_menu_local_tasks(&$Array) {
 //   $output = '';
 
@@ -716,22 +692,22 @@
 
 //   $Array['bear_skin_menu_local_tasks'] = $output;
 // }
-// /**
-//  * The following could probably be moved to menu-local-tasks.html.twig:
-//  *   2 call(s) to drupal_render()
-//  *   2 call(s) to t(); can also use t as a filter in Twig
-//  *   approximately 38 strings of markup
-//  */
+/**
+ * The following could probably be moved to menu-local-tasks.html.twig:
+ *   2 call(s) to drupal_render()
+ *   2 call(s) to t(); can also use t as a filter in Twig
+ *   approximately 38 strings of markup
+ */
 
-// /**
-//  * Prepares variables for [description of field] templates.
-//  *
-//  * Default template: field.html.twig.
-//  *
-//  * @param array $Array
-//  *   An associative array containing:
-//  *   - bear_skin_field: the markup outputted by the original bear_skin_field theme function.
-//  */
+/**
+ * Prepares variables for [description of field] templates.
+ *
+ * Default template: field.html.twig.
+ *
+ * @param array $Array
+ *   An associative array containing:
+ *   - bear_skin_field: the markup outputted by the original bear_skin_field theme function.
+ */
 // function bear_skin_field(&$Array) {
 //   // create a CSS class
 //   // the type of object this field is inside
@@ -778,9 +754,9 @@
 
 //   $Array['bear_skin_field'] = $output;
 // }
-// /**
-//  * The following could probably be moved to field.html.twig:
-//  *   2 call(s) to drupal_render()
-//  *   approximately 64 strings of markup
-//  */
+/**
+ * The following could probably be moved to field.html.twig:
+ *   2 call(s) to drupal_render()
+ *   approximately 64 strings of markup
+ */
 
