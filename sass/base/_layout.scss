@@ -32,6 +32,28 @@ body {
   display: inline-block;
 }
 
+// ***********************
+// Sticky Footer (flexbox)
+//************************
+
+body.with-sticky-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+body.with-sticky-footer.wrapper--main {
+  position: relative;
+  -webkit-box-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+}
+
 //
 // Left Sidebar
 //
