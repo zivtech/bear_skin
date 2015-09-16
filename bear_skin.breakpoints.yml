@@ -1,0 +1,18 @@
+bearskin.small-width:
+  label: small
+  mediaQuery: '(min-width: 0px)'
+  weight: 2
+  multipliers:
+    - 1x
+bearskin.medium-width:
+  label: medium
+  mediaQuery: 'all and (min-width: 400px) and (max-width: 800px)'
+  weight: 1
+  multipliers:
+    - 1x
+bearskin.large-width:
+  label: large
+  mediaQuery: 'all and (min-width: 1000px)'
+  weight: 0
+  multipliers:
+    - 1x

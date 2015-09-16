@@ -120,11 +120,11 @@
 
 <div class="wrapper wrapper--footer">
   <div class="breadcrumbs-wrapper">
-    <?php print $breadcrumb;?>
+    {{ page.breadcrumb }}
   </div>
   <div class="site-footer">
      <footer id="footer">
-      <?php print render($page['footer']);?>
+      {{ page.footer }}
     </footer>
   </div>
 </div>

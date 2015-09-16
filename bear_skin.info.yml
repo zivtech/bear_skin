@@ -29,7 +29,3 @@ settings:
   responsive_nav: '1'
   sticky_navbar: '0'
   sticky_footer: '0'
-
-parameters:
-  twig.config:
-    debug: true 
