@@ -20,6 +20,9 @@ h4 {
 h5 {
   font-size: 1.2rem; }
 
+img {
+  max-width: 100%; }
+
 #header {
   position: relative; }
   #header .region-navigation {
@@ -201,12 +204,20 @@ nav.main-menu .menu .main-menu--level-three {
     list-style-type: none;
     font-size: 1.5rem; }
 
+.sidebar {
+  font-size: 90%; }
+
 .field-collection-view {
   margin: 0; }
 
+#footer .block-menu {
+  float: left;
+  margin: 0 50px 0 0; }
+
 #footer ul {
-  margin: 0 0 20px 0;
-  padding: 0; }
+  margin: 0;
+  padding: 0;
+  display: inline-block; }
   #footer ul li {
     list-style-type: none; }
     #footer ul li a {
