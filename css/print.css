@@ -445,7 +445,7 @@ blockquote {
   background-color: #eaeaea; }
 
 @media (max-width: 75em) {
-  .wrapper {
+  .wrapper:not(.wrapper--footer) {
     padding: 0 20px; } }
 
 @media (min-width: 50em) {

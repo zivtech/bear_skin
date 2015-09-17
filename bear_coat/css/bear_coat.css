@@ -38,21 +38,23 @@ h5 {
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
   background: #f5f5f5;
   height: 125px;
-  z-index: 100;
-  transition: height 0.3s ease-in-out; }
+  z-index: 100; }
   .wrapper--header .site-header__logo {
     display: block;
-    transition: all 0.3s ease-in-out;
     width: 120px;
     float: left; }
   .wrapper--header .site-header__logo img {
-    width: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    max-height: 88px;
+    transition: all 0.1s ease-in-out; }
   .wrapper--header.compressed {
     height: 55px;
     padding: 10px 0; }
     .wrapper--header.compressed .site-header__logo {
-      width: 50px; }
+      max-width: 50px;
+      max-height: 40px; }
+      .wrapper--header.compressed .site-header__logo img {
+        max-height: 38px; }
 
 .wrapper--main {
   padding-top: 125px; }
@@ -199,6 +201,23 @@ nav.main-menu .menu .main-menu--level-three {
     list-style-type: none;
     font-size: 1.5rem; }
 
+.field-collection-view {
+  margin: 0; }
+
+#footer ul {
+  margin: 0 0 20px 0;
+  padding: 0; }
+  #footer ul li {
+    list-style-type: none; }
+    #footer ul li a {
+      color: white; }
+      #footer ul li a:hover {
+        color: #728EAD; }
+      #footer ul li a:active {
+        color: #728EAD; }
+      #footer ul li a:focus {
+        color: #728EAD; }
+
 .ui.form {
   padding: 0;
   font-size: 16px; }
@@ -219,3 +238,6 @@ nav.main-menu .menu .main-menu--level-three {
   .ui.form .ui.dropdown .menu > .item {
     font-size: 14px;
     padding-left: 1.1em !important; }
+  @media (max-width: 75em){
+  .breadcrumbs-wrapper{
+    padding: 0 20px; } }
