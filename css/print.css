@@ -127,7 +127,7 @@ body.with-sticky-footer {
   -ms-flex-direction: column;
       flex-direction: column; }
 
-body.with-sticky-footer.wrapper--main {
+body.with-sticky-footer .wrapper--main {
   position: relative;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;

@@ -46,7 +46,7 @@ body.with-sticky-footer {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-body.with-sticky-footer.wrapper--main {
+body.with-sticky-footer .wrapper--main {
   position: relative;
   -webkit-box-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
