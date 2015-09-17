@@ -34,7 +34,9 @@
       });
 
       // Material (would be better to add markup to form elements, but going faster here)
-      $('select').dropdown();
+      if(jQuery().semantic) {
+        $('select').dropdown();
+      }
    }
   };
 
