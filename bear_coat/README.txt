@@ -11,6 +11,8 @@ reinstall gulp: sudo npm install gulp -g
 
 After the process finishes, you'll be able to run all the gulp tasks (see below).
 
+Make sure to enable the bear_skin sub theme to have access to panel templates, or duplicate the panel-layouts folder in the bear_coat root folder.
+
 
 Gulp tasks
 ------------
