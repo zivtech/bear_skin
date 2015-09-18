@@ -1,0 +1,68 @@
+//
+// Mixins
+//
+@mixin form-container($margin: $form-input-container-margin) {
+  @include cf;
+  margin: $margin;
+  width: 100%;
+  float: none;
+}
+
+@mixin form-element($padding: $form-input-padding, $color: $form-input-font-color, $bg-color: $form-input-bg-color, $border-color: $form-input-border-color) {
+  color: $color;
+  background-color: $bg-color;
+  padding: $padding;
+  border: $border-color 1px solid;
+  border-radius: $border-radius;
+
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+  &:focus {
+    border: 1px solid $form-input-active-color;
+  }
+
+  &.error {
+    border: 1px solid $color-error;
+  }
+}
+
+
+//
+// CSS classes
+//
+
+.ui.form,
+.ui.search-form {
+  padding: 0;
+  font-size: 16px;
+  .views-exposed-form .views-exposed-widget {
+    float: none;
+  }
+  .form-item, 
+  fieldset {
+    max-width: 600px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  legend {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  label {
+    font-size: 16px;
+    display: block;
+    clear: both;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: $zivtech-dark;
+  } 
+  .ui.dropdown .menu {
+    > .item {
+      font-size: 14px;
+      padding-left: 1.1em !important;
+    }
+  }
+}

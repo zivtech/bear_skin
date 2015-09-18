@@ -1,0 +1,21 @@
+.main__content .column {
+  &.right {
+    padding-left: 50px;
+  }
+  &.left {
+    padding-right: 50px;
+  }
+}
+
+.breadcrumbs-wrapper {
+  @include cf;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  @include breakpoint($breakpoint-full-width) {
+    padding: 0 20px;
+  }
+}
+
+.field-collection-view {
+  margin: 0;
+}

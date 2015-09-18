@@ -1,0 +1,103 @@
+//
+// Table mixin
+//
+@mixin table($striped: true, $bordered: false, $celled: false) {
+  max-width: 100% !important;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: transparent;
+  border: none;
+
+  @if ($bordered) {
+    border: $table-border;
+    border-radius: $table-border-radius;
+  }
+
+  th {
+    background-color: $table-header-bg-color;
+    color: $table-header-font-color;
+    font-weight: $table-header-font-weight;
+    vertical-align: $table-header-vertical-align;
+    text-transform: $table-header-text-transform;
+    padding: $table-cell-padding;
+    border: none;
+
+    @if ($bordered) {
+      border-bottom: $table-cell-border;
+    }
+
+    @if ($bordered and $celled) {
+      border-left: $table-cell-border;
+
+      &:first-child,
+      &:first-of-type {
+        border-left: none;
+      }
+    }
+  }
+
+  tr {
+    transition: $table-row-transition;
+    background-color: transparent;
+
+    @if ($striped) {
+      &:nth-child(2n),
+      &.even {
+        background-color: $table-row-alt-bg-color;
+      }
+      &:nth-child(2n + 1),
+      &.odd {
+        background-color: $table-row-bg-color;
+      }
+    }
+    &:hover {
+      background-color: $table-row-hover-color;
+      color: darken($table-cell-font-color, 15%);
+    }
+  }
+
+  td {
+    padding: $table-cell-padding;
+    vertical-align: $table-cell-vertical-align;
+    text-align: $table-cell-text-align;
+    background-color: transparent;
+    border: none;
+
+    @if ($celled) {
+      border-left: $table-cell-border;
+      border-bottom: $table-cell-border;
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  @if ($celled) {
+    tr:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@mixin table-responsive($bp: $breakpoint-min-width) {
+  @include breakpoint($bp) {
+    tbody,
+    tr,
+    th,
+    td {
+      display: block !important;
+      width: auto !important;
+    }
+
+    td {
+      background-color: transparent !important;
+    }
+  }
+}
+
+//
+// CSS classes
+//

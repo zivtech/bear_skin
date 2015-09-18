@@ -1,0 +1,29 @@
+.wrapper--footer {
+  border-top: 1px solid #dedede;
+}
+
+.site-footer {
+  background: $zivtech-off-black;
+  color: #fff;
+  footer {
+    padding: 30px 20px;
+  }
+}
+
+#footer {
+  .block-menu {
+    float: left;
+    margin: 0 50px 0 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    li {
+      list-style-type: none;
+      a {
+        @include link-colors($zivtech-white, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
+      }
+    }
+  }
+}

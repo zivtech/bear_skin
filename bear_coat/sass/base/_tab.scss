@@ -1,0 +1,50 @@
+//
+// Mixins
+//
+@mixin tab-container() {
+  @include cf;
+  position: relative;
+  height: $tabs-height;
+  background-color: $tabs-container-bg-color;
+  width: 100%;
+  padding: 0;
+  margin: $tabs-container-margin;
+  border-bottom: 1px solid $tabs-border-color;
+  white-space: nowrap;
+}
+
+@mixin tab($font-color: $base-font-color) {
+  display: block;
+  float: left;
+  text-align: center;
+  background-color: $tabs-bg-color;
+  line-height: $tabs-height;
+  height: $tabs-height;
+  padding: 0;
+  border-top-left-radius: $tabs-border-radius;
+  border-top-right-radius: $tabs-border-radius;
+  border-right: 1px solid $tabs-border-color;
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: $tabs-bg-color-hover;
+  }
+}
+
+@mixin tab-link($font-color: $base-font-color) {
+  color: $font-color;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: color 0.3s ease;
+  padding: 0 1em;
+  &:hover {
+    color: lighten($font-color, 10%);
+  }
+  &.active {
+    border-bottom: 1px solid $font-color;
+  }
+}
+
+//
+// CSS classes
+//

@@ -1,0 +1,45 @@
+//
+// Mixins
+//
+@mixin alert($color: lighten($color-primary, 25%), $font-color: $alert-font-color, $padding: $alert-padding, $radius: $alert-border-radius) {
+  $darker-color: darken($color, 10%);
+  padding: $padding;
+  border-radius: $radius;
+  background-color: $color;
+  color: $font-color;
+  border: 1px solid $darker-color;
+  border-left-width: 10px;
+  margin: 1em 0;
+
+  a {
+    @include link-colors($font-color, $font-color);
+    border-bottom: 1px dotted $font-color;
+  }
+}
+
+//
+// Reusable classes
+//
+%alert {
+  @include alert;
+}
+
+%alert-error {
+  
+}
+
+%alert-success {
+ 
+}
+
+%alert-warning {
+  
+}
+
+
+//
+// CSS Classes
+//
+.messages {
+  
+}

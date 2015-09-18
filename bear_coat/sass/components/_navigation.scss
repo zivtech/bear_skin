@@ -1,0 +1,125 @@
+nav.wrapper--breadcrumbs {
+  padding: 20px 0;
+}
+nav.main-menu {
+  .main-menu__link {
+    font-family: 'Droid Sans', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all .2s ease-in-out;
+    border-radius: 6px;
+    font-size: 14px;
+    &:hover,
+    &:focus,
+    &.active {
+      background: $zivtech-dark;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .main-menu--level-one {
+    > li {
+      padding: 20px 0;
+      &:hover {
+        .main-menu--level-two {
+          top: 65px;
+          opacity: .9;
+        }
+      } 
+    }
+    li.parent {
+      &:after {
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $zivtech-dark;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -30px;
+        transition: all .2s ease-in-out;
+        opacity: 0;
+      }
+      &:hover {
+        &:after {
+          opacity: .8;
+          bottom: 5px;
+        }
+      }
+      ul.menu {
+        border-radius: 8px;
+        background: $zivtech-off-black;
+        border: 0;
+        li {
+          margin-bottom: 8px;
+          padding: 0 10px;
+          a {
+            @include link-colors($zivtech-white, $hover: $zivtech-pale, $active: $zivtech-pale, $focus: $zivtech-pale);
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        .main-menu__link {
+          text-transform: initial;
+          margin-bottom: 0;
+          &:hover,
+          &:focus,
+          &.active {
+            background: transparent;
+            color: $zivtech-blue;
+          }
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    .main-menu--level-two {
+      top: 100px;
+      transition: all .2s ease-in-out;
+      opacity: 0;
+      a {
+        position : relative;
+      }
+      li.parent > a:after,
+      li.parent:hover > a:after {
+        content: "";
+        height: 0; 
+        width: 0; 
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent; 
+        border-left: 5px solid $zivtech-white;
+        @include align(v);
+        right: -5px;
+        bottom: 0;
+        left: inherit;
+        margin: 3px 0 0 0;
+        display: inline-block !important;
+        opacity: 1 !important;
+      }
+      li.parent:after {
+        display: none;
+      }
+    }
+    .main-menu--level-three {
+      top: -10px;
+    }
+  }
+}
+.nav-user__list {
+  right: 0;
+  margin: 0;
+  padding: 0;
+  @include align(v);
+  li {
+    list-style-type: none;
+    font-size: 1.5rem;
+  }
+}

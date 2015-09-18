@@ -1,0 +1,136 @@
+$header-height: 125px;
+$header-compressed-height: 55px;
+$logo-width: 120px;
+
+@mixin compressHeader {// compressed herder (mobile and scroll)
+  height: $header-compressed-height;
+  padding: 10px 20px;
+  .site-header__logo {
+    max-width: 50px;
+    max-height: 40px;
+    img {
+      max-height: 38px;
+    }
+  }
+  #header {
+    .block-search,
+    .block-views {
+      input.form-text {
+        padding: .4em 1em;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#header {
+  position: relative;
+  height: 100%;
+  .region-navigation {
+    @include align(v);
+  }
+  #sidr-wrapper-0 {// this is what we use for our responsive menu
+    $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
+    margin-left: 20px;
+    #sidr-0-button {
+      display: block;
+      width: 25px;
+      height: 30px;
+      position: relative;
+    }
+    span {
+      display: block;
+      position: relative;
+      background: $zivtech-dark;
+      height: 3px;
+      transition: $span-transition;
+      width: 25px;
+      top: 13px;
+      &:before, &:after {
+        content: "";
+        display: block;
+        background: $zivtech-dark;
+        height: 3px;
+        margin-top: 0;
+        position: absolute;
+        width: 25px;
+        transition: $span-transition;
+      }
+      &:before {
+        top: 8px;
+      }
+      &:after {
+        top: -8px;
+      }
+    }
+  }
+}
+
+body.sidr-open {
+  #header #sidr-wrapper-0 span {
+    background: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.wrapper--header {
+  position: fixed;
+  width: 100%;
+  -webkit-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.1));
+  filter: url('../images/shadow.svg#drop-shadow');
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
+  background: #f5f5f5;
+  z-index: 100;
+  transition: all .3s ease-in-out;
+  @include compressHeader;
+  @include breakpoint($breakpoint-medium-width) {
+    padding: 20px 0;
+    height: $header-height;
+    .site-header__logo {
+      display: block;
+      width: $logo-width;
+      max-width: 100%;
+      float: left;
+    }
+    .site-header__logo img {
+      max-width: 100%;
+      max-height: 88px;
+      transition: all .2s ease-in-out;
+      height: auto;
+    }
+    &.compressed {
+      @include compressHeader;
+    }
+  }
+}
+
+.wrapper--main {
+  padding-top: $header-height;
+  .site-info {
+    padding-top: 30px;
+  }
+}
+
+#header {
+  .block-search,
+  .block-views {
+    @include align(v);
+    right: 0;
+    input.form-text {
+      transition: width .5s ease-in-out;
+      width: 130px !important;
+      &:focus {
+        width: 250px !important;
+      }
+    }
+  }
+}
