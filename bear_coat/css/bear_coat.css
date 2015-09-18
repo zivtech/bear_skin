@@ -59,6 +59,10 @@ img {
       max-height: 40px; }
       .wrapper--header.compressed .site-header__logo img {
         max-height: 38px; }
+    .wrapper--header.compressed #header .block-search input.form-text,
+    .wrapper--header.compressed #header .block-views input.form-text {
+      padding: 0.4em 1em;
+      font-size: 14px; }
 
 .wrapper--main {
   padding-top: 125px; }
@@ -211,6 +215,22 @@ nav.main-menu .menu .main-menu--level-three {
 .field-collection-view {
   margin: 0; }
 
+#header .block-search,
+#header .block-views {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0; }
+  #header .block-search input.form-text,
+  #header .block-views input.form-text {
+    transition: width 0.5s ease-in-out;
+    width: 130px !important; }
+    #header .block-search input.form-text:focus,
+    #header .block-views input.form-text:focus {
+      width: 250px !important; }
+
 #footer .block-menu {
   float: left;
   margin: 0 50px 0 0; }
@@ -230,24 +250,34 @@ nav.main-menu .menu .main-menu--level-three {
       #footer ul li a:focus {
         color: #728EAD; }
 
-.ui.form {
+.ui.form,
+.ui.search-form {
   padding: 0;
   font-size: 16px; }
+  .ui.form .views-exposed-form .views-exposed-widget,
+  .ui.search-form .views-exposed-form .views-exposed-widget {
+    float: none; }
   .ui.form .form-item,
-  .ui.form fieldset {
+  .ui.form fieldset,
+  .ui.search-form .form-item,
+  .ui.search-form fieldset {
     max-width: 600px;
-    position: relative; }
-  .ui.form legend {
+    position: relative;
+    margin-bottom: 20px; }
+  .ui.form legend,
+  .ui.search-form legend {
     font-size: 16px;
     margin-left: 0; }
-  .ui.form label {
+  .ui.form label,
+  .ui.search-form label {
     font-size: 16px;
     display: block;
     clear: both;
     margin-bottom: 5px;
     font-weight: normal;
     color: #261D19; }
-  .ui.form .ui.dropdown .menu > .item {
+  .ui.form .ui.dropdown .menu > .item,
+  .ui.search-form .ui.dropdown .menu > .item {
     font-size: 14px;
     padding-left: 1.1em !important; }
   @media (max-width: 75em){

@@ -1,6 +1,7 @@
 <?php
 
 // Turn on and off preprocess functions
+require_once dirname(__FILE__) . '/preprocess/html.preprocess.inc';
 // require_once dirname(__FILE__) . '/preprocess/utils.inc';
 // require_once dirname(__FILE__) . '/preprocess/breadcrumb.inc';
 require_once dirname(__FILE__) . '/preprocess/form.inc';
@@ -14,7 +15,8 @@ require_once dirname(__FILE__) . '/preprocess/form.inc';
 /**
  * Implements hook_css_alter().
  */
-function semanticui_css_alter(&$css) {
+
+function bear_coat_css_alter(&$css) {
   $exclude = array(
     'modules/aggregator/aggregator.css' => FALSE,
     'modules/comment/comment.css' => FALSE,

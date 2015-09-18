@@ -85,6 +85,15 @@ $logo-width: 120px;
         max-height: 38px;
       }
     }
+    #header {
+      .block-search,
+      .block-views {
+        input.form-text {
+          padding: .4em 1em;
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
 .wrapper--main {
@@ -268,6 +277,25 @@ nav.main-menu {
 }
 
 //*******
+// Header
+//*******
+
+#header {
+  .block-search,
+  .block-views {
+    @include align(v);
+    right: 0;
+    input.form-text {
+      transition: width .5s ease-in-out;
+      width: 130px !important;
+      &:focus {
+        width: 250px !important;
+      }
+    }
+  }
+}
+
+//*******
 // Footer
 //*******
 
@@ -293,13 +321,18 @@ nav.main-menu {
 // Form elements
 //**************
 
-.ui.form {
+.ui.form,
+.ui.search-form {
   padding: 0;
   font-size: 16px;
+  .views-exposed-form .views-exposed-widget {
+    float: none;
+  }
   .form-item, 
   fieldset {
     max-width: 600px;
     position: relative;
+    margin-bottom: 20px;
   }
   legend {
     font-size: 16px;

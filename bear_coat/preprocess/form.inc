@@ -80,6 +80,7 @@ function bear_coat_form_alter(array &$form, array &$form_state = array(), $form_
     }
   }
   // Add default class to form.
+  $form['actions']['submit']['#attributes']['class'][] = 'huge';
   $form['actions']['submit']['#attributes']['class'][] = 'ui';
   $form['actions']['submit']['#attributes']['class'][] = 'button';
 }
@@ -88,44 +89,7 @@ function bear_coat_form_alter(array &$form, array &$form_state = array(), $form_
  * Implements hook_form_FORM_ID_alter().
  */
 function bear_coat_form_comment_form_alter(&$form, &$form_state) {
-  // Hide "Your name" field.
-  $form['author']['_author']['#access'] = FALSE;
-  $form['actions']['submit']['#attributes']['class'][] = 'primary';
-  $form['actions']['submit']['#attributes']['class'][] = 'labeled';
-  $form['actions']['submit']['#attributes']['class'][] = 'submit';
-  $form['actions']['submit']['#attributes']['class'][] = 'icon';
-
-  $form['#after_build'][] = 'bear_coat_comments_after_build';
-}
-
-/**
- * After build function for the Comment form.
- *
- * Updates attributes that are not populated in the hook_form_alter().
- */
-function bear_coat_comments_after_build($form, &$form_state) {
-  if (isset($form['comment_body'])) {
-    // Move filter hint to Semantic UI popup.
-    $language = $form['comment_body']['#language'];
-    $form['comment_body'][$language][0]['format']['#attributes']['class'][] = 'ui';
-    $form['comment_body'][$language][0]['format']['#attributes']['class'][] = 'popup';
-    $form['comment_body'][$language][0]['value']['#title'] .= '<i class="help circle icon"></i>';
-    $form['comment_body'][$language][0]['#attached']['js'][] = drupal_get_path('theme', 'bear_coat') . '/js/comments.js';
-    // Add "field" class, so Semantic UI will add a margin.
-    $form['comment_body']['#attributes']['class'][] = 'field';
-  }
-
-  // Update submit button to use label inside.
-  if (($key = array_search('button', $form['actions']['submit']['#theme_wrappers'])) !== FALSE) {
-    unset($form['actions']['submit']['#theme_wrappers'][$key]);
-    $form['actions']['submit']['#theme_wrappers'][] = 'labeled_button';
-  }
-  $form['actions']['submit']['#label'] = array(
-    '#prefix' => '<i class="icon edit"></i>',
-    '#markup' => t('Add Comment'),
-  );
-
-  return $form;
+  
 }
 
 /**
@@ -152,6 +116,16 @@ function bear_coat_search_block_input_wrapper(&$variables) {
   );
 
   return drupal_render($input_wrapper);
+}
+
+function bear_coat_form_views_exposed_form_alter(&$form, $form_state) {
+  if ($form['#id'] == 'views-exposed-form-site-search-panel-pane-1') { //change this to whatever form ID is outputed by your view
+    $form['#attributes']['class'] =  array('ui', 'search-form');
+    $form['query']['#attributes']['placeholder'] = t('Search...');
+    $form['query']['#attributes']['class'][] = 'prompt';
+    $form['query']['#field_suffix'] = '<i class="search icon"></i>';
+    $form['submit']['#attributes']['class'][] = 'element-invisible';
+  }
 }
 
 /**
@@ -201,6 +175,10 @@ function bear_coat_form_element($variables) {
   if (!empty($element['#name'])) {
     $attributes['class'][] = drupal_html_class('form-item-' . $element['#name']);
   }
+  // for exposed filter search fields
+  if ($element['#name'] == "query") {
+    $attributes['class'] = array('ui', 'fluid', 'search', 'icon', 'input');
+  }
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
     $attributes['class'][] = 'disabled';
@@ -235,9 +213,6 @@ function bear_coat_form_element($variables) {
     elseif ($element['#type'] == 'file') {
       $attributes['class'][] = 'ui';
       $attributes['class'][] = 'input';
-    }
-    else {
-      $attributes['class'][] = 'form';
     }
   }
 

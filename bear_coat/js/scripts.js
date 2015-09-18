@@ -34,9 +34,17 @@
       });
 
       // Material (would be better to add markup to form elements, but going faster here)
-      if(jQuery().semantic) {
+      if ($('body').hasClass('semantic-ui')) {
         $('select').dropdown();
       }
+
+      // Markup/Dom modifs
+      $('.field-suffix').each(function(){
+        $(this)
+          .contents()
+          .unwrap();
+      });
+      
    }
   };
 
