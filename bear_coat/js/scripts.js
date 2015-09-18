@@ -39,10 +39,25 @@
       }
 
       // Markup/Dom modifs
+
+      // removing annoying markup 
       $('.field-suffix').each(function(){
         $(this)
           .contents()
           .unwrap();
+      });
+
+      // adding a class to empty p to remove margin/padding
+      // removing extra space if empty as well
+      var $allP = $('#content p');
+      $allP.filter(function () {
+        var html = $(this).html();
+        if(html == '' || html == '&nbsp;')
+        return true;
+      }).addClass('emptyP');
+      var $emptyP = $('#content p.emptyP');
+      $emptyP.html(function (i,h) {
+        return h.replace(/&nbsp;/g,'');
       });
       
    }
