@@ -83,7 +83,7 @@ img {
 .site-footer {
   background: #404040;
   color: #fff; }
-  .site-footer footer {
+  .site-footer .region-footer {
     padding: 30px 20px; }
 
 #footer .block-menu {
