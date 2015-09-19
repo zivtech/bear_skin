@@ -36,6 +36,8 @@
       // Material (would be better to add markup to form elements, but going faster here)
       if ($('body').hasClass('semantic-ui')) {
         $('select').dropdown();
+        $('.ui.accordion').accordion();
+        $('.tabular.menu .item').tab();
       }
 
       // Markup/Dom modifs

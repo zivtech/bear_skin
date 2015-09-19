@@ -1,8 +1,7 @@
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
 .ui.form,
 .ui.search-form {
-  padding: 0;
-  font-size: 16px; }
+  padding: 0; }
   .ui.form .views-exposed-form .views-exposed-widget,
   .ui.search-form .views-exposed-form .views-exposed-widget {
     float: none; }
@@ -15,11 +14,9 @@
     margin-bottom: 20px; }
   .ui.form legend,
   .ui.search-form legend {
-    font-size: 16px;
     margin-left: 0; }
   .ui.form label,
   .ui.search-form label {
-    font-size: 16px;
     display: block;
     clear: both;
     margin-bottom: 5px;
@@ -73,6 +70,9 @@ h5 {
 img {
   max-width: 100%;
   height: 100%; }
+
+.ui.menu {
+  font-size: 100%; }
 
 .sidebar {
   font-size: 90%; }
@@ -313,10 +313,15 @@ nav.main-menu .menu .main-menu--level-three {
   .nav-user__list li {
     list-style-type: none;
     font-size: 1.5rem; }
-  @media (max-width: 75em){
+
+.panel-pane {
+  margin-bottom: 30px; }
+
+@media (max-width: 75em){
   .breadcrumbs-wrapper{
     padding: 0 20px; } }
-  @media (min-width: 50em){
+
+@media (min-width: 50em){
   .wrapper--header{
     padding: 20px 0;
     height: 125px; }

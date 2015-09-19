@@ -37,7 +37,6 @@
 .ui.form,
 .ui.search-form {
   padding: 0;
-  font-size: 16px;
   .views-exposed-form .views-exposed-widget {
     float: none;
   }
@@ -48,11 +47,9 @@
     margin-bottom: 20px;
   }
   legend {
-    font-size: 16px;
     margin-left: 0;
   }
   label {
-    font-size: 16px;
     display: block;
     clear: both;
     margin-bottom: 5px;
