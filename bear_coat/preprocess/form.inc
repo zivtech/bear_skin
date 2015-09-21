@@ -86,13 +86,6 @@ function bear_coat_form_alter(array &$form, array &$form_state = array(), $form_
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- */
-function bear_coat_form_comment_form_alter(&$form, &$form_state) {
-  
-}
-
-/**
  * Theme function for block search input.
  */
 function bear_coat_search_block_input_wrapper(&$variables) {

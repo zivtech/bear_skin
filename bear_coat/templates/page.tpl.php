@@ -61,6 +61,12 @@
 
       <a id="main-content"></a>
 
+      <?php if(isset($loginpopup)){
+          print render($loginpopup);
+          print '<a class="loginpopup item floated" href="#">Login</a>';
+        }
+    ?>
+
       <?php if (!empty($title)): ?>
         <?php print render($title_prefix);?>
         <h1 class="main__title" role="heading"><?php print $title;?></h1>

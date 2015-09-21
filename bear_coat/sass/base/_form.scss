@@ -34,9 +34,13 @@
 // CSS classes
 //
 
-.ui.form,
-.ui.search-form {
+body.semantic-ui .ui.form,
+body.semantic-ui .ui.search-form {
+  font-family: $body-text-font-family;
   padding: 0;
+  input {
+    font-family: $body-text-font-family;
+  }
   .views-exposed-form .views-exposed-widget {
     float: none;
   }
@@ -49,17 +53,26 @@
   legend {
     margin-left: 0;
   }
+  .description {
+    font-size: 90%;
+    color: $bear-lighten-dark;
+  }
   label {
     display: block;
     clear: both;
     margin-bottom: 5px;
     font-weight: normal;
-    color: $zivtech-dark;
+    color: $zivtech-brown-gray;
   } 
   .ui.dropdown .menu {
     > .item {
       font-size: 14px;
       padding-left: 1.1em !important;
     }
+  }
+  &.segment {
+    border: 0;
+    margin: 0;
+    padding: 20px;
   }
 }

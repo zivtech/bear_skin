@@ -38,6 +38,9 @@
         $('select').dropdown();
         $('.ui.accordion').accordion();
         $('.tabular.menu .item').tab();
+        $('.loginpopup').click(function(){
+          $(".ui.modal.login").modal("show");
+        });
       }
 
       // Markup/Dom modifs

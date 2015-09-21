@@ -67,8 +67,15 @@ img {
   max-width: 100%;
   height: 100%;
 }
-.ui.menu {
-  font-size: 100%;
+body.semantic-ui { 
+  .ui {
+    font-size: 100%;
+    .field {
+      > label {
+        font-size: 100%;
+      }
+    }
+  }
 }
 .sidebar {
   font-size: 90%;

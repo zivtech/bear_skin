@@ -37,4 +37,3 @@ function bear_coat_preprocess_html(&$vars) {
       drupal_set_message(t('Semantic UI requires at least jQuery 1.7. Please enable it by <a href="/admin/config/development/jquery_update/">clicking here</a>.'), 'error');
   }
 }
-

@@ -1,31 +1,44 @@
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
-.ui.form,
-.ui.search-form {
+body.semantic-ui .ui.form,
+body.semantic-ui .ui.search-form {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   padding: 0; }
-  .ui.form .views-exposed-form .views-exposed-widget,
-  .ui.search-form .views-exposed-form .views-exposed-widget {
+  body.semantic-ui .ui.form input,
+  body.semantic-ui .ui.search-form input {
+    font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  body.semantic-ui .ui.form .views-exposed-form .views-exposed-widget,
+  body.semantic-ui .ui.search-form .views-exposed-form .views-exposed-widget {
     float: none; }
-  .ui.form .form-item,
-  .ui.form fieldset,
-  .ui.search-form .form-item,
-  .ui.search-form fieldset {
+  body.semantic-ui .ui.form .form-item,
+  body.semantic-ui .ui.form fieldset,
+  body.semantic-ui .ui.search-form .form-item,
+  body.semantic-ui .ui.search-form fieldset {
     max-width: 600px;
     position: relative;
     margin-bottom: 20px; }
-  .ui.form legend,
-  .ui.search-form legend {
+  body.semantic-ui .ui.form legend,
+  body.semantic-ui .ui.search-form legend {
     margin-left: 0; }
-  .ui.form label,
-  .ui.search-form label {
+  body.semantic-ui .ui.form .description,
+  body.semantic-ui .ui.search-form .description {
+    font-size: 90%;
+    color: #6C6C6C; }
+  body.semantic-ui .ui.form label,
+  body.semantic-ui .ui.search-form label {
     display: block;
     clear: both;
     margin-bottom: 5px;
     font-weight: normal;
-    color: #261D19; }
-  .ui.form .ui.dropdown .menu > .item,
-  .ui.search-form .ui.dropdown .menu > .item {
+    color: #7C7775; }
+  body.semantic-ui .ui.form .ui.dropdown .menu > .item,
+  body.semantic-ui .ui.search-form .ui.dropdown .menu > .item {
     font-size: 14px;
     padding-left: 1.1em !important; }
+  body.semantic-ui .ui.form.segment,
+  body.semantic-ui .ui.search-form.segment {
+    border: 0;
+    margin: 0;
+    padding: 20px; }
 
 .main__content .column.right {
   padding-left: 50px; }
@@ -71,8 +84,10 @@ img {
   max-width: 100%;
   height: 100%; }
 
-.ui.menu {
+body.semantic-ui .ui {
   font-size: 100%; }
+  body.semantic-ui .ui .field > label {
+    font-size: 100%; }
 
 .sidebar {
   font-size: 90%; }
