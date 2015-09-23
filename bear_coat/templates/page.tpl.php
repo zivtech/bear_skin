@@ -20,6 +20,9 @@
         <?php print $user_menu;?>
       </nav>
     <?php endif;?>
+    <?php if (theme_get_setting('login_popup')): ?>
+      <?php print render($loginpopup); ?>
+    <?php endif;?>
 
   </header>
 </div>
@@ -60,12 +63,6 @@
       <?php endif;?>
 
       <a id="main-content"></a>
-
-      <?php if(isset($loginpopup)){
-          print render($loginpopup);
-          print '<a class="loginpopup item floated" href="#">Login</a>';
-        }
-    ?>
 
       <?php if (!empty($title)): ?>
         <?php print render($title_prefix);?>

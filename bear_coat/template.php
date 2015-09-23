@@ -51,25 +51,24 @@ function bear_coat_theme($existing, $type, $theme, $path) {
     'labeled_button' => array(
       'render element' => 'element',
     ),
-    'user_login_block' => array(
-      'template' => 'templates/block-user-login',
-      'variables' => array(
-        'items' => array(),
-      ),
-      'render element' => 'form',
-    ),
   );
 }
 
 function bear_coat_preprocess_page(&$variables) {
   global $user;
-  $variables['loginpopup'] = "<div style='display:none'>" ;
-  $variables['loginpopup'] .= "<div id='login-popup' class='ui modal login'> <i class='close icon'></i><div class='header'>
-  User Login</div>" ;
-  // PRINT THE ERROR MESSAGES
-  $variables['loginpopup'] .= theme('status_messages', array('display' => 'error'));
-  $login = drupal_get_form('user_login');
-  $variables['loginpopup'] .= drupal_render($login);
-  $variables['loginpopup'] .= "</div>";
-  $variables['loginpopup'] .= "</div>";
+  if (!user_is_logged_in()) {
+    $variables['loginpopup'] = "<div style='display:none'>" ;
+    $variables['loginpopup'] .= "<div id='login-popup' class='ui modal login'> <i class='close icon'></i><div class='header'>
+    User Login</div>" ;
+    // PRINT THE ERROR MESSAGES
+    $variables['loginpopup'] .= theme('status_messages', array('display' => 'error'));
+    $login = drupal_get_form('user_login');
+    $variables['loginpopup'] .= drupal_render($login);
+    $variables['loginpopup'] .= "</div>";
+    $variables['loginpopup'] .= "</div>";
+    $variables['loginpopup'] .= "<a class='loginpopup item floated in' href='#'><i class='setting icon'></i> Login</a>";
+  } 
+  else {
+    $variables['loginpopup'] = "<a class='loginpopup item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";
+  }
 }

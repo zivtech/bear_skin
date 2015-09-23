@@ -115,9 +115,6 @@ body.sidr-open {
 
 .wrapper--main {
   padding-top: $header-height;
-  .site-info {
-    padding-top: 30px;
-  }
 }
 
 #header {
@@ -132,5 +129,11 @@ body.sidr-open {
         width: 250px !important;
       }
     }
+  }
+  a.loginpopup {
+    float: right;
+    margin: 0 10px 10px 0;
+    @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
+    font-size: 12px;
   }
 }

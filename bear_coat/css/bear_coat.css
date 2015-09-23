@@ -195,8 +195,6 @@ body.sidr-open #header #sidr-wrapper-0 span {
 
 .wrapper--main {
   padding-top: 125px; }
-  .wrapper--main .site-info {
-    padding-top: 30px; }
 
 #header .block-search,
 #header .block-views {
@@ -213,6 +211,18 @@ body.sidr-open #header #sidr-wrapper-0 span {
     #header .block-search input.form-text:focus,
     #header .block-views input.form-text:focus {
       width: 250px !important; }
+
+#header a.loginpopup {
+  float: right;
+  margin: 0 10px 10px 0;
+  color: #261D19;
+  font-size: 12px; }
+  #header a.loginpopup:hover {
+    color: #728EAD; }
+  #header a.loginpopup:active {
+    color: #728EAD; }
+  #header a.loginpopup:focus {
+    color: #728EAD; }
 
 nav.wrapper--breadcrumbs {
   padding: 20px 0; }
