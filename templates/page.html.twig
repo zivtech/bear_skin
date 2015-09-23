@@ -1,10 +1,10 @@
 <div class="wrapper wrapper--header">
   <header id="header" role="banner" class="site-header">
 
-    {% if logo  %}
+    {% if page.main_site_logo  %}
       <a href="{{ front_page }}" title="{{ 'Home'|t }}"
          rel="home" class="site-header__logo">
-        <img src="../themes/custom/bear_skin/logo.png" alt="{{ 'Home'|t }}"/>
+        <img src="{{ page.main_site_logo }}" alt="{{ 'Home'|t }}"/>
       </a>
     {% endif %}
 

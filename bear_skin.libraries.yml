@@ -1,8 +1,8 @@
 global-scripts:
   version: 1.x
   js:
-    js/vendor/modernizr.js: {}
-    js/scripts.js: {}
+    js/vendor/modernizr.js: { scope: header }
+    js/scripts.js: { scope: footer }
   dependencies:
     - core/jquery
     - core/drupal.ajax
@@ -14,5 +14,5 @@ global-styling:
   version: 1.x
   css: 
     theme:
-      css/styles.css: {}
+      css/styles.css: { media: screen }
       css/print.css: { media: print }

@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Template\Attribute;
+
 /**
  * Implements bear_skin_preprocess_html function.
  *
@@ -38,6 +42,8 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   else {
     $variables['attributes']['class'][] = 'layout-no-sidebars';
   }
+
+  dpm($variables);
   
 }
 
@@ -48,6 +54,7 @@ function bear_skin_preprocess_html(&$variables, $hook) {
  *   <<describe the params and what they do here>>
  */
 function bear_skin_preprocess_page(&$variables) {
+  $variables['main_site_logo'] = drupal_get_path('theme', 'bear_skin') . '/logo.png';
 
   //**********************
   // TODO: make this work (this solution is deprecated in D8)

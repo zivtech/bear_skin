@@ -1,5 +1,13 @@
 <?php
 
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Template\Attribute;
+
+function bear_coat_preprocess_page(&$variables, $hook) {
+  $variables['main_site_logo'] = drupal_get_path('theme', 'bear_coat') . '/logo.png';
+}
+
+
 /**
  * @desc Implements hook_form_alter()
  * Providing better UI elements support for FORM elements.
@@ -13,6 +21,7 @@ function bear_coat_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+
 }
 
 function bear_coat_checkboxes($variables) {
