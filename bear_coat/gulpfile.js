@@ -92,7 +92,7 @@ gulp.task('scripts', function () {
 
 gulp.task('images', function () {
   gutil.log(gutil.colors.yellow('Crunching images!'));
-  return gulp.src('./images/**/*.{gif,jpg,png,svg}')
+  return gulp.src('./images/**/*.{gif,jpg,png}')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}]
