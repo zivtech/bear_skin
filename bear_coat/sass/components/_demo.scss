@@ -1,0 +1,24 @@
+// This file is for the Bear Skin demo only and can be deleted 
+// or commented out without affecting the general theming
+
+.view-features {
+	.views-exposed-widgets {
+		margin: 0;
+	}
+	.views-exposed-form {
+		padding: 20px 20px 0 20px;
+		margin-bottom: 30px;
+		background: #eee;
+		border: 1px solid #ddd;
+	}
+	.views-exposed-widget {
+		width: 100%;
+		padding: 0;
+		input {
+			max-width: 100%;
+		}
+		@include breakpoint($breakpoint-small-width) {
+			@include col(1/2, $gutter: 4, $cycle: 2);
+		}
+	}
+}

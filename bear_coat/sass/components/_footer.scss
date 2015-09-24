@@ -7,6 +7,9 @@
   color: #fff;
   .region-footer {
     padding: 30px 0;
+    @include breakpoint($breakpoint-full-width) {
+      padding: 30px 20px;
+    }
   }
 }
 

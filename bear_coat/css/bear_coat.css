@@ -6,9 +6,6 @@ body.semantic-ui .ui.search-form {
   body.semantic-ui .ui.form input,
   body.semantic-ui .ui.search-form input {
     font-family: "Helvetica Neue", Helvetica, sans-serif; }
-  body.semantic-ui .ui.form .views-exposed-form .views-exposed-widget,
-  body.semantic-ui .ui.search-form .views-exposed-form .views-exposed-widget {
-    float: none; }
   body.semantic-ui .ui.form .form-item,
   body.semantic-ui .ui.form fieldset,
   body.semantic-ui .ui.search-form .form-item,
@@ -28,17 +25,25 @@ body.semantic-ui .ui.search-form {
     display: block;
     clear: both;
     margin-bottom: 5px;
-    font-weight: normal;
-    color: #7C7775; }
-  body.semantic-ui .ui.form .ui.dropdown .menu > .item,
-  body.semantic-ui .ui.search-form .ui.dropdown .menu > .item {
-    font-size: 14px;
-    padding-left: 1.1em !important; }
+    font-weight: normal; }
+  body.semantic-ui .ui.form .ui.dropdown,
+  body.semantic-ui .ui.search-form .ui.dropdown {
+    min-width: 100%; }
+    body.semantic-ui .ui.form .ui.dropdown .menu > .item,
+    body.semantic-ui .ui.search-form .ui.dropdown .menu > .item {
+      font-size: 14px;
+      padding-left: 1.1em !important; }
   body.semantic-ui .ui.form.segment,
   body.semantic-ui .ui.search-form.segment {
     border: 0;
     margin: 0;
     padding: 20px; }
+
+.compact-form-label {
+  top: 9px;
+  left: 17px;
+  z-index: 1;
+  font-size: 100%; }
 
 .main__content .column.right {
   padding-left: 50px; }
@@ -92,6 +97,21 @@ body.semantic-ui .ui {
 .sidebar {
   font-size: 90%; }
 
+.view-features .views-exposed-widgets {
+  margin: 0; }
+
+.view-features .views-exposed-form {
+  padding: 20px 20px 0 20px;
+  margin-bottom: 30px;
+  background: #eee;
+  border: 1px solid #ddd; }
+
+.view-features .views-exposed-widget {
+  width: 100%;
+  padding: 0; }
+  .view-features .views-exposed-widget input {
+    max-width: 100%; }
+
 .wrapper--footer {
   border-top: 1px solid #dedede; }
 
@@ -128,7 +148,8 @@ body.semantic-ui .ui {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    right: 0; }
   #header #sidr-wrapper-0 {
     margin-left: 20px; }
     #header #sidr-wrapper-0 #sidr-0-button {
@@ -140,23 +161,23 @@ body.semantic-ui .ui {
       display: block;
       position: relative;
       background: #261D19;
-      height: 3px;
+      height: 2px;
       transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
-      width: 25px;
-      top: 13px; }
+      width: 22px;
+      top: 15px; }
       #header #sidr-wrapper-0 span:before, #header #sidr-wrapper-0 span:after {
         content: "";
         display: block;
         background: #261D19;
-        height: 3px;
+        height: 2px;
         margin-top: 0;
         position: absolute;
-        width: 25px;
+        width: 22px;
         transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63); }
       #header #sidr-wrapper-0 span:before {
-        top: 8px; }
+        top: 7px; }
       #header #sidr-wrapper-0 span:after {
-        top: -8px; }
+        top: -7px; }
 
 body.sidr-open #header #sidr-wrapper-0 span {
   background: transparent; }
@@ -194,7 +215,7 @@ body.sidr-open #header #sidr-wrapper-0 span {
     font-size: 14px; }
 
 .wrapper--main {
-  padding-top: 125px; }
+  padding-top: 55px; }
 
 #header .block-search,
 #header .block-views {
@@ -203,18 +224,27 @@ body.sidr-open #header #sidr-wrapper-0 span {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 0; }
+  transition: all 0.5s ease-in-out;
+  right: 110px; }
   #header .block-search input.form-text,
   #header .block-views input.form-text {
     transition: width 0.5s ease-in-out;
-    width: 130px !important; }
+    width: 100px !important; }
     #header .block-search input.form-text:focus,
     #header .block-views input.form-text:focus {
       width: 250px !important; }
+  #header .block-search.focus,
+  #header .block-views.focus {
+    right: 0;
+    top: 80px;
+    width: calc(100% + 40px);
+    left: -20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); }
 
 #header a.loginpopup {
   float: right;
-  margin: 0 10px 10px 0;
+  margin: -32px 45px 10px 0;
   color: #261D19;
   font-size: 12px; }
   #header a.loginpopup:hover {
@@ -344,9 +374,36 @@ nav.main-menu .menu .main-menu--level-three {
 
 @media (max-width: 75em){
   .breadcrumbs-wrapper{
-    padding: 0 20px; } }
+    padding: 0 20px; }
+  .site-footer .region-footer{
+    padding: 30px 20px; } }
+
+@media (min-width: 25em){
+  .view-features .views-exposed-widget{
+    zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 48%;
+    margin-left: 0%;
+    margin-right: 4%; }
+  .view-features .views-exposed-widget:before, .view-features .views-exposed-widget:after{
+    content: '';
+    display: table; }
+  .view-features .views-exposed-widget:after{
+    clear: both; }
+  .view-features .views-exposed-widget:nth-child(2n){
+    margin-right: 0%;
+    float: right; }
+  .view-features .views-exposed-widget:nth-child(2n + 1){
+    clear: both; } }
 
 @media (min-width: 50em){
+  #header .region-navigation{
+    right: auto; }
   .wrapper--header{
     padding: 20px 0;
     height: 125px; }
@@ -371,4 +428,24 @@ nav.main-menu .menu .main-menu--level-three {
   .wrapper--header.compressed #header .block-search input.form-text,
         .wrapper--header.compressed #header .block-views input.form-text{
     padding: 0.4em 1em;
-    font-size: 14px; } }
+    font-size: 14px; }
+  .wrapper--main{
+    padding-top: 125px; }
+  #header .block-search,
+    #header .block-views{
+    right: 0;
+    transition: none; }
+  #header .block-search.focus,
+      #header .block-views.focus{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    width: auto;
+    background: transparent;
+    left: inherit;
+    padding: 0; }
+  #header a.loginpopup{
+    margin: 0 10px 10px 0; } }

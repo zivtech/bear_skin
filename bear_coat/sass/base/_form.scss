@@ -41,9 +41,6 @@ body.semantic-ui .ui.search-form {
   input {
     font-family: $body-text-font-family;
   }
-  .views-exposed-form .views-exposed-widget {
-    float: none;
-  }
   .form-item, 
   fieldset {
     max-width: 600px;
@@ -63,10 +60,13 @@ body.semantic-ui .ui.search-form {
     margin-bottom: 5px;
     font-weight: normal;
   } 
-  .ui.dropdown .menu {
+  .ui.dropdown {
+    min-width: 100%;
+    .menu {
     > .item {
       font-size: 14px;
       padding-left: 1.1em !important;
+      }
     }
   }
   &.segment {
@@ -74,4 +74,12 @@ body.semantic-ui .ui.search-form {
     margin: 0;
     padding: 20px;
   }
+}
+
+// Support for compact forms
+.compact-form-label {
+  top: 9px;
+  left: 17px;
+  z-index: 1;
+  font-size: 100%;
 }
