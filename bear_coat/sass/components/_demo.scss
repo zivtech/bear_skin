@@ -47,3 +47,38 @@
 	}
 }
 
+.node-type-feature {
+	#main {
+		max-width: 100%;
+		.row.top {
+			background: #555;
+			width: calc(100% + 40px);
+			margin-left: -20px;
+			@include breakpoint($breakpoint-to-max-width) {
+				width: 100%;
+				margin-left: 0;
+			}
+			.pane-node-field-featured-image {
+				max-width: $site-max-width;
+				margin: 0 auto;
+				padding: 20px;
+				@include breakpoint($breakpoint-to-max-width) {
+					padding: 20px 0;
+				}
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.column.center {
+			max-width: $site-max-width;
+		}
+	}
+	.pane-node-title {
+		margin: 0;
+		.pane-title {
+			@include bear-element-invisible;
+		}
+	}
+}
+

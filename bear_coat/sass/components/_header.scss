@@ -130,6 +130,15 @@ body.sidr-open {
     }
     &.compressed {
       @include compressHeader;
+      #header {
+        .block-search,
+        .block-views {
+          right: 80px;
+        }
+        a.loginpopup {
+          margin-top: 8px;
+        }
+      }
     }
   }
 }

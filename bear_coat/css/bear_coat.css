@@ -97,6 +97,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 4rem; }
 
+body.semantic-ui h1 {
+  margin: 0.67em 0px; }
+
 h2 {
   font-size: 2.5rem;
   margin: 3rem 0 2rem 0; }
@@ -152,6 +155,30 @@ body.semantic-ui .ui {
     padding: 20px;
     border-top: 1px solid #ccc;
     margin-top: 20px; }
+
+.node-type-feature #main {
+  max-width: 100%; }
+  .node-type-feature #main .row.top {
+    background: #555;
+    width: calc(100% + 40px);
+    margin-left: -20px; }
+    .node-type-feature #main .row.top .pane-node-field-featured-image {
+      max-width: 75em;
+      margin: 0 auto;
+      padding: 20px; }
+      .node-type-feature #main .row.top .pane-node-field-featured-image img {
+        width: 100%; }
+  .node-type-feature #main .column.center {
+    max-width: 75em; }
+
+.node-type-feature .pane-node-title {
+  margin: 0; }
+  .node-type-feature .pane-node-title .pane-title {
+    position: absolute !important;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); }
 
 .wrapper--footer {
   border-top: 1px solid #dedede; }
@@ -501,6 +528,11 @@ h3.sidr-class-u-hidden {
         .wrapper--header.compressed #header .block-views input.form-text{
     padding: 0.4em 1em;
     font-size: 14px; }
+  .wrapper--header.compressed #header .block-search,
+        .wrapper--header.compressed #header .block-views{
+    right: 80px; }
+  .wrapper--header.compressed #header a.loginpopup{
+    margin-top: 8px; }
   .wrapper--main{
     padding-top: 125px; }
   #header .block-search,
@@ -524,3 +556,10 @@ h3.sidr-class-u-hidden {
     padding: 0; }
   #header a.loginpopup{
     margin: 0 10px 10px 0; } }
+
+@media (min-width: 75em){
+  .node-type-feature #main .row.top{
+    width: 100%;
+    margin-left: 0; }
+  .node-type-feature #main .row.top .pane-node-field-featured-image{
+    padding: 20px 0; } }
