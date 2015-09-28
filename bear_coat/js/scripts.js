@@ -66,7 +66,6 @@
           .closest('.block-search')
           .removeClass('focus')
         });
-        
 
       // adding a class to empty p to remove margin/padding
       // removing extra space if empty as well

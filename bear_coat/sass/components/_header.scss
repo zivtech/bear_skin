@@ -8,6 +8,8 @@ $logo-width: 120px;
   .site-header__logo {
     max-width: 50px;
     max-height: 40px;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
     img {
       max-height: 38px;
     }
@@ -71,21 +73,37 @@ $logo-width: 120px;
 }
 
 body.sidr-open {
-  #header #sidr-wrapper-0 span {
-    background: transparent;
-    &:before,
-    &:after {
-      top: 0;
+  #header {
+    .region-navigation {
+      left: 0;
     }
-    &:before {
-      transform: rotate(45deg);
+    .site-header__logo {
+      opacity: 0;
     }
-    &:after {
-      transform: rotate(-45deg);
+  }
+  #header #sidr-wrapper-0 {
+    margin-left: 0;
+    span {
+      background: transparent;
+      &:before,
+      &:after {
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
     }
   }
 }
 
+.sidr-animating {
+  .wrapper--header {
+    position: absolute;
+  }
+}
 .wrapper--header {
   position: fixed;
   width: 100%;
@@ -108,7 +126,6 @@ body.sidr-open {
     .site-header__logo img {
       max-width: 100%;
       max-height: 88px;
-      transition: all .2s ease-in-out;
       height: auto;
     }
     &.compressed {

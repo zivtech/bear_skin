@@ -207,6 +207,10 @@ function bear_coat_form_element($variables) {
       $attributes['class'][] = 'ui';
       $attributes['class'][] = 'input';
     }
+    else if ($element['#type'] == "select") {
+      unset($attributes['class']);
+      $attributes['class'][] = 'form-item field';
+    }
   }
 
   // Add requird class to the element wrapper because Semantic UI will use it
@@ -266,6 +270,14 @@ function bear_coat_form_element($variables) {
   $output .= "</div>\n";
 
   return $output;
+}
+
+function bear_coat_select($variables) {
+  $element = $variables['element'];
+  element_set_attributes($element, array('id', 'name', 'size'));
+  _form_set_class($element, array('ui search dropdown'));
+
+  return '<select' . drupal_attributes($element ['#attributes']) . '>' . form_select_options($element) . '</select>';
 }
 
 /**

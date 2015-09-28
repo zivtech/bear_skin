@@ -68,6 +68,9 @@ body.semantic-ui .ui.search-form {
       padding-left: 1.1em !important;
       }
     }
+    > input.search {
+      z-index: 10;
+    }
   }
   &.segment {
     border: 0;

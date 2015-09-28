@@ -123,3 +123,9 @@ nav.main-menu {
     font-size: 1.5rem;
   }
 }
+
+// SIDR Additions/Overrides
+
+h3.sidr-class-u-hidden {
+  @include bear-element-invisible;
+}
