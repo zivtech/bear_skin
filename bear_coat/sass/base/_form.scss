@@ -77,6 +77,29 @@ body.semantic-ui .ui.search-form {
     margin: 0;
     padding: 20px;
   }
+  .views-exposed-form {
+    position: relative;
+    .views-exposed-widgets {
+      transition: opacity .2s ease-in-out;
+    }
+    &.ajaxx .views-exposed-widgets {
+      opacity: .2;
+      & {
+        opacity: 0;
+      }
+    }
+  }
+  .hidden-submit {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    float: none;
+    margin: 0;
+    display: block;
+  }
+  .ui.loading {
+      top: -70px !important;
+    }
 }
 
 // Support for compact forms

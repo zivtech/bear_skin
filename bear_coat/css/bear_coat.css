@@ -41,6 +41,29 @@ body.semantic-ui .ui.search-form {
     border: 0;
     margin: 0;
     padding: 20px; }
+  body.semantic-ui .ui.form .views-exposed-form,
+  body.semantic-ui .ui.search-form .views-exposed-form {
+    position: relative; }
+    body.semantic-ui .ui.form .views-exposed-form .views-exposed-widgets,
+    body.semantic-ui .ui.search-form .views-exposed-form .views-exposed-widgets {
+      transition: opacity 0.2s ease-in-out; }
+    body.semantic-ui .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
+    body.semantic-ui .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
+      opacity: .2; }
+      body.semantic-ui .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
+      body.semantic-ui .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
+        opacity: 0; }
+  body.semantic-ui .ui.form .hidden-submit,
+  body.semantic-ui .ui.search-form .hidden-submit {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    float: none;
+    margin: 0;
+    display: block; }
+  body.semantic-ui .ui.form .ui.loading,
+  body.semantic-ui .ui.search-form .ui.loading {
+    top: -70px !important; }
 
 .compact-form-label {
   top: 9px;
@@ -229,7 +252,7 @@ body.sidr-open #header #sidr-wrapper-0 {
   filter: url(../images/shadow.svg#drop-shadow);
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
   background: #f5f5f5;
-  z-index: 100;
+  z-index: 1000;
   transition: all 0.3s ease-in-out;
   height: 55px;
   padding: 10px 20px; }

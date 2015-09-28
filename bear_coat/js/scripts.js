@@ -43,7 +43,9 @@
         });
       }
 
+      //******************
       // Markup/Dom modifs
+      //******************
 
       // removing annoying markup 
       $('.field-suffix').each(function(){
@@ -53,7 +55,7 @@
       });
 
       //addclass to search wrapper on focus
-      var $searchForm = $('#search-block-form');
+      var $searchForm = $('#search-block-form', context);
       $searchForm
         .find('.form-text')
         .on('focus', function(){
@@ -79,6 +81,12 @@
       $emptyP.html(function (i,h) {
         return h.replace(/&nbsp;/g,'');
       });
+
+      // adding a class to hidden submit buttons wrappers
+      var $hiddenSubmit = $('input.js-hide', context);
+      $hiddenSubmit.each(function() {
+        $(this).parent('.views-submit-button').addClass('hidden-submit');
+      });
       
    }
   };
@@ -90,6 +98,28 @@
     attach: function(context, settings) {
 
     }
+  };
+
+  // Drupal's core beforeSend function
+  var beforeSend = Drupal.ajax.prototype.beforeSend;
+
+  // Add a trigger when beforeSend fires.
+  Drupal.ajax.prototype.beforeSend = function (xmlhttprequest, options) {
+      // Only apply our override on specific fields.
+      console.log(this.element);
+      if ($(this.element).hasClass('form-submit')) {
+          // Copied and modified from Drupal.ajax.prototype.beforeSend in ajax.js
+          $(this.element).addClass('progress-disabled').attr('disabled', true);
+          // Modify the actualy progress throbber HTML.
+          this.progress.element = $('<div class="ui form loading"></div>');
+          // Change the position of the throbber.
+          $(this.element).parent().parent().parent().addClass('ajaxx');
+          $(this.element).parent().parent().parent().after(this.progress.element);
+      } else {
+          // Send to the default Drupal Ajax function if we're not looking at our specific field.
+          beforeSend.call(this, xmlhttprequest, options);
+          $(document).trigger('beforeSend');
+      }
   };
 
 })(jQuery, Drupal, window, document);
