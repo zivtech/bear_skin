@@ -224,11 +224,11 @@ body.sidr-open #header #sidr-wrapper-0 span {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   right: 110px; }
   #header .block-search input.form-text,
   #header .block-views input.form-text {
-    transition: width 0.5s ease-in-out;
+    transition: width 0.2s ease-in-out;
     width: 100px !important; }
     #header .block-search input.form-text:focus,
     #header .block-views input.form-text:focus {
@@ -236,10 +236,10 @@ body.sidr-open #header #sidr-wrapper-0 span {
   #header .block-search.focus,
   #header .block-views.focus {
     right: 0;
-    top: 80px;
+    top: 18px;
     width: calc(100% + 40px);
     left: -20px;
-    padding: 20px;
+    padding: 15px 15px 13px;
     background: rgba(0, 0, 0, 0.7); }
 
 #header a.loginpopup {
@@ -435,6 +435,9 @@ nav.main-menu .menu .main-menu--level-three {
     #header .block-views{
     right: 0;
     transition: none; }
+  #header .block-search input.form-text,
+      #header .block-views input.form-text{
+    width: 120px !important; }
   #header .block-search.focus,
       #header .block-views.focus{
     position: absolute;

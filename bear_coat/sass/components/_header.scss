@@ -128,25 +128,28 @@ body.sidr-open {
   .block-search,
   .block-views {
     @include align(v);
-    transition: all .5s ease-in-out;
+    transition: all .2s ease-in-out;
     right: 110px;
     @include breakpoint($breakpoint-medium-width) {
       right: 0;
       transition: none;
     }
     input.form-text {
-      transition: width .5s ease-in-out;
+      transition: width .2s ease-in-out;
       width: 100px !important;
+      @include breakpoint($breakpoint-medium-width) {
+        width: 120px !important;
+      }
       &:focus {
         width: 250px !important;
       }
     }
     &.focus {
       right: 0;
-      top: 80px;
+      top: 18px;
       width: calc(100% + 40px);
       left: -20px;
-      padding: 20px;
+      padding: 15px 15px 13px;
       background: rgba(0, 0, 0, .7);
       @include breakpoint($breakpoint-medium-width) {
         @include align(v);
