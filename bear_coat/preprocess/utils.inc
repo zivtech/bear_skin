@@ -1,11 +1,6 @@
 <?php
 
 /**
- * @file
- * Semanticui helper functions.
- */
-
-/**
  * Checks if there is library with specified file.
  */
 function semanticui_check_library($library_name, $file_name) {

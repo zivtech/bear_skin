@@ -115,6 +115,21 @@ body.semantic-ui .ui {
   .view-features .views-exposed-widget input {
     max-width: 100%; }
 
+.view-features .views-row {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px #ccc;
+  padding: 20px 0 0 0;
+  margin-bottom: 20px; }
+  .view-features .views-row h2, .view-features .views-row .field, .view-features .views-row img {
+    padding: 0 20px; }
+  .view-features .views-row .field-name-body {
+    background: #eee;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    margin-top: 20px; }
+
 .wrapper--footer {
   border-top: 1px solid #dedede; }
 
@@ -425,6 +440,16 @@ h3.sidr-class-u-hidden {
     clear: both; } }
 
 @media (min-width: 50em){
+  .view-features .view-content{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 3%;
+    -moz-column-gap: 3%;
+    column-gap: 3%;
+    -webkit-column-width: 30%;
+    -moz-column-width: 30%;
+    column-width: 30%; }
   #header .region-navigation{
     right: auto; }
   .wrapper--header{

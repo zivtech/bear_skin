@@ -21,4 +21,29 @@
 			@include col(1/2, $gutter: 4, $cycle: 2);
 		}
 	}
+	.view-content {
+		@include breakpoint($breakpoint-medium-width) {
+			column-count: 3;
+	    column-gap: 3%;
+	    column-width: 30%;
+	  }
+	}
+	.views-row {
+		display: inline-block;
+		width:  100%; 
+		border: 1px solid #ddd;
+		box-shadow: 0 0 5px #ccc;
+		padding: 20px 0 0 0;
+		margin-bottom: 20px;
+		h2, .field, img {
+			padding: 0 20px;
+		}
+		.field-name-body {
+			background: #eee;
+			padding: 20px;
+			border-top: 1px solid #ccc;
+			margin-top: 20px;
+		}
+	}
 }
+
