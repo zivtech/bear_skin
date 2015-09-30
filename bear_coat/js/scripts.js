@@ -87,6 +87,15 @@
       $hiddenSubmit.each(function() {
         $(this).parent('.views-submit-button').addClass('hidden-submit');
       });
+
+      // Tables handling
+      var $uiTable = $('table.ui', context);
+      $uiTable.each(function() {
+        $(this).wrap('<div class="table-ui-container"></div>');
+        $(this).parent().jScrollPane({
+            autoReinitialise: true
+        });
+      });
       
    }
   };
