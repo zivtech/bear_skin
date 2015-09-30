@@ -285,6 +285,7 @@ function bear_coat_select($variables) {
  */
 function bear_coat_button($variables) {
   $element = $variables['element'];
+  $label = check_plain($element['#value']);
   element_set_attributes($element, array(
     'id',
     'name',
@@ -297,6 +298,9 @@ function bear_coat_button($variables) {
 
   // Add in the button type class.
   $element['#attributes']['class'][] = drupal_html_class('form-' . $element['#button_type']);
+  if (!empty($element['#attributes']['disabled'])) {
+    $element['#attributes']['class'][] = 'form-button-disabled';
+  }
 
   // This line break adds inherent margin between multiple buttons.
   return '<input' . drupal_attributes($element['#attributes']) . '>' . '' . "</input>\n";

@@ -8,7 +8,7 @@
 /**
  * Implements theme_item_list().
  */
-function semanticui_item_list($variables) {
+function bear_coat_item_list($variables) {
   $items = $variables['items'];
   $title = $variables['title'];
   $type = $variables['type'];
@@ -69,11 +69,12 @@ function semanticui_item_list($variables) {
 /**
  * Implements theme_pager_item_list().
  */
-function semanticui_pager_item_list($variables) {
+function bear_coat_pager_item_list($variables) {
   $items = $variables['items'];
   $attributes = empty($variables['attributes']) ? array() : $variables['attributes'];
 
   $pager_attributes = array(
+    'role' => 'navigation',
     'class' => array(
       'ui',
       'pagination',
@@ -82,6 +83,8 @@ function semanticui_pager_item_list($variables) {
   );
 
   $pager = array(
+    '#prefix' => '<div class="pager-wrapper">',
+    '#suffix' => '</div>',
     '#type' => 'container',
     '#attributes' => drupal_array_merge_deep($pager_attributes, $attributes),
   );

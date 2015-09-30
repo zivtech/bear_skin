@@ -42,8 +42,11 @@
 // CSS classes
 //
 
+$headers-font: 'Droid Sans', sans-serif;
+$body-font: 'Helvetica Neue', Helvetica,sans-serif;
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: $headers-font;
   font-weight: normal;
 }
 h1 {
@@ -75,11 +78,22 @@ img {
 body.semantic-ui { 
   .ui {
     font-size: 100%;
+    font-family: $body-font;
     .field {
       > label {
         font-size: 100%;
       }
     }
+  }
+  .ui.link.menu .item:hover, 
+  .ui.menu .dropdown.item:hover, 
+  .ui.menu .link.item:hover, 
+  .ui.menu a.item:hover,
+  .ui.link.menu .item:focus, 
+  .ui.menu .dropdown.item:focus, 
+  .ui.menu .link.item:focus, 
+  .ui.menu a.item:focus {
+    color: $zivtech-blue;
   }
 }
 .sidebar {

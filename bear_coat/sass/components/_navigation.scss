@@ -129,3 +129,16 @@ nav.main-menu {
 h3.sidr-class-u-hidden {
   @include bear-element-invisible;
 }
+
+// Pager
+
+.pager-wrapper {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  min-height: 50px;
+  margin: 10px 0 0 0;
+}
+.ui.pagination.menu {
+  @include align(h);
+} 

@@ -15,7 +15,7 @@
  * On page 4: <- 1 ... 3 [4] 5 ... 15 ->
  * On page 15: <- 1 ... 14 [15]
  */
-function semanticui_pager($variables) {
+function bear_coat_pager($variables) {
   global $pager_page_array, $pager_total;
 
   $output = '';
@@ -148,7 +148,7 @@ function semanticui_pager($variables) {
  * Allows rendering pager item with <i> tag (used to render an icon, e.g. left
  * or right arrow).
  */
-function semanticui_pager_link($variables) {
+function bear_coat_pager_link($variables) {
   $text = $variables['text'];
   $page_new = $variables['page_new'];
   $element = $variables['element'];
@@ -191,14 +191,14 @@ function semanticui_pager_link($variables) {
 /**
  * Implements theme_preprocess_pager_link().
  */
-function semanticui_preprocess_pager_link(&$variables) {
+function bear_coat_preprocess_pager_link(&$variables) {
   $variables['attributes']['class'][] = 'item';
 }
 
 /**
  * Implements theme_views_mini_pager().
  */
-function semanticui_views_mini_pager($vars) {
+function bear_coat_views_mini_pager($vars) {
   global $pager_page_array, $pager_total;
 
   $tags = $vars['tags'];
