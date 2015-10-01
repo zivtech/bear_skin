@@ -166,7 +166,7 @@ body.semantic-ui .ui.menu a.item:focus {
 .front #home-content {
   max-width: 75em;
   margin: 0 auto;
-  padding: 30px 0; }
+  padding: 30px 20px; }
 
 .view-features {
   padding-bottom: 30px; }
@@ -631,6 +631,9 @@ h3.sidr-class-u-hidden {
   .front h1.main__title{
     top: 30%;
     font-size: 180%; }
+  .front .wrapper--main{
+    padding-left: 0;
+    padding-right: 0; }
   .view-features .view-content{
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -692,6 +695,14 @@ h3.sidr-class-u-hidden {
     padding: 0; }
   #header a.loginpopup{
     margin: 0 10px 10px 0; } }
+@media (min-width: 75em){
+  .front #home-content{
+    padding: 30px 0; }
+  .node-type-feature #main .row.top{
+    width: 100%;
+    margin-left: 0; }
+  .node-type-feature #main .row.top .pane-node-field-featured-image{
+    padding: 20px 0; } }
 @media (min-width: 25em){
   .view-features .views-exposed-widget{
     zoom: 1;
@@ -714,9 +725,3 @@ h3.sidr-class-u-hidden {
     float: right; }
   .view-features .views-exposed-widget:nth-child(2n + 1){
     clear: both; } }
-@media (min-width: 75em){
-  .node-type-feature #main .row.top{
-    width: 100%;
-    margin-left: 0; }
-  .node-type-feature #main .row.top .pane-node-field-featured-image{
-    padding: 20px 0; } }
