@@ -57,6 +57,7 @@ nav.main-menu {
         li {
           margin-bottom: 8px;
           padding: 0 10px;
+          display: block;
           a {
             @include link-colors($zivtech-white, $hover: $zivtech-pale, $active: $zivtech-pale, $focus: $zivtech-pale);
           }

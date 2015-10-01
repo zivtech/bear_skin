@@ -425,7 +425,8 @@ nav.main-menu .main-menu--level-one li.parent ul.menu {
   border: 0; }
   nav.main-menu .main-menu--level-one li.parent ul.menu li {
     margin-bottom: 8px;
-    padding: 0 10px; }
+    padding: 0 10px;
+    display: block; }
     nav.main-menu .main-menu--level-one li.parent ul.menu li a {
       color: white; }
       nav.main-menu .main-menu--level-one li.parent ul.menu li a:hover {
