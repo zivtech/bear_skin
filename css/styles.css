@@ -272,6 +272,8 @@ body {
   padding: 0; }
   body *, body *:before, body *:after {
     box-sizing: border-box; }
+  body img {
+    display: block; }
 
 #skip-link {
   margin: 0;

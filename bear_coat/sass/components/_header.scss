@@ -182,7 +182,7 @@ body.sidr-open {
   }
   a.loginpopup {
     float: right;
-    margin: -32px 45px 10px 0;
+    margin: -26px 45px 10px 0;
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
     font-size: 12px;
     @include breakpoint($breakpoint-medium-width) {
