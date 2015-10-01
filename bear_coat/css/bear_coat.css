@@ -321,12 +321,10 @@ body.sidr-open #header #sidr-wrapper-0 {
   height: 55px;
   padding: 10px 20px; }
   .wrapper--header .site-header__logo {
-    max-width: 50px;
-    max-height: 40px;
+    width: 50px;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; }
-    .wrapper--header .site-header__logo img {
-      max-height: 38px; }
+    transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out;
+    overflow: hidden; }
   .wrapper--header #header .block-search input.form-text,
   .wrapper--header #header .block-views input.form-text {
     padding: 0.4em 1em;
@@ -641,23 +639,16 @@ h3.sidr-class-u-hidden {
     height: 125px; }
   .wrapper--header .site-header__logo{
     display: block;
-    width: 120px;
-    max-width: 100%;
-    float: left; }
-  .wrapper--header .site-header__logo img{
-    max-width: 100%;
-    max-height: 88px;
-    height: auto; }
+    float: left;
+    width: 120px; }
   .wrapper--header.compressed{
     height: 55px;
     padding: 10px 20px; }
   .wrapper--header.compressed .site-header__logo{
-    max-width: 50px;
-    max-height: 40px;
+    width: 50px;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; }
-  .wrapper--header.compressed .site-header__logo img{
-    max-height: 38px; }
+    transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out;
+    overflow: hidden; }
   .wrapper--header.compressed #header .block-search input.form-text,
         .wrapper--header.compressed #header .block-views input.form-text{
     padding: 0.4em 1em;
