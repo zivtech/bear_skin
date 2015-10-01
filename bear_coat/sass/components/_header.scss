@@ -117,6 +117,9 @@ body.sidr-open {
       display: block;
       float: left;
       width: 120px;
+      img {
+        height: auto;
+      }
     }
     &.compressed {
       @include compressHeader;

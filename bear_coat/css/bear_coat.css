@@ -176,6 +176,9 @@ body.semantic-ui .ui.menu a.item:focus {
       border-top: 1px solid #ccc;
       margin-top: 20px; }
 
+.node-type-feature .bm30 {
+  margin-bottom: 30px; }
+
 .node-type-feature #main {
   max-width: 100%; }
   .node-type-feature #main .row.top {
@@ -190,6 +193,9 @@ body.semantic-ui .ui.menu a.item:focus {
         width: 100%; }
   .node-type-feature #main .column.center {
     max-width: 75em; }
+
+.node-type-feature .panel-pane {
+  clear: both; }
 
 .node-type-feature .pane-node-title {
   margin: 0; }
@@ -641,6 +647,8 @@ h3.sidr-class-u-hidden {
     display: block;
     float: left;
     width: 120px; }
+  .wrapper--header .site-header__logo img{
+    height: auto; }
   .wrapper--header.compressed{
     height: 55px;
     padding: 10px 20px; }

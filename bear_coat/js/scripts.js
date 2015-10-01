@@ -39,6 +39,10 @@
         $('.ui.checkbox').checkbox();
         $('.ui.accordion').accordion();
         $('.tabular.menu .item').tab();
+        $('.ui.sticky').sticky({
+          context: '#content',
+          offset: 50
+        });
         $('.loginpopup').click(function(){
           $(".ui.modal.login").modal("show");
         });
