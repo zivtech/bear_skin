@@ -115,7 +115,6 @@
   // Add a trigger when beforeSend fires.
   Drupal.ajax.prototype.beforeSend = function (xmlhttprequest, options) {
       // Only apply our override on specific fields.
-      console.log(this.element);
       if ($(this.element).hasClass('form-submit')) {
           // Copied and modified from Drupal.ajax.prototype.beforeSend in ajax.js
           $(this.element).addClass('progress-disabled').attr('disabled', true);
