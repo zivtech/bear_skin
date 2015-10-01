@@ -44,7 +44,10 @@
           offset: 50
         });
         $('.loginpopup').click(function(){
-          $(".ui.modal.login").modal("show");
+          $(".ui.modal.login").modal('show');
+        });
+        $('.close').click(function(){
+          $(".ui.modal.login").modal('hide');
         });
       }
 
