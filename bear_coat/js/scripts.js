@@ -43,6 +43,10 @@
           context: '#content',
           offset: 50
         });
+        $('.ui.pop-up').popup({
+            inline   : true,
+            hoverable: true
+          });
         $('.loginpopup').click(function(){
           $(".ui.modal.login").modal('show');
         });
