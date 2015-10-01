@@ -91,7 +91,7 @@
       // Tables handling
       var $uiTable = $('table.ui', context);
       $uiTable.each(function() {
-        $(this).wrap('<div class="table-ui-container"></div>');
+        $(this).once().wrap('<div class="table-ui-container"></div>');
         $(this).parent().jScrollPane({
             autoReinitialise: true
         });

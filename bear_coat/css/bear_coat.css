@@ -93,12 +93,12 @@ body.semantic-ui .ui.search-form {
 .table-ui-container {
   overflow-y: auto;
   _overflow: auto;
-  margin: 0 0 1em;
+  margin: 0;
   position: relative; }
 
 table.ui {
-  min-width: 600px;
-  margin-bottom: 40px !important; }
+  min-width: 650px;
+  margin-bottom: 30px !important; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Sans", sans-serif;
@@ -200,6 +200,23 @@ body.semantic-ui .ui.menu a.item:focus {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px); }
 
+.node-type-feature .pane-node-field-feature-documentation {
+  padding: 20px;
+  background: #eee;
+  border: 1px solid #bbb; }
+
+.node-type-feature .geshifilter {
+  margin: 0;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #bbb; }
+
+.node-type-feature .field-collection-container {
+  border: 0; }
+
+.node-type-feature .field-collection-view {
+  padding: 0; }
+
 .wrapper--footer {
   border-top: 1px solid #dedede; }
 
@@ -299,7 +316,7 @@ body.sidr-open #header #sidr-wrapper-0 {
   filter: url(../images/shadow.svg#drop-shadow);
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
   background: #f5f5f5;
-  z-index: 1000;
+  z-index: 999;
   transition: all 0.3s ease-in-out;
   height: 55px;
   padding: 10px 20px; }
@@ -517,7 +534,7 @@ h3.sidr-class-u-hidden {
 
 .jspHorizontalBar {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 16px;

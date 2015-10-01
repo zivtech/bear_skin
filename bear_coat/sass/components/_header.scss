@@ -111,7 +111,7 @@ body.sidr-open {
   filter: url(../images/shadow.svg#drop-shadow);
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
   background: #f5f5f5;
-  z-index: 1000;
+  z-index: 999;
   transition: all .3s ease-in-out;
   @include compressHeader;
   @include breakpoint($breakpoint-medium-width) {
