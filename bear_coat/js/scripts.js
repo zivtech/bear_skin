@@ -36,6 +36,7 @@
       // Material (would be better to add markup to form elements, but going faster here)
       if ($('body').hasClass('semantic-ui')) {
         $('select').dropdown();
+        $('.ui.checkbox').checkbox();
         $('.ui.accordion').accordion();
         $('.tabular.menu .item').tab();
         $('.loginpopup').click(function(){
