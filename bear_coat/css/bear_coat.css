@@ -741,7 +741,7 @@ nav.ui.breadcrumb {
     padding: 20px 0; }
   #header .block-search,
     #header .block-views{
-    right: 0; }
+    right: 20px; }
   #header a.loginpopup{
     right: 20px; } }
 @media (min-width: 25em){

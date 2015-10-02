@@ -119,7 +119,7 @@ body.sidr-open {
     transition: all .2s ease-in-out;
     right: 110px;
     @include breakpoint($breakpoint-to-max-width) {
-      right: 0;
+      right: 20px;
     }
     @include breakpoint($breakpoint-medium-width) {
       right: 0;
