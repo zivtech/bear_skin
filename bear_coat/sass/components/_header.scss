@@ -23,7 +23,6 @@ $header-compressed-height: 55px;
 }
 
 .region-header {
-  position: relative;
   height: 100%;
 }
 #header {
@@ -119,6 +118,9 @@ body.sidr-open {
     @include align(v);
     transition: all .2s ease-in-out;
     right: 110px;
+    @include breakpoint($breakpoint-to-max-width) {
+      right: 0;
+    }
     @include breakpoint($breakpoint-medium-width) {
       right: 0;
       transition: none;
@@ -152,12 +154,16 @@ body.sidr-open {
   }
   a.loginpopup {
     position: absolute;
-    right: 0;
-    top: 0;
-    @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
+    right: 43px;
+    top: 8px;
     font-size: 12px;
+    @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
+    @include breakpoint($breakpoint-to-max-width) {
+      right: 20px;
+    }
     @include breakpoint($breakpoint-medium-width) {
-      margin: 0 10px 10px 0;
+      right: 0;
+      top: 0;
     }
   }
 }
