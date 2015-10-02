@@ -1,6 +1,3 @@
-nav.wrapper--breadcrumbs {
-  padding: 20px 0;
-}
 nav.main-menu {
   .main-menu__link {
     font-family: 'Droid Sans', sans-serif;
@@ -142,4 +139,14 @@ h3.sidr-class-u-hidden {
 }
 .ui.pagination.menu {
   @include align(h);
-} 
+}
+nav.ui.breadcrumb {
+  padding: 20px 0;
+  color: rgba(0, 0, 0, 0.4);
+  a {
+    @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-pale, $focus: $zivtech-pale);
+  }
+  i:last-child {
+    display: none;
+  }
+}

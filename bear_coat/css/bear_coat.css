@@ -397,9 +397,6 @@ body.sidr-open #header #sidr-wrapper-0 {
   #header a.loginpopup:focus {
     color: #728EAD; }
 
-nav.wrapper--breadcrumbs {
-  padding: 20px 0; }
-
 nav.main-menu .main-menu__link {
   font-family: 'Droid Sans', sans-serif;
   text-transform: uppercase;
@@ -533,6 +530,20 @@ h3.sidr-class-u-hidden {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
+
+nav.ui.breadcrumb {
+  padding: 20px 0;
+  color: rgba(0, 0, 0, 0.4); }
+  nav.ui.breadcrumb a {
+    color: #261D19; }
+    nav.ui.breadcrumb a:hover {
+      color: #728EAD; }
+    nav.ui.breadcrumb a:active {
+      color: #eaeaea; }
+    nav.ui.breadcrumb a:focus {
+      color: #eaeaea; }
+  nav.ui.breadcrumb i:last-child {
+    display: none; }
 
 .panel-pane {
   margin-bottom: 30px; }
