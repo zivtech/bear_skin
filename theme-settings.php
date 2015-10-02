@@ -18,6 +18,18 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
   );
 
   // create an option to display the user menu
+  $form['bear_options']['main_layout'] = array(
+    '#type' => 'radios',
+    '#title' => t('General Layout'),
+    '#description' => t('This option will allow you to pick between a full width (fluid) layout (for background, banners etc, content still has max width) and fixed layout.'),
+    '#options' => array(
+      'fluid' => t('Fluid'),
+      'fixed' => t('Fixed'),
+    ),
+    '#default_value' => theme_get_setting('main_layout'),
+  );
+
+  // create an option to display the user menu
   $form['bear_options']['user_menu'] = array(
     '#type' => 'checkbox',
     '#title' => t('Add User Menu to Header (Log In, Log Out etc).'),

@@ -123,7 +123,9 @@
 
 <div class="wrapper wrapper--footer">
   <div class="breadcrumbs-wrapper">
-    <?php print $breadcrumb;?>
+    <div id="breadcrumbs">
+      <?php print $breadcrumb;?>
+    </div>
   </div>
   <div class="site-footer">
      <footer id="footer">

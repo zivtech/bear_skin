@@ -16,7 +16,7 @@
 		}
 	}
 	#main {
-		max-width: 1600px;
+		//max-width: 1600px;
 	}
 	.wrapper--main {
 		@include breakpoint($breakpoint-medium-width) {
@@ -25,7 +25,7 @@
 		}
 	}
 	#home-content {
-		max-width: $site-max-width;
+		//max-width: $site-max-width;
 		margin: 0 auto;
 		padding: 30px 20px;
 		@include breakpoint($breakpoint-to-max-width) {
@@ -85,17 +85,9 @@
 		margin-bottom: 30px;
 	}
 	#main {
-		max-width: 100%;
 		.row.top {
 			background: #555;
-			width: calc(100% + 40px);
-			margin-left: -20px;
-			@include breakpoint($breakpoint-to-max-width) {
-				width: 100%;
-				margin-left: 0;
-			}
 			.pane-node-field-featured-image {
-				max-width: $site-max-width;
 				margin: 0 auto;
 				padding: 20px;
 				@include breakpoint($breakpoint-to-max-width) {

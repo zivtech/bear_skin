@@ -32,13 +32,10 @@ features[] = secondary_menu
 
 settings[toggle_slogan] 		   = 0
 settings[toggle_name]  			   = 0
+settings[main_layout]  			   = fixed
 settings[user_menu]                = 1
-settings[sticky_footer]            = 0
-
-; To make this sub-theme an admin theme with shortcut links next to titles,
-; uncomment the line below.
-
-;settings[shortcut_module_link]    = 1
+settings[login_popup]              = 1
+settings[sticky_footer]            = 1
 
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: http://drupal.org/node/495654

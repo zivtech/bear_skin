@@ -11,8 +11,6 @@
 
 .breadcrumbs-wrapper {
   @include cf;
-  max-width: $site-max-width;
-  margin: 0 auto;
   @include breakpoint($breakpoint-full-width) {
     padding: 0 20px;
   }

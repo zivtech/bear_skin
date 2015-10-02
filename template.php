@@ -21,6 +21,16 @@ function bear_skin_preprocess_html(&$variables, $hook) {
     ),
   ), 'setting');
 
+  // add class depending on Theme layout settings
+  $variables['fixed_layout'] = (theme_get_setting('main_layout') == 'fixed');
+  $variables['fluid_layout'] = (theme_get_setting('main_layout') == 'fluid');
+  if (theme_get_setting('main_layout') == 'fixed') {
+    $variables['classes_array'][] = 'fixed-bear';
+  } else if 
+    (theme_get_setting('main_layout') == 'fluid') {
+      $variables['classes_array'][] = 'fluid-bear';
+  }
+
   // if the sticky footer option is selected, set a class
   if (theme_get_setting('sticky_footer')) {
     $variables['classes_array'][] = 'with-sticky-footer';
@@ -114,6 +124,7 @@ function bear_skin_process_html(&$variables, $hook) {
  * 2. Setup the user menu (by default displayed in header)
  */
 function bear_skin_preprocess_page(&$variables) {
+
   $page = $variables['page'];
 
   if (isset($variables['node']->type)) {

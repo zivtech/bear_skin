@@ -273,7 +273,9 @@ body {
   body *, body *:before, body *:after {
     box-sizing: border-box; }
   body img {
-    display: block; }
+    display: block;
+    max-width: 100%;
+    height: 100%; }
 
 #skip-link {
   margin: 0;
@@ -301,6 +303,16 @@ body {
 
 .region--navigation {
   display: inline-block; }
+
+body.fluid-bear .site-header,
+body.fluid-bear .breadcrumbs-wrapper,
+body.fluid-bear .region--footer {
+  max-width: 100%;
+  margin: 0; }
+
+body.fluid-bear .site-main {
+  max-width: 100%;
+  margin: 0; }
 
 body.with-sticky-footer {
   display: -ms-flexbox;
@@ -514,6 +526,38 @@ blockquote {
 .u-no-text-shadow {
   text-shadow: none; }
 
+.site-header__logo {
+  display: inline-block; }
+
+#sidr-wrapper-0 {
+  margin-left: 20px; }
+  #sidr-wrapper-0 #sidr-0-button {
+    display: block;
+    width: 25px;
+    height: 30px;
+    position: relative; }
+  #sidr-wrapper-0 span {
+    display: block;
+    position: relative;
+    background: #261D19;
+    height: 2px;
+    transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+    width: 22px;
+    top: 15px; }
+    #sidr-wrapper-0 span:before, #sidr-wrapper-0 span:after {
+      content: "";
+      display: block;
+      background: #261D19;
+      height: 2px;
+      margin-top: 0;
+      position: absolute;
+      width: 22px;
+      transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63); }
+    #sidr-wrapper-0 span:before {
+      top: 7px; }
+    #sidr-wrapper-0 span:after {
+      top: -7px; }
+
 .skip-link {
   position: absolute !important;
   height: 0;
@@ -607,7 +651,7 @@ blockquote {
 
 .breadcrumbs {
   margin: 0;
-  padding: 0; }
+  padding: 20px 0; }
   .breadcrumbs__item {
     display: inline-block;
     vertical-align: middle;
@@ -630,6 +674,18 @@ blockquote {
 
 @media (max-width: 75em) {
   .wrapper:not(.wrapper--footer) {
+    padding-left: 20px;
+    padding-right: 20px; } }
+
+@media (min-width: 75em) {
+  body.fluid-bear .site-header,
+    body.fluid-bear .breadcrumbs-wrapper,
+    body.fluid-bear .region--footer {
+    padding-left: 20px;
+    padding-right: 20px; }
+  body.fluid-bear h1.main__title,
+  body.fluid-bear .region--content,
+  body.fluid-bear .breadcrumbs {
     padding-left: 20px;
     padding-right: 20px; } }
 
