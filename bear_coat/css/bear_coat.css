@@ -370,105 +370,101 @@ body.sidr-open #header #sidr-wrapper-0 {
   #header a.loginpopup:focus {
     color: #728EAD; }
 
-nav.main-menu .main-menu__link {
-  font-family: 'Droid Sans', sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 8px 12px;
-  transition: all 0.2s ease-in-out;
-  border-radius: 6px;
-  font-size: 14px; }
-  nav.main-menu .main-menu__link:hover,
-  nav.main-menu .main-menu__link:focus,
-  nav.main-menu .main-menu__link.active {
-    background: #261D19;
-    color: #fff;
-    text-decoration: none; }
-
-nav.main-menu .main-menu--level-one > li {
-  padding: 20px 0; }
-  nav.main-menu .main-menu--level-one > li:hover .main-menu--level-two {
-    top: 65px;
-    opacity: .9; }
-
-nav.main-menu .main-menu--level-one li.parent:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #261D19;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: -30px;
-  transition: all 0.2s ease-in-out;
-  opacity: 0; }
-
-nav.main-menu .main-menu--level-one li.parent:hover:after {
-  opacity: .8;
-  bottom: 5px; }
-
-nav.main-menu .main-menu--level-one li.parent ul.menu {
-  border-radius: 8px;
-  background: #404040;
-  border: 0; }
-  nav.main-menu .main-menu--level-one li.parent ul.menu li {
-    margin-bottom: 8px;
-    padding: 0 10px;
-    display: block; }
-    nav.main-menu .main-menu--level-one li.parent ul.menu li a {
-      color: white; }
-      nav.main-menu .main-menu--level-one li.parent ul.menu li a:hover {
-        color: #eaeaea; }
-      nav.main-menu .main-menu--level-one li.parent ul.menu li a:active {
-        color: #eaeaea; }
-      nav.main-menu .main-menu--level-one li.parent ul.menu li a:focus {
-        color: #eaeaea; }
-    nav.main-menu .main-menu--level-one li.parent ul.menu li:last-child {
-      margin-bottom: 0; }
-  nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link {
-    text-transform: initial;
-    margin-bottom: 0; }
-    nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:hover,
-    nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:focus,
-    nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link.active {
-      background: transparent;
-      color: #728EAD; }
-    nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:after {
-      display: none; }
-
-nav.main-menu .menu .main-menu--level-two {
-  top: 100px;
-  transition: all 0.2s ease-in-out;
-  opacity: 0; }
-  nav.main-menu .menu .main-menu--level-two a {
-    position: relative; }
-  nav.main-menu .menu .main-menu--level-two li.parent > a:after,
-  nav.main-menu .menu .main-menu--level-two li.parent:hover > a:after {
+nav.main-menu {
+  outline: 0; }
+  nav.main-menu .main-menu__link {
+    font-family: 'Droid Sans', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 6px;
+    font-size: 14px; }
+    nav.main-menu .main-menu__link:hover,
+    nav.main-menu .main-menu__link:focus,
+    nav.main-menu .main-menu__link.active {
+      background: #261D19;
+      color: #fff;
+      text-decoration: none; }
+  nav.main-menu .main-menu--level-one > li {
+    padding: 20px 0; }
+    nav.main-menu .main-menu--level-one > li:hover .main-menu--level-two {
+      top: 65px;
+      opacity: .9; }
+  nav.main-menu .main-menu--level-one li.parent:after {
     content: "";
-    height: 0;
     width: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid white;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #261D19;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: -5px;
-    bottom: 0;
-    left: inherit;
-    margin: 3px 0 0 0;
-    display: inline-block !important;
-    opacity: 1 !important; }
-  nav.main-menu .menu .main-menu--level-two li.parent:after {
-    display: none; }
-
-nav.main-menu .menu .main-menu--level-three {
-  top: -10px; }
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -30px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0; }
+  nav.main-menu .main-menu--level-one li.parent:hover:after {
+    opacity: .8;
+    bottom: 5px; }
+  nav.main-menu .main-menu--level-one li.parent ul.menu {
+    border-radius: 8px;
+    background: #404040;
+    border: 0; }
+    nav.main-menu .main-menu--level-one li.parent ul.menu li {
+      margin-bottom: 8px;
+      padding: 0 10px;
+      display: block; }
+      nav.main-menu .main-menu--level-one li.parent ul.menu li a {
+        color: white; }
+        nav.main-menu .main-menu--level-one li.parent ul.menu li a:hover {
+          color: #eaeaea; }
+        nav.main-menu .main-menu--level-one li.parent ul.menu li a:active {
+          color: #eaeaea; }
+        nav.main-menu .main-menu--level-one li.parent ul.menu li a:focus {
+          color: #eaeaea; }
+      nav.main-menu .main-menu--level-one li.parent ul.menu li:last-child {
+        margin-bottom: 0; }
+    nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link {
+      text-transform: initial;
+      margin-bottom: 0; }
+      nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:hover,
+      nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:focus,
+      nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link.active {
+        background: transparent;
+        color: #728EAD; }
+      nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:after {
+        display: none; }
+  nav.main-menu .menu .main-menu--level-two {
+    top: 100px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0; }
+    nav.main-menu .menu .main-menu--level-two a {
+      position: relative; }
+    nav.main-menu .menu .main-menu--level-two li.parent > a:after,
+    nav.main-menu .menu .main-menu--level-two li.parent:hover > a:after {
+      content: "";
+      height: 0;
+      width: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid white;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: -5px;
+      bottom: 0;
+      left: inherit;
+      margin: 3px 0 0 0;
+      display: inline-block !important;
+      opacity: 1 !important; }
+    nav.main-menu .menu .main-menu--level-two li.parent:after {
+      display: none; }
+  nav.main-menu .menu .main-menu--level-three {
+    top: -10px; }
 
 .nav-user__list {
   right: 0;
@@ -705,7 +701,7 @@ nav.ui.breadcrumb {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    right: 0;
+    right: 20px;
     width: auto;
     background: transparent;
     left: inherit;

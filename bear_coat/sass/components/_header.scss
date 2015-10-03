@@ -144,7 +144,7 @@ body.sidr-open {
       background: rgba(0, 0, 0, .7);
       @include breakpoint($breakpoint-medium-width) {
         @include align(v);
-        right: 0;
+        right: 20px;
         width: auto;
         background: transparent;
         left: inherit;
