@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
 body.semantic-ui .ui.form,
 body.semantic-ui .ui.search-form {
@@ -241,6 +242,25 @@ body.semantic-ui .ui.menu a.item:focus {
 
 .node-type-feature .field-collection-view {
   padding: 0; }
+
+.right .pane-node-field-feature-type a {
+  float: left;
+  clear: both; }
+  .right .pane-node-field-feature-type a:before {
+    content: "•";
+    color: #261D19;
+    margin-right: 5px; }
+
+.page-taxonomy-term #main {
+  padding-bottom: 30px; }
+
+.page-taxonomy-term .node-teaser {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px #ccc;
+  padding: 20px;
+  margin-bottom: 20px; }
 
 .wrapper--footer {
   border-top: 1px solid #dedede; }
@@ -640,14 +660,30 @@ nav.ui.breadcrumb {
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
 * html .jspCorner {
   margin: 0 -3px 0 0; }
+
+.column.left,
+.column.right {
+  padding: 30px 0; }
+
 @media (max-width: 75em){
   .breadcrumbs-wrapper{
     padding: 0 20px; } }
+
 @media (min-width: 50em){
   .front h1.main__title{
     top: 30%;
     font-size: 180%; }
   .view-features .view-content{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 3%;
+    -moz-column-gap: 3%;
+    column-gap: 3%;
+    -webkit-column-width: 30%;
+    -moz-column-width: 30%;
+    column-width: 30%; }
+  .page-taxonomy-term .site-main .block__content{
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
@@ -730,6 +766,7 @@ nav.ui.breadcrumb {
     float: right; }
   .ui.cards > .card:nth-child(3n + 1){
     clear: both; } }
+
 @media (min-width: 25em){
   .view-features .views-exposed-widget{
     zoom: 1;
@@ -752,6 +789,7 @@ nav.ui.breadcrumb {
     float: right; }
   .view-features .views-exposed-widget:nth-child(2n + 1){
     clear: both; } }
+
 @media (min-width: 75em){
   .node-type-feature #main .row.top .pane-node-field-featured-image{
     padding: 20px; }

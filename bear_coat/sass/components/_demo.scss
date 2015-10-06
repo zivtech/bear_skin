@@ -117,3 +117,36 @@
 	}
 }
 
+.right .pane-node-field-feature-type {
+	a {
+		float: left;
+		clear: both;
+		&:before {
+			content: "•";
+			color: $zivtech-dark;
+			margin-right: 5px;
+		}
+	}
+}
+
+.page-taxonomy-term {
+	#main {
+		padding-bottom: 30px;
+	}
+	.site-main .block__content  {
+		@include breakpoint($breakpoint-medium-width) {
+			column-count: 3;
+	    column-gap: 3%;
+	    column-width: 30%;
+	  }
+	}
+	.node-teaser {
+		display: inline-block;
+		width:  100%; 
+		border: 1px solid #ddd;
+		box-shadow: 0 0 5px #ccc;
+		padding: 20px;
+		margin-bottom: 20px;
+	}
+}
+
