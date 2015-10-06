@@ -56,7 +56,8 @@ body {
   &.empty-left {
     @include layout-padding;
   }
-  &.panel-display--three-column {
+  &.panel-display--three-column,
+  &.panel-display--two-eq-column {
     padding-left: 0;
     padding-right: 0;
     &.empty-left.empty-right {

@@ -3,8 +3,7 @@
     
     <?php if (!empty($item)): ?>
 
-      <?php $columns = array("empty-left", "empty-right");
-      if (!strpos($attributes, "empty-left") !== false && !strpos($attributes, "empty-right") !== false) : ?>
+      <?php if (!strpos($attributes, "empty-left") !== false && !strpos($attributes, "empty-right") !== false) : ?>
         <?php if ($name == "center") : ?>
         <div class="row center">
           <div<?php print drupal_attributes($region_attributes_array[$name])?>>

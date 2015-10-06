@@ -141,10 +141,12 @@ body {
   padding-left: 20px;
   padding-right: 20px; }
 
-.panel-display.panel-display--three-column {
+.panel-display.panel-display--three-column,
+.panel-display.panel-display--two-eq-column {
   padding-left: 0;
   padding-right: 0; }
-  .panel-display.panel-display--three-column.empty-left.empty-right {
+  .panel-display.panel-display--three-column.empty-left.empty-right,
+  .panel-display.panel-display--two-eq-column.empty-left.empty-right {
     padding-left: 20px;
     padding-right: 20px; }
 
@@ -539,7 +541,8 @@ blockquote {
     .panel-display.empty-left {
     padding-left: 0;
     padding-right: 0; }
-  .panel-display.panel-display--three-column.empty-left.empty-right {
+  .panel-display.panel-display--three-column.empty-left.empty-right,
+      .panel-display.panel-display--two-eq-column.empty-left.empty-right {
     padding-left: 0;
     padding-right: 0; }
   body.page-panels h1.main__title {
