@@ -97,6 +97,29 @@ function bear_skin_preprocess_html(&$variables, $hook) {
     }
     $variables['classes_array'][] = drupal_html_class('section-' . $section);
   }
+
+  // Add class to body when panels renders the page
+  $variables['menu_item'] = menu_get_item();
+    if ($variables['menu_item']) {
+      switch ($variables['menu_item']['page_callback']) {
+        case 'page_manager_blog':
+        case 'page_manager_blog_user':
+        case 'page_manager_contact_site':
+        case 'page_manager_contact_user':
+        case 'page_manager_node_add':
+        case 'page_manager_node_edit':
+        case 'page_manager_node_view_page':
+        case 'page_manager_page_execute':
+        case 'page_manager_poll':
+        case 'page_manager_search_page':
+        case 'page_manager_term_view_page':
+        case 'page_manager_user_edit_page':
+        case 'page_manager_user_view_page':
+          // Is this a Panels page?
+          $variables['classes_array'][] = 'page-panels';
+          break;
+      }
+    }
 }
 
 function bear_skin_html_head_alter(&$head_elements) {

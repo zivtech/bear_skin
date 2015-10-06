@@ -11,13 +11,6 @@ body {
   }
 }
 
-.wrapper:not(.wrapper--footer) {
-  @include breakpoint($breakpoint-full-width) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
 #skip-link {
   margin: 0;
   padding: 0;
@@ -28,7 +21,8 @@ body {
 
 .site-header,
 .site-main,
-.region--footer {
+.region--footer,
+#breadcrumbs {
   @include cf;
   max-width: $site-max-width;
   margin: 0 auto;
@@ -37,35 +31,77 @@ body {
   display: inline-block;
 }
 
+//
+@mixin layout-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+  @include breakpoint($breakpoint-to-max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.site-header,
+.site-main,
+.breadcrumbs-wrapper,
+.region--footer,
+.breadcrumbs {
+  @include layout-padding;
+}
+.panel-display {
+  .row {
+    @include layout-padding;
+  }
+  &.empty-right,
+  &.empty-left {
+    @include layout-padding;
+  }
+  &.panel-display--three-column {
+    padding-left: 0;
+    padding-right: 0;
+    &.empty-left.empty-right {
+      @include layout-padding;
+    }
+  }
+}
+body.page-panels {
+  h1.main__title {
+    @include layout-padding;
+  }
+  .site-main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 //*************
 // Fluid Layout
 //*************
 
 body.fluid-bear {
   .site-header, 
-  .breadcrumbs-wrapper,
+  #breadcrumbs,
   .region--footer {
     max-width: 100%;
     margin: 0;
-    @include breakpoint($breakpoint-to-max-width) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    
   }
   .site-main {
     max-width: 100%;
     margin: 0; 
   }
+  .site-header, 
+  .breadcrumbs-wrapper,
+  .region--footer,
   h1.main__title,
-  .region--content,
-  .breadcrumbs {
+  .breadcrumbs,
+  .panel-display .row {
     @include breakpoint($breakpoint-to-max-width) {
       padding-left: 20px;
       padding-right: 20px;
     }
   }
 }
+
 //************************
 // Sticky Footer (flexbox)
 //************************

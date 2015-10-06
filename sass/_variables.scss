@@ -103,7 +103,7 @@ $breakpoint-small-width: min-width 25em;
 $breakpoint-med-small-width: min-width 40.5em;
 $breakpoint-medium-width: min-width 50em;
 $breakpoint-large-width: min-width 62.5em;
-$breakpoint-to-max-width: min-width $site-max-width;
+$breakpoint-to-max-width: min-width calc($site-max-width + 40);
 $breakpoint-full-width: max-width $site-max-width;
 
 //

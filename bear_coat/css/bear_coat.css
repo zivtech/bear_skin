@@ -208,9 +208,6 @@ body.semantic-ui .ui.menu a.item:focus {
     .node-type-feature #main .row.top .pane-node-field-featured-image img {
       width: 100%; }
 
-.node-type-feature #main .column.center {
-  max-width: 75em; }
-
 .node-type-feature .panel-pane {
   clear: both; }
 
