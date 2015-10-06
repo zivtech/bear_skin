@@ -227,7 +227,8 @@ body.with-sticky-footer .wrapper--main {
   position: relative;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  -webkit-flex: 1 0 auto; }
+  -webkit-flex: 1 0 auto;
+  overflow: hidden; }
 
 .tabs-primary,
 .tabs-secondary {

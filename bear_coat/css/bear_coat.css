@@ -186,6 +186,8 @@ body.semantic-ui .ui.menu a.item:focus {
     padding: 0; }
     .view-features .views-exposed-widget input {
       max-width: 100%; }
+  .view-features .view-content {
+    padding-bottom: 25px; }
   .view-features .views-row {
     display: inline-block;
     width: 100%;
@@ -200,6 +202,9 @@ body.semantic-ui .ui.menu a.item:focus {
       padding: 20px;
       border-top: 1px solid #ccc;
       margin-top: 20px; }
+  .view-features .pager-wrapper {
+    background: #fff;
+    margin-top: -50px; }
 
 .node-type-feature .bm30 {
   margin-bottom: 30px; }

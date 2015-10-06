@@ -48,6 +48,7 @@
 	    column-gap: 3%;
 	    column-width: 30%;
 	  }
+	  padding-bottom: 25px;
 	}
 	.views-row {
 		display: inline-block;
@@ -65,6 +66,10 @@
 			border-top: 1px solid #ccc;
 			margin-top: 20px;
 		}
+	}
+	.pager-wrapper {
+		background: #fff;
+		margin-top: -50px;
 	}
 }
 
