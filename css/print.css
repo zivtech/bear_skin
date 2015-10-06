@@ -136,8 +136,8 @@ body {
   padding-left: 20px;
   padding-right: 20px; }
 
-.panel-display.empty-right,
-.panel-display.empty-left {
+.panel-display.empty-right .column.center,
+.panel-display.empty-left .column.center {
   padding-left: 20px;
   padding-right: 20px; }
 
@@ -155,8 +155,33 @@ body.page-panels h1.main__title {
   padding-right: 20px; }
 
 body.page-panels .site-main {
+  max-width: 100%;
   padding-left: 0;
   padding-right: 0; }
+
+body.page-panels .row {
+  *zoom: 1;
+  max-width: 75em;
+  margin: 0 auto; }
+  body.page-panels .row:before, body.page-panels .row:after {
+    content: '';
+    display: table; }
+  body.page-panels .row:after {
+    clear: both; }
+
+body.page-panels .panel-display.empty-right .column.center,
+body.page-panels .panel-display.empty-left .column.center {
+  *zoom: 1;
+  max-width: 75em;
+  margin: 0 auto; }
+  body.page-panels .panel-display.empty-right .column.center:before,
+  body.page-panels .panel-display.empty-right .column.center:after,
+  body.page-panels .panel-display.empty-left .column.center:before, body.page-panels .panel-display.empty-left .column.center:after {
+    content: '';
+    display: table; }
+  body.page-panels .panel-display.empty-right .column.center:after,
+  body.page-panels .panel-display.empty-left .column.center:after {
+    clear: both; }
 
 body.fluid-bear .site-header,
 body.fluid-bear #breadcrumbs,
@@ -167,6 +192,24 @@ body.fluid-bear .region--footer {
 body.fluid-bear .site-main {
   max-width: 100%;
   margin: 0; }
+
+body.fluid-bear .panel-display .row {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+body.fluid-bear .panel-display.empty-right .column.center,
+body.fluid-bear .panel-display.empty-left .column.center {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+body.fluid-bear .panel-display.panel-display--three-column,
+body.fluid-bear .panel-display.panel-display--two-eq-column {
+  padding-left: 0;
+  padding-right: 0; }
+  body.fluid-bear .panel-display.panel-display--three-column.empty-left.empty-right,
+  body.fluid-bear .panel-display.panel-display--two-eq-column.empty-left.empty-right {
+    padding-left: 20px;
+    padding-right: 20px; }
 
 body.fluid-bear:not(.page-panels) .site-main {
   padding: 0 20px; }
@@ -540,8 +583,8 @@ blockquote {
   .panel-display .row {
     padding-left: 0;
     padding-right: 0; }
-  .panel-display.empty-right,
-    .panel-display.empty-left {
+  .panel-display.empty-right .column.center,
+    .panel-display.empty-left .column.center {
     padding-left: 0;
     padding-right: 0; }
   .panel-display.panel-display--three-column.empty-left.empty-right,
@@ -555,10 +598,16 @@ blockquote {
   body.fluid-bear .breadcrumbs-wrapper,
   body.fluid-bear .region--footer,
   body.fluid-bear h1.main__title,
-  body.fluid-bear .breadcrumbs,
-  body.fluid-bear .panel-display .row {
+  body.fluid-bear .breadcrumbs {
     padding-left: 20px;
     padding-right: 20px; }
+  body.fluid-bear .panel-display .row {
+    padding-left: 0;
+    padding-right: 0; }
+  body.fluid-bear .panel-display.panel-display--three-column.empty-left.empty-right,
+      body.fluid-bear .panel-display.panel-display--two-eq-column.empty-left.empty-right {
+    padding-left: 0;
+    padding-right: 0; }
   body.fluid-bear:not(.page-panels) h1.main__title {
     padding-left: 0;
     padding-right: 0; } }

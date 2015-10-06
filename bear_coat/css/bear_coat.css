@@ -204,10 +204,12 @@ body.semantic-ui .ui.menu a.item:focus {
   margin-bottom: 30px; }
 
 .node-type-feature #main .row.top {
-  background: #555; }
+  background: #555;
+  max-width: 100%; }
   .node-type-feature #main .row.top .pane-node-field-featured-image {
     margin: 0 auto;
-    padding: 20px; }
+    padding: 20px 0;
+    max-width: 1240px; }
     .node-type-feature #main .row.top .pane-node-field-featured-image img {
       width: 100%; }
 
@@ -752,7 +754,7 @@ nav.ui.breadcrumb {
     clear: both; } }
 @media (min-width: 75em){
   .node-type-feature #main .row.top .pane-node-field-featured-image{
-    padding: 20px 0; }
+    padding: 20px; }
   .site-footer .region-footer{
     padding-left: 0;
     padding-right: 0; } }

@@ -31,7 +31,7 @@ body {
   display: inline-block;
 }
 
-//
+// Including our mixin here for easier
 @mixin layout-padding {
   padding-left: 20px;
   padding-right: 20px;
@@ -54,7 +54,9 @@ body {
   }
   &.empty-right,
   &.empty-left {
-    @include layout-padding;
+    .column.center {
+      @include layout-padding;
+    }
   }
   &.panel-display--three-column,
   &.panel-display--two-eq-column {
@@ -70,8 +72,24 @@ body.page-panels {
     @include layout-padding;
   }
   .site-main {
+    max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+  }
+  .row {
+    @include cf;
+    max-width: $site-max-width;
+    margin: 0 auto;
+  }
+  .panel-display {
+    &.empty-right,
+    &.empty-left {
+      .column.center {
+        @include cf;
+        max-width: $site-max-width;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
@@ -94,11 +112,30 @@ body.fluid-bear {
   .breadcrumbs-wrapper,
   .region--footer,
   h1.main__title,
-  .breadcrumbs,
-  .panel-display .row {
+  .breadcrumbs {
     @include breakpoint($breakpoint-to-max-width) {
       padding-left: 20px;
       padding-right: 20px;
+    }
+  }
+  .panel-display {
+    .row {
+      @include layout-padding;
+    }
+    &.empty-right,
+    &.empty-left {
+      .column.center {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    &.panel-display--three-column,
+    &.panel-display--two-eq-column {
+      padding-left: 0;
+      padding-right: 0;
+      &.empty-left.empty-right {
+        @include layout-padding;
+      }
     }
   }
   &:not(.page-panels) {
