@@ -37,7 +37,11 @@
       if ($('body').hasClass('semantic-ui')) {
         $('select').dropdown();
         $('.ui.checkbox').checkbox();
-        $('.ui.accordion').accordion();
+        $('.ui.accordion').accordion({
+          animateChildren: true,
+          easing: "easeInQuart",
+          duration: 300
+        });
         $('.tabular.menu .item').tab();
         $('.ui.sticky').sticky({
           context: '#content',
