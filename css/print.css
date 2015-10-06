@@ -168,6 +168,9 @@ body.fluid-bear .site-main {
   max-width: 100%;
   margin: 0; }
 
+body.fluid-bear:not(.page-panels) .site-main {
+  padding: 0 20px; }
+
 body.with-sticky-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -526,7 +529,7 @@ blockquote {
 .wrapper--header {
   background-color: #eaeaea; }
 
-@media (calc($site-max-width + 40): min-width) {
+@media (min-width: 75em) {
   .site-header,
     .site-main,
     .breadcrumbs-wrapper,
@@ -555,7 +558,10 @@ blockquote {
   body.fluid-bear .breadcrumbs,
   body.fluid-bear .panel-display .row {
     padding-left: 20px;
-    padding-right: 20px; } }
+    padding-right: 20px; }
+  body.fluid-bear:not(.page-panels) h1.main__title {
+    padding-left: 0;
+    padding-right: 0; } }
 
 @media (min-width: 50em) {
   .sidebar-first main {

@@ -15,22 +15,10 @@
 			font-size: 180%;
 		}
 	}
-	#main {
-		//max-width: 1600px;
-	}
-	.wrapper--main {
-		@include breakpoint($breakpoint-medium-width) {
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
 	#home-content {
 		//max-width: $site-max-width;
 		margin: 0 auto;
 		padding: 30px 20px;
-		@include breakpoint($breakpoint-to-max-width) {
-			padding: 30px 0;
-		}
 	}
 }
 .view-features {

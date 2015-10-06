@@ -71,6 +71,9 @@ body.semantic-ui .ui.search-form {
   z-index: 1;
   font-size: 100%; }
 
+.wrapper {
+  min-width: 320px; }
+
 .main__content .column.right {
   padding-left: 50px; }
 
@@ -244,7 +247,7 @@ body.semantic-ui .ui.menu a.item:focus {
   background: #404040;
   color: #fff; }
   .site-footer .region-footer {
-    padding: 30px 0; }
+    padding: 30px 20px; }
 
 #footer .block-menu {
   float: left;
@@ -270,7 +273,9 @@ body.semantic-ui .ui.menu a.item:focus {
 
 #header {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0; }
   #header .region-navigation {
     position: absolute;
     top: 50%;
@@ -315,7 +320,8 @@ body.sidr-open #header #sidr-wrapper-0 {
   transition: all 0.3s ease-in-out;
   height: 55px;
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  padding: 10px 20px; }
   .wrapper--header .site-header__logo {
     width: 50px;
     opacity: 1;
@@ -348,7 +354,7 @@ body.sidr-open #header #sidr-wrapper-0 {
   #header .block-search.focus,
   #header .block-views.focus {
     right: 0;
-    top: 18px;
+    top: 16px;
     width: calc(100% + 40px);
     left: -20px;
     padding: 15px 15px 13px;
@@ -356,9 +362,10 @@ body.sidr-open #header #sidr-wrapper-0 {
 
 #header a.loginpopup {
   position: absolute;
-  right: 43px;
+  right: 0;
   top: 8px;
   font-size: 12px;
+  right: 45px;
   color: #261D19; }
   #header a.loginpopup:hover {
     color: #728EAD; }
@@ -633,16 +640,11 @@ nav.ui.breadcrumb {
   margin: 0 -3px 0 0; }
 @media (max-width: 75em){
   .breadcrumbs-wrapper{
-    padding: 0 20px; }
-  .site-footer .region-footer{
-    padding: 30px 20px; } }
+    padding: 0 20px; } }
 @media (min-width: 50em){
   .front h1.main__title{
     top: 30%;
     font-size: 180%; }
-  .front .wrapper--main{
-    padding-left: 0;
-    padding-right: 0; }
   .view-features .view-content{
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -656,8 +658,8 @@ nav.ui.breadcrumb {
   #header .region-navigation{
     right: auto; }
   .wrapper--header{
-    padding: 20px 0;
-    height: 125px; }
+    height: 125px;
+    padding: 20px; }
   .wrapper--header .site-header__logo{
     display: block;
     float: left;
@@ -698,7 +700,6 @@ nav.ui.breadcrumb {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    right: 20px;
     width: auto;
     background: transparent;
     left: inherit;
@@ -727,16 +728,6 @@ nav.ui.breadcrumb {
     float: right; }
   .ui.cards > .card:nth-child(3n + 1){
     clear: both; } }
-@media (min-width: 75em){
-  .front #home-content{
-    padding: 30px 0; }
-  .node-type-feature #main .row.top .pane-node-field-featured-image{
-    padding: 20px 0; }
-  #header .block-search,
-    #header .block-views{
-    right: 20px; }
-  #header a.loginpopup{
-    right: 20px; } }
 @media (min-width: 25em){
   .view-features .views-exposed-widget{
     zoom: 1;
@@ -759,3 +750,9 @@ nav.ui.breadcrumb {
     float: right; }
   .view-features .views-exposed-widget:nth-child(2n + 1){
     clear: both; } }
+@media (min-width: 75em){
+  .node-type-feature #main .row.top .pane-node-field-featured-image{
+    padding: 20px 0; }
+  .site-footer .region-footer{
+    padding-left: 0;
+    padding-right: 0; } }
