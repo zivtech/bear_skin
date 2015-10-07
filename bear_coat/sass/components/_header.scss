@@ -1,7 +1,8 @@
 $header-height: 125px;
 $header-compressed-height: 55px;
 
-@mixin compressHeader {// compressed herder (mobile and scroll)
+// Our Mixin for compressed header (mobile and scroll)
+@mixin compressHeader {
   height: $header-compressed-height;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -22,55 +23,6 @@ $header-compressed-height: 55px;
   }
 }
 
-.region-header {
-  height: 100%;
-}
-#header {
-  position: relative;
-  height: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  .region-navigation {
-    @include align(v);
-    right: 0;
-    @include breakpoint($breakpoint-medium-width) {
-      right: auto;
-    }
-  }
-}
-
-body.sidr-open {
-  #header {
-    .region-navigation {
-      left: 0;
-    }
-    .site-header__logo {
-      opacity: 0;
-    }
-  }
-  #header #sidr-wrapper-0 {
-    margin-left: 0;
-    span {
-      background: transparent;
-      &:before,
-      &:after {
-        top: 0;
-      }
-      &:before {
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-}
-
-.sidr-animating {
-  .wrapper--header {
-    position: absolute;
-  }
-}
 .wrapper--header {
   position: fixed;
   width: 100%;
@@ -108,14 +60,21 @@ body.sidr-open {
   }
 }
 
-.wrapper--main {
-  padding-top: $header-compressed-height;
-  @include breakpoint($breakpoint-medium-width) {
-    padding-top: $header-height;
-  }
-}
-
 #header {
+  position: relative;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  .region-header {
+    height: 100%;
+  }
+  .region-navigation {
+    @include align(v);
+    right: 0;
+    @include breakpoint($breakpoint-medium-width) {
+      right: auto;
+    }
+  }
   .block-search,
   .block-views {
     @include align(v);
@@ -162,5 +121,13 @@ body.sidr-open {
       right: 0;
       top: 0;
     }
+  }
+}
+
+// Related to Header
+.wrapper--main {
+  padding-top: $header-compressed-height;
+  @include breakpoint($breakpoint-medium-width) {
+    padding-top: $header-height;
   }
 }

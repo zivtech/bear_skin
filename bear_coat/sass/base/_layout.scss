@@ -1,16 +1,6 @@
 .wrapper {
   min-width: 320px;
 }
-.main__content {
-    .column {
-    &.right {
-      padding-left: 50px;
-    }
-    &.left {
-      padding-right: 50px;
-    }
-  }
-}
 
 .breadcrumbs-wrapper {
   @include cf;

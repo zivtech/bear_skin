@@ -1,6 +1,10 @@
 nav.main-menu {
   outline: 0;
-  .main-menu__link {
+  .nolink {
+    cursor: pointer;
+  }
+  .main-menu__link,
+  .menu .parent .main-menu__link {
     font-family: 'Droid Sans', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
@@ -79,37 +83,35 @@ nav.main-menu {
       }
     }
   }
-  .menu {
-    .main-menu--level-two {
-      top: 100px;
-      transition: all .2s ease-in-out;
-      opacity: 0;
-      a {
-        position : relative;
-      }
-      li.parent > a:after,
-      li.parent:hover > a:after {
-        content: "";
-        height: 0; 
-        width: 0; 
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent; 
-        border-left: 5px solid $zivtech-white;
-        @include align(v);
-        right: -5px;
-        bottom: 0;
-        left: inherit;
-        margin: 3px 0 0 0;
-        display: inline-block !important;
-        opacity: 1 !important;
-      }
-      li.parent:after {
-        display: none;
-      }
+  .main-menu--level-two {
+    top: 100px;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    a {
+      position : relative;
     }
-    .main-menu--level-three {
-      top: -10px;
+    li.parent > a:after,
+    li.parent:hover > a:after {
+      content: "";
+      height: 0; 
+      width: 0; 
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent; 
+      border-left: 5px solid $zivtech-white;
+      @include align(v);
+      right: -5px;
+      bottom: 0;
+      left: inherit;
+      margin: 3px 0 0 0;
+      display: inline-block !important;
+      opacity: 1 !important;
     }
+    li.parent:after {
+      display: none;
+    }
+  }
+  .main-menu--level-three {
+    top: -10px;
   }
 }
 .nav-user__list {
@@ -123,13 +125,49 @@ nav.main-menu {
   }
 }
 
-// SIDR Additions/Overrides
+//********************************
+// Support for SIDR responsive NAV
+//********************************
 
+body.sidr-open {
+  #header {
+    .region-navigation {
+      left: 0;
+    }
+    .site-header__logo {
+      opacity: 0;
+    }
+  }
+  #header #sidr-wrapper-0 {
+    margin-left: 0;
+    span {
+      background: transparent;
+      &:before,
+      &:after {
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.sidr-animating {
+  .wrapper--header {
+    position: absolute;
+  }
+}
 h3.sidr-class-u-hidden {
   @include bear-element-invisible;
 }
 
+//******
 // Pager
+//******
 
 .pager-wrapper {
   position: relative;
@@ -141,6 +179,11 @@ h3.sidr-class-u-hidden {
 .ui.pagination.menu {
   @include align(h);
 }
+
+//************
+// Breadcrumbs
+//************
+
 nav.ui.breadcrumb {
   padding: 20px 0;
   color: rgba(0, 0, 0, 0.4);

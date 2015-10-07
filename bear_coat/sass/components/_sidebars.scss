@@ -1,6 +1,14 @@
-.column {
-	&.left,
-	&.right {
-		padding: 30px 0;
+.panel-display {
+	.left,
+	.right {
+		padding: 0;
+	}
+	@include breakpoint($breakpoint-medium-width) {
+		.column.right {
+      padding: 40px 0 20px 50px;
+    }
+    .column.left {
+      padding: 40px 50px 20px 0;
+    }
 	}
 }

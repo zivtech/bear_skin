@@ -81,27 +81,3 @@ img {
   max-width: 100%;
   height: 100%;
 }
-body.semantic-ui { 
-  .ui {
-    font-size: 100%;
-    font-family: $body-font;
-    .field {
-      > label {
-        font-size: 100%;
-      }
-    }
-  }
-  .ui.link.menu .item:hover, 
-  .ui.menu .dropdown.item:hover, 
-  .ui.menu .link.item:hover, 
-  .ui.menu a.item:hover,
-  .ui.link.menu .item:focus, 
-  .ui.menu .dropdown.item:focus, 
-  .ui.menu .link.item:focus, 
-  .ui.menu a.item:focus {
-    color: $zivtech-blue;
-  }
-}
-.sidebar {
-  font-size: 90%;
-}

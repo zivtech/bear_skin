@@ -1,0 +1,110 @@
+//**********************
+// Semantic UI Overrides
+//**********************
+
+$headers-font: 'Droid Sans', sans-serif;
+$body-font: 'Helvetica Neue', Helvetica,sans-serif;
+
+body.semantic-ui { 
+  .ui {
+    font-size: 100%;
+    font-family: $body-font;
+    .field {
+      > label {
+        font-size: 100%;
+      }
+    }
+  }
+  .ui.link.menu .item:hover, 
+  .ui.menu .dropdown.item:hover, 
+  .ui.menu .link.item:hover, 
+  .ui.menu a.item:hover,
+  .ui.link.menu .item:focus, 
+  .ui.menu .dropdown.item:focus, 
+  .ui.menu .link.item:focus, 
+  .ui.menu a.item:focus {
+    color: $zivtech-blue;
+  }
+}
+.sidebar {
+  font-size: 90%;
+}
+
+body.semantic-ui .ui.form,
+body.semantic-ui .ui.search-form {
+  font-family: $body-text-font-family;
+  padding: 0;
+  input {
+    font-family: $body-text-font-family;
+  }
+  .form-item, 
+  fieldset {
+    max-width: 600px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  legend {
+    margin-left: 0;
+  }
+  .description {
+    font-size: 90%;
+    color: $bear-lighten-dark;
+  }
+  label {
+    display: block;
+    clear: both;
+    margin-bottom: 5px;
+    font-weight: normal;
+  } 
+  .ui.dropdown {
+    min-width: 100%;
+    .menu {
+    > .item {
+      font-size: 14px;
+      padding-left: 1.1em !important;
+      }
+    }
+    > input.search {
+      z-index: 10;
+    }
+  }
+  &.segment {
+    border: 0;
+    margin: 0;
+    padding: 20px;
+  }
+  .views-exposed-form {
+    position: relative;
+    .views-exposed-widgets {
+      transition: opacity .2s ease-in-out;
+    }
+    &.ajaxx .views-exposed-widgets {
+      opacity: .2;
+      & {
+        opacity: 0;
+      }
+    }
+  }
+  .hidden-submit {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    float: none;
+    margin: 0;
+    display: block;
+  }
+  .ui.loading {
+    top: -70px !important;
+  }
+}
+
+.ui.cards {
+  margin: 0;
+}
+.ui.cards > .card {
+  @include col();
+  @include stack();
+  @include breakpoint($breakpoint-medium-width) {
+    @include col(1/3, $gutter: 2, $cycle: 3);
+  }
+}
