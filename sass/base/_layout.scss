@@ -19,6 +19,20 @@ body {
   }
 }
 
+// Including our mixin here for easier changes
+@mixin layout-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+  @include breakpoint($breakpoint-to-max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+//************************************
+// Padding/Layout rules for main pages
+//************************************
+
 .site-header,
 .site-main,
 .region--footer,
@@ -30,17 +44,6 @@ body {
 .region--navigation {
   display: inline-block;
 }
-
-// Including our mixin here for easier
-@mixin layout-padding {
-  padding-left: 20px;
-  padding-right: 20px;
-  @include breakpoint($breakpoint-to-max-width) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 .site-header,
 .site-main,
 .breadcrumbs-wrapper,
@@ -48,25 +51,11 @@ body {
 .breadcrumbs {
   @include layout-padding;
 }
-.panel-display {
-  .row {
-    @include layout-padding;
-  }
-  &.empty-right,
-  &.empty-left {
-    .column.center {
-      @include layout-padding;
-    }
-  }
-  &.panel-display--three-column,
-  &.panel-display--two-eq-column {
-    padding-left: 0;
-    padding-right: 0;
-    &.empty-left.empty-right {
-      @include layout-padding;
-    }
-  }
-}
+
+//**************************************
+// Padding/Layout rules for panels pages
+//**************************************
+
 body.page-panels {
   h1.main__title {
     @include layout-padding;
@@ -76,19 +65,29 @@ body.page-panels {
     padding-left: 0;
     padding-right: 0;
   }
+}
+.panel-display {
   .row {
     @include cf;
     max-width: $site-max-width;
     margin: 0 auto;
+    @include layout-padding;
   }
-  .panel-display {
-    &.empty-right,
-    &.empty-left {
-      .column.center {
-        @include cf;
-        max-width: $site-max-width;
-        margin: 0 auto;
-      }
+  &.empty-right,
+  &.empty-left {
+    .column.center {
+      @include cf;
+      max-width: $site-max-width;
+      margin: 0 auto;
+      @include layout-padding;
+    }
+  }
+  &.panel-display--three-column,
+  &.panel-display--two-eq-column {
+    padding-left: 0;
+    padding-right: 0;
+    &.empty-left.empty-right {
+      @include layout-padding;
     }
   }
 }
@@ -119,8 +118,11 @@ body.fluid-bear {
     }
   }
   .panel-display {
+    
     .row {
-      @include layout-padding;
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 100%;
     }
     &.empty-right,
     &.empty-left {
@@ -174,9 +176,10 @@ body.with-sticky-footer .wrapper--main {
   overflow: hidden;
 }
 
-//
+//*************
 // Left Sidebar
-//
+//*************
+
 .sidebar-first {
   main {
     @include breakpoint($breakpoint-medium-width) {
@@ -192,9 +195,10 @@ body.with-sticky-footer .wrapper--main {
   }
 }
 
-//
-// Right sidebar
-//
+//**************
+// Right Sidebar
+//**************
+
 .sidebar-second {
   main {
     @include breakpoint($breakpoint-medium-width) {
@@ -208,9 +212,10 @@ body.with-sticky-footer .wrapper--main {
   }
 }
 
-//
-// Two sidebars
-//
+//**************
+// Two Sidebars
+//**************
+
 .two-sidebars {
   main {
     @include breakpoint($breakpoint-medium-width) {
