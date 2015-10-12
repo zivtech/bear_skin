@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html{{ html_attributes }}>
 <head>
-  {{ head }}
-  <title>{{ head_title|safe_join(' | ') }}</title>
-  {{ styles }}
-  {{ scripts }}
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+  </head>
 </head>
 <body{{ attributes }}>
   <ul id="skip-link" class="visually-hidden focusable">

@@ -42,8 +42,6 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   else {
     $variables['attributes']['class'][] = 'layout-no-sidebars';
   }
-
-  dpm($variables);
   
 }
 
