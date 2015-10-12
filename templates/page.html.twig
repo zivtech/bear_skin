@@ -1,50 +1,16 @@
 <div class="wrapper wrapper--header">
   <header id="header" role="banner" class="site-header">
-
-    {% if page.main_site_logo  %}
-      <a href="{{ front_page }}" title="{{ 'Home'|t }}"
-         rel="home" class="site-header__logo">
-        <img src="{{ page.main_site_logo }}" alt="{{ 'Home'|t }}"/>
-      </a>
-    {% endif %}
+    
+    {{ page.header }}
 
     {{ page.navigation }}
 
-    {% if site_name or site_slogan  %}
-      <div class="site-header__name-and-slogan">
-        {% if site_name  %}
-          <span class="site-header__name">
-            <a href="{{ front_page }}"
-               title="{{ 'Home'|t }}" rel="home">
-              <span>{{ site_name }}</span>
-            </a>
-          </span>
-        {% endif %}
-
-        {% if site_slogan  %}
-          <h2 class="site-header__slogan">
-            {{ site_slogan }}
-          </h2>
-        {% endif %}
-      </div><!-- /.site-header__name-and-slogan -->
-    {% endif %}
-
-    {{ page.header }}
-
-    {# {% if theme_get_setting('user_menu' ) %} #}
-      <nav id="bear-user-menu" role="navigation" class="nav-user">
-        {# // provide userMenu label here for WAI accessibility #}
-        <h3 class="u-hidden"
-            id="userMenuLabel">{{ 'My Account Menu:'|t }}</h3>
-        {{ user_menu }}
-      </nav>
-    {# {% endif %} #}
   </header>
 </div>
 
 <div class="wrapper wrapper--navigation">
   <!-- ****** Delete this comment on production *****
-  move {# //print render($page['navigation']); #} to render navigation on separate row 
+  move {# {{ page.navigation }} #} to render navigation on separate row 
   ****** -->
 </div>
 

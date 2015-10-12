@@ -29,14 +29,6 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#default_value' => theme_get_setting('main_layout'),
   );
 
-  // create an option to display the user menu
-  $form['bear_options']['user_menu'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Add User Menu to Header (Log In, Log Out etc).'),
-    '#description' => t('Disable to use the block system'),
-    '#default_value' => theme_get_setting('user_menu'),
-  );
-
   // create an option for sticky footers
   $form['bear_options']['sticky_footer'] = array(
     '#type' => 'checkbox',

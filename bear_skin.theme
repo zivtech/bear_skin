@@ -10,11 +10,8 @@ use Drupal\Core\Template\Attribute;
  *   <<describe the params and what they do here>>
  */
 function bear_skin_preprocess_html(&$variables, $hook) {
+  
   // Add variables and paths needed for HTML5 and responsive support.
-
-  //**********************
-  // TODO: correct path variables (ex: logo path is hard coded in page.html.twig now)
-  //**********************
   $variables['base_path'] = base_path();
   $variables['path_to_bear_skin'] = drupal_get_path('theme','bear_skin');
   $variables['skip_link_anchor'] = 'main-content';
@@ -160,15 +157,12 @@ function bear_skin_preprocess_views_view(&$variables) {
  *   <<describe the params and what they do here>>
  */
 function bear_skin_preprocess_menu_block_wrapper(&$variables) {
-  //**********************
-  // TODO: make this preprocess work
-  //**********************
-  // $delta = $variables['delta'];
-  // $variables['theme_hook_suggestions'][] = 'menu_block_wrapper__menu_' . str_replace('-', '_', $variables['config']['menu_name']);
-  // $variables['classes_array'] = array($variables['config']['menu_name']);
-  // if ($variables['config']['menu_name'] === 'main-menu') {
-  //   array_unshift($variables['classes_array'], 'site-navigation');
-  // }
+  $delta = $variables['delta'];
+  $variables['theme_hook_suggestions'][] = 'menu_block_wrapper__menu_' . str_replace('-', '_', $variables['config']['menu_name']);
+  $variables['classes_array'] = array($variables['config']['menu_name']);
+  if ($variables['config']['menu_name'] === 'main-menu') {
+    array_unshift($variables['classes_array'], 'site-navigation');
+  }
 }
 
 /**
