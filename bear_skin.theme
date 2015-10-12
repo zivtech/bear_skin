@@ -19,11 +19,23 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   $variables['path_to_bear_skin'] = drupal_get_path('theme','bear_skin');
   $variables['skip_link_anchor'] = 'main-content';
 
+  $variables['attributes']['class'][] = 'html';
+  // Add a class that tells us whether we're on the front page or not.
+  $variables['attributes']['class'][] = $variables['is_front'] ? 'front' : 'not-front';
+  // Add a class that tells us whether the page is viewed by an authenticated user or not.
+  $variables['attributes']['class'][] = $variables['logged_in'] ? 'logged-in' : 'not-logged-in';
+
+  // add class depending on Theme layout settings
+  $variables['fixed_layout'] = (theme_get_setting('main_layout') == 'fixed');
+  $variables['fluid_layout'] = (theme_get_setting('main_layout') == 'fluid');
+  if (theme_get_setting('main_layout') == 'fixed') {
+    $variables['attributes']['class'][] = 'fixed-bear';
+  } else if 
+    (theme_get_setting('main_layout') == 'fluid') {
+      $variables['attributes']['class'][] = 'fluid-bear';
+  }
+
   // if the sticky footer option is selected, set a class
-  //**********************
-  // TODO: we need classes based on node, logged-in/out, etc
-  // the code below does not do what we want.
-  //**********************
   if (theme_get_setting('sticky_footer')) {
     $variables['attributes']['class'][] = 'with-sticky-footer'; // working
   }
@@ -42,7 +54,6 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   else {
     $variables['attributes']['class'][] = 'layout-no-sidebars';
   }
-  
 }
 
 /**

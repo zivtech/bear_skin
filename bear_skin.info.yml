@@ -11,8 +11,8 @@ stylesheets-remove:
   - core/modules/system/css/components/menu.theme.css
 
 libraries:
-  - bear_skin/global-styling
-  - bear_skin/global-scripts
+  - bear_skin/global_scripts
+  - bear_skin/global_styling
 
 regions:
   header: 'Header'

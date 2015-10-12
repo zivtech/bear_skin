@@ -1,8 +1,8 @@
-global-scripts:
+global_scripts:
   version: 1.x
   js:
     js/vendor/modernizr.js: { scope: header }
-    js/scripts.js: { scope: footer }
+    js/scripts.js: { scope: header }
   dependencies:
     - core/jquery
     - core/drupal.ajax
@@ -10,7 +10,7 @@ global-scripts:
     - core/drupalSettings
     - core/jquery.once
 
-global-styling:
+global_styling:
   version: 1.x
   css: 
     theme:
