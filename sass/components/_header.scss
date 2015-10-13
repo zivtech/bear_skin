@@ -1,5 +1,10 @@
-.site-header__logo {
-	display: inline-block;
+header {
+  div:first-child, div:nth-child(2) {
+    float: left;
+  }
+}
+#block-bear-skin-branding {
+  padding: 10px 0 20px 0;
 }
 #sidr-wrapper-0 {// this is what we use for our responsive menu
   $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);

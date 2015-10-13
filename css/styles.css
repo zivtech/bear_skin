@@ -609,8 +609,21 @@ blockquote {
 .u-no-text-shadow {
   text-shadow: none; }
 
-.site-header__logo {
-  display: inline-block; }
+.wrapper--footer {
+  border-top: 1px solid #ccc; }
+
+footer {
+  padding: 30px 0; }
+  footer nav ul {
+    margin: 0; }
+    footer nav ul li {
+      list-style-type: none; }
+
+header div:first-child, header div:nth-child(2) {
+  float: left; }
+
+#block-bear-skin-branding {
+  padding: 10px 0 20px 0; }
 
 #sidr-wrapper-0 {
   margin-left: 20px; }
@@ -660,63 +673,14 @@ blockquote {
     width: auto;
     overflow: auto; }
 
-.main-menu {
+header nav {
   float: left; }
-  .main-menu .menu {
-    padding: 0 30px;
-    margin: 0; }
-    .main-menu .menu:not(.main-menu--level-one) {
-      position: absolute !important;
-      height: 0;
-      width: 0;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-      overflow: visible !important;
-      position: absolute;
-      margin: 0;
-      padding: 10px;
-      background: #fff;
-      min-width: 200px; }
-      .main-menu .menu:not(.main-menu--level-one) a {
-        padding: 5px 0;
-        margin: 0; }
-    .main-menu .menu .parent {
-      position: relative; }
-      .main-menu .menu .parent ul {
-        border-top: 1px solid #261D19; }
-        .main-menu .menu .parent ul a {
-          line-height: 140%;
-          display: block;
-          padding: 0;
-          margin-bottom: 10px; }
-    .main-menu .menu .parent:hover > .main-menu__link {
-      color: #728EAD; }
-    .main-menu .menu .parent:hover > .menu {
-      position: static !important;
-      clip: auto;
-      height: auto;
-      width: auto;
-      overflow: auto;
-      position: absolute !important; }
-    .main-menu .menu.main-menu--level-three {
-      left: 100%;
-      top: 0; }
-  .main-menu__item {
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-  .main-menu__link {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    color: #261D19;
-    line-height: 30px;
-    padding: 0 10px; }
-    .main-menu__link.active {
-      text-decoration: underline; }
+  header nav ul {
+    margin: 50px 30px 30px 30px; }
+    header nav ul li {
+      display: inline;
+      list-style-type: none;
+      margin-right: 20px; }
 
 .links-inline {
   margin: 0.9375em 0; }

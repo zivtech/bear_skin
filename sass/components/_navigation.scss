@@ -3,65 +3,14 @@
   @include bear-element-focusable;
 }
 
-.main-menu {
+header nav {
   float: left;
-  .menu {
-    padding: 0 30px;
-    margin: 0;
-    &:not(.main-menu--level-one) {
-      @include bear-element-invisible;
-      overflow: visible !important;
-      position: absolute;
-      margin: 0;
-      padding: 10px;
-      background: #fff;
-      min-width: 200px;
-      a {
-        padding: 5px 0;
-        margin: 0;
-      }
-    }
-    .parent {
-      position: relative;
-      ul {
-        border-top: 1px solid $zivtech-dark;
-        a {
-          line-height: 140%;
-          display: block;
-          padding: 0;
-          margin-bottom: 10px;
-        }
-      }
-    }
-    .parent:hover {
-      > .main-menu__link {
-        color: $zivtech-blue;
-      }
-      > .menu {
-        @include bear-element-invisible-off;
-        position: absolute !important;
-      }
-    }
-    &.main-menu--level-three {
-      left: 100%;
-      top: 0;
-    }
-  }
-
-  &__item {
-    @include inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__link {
-    font-family: $header-font-family;
-    color: $zivtech-dark;
-    line-height: 30px;
-    padding: 0 10px;
-    &.active {
-      text-decoration: underline;
+  ul {
+    margin: 50px 30px 30px 30px;
+    li {
+      display: inline;
+      list-style-type: none;
+      margin-right: 20px;
     }
   }
 }
