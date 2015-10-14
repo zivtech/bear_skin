@@ -366,7 +366,7 @@ body.page-panels .site-main {
 
 body.fluid-bear .site-header,
 body.fluid-bear #breadcrumbs,
-body.fluid-bear .region--footer {
+body.fluid-bear .site-footer {
   max-width: 100%;
   margin: 0; }
 
@@ -726,7 +726,7 @@ header nav {
 @media (min-width: 75em) {
   body.fluid-bear .site-header,
   body.fluid-bear .breadcrumbs-wrapper,
-  body.fluid-bear .region--footer,
+  body.fluid-bear .site-footer,
   body.fluid-bear h1.main__title,
   body.fluid-bear .breadcrumbs {
     padding-left: 20px;
@@ -736,7 +736,7 @@ header nav {
     padding-right: 0; } }
 
 @media (min-width: 50em) {
-  .sidebar-first main {
+  .layout-sidebar-first main {
     zoom: 1;
     float: left;
     display: inline;
@@ -749,14 +749,14 @@ header nav {
     margin-right: 3%;
     position: relative;
     left: 25.75%; }
-  .sidebar-first main:before, .sidebar-first main:after {
+  .layout-sidebar-first main:before, .layout-sidebar-first main:after {
     content: '';
     display: table; }
-  .sidebar-first main:after {
+  .layout-sidebar-first main:after {
     clear: both; }
-  .sidebar-first main:last-child {
+  .layout-sidebar-first main:last-child {
     margin-right: 0%; }
-  .sidebar-first .site-sidebars {
+  .layout-sidebar-first .site-sidebars {
     zoom: 1;
     float: left;
     display: inline;
@@ -769,14 +769,14 @@ header nav {
     margin-right: 3%;
     position: relative;
     left: -77.25%; }
-  .sidebar-first .site-sidebars:before, .sidebar-first .site-sidebars:after {
+  .layout-sidebar-first .site-sidebars:before, .layout-sidebar-first .site-sidebars:after {
     content: '';
     display: table; }
-  .sidebar-first .site-sidebars:after {
+  .layout-sidebar-first .site-sidebars:after {
     clear: both; }
-  .sidebar-first .site-sidebars:last-child {
+  .layout-sidebar-first .site-sidebars:last-child {
     margin-right: 0%; }
-  .sidebar-second main {
+  .layout-sidebar-second main {
     zoom: 1;
     float: left;
     display: inline;
@@ -787,14 +787,14 @@ header nav {
     width: 74.25%;
     margin-left: 0%;
     margin-right: 3%; }
-  .sidebar-second main:before, .sidebar-second main:after {
+  .layout-sidebar-second main:before, .layout-sidebar-second main:after {
     content: '';
     display: table; }
-  .sidebar-second main:after {
+  .layout-sidebar-second main:after {
     clear: both; }
-  .sidebar-second main:last-child {
+  .layout-sidebar-second main:last-child {
     margin-right: 0%; }
-  .sidebar-second .region-sidebar-first {
+  .layout-sidebar-second .region-sidebar-first {
     zoom: 1;
     float: left;
     display: inline;
@@ -805,14 +805,14 @@ header nav {
     width: 22.75%;
     margin-left: 0%;
     margin-right: 3%; }
-  .sidebar-second .region-sidebar-first:before, .sidebar-second .region-sidebar-first:after {
+  .layout-sidebar-second .region-sidebar-first:before, .layout-sidebar-second .region-sidebar-first:after {
     content: '';
     display: table; }
-  .sidebar-second .region-sidebar-first:after {
+  .layout-sidebar-second .region-sidebar-first:after {
     clear: both; }
-  .sidebar-second .region-sidebar-first:last-child {
+  .layout-sidebar-second .region-sidebar-first:last-child {
     margin-right: 0%; }
-  .two-sidebars main {
+  .layout-two-sidebars main {
     zoom: 1;
     float: left;
     display: inline;
@@ -825,14 +825,14 @@ header nav {
     margin-right: 3%;
     position: relative;
     left: 25.75%; }
-  .two-sidebars main:before, .two-sidebars main:after {
+  .layout-two-sidebars main:before, .layout-two-sidebars main:after {
     content: '';
     display: table; }
-  .two-sidebars main:after {
+  .layout-two-sidebars main:after {
     clear: both; }
-  .two-sidebars main:last-child {
+  .layout-two-sidebars main:last-child {
     margin-right: 0%; }
-  .two-sidebars .region-sidebar-first {
+  .layout-two-sidebars .sidebar-first {
     zoom: 1;
     float: left;
     display: inline;
@@ -845,14 +845,14 @@ header nav {
     margin-right: 3%;
     position: relative;
     left: -51.5%; }
-  .two-sidebars .region-sidebar-first:before, .two-sidebars .region-sidebar-first:after {
+  .layout-two-sidebars .sidebar-first:before, .layout-two-sidebars .sidebar-first:after {
     content: '';
     display: table; }
-  .two-sidebars .region-sidebar-first:after {
+  .layout-two-sidebars .sidebar-first:after {
     clear: both; }
-  .two-sidebars .region-sidebar-first:last-child {
+  .layout-two-sidebars .sidebar-first:last-child {
     margin-right: 0%; }
-  .two-sidebars .region-sidebar-second {
+  .layout-two-sidebars .sidebar-second {
     zoom: 1;
     float: left;
     display: inline;
@@ -863,12 +863,12 @@ header nav {
     width: 22.75%;
     margin-left: 0%;
     margin-right: 3%; }
-  .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after {
+  .layout-two-sidebars .sidebar-second:before, .layout-two-sidebars .sidebar-second:after {
     content: '';
     display: table; }
-  .two-sidebars .region-sidebar-second:after {
+  .layout-two-sidebars .sidebar-second:after {
     clear: both; }
-  .two-sidebars .region-sidebar-second:last-child {
+  .layout-two-sidebars .sidebar-second:last-child {
     margin-right: 0%; }
   header div:first-child, header div:nth-child(2) {
     width: auto; }

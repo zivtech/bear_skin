@@ -95,7 +95,7 @@ body.page-panels {
 body.fluid-bear {
   .site-header, 
   #breadcrumbs,
-  .region--footer {
+  .site-footer {
     max-width: 100%;
     margin: 0;
   }
@@ -105,7 +105,7 @@ body.fluid-bear {
   }
   .site-header, 
   .breadcrumbs-wrapper,
-  .region--footer,
+  .site-footer,
   h1.main__title,
   .breadcrumbs {
     @include breakpoint($breakpoint-to-max-width) {
@@ -176,7 +176,7 @@ body.with-sticky-footer .wrapper--main {
 // Left Sidebar
 //*************
 
-.sidebar-first {
+.layout-sidebar-first {
   main {
     @include breakpoint($breakpoint-medium-width) {
       @include col(3/4);
@@ -195,7 +195,7 @@ body.with-sticky-footer .wrapper--main {
 // Right Sidebar
 //**************
 
-.sidebar-second {
+.layout-sidebar-second {
   main {
     @include breakpoint($breakpoint-medium-width) {
       @include col(3/4);
@@ -212,20 +212,20 @@ body.with-sticky-footer .wrapper--main {
 // Two Sidebars
 //**************
 
-.two-sidebars {
+.layout-two-sidebars {
   main {
     @include breakpoint($breakpoint-medium-width) {
       @include col(2/4);
       @include shift(1/4);
     }
   }
-  .region-sidebar-first {
+  .sidebar-first {
     @include breakpoint($breakpoint-medium-width) {
       @include col(1/4);
       @include shift(-2/4);
     }
   }
-  .region-sidebar-second {
+  .sidebar-second {
     @include breakpoint($breakpoint-medium-width) {
       @include col(1/4);
     }

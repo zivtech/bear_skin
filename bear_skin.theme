@@ -27,9 +27,8 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   $variables['fluid_layout'] = (theme_get_setting('main_layout') == 'fluid');
   if (theme_get_setting('main_layout') == 'fixed') {
     $variables['attributes']['class'][] = 'fixed-bear';
-  } else if 
-    (theme_get_setting('main_layout') == 'fluid') {
-      $variables['attributes']['class'][] = 'fluid-bear';
+  } else if (theme_get_setting('main_layout') == 'fluid') {
+    $variables['attributes']['class'][] = 'fluid-bear';
   }
 
   // if the sticky footer option is selected, set a class
