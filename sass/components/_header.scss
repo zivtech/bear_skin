@@ -1,10 +1,15 @@
 header {
   div:first-child, div:nth-child(2) {
     float: left;
+    width: 100%;
+    @include breakpoint($breakpoint-medium-width) {
+      width: auto;
+    }
   }
 }
 #block-bear-skin-branding {
   padding: 10px 0 20px 0;
+  margin-right: 30px;
 }
 #sidr-wrapper-0 {// this is what we use for our responsive menu
   $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);

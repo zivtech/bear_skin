@@ -92,7 +92,7 @@ gulp.task('scripts', function () {
 
 gulp.task('images', function () {
   gutil.log(gutil.colors.yellow('Crunching images!'));
-  return gulp.src('./images/**/*.{gif,jpg,png,svg}')
+  return gulp.src('./images/**/*.{gif,jpg,png}')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}]
@@ -107,7 +107,7 @@ gulp.task('watch', function() {
 
   gulp.watch("./sass/**/*.scss", ['sass']);
   gulp.watch("./js/*.js", ['scripts']);
-  gulp.watch("./images/**/*.{gif,jpg,png,svg}", ['images']);
+  gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);
   gulp.watch("./templates/**/*.php").on('change', function() { livereload.reload() });
 });
 

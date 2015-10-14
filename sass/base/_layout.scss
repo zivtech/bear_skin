@@ -23,10 +23,6 @@ body {
 @mixin layout-padding {
   padding-left: 20px;
   padding-right: 20px;
-  @include breakpoint($breakpoint-to-max-width) {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 //************************************
@@ -35,7 +31,7 @@ body {
 
 .site-header,
 .site-main,
-.region--footer,
+.site-footer,
 #breadcrumbs {
   @include cf;
   max-width: $site-max-width;
@@ -47,7 +43,7 @@ body {
 .site-header,
 .site-main,
 .breadcrumbs-wrapper,
-.region--footer,
+.site-footer,
 .breadcrumbs {
   @include layout-padding;
 }
