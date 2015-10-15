@@ -1,0 +1,48 @@
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+        <ul{{ attributes.addClass('main-nav') }}>
+        {% for item in items %}
+          {% if item.below %}
+            <li{{ item.attributes.addClass('main-nav__item parent') }}>
+                {{ link(item.title, item.url.setOptions({'set_active_class' : TRUE, 'attributes' : {'class' : 'main-nav__link'}})) }}
+                {% if item.below %}
+                    {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+                {% endif %}
+            </li>
+          {% else %}
+            <li{{ item.attributes.addClass('main-nav__item') }}>
+                {{ link(item.title, item.url.setOptions({'set_active_class' : TRUE, 'attributes' : {'class' : 'main-nav__link'}})) }}
+                {% if item.below %}
+                    {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+                {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+    {% else %}
+        <ul class="main-nav__sub">
+        {% for item in items %}
+          {% if item.below %}
+            <li{{ item.attributes.addClass('main-nav__item parent') }}>
+                {{ link(item.title, item.url.setOptions({'set_active_class' : TRUE, 'attributes' : {'class' : 'main-nav__link'}})) }}
+                {% if item.below %}
+                    {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+                {% endif %}
+            </li>
+          {% else %}
+            <li{{ item.attributes.addClass('main-nav__item') }}>
+                {{ link(item.title, item.url.setOptions({'set_active_class' : TRUE, 'attributes' : {'class' : 'main-nav__link'}})) }}
+                {% if item.below %}
+                    {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+                {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+    {% endif %}
+    </ul>
+  {% endif %}
+{% endmacro %}

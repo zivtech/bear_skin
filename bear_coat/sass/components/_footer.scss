@@ -1,0 +1,34 @@
+.wrapper--footer {
+  border-top: 1px solid #dedede;
+  background: $zivtech-off-black;
+}
+
+.site-footer {
+  
+  color: #fff;
+  .region-footer {
+    padding: 30px 20px;
+    @include breakpoint($breakpoint-to-max-width) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+#footer {
+  .block-menu {
+    float: left;
+    margin: 0 50px 0 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    li {
+      list-style-type: none;
+      a {
+        @include link-colors($zivtech-white, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
+      }
+    }
+  }
+}

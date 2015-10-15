@@ -1,0 +1,40 @@
+//*******
+// Mixins
+//*******
+
+@mixin form-container($margin: $form-input-container-margin) {
+  @include cf;
+  margin: $margin;
+  width: 100%;
+  float: none;
+}
+
+@mixin form-element($padding: $form-input-padding, $color: $form-input-font-color, $bg-color: $form-input-bg-color, $border-color: $form-input-border-color) {
+  color: $color;
+  background-color: $bg-color;
+  padding: $padding;
+  border: $border-color 1px solid;
+  border-radius: $border-radius;
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+  &:focus {
+    border: 1px solid $form-input-active-color;
+  }
+  &.error {
+    border: 1px solid $color-error;
+  }
+}
+
+//**************************
+// Support for compact forms
+//**************************
+
+.compact-form-label {
+  top: 9px;
+  left: 17px;
+  z-index: 1;
+  font-size: 100%;
+}

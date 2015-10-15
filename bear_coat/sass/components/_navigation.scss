@@ -1,0 +1,199 @@
+header nav {
+  outline: 0;
+  margin-left: 20px;
+  .nolink {
+    cursor: pointer;
+  }
+  ul.main-nav {
+    position: relative;
+    > li.main-nav__item {
+      padding: 20px 0;
+      margin: 0;
+      &:hover {
+        ul.main-nav__sub {
+          top: 55px;
+          opacity: .9;
+        }
+      } 
+    }
+    li a {
+      font-family: 'Droid Sans', sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: all .2s ease-in-out;
+      border-radius: 6px;
+      font-size: 14px;
+      &:hover,
+      &:focus,
+      &.active {
+        background: $zivtech-dark;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  ul.main-nav {
+    li.parent {
+      position: relative;
+      &:after {
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $zivtech-dark;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -30px;
+        transition: all .2s ease-in-out;
+        opacity: 0;
+      }
+      &:hover {
+        &:after {
+          opacity: .8;
+          bottom: 5px;
+        }
+      }
+      ul.main-nav__sub {
+        border-radius: 8px;
+        background: $zivtech-off-black;
+        border: 0;
+        margin: 0;
+        padding: 20px 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        transition: all .2s ease-in-out;
+        min-width: 200px;
+        opacity: 0;
+        li.main-nav__item {
+          margin-bottom: 8px;
+          padding: 0 10px;
+          display: block;
+          a {
+            @include link-colors($zivtech-white, $hover: $zivtech-pale, $active: $zivtech-pale, $focus: $zivtech-pale);
+            &:hover {
+              background: transparent;
+              text-decoration: underline;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        .main-nav__item {
+          text-transform: initial;
+          margin-bottom: 0;
+          &:hover,
+          &:focus,
+          &.active {
+            background: transparent;
+            color: $zivtech-blue;
+          }
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .main-nav__sub {
+    
+    li.parent > a:after,
+    li.parent:hover > a:after {
+      content: "";
+      height: 0; 
+      width: 0; 
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent; 
+      border-left: 5px solid $zivtech-white;
+      @include align(v);
+      right: -5px;
+      bottom: 0;
+      left: inherit;
+      margin: 3px 0 0 0;
+      display: inline-block !important;
+      opacity: 1 !important;
+    }
+    li.parent:after {
+      display: none;
+    }
+  }
+  .main-menu--level-three {
+    top: -10px;
+  }
+}
+
+//********************************
+// Support for SIDR responsive NAV
+//********************************
+
+body.sidr-open {
+  #header {
+    .region-navigation {
+      left: 0;
+    }
+    .site-header__logo {
+      opacity: 0;
+    }
+  }
+  #header #sidr-wrapper-0 {
+    margin-left: 0;
+    span {
+      background: transparent;
+      &:before,
+      &:after {
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.sidr-animating {
+  .wrapper--header {
+    position: absolute;
+  }
+}
+h3.sidr-class-u-hidden {
+  @include bear-element-invisible;
+}
+
+//******
+// Pager
+//******
+
+.pager-wrapper {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  min-height: 50px;
+  margin: 10px 0 0 0;
+}
+.ui.pagination.menu {
+  @include align(h);
+}
+
+//************
+// Breadcrumbs
+//************
+
+nav.ui.breadcrumb {
+  padding: 20px 0;
+  color: rgba(0, 0, 0, 0.4);
+  a {
+    @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-pale, $focus: $zivtech-pale);
+  }
+  i:last-child {
+    display: none;
+  }
+}

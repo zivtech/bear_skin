@@ -1,4 +1,4 @@
-<div class="wrapper wrapper--header">
+<div class="wrapper wrapper--header ">
   <header id="header" role="banner" class="site-header">
     
     {{ page.header }}
@@ -73,9 +73,14 @@
     </main>
     <!-- /#content -->
 
-    {% if has_sidebar_first or has_sidebar_second  %}
-      <aside class="site-sidebars">
+    {% if page.sidebar_first %}
+      <aside class="sidebar-first site-sidebars">
         {{ page.sidebar_first }}
+      </aside><!-- /.sidebars -->
+    {% endif %}
+
+    {% if page.sidebar_second  %}
+      <aside class="sidebar-second site-sidebars">
         {{ page.sidebar_second }}
       </aside><!-- /.sidebars -->
     {% endif %}
