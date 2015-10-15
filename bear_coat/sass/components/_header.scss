@@ -23,6 +23,12 @@ $header-compressed-height: 55px;
   }
 }
 
+header div:first-child, 
+header div:nth-child(2) {
+  float: left;
+  width: auto;
+}
+
 .wrapper--header {
   position: fixed;
   width: 100%;
@@ -55,24 +61,15 @@ $header-compressed-height: 55px;
         a.loginpopup {
           margin-top: 8px;
         }
+        ul.main-nav {
+          margin: 8px 0 0 0;
+        }
       }
     }
   }
 }
 
 #header {
-  position: relative;
-  height: 100%;
-  .region-header {
-    height: 100%;
-  }
-  .region-navigation {
-    @include align(v);
-    right: 0;
-    @include breakpoint($breakpoint-medium-width) {
-      right: auto;
-    }
-  }
   .block-search,
   .block-views {
     @include align(v);
