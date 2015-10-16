@@ -2,23 +2,8 @@
 // or commented out without affecting the general theming
 
 .front {
-	h1.main__title {
-		@include align(h);
-		color: #fff;
-		top: 50px;
-		background-color: rgba(0, 0, 0, 0.5);
-		padding: 10px 30px;
-		border-radius: 20px;
-		font-size: 120%;
-		@include breakpoint($breakpoint-medium-width) {
-			top: 30%;
-			font-size: 180%;
-		}
-	}
 	#home-content {
-		//max-width: $site-max-width;
-		margin: 0 auto;
-		padding: 30px 20px;
+		padding: 30px 0;
 	}
 }
 .view-features {

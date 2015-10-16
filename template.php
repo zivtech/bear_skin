@@ -120,6 +120,13 @@ function bear_skin_preprocess_html(&$variables, $hook) {
           break;
       }
     }
+
+    // Add a class when specifically using the bear panels layouts
+    if($panel_page = page_manager_get_current_page()) {
+      $display = panels_get_current_page_display();
+      $layout = $display->layout;
+      $variables['classes_array'][] = "bear-layout";
+    }
 }
 
 function bear_skin_html_head_alter(&$head_elements) {

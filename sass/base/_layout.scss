@@ -60,7 +60,7 @@ body.page-panels {
   h1.main__title {
     @include layout-padding;
   }
-  .site-main {
+  &.bear-layout .site-main {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -118,7 +118,6 @@ body.fluid-bear {
     }
   }
   .panel-display {
-    
     .row {
       padding-left: 20px;
       padding-right: 20px;

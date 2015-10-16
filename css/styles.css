@@ -251,6 +251,9 @@ input[type="password"] {
     outline: 0;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
 
+input[type="search"] {
+  box-sizing: border-box; }
+
 fieldset {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   border: 1px solid #e6e4e5;
@@ -320,7 +323,7 @@ body.page-panels h1.main__title {
   padding-left: 20px;
   padding-right: 20px; }
 
-body.page-panels .site-main {
+body.page-panels.bear-layout .site-main {
   max-width: 100%;
   padding-left: 0;
   padding-right: 0; }
