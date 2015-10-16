@@ -1,10 +1,19 @@
-global-scripts:
+global_scripts:
   version: 1.x
   js:
     js/scripts.js: {}
 
-global-styling:
+global_styling:
   version: 1.x
   css: 
     theme:
       css/bear_coat.css: { media: screen }
+
+semantic_ui:
+  version: 1.x
+  css:
+    base:
+      css/vendor/semantic.css: {}
+  js:
+    js/vendor/semantic.js: {}
+

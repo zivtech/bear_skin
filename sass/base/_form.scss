@@ -30,7 +30,7 @@
 }
 
 form {
-  padding: 0 12px;
+  padding: 0;
   label {
     font-size: 12px;
   }
@@ -54,6 +54,9 @@ input[type="password"] {
   }
 }
 
+input[type="search"] {
+  box-sizing: border-box;
+}
 
 fieldset {
   font-family: $body-text-font-family;

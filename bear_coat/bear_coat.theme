@@ -2,3 +2,24 @@
 
 use Drupal\Component\Utility\Xss;
 use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements preprocess_html() to add classes to the body.
+ */
+function bear_coat_preprocess_html(&$variables, $hook) {
+  $variables['attributes']['class'][] = 'semantic-ui';
+}
+
+/**
+ * Implements hook_form_alter() to add classes to the search form.
+ */
+function bear_coat_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	// General
+	$form['#attributes']['class'][] = 'ui';
+  $form['#attributes']['class'][] = 'form';
+}
+
+function bear_coat_preprocess_input(&$variables) {
+  $element = $variables['element'];
+  $variables['children'] = $element['#children'];
+}

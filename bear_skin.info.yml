@@ -26,4 +26,4 @@ regions:
 
 settings:
   settings: 'fixed'
-  sticky_footer: '1'
+  sticky_footer: 1

@@ -1,6 +1,6 @@
 name: Bear Coat
 type: theme
-description: 'Bear Skin Sub Theme with better styling.'
+description: 'Bear Skin Sub Theme with better styling'
 package: Custom
 core: 8.x
 engine: twig
@@ -8,8 +8,9 @@ base theme: bear_skin
 screenshot: screenshot.png
 
 libraries:
-  - bear_coat/global-styling
-  - bear_coat/global-scripts
+  - bear_coat/semantic_ui
+  - bear_coat/global_scripts
+  - bear_coat/global_styling
 
 regions:
   header: 'Header'
@@ -22,7 +23,7 @@ regions:
   footer: 'Footer'
 
 settings:
-  user_menu: '1'
-  responsive_nav: '1'
-  sticky_navbar: '0'
-  sticky_footer: '1'
+  user_menu: 1
+  responsive_nav: 1
+  sticky_navbar: 0
+  sticky_footer: 1

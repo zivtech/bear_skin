@@ -234,7 +234,7 @@ th {
   color: #404040; }
 
 form {
-  padding: 0 12px; }
+  padding: 0; }
   form label {
     font-size: 12px; }
 
@@ -252,6 +252,9 @@ input[type="password"] {
     border-color: #66afe9;
     outline: 0;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+
+input[type="search"] {
+  box-sizing: border-box; }
 
 fieldset {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -796,7 +799,7 @@ header nav {
     clear: both; }
   .layout-sidebar-second main:last-child {
     margin-right: 0%; }
-  .layout-sidebar-second .region-sidebar-first {
+  .layout-sidebar-second .site-sidebars {
     zoom: 1;
     float: left;
     display: inline;
@@ -807,12 +810,12 @@ header nav {
     width: 22.75%;
     margin-left: 0%;
     margin-right: 3%; }
-  .layout-sidebar-second .region-sidebar-first:before, .layout-sidebar-second .region-sidebar-first:after {
+  .layout-sidebar-second .site-sidebars:before, .layout-sidebar-second .site-sidebars:after {
     content: '';
     display: table; }
-  .layout-sidebar-second .region-sidebar-first:after {
+  .layout-sidebar-second .site-sidebars:after {
     clear: both; }
-  .layout-sidebar-second .region-sidebar-first:last-child {
+  .layout-sidebar-second .site-sidebars:last-child {
     margin-right: 0%; }
   .layout-two-sidebars main {
     zoom: 1;
