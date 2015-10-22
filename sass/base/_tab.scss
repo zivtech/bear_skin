@@ -37,10 +37,7 @@
   height: 100%;
   transition: color 0.3s ease;
   padding: 0 1em;
-  &:hover {
-    color: lighten($font-color, 10%);
-  }
-  &.active {
+  &.is-active {
     border-bottom: 1px solid $font-color;
   }
 }
@@ -52,11 +49,11 @@
 .tabs-secondary {
   @include tab-container;
   background: $zivtech-pale;
-  &__tab {
+  li {
     @include tab;
   }
 
-  &__tab-link {
+  a {
     @include tab-link;
   }
 }

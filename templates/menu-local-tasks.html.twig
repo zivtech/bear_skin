@@ -1,0 +1,12 @@
+{% if primary %}
+  <h2 id="primary-tabs-title" class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+  <nav role="navigation" class="is-horizontal is-collapsible" aria-labelledby="primary-tabs-title" data-drupal-nav-tabs>
+    <ul class="tabs-primary tabs primary clearfix" data-drupal-nav-tabs-target>{{ primary }}</ul>
+  </nav>
+{% endif %}
+{% if secondary %}
+  <h2 id="secondary-tabs-title" class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+  <nav role="navigation" class="is-horizontal" aria-labelledby="secondary-tabs-title" data-drupal-nav-tabs>
+    <ul class="tabs-secondary tabs secondary clearfix">{{ secondary }}</ul>
+  </nav>
+{% endif %}

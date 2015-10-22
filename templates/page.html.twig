@@ -31,8 +31,6 @@
         {{ title_prefix }}
         <h1 class="main__title" role="heading">{{ title }}</h1>
         {{ title_suffix }}
-      {% else %} {#// this is needed for ARIA #}
-        <h1 class="u-hidden">{{ bear_page_title }}</h1>
       {% endif %}
 
       {% if messages is not empty %}

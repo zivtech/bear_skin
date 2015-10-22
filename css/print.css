@@ -253,8 +253,8 @@ body.with-sticky-footer .wrapper--main {
   .tabs-primary:after,
   .tabs-secondary:after {
     clear: both; }
-  .tabs-primary__tab,
-  .tabs-secondary__tab {
+  .tabs-primary li,
+  .tabs-secondary li {
     display: block;
     float: left;
     text-align: center;
@@ -266,22 +266,19 @@ body.with-sticky-footer .wrapper--main {
     border-top-right-radius: 2px;
     border-right: 1px solid none;
     transition: background-color 0.5s ease; }
-    .tabs-primary__tab:hover,
-    .tabs-secondary__tab:hover {
+    .tabs-primary li:hover,
+    .tabs-secondary li:hover {
       background-color: transparent; }
-  .tabs-primary__tab-link,
-  .tabs-secondary__tab-link {
+  .tabs-primary a,
+  .tabs-secondary a {
     color: #404040;
     display: block;
     width: 100%;
     height: 100%;
     transition: color 0.3s ease;
     padding: 0 1em; }
-    .tabs-primary__tab-link:hover,
-    .tabs-secondary__tab-link:hover {
-      color: #5a5a5a; }
-    .tabs-primary__tab-link.active,
-    .tabs-secondary__tab-link.active {
+    .tabs-primary a.is-active,
+    .tabs-secondary a.is-active {
       border-bottom: 1px solid #404040; }
 
 p:first-child,
