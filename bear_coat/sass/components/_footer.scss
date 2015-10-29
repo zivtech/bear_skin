@@ -6,11 +6,8 @@
   background: $zivtech-off-black;
   color: #fff;
   .region-footer {
-    padding: 30px 20px;
-    @include breakpoint($breakpoint-to-max-width) {
-      padding-left: 0;
-      padding-right: 0;
-    }
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 

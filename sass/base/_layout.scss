@@ -18,16 +18,6 @@ body {
   }
 }
 
-// Including our mixin here for easier changes
-@mixin layout-padding {
-  padding-left: 20px;
-  padding-right: 20px;
-  @include breakpoint($breakpoint-to-max-width) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 //************************************
 // Padding/Layout rules for main pages
 //************************************
@@ -43,52 +33,25 @@ body {
 .region--navigation {
   display: inline-block;
 }
-.site-header,
+#header,
 .site-main,
-.breadcrumbs-wrapper,
 .region--footer,
 .breadcrumbs {
   @include layout-padding;
 }
-
-//**************************************
-// Padding/Layout rules for panels pages
-//**************************************
-
-body.page-panels {
-  h1.main__title {
-    @include layout-padding;
-  }
-  &.bear-layout .site-main {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
+.site-main {
+  padding-bottom: 30px;
 }
+.region-footer,
+#breadcrumbs {
+  @include layout-padding;
+}
+//**************************************
+// Layout rules for panels pages
+//**************************************
+
 .panel-display {
-  .row {
-    @include cf;
-    max-width: $site-max-width;
-    margin: 0 auto;
-    @include layout-padding;
-  }
-  &.empty-right,
-  &.empty-left {
-    .column.center {
-      @include cf;
-      max-width: $site-max-width;
-      margin: 0 auto;
-      @include layout-padding;
-    }
-  }
-  &.panel-display--three-column,
-  &.panel-display--two-eq-column {
-    padding-left: 0;
-    padding-right: 0;
-    &.empty-left.empty-right {
-      @include layout-padding;
-    }
-  }
+  margin: 0;
 }
 
 //*************
@@ -104,46 +67,50 @@ body.fluid-bear {
   }
   .site-main {
     max-width: 100%;
-    margin: 0; 
-  }
-  .site-header, 
-  .breadcrumbs-wrapper,
-  .region--footer,
-  h1.main__title,
-  .breadcrumbs {
-    @include breakpoint($breakpoint-to-max-width) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+    margin: 0;
+    padding: 0;
   }
   .panel-display {
     .row {
-      padding-left: 20px;
-      padding-right: 20px;
+      @include layout-padding;
       max-width: 100%;
     }
     &.empty-right,
     &.empty-left {
       .column.center {
-        padding-left: 20px;
-        padding-right: 20px;
+        @include layout-padding;
       }
     }
     &.panel-display--three-column,
     &.panel-display--two-eq-column {
-      padding-left: 0;
-      padding-right: 0;
+      &.empty-right,
+      &.empty-left {
+        .column.center {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
       &.empty-left.empty-right {
-        @include layout-padding;
+        .column.center {
+          @include layout-padding;
+        }
+      }
+      &.empty-center {
+        .column.left,
+        .column.right {
+          @include col(1/2);
+          @include unshift();
+          @include layout-padding;
+        }
       }
     }
   }
   &:not(.page-panels) {
     h1.main__title {
-      @include breakpoint($breakpoint-to-max-width) {
-        padding-left: 0;
-        padding-right: 0;
-      }
+      // @include breakpoint($breakpoint-to-max-width) {
+      //   padding-left: 0;
+      //   padding-right: 0;
+      // }
     }
     .site-main {
       padding: 0 20px;

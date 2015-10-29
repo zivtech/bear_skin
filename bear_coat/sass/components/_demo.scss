@@ -68,11 +68,8 @@
 			max-width: 100%;
 			.pane-node-field-featured-image {
 				margin: 0 auto;
-				padding: 20px 0;
-				max-width: 1240px;
-				@include breakpoint($breakpoint-to-max-width) {
-					padding: 20px;
-				}
+				max-width: $site-max-width;
+				@include layout-padding;
 				img {
 					width: 100%;
 				}

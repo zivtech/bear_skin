@@ -9,14 +9,6 @@
 .wrapper {
   min-width: 320px; }
 
-.breadcrumbs-wrapper {
-  *zoom: 1; }
-  .breadcrumbs-wrapper:before, .breadcrumbs-wrapper:after {
-    content: '';
-    display: table; }
-  .breadcrumbs-wrapper:after {
-    clear: both; }
-
 .field-collection-view {
   margin: 0; }
 
@@ -226,8 +218,9 @@ img {
   max-width: 100%; }
   .node-type-feature #main .row.top .pane-node-field-featured-image {
     margin: 0 auto;
-    padding: 20px 0;
-    max-width: 1240px; }
+    max-width: 75em;
+    padding-left: 1em;
+    padding-right: 1em; }
     .node-type-feature #main .row.top .pane-node-field-featured-image img {
       width: 100%; }
 
@@ -286,7 +279,8 @@ img {
   background: #404040;
   color: #fff; }
   .site-footer .region-footer {
-    padding: 30px 20px; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
 
 #footer .block-menu {
   float: left;
@@ -317,8 +311,7 @@ img {
   transition: all .3s ease-in-out;
   height: 55px;
   padding-top: 10px;
-  padding-bottom: 10px;
-  padding: 10px 20px; }
+  padding-bottom: 10px; }
   .wrapper--header .site-header__logo {
     width: 50px;
     opacity: 1;
@@ -331,9 +324,7 @@ img {
 
 #header {
   position: relative;
-  height: 100%;
-  padding-left: 0;
-  padding-right: 0; }
+  height: 100%; }
   #header .region-header {
     height: 100%; }
   #header .region-navigation {
@@ -679,10 +670,6 @@ nav.ui.breadcrumb {
 .panel-display .right {
   padding: 0; }
 
-@media (max-width: 75em){
-  .breadcrumbs-wrapper{
-    padding: 0 20px; } }
-
 @media (min-width: 50em){
   .ui.cards > .card{
     zoom: 1;
@@ -726,8 +713,7 @@ nav.ui.breadcrumb {
     -moz-column-width: 30%;
     column-width: 30%; }
   .wrapper--header{
-    height: 125px;
-    padding: 20px; }
+    height: 125px; }
   .wrapper--header .site-header__logo{
     display: block;
     float: left;
@@ -804,10 +790,3 @@ nav.ui.breadcrumb {
     float: right; }
   .view-features .views-exposed-widget:nth-child(2n + 1){
     clear: both; } }
-
-@media (min-width: 75em){
-  .node-type-feature #main .row.top .pane-node-field-featured-image{
-    padding: 20px; }
-  .site-footer .region-footer{
-    padding-left: 0;
-    padding-right: 0; } }

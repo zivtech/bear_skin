@@ -56,6 +56,11 @@
   }
 }
 
+@mixin layout-padding {
+  padding-left: $layout-padding;
+  padding-right: $layout-padding;
+}
+
 @mixin inline-block {
   display: inline-block;
   vertical-align: middle;

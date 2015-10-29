@@ -33,10 +33,8 @@ $header-compressed-height: 55px;
   z-index: 999;
   transition: all .3s ease-in-out;
   @include compressHeader;
-  padding: 10px 20px;
   @include breakpoint($breakpoint-medium-width) {
     height: $header-height;
-    padding: 20px;
     .site-header__logo {
       display: block;
       float: left;
@@ -63,8 +61,6 @@ $header-compressed-height: 55px;
 #header {
   position: relative;
   height: 100%;
-  padding-left: 0;
-  padding-right: 0;
   .region-header {
     height: 100%;
   }
