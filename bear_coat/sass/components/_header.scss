@@ -11,6 +11,7 @@ $header-compressed-height: 55px;
     transition: opacity .2s ease-in-out;
     overflow: hidden;
     float: left;
+    margin-right: -60px;
     img {
       width: 40%;
       transition: width .3s ease-in-out;
@@ -43,6 +44,7 @@ $header-compressed-height: 55px;
       display: block;
       //width: 120px;
       clear: both;
+      margin-right: 20px;
       img {
         height: auto;
         width: 100%;
@@ -67,6 +69,8 @@ $header-compressed-height: 55px;
   position: relative;
   height: 100%;
   .site-header__logo {
+    max-width: 120px;
+    transition: all .3s ease-in-out;
     img {
       display: block;
     }
@@ -86,7 +90,7 @@ $header-compressed-height: 55px;
   .block-views {
     @include align(v);
     transition: all .2s ease-in-out;
-    right: 130px;
+    right: 90px;
     @include breakpoint($breakpoint-medium-width) {
       right: 20px;
       transition: none;
@@ -122,7 +126,7 @@ $header-compressed-height: 55px;
     position: absolute;
     top: 8px;
     font-size: 12px;
-    right: 5em;
+    right: 2em;
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
     @include breakpoint($breakpoint-medium-width) {
       top: 0;
