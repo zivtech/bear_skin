@@ -135,7 +135,7 @@
 body.sidr-open {
   #header {
     .region-navigation {
-      left: 0;
+      left: $layout-padding;
     }
     .site-header__logo {
       opacity: 0;

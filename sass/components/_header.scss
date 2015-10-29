@@ -3,7 +3,7 @@
 }
 #sidr-wrapper-0 {// this is what we use for our responsive menu
   $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
-  margin-left: 20px;
+  margin-right: $layout-padding;
   #sidr-0-button {
     display: block;
     width: 25px;

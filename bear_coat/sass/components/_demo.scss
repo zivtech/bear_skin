@@ -69,9 +69,10 @@
 			.pane-node-field-featured-image {
 				margin: 0 auto;
 				max-width: $site-max-width;
-				@include layout-padding;
+				padding: 20px;
 				img {
 					width: 100%;
+					display: block;
 				}
 			}
 		}
