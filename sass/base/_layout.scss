@@ -41,6 +41,11 @@ body {
 }
 .site-main {
   padding-bottom: 30px;
+  .site-header__name-and-slogan {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+  }
 }
 .region-footer,
 #breadcrumbs {

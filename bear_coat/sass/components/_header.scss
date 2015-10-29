@@ -1,4 +1,4 @@
-$header-height: 125px;
+$header-height: 105px;
 $header-compressed-height: 55px;
 
 // Our Mixin for compressed header (mobile and scroll)
@@ -7,10 +7,14 @@ $header-compressed-height: 55px;
   padding-top: 10px;
   padding-bottom: 10px;
   .site-header__logo {
-    width: 50px;
     opacity: 1;
-    transition: opacity .2s ease-in-out, width .3s ease-in-out;
+    transition: opacity .2s ease-in-out;
     overflow: hidden;
+    float: left;
+    img {
+      width: 40%;
+      transition: width .3s ease-in-out;
+    }
   }
   #header {
     .block-search,
@@ -37,10 +41,11 @@ $header-compressed-height: 55px;
     height: $header-height;
     .site-header__logo {
       display: block;
-      float: left;
-      width: 120px;
+      //width: 120px;
+      clear: both;
       img {
         height: auto;
+        width: 100%;
       }
     }
     &.compressed {
@@ -61,14 +66,20 @@ $header-compressed-height: 55px;
 #header {
   position: relative;
   height: 100%;
+  .site-header__logo {
+    img {
+      display: block;
+    }
+  }
   .region-header {
     height: 100%;
   }
   .region-navigation {
-    @include align(v);
-    right: 0;
+    position: relative;
+    margin: 0;
     @include breakpoint($breakpoint-medium-width) {
-      right: auto;
+      @include align(v);
+      margin: 0;
     }
   }
   .block-search,

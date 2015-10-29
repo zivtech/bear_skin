@@ -315,6 +315,10 @@ body {
 
 .site-main {
   padding-bottom: 30px; }
+  .site-main .site-header__name-and-slogan {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; }
 
 .region-footer,
 #breadcrumbs {
@@ -653,7 +657,6 @@ blockquote {
   float: left; }
   .wrapper--header .main-menu .menu,
   .wrapper--navigation .main-menu .menu {
-    padding: 0 30px;
     margin: 0; }
     .wrapper--header .main-menu .menu:not(.main-menu--level-one),
     .wrapper--navigation .main-menu .menu:not(.main-menu--level-one) {

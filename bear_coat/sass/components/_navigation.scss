@@ -2,8 +2,13 @@
 .wrapper--navigation {
   nav.main-menu {
     outline: 0;
+    margin: 0;
     .nolink {
       cursor: pointer;
+    }
+    ul.menu {
+      padding: 0;
+      margin: 5px 0;
     }
     .main-menu__link,
     .menu .parent .main-menu__link {
@@ -24,7 +29,7 @@
     }
     .main-menu--level-one {
       > li {
-        padding: 20px 0;
+        padding: 0;
         &:hover {
           .main-menu--level-two {
             top: 65px;
