@@ -79,18 +79,20 @@ $header-compressed-height: 55px;
     height: 100%;
   }
   .region-navigation {
-    position: relative;
     margin: 0;
+    @include align(v);
+    right: 0;
     @include breakpoint($breakpoint-medium-width) {
       @include align(v);
       margin: 0;
+      right: auto;
     }
   }
   .block-search,
   .block-views {
     @include align(v);
     transition: all .2s ease-in-out;
-    right: 90px;
+    right: 130px;
     @include breakpoint($breakpoint-medium-width) {
       right: 20px;
       transition: none;
@@ -126,7 +128,7 @@ $header-compressed-height: 55px;
     position: absolute;
     top: 8px;
     font-size: 12px;
-    right: 2em;
+    right: 5em;
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
     @include breakpoint($breakpoint-medium-width) {
       top: 0;
