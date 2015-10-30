@@ -8,15 +8,10 @@
 <head class="no-js" lang="<?php echo $language; ?>" xmlns="http://www.w3.org/1999/xhtml">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-
-  <?php if ($default_mobile_metatags): ?>
-    <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php endif; ?>
-
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
-
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <script>jQuery.noConflict();</script>
