@@ -11,7 +11,7 @@ reinstall gulp: sudo npm install gulp -g
 
 After the process finishes, you'll be able to run all the gulp tasks (see below).
 
-Make sure to enable the bear_skin sub theme to have access to panel templates, or duplicate the panel-layouts folder in the bear_coat root folder.
+Note: The theme relies on a contributed module for its responsive menu (as shown in the demo at bearskin.zivtech.com). If it is not installed already, download the module at https://www.drupal.org/project/responsive_menus and configure it to use sidr (you'll have to install the library as well), have .region-navigation .main-menu as the trigger, a <span> as markup and respond at 800px. 
 
 
 Gulp tasks
