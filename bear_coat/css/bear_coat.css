@@ -363,7 +363,6 @@ img {
     #header .block-search.focus,
     #header .block-views.focus {
       top: 16px;
-      width: 100%;
       left: -20px;
       padding: 15px 15px 13px;
       background: rgba(0, 0, 0, 0.7);
