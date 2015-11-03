@@ -28,6 +28,9 @@ body.semantic-ui .ui.menu .link.item:focus,
 body.semantic-ui .ui.menu a.item:focus {
   color: #728EAD; }
 
+body.semantic-ui #content .ui.fluid.input > input {
+  width: auto !important; }
+
 .sidebar {
   font-size: 90%; }
 
@@ -143,30 +146,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Sans", sans-serif;
   font-weight: normal; }
 
-h1 {
-  font-size: 4rem; }
-
 header:not(.site-header) {
   color: #261D19;
   font-family: "Droid Sans", sans-serif;
   font-size: 120%;
   margin-bottom: 10px; }
 
-body.semantic-ui h1 {
+h1, h1:last-child {
+  font-size: 4rem;
   margin: 0.67em 0px; }
 
-h2 {
+h2, h2:last-child {
   font-size: 2.5rem;
   margin: 3rem 0 2rem 0; }
 
-h3 {
+h3, h3:last-child {
   font-size: 2rem;
   margin: 2.5rem 0 1rem 0; }
 
-h4 {
+h4, h4:last-child {
   font-size: 1.5rem; }
 
-h5 {
+h5, h5:last-child {
   font-size: 1.2rem; }
 
 img {
