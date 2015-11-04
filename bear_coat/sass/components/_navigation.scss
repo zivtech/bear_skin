@@ -29,10 +29,10 @@
     }
     .main-menu--level-one {
       > li {
-        padding: 0;
+        padding: 20px 0;
         &:hover {
           .main-menu--level-two {
-            top: 65px;
+            top: 60px;
             opacity: .9;
           }
         } 
@@ -49,14 +49,14 @@
           left: 0;
           right: 0;
           margin: 0 auto;
-          bottom: -30px;
+          bottom: 0;
           transition: all .2s ease-in-out;
           opacity: 0;
         }
         &:hover {
           &:after {
             opacity: .8;
-            bottom: 5px;
+            bottom: 10px;
           }
         }
         ul.menu {
@@ -69,6 +69,7 @@
             display: block;
             a {
               @include link-colors($zivtech-white, $hover: $zivtech-pale, $active: $zivtech-pale, $focus: $zivtech-pale);
+              padding: 5px 0;
             }
             &:last-child {
               margin-bottom: 0;
@@ -91,11 +92,11 @@
       }
     }
     .main-menu--level-two {
-      top: 100px;
+      top: 60px;
       transition: all .2s ease-in-out;
       opacity: 0;
       a {
-        position : relative;
+        position: relative;
       }
       li.parent > a:after,
       li.parent:hover > a:after {
