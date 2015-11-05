@@ -36,3 +36,14 @@ function bear_coat_preprocess_input(&$variables) {
   	$variables['attributes']['class'][] = 'ui';
   }
 }
+
+function bear_coat_preprocess_select(&$variables) {
+  $element = &$variables['element'];
+  $variables['attributes'] = $element['#attributes'];
+
+  // Set the element's attributes.
+  \Drupal\Core\Render\Element::setAttributes($element, array('id', 'name', 'size'));
+
+  $variables['attributes']['class'][] = 'ui search dropdown';
+  $variables['options'] = form_select_options($element);
+}
