@@ -154,22 +154,22 @@ header:not(.site-header) {
   font-size: 120%;
   margin-bottom: 10px; }
 
-h1, h1:last-child {
+h1, h1:first-child, h1:last-child {
   font-size: 4rem;
   margin: 0.67em 0px; }
 
-h2, h2:last-child {
+h2, h2:first-child, h2:last-child {
   font-size: 2.5rem;
   margin: 3rem 0 2rem 0; }
 
-h3, h3:last-child {
+h3, h3:first-child, h3:last-child {
   font-size: 2rem;
   margin: 2.5rem 0 1rem 0; }
 
-h4, h4:last-child {
+h4, h4:first-child, h4:last-child {
   font-size: 1.5rem; }
 
-h5, h5:last-child {
+h5, h5:first-child, h5:last-child {
   font-size: 1.2rem; }
 
 img {
@@ -189,19 +189,18 @@ img {
   float: left;
   margin: 0 50px 0 0; }
 
-#footer ul {
+#footer ul:not('.contextual-links') {
   margin: 0;
-  padding: 0;
-  display: inline-block; }
-  #footer ul li {
+  padding: 0; }
+  #footer ul:not('.contextual-links') li {
     list-style-type: none; }
-    #footer ul li a {
+    #footer ul:not('.contextual-links') li a {
       color: white; }
-      #footer ul li a:hover {
+      #footer ul:not('.contextual-links') li a:hover {
         color: #728EAD; }
-      #footer ul li a:active {
+      #footer ul:not('.contextual-links') li a:active {
         color: #728EAD; }
-      #footer ul li a:focus {
+      #footer ul:not('.contextual-links') li a:focus {
         color: #728EAD; }
 
 .wrapper--header {
@@ -524,14 +523,7 @@ h3.sidr-class-u-hidden {
   width: 100%;
   display: inline-block;
   min-height: 50px;
-  margin: 10px 0 0 0; }
-
-.ui.pagination.menu {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  margin: 30px 0; }
 
 nav.ui.breadcrumb {
   padding: 20px 0;

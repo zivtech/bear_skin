@@ -19,10 +19,9 @@
     float: left;
     margin: 0 50px 0 0;
   }
-  ul {
+  ul:not('.contextual-links') {
     margin: 0;
     padding: 0;
-    display: inline-block;
     li {
       list-style-type: none;
       a {
