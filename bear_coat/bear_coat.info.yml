@@ -20,6 +20,7 @@ regions:
   content: 'Content'
   sidebar_first: 'First sidebar'
   sidebar_second: 'Second sidebar'
+  breadcrumb: 'Breadcrumb'
   footer: 'Footer'
 
 settings:

@@ -2,13 +2,6 @@
   min-width: 320px;
 }
 
-.breadcrumbs-wrapper {
-  @include cf;
-  @include breakpoint($breakpoint-full-width) {
-    padding: 0 20px;
-  }
-}
-
 .field-collection-view {
   margin: 0;
 }

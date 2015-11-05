@@ -42,6 +42,17 @@
 // CSS classes
 //
 
+@font-face {
+  font-family: 'Icons';
+  src: url("../fonts/semantic/icons.eot");
+  src: url("../fonts/semantic/icons.eot?#iefix") format('embedded-opentype'), url("../fonts/semantic/icons.woff2") format('woff2'), url("../fonts/semantic/icons.woff") format('woff'), url("../fonts/semantic/icons.ttf") format('truetype'), url("../fonts/semantic/icons.svg#icons") format('svg');
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
 $headers-font: 'Droid Sans', sans-serif;
 $body-font: 'Helvetica Neue', Helvetica,sans-serif;
 

@@ -9,7 +9,7 @@ header nav {
     margin: 8px 0 0 0;
     transition: margin .3s ease-in-out;
     @include breakpoint($breakpoint-medium-width) {
-      margin: 50px 30px 30px 0px;
+      margin: 30px 30px 30px 0px;
     }
     > li.main-nav__item {
       padding: 20px 0;
@@ -109,7 +109,6 @@ header nav {
     }
   }
   .main-nav__sub {
-    
     li.parent > a:after,
     li.parent:hover > a:after {
       content: "";
@@ -132,6 +131,16 @@ header nav {
   }
   .main-menu--level-three {
     top: -10px;
+  }
+}
+
+.wrapper--header.compressed {
+  header nav {
+    ul.main-nav {
+      @include breakpoint($breakpoint-medium-width) {
+        margin: 5px 0;
+      }
+    }
   }
 }
 
@@ -197,6 +206,13 @@ h3.sidr-class-u-hidden {
 nav.ui.breadcrumb {
   padding: 20px 0;
   color: rgba(0, 0, 0, 0.4);
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    display: inline;
+  }
   a {
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-pale, $focus: $zivtech-pale);
   }

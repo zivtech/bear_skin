@@ -8,20 +8,16 @@
  *   A keyed array containing the current state of the form.
  */
 function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
-  // Work-around for a core bug affecting admin themes. See issue #943212.
-  if (isset($form_id)) {
-    return;
-  }
   $form['bear_options'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Bear Theme Additional Options'),
+    '#title' => t('Bear Skin Theme Additional Options'),
   );
 
-  // create an option to display the user menu
+  // create an option to choose between fixed and fluid layouts
   $form['bear_options']['main_layout'] = array(
     '#type' => 'radios',
     '#title' => t('General Layout'),
-    '#description' => t('This option will allow you to pick between a full width (fluid) layout (for background, banners etc, content still has max width) and fixed layout.'),
+    '#description' => t('This option will allow you to pick between a full width (fluid) layout or fixed width layout. Both are responsive.'),
     '#options' => array(
       'fluid' => t('Fluid'),
       'fixed' => t('Fixed'),
@@ -33,8 +29,7 @@ function bear_skin_form_system_theme_settings_alter(&$form, &$form_state, $form_
   $form['bear_options']['sticky_footer'] = array(
     '#type' => 'checkbox',
     '#title' => t('Add sticky footer.'),
-    '#description' => t('More info about sticky footer <a href="http://www.cssstickyfooter.com/" target="_blank">here</a><br />
-      You can change these settings in the the sticky-footer.css file located in the css folder.'),
+    '#description' => t('This option will set a flexbox sticky footer to your site.'),
     '#default_value' => theme_get_setting('sticky_footer'),
   );
 }

@@ -1,0 +1,17 @@
+{% if breadcrumb %}
+  <nav role="navigation" aria-labelledby="system-breadcrumb" class="ui breadcrumb">
+    <h2 class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+    <ul>
+    {% for item in breadcrumb %}
+      <li>
+        {% if item.url %}
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        {% else %}
+          {{ item.text }}
+        {% endif %}
+      </li>
+      <i class="right chevron icon divider"></i>
+    {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

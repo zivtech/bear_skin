@@ -108,8 +108,8 @@ body {
 
 .site-header,
 .site-main,
-.site-footer,
-#breadcrumbs {
+#footer,
+#breadcrumb {
   *zoom: 1;
   max-width: 75em;
   margin: 0 auto; }
@@ -117,15 +117,15 @@ body {
   .site-header:after,
   .site-main:before,
   .site-main:after,
-  .site-footer:before,
-  .site-footer:after,
-  #breadcrumbs:before, #breadcrumbs:after {
+  #footer:before,
+  #footer:after,
+  #breadcrumb:before, #breadcrumb:after {
     content: '';
     display: table; }
   .site-header:after,
   .site-main:after,
-  .site-footer:after,
-  #breadcrumbs:after {
+  #footer:after,
+  #breadcrumb:after {
     clear: both; }
 
 .region--navigation {
@@ -134,8 +134,8 @@ body {
 .site-header,
 .site-main,
 .breadcrumbs-wrapper,
-.site-footer,
-.breadcrumbs {
+#footer,
+#breadcrumb {
   padding-left: 20px;
   padding-right: 20px; }
 

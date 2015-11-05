@@ -33,7 +33,7 @@ function bear_skin_preprocess_html(&$variables, $hook) {
 
   // if the sticky footer option is selected, set a class
   if (theme_get_setting('sticky_footer')) {
-    $variables['attributes']['class'][] = 'with-sticky-footer'; // working
+    $variables['attributes']['class'][] = 'with-sticky-footer';
   }
 
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
