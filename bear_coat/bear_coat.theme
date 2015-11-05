@@ -19,7 +19,20 @@ function bear_coat_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
   $form['#attributes']['class'][] = 'form';
 }
 
+function bear_coat_preprocess_input__submit(&$variables) {
+	$element = $variables['element'];
+  $element['#attributes']['class'][] = 'ui';
+}
+
+
 function bear_coat_preprocess_input(&$variables) {
-  $element = $variables['element'];
-  $variables['children'] = $element['#children'];
+	$element = &$variables['element'];
+	$attributes = new Attribute($variables['attributes']);
+
+	// Set the element's attributes.
+	\Drupal\Core\Render\Element::setAttributes($element, array('id', 'name', 'value', 'type'));
+
+	if ($element['#type'] = 'submit') {
+  	$variables['attributes']['class'][] = 'ui';
+  }
 }

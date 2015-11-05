@@ -236,7 +236,7 @@ th {
 form {
   padding: 0; }
   form label {
-    font-size: 12px; }
+    font-size: 14px; }
 
 input[type="text"],
 input[type="password"] {
@@ -610,6 +610,9 @@ blockquote {
 
 .u-no-text-shadow {
   text-shadow: none; }
+
+.site-sidebars .block {
+  margin-bottom: 30px; }
 
 .wrapper--footer {
   border-top: 1px solid #ccc; }

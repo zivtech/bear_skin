@@ -95,6 +95,12 @@ body.semantic-ui .ui.search-form {
   body.semantic-ui .ui.form .ui.loading,
   body.semantic-ui .ui.search-form .ui.loading {
     top: -70px !important; }
+  body.semantic-ui .ui.form .ui.button,
+  body.semantic-ui .ui.search-form .ui.button {
+    font-weight: normal;
+    text-shadow: 1px 1px 0 white, 1px 1px 0 rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+    font-size: 15px; }
 
 .ui.cards {
   margin: 0; }
@@ -142,30 +148,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Sans", sans-serif;
   font-weight: normal; }
 
-h1 {
-  font-size: 4rem; }
-
 header:not(.site-header) {
   color: #261D19;
   font-family: "Droid Sans", sans-serif;
   font-size: 120%;
   margin-bottom: 10px; }
 
-body.semantic-ui h1 {
+h1, h1:last-child {
+  font-size: 4rem;
   margin: 0.67em 0px; }
 
-h2 {
+h2, h2:last-child {
   font-size: 2.5rem;
   margin: 3rem 0 2rem 0; }
 
-h3 {
+h3, h3:last-child {
   font-size: 2rem;
   margin: 2.5rem 0 1rem 0; }
 
-h4 {
+h4, h4:last-child {
   font-size: 1.5rem; }
 
-h5 {
+h5, h5:last-child {
   font-size: 1.2rem; }
 
 img {
@@ -549,6 +553,7 @@ nav.ui.breadcrumb {
     display: none; }
 
 #main {
+  padding-top: 30px;
   padding-bottom: 30px; }
 
 .panel-pane {
@@ -651,13 +656,13 @@ nav.ui.breadcrumb {
   .wrapper--header.compressed header nav ul.main-nav{
     margin: 5px 0; }
   .panel-display .column.right{
-    padding: 40px 0 20px 50px; }
+    padding: 0 0 20px 50px; }
   .panel-display .column.left{
-    padding: 40px 50px 20px 0; }
+    padding: 0 50px 20px 0; }
   .site-sidebars.sidebar-second{
-    padding: 40px 0 20px 50px; }
+    padding: 0 0 20px 50px; }
   .site-sidebars.sidebar-first{
-    padding: 40px 50px 20px 0; } }
+    padding: 0 50px 20px 0; } }
 
 @media (min-width: 75em){
   .site-footer .region-footer{

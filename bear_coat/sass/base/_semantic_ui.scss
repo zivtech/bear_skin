@@ -96,6 +96,12 @@ body.semantic-ui .ui.search-form {
   .ui.loading {
     top: -70px !important;
   }
+  .ui.button {
+    font-weight: normal;
+    text-shadow: 1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgba(255,255,255, .9);
+    opacity: 0.9;
+    font-size: 15px;
+  }
 }
 
 .ui.cards {
