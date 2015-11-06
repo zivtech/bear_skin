@@ -1,4 +1,7 @@
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
+.search-block-form .ui.search .prompt {
+  border-radius: 500rem !important; }
+
 .compact-form-label {
   top: 9px;
   left: 17px;
@@ -247,8 +250,7 @@ img {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 0; }
-  #header .block-search,
-  #header .block-views {
+  #header .search-block-form {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -256,15 +258,12 @@ img {
     transform: translateY(-50%);
     transition: all 0.2s ease-in-out;
     right: 130px; }
-    #header .block-search input.form-text,
-    #header .block-views input.form-text {
+    #header .search-block-form input.form-search {
       transition: width 0.2s ease-in-out;
       width: 100px !important; }
-      #header .block-search input.form-text:focus,
-      #header .block-views input.form-text:focus {
+      #header .search-block-form input.form-search:focus {
         width: 250px !important; }
-    #header .block-search.focus,
-    #header .block-views.focus {
+    #header .search-block-form.focus {
       top: 16px;
       left: -20px;
       padding: 15px 15px 13px;
@@ -619,15 +618,12 @@ nav.ui.breadcrumb {
     transform: translateY(-50%);
     margin: 0;
     right: auto; }
-  #header .block-search,
-      #header .block-views{
+  #header .search-block-form{
     right: 20px;
     transition: none; }
-  #header .block-search input.form-text,
-        #header .block-views input.form-text{
+  #header .search-block-form input.form-search{
     width: 120px !important; }
-  #header .block-search.focus,
-        #header .block-views.focus{
+  #header .search-block-form.focus{
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);

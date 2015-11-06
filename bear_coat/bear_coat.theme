@@ -4,36 +4,46 @@ use Drupal\Component\Utility\Xss;
 use Drupal\Core\Template\Attribute;
 
 /**
+ * Implements hook_theme().
+ */
+function bear_coat_theme($existing, $type, $theme, $path) {
+  return array(
+    'search_block_input_wrapper' => array(
+      'render element' => 'element',
+      'function' => 'bear_coat_search_block_input_wrapper',
+    ),
+    'pager_item_list' => array(
+      'variables' => array(
+        'items' => array(),
+      ),
+    ),
+    'labeled_button' => array(
+      'render element' => 'element',
+    ),
+  );
+}
+
+/**
  * Implements preprocess_html() to add classes to the body.
  */
 function bear_coat_preprocess_html(&$variables, $hook) {
   $variables['attributes']['class'][] = 'semantic-ui';
 }
 
-/**
- * Implements hook_form_alter() to add classes to the search form.
- */
-function bear_coat_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-	// General
-	$form['#attributes']['class'][] = 'ui';
-  $form['#attributes']['class'][] = 'form';
-}
-
 function bear_coat_preprocess_input__submit(&$variables) {
-	$element = $variables['element'];
+  $element = $variables['element'];
   $element['#attributes']['class'][] = 'ui';
 }
 
-
 function bear_coat_preprocess_input(&$variables) {
-	$element = &$variables['element'];
-	$attributes = new Attribute($variables['attributes']);
+  $element = &$variables['element'];
+  $attributes = new Attribute($variables['attributes']);
 
-	// Set the element's attributes.
-	\Drupal\Core\Render\Element::setAttributes($element, array('id', 'name', 'value', 'type'));
+  // Set the element's attributes.
+  \Drupal\Core\Render\Element::setAttributes($element, array('id', 'name', 'value', 'type'));
 
-	if ($element['#type'] = 'submit') {
-  	$variables['attributes']['class'][] = 'ui';
+  if ($element['#type'] = 'submit') {
+    $variables['attributes']['class'][] = 'ui';
   }
 }
 
@@ -46,4 +56,93 @@ function bear_coat_preprocess_select(&$variables) {
 
   $variables['attributes']['class'][] = 'ui search dropdown';
   $variables['options'] = form_select_options($element);
+}
+
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function bear_coat_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // General
+  $form['#attributes']['class'][] = 'ui';
+  $form['#attributes']['class'][] = 'form';
+
+  //dpm($form_state);
+
+   //Forms by ID
+  if ($form_id) {
+    switch ($form_id) {
+      case 'search_form':
+        // Hide default submit button.
+        $form['basic']['submit']['#attributes']['class'][] = 'element-invisible';
+
+        // Append search icon to the input.
+        $form['basic']['keys']['#attributes']['placeholder'] = t('Search ...');
+        $form['basic']['keys']['#attributes']['class'][] = 'prompt';
+        //$form['basic']['keys']['#theme_wrappers'] = array('search_block_input_wrapper');
+        break;
+
+      case 'search_block_form':
+        $form['#attributes']['class'][] = 'search-form';
+        $form['actions']['submit']['#attributes']['class'][] = 'visually-hidden';
+
+        $form['keys']['#attributes']['placeholder'] = t('Search ...');
+        $form['keys']['#attributes']['class'][] = 'prompt';
+        $form['keys']['#theme_wrappers'] = array('search_block_input_wrapper');
+        break;
+
+      case 'user_login_block':
+        $form['name']['#attributes']['placeholder'] = t('Username');
+        $form['pass']['#attributes']['placeholder'] = t('Password');
+        break;
+
+      case 'user_login':
+        $form['#attributes']['class'][] = 'segment';
+        $form['name']['#attributes']['placeholder'] = t('Username');
+        $form['pass']['#attributes']['placeholder'] = t('Password');
+        break;
+
+      case 'user_register_form':
+        $form['#attributes']['class'][] = 'segment';
+        $form['account']['name']['#attributes']['placeholder'] = t('Username');
+        $form['account']['mail']['#attributes']['placeholder'] = t('Email');
+        break;
+
+      case 'user_pass':
+        $form['#attributes']['class'][] = 'segment';
+        $form['name']['#attributes']['placeholder'] = t('Username or e-mail address');
+        break;
+
+      case 'comment_node_forum_form':
+        $form['#attributes']['class'][] = 'reply';
+        break;
+    }
+  }
+}
+
+/**
+ * Theme function for block search input.
+ */
+function bear_coat_search_block_input_wrapper(&$variables) {
+  $input_wrapper = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array(
+        'ui',
+        'search',
+        'icon',
+        'input',
+      ),
+    ),
+  );
+  $input_wrapper['input'] = array(
+    '#markup' => $variables['element']['#children'],
+  );
+  $input_wrapper['icon'] = array(
+    '#markup' => '<i class="search icon"></i>',
+  );
+
+  return drupal_render($input_wrapper);
 }

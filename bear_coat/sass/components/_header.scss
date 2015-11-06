@@ -88,8 +88,7 @@ $header-compressed-height: 55px;
       right: auto;
     }
   }
-  .block-search,
-  .block-views {
+  .search-block-form {
     @include align(v);
     transition: all .2s ease-in-out;
     right: 130px;
@@ -97,7 +96,7 @@ $header-compressed-height: 55px;
       right: 20px;
       transition: none;
     }
-    input.form-text {
+    input.form-search {
       transition: width .2s ease-in-out;
       width: 100px !important;
       @include breakpoint($breakpoint-medium-width) {
