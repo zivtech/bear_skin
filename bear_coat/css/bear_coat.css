@@ -96,6 +96,12 @@ body.semantic-ui .ui.search-form {
   body.semantic-ui .ui.form .ui.loading,
   body.semantic-ui .ui.search-form .ui.loading {
     top: -70px !important; }
+  body.semantic-ui .ui.form .ui.button,
+  body.semantic-ui .ui.search-form .ui.button {
+    font-weight: normal;
+    text-shadow: 1px 1px 0 white, 1px 1px 0 rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+    font-size: 15px; }
 
 .ui.cards {
   margin: 0; }

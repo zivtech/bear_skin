@@ -230,7 +230,9 @@ th {
   color: #404040; }
 
 form {
-  padding: 0 12px; }
+  padding: 0; }
+  form label {
+    font-size: 14px; }
 
 input[type="text"],
 input[type="password"] {

@@ -30,7 +30,10 @@
 }
 
 form {
-  padding: 0 12px;
+  padding: 0;
+  label {
+    font-size: 14px;
+  }
 }
 
 input[type="text"],
