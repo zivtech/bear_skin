@@ -28,6 +28,9 @@ body.semantic-ui .ui.menu .link.item:focus,
 body.semantic-ui .ui.menu a.item:focus {
   color: #728EAD; }
 
+body.semantic-ui #content .ui.fluid.input > input {
+  width: auto !important; }
+
 .sidebar {
   font-size: 90%; }
 
@@ -149,30 +152,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Sans", sans-serif;
   font-weight: normal; }
 
-h1 {
-  font-size: 4rem; }
-
 header:not(.site-header) {
   color: #261D19;
   font-family: "Droid Sans", sans-serif;
   font-size: 120%;
   margin-bottom: 10px; }
 
-body.semantic-ui h1 {
+h1, h1:last-child {
+  font-size: 4rem;
   margin: 0.67em 0px; }
 
-h2 {
+h2, h2:last-child {
   font-size: 2.5rem;
   margin: 3rem 0 2rem 0; }
 
-h3 {
+h3, h3:last-child {
   font-size: 2rem;
   margin: 2.5rem 0 1rem 0; }
 
-h4 {
+h4, h4:last-child {
   font-size: 1.5rem; }
 
-h5 {
+h5, h5:last-child {
   font-size: 1.2rem; }
 
 img {
@@ -512,10 +513,10 @@ img {
       text-decoration: none; }
   .wrapper--header nav.main-menu .main-menu--level-one > li,
   .wrapper--navigation nav.main-menu .main-menu--level-one > li {
-    padding: 0; }
+    padding: 20px 0; }
     .wrapper--header nav.main-menu .main-menu--level-one > li:hover .main-menu--level-two,
     .wrapper--navigation nav.main-menu .main-menu--level-one > li:hover .main-menu--level-two {
-      top: 65px;
+      top: 60px;
       opacity: .9; }
   .wrapper--header nav.main-menu .main-menu--level-one li.parent:after,
   .wrapper--navigation nav.main-menu .main-menu--level-one li.parent:after {
@@ -529,13 +530,13 @@ img {
     left: 0;
     right: 0;
     margin: 0 auto;
-    bottom: -30px;
+    bottom: 0;
     transition: all .2s ease-in-out;
     opacity: 0; }
   .wrapper--header nav.main-menu .main-menu--level-one li.parent:hover:after,
   .wrapper--navigation nav.main-menu .main-menu--level-one li.parent:hover:after {
     opacity: .8;
-    bottom: 5px; }
+    bottom: 10px; }
   .wrapper--header nav.main-menu .main-menu--level-one li.parent ul.menu,
   .wrapper--navigation nav.main-menu .main-menu--level-one li.parent ul.menu {
     border-radius: 8px;
@@ -548,7 +549,8 @@ img {
       display: block; }
       .wrapper--header nav.main-menu .main-menu--level-one li.parent ul.menu li a,
       .wrapper--navigation nav.main-menu .main-menu--level-one li.parent ul.menu li a {
-        color: white; }
+        color: white;
+        padding: 5px 0; }
         .wrapper--header nav.main-menu .main-menu--level-one li.parent ul.menu li a:hover,
         .wrapper--navigation nav.main-menu .main-menu--level-one li.parent ul.menu li a:hover {
           color: #eaeaea; }
@@ -576,7 +578,7 @@ img {
         display: none; }
   .wrapper--header nav.main-menu .main-menu--level-two,
   .wrapper--navigation nav.main-menu .main-menu--level-two {
-    top: 100px;
+    top: 60px;
     transition: all .2s ease-in-out;
     opacity: 0; }
     .wrapper--header nav.main-menu .main-menu--level-two a,

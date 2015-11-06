@@ -25,6 +25,11 @@ body.semantic-ui {
   .ui.menu a.item:focus {
     color: $zivtech-blue;
   }
+  #content {
+    .ui.fluid.input > input {
+      width: auto !important;
+    }
+  }
 }
 .sidebar {
   font-size: 90%;

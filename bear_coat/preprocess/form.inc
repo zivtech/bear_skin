@@ -112,7 +112,7 @@ function bear_coat_search_block_input_wrapper(&$variables) {
 }
 
 function bear_coat_form_views_exposed_form_alter(&$form, $form_state) {
-  if ($form['#id'] == 'views-exposed-form-site-search-panel-pane-1') { //change this to whatever form ID is outputed by your view
+  if ($form['#id'] == 'views-exposed-form-global-search-panel-pane-1') { //change this to whatever form ID is outputed by your view
     $form['#attributes']['class'] =  array('ui', 'search-form');
     $form['query']['#attributes']['placeholder'] = t('Search...');
     $form['query']['#attributes']['class'][] = 'prompt';
