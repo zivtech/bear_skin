@@ -1,6 +1,8 @@
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
 .search-block-form .ui.search .prompt {
-  border-radius: 500rem !important; }
+  border-radius: 500rem !important;
+  padding: 0.5em 1em;
+  font-size: 14px; }
 
 .compact-form-label {
   top: 9px;

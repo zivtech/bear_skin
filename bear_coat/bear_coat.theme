@@ -47,6 +47,18 @@ function bear_coat_preprocess_input(&$variables) {
   }
 }
 
+function bear_coat_preprocess_page(&$variables, $hook) {
+  global $user;
+  if (theme_get_setting('login_popup')) {
+    if (!$user->uid) {
+      $variables['loginpopup'] = "<a class='loginpopup item floated in' href='/user/login'><i class='setting icon'></i> Login</a>";
+    }
+    else {
+      $variables['loginpopup'] = "<a class='loginpopup item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";
+    }
+  }
+}
+
 function bear_coat_preprocess_select(&$variables) {
   $element = &$variables['element'];
   $variables['attributes'] = $element['#attributes'];
