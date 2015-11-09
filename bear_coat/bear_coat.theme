@@ -109,7 +109,7 @@ function bear_coat_preprocess_input(&$variables) {
 
   // Checkboxes.
   if ($element['#type'] = 'checkbox') {
-    $variables['attributes']['class'][] = "PoPo";
+    $variables['attributes']['class'][] = "ui";
   }
 
   // Additional Twig variables.
