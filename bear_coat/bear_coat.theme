@@ -35,18 +35,6 @@ function bear_coat_preprocess_input__submit(&$variables) {
   $element['#attributes']['class'][] = 'ui';
 }
 
-function bear_coat_preprocess_input(&$variables) {
-  $element = &$variables['element'];
-  $attributes = new Attribute($variables['attributes']);
-
-  // Set the element's attributes.
-  \Drupal\Core\Render\Element::setAttributes($element, array('id', 'name', 'value', 'type'));
-
-  if ($element['#type'] = 'submit') {
-    $variables['attributes']['class'][] = 'ui';
-  }
-}
-
 function bear_coat_preprocess_page(&$variables, $hook) {
   global $user;
   if (theme_get_setting('login_popup')) {
@@ -70,6 +58,114 @@ function bear_coat_preprocess_select(&$variables) {
   $variables['options'] = form_select_options($element);
 }
 
+function bear_coat_preprocess_input(&$variables) {
+  $element = &$variables['element'];
+  $attributes = new Attribute($variables['attributes']);
+
+  // Set the element's attributes.
+  \Drupal\Core\Render\Element::setAttributes($element, array('id', 'name', 'value', 'type'));
+
+  // Autocomplete fields.
+  if (!empty($element['#autocomplete_route_name']) && Drupal::PathValidator($element['#autocomplete_route_name'])) {
+    $variables['autocomplete'] = TRUE;
+
+    // Attributes for hidden input field.
+    $autocomplete_attributes = new Attribute();
+    $autocomplete_attributes['type'] = 'hidden';
+    $autocomplete_attributes['id'] = $element['#attributes']['id'] . '-autocomplete';
+    $autocomplete_attributes['value'] = Drupal::Url($element['#autocomplete_route_name'], $element['#autocomplete_route_parameters']);
+    $autocomplete_attributes['disabled'] = 'disabled';
+    $autocomplete_attributes['class'] = 'autocomplete';
+
+
+    // Fallback to using core's throbber.
+    if (empty($icon)) {
+      $icon = array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array(
+            'ajax-progress',
+            'ajax-progress-throbber',
+            'invisible',
+          ),
+        ),
+        'throbber' => array(
+          '#type' => 'html_tag',
+          '#tag' => 'div',
+          '#attributes' => array(
+            'class' => array('throbber'),
+          ),
+        ),
+      );
+    }
+    $variables['autocomplete_icon'] = $icon;
+    $variables['autocomplete_attributes'] = $autocomplete_attributes;
+  }
+
+  // Submit Buttons
+  if ($element['#type'] = 'submit') {
+    $variables['attributes']['class'][] = 'ui';
+  }
+
+  // Checkboxes.
+  if ($element['#type'] = 'checkbox') {
+    $variables['attributes']['class'][] = "PoPo";
+  }
+
+  // Additional Twig variables.
+  $variables['icon'] = $element['#icon'];
+  $variables['element'] = $element;
+}
+
+/**
+ * Preprocess form_element.
+ */
+function bear_coat_preprocess_form_element(&$variables) {
+  $element = &$variables['element'];
+  $title_display = $element['#title_display'];
+  $name = !empty($element['#name']) ? $element['#name'] : FALSE;
+  $type = !empty($element['#type']) ? $element['#type'] : FALSE;
+  $checkbox = $type && $type === 'checkbox';
+  $radio = $type && $type === 'radio';
+
+  // This function is invoked as theme wrapper, but the rendered form element
+  // may not necessarily have been processed by Drupal::formBuilder()->doBuildForm().
+  $element += array(
+    '#title_display' => 'before',
+  );
+
+  if (!empty($element['#autocomplete_route_name']) && Drupal::PathValidator($element['#autocomplete_route_name'])) {
+    $variables['is_autocomplete'] = TRUE;
+  }
+
+  // See http://getbootstrap.com/css/#forms-controls.
+  if (isset($element['#type'])) {
+    if ($radio) {
+      $variables['is_radio'] =  TRUE;
+    }
+    elseif ($checkbox) {
+      $variables['is_checkbox'] = TRUE;
+    }
+    elseif ($type != 'hidden') {
+      $variables['is_form_group'] = TRUE;
+    }
+  }
+
+  // If #title is not set, we don't display any label or required marker.
+  if (!isset($element['#title'])) {
+    $element['#title_display'] = 'none';
+  }
+  $variables['title_display'] = $element['#title_display'];
+  // Add label_display and label variables to template.
+  $variables['label_display'] = $element['#title_display'];
+
+  if ($checkbox) {
+    $variables['attributes']['class'][] = "ui checkbox form-item";
+  }
+  if ($radio) {
+    $variables['attributes']['class'][] = "ui radio checkbox form-item";
+  }
+}
 
 /**
  * @param $form

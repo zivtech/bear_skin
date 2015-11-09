@@ -235,8 +235,6 @@ th {
 
 form {
   padding: 0; }
-  form label {
-    font-size: 14px; }
 
 input[type="text"],
 input[type="password"] {
@@ -262,8 +260,7 @@ fieldset {
   background: white;
   border-radius: 5px;
   padding: 15px;
-  color: #837B80;
-  font-size: 12px; }
+  color: #837B80; }
 
 fieldset legend {
   background: #e6e4e5;

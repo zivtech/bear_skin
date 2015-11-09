@@ -34,6 +34,15 @@ body.semantic-ui .ui.form,
 body.semantic-ui .ui.search-form {
   font-family: $body-text-font-family;
   padding: 0;
+  .form-wrapper:not(.form-actions) {
+    background: #f8f8f8;
+    padding: 10px 20px;
+    border-radius: 0.285714rem;
+    margin-bottom: 10px;
+    .form-wrapper {
+      padding: 10px 0;
+    }
+  }
   input {
     font-family: $body-text-font-family;
   }
@@ -41,19 +50,23 @@ body.semantic-ui .ui.search-form {
   fieldset {
     max-width: 600px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   legend {
     margin-left: 0;
   }
   .description {
-    font-size: 90%;
+    font-size: 80%;
     color: $bear-lighten-dark;
+    font-style: italic;
+    padding: 0 10px;
+    margin: 10px 0;
+    border-left: dotted 1px #aaa;
   }
   label {
     display: block;
     clear: both;
-    margin-bottom: 5px;
+    margin: 5px 0;
     font-weight: normal;
   } 
   .ui.dropdown {
