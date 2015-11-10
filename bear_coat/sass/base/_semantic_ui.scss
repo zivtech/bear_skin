@@ -47,11 +47,15 @@ body.semantic-ui .ui.search-form {
     legend {
       margin: 5px 0 20px 0;
       float: left;
+      clear: both;
     }
     summary {
       font-weight: bold;
       margin-bottom: 5px;
       cursor: pointer;
+    }
+    .fieldset-description {
+      clear: both;
     }
   }
   input {
