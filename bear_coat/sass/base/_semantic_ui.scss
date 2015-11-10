@@ -38,9 +38,20 @@ body.semantic-ui .ui.search-form {
     background: #f8f8f8;
     padding: 10px 20px;
     border-radius: 0.285714rem;
-    margin-bottom: 10px;
+    margin: 5px 0;
+    display: inline-block;
+    width:100%;
     .form-wrapper {
       padding: 10px 0;
+    }
+    legend {
+      margin: 5px 0 20px 0;
+      float: left;
+    }
+    summary {
+      font-weight: bold;
+      margin-bottom: 5px;
+      cursor: pointer;
     }
   }
   input {
@@ -48,9 +59,13 @@ body.semantic-ui .ui.search-form {
   }
   .form-item, 
   fieldset {
-    max-width: 600px;
     position: relative;
     margin-bottom: 5px;
+    display: block;
+    clear: both;
+    input, .form-select {
+      max-width: 600px;
+    }
   }
   legend {
     margin-left: 0;
@@ -62,15 +77,15 @@ body.semantic-ui .ui.search-form {
     padding: 0 10px;
     margin: 10px 0;
     border-left: dotted 1px #aaa;
+    max-width: 600px;
   }
   label {
     display: block;
     clear: both;
-    margin: 5px 0;
+    margin: 10px 0 0 0;
     font-weight: normal;
   } 
   .ui.dropdown {
-    min-width: 100%;
     .menu {
     > .item {
       font-size: 14px;
