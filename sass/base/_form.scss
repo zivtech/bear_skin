@@ -31,9 +31,6 @@
 
 form {
   padding: 0;
-  label {
-    font-size: 14px;
-  }
 }
 
 input[type="text"],
@@ -65,13 +62,11 @@ fieldset {
   border-radius: 5px;
   padding: 15px;
   color: $bear-greyer;
-  font-size: 12px;
 }
 
 fieldset legend {
   background: $bear-grey;
   padding: 5px 10px ;
-  font-size: 12px;
   border-radius: 5px;
   margin-left: 20px;
 }
