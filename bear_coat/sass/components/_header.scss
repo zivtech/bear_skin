@@ -78,20 +78,19 @@ $header-compressed-height: 55px;
   .region-header {
     height: 100%;
   }
-  .region-navigation {
+  .responsive-nav {
     margin: 0;
     @include align(v);
-    right: 0;
+    right: 20px;
     @include breakpoint($breakpoint-medium-width) {
-      @include align(v);
-      margin: 0;
-      right: auto;
+      display: none;
     }
   }
   .search-block-form {
     @include align(v);
     transition: all .2s ease-in-out;
     right: 130px;
+    width: auto;
     @include breakpoint($breakpoint-medium-width) {
       right: 20px;
       transition: none;

@@ -1,6 +1,11 @@
 header nav {
   outline: 0;
   margin-left: 20px;
+  @include bear-element-invisible;
+  @include breakpoint($breakpoint-medium-width) {
+    @include bear-element-invisible-off;
+    overflow: visible;
+  }
   .nolink {
     cursor: pointer;
   }
@@ -148,16 +153,51 @@ header nav {
 // Support for SIDR responsive NAV
 //********************************
 
+#sidr-bttn {// this is what we use for our responsive menu
+  $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
+  margin-left: 20px;
+  #responsive-menu-button {
+    display: block;
+    width: 25px;
+    height: 30px;
+    position: relative;
+  }
+  span {
+    display: block;
+    position: relative;
+    background: $zivtech-dark;
+    height: 2px;
+    transition: $span-transition;
+    width: 22px;
+    top: 15px;
+    &:before, &:after {
+      content: "";
+      display: block;
+      background: $zivtech-dark;
+      height: 2px;
+      margin-top: 0;
+      position: absolute;
+      width: 22px;
+      transition: $span-transition;
+    }
+    &:before {
+      top: 7px;
+    }
+    &:after {
+      top: -7px;
+    }
+  }
+}
 body.sidr-open {
   #header {
-    .region-navigation {
-      left: 0;
+    .responsive-nav {
+      left: 20px;
     }
     .site-header__logo {
       opacity: 0;
     }
   }
-  #header #sidr-wrapper-0 {
+  #header #sidr-bttn {
     margin-left: 0;
     span {
       background: transparent;
@@ -175,12 +215,18 @@ body.sidr-open {
   }
 }
 
+#sidr-main {
+  li {
+
+  }
+}
+
 .sidr-animating {
   .wrapper--header {
     position: absolute;
   }
 }
-h3.sidr-class-u-hidden {
+h2.sidr-class-visually-hidden {
   @include bear-element-invisible;
 }
 

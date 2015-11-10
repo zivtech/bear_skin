@@ -17,3 +17,10 @@ semantic_ui:
   js:
     js/vendor/semantic.js: {}
 
+sidr:
+  version: 1.x
+  css:
+    base:
+      css/vendor/jquery.sidr.light.css: {}
+  js:
+    js/vendor/jquery.sidr.min.js: {}

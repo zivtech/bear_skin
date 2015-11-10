@@ -9,6 +9,7 @@ screenshot: screenshot.png
 
 libraries:
   - bear_coat/semantic_ui
+  - bear_coat/sidr
   - bear_coat/global_scripts
   - bear_coat/global_styling
 
@@ -22,9 +23,3 @@ regions:
   sidebar_second: 'Second sidebar'
   breadcrumb: 'Breadcrumb'
   footer: 'Footer'
-
-settings:
-  user_menu: 1
-  responsive_nav: 1
-  sticky_navbar: 0
-  sticky_footer: 1

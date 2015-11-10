@@ -16,8 +16,8 @@
 
   //
   //Use the sample behavior pattern below
-  
-  
+
+
   Drupal.behaviors.bearCoat = {
    attach: function (context, settings) {
      context = context || document;
@@ -33,8 +33,38 @@
         }
       });
 
-      // Material (would be better to add markup to form elements, but going faster here)
+     //addclass to search wrapper on focus
+     var $searchForm = $('#search-block-form', context);
+     $searchForm
+       .find('.form-search')
+       .on('focus', function(){
+         $(this)
+           .closest('.block-search')
+           .addClass('focus')
+         })
+       .on('blur', function(){
+         $(this)
+           .closest('.block-search')
+           .removeClass('focus')
+       });
+
+      // Semantic UI calls
       $('select').dropdown();
+
+     // Sidr Menu
+     if ($.fn.sidr instanceof Function) {
+       $('#sidr-bttn').css('display', '').sidr({
+         name: 'sidr-main',
+         source: 'header nav',
+         side: 'left'
+       });
+     }
+     $(window).on("resize", function(event){
+       if($('body').hasClass('sidr-open') && $(window).width() >= 800) {
+         $.sidr('close');
+       }
+     });
+
    }
   };
 

@@ -45,6 +45,7 @@ function bear_coat_preprocess_page(&$variables, $hook) {
       $variables['loginpopup'] = "<a class='loginpopup item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";
     }
   }
+  $variables['sidr'] = "<div id=\"sidr-bttn\"><a id=\"responsive-menu-button\" href=\"#sidr-main\"><span></span></a></div>";
 }
 
 function bear_coat_preprocess_select(&$variables) {
