@@ -26,10 +26,10 @@ function bear_coat_theme($existing, $type, $theme, $path) {
 /**
  * Implements preprocess_html() to add classes to the body.
  */
-function bear_coat_preprocess_html(&$variables, $hook) {
+function bear_coat_preprocess_html(&$variables) {
 
-  if (theme_get_setting('semantic')) {
-      $variables['attributes']['class'][] = 'semantic-ui';
+  if (theme_get_setting('semantic_ui')) {
+    $variables['attributes']['class'][] = 'semantic-ui';
   }
   if (theme_get_setting('sidr')) {
     $variables['attributes']['class'][] = 'has-sidr';
@@ -41,7 +41,7 @@ function bear_coat_preprocess_input__submit(&$variables) {
   $element['#attributes']['class'][] = 'ui';
 }
 
-function bear_coat_preprocess_page(&$variables, $hook) {
+function bear_coat_preprocess_page(&$variables) {
   global $user;
   if (theme_get_setting('login_popup')) {
     if (!$user->uid) {
@@ -51,7 +51,7 @@ function bear_coat_preprocess_page(&$variables, $hook) {
       $variables['loginpopup'] = "<a class='loginpopup item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";
     }
   }
-  if (theme_get_setting('semantic')) {
+  if (theme_get_setting('semantic_ui')) {
     $variables['#attached']['library'][] = 'bear_coat/semantic_ui';
   }
   if (theme_get_setting('sidr')) {

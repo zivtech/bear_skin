@@ -91,6 +91,7 @@ $header-compressed-height: 55px;
     transition: all .2s ease-in-out;
     right: 130px;
     width: auto;
+    z-index: 2;
     @include breakpoint($breakpoint-medium-width) {
       right: 20px;
       transition: none;
@@ -128,7 +129,7 @@ $header-compressed-height: 55px;
     top: 8px;
     font-size: 12px;
     right: 5em;
-    z-index: -1;
+    z-index: 1;
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
     @include breakpoint($breakpoint-medium-width) {
       top: 0;

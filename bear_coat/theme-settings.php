@@ -71,8 +71,8 @@ The path should be <b>bear_coat/libaries/sidr/</b>'),
 
   // display messages to the user if any library is missing
   if (theme_get_setting('sidr')) {
-    $sidr_path_js = drupal_get_path('theme', 'bear_coat') . '/libaries/sidr/dist/jquery.sidr.js';
-    $sidr_path_css = drupal_get_path('theme', 'bear_coat') . '/libaries/sidr/dist/stylesheets/jquery.sidr.light.css';
+    $sidr_path_js = drupal_get_path('theme', 'bear_coat') . '/libraries/sidr/dist/jquery.sidr.js';
+    $sidr_path_css = drupal_get_path('theme', 'bear_coat') . '/libraries/sidr/dist/stylesheets/jquery.sidr.light.css';
     if (file_exists($sidr_path_js) && file_exists($sidr_path_css)) {
       drupal_set_message(t('Sidr is properly installed!'));
     }
@@ -81,8 +81,8 @@ The path should be <b>bear_coat/libaries/sidr/</b>'),
     }
   }
   if (theme_get_setting('semantic_ui')) {
-    $semantic_ui_path_js = drupal_get_path('theme', 'bear_coat') . '/libaries/semantic_ui/dist/semantic.js';
-    $semantic_ui_path_css = drupal_get_path('theme', 'bear_coat') . '/libaries/semantic_ui/dist/semantic.css';
+    $semantic_ui_path_js = drupal_get_path('theme', 'bear_coat') . '/libraries/semantic_ui/dist/semantic.js';
+    $semantic_ui_path_css = drupal_get_path('theme', 'bear_coat') . '/libraries/semantic_ui/dist/semantic.css';
     if (file_exists($semantic_ui_path_js) && file_exists($semantic_ui_path_css)) {
       drupal_set_message(t('Semantic UI is properly installed!'));
     }

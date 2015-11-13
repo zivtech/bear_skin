@@ -298,7 +298,8 @@ img {
     transform: translateY(-50%);
     transition: all 0.2s ease-in-out;
     right: 130px;
-    width: auto; }
+    width: auto;
+    z-index: 2; }
     #header .search-block-form input.form-search {
       transition: width 0.2s ease-in-out;
       width: 100px !important;
@@ -316,7 +317,7 @@ img {
     top: 8px;
     font-size: 12px;
     right: 5em;
-    z-index: -1;
+    z-index: 1;
     color: #261D19; }
     #header a.loginpopup:hover {
       color: #728EAD; }
@@ -623,7 +624,6 @@ nav.ui.breadcrumb {
     display: none; }
 
 #main {
-  padding-top: 30px;
   padding-bottom: 30px; }
 
 .panel-pane {

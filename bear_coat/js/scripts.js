@@ -40,16 +40,13 @@
        .on('focus', function(){
          $(this)
            .closest('.block-search')
-           .addClass('focus')
+           .addClass('focus');
          })
        .on('blur', function(){
          $(this)
            .closest('.block-search')
-           .removeClass('focus')
+           .removeClass('focus');
        });
-
-      // Semantic UI calls
-      $('select').dropdown();
 
      // Sidr Menu
      if ($.fn.sidr instanceof Function) {
@@ -59,9 +56,9 @@
          side: 'left'
        });
      }
-     $(window).on("resize", function(event){
+     $(window).on('resize', function(){
        if($('body').hasClass('sidr-open') && $(window).width() >= 800) {
-         $.sidr('close');
+         $.sidr('close', 'sidr-main');
        }
      });
 
