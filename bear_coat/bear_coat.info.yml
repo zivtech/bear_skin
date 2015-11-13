@@ -8,8 +8,6 @@ base theme: bear_skin
 screenshot: screenshot.png
 
 libraries:
-  - bear_coat/semantic_ui
-  - bear_coat/sidr
   - bear_coat/global_scripts
   - bear_coat/global_styling
 

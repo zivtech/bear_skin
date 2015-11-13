@@ -301,7 +301,8 @@ img {
     width: auto; }
     #header .search-block-form input.form-search {
       transition: width 0.2s ease-in-out;
-      width: 100px !important; }
+      width: 100px !important;
+      background: white; }
       #header .search-block-form input.form-search:focus {
         width: 250px !important; }
     #header .search-block-form.focus {
@@ -315,6 +316,7 @@ img {
     top: 8px;
     font-size: 12px;
     right: 5em;
+    z-index: -1;
     color: #261D19; }
     #header a.loginpopup:hover {
       color: #728EAD; }
@@ -412,14 +414,16 @@ img {
 * html .jspCorner {
   margin: 0 -3px 0 0; }
 
-header nav {
-  outline: 0;
-  margin-left: 20px;
+body.has-sidr header nav {
   position: absolute !important;
   height: 0;
   width: 0;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px); }
+
+header nav {
+  outline: 0;
+  margin-left: 20px; }
   header nav .nolink {
     cursor: pointer; }
   header nav ul.main-nav {
@@ -708,7 +712,7 @@ nav.ui.breadcrumb {
     right: 2em; }
   .wrapper--main{
     padding-top: 105px; }
-  header nav{
+  body.has-sidr header nav{
     position: static !important;
     clip: auto;
     height: auto;

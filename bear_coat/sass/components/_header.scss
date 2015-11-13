@@ -98,6 +98,7 @@ $header-compressed-height: 55px;
     input.form-search {
       transition: width .2s ease-in-out;
       width: 100px !important;
+      background: white;
       @include breakpoint($breakpoint-medium-width) {
         width: 120px !important;
       }
@@ -127,6 +128,7 @@ $header-compressed-height: 55px;
     top: 8px;
     font-size: 12px;
     right: 5em;
+    z-index: -1;
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
     @include breakpoint($breakpoint-medium-width) {
       top: 0;

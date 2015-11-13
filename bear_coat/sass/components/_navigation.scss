@@ -1,11 +1,15 @@
+body.has-sidr {
+  header nav {
+    @include bear-element-invisible;
+    @include breakpoint($breakpoint-medium-width) {
+      @include bear-element-invisible-off;
+      overflow: visible;
+    }
+  }
+}
 header nav {
   outline: 0;
   margin-left: 20px;
-  @include bear-element-invisible;
-  @include breakpoint($breakpoint-medium-width) {
-    @include bear-element-invisible-off;
-    overflow: visible;
-  }
   .nolink {
     cursor: pointer;
   }
