@@ -13,7 +13,9 @@ After the process finishes, you'll be able to run all the gulp tasks (see below)
 
 Third party libraries
 ---------------------
-Bear Coat comes with two optional libraries that will greatly enhance the use experience. Both SIDR and Semantic UI can be enabled at admin/appearance/settings/bear_coat. Follow the instruction on the page to install the corresponding libraries.
+Bear Coat comes with two optional libraries that will greatly enhance the use experience. Both SIDR and Semantic UI can be enabled at admin/appearance/settings/bear_coat.
+Follow the instruction on the page to install the corresponding libraries. You'll need to install both libraries. You can do it manually or cd the bear_coat directory and run
+git clone https://github.com/Semantic-Org/Semantic-UI.git semantic_ui && git clone https://github.com/artberri/sidr.git sidr
 
 Gulp tasks
 ----------

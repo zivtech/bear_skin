@@ -54,8 +54,8 @@ function bear_coat_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#type' => 'checkbox',
     '#title' => t('Include Semantic UI'),
     '#description' => t('<b>Recommended</b>. This theme is setup to use <a href="http://semantic-ui.com/" target="_blank">Semantic</a> UI for many UI/UX elements.<br>
-    In order to enable, download the plugin at <a href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">https://github.com/Semantic-Org/Semantic-UI</a> and place the uncompressed directory in the bear_coat "library" and rename it to "semantic_ui".<br>
-The path should be <b>bear_coat/libaries/semantic_ui/</b>'),
+    In order to enable, download the plugin at <a href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">https://github.com/Semantic-Org/Semantic-UI</a> and place the uncompressed directory in the bear_coat root directory and rename it to "semantic_ui".<br>
+The path should be <b>bear_coat/semantic_ui/</b>. You can also cd into bear_coat and run git clone https://github.com/Semantic-Org/Semantic-UI.git semantic_ui && git clone https://github.com/artberri/sidr.git sidr'),
     '#default_value' =>theme_get_setting('semantic_ui'),
   );
 
@@ -64,15 +64,15 @@ The path should be <b>bear_coat/libaries/semantic_ui/</b>'),
     '#type' => 'checkbox',
     '#title' => t('Include the SIDR responsive menu'),
     '#description' => t('<b>Recommended</b>. The <a href="http://www.berriart.com/sidr/" target="_blank">SIDR</a> menu will turn your main navigation into a responsive navigation under 800px.<br>
-In order to enable, download the plugin at <a href="https://github.com/artberri/sidr" target="_blank">https://github.com/artberri/sidr</a> and place the uncompressed directory in the bear_coat "library" and rename it to "sidr".<br>
-The path should be <b>bear_coat/libaries/sidr/</b>'),
+In order to enable, download the plugin at <a href="https://github.com/artberri/sidr" target="_blank">https://github.com/artberri/sidr</a> and place the uncompressed directory in the bear_coat root directory and rename it to "sidr".<br>
+The path should be <b>bear_coat/sidr/</b>. You can also cd into bear_coat and run git clone https://github.com/Semantic-Org/Semantic-UI.git semantic_ui && git clone https://github.com/artberri/sidr.git sidr'),
     '#default_value' => theme_get_setting('sidr'),
   );
 
   // display messages to the user if any library is missing
   if (theme_get_setting('sidr')) {
-    $sidr_path_js = drupal_get_path('theme', 'bear_coat') . '/libraries/sidr/dist/jquery.sidr.js';
-    $sidr_path_css = drupal_get_path('theme', 'bear_coat') . '/libraries/sidr/dist/stylesheets/jquery.sidr.light.css';
+    $sidr_path_js = drupal_get_path('theme', 'bear_coat') . '/sidr/dist/jquery.sidr.js';
+    $sidr_path_css = drupal_get_path('theme', 'bear_coat') . '/sidr/dist/stylesheets/jquery.sidr.light.css';
     if (file_exists($sidr_path_js) && file_exists($sidr_path_css)) {
       drupal_set_message(t('Sidr is properly installed!'));
     }
@@ -81,8 +81,8 @@ The path should be <b>bear_coat/libaries/sidr/</b>'),
     }
   }
   if (theme_get_setting('semantic_ui')) {
-    $semantic_ui_path_js = drupal_get_path('theme', 'bear_coat') . '/libraries/semantic_ui/dist/semantic.js';
-    $semantic_ui_path_css = drupal_get_path('theme', 'bear_coat') . '/libraries/semantic_ui/dist/semantic.css';
+    $semantic_ui_path_js = drupal_get_path('theme', 'bear_coat') . '/semantic_ui/dist/semantic.js';
+    $semantic_ui_path_css = drupal_get_path('theme', 'bear_coat') . '/semantic_ui/dist/semantic.css';
     if (file_exists($semantic_ui_path_js) && file_exists($semantic_ui_path_css)) {
       drupal_set_message(t('Semantic UI is properly installed!'));
     }

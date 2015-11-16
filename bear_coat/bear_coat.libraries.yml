@@ -13,15 +13,15 @@ semantic_ui:
   version: 1.x
   css:
     base:
-      libraries/semantic_ui/dist/semantic.css: {}
+      semantic_ui/dist/semantic.css: {}
   js:
-    libraries/semantic_ui/dist/semantic.js: {}
+    semantic_ui/dist/semantic.js: {}
     js/bear_coat_semantic_ui.js: {}
 
 sidr:
   version: 1.x
   css:
     base:
-      libraries/sidr/dist/stylesheets/jquery.sidr.light.css: {}
+      sidr/dist/stylesheets/jquery.sidr.light.css: {}
   js:
-    libraries/sidr/dist/jquery.sidr.js: {}
+    sidr/dist/jquery.sidr.js: {}
