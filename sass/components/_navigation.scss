@@ -15,6 +15,23 @@ header nav {
       display: inline;
       list-style-type: none;
       margin-right: 20px;
+      position: relative;
+      &.parent {
+        padding-bottom: 10px;
+        ul.main-nav__sub {
+          @include bear-element-invisible;
+          position: absolute;
+          background: #fff;
+          overflow: visible !important;
+          margin: 0;
+          padding: 5px 10px;
+        }
+        &:hover > ul.main-nav__sub {
+          @include bear-element-invisible-off;
+          position: absolute !important;
+          left: 0;
+        }
+      }
     }
   }
 }

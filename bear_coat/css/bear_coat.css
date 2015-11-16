@@ -77,13 +77,13 @@ body.semantic-ui .ui.search-form {
     margin-bottom: 5px;
     display: block;
     clear: both; }
-    body.semantic-ui .ui.form .form-item input,
-    body.semantic-ui .ui.form .form-item .form-select,
+    body.semantic-ui .ui.form .form-item input, body.semantic-ui .ui.form .form-item .form-select,
     body.semantic-ui .ui.form fieldset input,
     body.semantic-ui .ui.form fieldset .form-select,
     body.semantic-ui .ui.search-form .form-item input,
     body.semantic-ui .ui.search-form .form-item .form-select,
-    body.semantic-ui .ui.search-form fieldset input, body.semantic-ui .ui.search-form fieldset .form-select {
+    body.semantic-ui .ui.search-form fieldset input,
+    body.semantic-ui .ui.search-form fieldset .form-select {
       max-width: 600px; }
   body.semantic-ui .ui.form legend,
   body.semantic-ui .ui.search-form legend {
@@ -120,7 +120,7 @@ body.semantic-ui .ui.search-form {
     position: relative; }
     body.semantic-ui .ui.form .views-exposed-form .views-exposed-widgets,
     body.semantic-ui .ui.search-form .views-exposed-form .views-exposed-widgets {
-      transition: opacity 0.2s ease-in-out; }
+      transition: opacity .2s ease-in-out; }
     body.semantic-ui .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
     body.semantic-ui .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
       opacity: .2; }
@@ -254,22 +254,22 @@ img {
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
   background: #f5f5f5;
   z-index: 999;
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
   height: 55px;
   padding-top: 10px;
   padding-bottom: 10px; }
   .wrapper--header .site-header__logo {
     opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity .2s ease-in-out;
     overflow: hidden;
     float: left;
     margin-right: -60px; }
     .wrapper--header .site-header__logo img {
       width: 40%;
-      transition: width 0.3s ease-in-out; }
+      transition: width .3s ease-in-out; }
   .wrapper--header #header .block-search input.form-text,
   .wrapper--header #header .block-views input.form-text {
-    padding: 0.4em 1em;
+    padding: .4em 1em;
     font-size: 14px; }
 
 #header {
@@ -277,7 +277,7 @@ img {
   height: 100%; }
   #header .site-header__logo {
     max-width: 120px;
-    transition: all 0.3s ease-in-out; }
+    transition: all .3s ease-in-out; }
     #header .site-header__logo img {
       display: block; }
   #header .region-header {
@@ -296,12 +296,12 @@ img {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    transition: all 0.2s ease-in-out;
+    transition: all .2s ease-in-out;
     right: 130px;
     width: auto;
     z-index: 2; }
     #header .search-block-form input.form-search {
-      transition: width 0.2s ease-in-out;
+      transition: width .2s ease-in-out;
       width: 100px !important;
       background: white; }
       #header .search-block-form input.form-search:focus {
@@ -430,7 +430,7 @@ header nav {
   header nav ul.main-nav {
     position: relative;
     margin: 8px 0 0 0;
-    transition: margin 0.3s ease-in-out; }
+    transition: margin .3s ease-in-out; }
     header nav ul.main-nav > li.main-nav__item {
       padding: 20px 0;
       margin: 0; }
@@ -443,12 +443,10 @@ header nav {
       text-transform: uppercase;
       text-decoration: none;
       padding: 8px 12px;
-      transition: all 0.2s ease-in-out;
+      transition: all .2s ease-in-out;
       border-radius: 6px;
       font-size: 14px; }
-      header nav ul.main-nav li a:hover,
-      header nav ul.main-nav li a:focus,
-      header nav ul.main-nav li a.active {
+      header nav ul.main-nav li a:hover, header nav ul.main-nav li a:focus, header nav ul.main-nav li a.is-active {
         background: #261D19;
         color: #fff;
         text-decoration: none; }
@@ -466,7 +464,7 @@ header nav {
       right: 0;
       margin: 0 auto;
       bottom: -30px;
-      transition: all 0.2s ease-in-out;
+      transition: all .2s ease-in-out;
       opacity: 0; }
     header nav ul.main-nav li.parent:hover:after {
       opacity: .8;
@@ -481,7 +479,7 @@ header nav {
       left: 0;
       right: 0;
       top: 100px;
-      transition: all 0.2s ease-in-out;
+      transition: all .2s ease-in-out;
       min-width: 200px;
       opacity: 0;
       visibility: hidden; }
@@ -497,17 +495,17 @@ header nav {
             color: #eaeaea; }
           header nav ul.main-nav li.parent ul.main-nav__sub li.main-nav__item a:focus {
             color: #eaeaea; }
-          header nav ul.main-nav li.parent ul.main-nav__sub li.main-nav__item a:hover {
+          header nav ul.main-nav li.parent ul.main-nav__sub li.main-nav__item a:hover, header nav ul.main-nav li.parent ul.main-nav__sub li.main-nav__item a:focus {
             background: transparent;
             text-decoration: underline; }
+          header nav ul.main-nav li.parent ul.main-nav__sub li.main-nav__item a.is-active {
+            background: transparent; }
         header nav ul.main-nav li.parent ul.main-nav__sub li.main-nav__item:last-child {
           margin-bottom: 0; }
       header nav ul.main-nav li.parent ul.main-nav__sub .main-nav__item {
         text-transform: initial;
         margin-bottom: 0; }
-        header nav ul.main-nav li.parent ul.main-nav__sub .main-nav__item:hover,
-        header nav ul.main-nav li.parent ul.main-nav__sub .main-nav__item:focus,
-        header nav ul.main-nav li.parent ul.main-nav__sub .main-nav__item.active {
+        header nav ul.main-nav li.parent ul.main-nav__sub .main-nav__item:hover, header nav ul.main-nav li.parent ul.main-nav__sub .main-nav__item:focus, header nav ul.main-nav li.parent ul.main-nav__sub .main-nav__item.active {
           background: transparent;
           color: #728EAD; }
         header nav ul.main-nav li.parent ul.main-nav__sub .main-nav__item:after {
@@ -575,8 +573,7 @@ body.sidr-open #header #sidr-bttn {
   margin-left: 0; }
   body.sidr-open #header #sidr-bttn span {
     background: transparent; }
-    body.sidr-open #header #sidr-bttn span:before,
-    body.sidr-open #header #sidr-bttn span:after {
+    body.sidr-open #header #sidr-bttn span:before, body.sidr-open #header #sidr-bttn span:after {
       top: 0; }
     body.sidr-open #header #sidr-bttn span:before {
       -webkit-transform: rotate(45deg);
@@ -673,16 +670,16 @@ nav.ui.breadcrumb {
     padding-bottom: 10px; }
   .wrapper--header.compressed .site-header__logo{
     opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity .2s ease-in-out;
     overflow: hidden;
     float: left;
     margin-right: -60px; }
   .wrapper--header.compressed .site-header__logo img{
     width: 40%;
-    transition: width 0.3s ease-in-out; }
+    transition: width .3s ease-in-out; }
   .wrapper--header.compressed #header .block-search input.form-text,
         .wrapper--header.compressed #header .block-views input.form-text{
-    padding: 0.4em 1em;
+    padding: .4em 1em;
     font-size: 14px; }
   .wrapper--header.compressed #header .block-search,
         .wrapper--header.compressed #header .block-views{

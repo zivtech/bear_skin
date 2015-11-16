@@ -41,7 +41,7 @@ header nav {
       font-size: 14px;
       &:hover,
       &:focus,
-      &.active {
+      &.is-active {
         background: $zivtech-dark;
         color: #fff;
         text-decoration: none;
@@ -92,9 +92,12 @@ header nav {
           display: block;
           a {
             @include link-colors($zivtech-white, $hover: $zivtech-pale, $active: $zivtech-pale, $focus: $zivtech-pale);
-            &:hover {
+            &:hover, &:focus {
               background: transparent;
               text-decoration: underline;
+            }
+            &.is-active {
+              background: transparent;
             }
           }
           &:last-child {
