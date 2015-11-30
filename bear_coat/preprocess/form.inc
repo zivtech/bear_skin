@@ -169,9 +169,9 @@ function bear_coat_form_element($variables) {
     $attributes['class'][] = drupal_html_class('form-item-' . $element['#name']);
   }
   // for exposed filter search fields
-  if ($element['#name'] == "query") {
-    $attributes['class'] = array('ui', 'fluid', 'search', 'icon', 'input');
-  }
+  //  if ($element['#name'] == "query") {
+  //    $attributes['class'] = array('ui', 'fluid', 'search', 'icon', 'input');
+  //  }
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
     $attributes['class'][] = 'disabled';
