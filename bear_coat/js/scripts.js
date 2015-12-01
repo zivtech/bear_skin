@@ -33,7 +33,7 @@
         }
       });
 
-      // Material (would be better to add markup to form elements, but going faster here)
+      // Material
       if ($('body').hasClass('semantic-ui')) {
         $('select').dropdown();
         $('.ui.checkbox').checkbox();
@@ -57,6 +57,9 @@
         $('.close').click(function(){
           $(".ui.modal.login").modal('hide');
         });
+      }
+      else {
+        $('a.loginpopup', context).attr('href', '/user');
       }
 
       //******************
