@@ -4,6 +4,32 @@
   z-index: 1;
   font-size: 100%; }
 
+body:not(.semantic-ui) form input.form-submit {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 5px 10px 6px 10px;
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  margin-top: 5px; }
+  body:not(.semantic-ui) form input.form-submit:hover, body:not(.semantic-ui) form input.form-submit:focus {
+    background: #666;
+    color: white;
+    border-color: #222; }
+
+body:not(.semantic-ui) form .description {
+  font-size: 80%;
+  color: #6C6C6C;
+  font-style: italic;
+  padding: 0 10px;
+  margin: 10px 0;
+  border-left: dotted 1px #aaa;
+  max-width: 600px; }
+
+body:not(.semantic-ui) #breadcrumbs .chevron:before {
+  content: ">";
+  padding: 0 8px;
+  color: #261D19; }
+
 .wrapper {
   min-width: 320px; }
 
@@ -223,23 +249,25 @@ img {
     padding-top: 30px;
     padding-bottom: 30px; }
 
-#footer .block-menu {
-  float: left;
-  margin: 0 50px 0 0; }
-
-#footer ul {
-  margin: 0;
-  padding: 0; }
-  #footer ul li {
-    list-style-type: none; }
-    #footer ul li a {
-      color: white; }
-      #footer ul li a:hover {
-        color: #728EAD; }
-      #footer ul li a:active {
-        color: #728EAD; }
-      #footer ul li a:focus {
-        color: #728EAD; }
+#footer {
+  background: transparent;
+  border: 0; }
+  #footer .block-menu {
+    float: left;
+    margin: 0 50px 0 0; }
+  #footer ul {
+    margin: 0;
+    padding: 0; }
+    #footer ul li {
+      list-style-type: none; }
+      #footer ul li a {
+        color: white; }
+        #footer ul li a:hover {
+          color: #728EAD; }
+        #footer ul li a:active {
+          color: #728EAD; }
+        #footer ul li a:focus {
+          color: #728EAD; }
 
 .wrapper--header {
   position: fixed;
@@ -269,7 +297,8 @@ img {
 
 #header {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  border: 0; }
   #header .site-header__logo {
     max-width: 120px;
     transition: all .3s ease-in-out; }
