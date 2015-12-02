@@ -30,4 +30,9 @@ function bear_coat_preprocess_html(&$vars) {
   if (bear_coat_check_library('semantic_ui', 'semantic.min.css') && bear_coat_check_library('semantic_ui', 'semantic.min.js') && theme_get_setting('semantic_ui') && module_exists('semantic_ui_api')) {
     $vars['classes_array'][] = "semantic-ui";
   }
+  if (!module_exists('jquery_update')) :
+    drupal_set_message(t('This theme requires the <a href="https://www.drupal.org/project/jquery_update/" target="_blank">jQuery Update module</a> to be installed.'), 'error', FALSE);
+  elseif (version_compare(variable_get('jquery_update_jquery_version'), '1.7', '<')) :
+    drupal_set_message(t('This theme requires at least jQuery 1.7. Please enable it by <a href="/admin/config/development/jquery_update/">clicking here</a>.'), 'error', FALSE);
+  endif;
 }

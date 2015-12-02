@@ -14,9 +14,7 @@
 
   'use strict';
 
-  //
-  //Use the sample behavior pattern below
-  
+  //Use the sample behavior pattern below  
   
   Drupal.behaviors.bearCoat = {
    attach: function (context, settings) {

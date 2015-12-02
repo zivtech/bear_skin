@@ -5,10 +5,12 @@
 
 .wrapper--header,
 .wrapper--navigation {
-  .main-menu {
+  .main-menu,
+  .block__system-main-menu {
     float: left;
     .menu {
       margin: 0;
+      padding: 0;
       &:not(.main-menu--level-one) {
         @include bear-element-invisible;
         overflow: visible !important;

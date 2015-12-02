@@ -27,12 +27,6 @@
   </header>
 </div>
 
-<div class="wrapper wrapper--navigation">
-  <!-- ****** Delete this comment on production *****
-  move <?php //print render($page['navigation']); ?> to render navigation on separate row 
-  ****** -->
-</div>
-
 <div class="wrapper wrapper--main">
   <div id="main" class="site-main">
   <div class="site-info">

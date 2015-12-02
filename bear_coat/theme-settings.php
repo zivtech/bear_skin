@@ -87,11 +87,6 @@ If you are installing the Semantic UI library manually, the path should be look 
     if (!(bear_coat_check_library('semantic_ui', 'semantic.min.css') && bear_coat_check_library('semantic_ui', 'semantic.min.js'))) :
       drupal_set_message(t('You have enabled semantic UI but the <b>library</b> is missing. Proceed to the module\'s page <a href="https://www.drupal.org/project/semantic_ui_api" target="_blank">here</a>. '), 'error', FALSE);
     endif; 
-    if (!module_exists('jquery_update')) :
-        drupal_set_message(t('Semantic UI requires the <a href="https://www.drupal.org/project/jquery_update/" target="_blank">jQuery Update module</a> to be installed.'), 'error', FALSE);
-    elseif (version_compare(variable_get('jquery_update_jquery_version'), '1.7', '<')) :
-      drupal_set_message(t('Semantic UI requires at least jQuery 1.7. Please enable it by <a href="/admin/config/development/jquery_update/">clicking here</a>.'), 'error', FALSE);
-    endif;
   }
 
 }
