@@ -1,6 +1,6 @@
-.wrapper--header,
-.wrapper--navigation {
-  nav.main-menu, ul.main-menu--level-one {
+.region-navigation {
+  nav.main-menu,
+  .block__system-main-menu {
     outline: 0;
     margin: 0;
     .nolink {
@@ -152,6 +152,7 @@
     }
   }
 }
+// both for regular nav and SIDR
 #sidr-wrapper-0,
 #mobile-nav {
   $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
@@ -189,8 +190,8 @@
     }
   }
 }
-.wrapper--header .main-menu,
-.wrapper--header .block__system-main-menu {
+.region-navigation .main-menu,
+.region-navigation .block__system-main-menu {
   &.mobile {
     ul.main-menu--level-one {
       position: absolute;
@@ -218,6 +219,10 @@
       li {
         clear: both;
         display: block;
+        padding: 0;
+        &:after {
+          display: none !important;
+        }
         a {
           background: transparent !important;
           transition: none;
@@ -235,17 +240,20 @@
         opacity: 1;
         overflow: visible;
       }
-      ul {
+      ul.main-menu--level-two,
+      .parent:hover .menu {
         @include bear-element-invisible-off;
-        position: relative !important;
+        position: relative;
         border: 0;
         top: 0;
         opacity: 1;
         min-width: auto;
         padding: 0 0 0 25px;
+        background: transparent;
         li {
           a {
             text-transform: none;
+            color: $zivtech-dark;
           }
         }
       }

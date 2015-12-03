@@ -3,8 +3,7 @@
   @include bear-element-focusable;
 }
 
-.wrapper--header,
-.wrapper--navigation {
+.region-navigation {
   .main-menu,
   .block__system-main-menu {
     float: left;
@@ -27,22 +26,23 @@
       .parent {
         position: relative;
         ul {
-          border-top: 1px solid $zivtech-dark;
+          border: 1px solid #ccc;
           a {
             line-height: 140%;
             display: block;
-            padding: 0;
-            margin-bottom: 10px;
+            padding: 5px 0;
           }
         }
       }
       .parent:hover {
-        > .main-menu__link {
+        > ul.main-menu__link {
           color: $zivtech-blue;
         }
         > .menu {
           @include bear-element-invisible-off;
           position: absolute !important;
+          opacity: 1;
+          z-index: 2;
         }
       }
       &.main-menu--level-three {
