@@ -57,8 +57,49 @@
         });
       }
       else {
+        // Our modal then turns into a regular link
         $('a.loginpopup', context).attr('href', '/user');
       }
+
+     // build a simple responsive nan if SIDR not enabled
+     // Comment out also if using any other responsive nav plugin
+     $.fn.clickToggle = function(func1, func2) {
+       var funcs = [func1, func2];
+       this.data('toggleclicked', 0);
+       this.click(function() {
+         var data = $(this).data();
+         var tc = data.toggleclicked;
+         $.proxy(funcs[tc], this)();
+         data.toggleclicked = (tc + 1) % 2;
+       });
+       return this;
+     };
+     if (!$('body').hasClass('sidr')) {
+       var $nav = $('.main-menu, .block__system-main-menu', context);
+       $nav.once().prepend('<div id="mobile-nav" class="hidden"><a id="mobile-button" href="javascript:;"><span></span></a></div>');
+       var $mobileNav = $('#mobile-nav');
+       var $mobileButton = $('#mobile-button')
+       var $mobileMenu = $('ul.main-menu--level-one');
+       //$mobileMenu.addClass('hidden');
+
+       $(window).on('load resize', function(){
+         if ($(window).width() < 800) {
+           $nav.addClass('mobile');
+           $mobileNav.removeClass('hidden');
+         }
+         else {
+           $nav.removeClass('mobile');
+           $mobileNav.addClass('hidden');
+         }
+       });
+       $mobileNav.find($mobileButton).clickToggle(function(){
+         $(this).addClass('on');
+         $mobileMenu.addClass('show');
+       }, function(){
+         $(this).removeClass('on');
+         $mobileMenu.removeClass('show');
+       });
+     }
 
       //******************
       // Markup/Dom modifs
@@ -78,12 +119,12 @@
         .on('focus', function(){
           $(this)
             .closest('.block-search')
-            .addClass('focus')
+            .addClass('focus');
         })
         .on('blur', function(){
           $(this)
           .closest('.block-search')
-          .removeClass('focus')
+          .removeClass('focus');
         });
 
       // adding a class to empty p to remove margin/padding
@@ -150,9 +191,9 @@
                 beforeSend.call(this, xmlhttprequest, options);
                 $(document).trigger('beforeSend');
             }
-          }
+          };
       }
     }
-  }
+  };
 
 })(jQuery, Drupal, window, document);

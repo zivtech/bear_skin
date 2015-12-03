@@ -1,6 +1,6 @@
 .wrapper--header,
 .wrapper--navigation {
-  nav.main-menu {
+  nav.main-menu, ul.main-menu--level-one {
     outline: 0;
     margin: 0;
     .nolink {
@@ -23,7 +23,7 @@
       &:focus,
       &.active {
         background: $zivtech-dark;
-        color: #fff;
+        color: white;
         text-decoration: none;
       }
     }
@@ -123,6 +123,71 @@
     }
   }
 }
+
+// mobile nav (fallback for no-SIDR )
+.wrapper--header .main-menu,
+.wrapper--header .block__system-main-menu {
+  &.mobile {
+    ul.main-menu--level-one {
+      position: absolute;
+      top: 25px;
+      right: 15px;
+      background: white;
+      border-radius: 4px;
+      width: 200px !important;
+      padding: 10px !important;
+      box-shadow: 0 0 5px #999;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      @include bear-element-invisible;
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $zivtech-dark;
+        position: absolute;
+        right: 7px;
+        top: -8px;
+      }
+      li {
+        clear: both;
+        display: block;
+        a {
+          background: transparent !important;
+          transition: none;
+          &:hover,
+          &:focus,
+          &.active {
+            color: $zivtech-blue !important;
+            text-decoration: none;
+          }
+        }
+      }
+      &.show {
+        @include bear-element-invisible-off;
+        position: absolute !important;
+        opacity: 1;
+        overflow: visible;
+      }
+      ul {
+        @include bear-element-invisible-off;
+        position: relative !important;
+        border: 0;
+        top: 0;
+        opacity: 1;
+        min-width: auto;
+        padding: 0 0 0 25px;
+        li {
+          a {
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
+}
 .nav-user__list {
   right: 0;
   margin: 0;
@@ -134,9 +199,75 @@
   }
 }
 
-//********************************
-// Support for SIDR responsive NAV
-//********************************
+//***********************
+// Regular responsive NAV
+//***********************
+#mobile-nav {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  &.hidden {
+    display: none;
+  }
+  #mobile-button {
+    &.on {
+      span {
+        background: transparent;
+        &:before,
+        &:after {
+          top: 0;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+#sidr-wrapper-0,
+#mobile-nav {
+  $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
+  margin-right: $layout-padding;
+  #sidr-0-button,
+  #mobile-button {
+    display: block;
+    width: 25px;
+    height: 30px;
+    position: relative;
+  }
+  span {
+    display: block;
+    position: relative;
+    background: $zivtech-dark;
+    height: 2px;
+    transition: $span-transition;
+    width: 22px;
+    top: 15px;
+    &:before, &:after {
+      content: "";
+      display: block;
+      background: $zivtech-dark;
+      height: 2px;
+      margin-top: 0;
+      position: absolute;
+      width: 22px;
+      transition: $span-transition;
+    }
+    &:before {
+      top: 7px;
+    }
+    &:after {
+      top: -7px;
+    }
+  }
+}
+
+//**************************************
+// Extra Support for SIDR responsive NAV
+//**************************************
 
 body.sidr-open {
   #header {
