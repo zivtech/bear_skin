@@ -613,6 +613,63 @@ img {
   .wrapper--navigation ul.main-menu--level-one .main-menu--level-three {
     top: -10px; }
 
+#mobile-nav {
+  position: absolute;
+  right: 0;
+  top: -15px; }
+  #mobile-nav.hidden {
+    display: none; }
+  #mobile-nav #mobile-button.on span {
+    background: transparent; }
+    #mobile-nav #mobile-button.on span:before, #mobile-nav #mobile-button.on span:after {
+      top: 0; }
+    #mobile-nav #mobile-button.on span:before {
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    #mobile-nav #mobile-button.on span:after {
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+
+#sidr-wrapper-0,
+#mobile-nav {
+  margin-right: 1em; }
+  #sidr-wrapper-0 #sidr-0-button,
+  #sidr-wrapper-0 #mobile-button,
+  #mobile-nav #sidr-0-button,
+  #mobile-nav #mobile-button {
+    display: block;
+    width: 25px;
+    height: 30px;
+    position: relative; }
+  #sidr-wrapper-0 span,
+  #mobile-nav span {
+    display: block;
+    position: relative;
+    background: #261D19;
+    height: 2px;
+    transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+    width: 22px;
+    top: 15px; }
+    #sidr-wrapper-0 span:before, #sidr-wrapper-0 span:after,
+    #mobile-nav span:before,
+    #mobile-nav span:after {
+      content: "";
+      display: block;
+      background: #261D19;
+      height: 2px;
+      margin-top: 0;
+      position: absolute;
+      width: 22px;
+      transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63); }
+    #sidr-wrapper-0 span:before,
+    #mobile-nav span:before {
+      top: 7px; }
+    #sidr-wrapper-0 span:after,
+    #mobile-nav span:after {
+      top: -7px; }
+
 .wrapper--header .main-menu.mobile ul.main-menu--level-one,
 .wrapper--header .block__system-main-menu.mobile ul.main-menu--level-one {
   position: absolute;
@@ -694,63 +751,6 @@ img {
   .nav-user__list li {
     list-style-type: none;
     font-size: 1.5rem; }
-
-#mobile-nav {
-  position: absolute;
-  right: 0;
-  top: -15px; }
-  #mobile-nav.hidden {
-    display: none; }
-  #mobile-nav #mobile-button.on span {
-    background: transparent; }
-    #mobile-nav #mobile-button.on span:before, #mobile-nav #mobile-button.on span:after {
-      top: 0; }
-    #mobile-nav #mobile-button.on span:before {
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg); }
-    #mobile-nav #mobile-button.on span:after {
-      -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
-
-#sidr-wrapper-0,
-#mobile-nav {
-  margin-right: 1em; }
-  #sidr-wrapper-0 #sidr-0-button,
-  #sidr-wrapper-0 #mobile-button,
-  #mobile-nav #sidr-0-button,
-  #mobile-nav #mobile-button {
-    display: block;
-    width: 25px;
-    height: 30px;
-    position: relative; }
-  #sidr-wrapper-0 span,
-  #mobile-nav span {
-    display: block;
-    position: relative;
-    background: #261D19;
-    height: 2px;
-    transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
-    width: 22px;
-    top: 15px; }
-    #sidr-wrapper-0 span:before, #sidr-wrapper-0 span:after,
-    #mobile-nav span:before,
-    #mobile-nav span:after {
-      content: "";
-      display: block;
-      background: #261D19;
-      height: 2px;
-      margin-top: 0;
-      position: absolute;
-      width: 22px;
-      transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63); }
-    #sidr-wrapper-0 span:before,
-    #mobile-nav span:before {
-      top: 7px; }
-    #sidr-wrapper-0 span:after,
-    #mobile-nav span:after {
-      top: -7px; }
 
 body.sidr-open #header .region-navigation {
   left: 1em; }
