@@ -35,4 +35,7 @@ function bear_coat_preprocess_html(&$vars) {
   elseif (version_compare(variable_get('jquery_update_jquery_version'), '1.7', '<')) :
     drupal_set_message(t('This theme requires at least jQuery 1.7. Please enable it by <a href="/admin/config/development/jquery_update/">clicking here</a>.'), 'error', FALSE);
   endif;
+  if (module_exists('responsive_menus')) :
+    $vars['classes_array'][] = "resp-nav";
+  endif;
 }

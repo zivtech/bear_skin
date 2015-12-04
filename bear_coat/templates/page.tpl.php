@@ -12,14 +12,6 @@
 
     <?php print render($page['header']);?>
 
-    <?php if (theme_get_setting('user_menu')): ?>
-      <nav id="bear-user-menu" role="navigation" class="nav-user">
-        <?php // provide userMenu label here for WAI accessibility ?>
-        <h3 class="u-hidden"
-            id="userMenuLabel"><?php print t('My Account Menu:')?></h3>
-        <?php print $user_menu;?>
-      </nav>
-    <?php endif;?>
     <?php if (theme_get_setting('login_popup')): ?>
       <?php print render($loginpopup); ?>
     <?php endif;?>

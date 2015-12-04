@@ -8,11 +8,10 @@
  *   A keyed array containing the current state of the form.
  */
 
-function bear_coat_check_library($library_name, $file_name) {
+function bear_coat_check_libraries($library_name, $file_name) {
   if (!module_exists('libraries')) {
     return FALSE;
   }
-
   $path = libraries_get_path($library_name);
   if ($path && is_file($path . '/' . $file_name)) {
     return TRUE;
@@ -69,8 +68,9 @@ function bear_coat_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#type' => 'checkbox',
     '#title' => t('Include Semantic UI'),
     '#description' => t('<b>Recommended</b>. This theme is setup to use <a href="http://semantic-ui.com/" target="_blank">Semantic</a> UI for many UI/UX elements.<br>
-    In order to enable, you must have <a href-"https://drupal.org/project/libraries" target="_blank">Libraries</a> installed as well as <a href="https://www.drupal.org/project/jquery_update/">jQuery Update</a> enabled and <a href="/admin/config/development/jquery_update/">set to use 1.7</a>.<br>
-You also must have the <a href="https://www.drupal.org/project/semantic_ui_api">Semantic UI</a> module and library installed. Run <pre>drush pm-enable semantic_ui_api</pre> to install both.<br><br>
+    In order to enable, you must have <a href-"https://drupal.org/project/libraries" target="_blank">Libraries</a> installed as well as <a href="https://www.drupal.org/project/jquery_update/">jQuery Update</a> enabled and <a href="/admin/config/development/jquery_update/">set to use 1.7</a>.<br><br>
+You also must have the <a href="https://www.drupal.org/project/semantic_ui_api">Semantic UI</a> module and library installed. Run <br>
+<pre>drush pm-enable semantic_ui_api</pre> to install both.<br><br>
 If you are installing the Semantic UI library manually, the path should be look like the following: <br><br>
 <img src="/'. drupal_get_path('theme', 'bear_coat') .'/images/sem-library.png" />'),
     '#default_value' =>theme_get_setting('semantic_ui'),
@@ -84,7 +84,7 @@ If you are installing the Semantic UI library manually, the path should be look 
     if (!module_exists('semantic_ui_api')) :
       drupal_set_message(t('You have enabled semantic UI but the <b>module</b> is missing. Proceed to the module\'s page <a href="https://www.drupal.org/project/semantic_ui_api" target="_blank">here</a>.'), 'error', FALSE);
     endif;
-    if (!(bear_coat_check_library('semantic_ui', 'semantic.min.css') && bear_coat_check_library('semantic_ui', 'semantic.min.js'))) :
+    if (!(bear_coat_check_libraries('semantic_ui', 'semantic.min.css') && bear_coat_check_libraries('semantic_ui', 'semantic.min.js'))) :
       drupal_set_message(t('You have enabled semantic UI but the <b>library</b> is missing. Proceed to the module\'s page <a href="https://www.drupal.org/project/semantic_ui_api" target="_blank">here</a>. '), 'error', FALSE);
     endif; 
   }

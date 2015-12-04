@@ -535,7 +535,7 @@ img {
       .region-navigation .block__system-main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:focus,
       .region-navigation .block__system-main-menu .main-menu--level-one li.parent ul.menu .main-menu__link.active {
         background: transparent;
-        color: #728EAD; }
+        text-decoration: underline; }
       .region-navigation nav.main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:after,
       .region-navigation .block__system-main-menu .main-menu--level-one li.parent ul.menu .main-menu__link:after {
         display: none; }
@@ -710,19 +710,6 @@ img {
     .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one .parent:hover .menu li a {
       text-transform: none;
       color: #261D19; }
-
-.nav-user__list {
-  right: 0;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
-  .nav-user__list li {
-    list-style-type: none;
-    font-size: 1.5rem; }
 
 body.sidr-open #header .region-navigation {
   left: 1em; }

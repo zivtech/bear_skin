@@ -74,7 +74,7 @@
        });
        return this;
      };
-     if (!$('body').hasClass('sidr')) {
+     if (!$('body').hasClass('resp-nav')) {
        var $nav = $('.main-menu, .block__system-main-menu', context);
        $nav.once().prepend('<div id="mobile-nav" class="hidden"><a id="mobile-button" href="javascript:;"><span></span></a></div>');
        var $mobileNav = $('#mobile-nav');

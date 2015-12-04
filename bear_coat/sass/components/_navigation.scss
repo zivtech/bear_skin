@@ -82,7 +82,7 @@
             &:focus,
             &.active {
               background: transparent;
-              color: $zivtech-blue;
+              text-decoration: underline;
             }
             &:after {
               display: none;
@@ -258,16 +258,6 @@
         }
       }
     }
-  }
-}
-.nav-user__list {
-  right: 0;
-  margin: 0;
-  padding: 0;
-  @include align(v);
-  li {
-    list-style-type: none;
-    font-size: 1.5rem;
   }
 }
 

@@ -1,5 +1,7 @@
 
-Bear Skin, a fully responsive Drupal starter theme packed with features and Sass goodies. 
+Bear Skin, a fully responsive Drupal starter theme packed with features and Sass goodies.
+Bear Skin is a pure starter theme (resets, preprocesses, grid, panels layouts, ruby gems) and contains a sub theme (Bear Coat),
+aimed at giving its base theme a better appearance out of the box (Menus, layouts, Semantic Ui integration, SIDR responsive menu, etc).
 
 Getting started
 -----------------
@@ -10,9 +12,6 @@ make sure your local paths are right: npm config set prefix /usr/local
 reinstall gulp: sudo npm install gulp -g
 
 After the process finishes, you'll be able to run all the gulp tasks (see below).
-
-Note: The theme relies on a contributed module for its responsive menu (as shown in the demo at bearskin.zivtech.com). If it is not installed already, download the module at https://www.drupal.org/project/responsive_menus and configure it to use sidr (you'll have to install the library as well), have .region-navigation .main-menu as the trigger, a <span> as markup and respond at 800px. 
-
 
 Gulp tasks
 ------------
