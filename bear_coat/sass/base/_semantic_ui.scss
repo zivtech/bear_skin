@@ -14,6 +14,9 @@ body.semantic-ui {
         font-size: 100%;
       }
     }
+    &.popup {
+      padding: 10px;
+    }
   }
   .ui.link.menu .item:hover,
   .ui.menu .dropdown.item:hover,

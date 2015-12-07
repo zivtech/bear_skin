@@ -41,6 +41,8 @@ body.semantic-ui .ui {
   font-family: "Helvetica Neue", Helvetica, sans-serif; }
   body.semantic-ui .ui .field > label {
     font-size: 100%; }
+  body.semantic-ui .ui.popup {
+    padding: 10px; }
 
 body.semantic-ui .ui.link.menu .item:hover,
 body.semantic-ui .ui.menu .dropdown.item:hover,
