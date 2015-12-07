@@ -197,6 +197,10 @@ body.semantic-ui .ui.search-form {
   .ui.cards > .card:last-child {
     margin-right: auto; }
 
+body:not(.semantic-ui) .wrapper .ui {
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+
 .table-ui-container {
   overflow-y: auto;
   _overflow: auto;

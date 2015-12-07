@@ -151,3 +151,11 @@ body.semantic-ui .ui.search-form {
     @include col(1/3, $gutter: 2, $cycle: 3);
   }
 }
+
+// fallback when semantic library present but not enabled
+body:not(.semantic-ui) {
+  .wrapper .ui {
+    font-size: 100%;
+    font-family: $body-font;
+  }
+}
