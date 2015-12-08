@@ -29,6 +29,6 @@
     "yargs": "^3.16.1"
   },
   "scripts": {
-    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+    "postinstall": "sh npm_clean.sh"
   }
 }
