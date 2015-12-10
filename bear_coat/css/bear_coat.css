@@ -306,8 +306,7 @@ img {
   height: 100%;
   border: 0; }
   #header .site-header__logo {
-    max-width: 120px;
-    transition: all .3s ease-in-out; }
+    max-width: 120px; }
     #header .site-header__logo img {
       display: block; }
   #header .region-header {
@@ -600,43 +599,14 @@ img {
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg); }
 
-#sidr-wrapper-0,
-#mobile-nav {
-  margin-right: 1em; }
-  #sidr-wrapper-0 #sidr-0-button,
-  #sidr-wrapper-0 #mobile-button,
-  #mobile-nav #sidr-0-button,
-  #mobile-nav #mobile-button {
-    display: block;
-    width: 25px;
-    height: 30px;
-    position: relative; }
-  #sidr-wrapper-0 span,
-  #mobile-nav span {
-    display: block;
-    position: relative;
-    background: #261D19;
-    height: 2px;
-    transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
-    width: 22px;
-    top: 15px; }
-    #sidr-wrapper-0 span:before, #sidr-wrapper-0 span:after,
-    #mobile-nav span:before,
-    #mobile-nav span:after {
-      content: "";
-      display: block;
-      background: #261D19;
-      height: 2px;
-      margin-top: 0;
-      position: absolute;
-      width: 22px;
-      transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63); }
-    #sidr-wrapper-0 span:before,
-    #mobile-nav span:before {
-      top: 7px; }
-    #sidr-wrapper-0 span:after,
-    #mobile-nav span:after {
-      top: -7px; }
+body.sidr-open #header #sidr-wrapper-0 {
+  margin-left: 0;
+  position: relative;
+  left: auto;
+  top: auto; }
+
+.sidr-animating .wrapper--header {
+  position: absolute; }
 
 .region-navigation .main-menu.mobile ul.main-menu--level-one,
 .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one {
@@ -716,37 +686,6 @@ img {
     .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one .parent:hover .menu li a {
       text-transform: none;
       color: #261D19; }
-
-body.sidr-open #header .region-navigation {
-  left: 1em; }
-
-body.sidr-open #header .site-header__logo {
-  opacity: 0; }
-
-body.sidr-open #header #sidr-wrapper-0 {
-  margin-left: 0; }
-  body.sidr-open #header #sidr-wrapper-0 span {
-    background: transparent; }
-    body.sidr-open #header #sidr-wrapper-0 span:before, body.sidr-open #header #sidr-wrapper-0 span:after {
-      top: 0; }
-    body.sidr-open #header #sidr-wrapper-0 span:before {
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg); }
-    body.sidr-open #header #sidr-wrapper-0 span:after {
-      -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
-
-.sidr-animating .wrapper--header {
-  position: absolute; }
-
-h3.sidr-class-u-hidden {
-  position: absolute !important;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px); }
 
 .pager-wrapper {
   position: relative;

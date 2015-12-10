@@ -152,44 +152,22 @@
     }
   }
 }
-// both for regular nav and SIDR
-#sidr-wrapper-0,
-#mobile-nav {
-  $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
-  margin-right: $layout-padding;
-  #sidr-0-button,
-  #mobile-button {
-    display: block;
-    width: 25px;
-    height: 30px;
+
+// Extra SIDR handling
+body.sidr-open {
+  #header #sidr-wrapper-0 {
+    margin-left: 0;
     position: relative;
-  }
-  span {
-    display: block;
-    position: relative;
-    background: $zivtech-dark;
-    height: 2px;
-    transition: $span-transition;
-    width: 22px;
-    top: 15px;
-    &:before, &:after {
-      content: "";
-      display: block;
-      background: $zivtech-dark;
-      height: 2px;
-      margin-top: 0;
-      position: absolute;
-      width: 22px;
-      transition: $span-transition;
-    }
-    &:before {
-      top: 7px;
-    }
-    &:after {
-      top: -7px;
-    }
+    left: auto;
+    top: auto;
   }
 }
+.sidr-animating {
+  .wrapper--header {
+    position: absolute;
+  }
+}
+
 .region-navigation .main-menu,
 .region-navigation .block__system-main-menu {
   &.mobile {
@@ -259,46 +237,6 @@
       }
     }
   }
-}
-
-//**************************************
-// Extra Support for SIDR responsive NAV
-//**************************************
-
-body.sidr-open {
-  #header {
-    .region-navigation {
-      left: $layout-padding;
-    }
-    .site-header__logo {
-      opacity: 0;
-    }
-  }
-  #header #sidr-wrapper-0 {
-    margin-left: 0;
-    span {
-      background: transparent;
-      &:before,
-      &:after {
-        top: 0;
-      }
-      &:before {
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-}
-
-.sidr-animating {
-  .wrapper--header {
-    position: absolute;
-  }
-}
-h3.sidr-class-u-hidden {
-  @include bear-element-invisible;
 }
 
 //******
