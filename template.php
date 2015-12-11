@@ -305,8 +305,8 @@ function bear_skin_links(&$variables) {
   if (!empty($variables['links']) && is_array($variables['links'])) {
     foreach ($variables['links'] as $key => &$link) {
       $link['attributes']['role'] = 'menuitem';
-      $link['attributes']['class'] = (!empty($link['attributes']['class'])) ? $link['attributes']['class'] : array();
-      $link['attributes']['class'][] = $menu_class . '__link';
+      $link['attributes']['class'] = (!empty($link['attributes']['class'])) ? (array) $link['attributes']['class'] : array();
+      $link['attributes']['class'] = $menu_class . '__link';
     }
   }
   return '<nav role="navigation" class="' . $menu_class . '">' . theme_links($variables) . '</nav>' . "\n";
