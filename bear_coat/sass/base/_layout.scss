@@ -5,3 +5,24 @@
 .field-collection-view {
   margin: 0;
 }
+
+// fixes for logged-in users and IPE
+.admin-menu {
+	.wrapper--header {
+		position: relative;
+	}
+	.wrapper--main {
+		padding-top: 0;
+	}
+}
+
+.panels-ipe {
+	ul.panels-ipe-linkbar {
+		padding: 0;
+		margin: 0;
+		li {
+			display: inline;
+			list-style-type: none;
+		}
+	}
+}

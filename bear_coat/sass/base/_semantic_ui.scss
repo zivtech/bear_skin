@@ -5,7 +5,7 @@
 $headers-font: 'Droid Sans', sans-serif;
 $body-font: 'Helvetica Neue', Helvetica,sans-serif;
 
-body.semantic-ui {
+body.semantic-ui:not(.panels-ipe) {
   .ui {
     font-size: 100%;
     font-family: $body-font;
@@ -38,8 +38,8 @@ body.semantic-ui {
   font-size: 90%;
 }
 
-body.semantic-ui .ui.form,
-body.semantic-ui .ui.search-form {
+body.semantic-ui:not(.panels-ipe) .ui.form,
+body.semantic-ui:not(.panels-ipe) .ui.search-form {
   font-family: $body-text-font-family;
   padding: 0;
   .form-wrapper:not(.form-actions) {
