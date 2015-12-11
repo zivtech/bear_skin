@@ -306,7 +306,7 @@ function bear_skin_links(&$variables) {
     foreach ($variables['links'] as $key => &$link) {
       $link['attributes']['role'] = 'menuitem';
       $link['attributes']['class'] = (!empty($link['attributes']['class'])) ? (array) $link['attributes']['class'] : array();
-      $link['attributes']['class'] = $menu_class . '__link';
+      $variables['classes_array'] = $menu_class . '__link';
     }
   }
   return '<nav role="navigation" class="' . $menu_class . '">' . theme_links($variables) . '</nav>' . "\n";
