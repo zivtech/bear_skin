@@ -42,9 +42,9 @@ function bear_coat_preprocess_input__submit(&$variables) {
 }
 
 function bear_coat_preprocess_page(&$variables) {
-  global $user;
+  $account = \Drupal::currentUser();
   if (theme_get_setting('login_popup')) {
-    if (!$user->uid) {
+    if ($account->isAnonymous()) {
       $variables['loginpopup'] = "<a class='loginpopup item floated in' href='/user/login'><i class='setting icon'></i> Login</a>";
     }
     else {
