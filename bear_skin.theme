@@ -15,6 +15,7 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   $variables['base_path'] = base_path();
   $variables['path_to_bear_skin'] = drupal_get_path('theme','bear_skin');
   $variables['skip_link_anchor'] = 'main-content';
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
 
   $variables['attributes']['class'][] = 'html';
   // Add a class that tells us whether we're on the front page or not.

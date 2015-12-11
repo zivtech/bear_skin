@@ -125,9 +125,6 @@ function bear_coat_preprocess_input(&$variables) {
     $variables['attributes']['class'][] = "ui";
   }
 
-  // Additional Twig variables.
-  $variables['icon'] = $element['#icon'];
-  $variables['element'] = $element;
 }
 
 /**
