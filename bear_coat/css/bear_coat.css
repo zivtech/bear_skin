@@ -677,8 +677,8 @@ body.sidr-open #header #sidr-bttn {
   float: none; }
   #block-bear-coat-main-menu.mobile ul.main-nav {
     position: absolute;
-    top: 25px;
-    right: 15px;
+    top: 35px;
+    right: 18px;
     background: white;
     border-radius: 4px;
     width: 200px !important;
@@ -709,7 +709,8 @@ body.sidr-open #header #sidr-bttn {
         display: none !important; }
       #block-bear-coat-main-menu.mobile ul.main-nav li a {
         background: transparent !important;
-        transition: none; }
+        transition: none;
+        color: #261D19; }
         #block-bear-coat-main-menu.mobile ul.main-nav li a:hover, #block-bear-coat-main-menu.mobile ul.main-nav li a:focus, #block-bear-coat-main-menu.mobile ul.main-nav li a.active {
           color: #728EAD !important;
           text-decoration: none; }

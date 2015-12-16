@@ -281,8 +281,8 @@ body.sidr-open {
     float: none;
     ul.main-nav {
       position: absolute;
-      top: 25px;
-      right: 15px;
+      top: 35px;
+      right: 18px;
       background: white;
       border-radius: 4px;
       width: 200px !important;
@@ -312,6 +312,7 @@ body.sidr-open {
         a {
           background: transparent !important;
           transition: none;
+          color: $zivtech-dark;
           &:hover,
           &:focus,
           &.active {
