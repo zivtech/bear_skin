@@ -55,7 +55,8 @@ input[type="password"] {
   color: #404040;
   box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(0, 0, 0, 0.7) 0 0px 0px;
   padding: 8px;
-  width: 280px; }
+  width: 280px;
+  max-width: 100%; }
   input[type="text"]:focus,
   input[type="password"]:focus {
     border-color: #66afe9;
@@ -329,6 +330,10 @@ h1, .h1 {
   font-size: 60px;
   font-size: 6rem; }
 
+h1.u-hidden {
+  position: relative !important;
+  margin: 0.4em 0; }
+
 h2, .h2 {
   font-size: 36px;
   font-size: 3.6rem; }
@@ -512,8 +517,16 @@ header nav {
     *display: inline;
     margin: 0 5px; }
 
+#main .site-sidebars {
+  padding-top: 30px; }
+  #main .site-sidebars .block h2 {
+    margin-top: 0; }
+
 .wrapper--header {
   background-color: #eaeaea; }
+
+.wrapper--breadcrumb {
+  border-top: 1px solid #ddd; }
 
 @media (min-width: 75em) {
   body.fluid-bear .site-header,

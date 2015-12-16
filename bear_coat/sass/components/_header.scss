@@ -17,6 +17,10 @@ $header-compressed-height: 55px;
       transition: width .3s ease-in-out;
     }
   }
+  .site-header__name {
+    transition: all .3s ease-in-out;
+    padding: 5px 10px;    
+  }
   #header {
     .block-search,
     .block-views {
@@ -35,7 +39,7 @@ $header-compressed-height: 55px;
   filter: url(../images/shadow.svg#drop-shadow);
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
   background: #f5f5f5;
-  z-index: 999;
+  z-index: 99;
   transition: all .3s ease-in-out;
   @include compressHeader;
   @include breakpoint($breakpoint-medium-width) {
@@ -49,6 +53,10 @@ $header-compressed-height: 55px;
         height: auto;
         width: 100%;
       }
+    }
+    .site-header__name {
+      float: left;
+      padding: 30px 10px;    
     }
     &.compressed {
       @include compressHeader;
@@ -130,6 +138,7 @@ $header-compressed-height: 55px;
     font-size: 12px;
     right: 5em;
     z-index: 1;
+    transition: all .3s ease-in-out;
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
     @include breakpoint($breakpoint-medium-width) {
       top: 0;

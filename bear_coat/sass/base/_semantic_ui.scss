@@ -5,7 +5,7 @@
 $headers-font: 'Droid Sans', sans-serif;
 $body-font: 'Helvetica Neue', Helvetica,sans-serif;
 
-body.semantic-ui { 
+body.semantic-ui:not(.panels-ipe) {
   .ui {
     font-size: 100%;
     font-family: $body-font;
@@ -14,24 +14,32 @@ body.semantic-ui {
         font-size: 100%;
       }
     }
+    &.popup {
+      padding: 10px;
+    }
   }
-  .ui.link.menu .item:hover, 
-  .ui.menu .dropdown.item:hover, 
-  .ui.menu .link.item:hover, 
+  .ui.link.menu .item:hover,
+  .ui.menu .dropdown.item:hover,
+  .ui.menu .link.item:hover,
   .ui.menu a.item:hover,
-  .ui.link.menu .item:focus, 
-  .ui.menu .dropdown.item:focus, 
-  .ui.menu .link.item:focus, 
+  .ui.link.menu .item:focus,
+  .ui.menu .dropdown.item:focus,
+  .ui.menu .link.item:focus,
   .ui.menu a.item:focus {
     color: $zivtech-blue;
+  }
+  #content {
+    .ui.fluid.input > input {
+      width: auto !important;
+    }
   }
 }
 .sidebar {
   font-size: 90%;
 }
 
-body.semantic-ui .ui.form,
-body.semantic-ui .ui.search-form {
+body.semantic-ui:not(.panels-ipe) .ui.form,
+body.semantic-ui:not(.panels-ipe) .ui.search-form {
   font-family: $body-text-font-family;
   padding: 0;
   .form-wrapper:not(.form-actions) {
@@ -61,7 +69,7 @@ body.semantic-ui .ui.search-form {
   input {
     font-family: $body-text-font-family;
   }
-  .form-item, 
+  .form-item,
   fieldset {
     position: relative;
     margin-bottom: 5px;
@@ -88,12 +96,12 @@ body.semantic-ui .ui.search-form {
     clear: both;
     margin: 10px 0 0 0;
     font-weight: normal;
-  } 
+  }
   .ui.dropdown {
     .menu {
-    > .item {
-      font-size: 14px;
-      padding-left: 1.1em !important;
+      > .item {
+        font-size: 14px;
+        padding-left: 1.1em !important;
       }
     }
     > input.search {
@@ -144,5 +152,13 @@ body.semantic-ui .ui.search-form {
   @include stack();
   @include breakpoint($breakpoint-medium-width) {
     @include col(1/3, $gutter: 2, $cycle: 3);
+  }
+}
+
+// fallback when semantic library present but not enabled
+body:not(.semantic-ui) {
+  .wrapper .ui {
+    font-size: 100%;
+    font-family: $body-font;
   }
 }

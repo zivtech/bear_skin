@@ -13,83 +13,114 @@
   z-index: 1;
   font-size: 100%; }
 
+body:not(.semantic-ui):not(.panels-ipe) form input.form-submit {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 5px 10px 6px 10px;
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  margin-top: 5px; }
+  body:not(.semantic-ui):not(.panels-ipe) form input.form-submit:hover, body:not(.semantic-ui):not(.panels-ipe) form input.form-submit:focus {
+    background: #666;
+    color: white;
+    border-color: #222; }
+
+body:not(.semantic-ui):not(.panels-ipe) form .description {
+  font-size: 80%;
+  color: #6C6C6C;
+  font-style: italic;
+  padding: 0 10px;
+  margin: 10px 0;
+  border-left: dotted 1px #aaa;
+  max-width: 600px; }
+
+body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
+  content: ">";
+  padding: 0 8px;
+  color: #261D19; }
+
 .wrapper {
   min-width: 320px; }
 
 .field-collection-view {
   margin: 0; }
 
-body.semantic-ui .ui {
+body.semantic-ui:not(.panels-ipe) .ui {
   font-size: 100%;
   font-family: "Helvetica Neue", Helvetica, sans-serif; }
-  body.semantic-ui .ui .field > label {
+  body.semantic-ui:not(.panels-ipe) .ui .field > label {
     font-size: 100%; }
+  body.semantic-ui:not(.panels-ipe) .ui.popup {
+    padding: 10px; }
 
-body.semantic-ui .ui.link.menu .item:hover,
-body.semantic-ui .ui.menu .dropdown.item:hover,
-body.semantic-ui .ui.menu .link.item:hover,
-body.semantic-ui .ui.menu a.item:hover,
-body.semantic-ui .ui.link.menu .item:focus,
-body.semantic-ui .ui.menu .dropdown.item:focus,
-body.semantic-ui .ui.menu .link.item:focus,
-body.semantic-ui .ui.menu a.item:focus {
+body.semantic-ui:not(.panels-ipe) .ui.link.menu .item:hover,
+body.semantic-ui:not(.panels-ipe) .ui.menu .dropdown.item:hover,
+body.semantic-ui:not(.panels-ipe) .ui.menu .link.item:hover,
+body.semantic-ui:not(.panels-ipe) .ui.menu a.item:hover,
+body.semantic-ui:not(.panels-ipe) .ui.link.menu .item:focus,
+body.semantic-ui:not(.panels-ipe) .ui.menu .dropdown.item:focus,
+body.semantic-ui:not(.panels-ipe) .ui.menu .link.item:focus,
+body.semantic-ui:not(.panels-ipe) .ui.menu a.item:focus {
   color: #728EAD; }
+
+body.semantic-ui:not(.panels-ipe) #content .ui.fluid.input > input {
+  width: auto !important; }
 
 .sidebar {
   font-size: 90%; }
 
-body.semantic-ui .ui.form,
-body.semantic-ui .ui.search-form {
+body.semantic-ui:not(.panels-ipe) .ui.form,
+body.semantic-ui:not(.panels-ipe) .ui.search-form {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   padding: 0; }
-  body.semantic-ui .ui.form .form-wrapper:not(.form-actions),
-  body.semantic-ui .ui.search-form .form-wrapper:not(.form-actions) {
+  body.semantic-ui:not(.panels-ipe) .ui.form .form-wrapper:not(.form-actions),
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .form-wrapper:not(.form-actions) {
     background: #f8f8f8;
     padding: 10px 20px;
     border-radius: 0.285714rem;
     margin: 5px 0;
     display: inline-block;
     width: 100%; }
-    body.semantic-ui .ui.form .form-wrapper:not(.form-actions) .form-wrapper,
-    body.semantic-ui .ui.search-form .form-wrapper:not(.form-actions) .form-wrapper {
+    body.semantic-ui:not(.panels-ipe) .ui.form .form-wrapper:not(.form-actions) .form-wrapper,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .form-wrapper:not(.form-actions) .form-wrapper {
       padding: 10px 0; }
-    body.semantic-ui .ui.form .form-wrapper:not(.form-actions) legend,
-    body.semantic-ui .ui.search-form .form-wrapper:not(.form-actions) legend {
+    body.semantic-ui:not(.panels-ipe) .ui.form .form-wrapper:not(.form-actions) legend,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .form-wrapper:not(.form-actions) legend {
       margin: 5px 0 20px 0;
       float: left;
       clear: both; }
-    body.semantic-ui .ui.form .form-wrapper:not(.form-actions) summary,
-    body.semantic-ui .ui.search-form .form-wrapper:not(.form-actions) summary {
+    body.semantic-ui:not(.panels-ipe) .ui.form .form-wrapper:not(.form-actions) summary,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .form-wrapper:not(.form-actions) summary {
       font-weight: bold;
       margin-bottom: 5px;
       cursor: pointer; }
-    body.semantic-ui .ui.form .form-wrapper:not(.form-actions) .fieldset-description,
-    body.semantic-ui .ui.search-form .form-wrapper:not(.form-actions) .fieldset-description {
+    body.semantic-ui:not(.panels-ipe) .ui.form .form-wrapper:not(.form-actions) .fieldset-description,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .form-wrapper:not(.form-actions) .fieldset-description {
       clear: both; }
-  body.semantic-ui .ui.form input,
-  body.semantic-ui .ui.search-form input {
+  body.semantic-ui:not(.panels-ipe) .ui.form input,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form input {
     font-family: "Helvetica Neue", Helvetica, sans-serif; }
-  body.semantic-ui .ui.form .form-item,
-  body.semantic-ui .ui.form fieldset,
-  body.semantic-ui .ui.search-form .form-item,
-  body.semantic-ui .ui.search-form fieldset {
+  body.semantic-ui:not(.panels-ipe) .ui.form .form-item,
+  body.semantic-ui:not(.panels-ipe) .ui.form fieldset,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .form-item,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form fieldset {
     position: relative;
     margin-bottom: 5px;
     display: block;
     clear: both; }
-    body.semantic-ui .ui.form .form-item input, body.semantic-ui .ui.form .form-item .form-select,
-    body.semantic-ui .ui.form fieldset input,
-    body.semantic-ui .ui.form fieldset .form-select,
-    body.semantic-ui .ui.search-form .form-item input,
-    body.semantic-ui .ui.search-form .form-item .form-select,
-    body.semantic-ui .ui.search-form fieldset input,
-    body.semantic-ui .ui.search-form fieldset .form-select {
+    body.semantic-ui:not(.panels-ipe) .ui.form .form-item input, body.semantic-ui:not(.panels-ipe) .ui.form .form-item .form-select,
+    body.semantic-ui:not(.panels-ipe) .ui.form fieldset input,
+    body.semantic-ui:not(.panels-ipe) .ui.form fieldset .form-select,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .form-item input,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .form-item .form-select,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form fieldset input,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form fieldset .form-select {
       max-width: 600px; }
-  body.semantic-ui .ui.form legend,
-  body.semantic-ui .ui.search-form legend {
+  body.semantic-ui:not(.panels-ipe) .ui.form legend,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form legend {
     margin-left: 0; }
-  body.semantic-ui .ui.form .description,
-  body.semantic-ui .ui.search-form .description {
+  body.semantic-ui:not(.panels-ipe) .ui.form .description,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .description {
     font-size: 80%;
     color: #6C6C6C;
     font-style: italic;
@@ -97,49 +128,49 @@ body.semantic-ui .ui.search-form {
     margin: 10px 0;
     border-left: dotted 1px #aaa;
     max-width: 600px; }
-  body.semantic-ui .ui.form label,
-  body.semantic-ui .ui.search-form label {
+  body.semantic-ui:not(.panels-ipe) .ui.form label,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form label {
     display: block;
     clear: both;
     margin: 10px 0 0 0;
     font-weight: normal; }
-  body.semantic-ui .ui.form .ui.dropdown .menu > .item,
-  body.semantic-ui .ui.search-form .ui.dropdown .menu > .item {
+  body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown .menu > .item,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown .menu > .item {
     font-size: 14px;
     padding-left: 1.1em !important; }
-  body.semantic-ui .ui.form .ui.dropdown > input.search,
-  body.semantic-ui .ui.search-form .ui.dropdown > input.search {
+  body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown > input.search,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown > input.search {
     z-index: 10; }
-  body.semantic-ui .ui.form.segment,
-  body.semantic-ui .ui.search-form.segment {
+  body.semantic-ui:not(.panels-ipe) .ui.form.segment,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form.segment {
     border: 0;
     margin: 0;
     padding: 20px; }
-  body.semantic-ui .ui.form .views-exposed-form,
-  body.semantic-ui .ui.search-form .views-exposed-form {
+  body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form {
     position: relative; }
-    body.semantic-ui .ui.form .views-exposed-form .views-exposed-widgets,
-    body.semantic-ui .ui.search-form .views-exposed-form .views-exposed-widgets {
+    body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form .views-exposed-widgets,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form .views-exposed-widgets {
       transition: opacity .2s ease-in-out; }
-    body.semantic-ui .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
-    body.semantic-ui .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
+    body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
       opacity: .2; }
-      body.semantic-ui .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
-      body.semantic-ui .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
+      body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
+      body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
         opacity: 0; }
-  body.semantic-ui .ui.form .hidden-submit,
-  body.semantic-ui .ui.search-form .hidden-submit {
+  body.semantic-ui:not(.panels-ipe) .ui.form .hidden-submit,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .hidden-submit {
     position: absolute;
     width: 100%;
     top: 0;
     float: none;
     margin: 0;
     display: block; }
-  body.semantic-ui .ui.form .ui.loading,
-  body.semantic-ui .ui.search-form .ui.loading {
+  body.semantic-ui:not(.panels-ipe) .ui.form .ui.loading,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.loading {
     top: -70px !important; }
-  body.semantic-ui .ui.form .ui.button,
-  body.semantic-ui .ui.search-form .ui.button {
+  body.semantic-ui:not(.panels-ipe) .ui.form .ui.button,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button {
     font-weight: normal;
     text-shadow: 1px 1px 0 white, 1px 1px 0 rgba(255, 255, 255, 0.9);
     opacity: 0.9;
@@ -176,6 +207,10 @@ body.semantic-ui .ui.search-form {
     margin-left: auto; }
   .ui.cards > .card:last-child {
     margin-right: auto; }
+
+body:not(.semantic-ui) .wrapper .ui {
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif; }
 
 @font-face {
   font-family: 'Icons';
@@ -219,8 +254,10 @@ img {
   max-width: 100%;
   height: 100%; }
 
+.wrapper--footer {
+  border: 0; }
+
 .site-footer {
-  border-top: 1px solid #dedede;
   background: #404040; }
 
 .site-footer {
@@ -253,7 +290,7 @@ img {
   filter: url(../images/shadow.svg#drop-shadow);
   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
   background: #f5f5f5;
-  z-index: 999;
+  z-index: 99;
   transition: all .3s ease-in-out;
   height: 55px;
   padding-top: 10px;
@@ -267,6 +304,9 @@ img {
     .wrapper--header .site-header__logo img {
       width: 40%;
       transition: width .3s ease-in-out; }
+  .wrapper--header .site-header__name {
+    transition: all .3s ease-in-out;
+    padding: 5px 10px; }
   .wrapper--header #header .block-search input.form-text,
   .wrapper--header #header .block-views input.form-text {
     padding: .4em 1em;
@@ -318,6 +358,7 @@ img {
     font-size: 12px;
     right: 5em;
     z-index: 1;
+    transition: all .3s ease-in-out;
     color: #261D19; }
     #header a.loginpopup:hover {
       color: #728EAD; }
@@ -664,6 +705,9 @@ nav.ui.breadcrumb {
   .wrapper--header .site-header__logo img{
     height: auto;
     width: 100%; }
+  .wrapper--header .site-header__name{
+    float: left;
+    padding: 30px 10px; }
   .wrapper--header.compressed{
     height: 55px;
     padding-top: 10px;
@@ -677,6 +721,9 @@ nav.ui.breadcrumb {
   .wrapper--header.compressed .site-header__logo img{
     width: 40%;
     transition: width .3s ease-in-out; }
+  .wrapper--header.compressed .site-header__name{
+    transition: all .3s ease-in-out;
+    padding: 5px 10px; }
   .wrapper--header.compressed #header .block-search input.form-text,
         .wrapper--header.compressed #header .block-views input.form-text{
     padding: .4em 1em;
