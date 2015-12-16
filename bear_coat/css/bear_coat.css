@@ -575,14 +575,17 @@ header nav {
   header nav .main-menu--level-three {
     top: -10px; }
 
-#sidr-bttn {
+#sidr-bttn,
+#mobile-nav {
   margin-left: 20px; }
-  #sidr-bttn #responsive-menu-button {
+  #sidr-bttn #responsive-menu-button,
+  #mobile-nav #responsive-menu-button {
     display: block;
     width: 25px;
     height: 30px;
     position: relative; }
-  #sidr-bttn span {
+  #sidr-bttn span,
+  #mobile-nav span {
     display: block;
     position: relative;
     background: #261D19;
@@ -590,7 +593,9 @@ header nav {
     transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
     width: 22px;
     top: 15px; }
-    #sidr-bttn span:before, #sidr-bttn span:after {
+    #sidr-bttn span:before, #sidr-bttn span:after,
+    #mobile-nav span:before,
+    #mobile-nav span:after {
       content: "";
       display: block;
       background: #261D19;
@@ -599,10 +604,50 @@ header nav {
       position: absolute;
       width: 22px;
       transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63); }
-    #sidr-bttn span:before {
+    #sidr-bttn span:before,
+    #mobile-nav span:before {
       top: 7px; }
-    #sidr-bttn span:after {
+    #sidr-bttn span:after,
+    #mobile-nav span:after {
       top: -7px; }
+
+.sidr-animating .wrapper--header {
+  position: absolute; }
+
+h2.sidr-class-visually-hidden {
+  position: absolute !important;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+#mobile-nav {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 40px;
+  height: 40px; }
+  #mobile-nav.hidden {
+    display: none; }
+  #mobile-nav #mobile-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 5px;
+    top: 2px; }
+    #mobile-nav #mobile-button.on span {
+      background: transparent; }
+      #mobile-nav #mobile-button.on span:before, #mobile-nav #mobile-button.on span:after {
+        top: 0; }
+      #mobile-nav #mobile-button.on span:before {
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      #mobile-nav #mobile-button.on span:after {
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
 
 body.sidr-open #header .responsive-nav {
   left: 20px; }
@@ -628,12 +673,71 @@ body.sidr-open #header #sidr-bttn {
 .sidr-animating .wrapper--header {
   position: absolute; }
 
-h2.sidr-class-visually-hidden {
-  position: absolute !important;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px); }
+#block-bear-coat-main-menu.mobile {
+  float: none; }
+  #block-bear-coat-main-menu.mobile ul.main-nav {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    background: white;
+    border-radius: 4px;
+    width: 200px !important;
+    padding: 10px !important;
+    box-shadow: 0 0 5px #999;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    position: absolute !important;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); }
+    #block-bear-coat-main-menu.mobile ul.main-nav:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #261D19;
+      position: absolute;
+      right: 7px;
+      top: -8px; }
+    #block-bear-coat-main-menu.mobile ul.main-nav li {
+      clear: both;
+      display: block;
+      padding: 0; }
+      #block-bear-coat-main-menu.mobile ul.main-nav li:after {
+        display: none !important; }
+      #block-bear-coat-main-menu.mobile ul.main-nav li a {
+        background: transparent !important;
+        transition: none; }
+        #block-bear-coat-main-menu.mobile ul.main-nav li a:hover, #block-bear-coat-main-menu.mobile ul.main-nav li a:focus, #block-bear-coat-main-menu.mobile ul.main-nav li a.active {
+          color: #728EAD !important;
+          text-decoration: none; }
+    #block-bear-coat-main-menu.mobile ul.main-nav.show {
+      position: static !important;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+      position: absolute !important;
+      opacity: 1;
+      overflow: visible; }
+    #block-bear-coat-main-menu.mobile ul.main-nav .parent:hover ul {
+      position: static !important;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+      position: relative;
+      border: 0;
+      top: 0;
+      opacity: 1;
+      min-width: auto;
+      padding: 0 0 0 25px;
+      background: transparent; }
+      #block-bear-coat-main-menu.mobile ul.main-nav .parent:hover ul li a {
+        text-transform: none;
+        color: #261D19; }
 
 .pager-wrapper {
   position: relative;

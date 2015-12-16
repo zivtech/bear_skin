@@ -160,7 +160,8 @@ header nav {
 // Support for SIDR responsive NAV
 //********************************
 
-#sidr-bttn {// this is what we use for our responsive menu
+#sidr-bttn,
+#mobile-nav {// this is what we use for our responsive menu
   $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
   margin-left: 20px;
   #responsive-menu-button {
@@ -195,6 +196,54 @@ header nav {
     }
   }
 }
+
+.sidr-animating {
+  .wrapper--header {
+    position: absolute;
+  }
+}
+h2.sidr-class-visually-hidden {
+  @include bear-element-invisible;
+}
+
+//***********************
+// Regular responsive NAV
+//***********************
+#mobile-nav {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  &.hidden {
+    display: none;
+  }
+  #mobile-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 5px;
+    top: 2px;
+    &.on {
+      span {
+        background: transparent;
+        &:before,
+        &:after {
+          top: 0;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+// Extra SIDR handling
 body.sidr-open {
   #header {
     .responsive-nav {
@@ -221,20 +270,80 @@ body.sidr-open {
     }
   }
 }
-
-#sidr-main {
-  li {
-
-  }
-}
-
 .sidr-animating {
   .wrapper--header {
     position: absolute;
   }
 }
-h2.sidr-class-visually-hidden {
-  @include bear-element-invisible;
+
+#block-bear-coat-main-menu {
+  &.mobile {
+    float: none;
+    ul.main-nav {
+      position: absolute;
+      top: 25px;
+      right: 15px;
+      background: white;
+      border-radius: 4px;
+      width: 200px !important;
+      padding: 10px !important;
+      box-shadow: 0 0 5px #999;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      @include bear-element-invisible;
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $zivtech-dark;
+        position: absolute;
+        right: 7px;
+        top: -8px;
+      }
+      li {
+        clear: both;
+        display: block;
+        padding: 0;
+        &:after {
+          display: none !important;
+        }
+        a {
+          background: transparent !important;
+          transition: none;
+          &:hover,
+          &:focus,
+          &.active {
+            color: $zivtech-blue !important;
+            text-decoration: none;
+          }
+        }
+      }
+      &.show {
+        @include bear-element-invisible-off;
+        position: absolute !important;
+        opacity: 1;
+        overflow: visible;
+      }
+      .parent:hover ul {
+        @include bear-element-invisible-off;
+        position: relative;
+        border: 0;
+        top: 0;
+        opacity: 1;
+        min-width: auto;
+        padding: 0 0 0 25px;
+        background: transparent;
+        li {
+          a {
+            text-transform: none;
+            color: $zivtech-dark;
+          }
+        }
+      }
+    }
+  }
 }
 
 //******
