@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--####################################################################
+	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
+
+	INSTEAD CHANGE:
+	source: sass/vendor/breakpoint/CONTRIBUTING.md
+	@page CONTRIBUTING
+######################################################################## -->
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>index  - CONTRIBUTING</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">index</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/design/">Design</a></li>
+						<li><a href="http://bitovi.com/development/">Development</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="index.html" data-search="index">
+				index
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="CHANGELOG.html" data-search="CHANGELOG">
+						CHANGELOG
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="page" href="CONTRIBUTING.html" data-search="CONTRIBUTING">
+						CONTRIBUTING
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="README.html" data-search="README">
+						README
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="my-styleguide.html" data-search="My Style Guide">
+						My Style Guide
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>CONTRIBUTING</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<h2>Contributing to Breakpoint</h2>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<p>We love contributors! Yes we do! If you would like to contribute to Breakpoint, please follow the following guidelines:</p>
+<ul>
+<li><strong>DO NOT ISSUE A PULL REQUEST WITHOUT RELATED ISSUE!!</strong> All pull requests must reference an issue in the issue queue and will only be looked at after discussion about that issue has taken place. Any pull request created that does not reference an issue will be closed.</li>
+<li>All pull requests will be tested against our standard test suite through Travis CI. If any of the tests fail, we will ask you to fix your code so that the tests no longer fail. Any new features that are added must have accompanying passing tests before being considered. During a pull request, we may ask for additional tests to be written in order to ensure that what is being changed does not have negative effects elsewhere.</li>
+<li>We are actively trying to stay away from Ruby functionality and am attempting to build this entirely with native Sass functionality. If you would like to add a feature that includes Ruby code, there needs to be a very very compelling case as to why.</li>
+<li>Each individual feature you would like to add, or bug you would like to squash, should be an individual pull request. Each pull request should be from an individual feature branch to either the latest stable or development branch. <strong>The current <em>stable</em> branch is 2.x.x. The current <em>development</em> branch is 2.x.x</strong>. Contributions that are not in the form of a pull request will not be considered. If your pull request does not apply cleanly we will ask you to fix that before we will look into pulling it in. We may ask you to update or make changes to the code you've submitted, please don't take this the wrong way. If a pull request smells (such as if a large amount of code is all within a single commit, or the coding standards aren't in line with core Breakpoint) we may ask you to rewrite your commit.</li>
+</ul>
+<h3>Testing</h3>
+<p>We have automated tests to ensure our build is working. To test, you must install <a href="http://bundler.io/">Bundler</a>, which will allow you to install all needed gem versions. Once you have Bundler up and running and have your dependencies installed, run <code>bundle exec rake</code> to run the tests. All tests are stored within the 'test' folder as .scss files. The test suite ensures that each test compiles, and does not change the expected behavior. If a test needs to be updated or changed, update the correct .scss file, and then run <code>bundle exec rake compile</code> to update all corrosponding css files.</p>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"CONTRIBUTING","src":"sass/vendor/breakpoint/CONTRIBUTING.md","description":"## Contributing to Breakpoint","parent":"index","glob":{"pattern":"sass/**/*.{scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/albanbailly/Documents/vagrant/eight/www/bear8/code/profiles/bear/themes/contrib/bear_skin"},"dest":"/Users/albanbailly/Documents/vagrant/eight/www/bear8/code/profiles/bear/themes/contrib/bear_skin/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

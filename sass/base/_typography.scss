@@ -1,3 +1,11 @@
+/**
+ *  @stylesheet _typography.scss Typography
+ *  @parent styleguide-baseline 0
+ *
+ *  Global style definitions for all typographic elements 
+ *  including headings, paragraphs, lists, and blockquotes.
+ */
+
 //
 // Reusable classes
 //
@@ -62,6 +70,13 @@ a {
   transition: color 0.25s ease;
   -webkit-tap-highlight-color: transparent;
 }
+
+/**
+ * @styles headings Headings
+ *
+ * H tags defining a typographical heirarchy
+ * @demo styleguide-templates/headers.html
+ */
 
 h1, .h1,
 h2, .h2,
