@@ -1,8 +1,0 @@
-{
-  "sites": {
-    "styles": {
-      "glob": "sass/!(vendor)/**/*.{scss,md}",
-      "dest": "styleguide"
-    }
-  }
-}

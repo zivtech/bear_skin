@@ -1,0 +1,173 @@
+/**
+ *  @stylesheet _variables.scss Colour Palette/Variables
+ *  @parent styleguide-design 0
+ *
+ *  Global style definitions for all variables elements 
+ *  including colors and breakpoints
+ */
+
+//
+// Zivtech theme variables
+//
+$zivtech-blue: #728EAD;
+$zivtech-light-blue: lighten($zivtech-blue, 10%);
+$zivtech-drenched-blue: saturate($zivtech-blue, 30%);
+$zivtech-green: #40C27A;
+$zivtech-yellow: #F9B634;
+$zivtech-off-black: #404040;
+$zivtech-dark: #261D19;
+$zivtech-pale: #eaeaea;
+$zivtech-white: white;
+$zivtech-brown-gray: #7C7775;
+
+//
+// Bearskin variables
+//
+//
+//
+// Bearskin theme colors
+// you can override these here, or just ignore them ...
+$bear-yellow: $zivtech-yellow;
+$bear-brown: #82705B;
+$bear-browner: #5F5555;
+$bear-greyer: #837B80;
+$bear-grey: lighten($bear-greyer, 40%);
+$bear-blue: $zivtech-blue;
+$bear-dark: #545452;
+$bear-lighten-dark: #6C6C6C;
+$bear-whitey: $zivtech-white;
+
+//
+//
+//
+// Default variables below
+// Feel free to change
+//
+//
+//
+
+
+//
+// GLOBALS
+//
+$color-primary: $zivtech-blue;
+$color-success: $zivtech-green;
+$color-info: #5bc0de;
+$color-warning: #f0ad4e;
+$color-error: #d9534f;
+$border-radius: 2px;
+
+
+//
+// ALERTS
+//
+$alert-padding: 0.7em 1.5em;
+$alert-border-radius: $border-radius;
+$alert-font-color: $bear-whitey;
+
+
+//
+// ANIMATIONS
+//
+
+
+//
+// BUTTONS
+//
+$button-padding: .8em 5em;
+$button-border-radius: $border-radius;
+$button-primary-color: $zivtech-green;
+$button-primary-font-color: $bear-whitey;
+$button-secondary-color: $zivtech-blue;
+$button-secondary-font-color: $bear-whitey;
+$button-highlight-color: $bear-yellow;
+$button-highlight-font-color: $bear-whitey;
+
+
+//
+// FORMS
+//
+$form-input-padding: 0.5em 0.75em;
+$form-input-font-color: $zivtech-off-black;
+$form-input-bg-color: $bear-whitey;
+$form-input-active-color: $color-primary;
+$form-input-border-color: lighten($zivtech-off-black, 50%);
+$form-input-container-margin: 1em 0;
+
+//
+// LAYOUT
+//
+$site-min-width: 25em;
+$site-max-width: 1200px / 16px * 1em;
+$content-max-width: 875px / 16px * 1em;
+$vertical-gutter: 30px / 16px * 1em;
+$header-padding: 25px 0;
+
+//
+// BREAKPOINTS
+//
+$breakpoint-min-width: min-width 0;
+$breakpoint-small-width: min-width 25em;
+$breakpoint-med-small-width: min-width 40.5em;
+$breakpoint-medium-width: min-width 50em;
+$breakpoint-large-width: min-width 62.5em;
+$breakpoint-to-max-width: min-width $site-max-width;
+$breakpoint-full-width: max-width $site-max-width;
+
+//
+// TABLES
+//
+$table-border: 1px solid $bear-grey;
+$table-border-radius: $border-radius;
+$table-header-vertical-align: bottom;
+$table-header-font-color: $zivtech-off-black;
+$table-header-font-weight: 600;
+$table-header-bg-color: $bear-greyer;
+$table-header-text-transform: none;
+$table-row-bg-color: $bear-whitey;
+$table-row-alt-bg-color: $bear-grey;
+$table-row-hover-color: $bear-grey;
+$table-row-transition: background .2s ease, border-color .2s ease, color .2s ease;
+$table-cell-vertical-align: middle;
+$table-cell-font-color: $zivtech-off-black;
+$table-cell-border: 1px solid $bear-grey;
+$table-cell-padding: .7em .8em;
+$table-cell-text-align: left; // LTR
+
+
+//
+// TABS
+//
+$tabs-container-margin: 1em 0 1.5em;
+$tabs-container-bg-color: transparent;
+$tabs-border-color: none;
+$tabs-height: 40px;
+$tabs-bg-color: transparent;
+$tabs-bg-color-hover: darken($tabs-bg-color, 5%);
+$tabs-border-radius: $border-radius;
+
+
+//
+// TYPOGRAPHY
+//
+// Bearskin uses rem units for fonts. Setting <html> font size ($bear-font-size) to 62.5% resets
+// the browser default font size to 10px, then everything in <body> uses rems (with pixel fallbacks).
+// As a result, with the exception of $bear-font-size, the other font sizes should be listed here
+// in pixel units.
+//
+//
+$bear-font-size: 62.5%;
+$bear-line-height: 1.5;
+$body-font-size: 16px;
+$base-font-size: $body-font-size;
+$h1-font-size: 60px;
+$h2-font-size: 36px;
+$h3-font-size: 1.3  * $body-font-size;
+$h4-font-size: 1.2  * $body-font-size;
+$h5-font-size: 0.83 * $body-font-size;
+$h6-font-size: 0.75 * $body-font-size;
+$header-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$body-text-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$base-font-color: $zivtech-off-black;
+$link-color: $zivtech-blue;
+$link-color-hover: darken($link-color, 10%);
