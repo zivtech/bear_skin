@@ -1,10 +1,3 @@
-// ********
-// Bear Coat Specific Styles
-// Delete, override or modify to change styles, 
-// or create a new sub theme based on this one 
-// if not choosing to theme straight from Bear Skin
-// ********
-
 //From bear skin
 @import "../../sass/variables";
 @import "../../sass/mixins";
@@ -12,6 +5,7 @@
 @import "../../sass/vendor";
 
 // from bear coat
+@import "base/_variables";
 @import "base/*";
 @import "components/*";
 

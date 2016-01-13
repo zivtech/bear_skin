@@ -1,0 +1,33 @@
+#kss-nav {
+	background-color: #555;
+	.logo {
+		margin: 2em;
+	}
+	ul {
+		a {
+			color: white;
+		}
+	}
+}
+
+.kss-mod-desc-group {
+	border-top: 1px solid #ddd;
+}
+
+.bg {
+	width: 75px;
+	height: 75px;
+}
+.kss-mod-desc {
+	font-family: "Courier", sans-serif;
+}
+.className {
+	color: white;
+	font-family: "Courier", sans-serif;
+	background: #555;
+	padding: 5px 10px;
+	border-radius: 3px;
+	font-size: 110%;
+	position: relative;
+	top: 4px;
+}

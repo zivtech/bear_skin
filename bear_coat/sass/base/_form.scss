@@ -1,3 +1,20 @@
+// Form Elements
+//
+// These are the primary colors for the site
+// 
+// Markup:
+// <a href="#" class="button {$modifiers}">Link Button</a>
+// <button class="button {$modifiers}">Button Element</button>
+// <input type="button" class="button {$modifiers}" value="input[type='button']"/>
+// 
+// .primary             - Indicate that the button is the primary feature of this form.
+// .remove              - Indicate that the button will remove a feature, or other negative connotations.
+// :hover               - Highlight the button when hovered.
+// : disabled            - Make the button change appearance to reflect it being disabled.
+// :active              - "Press" the button down when clicked.
+//
+// Styleguide 3.0
+
 //*******
 // Mixins
 //*******
@@ -79,7 +96,7 @@ body:not(.semantic-ui):not(.panels-ipe) {
     }
     .description {
       font-size: 80%;
-      color: $bear-lighten-dark;
+      color: $gray;
       font-style: italic;
       padding: 0 10px;
       margin: 10px 0;
@@ -92,7 +109,7 @@ body:not(.semantic-ui):not(.panels-ipe) {
       &:before {
         content: ">";
         padding: 0 8px;
-        color: $zivtech-dark;
+        color: $black;
       }
     }
   }
