@@ -281,6 +281,30 @@ img {
   max-width: 100%;
   height: 100%; }
 
+.tiny {
+  font-size: 10px;
+  font-size: 0.96rem; }
+
+.smaller {
+  font-size: 11px;
+  font-size: 1.12rem; }
+
+.small {
+  font-size: 14px;
+  font-size: 1.44rem; }
+
+.large {
+  font-size: 18px;
+  font-size: 1.76rem; }
+
+.larger {
+  font-size: 19px;
+  font-size: 1.92rem; }
+
+.largest {
+  font-size: 21px;
+  font-size: 2.08rem; }
+
 .bg {
   background-color: black; }
 

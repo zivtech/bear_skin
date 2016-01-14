@@ -1,19 +1,51 @@
+h1.kss-title {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: .67em;
+  color: #999; }
+
+h2.kss-title {
+  color: #999;
+  border-left: 2px dotted #aaa;
+  padding-left: .5em; }
+
+section {
+  transition: opacity .2s ease-in-out;
+  opacity: 1;
+  position: relative;
+  z-index: 1; }
+  section.hidden {
+    opacity: 0;
+    z-index: 0;
+    height: 0; }
+    section.hidden * {
+      display: none; }
+
 #kss-nav {
   background-color: #555; }
   #kss-nav .logo {
-    margin: 2em; }
+    padding: 1.5em 2em; }
   #kss-nav ul a {
     color: white; }
 
+.kss-markup {
+  padding: 0 1em;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  border-radius: 4px; }
+
 .kss-mod-desc-group {
   border-top: 1px solid #ddd; }
+
+tr.kss-mod-desc-group td {
+  padding: 30px 0; }
 
 .bg {
   width: 75px;
   height: 75px; }
 
 .kss-mod-desc {
-  font-family: "Courier", sans-serif; }
+  font-family: "Courier", sans-serif;
+  color: #999; }
 
 .className {
   color: white;

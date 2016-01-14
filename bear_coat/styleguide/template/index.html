@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>KSS: Living Styleguide</title>
+  <title>Styleguide - Zivtech</title>
   <meta name="description" content="">
   <meta name="generator" content="kss-node" />
 
@@ -15,6 +15,8 @@
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="../semantic_ui/dist/semantic.css">
+  <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="public/style.css">
   <link rel="stylesheet" href="custom/style.css">
 
@@ -28,7 +30,7 @@
       <nav><ul>
         <li><a href="index.html">Overview</a></li>
         {{#eachRoot}}
-          <li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+          <li><a href="section-{{reference}}.html">{{reference}}: {{header}}</a></li>
         {{/eachRoot}}
       </ul></nav>
     </aside>
@@ -49,10 +51,10 @@
         }}
         {{#eachSection rootNumber}}
           {{#whenDepth 1}}
-            <h1 class="kss-title"><span class="kss-ref">{{ reference }}.0</span> - {{ header }}</h1>
+            <h1 class="kss-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</h1>
           {{else}}
            <section class="kss-depth-{{ refDepth }}">
-            <h1 class="kss-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</h1>
+            <h2 class="kss-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</h1>
           {{/whenDepth}}
             {{#ifAny markup modifiers}}
                 <div class="kss-box">{{html description}}</div>
@@ -95,7 +97,8 @@
   <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="js/jquery-1.7.min.js"></script>
+  <script src="js/index.js"></script>
   <script>
     $(document).ready(function(){
       var sidebarAdjust = function() {

@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>KSS: Living Styleguide</title>
+  <title>Styleguide - Zivtech</title>
   <meta name="description" content="">
   <meta name="generator" content="kss-node" />
 
@@ -15,6 +15,8 @@
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="../semantic_ui/dist/semantic.css">
+  <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="public/style.css">
   <link rel="stylesheet" href="custom/style.css">
 
@@ -27,18 +29,19 @@
     <aside>
       <nav><ul>
         <li><a href="index.html">Overview</a></li>
-          <li><a href="section-1.html">1.0: Color Palette</a></li>
-          <li><a href="section-2.html">2.0: Typography</a></li>
-          <li><a href="section-3.html">3.0: Form Elements</a></li>
+          <li><a href="section-1.html">1: Color Palette</a></li>
+          <li><a href="section-2.html">2: Typography</a></li>
+          <li><a href="section-3.html">3: Form Elements</a></li>
       </ul></nav>
     </aside>
   </div>
   <div role="main" id="kss-main">
     <article id="kss-content">
 
-            <h1 class="kss-title"><span class="kss-ref">2.0</span> - Typography</h1>
-                <div class="kss-box"><h2>Headers</h2>
-</div>
+            <h1 class="kss-title"><span class="kss-ref">2</span> - Typography</h1>
+                      <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.1</span> - Headers</h1>
+                <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <!-- <tr class="kss-mod-desc-group">
                     <td class="kss-mod-desc"><p>Default styling</p></td>
@@ -59,7 +62,93 @@
 &lt;h4&gt;Header Four&lt;/h4&gt;
 &lt;h5&gt;Header Five&lt;/h5&gt;</pre>
                 </div>
-               </article>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.2</span> - Paragraphs</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p>Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;p&gt;Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/p&gt;
+&lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/p&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.3</span> - Generic Sizes</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p class="{$modifiers}">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>$black: #261D19;</p>
+</td>
+                    <td class="kss-mod-name"><p><span class="className">.tiny</span></p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p class="tiny">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>$black: #261D19;</p>
+</td>
+                    <td class="kss-mod-name"><p><span class="className">.smaller</span></p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p class="smaller">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>$black: #261D19;</p>
+</td>
+                    <td class="kss-mod-name"><p><span class="className">.small</span></p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p class="small">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>$black: #261D19;</p>
+</td>
+                    <td class="kss-mod-name"><p><span class="className">.large</span></p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p class="large">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>$black: #261D19;</p>
+</td>
+                    <td class="kss-mod-name"><p><span class="className">.larger</span></p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p class="larger">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>$black: #261D19;              </p>
+</td>
+                    <td class="kss-mod-name"><p><span class="className">.largest</span></p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p class="largest">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</div></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;p class=&quot;{$modifiers}&quot;&gt;Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/div&gt;</pre>
+                </div>
+          
+            </section>
+    </article>
   </div>
   <footer>
     
@@ -67,7 +156,8 @@
   <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="js/jquery-1.7.min.js"></script>
+  <script src="js/index.js"></script>
   <script>
     $(document).ready(function(){
       var sidebarAdjust = function() {

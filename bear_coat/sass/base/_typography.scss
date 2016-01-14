@@ -1,6 +1,8 @@
+// Typography
 //
+// Styleguide 2.0
+
 // Reusable classes
-//
 %no-margins {
   margin: 0;
 }
@@ -16,31 +18,7 @@
   }
 }
 
-//
-// Generic sizing classes
-//
-%tiny {
-  @include rem(font-size, 0.6 * $body-font-size);
-}
-%smaller {
-  @include rem(font-size, 0.7 * $body-font-size);
-}
-%small {
-  @include rem(font-size, 0.9 * $body-font-size);
-}
-%large {
-  @include rem(font-size, 1.1 * $body-font-size);
-}
-%larger {
-  @include rem(font-size, 1.2 * $body-font-size);
-}
-%largest {
-  @include rem(font-size, 1.3 * $body-font-size);
-}
-
-// Typography
-//
-// ## Headers
+// Headers
 // 
 // Markup:
 // <h1>Header One</h1>
@@ -49,7 +27,7 @@
 // <h4>Header Four</h4>
 // <h5>Header Five</h5>
 //
-// Styleguide 2.0
+// Styleguide 2.1
 
 @font-face {
   font-family: 'Icons';
@@ -96,4 +74,46 @@ h5, h5:first-child, h5:last-child {
 img {
   max-width: 100%;
   height: 100%;
+}
+
+// Paragraphs
+// 
+// Markup:
+// <p>Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+// <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+//
+// Styleguide 2.2
+
+
+// Generic Sizes
+// 
+// Markup:
+// <p class="{$modifiers}">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</div>
+//
+// .tiny        - $black: #261D19;
+// .smaller     - $black: #261D19;
+// .small       - $black: #261D19;
+// .large       - $black: #261D19;
+// .larger      - $black: #261D19;
+// .largest     - $black: #261D19;              
+//
+// Styleguide 2.3
+
+.tiny {
+  @include rem(font-size, 0.6 * $body-font-size);
+}
+.smaller {
+  @include rem(font-size, 0.7 * $body-font-size);
+}
+.small {
+  @include rem(font-size, 0.9 * $body-font-size);
+}
+.large {
+  @include rem(font-size, 1.1 * $body-font-size);
+}
+.larger {
+  @include rem(font-size, 1.2 * $body-font-size);
+}
+.largest {
+  @include rem(font-size, 1.3 * $body-font-size);
 }
