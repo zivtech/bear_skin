@@ -1,8 +1,27 @@
 
 $lighter: #999;
+$border: #ddd;
 
+#kss-main {
+	max-width: 100%;
+}
+.filterform {
+	position: absolute;
+	right: 0;
+	top: 36px;
+	input {
+		border: 2px solid $border;
+		width: 200px;
+		padding-right: 40px;
+	}
+}
+.search.icon {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+}
 h1.kss-title {
-	border-bottom: 2px solid #ddd;
+	border-bottom: 2px solid $border;
 	padding-bottom: .67em;
 	color: $lighter;
 }
@@ -31,8 +50,19 @@ section {
 		padding: 1.5em 2em;
 	}
 	ul {
-		a {
-			color: white;
+		li {
+			margin: 5px 0;
+			color: $lighter;
+			a {
+				color: white;
+				&:hover, 
+				&:focus {
+					text-decoration: underline;
+				}
+			}
+			&.active {
+				color: white;
+			}
 		}
 	}
 }
@@ -41,13 +71,14 @@ section {
 	border: 1px solid #ccc;
 	background: #f8f8f8;
 	border-radius: 4px;
+	margin-top: 30px;
 }
 .kss-mod-desc-group {
 	border-top: 1px solid #ddd;
 }
 tr.kss-mod-desc-group {
 	td {
-		padding: 30px 0;
+		padding: 20px 0 10px 0;
 	}
 }
 .bg {

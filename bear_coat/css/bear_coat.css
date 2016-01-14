@@ -1,6 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
 .bg {
-  background-color: black; }
+  background-color: white; }
 
 .black {
   background-color: #261D19; }
@@ -25,6 +25,9 @@
 
 .yellow {
   background-color: #F9B634; }
+
+button.ui.button {
+  font-weight: normal; }
 
 .vertical-tabs__panes {
   overflow: hidden; }
@@ -305,8 +308,20 @@ img {
   font-size: 21px;
   font-size: 2.08rem; }
 
+a {
+  color: #728EAD;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  -webkit-tap-highlight-color: transparent; }
+  a:hover {
+    color: #577495; }
+  a:active {
+    color: #728EAD; }
+  a:focus {
+    color: #728EAD; }
+
 .bg {
-  background-color: black; }
+  background-color: white; }
 
 .black {
   background-color: #261D19; }

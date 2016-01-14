@@ -1,3 +1,20 @@
+#kss-main {
+  max-width: 100%; }
+
+.filterform {
+  position: absolute;
+  right: 0;
+  top: 36px; }
+  .filterform input {
+    border: 2px solid #ddd;
+    width: 200px;
+    padding-right: 40px; }
+
+.search.icon {
+  position: absolute;
+  right: 10px;
+  top: 8px; }
+
 h1.kss-title {
   border-bottom: 2px solid #ddd;
   padding-bottom: .67em;
@@ -24,20 +41,28 @@ section {
   background-color: #555; }
   #kss-nav .logo {
     padding: 1.5em 2em; }
-  #kss-nav ul a {
-    color: white; }
+  #kss-nav ul li {
+    margin: 5px 0;
+    color: #999; }
+    #kss-nav ul li a {
+      color: white; }
+      #kss-nav ul li a:hover, #kss-nav ul li a:focus {
+        text-decoration: underline; }
+    #kss-nav ul li.active {
+      color: white; }
 
 .kss-markup {
   padding: 0 1em;
   border: 1px solid #ccc;
   background: #f8f8f8;
-  border-radius: 4px; }
+  border-radius: 4px;
+  margin-top: 30px; }
 
 .kss-mod-desc-group {
   border-top: 1px solid #ddd; }
 
 tr.kss-mod-desc-group td {
-  padding: 30px 0; }
+  padding: 20px 0 10px 0; }
 
 .bg {
   width: 75px;

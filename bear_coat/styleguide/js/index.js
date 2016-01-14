@@ -8,9 +8,10 @@
  
   function listFilter(header, list) {
 	var form = $("<form>").attr({"class":"filterform","action":"#"}),
-			input = $("<input>").attr({"class":"filterinput","type":"text"});
+			input = $("<input>").attr({"class":"filterinput","type":"text","placeholder":"Search this page"}),
+			icon = $('<i class="search icon"></i>');
 	
-	$(form).append(input).appendTo(header);
+	$(form).append(input).append(icon).prependTo(header);
  
 	$(input)
 	  .change( function () {
@@ -29,8 +30,14 @@
 		});
   }
 
+  var url = window.location.href;
+	$('nav a[href="'+ url +'"]').parent('li').addClass('active');
+	$('nav a').filter(function() {
+	    return this.href == url;
+	}).parent('li').addClass('active');
+
   $(function () {
-	listFilter($('header'), $('#kss-main'));
+		listFilter($('article'), $('#kss-main'));
   });
 
 }(jQuery));

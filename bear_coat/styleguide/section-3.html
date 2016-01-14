@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="custom/style.css">
 
 </head>
-<body><div id="kss-wrapper">
+<body class="semantic-ui"><div id="kss-wrapper">
   <div id="kss-nav">
     <header id="kss-header">
       <hgroup class="logo"><img src="./images/zivtech-logo.png" width="150px;" /><hgroup>
@@ -29,67 +29,37 @@
     <aside>
       <nav><ul>
         <li><a href="index.html">Overview</a></li>
-          <li><a href="section-1.html">1: Color Palette</a></li>
-          <li><a href="section-2.html">2: Typography</a></li>
-          <li><a href="section-3.html">3: Form Elements</a></li>
+          <li>1: <a href="section-1.html">Color Palette</a></li>
+          <li>2: <a href="section-2.html">Typography</a></li>
+          <li>3: <a href="section-3.html">Page Elements</a></li>
+          <li>4: <a href="section-4.html">Form Elements</a></li>
       </ul></nav>
     </aside>
   </div>
   <div role="main" id="kss-main">
     <article id="kss-content">
 
-            <h1 class="kss-title"><span class="kss-ref">3</span> - Form Elements</h1>
-                <div class="kss-box"><p>These are the primary colors for the site</p>
-</div>
+            <h1 class="kss-title"><span class="kss-ref">3</span> - Page Elements</h1>
+                  <p>The various elements found thorough the site</p>
+
+                      <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">3.1</span> - Buttons</h1>
+                <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <!-- <tr class="kss-mod-desc-group">
                     <td class="kss-mod-desc"><p>Default styling</p></td>
                     <td class="kss-mod-name"></td>
                   </tr> -->
                   <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button {$modifiers}">Link Button</a>
-<button class="button {$modifiers}">Button Element</button>
-<input type="button" class="button {$modifiers}" value="input[type='button']"/></td>
+                    <td colspan="2"><button class="ui button {$modifiers}">Button</button></td>
                   </tr>
                   <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Indicate that the button is the primary feature of this form.</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">.primary</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button primary">Link Button</a>
-<button class="button primary">Button Element</button>
-<input type="button" class="button primary" value="input[type='button']"/></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Indicate that the button will remove a feature, or other negative connotations.</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">.remove</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button remove">Link Button</a>
-<button class="button remove">Button Element</button>
-<input type="button" class="button remove" value="input[type='button']"/></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Highlight the button when hovered.</p>
+                    <td class="kss-mod-desc"><p>Highlight the button when hovered or focused</p>
 </td>
                     <td class="kss-mod-name"><p><span class="className">:hover</span></p></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button pseudo-class-hover">Link Button</a>
-<button class="button pseudo-class-hover">Button Element</button>
-<input type="button" class="button pseudo-class-hover" value="input[type='button']"/></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Make the button change appearance to reflect it being disabled.</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">: disabled</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button pseudo-class-">Link Button</a>
-<button class="button pseudo-class-">Button Element</button>
-<input type="button" class="button pseudo-class-" value="input[type='button']"/></td>
+                    <td colspan="2"><button class="ui button pseudo-class-hover">Button</button></td>
                   </tr>
                   <tr class="kss-mod-desc-group">
                     <td class="kss-mod-desc"><p>&quot;Press&quot; the button down when clicked.</p>
@@ -97,17 +67,15 @@
                     <td class="kss-mod-name"><p><span class="className">:active</span></p></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button pseudo-class-active">Link Button</a>
-<button class="button pseudo-class-active">Button Element</button>
-<input type="button" class="button pseudo-class-active" value="input[type='button']"/></td>
+                    <td colspan="2"><button class="ui button pseudo-class-active">Button</button></td>
                   </tr>
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
-&lt;button class=&quot;button {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
-&lt;input type=&quot;button&quot; class=&quot;button {$modifiers}&quot; value=&quot;input[type=&#x27;button&#x27;]&quot;/&gt;</pre>
+                  <pre class="prettyprint lang-html">&lt;button class=&quot;ui button {$modifiers}&quot;&gt;Button&lt;/button&gt;</pre>
                 </div>
-               </article>
+          
+            </section>
+    </article>
   </div>
   <footer>
     

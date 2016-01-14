@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="custom/style.css">
 
 </head>
-<body><div id="kss-wrapper">
+<body class="semantic-ui"><div id="kss-wrapper">
   <div id="kss-nav">
     <header id="kss-header">
       <hgroup class="logo"><img src="./images/zivtech-logo.png" width="150px;" /><hgroup>
@@ -30,7 +30,7 @@
       <nav><ul>
         <li><a href="index.html">Overview</a></li>
         {{#eachRoot}}
-          <li><a href="section-{{reference}}.html">{{reference}}: {{header}}</a></li>
+          <li>{{reference}}: <a href="section-{{reference}}.html">{{header}}</a></li>
         {{/eachRoot}}
       </ul></nav>
     </aside>

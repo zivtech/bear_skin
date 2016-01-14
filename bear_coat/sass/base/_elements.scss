@@ -1,0 +1,22 @@
+// Page Elements
+//
+// The various elements found thorough the site
+//
+// Styleguide 3.0
+
+// Buttons
+//
+//
+// Markup:
+// <button class="ui button {$modifiers}">Button</button>
+// 
+// :hover               - Highlight the button when hovered or focused
+// :active              - "Press" the button down when clicked.
+//
+// Styleguide 3.1
+
+button {
+	&.ui.button {
+		font-weight: normal;
+	}
+}
