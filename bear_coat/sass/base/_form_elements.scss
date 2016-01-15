@@ -1,0 +1,209 @@
+// Form Elements
+//
+// Styleguide 5.0
+
+//
+// Mixins
+//
+
+@mixin form-container($margin: $form-input-container-margin) {
+  @include cf;
+  margin: $margin;
+  width: 100%;
+  float: none;
+}
+
+@mixin form-element($padding: $form-input-padding, $color: $form-input-font-color, $bg-color: $form-input-bg-color, $border-color: $form-input-border-color) {
+  color: $color;
+  background-color: $bg-color;
+  padding: $padding;
+  border: $border-color 1px solid;
+  border-radius: $border-radius;
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+  &:focus {
+    border: 1px solid $form-input-active-color;
+  }
+  &.error {
+    border: 1px solid $color-error;
+  }
+}
+
+//
+// Vertical Tabs
+//
+.vertical-tabs__panes {
+  overflow: hidden;
+}
+
+//
+// Main Search Form
+//
+.search-block-form {
+  .ui.search .prompt {
+    border-radius: 500rem !important;
+    padding: 0.5em 1em;
+    font-size: 14px;
+  }
+}
+
+//
+// Support for compact forms
+//
+.compact-form-label {
+  top: 9px;
+  left: 17px;
+  z-index: 1;
+  font-size: 100%;
+}
+
+//
+// No Semantic Fallbacks
+//
+body:not(.semantic-ui):not(.panels-ipe) {
+  form {
+    input.form-submit {
+      background: #eee;
+      border: 1px solid #ccc;
+      padding: 5px 10px 6px 10px;
+      border-radius: 3px;
+      transition: all .2s ease-in-out;
+      margin-top: 5px;
+      &:hover, &:focus {
+        background: #666;
+        color: white;
+        border-color: #222;
+      }
+    }
+    .description {
+      font-size: 80%;
+      color: $gray;
+      font-style: italic;
+      padding: 0 10px;
+      margin: 10px 0;
+      border-left: dotted 1px #aaa;
+      max-width: 600px;
+    }
+  }
+  #breadcrumbs {
+    .chevron {
+      &:before {
+        content: ">";
+        padding: 0 8px;
+        color: $black;
+      }
+    }
+  }
+}
+
+// Form
+//
+// Markup:
+// <form class="ui form segment">
+//   <p>Simple form wrapper</p>
+// </form>
+//
+// Styleguide 5.1
+
+// Text input
+//
+// Markup:
+// <form class="ui form segment">
+//   <input type="text" name="first-name" placeholder="First Name">
+// </form>
+//
+// Styleguide 5.2
+
+input[type="text"] {
+  max-width: 30em;
+}
+
+// Text area
+//
+// Markup:
+// <form class="ui form segment">
+//   <label>Your Message:</label>
+//   <textarea></textarea>
+// </form>
+//
+// Styleguide 5.3
+
+label {
+  color: $grayer;
+}
+
+// Submit
+//
+// Markup:
+// <form class="ui form segment">
+//   <input class="ui button" type="submit" value="Send" />
+// </form>
+//
+// Styleguide 5.4
+
+// Select List
+//
+// Markup:
+// <form class="ui form segment">
+//   <select class="ui search dropdown" type="submit" value="Send">
+//      <option value="">Your answer</option>
+//      <option value="Yes">Yes</option>
+//      <option value="No">No</option>
+//   </select>
+// </form>
+//
+// Styleguide 5.5
+
+.ui.dropdown {
+  color: $off-black;
+  .text {
+    font-size: 14px;
+  }
+  .default.text {
+    color: $grayer;
+  }
+}
+
+// Checkboxes
+//
+// Markup:
+// <div class="ui checkbox">
+//   <input type="checkbox" name="example">
+//   <label>Dolor Ligula Quam Vestibulum</label>
+// </div>
+// <div class="ui checkbox">
+//   <input type="checkbox" name="example">
+//   <label>Cras Tortor Egestas Ridiculus</label>
+// </div>
+//
+// Styleguide 5.6
+
+// Radio List
+//
+// Markup:
+// <form class="ui form segment">
+//   <div class="ui radio checkbox">
+//     <input type="radio" name="radio" checked="checked">
+//     <label>Yes</label>
+//   </div>
+//   <div class="ui radio checkbox">
+//     <input type="radio" name="radio">
+//     <label>No</label>
+//   </div>
+// </form>
+//
+// Styleguide 5.7
+
+.ui.checkbox,
+.ui.radio.checkbox {
+  margin-right: 15px;
+  label {
+    padding-left: 1.5em;
+    color: $off-black;
+  }
+}
+
+

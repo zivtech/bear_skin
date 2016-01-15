@@ -39,9 +39,9 @@
   <div role="main" id="kss-main">
     <article id="kss-content">
 
-            <h1 class="kss-title"><span class="kss-ref">4</span> - UI Elements</h1>
+            <h1 class="kss-title"><span class="kss-ref">5</span> - Form Elements</h1>
                       <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">4.1</span> - Buttons</h1>
+            <h2 class="kss-title"><span class="kss-ref">5.1</span> - Form</h1>
                 <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <!-- <tr class="kss-mod-desc-group">
@@ -49,75 +49,145 @@
                     <td class="kss-mod-name"></td>
                   </tr> -->
                   <tr class="kss-mod-example">
-                    <td colspan="2"><button class="ui button {$modifiers}">Button</button></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>The active user selection</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">.active</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><button class="ui button active">Button</button></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>No interaction</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">.disabled</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><button class="ui button disabled">Button</button></td>
+                    <td colspan="2"><form class="ui form segment">
+  <p>Simple form wrapper</p>
+</form></td>
                   </tr>
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;button class=&quot;ui button {$modifiers}&quot;&gt;Button&lt;/button&gt;</pre>
+                  <pre class="prettyprint lang-html">&lt;form class=&quot;ui form segment&quot;&gt;
+  &lt;p&gt;Simple form wrapper&lt;/p&gt;
+&lt;/form&gt;</pre>
                 </div>
           
             </section>
            <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">4.2</span> - Icons</h1>
-                <div class="kss-box"><p>Full list of icons available on the <a href="http://semantic-ui.com/elements/icon.html" target="_blank">Semantic UI website</a></p>
+            <h2 class="kss-title"><span class="kss-ref">5.2</span> - Text input</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><form class="ui form segment">
+  <input type="text" name="first-name" placeholder="First Name">
+</form></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;form class=&quot;ui form segment&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;first-name&quot; placeholder=&quot;First Name&quot;&gt;
+&lt;/form&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">5.3</span> - Text area</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><form class="ui form segment">
+  <label>Your Message:</label>
+  <textarea></textarea>
+</form></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;form class=&quot;ui form segment&quot;&gt;
+  &lt;label&gt;Your Message:&lt;/label&gt;
+  &lt;textarea&gt;&lt;/textarea&gt;
+&lt;/form&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">5.4</span> - Submit</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><form class="ui form segment">
+  <input class="ui button" type="submit" value="Send" />
+</form></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;form class=&quot;ui form segment&quot;&gt;
+  &lt;input class=&quot;ui button&quot; type=&quot;submit&quot; value=&quot;Send&quot; /&gt;
+&lt;/form&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">5.5</span> - Select List</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><form class="ui form segment">
+  <select class="ui search dropdown" type="submit" value="Send">
+     <option value="">Your answer</option>
+     <option value="Yes">Yes</option>
+     <option value="No">No</option>
+  </select>
+</form></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;form class=&quot;ui form segment&quot;&gt;
+  &lt;select class=&quot;ui search dropdown&quot; type=&quot;submit&quot; value=&quot;Send&quot;&gt;
+     &lt;option value=&quot;&quot;&gt;Your answer&lt;/option&gt;
+     &lt;option value=&quot;Yes&quot;&gt;Yes&lt;/option&gt;
+     &lt;option value=&quot;No&quot;&gt;No&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">5.6</span> - Checkboxes</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="ui checkbox">
+  <input type="checkbox" name="example">
+  <label>Dolor Ligula Quam Vestibulum</label>
 </div>
-                <table class="kss-mod-list">
-                  <!-- <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Default styling</p></td>
-                    <td class="kss-mod-name"></td>
-                  </tr> -->
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><i class="search icon"></i>
-<i class="map icon"></i>
-<i class="cloud download icon"></i></td>
-                  </tr>
-                </table>
-                <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;i class=&quot;search icon&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;map icon&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cloud download icon&quot;&gt;&lt;/i&gt;</pre>
-                </div>
-          
-            </section>
-           <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">4.3</span> - Loader</h1>
-                <div class="kss-box"></div>
-                <table class="kss-mod-list">
-                  <!-- <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Default styling</p></td>
-                    <td class="kss-mod-name"></td>
-                  </tr> -->
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><div class="ui segment active inverted dimmer">
-  <div class="ui text loader">Loading</div>
+<div class="ui checkbox">
+  <input type="checkbox" name="example">
+  <label>Cras Tortor Egestas Ridiculus</label>
 </div></td>
                   </tr>
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;div class=&quot;ui segment active inverted dimmer&quot;&gt;
-  &lt;div class=&quot;ui text loader&quot;&gt;Loading&lt;/div&gt;
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;ui checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;example&quot;&gt;
+  &lt;label&gt;Dolor Ligula Quam Vestibulum&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;example&quot;&gt;
+  &lt;label&gt;Cras Tortor Egestas Ridiculus&lt;/label&gt;
 &lt;/div&gt;</pre>
                 </div>
           
             </section>
            <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">4.4</span> - Pager</h1>
+            <h2 class="kss-title"><span class="kss-ref">5.7</span> - Radio List</h1>
                 <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <!-- <tr class="kss-mod-desc-group">
@@ -125,75 +195,29 @@
                     <td class="kss-mod-name"></td>
                   </tr> -->
                   <tr class="kss-mod-example">
-                    <td colspan="2"><div role="navigation" class="ui pagination menu">
-  <a class="active item" title="Go to page 1" href="#">1</a>
-  <a class="item" title="Go to page 2" href="#">2</a>
-  <a class="icon next item" title="Go to next page" href="#">next ›</a>
-</div></td>
-                  </tr>
-                </table>
-                <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;div role=&quot;navigation&quot; class=&quot;ui pagination menu&quot;&gt;
-  &lt;a class=&quot;active item&quot; title=&quot;Go to page 1&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;
-  &lt;a class=&quot;item&quot; title=&quot;Go to page 2&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;
-  &lt;a class=&quot;icon next item&quot; title=&quot;Go to next page&quot; href=&quot;#&quot;&gt;next ›&lt;/a&gt;
-&lt;/div&gt;</pre>
-                </div>
-          
-            </section>
-           <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">4.5</span> - Tooltips</h1>
-                <div class="kss-box"></div>
-                <table class="kss-mod-list">
-                  <!-- <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Default styling</p></td>
-                    <td class="kss-mod-name"></td>
-                  </tr> -->
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><div class="ui icon button pop-up" data-content="Do Something" data-title="Title">
-  Button with tooltip
-</div></td>
-                  </tr>
-                </table>
-                <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;div class=&quot;ui icon button pop-up&quot; data-content=&quot;Do Something&quot; data-title=&quot;Title&quot;&gt;
-  Button with tooltip
-&lt;/div&gt;</pre>
-                </div>
-          
-            </section>
-           <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">4.6</span> - Modal window (overlay)</h1>
-                <div class="kss-box"></div>
-                <table class="kss-mod-list">
-                  <!-- <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Default styling</p></td>
-                    <td class="kss-mod-name"></td>
-                  </tr> -->
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><button class="ui button" id="md">Open modal</button>
-<div class="ui modal">
-<i class="close icon"></i>
-  <div class="header">Header</div>
-  <div class="content">
-		<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-		<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam.</p> 
-		<p>Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis.</p>
+                    <td colspan="2"><form class="ui form segment">
+  <div class="ui radio checkbox">
+    <input type="radio" name="radio" checked="checked">
+    <label>Yes</label>
   </div>
-</div></td>
+  <div class="ui radio checkbox">
+    <input type="radio" name="radio">
+    <label>No</label>
+  </div>
+</form></td>
                   </tr>
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;button class=&quot;ui button&quot; id=&quot;md&quot;&gt;Open modal&lt;/button&gt;
-&lt;div class=&quot;ui modal&quot;&gt;
-&lt;i class=&quot;close icon&quot;&gt;&lt;/i&gt;
-  &lt;div class=&quot;header&quot;&gt;Header&lt;/div&gt;
-  &lt;div class=&quot;content&quot;&gt;
-		&lt;p&gt;Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;
-		&lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam.&lt;/p&gt; 
-		&lt;p&gt;Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis.&lt;/p&gt;
+                  <pre class="prettyprint lang-html">&lt;form class=&quot;ui form segment&quot;&gt;
+  &lt;div class=&quot;ui radio checkbox&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;radio&quot; checked=&quot;checked&quot;&gt;
+    &lt;label&gt;Yes&lt;/label&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+  &lt;div class=&quot;ui radio checkbox&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+    &lt;label&gt;No&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
                 </div>
           
             </section>

@@ -1,0 +1,82 @@
+// UI Elements
+//
+// Styleguide 4.0
+
+// Buttons
+//
+//
+// Markup:
+// <button class="ui button {$modifiers}">Button</button>
+// 
+// .active              -  The active user selection
+// .disabled            -  No interaction
+//
+// Styleguide 4.1
+.ui.button {
+	font-weight: normal;
+}
+
+// Icons
+//
+// Full list of icons available on the <a href="http://semantic-ui.com/elements/icon.html" target="_blank">Semantic UI website</a>
+//
+// Markup:
+// <i class="search icon"></i>
+// <i class="map icon"></i>
+// <i class="cloud download icon"></i>
+//
+// Styleguide 4.2
+
+i.icon, i.icons {
+  font-size: 1.5em;
+}
+
+// Loader
+//
+// Markup:
+// <div class="ui segment active inverted dimmer">
+//   <div class="ui text loader">Loading</div>
+// </div>
+//
+// Styleguide 4.3
+
+// Pager
+//
+// Markup:
+// <div role="navigation" class="ui pagination menu">
+//   <a class="active item" title="Go to page 1" href="#">1</a>
+//   <a class="item" title="Go to page 2" href="#">2</a>
+//   <a class="icon next item" title="Go to next page" href="#">next ›</a>
+// </div>
+//
+// Styleguide 4.4
+
+// Tooltips
+//
+// Markup:
+// <div class="ui icon button pop-up" data-content="Do Something" data-title="Title">
+//   Button with tooltip
+// </div>
+//
+// Styleguide 4.5
+
+.ui.popup {
+	font-size: 90%;
+	color: $off-black;
+}
+
+// Modal window (overlay)
+//
+// Markup:
+// <button class="ui button" id="md">Open modal</button>
+// <div class="ui modal">
+// <i class="close icon"></i>
+//   <div class="header">Header</div>
+//   <div class="content">
+// 		<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+// 		<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam.</p> 
+// 		<p>Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis.</p>
+//   </div>
+// </div>
+//
+// Styleguide 4.6

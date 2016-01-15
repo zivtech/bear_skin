@@ -6,7 +6,7 @@
   background-color: #261D19; }
 
 .off-black {
-  background-color: #404040; }
+  background-color: #555; }
 
 .gray {
   background-color: #eaeaea; }
@@ -65,6 +65,27 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
   content: ">";
   padding: 0 8px;
   color: #261D19; }
+
+input[type="text"] {
+  max-width: 30em; }
+
+label {
+  color: #888; }
+
+.ui.dropdown {
+  color: #555; }
+  .ui.dropdown .text {
+    font-size: 14px; }
+  .ui.dropdown .default.text {
+    color: #888; }
+
+.ui.checkbox,
+.ui.radio.checkbox {
+  margin-right: 15px; }
+  .ui.checkbox label,
+  .ui.radio.checkbox label {
+    padding-left: 1.5em;
+    color: #555; }
 
 hr {
   display: block;
@@ -158,12 +179,6 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     margin: 10px 0;
     border-left: dotted 1px #aaa;
     max-width: 600px; }
-  body.semantic-ui:not(.panels-ipe) .ui.form label,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form label {
-    display: block;
-    clear: both;
-    margin: 10px 0 0 0;
-    font-weight: normal; }
   body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown .menu > .item,
   body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown .menu > .item {
     font-size: 14px;
@@ -326,6 +341,10 @@ a {
 i.icon, i.icons {
   font-size: 1.5em; }
 
+.ui.popup {
+  font-size: 90%;
+  color: #555; }
+
 .bg {
   background-color: white; }
 
@@ -333,7 +352,7 @@ i.icon, i.icons {
   background-color: #261D19; }
 
 .off-black {
-  background-color: #404040; }
+  background-color: #555; }
 
 .gray {
   background-color: #eaeaea; }
