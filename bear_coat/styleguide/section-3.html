@@ -13,12 +13,11 @@
   <meta name="viewport" content="width=device-width">
 
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="custom/style.css">
   <link rel="stylesheet" href="../semantic_ui/dist/semantic.css">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="public/style.css">
-  <link rel="stylesheet" href="custom/style.css">
 
 </head>
 <body class="semantic-ui"><div id="kss-wrapper">
@@ -31,19 +30,18 @@
         <li><a href="index.html">Overview</a></li>
           <li>1: <a href="section-1.html">Color Palette</a></li>
           <li>2: <a href="section-2.html">Typography</a></li>
-          <li>3: <a href="section-3.html">Page Elements</a></li>
-          <li>4: <a href="section-4.html">Form Elements</a></li>
+          <li>3: <a href="section-3.html">Layout Elements</a></li>
+          <li>4: <a href="section-4.html">UI Elements</a></li>
+          <li>5: <a href="section-5.html">Form Elements</a></li>
       </ul></nav>
     </aside>
   </div>
   <div role="main" id="kss-main">
     <article id="kss-content">
 
-            <h1 class="kss-title"><span class="kss-ref">3</span> - Page Elements</h1>
-                  <p>The various elements found thorough the site</p>
-
+            <h1 class="kss-title"><span class="kss-ref">3</span> - Layout Elements</h1>
                       <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">3.1</span> - Buttons</h1>
+            <h2 class="kss-title"><span class="kss-ref">3.2</span> - System Messages</h1>
                 <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <!-- <tr class="kss-mod-desc-group">
@@ -51,27 +49,46 @@
                     <td class="kss-mod-name"></td>
                   </tr> -->
                   <tr class="kss-mod-example">
-                    <td colspan="2"><button class="ui button {$modifiers}">Button</button></td>
+                    <td colspan="2"><div class="messages {$modifiers}">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></td>
                   </tr>
                   <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Highlight the button when hovered or focused</p>
+                    <td class="kss-mod-desc"><p>Signaling a sucesseful operation</p>
 </td>
-                    <td class="kss-mod-name"><p><span class="className">:hover</span></p></td>
+                    <td class="kss-mod-name"><p><span class="className">.messages--success</span></p></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><button class="ui button pseudo-class-hover">Button</button></td>
+                    <td colspan="2"><div class="messages messages--success">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></td>
                   </tr>
                   <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>&quot;Press&quot; the button down when clicked.</p>
+                    <td class="kss-mod-desc"><p>Signaling an error</p>
 </td>
-                    <td class="kss-mod-name"><p><span class="className">:active</span></p></td>
+                    <td class="kss-mod-name"><p><span class="className">.messages--error</span></p></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><button class="ui button pseudo-class-active">Button</button></td>
+                    <td colspan="2"><div class="messages messages--error">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></td>
                   </tr>
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;button class=&quot;ui button {$modifiers}&quot;&gt;Button&lt;/button&gt;</pre>
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;messages {$modifiers}&quot;&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/div&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">3.2</span> - Dividers</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><hr>
+<div class="ui divider"></div></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;hr&gt;
+&lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;</pre>
                 </div>
           
             </section>
@@ -85,6 +102,7 @@
   <script src="public/prettify.js"></script>
   <script src="js/jquery-1.7.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="../semantic_ui/dist/semantic.js"></script>
   <script>
     $(document).ready(function(){
       var sidebarAdjust = function() {
@@ -108,6 +126,5 @@
 
     });
   </script>
-
 </div></body>
 </html>

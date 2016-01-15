@@ -1,7 +1,31 @@
-.wrapper {
-  min-width: 320px;
-}
+// Layout Elements
+//
+// Styleguide 3.0
 
-.field-collection-view {
-  margin: 0;
+// System Messages
+//
+// Markup:
+// <div class="messages {$modifiers}">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+//
+// .messages--success    - Signaling a sucesseful operation
+// .messages--error      - Signaling an error
+//
+// Styleguide 3.2
+
+// Dividers
+//
+// Markup:
+// <hr>
+// <div class="ui divider"></div>
+//
+// Styleguide 3.2
+
+hr {
+	display: block;
+	height: 2px;
+	border: 0;
+	border-top: 1px solid darken($gray, 5%);
+	border-bottom: 1px solid $gray;
+	margin: 1em 0;
+	padding: 0;
 }

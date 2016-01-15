@@ -13,12 +13,11 @@
   <meta name="viewport" content="width=device-width">
 
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="custom/style.css">
   <link rel="stylesheet" href="../semantic_ui/dist/semantic.css">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="public/style.css">
-  <link rel="stylesheet" href="custom/style.css">
 
 </head>
 <body class="semantic-ui"><div id="kss-wrapper">
@@ -31,16 +30,52 @@
         <li><a href="index.html">Overview</a></li>
           <li>1: <a href="section-1.html">Color Palette</a></li>
           <li>2: <a href="section-2.html">Typography</a></li>
-          <li>3: <a href="section-3.html">Page Elements</a></li>
-          <li>4: <a href="section-4.html">Form Elements</a></li>
+          <li>3: <a href="section-3.html">Layout Elements</a></li>
+          <li>4: <a href="section-4.html">UI Elements</a></li>
+          <li>5: <a href="section-5.html">Form Elements</a></li>
       </ul></nav>
     </aside>
   </div>
   <div role="main" id="kss-main">
     <article id="kss-content">
 
-            <h1 class="kss-title"><span class="kss-ref">4</span> - Form Elements</h1>
-                <div class="kss-box"><p>These are the primary colors for the site</p>
+            <h1 class="kss-title"><span class="kss-ref">4</span> - UI Elements</h1>
+                      <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">4.1</span> - Buttons</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="ui button {$modifiers}">Button</button></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>The active user selection</p>
+</td>
+                    <td class="kss-mod-name"><p><span class="className">.active</span></p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="ui button active">Button</button></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>No interaction</p>
+</td>
+                    <td class="kss-mod-name"><p><span class="className">.disabled</span></p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><button class="ui button disabled">Button</button></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;button class=&quot;ui button {$modifiers}&quot;&gt;Button&lt;/button&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">4.2</span> - Icons</h1>
+                <div class="kss-box"><p>Full list of icons available on the <a href="http://semantic-ui.com/elements/icon.html" target="_blank">Semantic UI website</a></p>
 </div>
                 <table class="kss-mod-list">
                   <!-- <tr class="kss-mod-desc-group">
@@ -48,67 +83,86 @@
                     <td class="kss-mod-name"></td>
                   </tr> -->
                   <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button {$modifiers}">Link Button</a>
-<button class="button {$modifiers}">Button Element</button>
-<input type="button" class="button {$modifiers}" value="input[type='button']"/></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Indicate that the button is the primary feature of this form.</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">.primary</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button primary">Link Button</a>
-<button class="button primary">Button Element</button>
-<input type="button" class="button primary" value="input[type='button']"/></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Indicate that the button will remove a feature, or other negative connotations.</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">.remove</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button remove">Link Button</a>
-<button class="button remove">Button Element</button>
-<input type="button" class="button remove" value="input[type='button']"/></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Highlight the button when hovered.</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">:hover</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button pseudo-class-hover">Link Button</a>
-<button class="button pseudo-class-hover">Button Element</button>
-<input type="button" class="button pseudo-class-hover" value="input[type='button']"/></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Make the button change appearance to reflect it being disabled.</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">: disabled</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button pseudo-class-">Link Button</a>
-<button class="button pseudo-class-">Button Element</button>
-<input type="button" class="button pseudo-class-" value="input[type='button']"/></td>
-                  </tr>
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>&quot;Press&quot; the button down when clicked.</p>
-</td>
-                    <td class="kss-mod-name"><p><span class="className">:active</span></p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button pseudo-class-active">Link Button</a>
-<button class="button pseudo-class-active">Button Element</button>
-<input type="button" class="button pseudo-class-active" value="input[type='button']"/></td>
+                    <td colspan="2"><i class="search icon"></i>
+<i class="map icon"></i>
+<i class="cloud download icon"></i></td>
                   </tr>
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;Link Button&lt;/a&gt;
-&lt;button class=&quot;button {$modifiers}&quot;&gt;Button Element&lt;/button&gt;
-&lt;input type=&quot;button&quot; class=&quot;button {$modifiers}&quot; value=&quot;input[type=&#x27;button&#x27;]&quot;/&gt;</pre>
+                  <pre class="prettyprint lang-html">&lt;i class=&quot;search icon&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;map icon&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;cloud download icon&quot;&gt;&lt;/i&gt;</pre>
                 </div>
-               </article>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">4.3</span> - Loader</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="ui segment active inverted dimmer">
+  <div class="ui text loader">Loading</div>
+</div></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;ui segment active inverted dimmer&quot;&gt;
+  &lt;div class=&quot;ui text loader&quot;&gt;Loading&lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">4.4</span> - Pager</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div role="navigation" class="ui pagination menu">
+  <a class="active item" title="Go to page 1" href="#">1</a>
+  <a class="item" title="Go to page 2" href="#">2</a>
+  <a class="icon next item" title="Go to next page" href="#">next ›</a>
+</div></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div role=&quot;navigation&quot; class=&quot;ui pagination menu&quot;&gt;
+  &lt;a class=&quot;active item&quot; title=&quot;Go to page 1&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;
+  &lt;a class=&quot;item&quot; title=&quot;Go to page 2&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;
+  &lt;a class=&quot;icon next item&quot; title=&quot;Go to next page&quot; href=&quot;#&quot;&gt;next ›&lt;/a&gt;
+&lt;/div&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">4.5</span> - Tooltips</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="ui icon button" data-content="Do Something" data-title="Title">
+  Button with tooltip
+</div></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;ui icon button&quot; data-content=&quot;Do Something&quot; data-title=&quot;Title&quot;&gt;
+  Button with tooltip
+&lt;/div&gt;</pre>
+                </div>
+          
+            </section>
+    </article>
   </div>
   <footer>
     
@@ -118,6 +172,7 @@
   <script src="public/prettify.js"></script>
   <script src="js/jquery-1.7.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="../semantic_ui/dist/semantic.js"></script>
   <script>
     $(document).ready(function(){
       var sidebarAdjust = function() {
@@ -141,6 +196,5 @@
 
     });
   </script>
-
 </div></body>
 </html>

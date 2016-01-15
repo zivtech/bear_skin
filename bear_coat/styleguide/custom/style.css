@@ -10,10 +10,11 @@
     width: 200px;
     padding-right: 40px; }
 
-.search.icon {
+form .search.icon {
   position: absolute;
   right: 10px;
-  top: 8px; }
+  top: 8px;
+  font-size: 1em; }
 
 h1.kss-title {
   border-bottom: 2px solid #ddd;
@@ -51,12 +52,22 @@ section {
     #kss-nav ul li.active {
       color: white; }
 
+.pop-up i.icon {
+  font-size: 1em; }
+
+.segment.ui.dimmer {
+  height: 100px;
+  position: relative; }
+
+.kss-box {
+  margin-bottom: 20px; }
+
 .kss-markup {
   padding: 0 1em;
   border: 1px solid #ccc;
   background: #f8f8f8;
   border-radius: 4px;
-  margin-top: 30px; }
+  margin-top: 20px; }
 
 .kss-mod-desc-group {
   border-top: 1px solid #ddd; }

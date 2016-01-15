@@ -26,9 +26,6 @@
 .yellow {
   background-color: #F9B634; }
 
-button.ui.button {
-  font-weight: normal; }
-
 .vertical-tabs__panes {
   overflow: hidden; }
 
@@ -69,11 +66,14 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
   padding: 0 8px;
   color: #261D19; }
 
-.wrapper {
-  min-width: 320px; }
-
-.field-collection-view {
-  margin: 0; }
+hr {
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #eaeaea;
+  margin: 1em 0;
+  padding: 0; }
 
 body.semantic-ui:not(.panels-ipe) .ui {
   font-size: 100%;
@@ -319,6 +319,12 @@ a {
     color: #728EAD; }
   a:focus {
     color: #728EAD; }
+
+.ui.button {
+  font-weight: normal; }
+
+i.icon, i.icons {
+  font-size: 1.5em; }
 
 .bg {
   background-color: white; }
