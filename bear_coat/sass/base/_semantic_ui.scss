@@ -6,7 +6,7 @@ $headers-font: 'Droid Sans', sans-serif;
 $body-font: 'Helvetica Neue', Helvetica,sans-serif;
 
 body.semantic-ui:not(.panels-ipe) {
-  .ui {
+  .ui, .ui * {
     font-size: 100%;
     font-family: $body-font;
     .field {
@@ -26,7 +26,7 @@ body.semantic-ui:not(.panels-ipe) {
   .ui.menu .dropdown.item:focus,
   .ui.menu .link.item:focus,
   .ui.menu a.item:focus {
-    color: $zivtech-blue;
+    color: blue;
   }
   #content {
     .ui.fluid.input > input {
@@ -42,6 +42,7 @@ body.semantic-ui:not(.panels-ipe) .ui.form,
 body.semantic-ui:not(.panels-ipe) .ui.search-form {
   font-family: $body-text-font-family;
   padding: 0;
+  box-shadow: 0px 1px 2px 1px rgba(34, 36, 38, 0.15);
   .form-wrapper:not(.form-actions) {
     background: #f8f8f8;
     padding: 10px 20px;
@@ -87,15 +88,16 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     color: $bear-lighten-dark;
     font-style: italic;
     padding: 0 10px;
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
     border-left: dotted 1px #aaa;
     max-width: 600px;
   }
   label {
     display: block;
     clear: both;
-    margin: 10px 0 0 0;
+    margin: 10px 0 5px 0;
     font-weight: normal;
+    font-size: 90%;
   }
   .ui.dropdown {
     .menu {
@@ -141,6 +143,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     text-shadow: 1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgba(255,255,255, .9);
     opacity: 0.9;
     font-size: 15px;
+    margin-top: 10px;
   }
 }
 
@@ -148,7 +151,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   margin: 0;
 }
 .ui.cards > .card {
-  @include col();
+  box-shadow: 0 0 5px #bbb;
   @include stack();
   @include breakpoint($breakpoint-medium-width) {
     @include col(1/3, $gutter: 2, $cycle: 3);

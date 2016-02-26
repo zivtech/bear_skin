@@ -3,7 +3,7 @@
 }
 
 .site-footer {
-  background: $zivtech-off-black;
+  background: $off-black;
   color: #fff;
   .region-footer {
     padding-top: 30px;
@@ -24,7 +24,7 @@
     li {
       list-style-type: none;
       a {
-        @include link-colors($zivtech-white, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
+        @include link-colors(white, $hover: blue, $active: blue, $focus: blue);
       }
     }
   }

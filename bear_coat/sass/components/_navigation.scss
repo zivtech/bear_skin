@@ -1,4 +1,6 @@
 .region-navigation {
+  left: 160px;
+  transition: left .3s ease-in-out;
   nav.main-menu,
   .block__system-main-menu {
     outline: 0;
@@ -22,7 +24,7 @@
       &:hover,
       &:focus,
       &.active {
-        background: $zivtech-dark;
+        background: $black;
         color: white;
         text-decoration: none;
       }
@@ -35,16 +37,16 @@
             top: 60px;
             opacity: .9;
           }
-        } 
+        }
       }
       li.parent {
         &:after {
           content: "";
-          width: 0; 
-          height: 0; 
+          width: 0;
+          height: 0;
           border-left: 8px solid transparent;
           border-right: 8px solid transparent;
-          border-bottom: 8px solid $zivtech-dark;
+          border-bottom: 8px solid dark;
           position: absolute;
           left: 0;
           right: 0;
@@ -61,14 +63,14 @@
         }
         ul.menu {
           border-radius: 8px;
-          background: $zivtech-off-black;
+          background: $off-black;
           border: 0;
           li {
             margin-bottom: 8px;
             padding: 0 10px;
             display: block;
             a {
-              @include link-colors($zivtech-white, $hover: $zivtech-pale, $active: $zivtech-pale, $focus: $zivtech-pale);
+              @include link-colors(white, $hover: $pale, $active: $pale, $focus: $pale);
               padding: 5px 0;
             }
             &:last-child {
@@ -101,11 +103,11 @@
       li.parent > a:after,
       li.parent:hover > a:after {
         content: "";
-        height: 0; 
-        width: 0; 
+        height: 0;
+        width: 0;
         border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent; 
-        border-left: 5px solid $zivtech-white;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid white;
         @include align(v);
         right: -5px;
         bottom: 0;
@@ -121,6 +123,11 @@
     .main-menu--level-three {
       top: -10px;
     }
+  }
+}
+.compressed {
+  .region-navigation {
+    left: 90px;
   }
 }
 
@@ -189,7 +196,7 @@ body.sidr-open {
         height: 0;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
-        border-bottom: 8px solid $zivtech-dark;
+        border-bottom: 8px solid dark;
         position: absolute;
         right: 7px;
         top: -8px;
@@ -207,7 +214,7 @@ body.sidr-open {
           &:hover,
           &:focus,
           &.active {
-            color: $zivtech-blue !important;
+            color: blue !important;
             text-decoration: none;
           }
         }
@@ -231,7 +238,7 @@ body.sidr-open {
         li {
           a {
             text-transform: none;
-            color: $zivtech-dark;
+            color: $black;
           }
         }
       }
@@ -260,9 +267,13 @@ body.sidr-open {
 
 nav.ui.breadcrumb {
   padding: 20px 0;
-  color: rgba(0, 0, 0, 0.4);
+  color: $off-black;
+  .divider,
+  span {
+    color: $off-black;
+  }
   a {
-    @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-pale, $focus: $zivtech-pale);
+    @include link-colors($blue, $hover: $drenched-blue, $active: $pale, $focus: $pale);
   }
   i:last-child {
     display: none;

@@ -1,3 +1,4 @@
+// Configure your header height here depending on the logo size
 $header-height: 105px;
 $header-compressed-height: 55px;
 
@@ -129,7 +130,7 @@ $header-compressed-height: 55px;
     top: 8px;
     font-size: 12px;
     right: 5em;
-    @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
+    @include link-colors($black, $hover: $blue, $active: $blue, $focus: $blue);
     @include breakpoint($breakpoint-medium-width) {
       top: 0;
       right: 2em;
