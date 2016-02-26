@@ -19,7 +19,7 @@
 }
 
 // Headers
-// 
+//
 // Markup:
 // <h1>Header One</h1>
 // <h2>Header Two</h2>
@@ -28,17 +28,6 @@
 // <h5>Header Five</h5>
 //
 // Styleguide 2.1
-
-@font-face {
-  font-family: 'Icons';
-  src: url("../fonts/semantic/icons.eot");
-  src: url("../fonts/semantic/icons.eot?#iefix") format('embedded-opentype'), url("../fonts/semantic/icons.woff2") format('woff2'), url("../fonts/semantic/icons.woff") format('woff'), url("../fonts/semantic/icons.ttf") format('truetype'), url("../fonts/semantic/icons.svg#icons") format('svg');
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
-}
 
 $headers-font: 'Droid Sans', sans-serif;
 $body-font: 'Helvetica Neue', Helvetica,sans-serif;
@@ -77,7 +66,7 @@ img {
 }
 
 // Paragraphs
-// 
+//
 // Markup:
 // <p>Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 // <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
@@ -86,7 +75,7 @@ img {
 
 
 // Generic Sizes
-// 
+//
 // Markup:
 // <p class="{$modifiers}">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
 //
@@ -95,7 +84,7 @@ img {
 // .small       - $black: #261D19;
 // .large       - $black: #261D19;
 // .larger      - $black: #261D19;
-// .largest     - $black: #261D19;              
+// .largest     - $black: #261D19;
 //
 // Styleguide 2.3
 

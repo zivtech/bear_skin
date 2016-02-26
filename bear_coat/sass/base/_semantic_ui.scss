@@ -104,7 +104,8 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   &.segment {
     border: 0;
     margin: 0;
-    padding: 20px;
+    padding: 1em;
+    box-shadow: 0px 0px 1px 1px $gray;
   }
   .views-exposed-form {
     position: relative;

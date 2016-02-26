@@ -16,7 +16,7 @@
 
   //
   //Use the sample behavior pattern below
-
+  //
 
   Drupal.behaviors.bearCoat = {
    attach: function (context, settings) {

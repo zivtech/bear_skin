@@ -54,7 +54,7 @@ body:not(.semantic-ui):not(.panels-ipe) form input.form-submit {
 
 body:not(.semantic-ui):not(.panels-ipe) form .description {
   font-size: 80%;
-  color: #eaeaea;
+  color: #261D19;
   font-style: italic;
   padding: 0 10px;
   margin: 10px 0;
@@ -66,11 +66,46 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
   padding: 0 8px;
   color: #261D19; }
 
-input[type="text"] {
-  max-width: 30em; }
+.ui.form .labeled input {
+  max-width: 30em;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #555;
+  padding: 0.7em 0; }
+  .ui.form .labeled input:placeholder-shown::-webkit-input-placeholder {
+    position: absolute !important;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); }
+  .ui.form .labeled input:placeholder-shown::-moz-placeholder {
+    position: absolute !important;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); }
+  .ui.form .labeled input:placeholder-shown:-ms-input-placeholder {
+    position: absolute !important;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); }
+  .ui.form .labeled input:placeholder-shown::placeholder {
+    position: absolute !important;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); }
+
+.ui.form input.ui.button[type="submit"] {
+  margin-top: 0.5em; }
 
 label {
-  color: #888; }
+  color: #555;
+  padding: 5px 0;
+  display: block;
+  font-size: 90%; }
 
 .ui.dropdown {
   color: #555; }
@@ -190,7 +225,8 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   body.semantic-ui:not(.panels-ipe) .ui.search-form.segment {
     border: 0;
     margin: 0;
-    padding: 20px; }
+    padding: 1em;
+    box-shadow: 0px 0px 1px 1px #eaeaea; }
   body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form,
   body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form {
     position: relative; }
@@ -256,16 +292,6 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
 body:not(.semantic-ui) .wrapper .ui {
   font-size: 100%;
   font-family: "Helvetica Neue", Helvetica, sans-serif; }
-
-@font-face {
-  font-family: 'Icons';
-  src: url("../fonts/semantic/icons.eot");
-  src: url("../fonts/semantic/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/semantic/icons.woff2") format("woff2"), url("../fonts/semantic/icons.woff") format("woff"), url("../fonts/semantic/icons.ttf") format("truetype"), url("../fonts/semantic/icons.svg#icons") format("svg");
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Sans", sans-serif;
@@ -488,91 +514,12 @@ i.icon, i.icons {
 .wrapper--main {
   padding-top: 55px; }
 
-/*
-* CSS Styles that are needed by jScrollPane for it to operate correctly.
-*
-* Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
-* may not operate correctly without them.
-*/
-.jspContainer {
-  overflow: hidden;
-  position: relative; }
-
-.jspPane {
-  position: absolute; }
-
-.jspVerticalBar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 16px;
-  height: 100%;
-  background: red; }
-
-.jspHorizontalBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 16px;
-  background: transparent; }
-
-.jspCap {
-  display: none; }
-
-.jspHorizontalBar .jspCap {
-  float: left; }
-
-.jspTrack {
-  background: #ddd;
-  position: relative;
-  border-radius: 10px;
-  padding: 4px 0; }
-
-.jspDrag {
-  background: #666;
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  border-radius: 10px; }
-
-.jspHorizontalBar .jspTrack,
-.jspHorizontalBar .jspDrag {
-  float: left;
-  height: 100%; }
-
-.jspArrow {
-  background: #50506d;
-  text-indent: -20000px;
-  display: block;
-  cursor: pointer;
-  padding: 0;
-  margin: 0; }
-
-.jspArrow.jspDisabled {
-  cursor: default;
-  background: #80808d; }
-
-.jspVerticalBar .jspArrow {
-  height: 16px; }
-
-.jspHorizontalBar .jspArrow {
-  width: 16px;
-  float: left;
-  height: 100%; }
-
-.jspVerticalBar .jspArrow:focus {
-  outline: none; }
-
-.jspCorner {
-  background: #eeeef4;
-  float: left;
-  height: 100%; }
-
-/* Yuk! CSS Hack for IE6 3 pixel bug :( */
-* html .jspCorner {
-  margin: 0 -3px 0 0; }
+figure {
+  margin: 1em 0; }
+  figure figcaption {
+    padding: .5em 0;
+    font-size: 90%;
+    font-style: italic; }
 
 body.has-sidr header nav {
   position: absolute !important;

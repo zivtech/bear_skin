@@ -14,6 +14,7 @@
     "browser-sync": "^2.8.2",
     "css-mqpacker": "^3.1.0",
     "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
     "gulp-css-globbing": "^0.1.8",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^2.3.0",

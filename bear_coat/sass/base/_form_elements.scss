@@ -80,7 +80,7 @@ body:not(.semantic-ui):not(.panels-ipe) {
     }
     .description {
       font-size: 80%;
-      color: $gray;
+      color: $black;
       font-style: italic;
       padding: 0 10px;
       margin: 10px 0;
@@ -117,8 +117,25 @@ body:not(.semantic-ui):not(.panels-ipe) {
 //
 // Styleguide 5.2
 
-input[type="text"] {
-  max-width: 30em;
+.ui.form {
+  .labeled {
+    input {
+      max-width: 30em;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid $off-black;
+      padding: 0.7em 0;
+      &:placeholder-shown {
+        &::placeholder {
+          @include element-invisible;
+        }
+      }
+    }
+  }
+  input.ui.button[type="submit"] {
+    margin-top: 0.5em;
+  }
 }
 
 // Text area
@@ -132,7 +149,10 @@ input[type="text"] {
 // Styleguide 5.3
 
 label {
-  color: $grayer;
+  color: $off-black;
+  padding: 5px 0;
+  display: block;
+  font-size: 90%;
 }
 
 // Submit
@@ -205,5 +225,3 @@ label {
     color: $off-black;
   }
 }
-
-

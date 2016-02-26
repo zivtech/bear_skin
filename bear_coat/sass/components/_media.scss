@@ -1,0 +1,21 @@
+// Media
+//
+// Styleguide 6.0
+
+// Figure
+//
+// The WYSIWYG will wrap images in a ```<figure>``` tag
+//
+// Markup:
+// <figure><img src="../../images/placeholder.png"></figure>
+//
+// Styleguide 4.1
+
+figure {
+  margin: 1em 0;
+  figcaption {
+    padding: .5em 0;
+    font-size: 90%;
+    font-style: italic;
+  }
+}
