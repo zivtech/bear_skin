@@ -66,43 +66,80 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
   padding: 0 8px;
   color: #261D19; }
 
-.ui.form .labeled input {
-  max-width: 30em;
-  border-radius: 0;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #555;
-  padding: 0.7em 0; }
-  .ui.form .labeled input:placeholder-shown::-webkit-input-placeholder {
-    position: absolute !important;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px); }
-  .ui.form .labeled input:placeholder-shown::-moz-placeholder {
-    position: absolute !important;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px); }
-  .ui.form .labeled input:placeholder-shown:-ms-input-placeholder {
-    position: absolute !important;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px); }
-  .ui.form .labeled input:placeholder-shown::placeholder {
-    position: absolute !important;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px); }
+.ui.form .form-item.labeled {
+  padding-top: 1.2em;
+  margin-bottom: 1em !important; }
+  .ui.form .form-item.labeled:first-child {
+    margin-top: -1.2em; }
+  .ui.form .form-item.labeled label {
+    position: absolute;
+    top: 2.3em;
+    padding: 0;
+    transition: all .2s ease-in-out;
+    cursor: text;
+    color: gray; }
+    .ui.form .form-item.labeled label.active {
+      top: 2px;
+      font-size: 85%;
+      color: #728EAD; }
+  .ui.form .form-item.labeled input {
+    max-width: 30em;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #888;
+    padding: .7em  0;
+    margin-bottom: .3em; }
+    .ui.form .form-item.labeled input:placeholder-shown::-webkit-input-placeholder {
+      position: absolute !important;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px); }
+    .ui.form .form-item.labeled input:placeholder-shown::-moz-placeholder {
+      position: absolute !important;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px); }
+    .ui.form .form-item.labeled input:placeholder-shown:-ms-input-placeholder {
+      position: absolute !important;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px); }
+    .ui.form .form-item.labeled input:placeholder-shown::placeholder {
+      position: absolute !important;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px); }
+    .ui.form .form-item.labeled input:focus {
+      background: transparent; }
+  .ui.form .form-item.labeled .mt {
+    width: 100%;
+    position: relative;
+    max-width: 30em; }
+    .ui.form .form-item.labeled .mt:before, .ui.form .form-item.labeled .mt:after {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 5px;
+      position: absolute;
+      background: #728EAD;
+      transition: 0.2s all ease-in-out; }
+    .ui.form .form-item.labeled .mt:before {
+      left: 50%; }
+    .ui.form .form-item.labeled .mt:after {
+      right: 50%; }
+    .ui.form .form-item.labeled .mt.focus:before, .ui.form .form-item.labeled .mt.focus:after {
+      width: 50%; }
 
 .ui.form input.ui.button[type="submit"] {
   margin-top: 0.5em; }
 
 label {
-  color: #555;
+  color: #888;
   padding: 5px 0;
   display: block;
   font-size: 90%; }
@@ -161,8 +198,6 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   padding: 0; }
   body.semantic-ui:not(.panels-ipe) .ui.form .form-wrapper:not(.form-actions),
   body.semantic-ui:not(.panels-ipe) .ui.search-form .form-wrapper:not(.form-actions) {
-    background: #f8f8f8;
-    padding: 10px 20px;
     border-radius: 0.285714rem;
     margin: 5px 0;
     display: inline-block;
@@ -201,7 +236,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     body.semantic-ui:not(.panels-ipe) .ui.search-form .form-item .form-select,
     body.semantic-ui:not(.panels-ipe) .ui.search-form fieldset input,
     body.semantic-ui:not(.panels-ipe) .ui.search-form fieldset .form-select {
-      max-width: 600px; }
+      max-width: 30em; }
   body.semantic-ui:not(.panels-ipe) .ui.form legend,
   body.semantic-ui:not(.panels-ipe) .ui.search-form legend {
     margin-left: 0; }
@@ -213,7 +248,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     padding: 0 10px;
     margin: 10px 0;
     border-left: dotted 1px #aaa;
-    max-width: 600px; }
+    max-width: 38em; }
   body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown .menu > .item,
   body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown .menu > .item {
     font-size: 14px;
@@ -225,8 +260,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   body.semantic-ui:not(.panels-ipe) .ui.search-form.segment {
     border: 0;
     margin: 0;
-    padding: 1em;
-    box-shadow: 0px 0px 1px 1px #eaeaea; }
+    box-shadow: none; }
   body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form,
   body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form {
     position: relative; }

@@ -48,6 +48,26 @@
             .removeClass('focus');
         });
 
+      var $textInput = $('.form-item.labeled input', context);
+      $textInput
+        .on('focus', function(){
+         $(this)
+           .siblings('label, .mt')
+           .addClass('focus active');
+         })
+        .on('blur', function(){
+          if(!$(this).val()) {
+            $(this)
+              .siblings('label, .mt')
+              .removeClass('focus active');
+            }
+          else {
+            $(this)
+              .siblings('label, .mt')
+              .removeClass('focus');
+            }
+        });
+
       // build a simple responsive nan if SIDR not enabled
       // Comment out also if using any other responsive nav plugin
       $.fn.clickToggle = function(func1, func2) {

@@ -118,17 +118,64 @@ body:not(.semantic-ui):not(.panels-ipe) {
 // Styleguide 5.2
 
 .ui.form {
-  .labeled {
+  .form-item.labeled {
+    padding-top: 1.2em;
+    margin-bottom: 1em !important;
+    &:first-child {
+      margin-top: -1.2em;
+    }
+    label {
+      position: absolute;
+      top: 2.3em;
+      padding: 0;
+      transition: all .2s ease-in-out;
+      cursor: text;
+      color: gray;
+      &.active {
+        top: 2px;
+        font-size: 85%;
+        color: $link-color;
+      }
+    }
     input {
       max-width: 30em;
       border-radius: 0;
       background: transparent;
       border: 0;
-      border-bottom: 1px solid $off-black;
-      padding: 0.7em 0;
+      border-bottom: 1px solid $grayer;
+      padding: .7em  0;
+      margin-bottom: .3em;
       &:placeholder-shown {
         &::placeholder {
           @include element-invisible;
+        }
+      }
+      &:focus {
+        background: transparent;
+      }
+    }
+    .mt {
+      width: 100%;
+      position: relative;
+      max-width: 30em;
+      &:before, &:after 	{
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 5px;
+        position: absolute;
+        background: $link-color;
+        transition: 0.2s all ease-in-out;
+      }
+      &:before {
+        left: 50%;
+      }
+      &:after {
+        right: 50%;
+      }
+      &.focus {
+        &:before, &:after {
+          width: 50%;
         }
       }
     }
@@ -149,7 +196,7 @@ body:not(.semantic-ui):not(.panels-ipe) {
 // Styleguide 5.3
 
 label {
-  color: $off-black;
+  color: $grayer;
   padding: 5px 0;
   display: block;
   font-size: 90%;
