@@ -54,9 +54,9 @@
           $(this)
             .siblings('label, .mt')
             .addClass('focus active');
-          })
+        })
         .on('blur', function(){
-          if(!$(this).val()) {
+          if (!$(this).val()) {
             $(this)
               .siblings('label, .mt')
               .removeClass('focus active');
@@ -69,6 +69,13 @@
               .removeClass('focus');
             }
         });
+      $textInput.each(function(){
+        if ($(this).hasClass('error')) {
+          $(this)
+            .siblings('label, .mt')
+            .addClass('focus active error');
+        }
+      });
 
       // build a simple responsive nan if SIDR not enabled
       // Comment out also if using any other responsive nav plugin

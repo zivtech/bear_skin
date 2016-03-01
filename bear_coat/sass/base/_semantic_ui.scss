@@ -26,7 +26,7 @@ body.semantic-ui:not(.panels-ipe) {
   .ui.menu .dropdown.item:focus,
   .ui.menu .link.item:focus,
   .ui.menu a.item:focus {
-    color: $blue;
+    color: $link-color;
   }
   #content {
     .ui.fluid.input > input {
@@ -147,10 +147,11 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     text-shadow: 1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgba(0,0,0, .9);
     opacity: 0.9;
     font-size: 15px;
-    background: $blue;
+    background: $link-color;
     color: white;
+    transition: background .2s ease-in-out;
     &:hover, &:focus {
-      background: $off-black;
+      background: #445b75;
     }
   }
 }

@@ -40,19 +40,19 @@
   z-index: 1;
   font-size: 100%; }
 
-body:not(.semantic-ui):not(.panels-ipe) form input.form-submit {
+body:not(.semantic-ui) form .form-submit {
   background: #eee;
   border: 1px solid #ccc;
   padding: 5px 10px 6px 10px;
   border-radius: 3px;
   transition: all .2s ease-in-out;
   margin-top: 5px; }
-  body:not(.semantic-ui):not(.panels-ipe) form input.form-submit:hover, body:not(.semantic-ui):not(.panels-ipe) form input.form-submit:focus {
+  body:not(.semantic-ui) form .form-submit:hover, body:not(.semantic-ui) form .form-submit:focus {
     background: #666;
     color: white;
     border-color: #222; }
 
-body:not(.semantic-ui):not(.panels-ipe) form .description {
+body:not(.semantic-ui) form .description {
   font-size: 80%;
   color: #261D19;
   font-style: italic;
@@ -61,7 +61,7 @@ body:not(.semantic-ui):not(.panels-ipe) form .description {
   border-left: dotted 1px #aaa;
   max-width: 600px; }
 
-body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
+body:not(.semantic-ui) #breadcrumbs .chevron:before {
   content: ">";
   padding: 0 8px;
   color: #261D19; }
@@ -82,6 +82,8 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
       top: 2px;
       font-size: 85%;
       color: #728EAD; }
+      .ui.form .form-item.labeled label.active.error {
+        color: #FF6A40 !important; }
   .ui.form .form-item.labeled input {
     max-width: 30em;
     border-radius: 0;
@@ -94,6 +96,9 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
     .ui.form .form-item.labeled input:focus, .ui.form .form-item.labeled input.valued {
       background: transparent;
       -webkit-text-fill-color: #261D19; }
+    .ui.form .form-item.labeled input.error {
+      border-bottom-color: #FF6A40;
+      -webkit-text-fill-color: #261D19 !important; }
   .ui.form .form-item.labeled .mt {
     width: 100%;
     position: relative;
@@ -106,6 +111,8 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
       position: absolute;
       background: #728EAD;
       transition: 0.2s all ease-in-out; }
+    .ui.form .form-item.labeled .mt.error:before, .ui.form .form-item.labeled .mt.error:after {
+      background: #FF6A40; }
     .ui.form .form-item.labeled .mt:before {
       left: 50%; }
     .ui.form .form-item.labeled .mt:after {
@@ -314,11 +321,12 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     opacity: 0.9;
     font-size: 15px;
     background: #728EAD;
-    color: white; }
+    color: white;
+    transition: background .2s ease-in-out; }
     body.semantic-ui:not(.panels-ipe) .ui.form .ui.button:hover, body.semantic-ui:not(.panels-ipe) .ui.form .ui.button:focus,
     body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button:hover,
     body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button:focus {
-      background: #555; }
+      background: #445b75; }
 
 .ui.cards {
   margin: 0; }
@@ -418,7 +426,7 @@ a {
   transition: color 0.25s ease;
   -webkit-tap-highlight-color: transparent; }
   a:hover {
-    color: #577495; }
+    color: #445b75; }
   a:active {
     color: #728EAD; }
   a:focus {

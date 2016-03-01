@@ -63,9 +63,9 @@
 //
 // No Semantic Fallbacks
 //
-body:not(.semantic-ui):not(.panels-ipe) {
+body:not(.semantic-ui) {
   form {
-    input.form-submit {
+    .form-submit {
       background: #eee;
       border: 1px solid #ccc;
       padding: 5px 10px 6px 10px;
@@ -135,6 +135,9 @@ body:not(.semantic-ui):not(.panels-ipe) {
         top: 2px;
         font-size: 85%;
         color: $link-color;
+        &.error {
+          color: $red !important;
+        }
       }
     }
     input {
@@ -151,6 +154,10 @@ body:not(.semantic-ui):not(.panels-ipe) {
         background: transparent;
         -webkit-text-fill-color: $black;
       }
+      &.error {
+        border-bottom-color: $red;
+        -webkit-text-fill-color: $black !important;
+      }
     }
     .mt {
       width: 100%;
@@ -164,6 +171,11 @@ body:not(.semantic-ui):not(.panels-ipe) {
         position: absolute;
         background: $link-color;
         transition: 0.2s all ease-in-out;
+      }
+      &.error {
+        &:before, &:after {
+          background: $red;
+        }
       }
       &:before {
         left: 50%;

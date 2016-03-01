@@ -46,7 +46,7 @@
 //
 // CSS Classes
 //
-.messages {
+.message {
   @extend %alert;
 
   &:first-of-type {
