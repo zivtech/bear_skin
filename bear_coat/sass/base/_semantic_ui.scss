@@ -89,9 +89,18 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
       font-size: 90%;
       color: $grayer;
       outline: 0;
+      &::-webkit-details-marker {
+        display: none
+      }
+      i {
+        font-size: 16px;
+        color: $blue;
+      }
     }
     .form-item {
-      padding: 1em;
+      padding: 0 1em;
+      margin: 1em 0;
+      border-left: 1px dotted $dotted;
     }
   }
   .ui.dropdown {
@@ -135,9 +144,14 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   }
   .ui.button {
     font-weight: normal;
-    text-shadow: 1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgba(255,255,255, .9);
+    text-shadow: 1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgba(0,0,0, .9);
     opacity: 0.9;
     font-size: 15px;
+    background: $blue;
+    color: white;
+    &:hover, &:focus {
+      background: $off-black;
+    }
   }
 }
 

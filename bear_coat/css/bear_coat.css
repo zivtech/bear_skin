@@ -150,7 +150,7 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
 
 label {
   color: #888;
-  padding: 5px 0;
+  padding: 0 0 5px 0;
   display: block;
   font-size: 90%; }
 
@@ -260,9 +260,18 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     font-size: 90%;
     color: #888;
     outline: 0; }
+    body.semantic-ui:not(.panels-ipe) .ui.form details summary::-webkit-details-marker,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary::-webkit-details-marker {
+      display: none; }
+    body.semantic-ui:not(.panels-ipe) .ui.form details summary i,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary i {
+      font-size: 16px;
+      color: #728EAD; }
   body.semantic-ui:not(.panels-ipe) .ui.form details .form-item,
   body.semantic-ui:not(.panels-ipe) .ui.search-form details .form-item {
-    padding: 1em; }
+    padding: 0 1em;
+    margin: 1em 0;
+    border-left: 1px dotted #aaa; }
   body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown .menu > .item,
   body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown .menu > .item {
     font-size: 14px;
@@ -301,9 +310,15 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   body.semantic-ui:not(.panels-ipe) .ui.form .ui.button,
   body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button {
     font-weight: normal;
-    text-shadow: 1px 1px 0 white, 1px 1px 0 rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 0 black, 1px 1px 0 rgba(0, 0, 0, 0.9);
     opacity: 0.9;
-    font-size: 15px; }
+    font-size: 15px;
+    background: #728EAD;
+    color: white; }
+    body.semantic-ui:not(.panels-ipe) .ui.form .ui.button:hover, body.semantic-ui:not(.panels-ipe) .ui.form .ui.button:focus,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button:hover,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button:focus {
+      background: #555; }
 
 .ui.cards {
   margin: 0; }

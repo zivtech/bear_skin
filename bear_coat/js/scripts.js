@@ -84,32 +84,6 @@
         return this;
       };
 
-      // Semantic UI
-      if ($('body').hasClass('semantic-ui')) {
-        $('select').dropdown();
-        $('.ui.checkbox').checkbox();
-        $('.ui.accordion').accordion({
-          animateChildren: true,
-          easing: "easeInQuart",
-          duration: 300
-        });
-        $('.tabular.menu .item').tab();
-        $('.ui.sticky').sticky({
-          context: '#content',
-          offset: 50
-        });
-        $('.ui.pop-up').popup({
-            inline   : true,
-            hoverable: true
-          });
-        $('.loginpopup').click(function(){
-          $(".ui.modal.login").modal('show');
-        });
-        $('.close').click(function(){
-          $(".ui.modal.login").modal('hide');
-        });
-      }
-
       // sidr
       if (!$('body').hasClass('has-sidr')) {
         var $nav = $('#block-bear-coat-main-menu', context);
