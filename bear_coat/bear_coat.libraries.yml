@@ -5,7 +5,7 @@ global_scripts:
 
 global_styling:
   version: 1.x
-  css: 
+  css:
     theme:
       css/bear_coat.css: { media: screen }
 

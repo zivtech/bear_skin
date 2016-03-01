@@ -51,10 +51,10 @@
       var $textInput = $('.form-item.labeled input', context);
       $textInput
         .on('focus', function(){
-         $(this)
-           .siblings('label, .mt')
-           .addClass('focus active');
-         })
+          $(this)
+            .siblings('label, .mt')
+            .addClass('focus active');
+          })
         .on('blur', function(){
           if(!$(this).val()) {
             $(this)

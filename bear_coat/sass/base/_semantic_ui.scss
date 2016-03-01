@@ -43,7 +43,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   padding: 0;
   .form-wrapper:not(.form-actions) {
     border-radius: 0.285714rem;
-    margin: 5px 0;
+    margin: .5em 0;
     display: inline-block;
     width: 100%;
     .form-wrapper {
@@ -53,11 +53,6 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
       margin: 5px 0 20px 0;
       float: left;
       clear: both;
-    }
-    summary {
-      font-weight: bold;
-      margin-bottom: 5px;
-      cursor: pointer;
     }
     .fieldset-description {
       clear: both;
@@ -69,7 +64,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   .form-item,
   fieldset {
     position: relative;
-    margin-bottom: 5px;
+    margin: 5px 0;
     display: block;
     clear: both;
     input, .form-select {
@@ -87,6 +82,17 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     margin: 10px 0;
     border-left: dotted 1px #aaa;
     max-width: 38em;
+  }
+  details {
+    summary {
+      cursor: pointer;
+      font-size: 90%;
+      color: $grayer;
+      outline: 0;
+    }
+    .form-item {
+      padding: 1em;
+    }
   }
   .ui.dropdown {
     .menu {

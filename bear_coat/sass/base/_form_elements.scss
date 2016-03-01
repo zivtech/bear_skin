@@ -130,7 +130,7 @@ body:not(.semantic-ui):not(.panels-ipe) {
       padding: 0;
       transition: all .2s ease-in-out;
       cursor: text;
-      color: gray;
+      color: $grayer;
       &.active {
         top: 2px;
         font-size: 85%;
@@ -145,6 +145,7 @@ body:not(.semantic-ui):not(.panels-ipe) {
       border-bottom: 1px solid $grayer;
       padding: .7em  0;
       margin-bottom: .3em;
+      -webkit-text-fill-color: transparent;
       &:placeholder-shown {
         &::placeholder {
           @include element-invisible;
@@ -152,6 +153,7 @@ body:not(.semantic-ui):not(.panels-ipe) {
       }
       &:focus {
         background: transparent;
+        -webkit-text-fill-color: $black;
       }
     }
     .mt {

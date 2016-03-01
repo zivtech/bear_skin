@@ -29,7 +29,7 @@ header nav {
           opacity: .9;
           visibility: visible;
         }
-      } 
+      }
     }
     li a {
       font-family: 'Droid Sans', sans-serif;
@@ -53,8 +53,8 @@ header nav {
       position: relative;
       &:after {
         content: "";
-        width: 0; 
-        height: 0; 
+        width: 0;
+        height: 0;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         border-bottom: 8px solid $zivtech-dark;
@@ -124,10 +124,10 @@ header nav {
     li.parent > a:after,
     li.parent:hover > a:after {
       content: "";
-      height: 0; 
-      width: 0; 
+      height: 0;
+      width: 0;
       border-top: 5px solid transparent;
-      border-bottom: 5px solid transparent; 
+      border-bottom: 5px solid transparent;
       border-left: 5px solid $zivtech-white;
       @include align(v);
       right: -5px;
@@ -372,6 +372,7 @@ nav.ui.breadcrumb {
   }
   li {
     display: inline;
+    font-size: 90%;
   }
   a {
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-pale, $focus: $zivtech-pale);
