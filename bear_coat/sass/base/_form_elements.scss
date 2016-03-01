@@ -146,12 +146,8 @@ body:not(.semantic-ui):not(.panels-ipe) {
       padding: .7em  0;
       margin-bottom: .3em;
       -webkit-text-fill-color: transparent;
-      &:placeholder-shown {
-        &::placeholder {
-          @include element-invisible;
-        }
-      }
-      &:focus {
+      &:focus,
+      &.valued {
         background: transparent;
         -webkit-text-fill-color: $black;
       }
@@ -186,6 +182,16 @@ body:not(.semantic-ui):not(.panels-ipe) {
     margin-top: 0.5em;
   }
 }
+
+::placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  color: $gray;
+}
+:focus::placeholder {
+  opacity: .5;
+}
+
 
 // Text area
 //

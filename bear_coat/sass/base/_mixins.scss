@@ -6,3 +6,10 @@
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
+@mixin element-invisible-off {
+  position: relative !important;
+  height: auto;
+  width: auto;
+  overflow: inherit;;
+  clip: none;
+}

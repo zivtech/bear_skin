@@ -91,31 +91,7 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
     padding: .7em  0;
     margin-bottom: .3em;
     -webkit-text-fill-color: transparent; }
-    .ui.form .form-item.labeled input:placeholder-shown::-webkit-input-placeholder {
-      position: absolute !important;
-      height: 0;
-      width: 0;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px); }
-    .ui.form .form-item.labeled input:placeholder-shown::-moz-placeholder {
-      position: absolute !important;
-      height: 0;
-      width: 0;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px); }
-    .ui.form .form-item.labeled input:placeholder-shown:-ms-input-placeholder {
-      position: absolute !important;
-      height: 0;
-      width: 0;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px); }
-    .ui.form .form-item.labeled input:placeholder-shown::placeholder {
-      position: absolute !important;
-      height: 0;
-      width: 0;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px); }
-    .ui.form .form-item.labeled input:focus {
+    .ui.form .form-item.labeled input:focus, .ui.form .form-item.labeled input.valued {
       background: transparent;
       -webkit-text-fill-color: #261D19; }
   .ui.form .form-item.labeled .mt {
@@ -139,6 +115,38 @@ body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
 
 .ui.form input.ui.button[type="submit"] {
   margin-top: 0.5em; }
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  color: #eaeaea; }
+
+::-moz-placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  color: #eaeaea; }
+
+:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  color: #eaeaea; }
+
+::placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  color: #eaeaea; }
+
+:focus::-webkit-input-placeholder {
+  opacity: .5; }
+
+:focus::-moz-placeholder {
+  opacity: .5; }
+
+:focus:-ms-input-placeholder {
+  opacity: .5; }
+
+:focus::placeholder {
+  opacity: .5; }
 
 label {
   color: #888;

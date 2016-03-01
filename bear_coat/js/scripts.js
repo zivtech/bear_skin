@@ -63,6 +63,8 @@
             }
           else {
             $(this)
+              .addClass('valued')
+              .end()
               .siblings('label, .mt')
               .removeClass('focus');
             }
