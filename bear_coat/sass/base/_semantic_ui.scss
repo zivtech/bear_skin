@@ -92,9 +92,14 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
       &::-webkit-details-marker {
         display: none
       }
-      i {
-        font-size: 16px;
-        color: $blue;
+      &[aria-expanded="true"] {
+        @include ui-icon("\f055");
+      }
+      &[aria-expanded="false"] {
+        @include ui-icon("\f056");
+      }
+      &:hover, &:focus {
+        color: $link-color-hover;
       }
     }
     .form-item {

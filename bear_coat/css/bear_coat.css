@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
 .bg {
   background-color: white; }
@@ -270,10 +271,62 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     body.semantic-ui:not(.panels-ipe) .ui.form details summary::-webkit-details-marker,
     body.semantic-ui:not(.panels-ipe) .ui.search-form details summary::-webkit-details-marker {
       display: none; }
-    body.semantic-ui:not(.panels-ipe) .ui.form details summary i,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary i {
-      font-size: 16px;
-      color: #728EAD; }
+    body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="true"]:before,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="true"]:before {
+      display: inline-block;
+      opacity: 1;
+      margin: 0em 0.25rem 0em 0em;
+      width: 1.18em;
+      height: 1em;
+      font-family: 'Icons';
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      text-align: center;
+      speak: none;
+      font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      font: Icons;
+      color: #728EAD;
+      content: "";
+      transition: color .2s ease-in-out; }
+    body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="true"]:hover:before, body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="true"]:focus:before,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="true"]:hover:before,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="true"]:focus:before {
+      color: #445b75; }
+    body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="false"]:before,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="false"]:before {
+      display: inline-block;
+      opacity: 1;
+      margin: 0em 0.25rem 0em 0em;
+      width: 1.18em;
+      height: 1em;
+      font-family: 'Icons';
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      text-align: center;
+      speak: none;
+      font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      font: Icons;
+      color: #728EAD;
+      content: "";
+      transition: color .2s ease-in-out; }
+    body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="false"]:hover:before, body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="false"]:focus:before,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="false"]:hover:before,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="false"]:focus:before {
+      color: #445b75; }
+    body.semantic-ui:not(.panels-ipe) .ui.form details summary:hover, body.semantic-ui:not(.panels-ipe) .ui.form details summary:focus,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary:hover,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary:focus {
+      color: #445b75; }
   body.semantic-ui:not(.panels-ipe) .ui.form details .form-item,
   body.semantic-ui:not(.panels-ipe) .ui.search-form details .form-item {
     padding: 0 1em;
