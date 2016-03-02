@@ -956,6 +956,26 @@ nav.ui.breadcrumb {
   nav.ui.breadcrumb i:last-child {
     display: none; }
 
+#primary-tabs .reset-appearance,
+#secondary-tabs .reset-appearance {
+  position: absolute !important;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+#primary-tabs ul,
+#secondary-tabs ul {
+  margin: 0;
+  padding: 0; }
+
+#primary-tabs li,
+#secondary-tabs li {
+  margin: 0; }
+  #primary-tabs li.active a,
+  #secondary-tabs li.active a {
+    color: #3b4f65 !important; }
+
 #main {
   padding-bottom: 30px; }
 

@@ -70,6 +70,11 @@
             }
         });
       $textInput.each(function(){
+        if ($(this).is(':focus')) {
+          $(this)
+            .siblings('label, .mt')
+            .addClass('focus active');
+        }
         if ($(this).hasClass('error')) {
           $(this)
             .siblings('label, .mt')

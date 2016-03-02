@@ -381,3 +381,27 @@ nav.ui.breadcrumb {
     display: none;
   }
 }
+
+//************
+// Local Tasks
+//************
+
+#primary-tabs,
+#secondary-tabs {
+  .reset-appearance {
+    @include element-invisible;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0;
+    &.active {
+      a {
+        color: $active-link-color !important;
+      }
+    }
+  }
+
+}

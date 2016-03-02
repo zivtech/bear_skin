@@ -163,3 +163,4 @@ $body-text-font-family: "Helvetica Neue", Helvetica, sans-serif !default;
 $base-font-color: $zivtech-off-black !default;
 $link-color: $zivtech-blue !default;
 $link-color-hover: darken($link-color, 10%) !default;
+$active-link-color: darken($link-color, 25%) !default; 
