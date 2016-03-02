@@ -35,7 +35,6 @@
        $('.close').click(function(){
          $(".ui.modal.login").modal('hide');
        });
-       
      }
 
    }

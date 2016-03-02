@@ -19,17 +19,17 @@ $header-compressed-height: 55px;
   }
   .site-header__name {
     transition: all .3s ease-in-out;
-    padding: 5px 10px;    
+    padding: 5px 10px;
   }
-  #header {
-    .block-search,
-    .block-views {
-      input.form-text {
-        padding: .4em 1em;
-        font-size: 14px;
-      }
-    }
-  }
+  // #header {
+  //   .block-search,
+  //   .block-views {
+  //     input.form-text {
+  //       padding: .4em 1em;
+  //       font-size: 14px;
+  //     }
+  //   }
+  // }
 }
 
 .wrapper--header {
@@ -44,20 +44,6 @@ $header-compressed-height: 55px;
   @include compressHeader;
   @include breakpoint($breakpoint-medium-width) {
     height: $header-height;
-    .site-header__logo {
-      display: block;
-      //width: 120px;
-      clear: both;
-      margin-right: 20px;
-      img {
-        height: auto;
-        width: 100%;
-      }
-    }
-    .site-header__name {
-      float: left;
-      padding: 30px 10px;    
-    }
     &.compressed {
       @include compressHeader;
       #header {
@@ -74,17 +60,30 @@ $header-compressed-height: 55px;
 }
 
 #header {
-  position: relative;
-  height: 100%;
-  .site-header__logo {
-    max-width: 120px;
-    transition: all .3s ease-in-out;
-    img {
-      display: block;
-    }
+  .region {
+    position: relative;
   }
   .region-header {
-    height: 100%;
+    .site-header__logo {
+      display: block;
+      clear: both;
+      margin-right: 20px;
+      max-width: 120px;
+      transition: all .3s ease-in-out;
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+    }
+    .site-header__name {
+      float: left;
+      padding: 30px 10px;
+    }
+  }
+  .region-navigation {
+    float: left;
+    top: 30px;
   }
   .responsive-nav {
     margin: 0;
@@ -94,56 +93,23 @@ $header-compressed-height: 55px;
       display: none;
     }
   }
-  .search-block-form {
-    @include align(v);
-    transition: all .2s ease-in-out;
-    right: 130px;
-    width: auto;
-    z-index: 2;
-    @include breakpoint($breakpoint-medium-width) {
-      right: 20px;
-      transition: none;
-    }
-    input.form-search {
-      transition: width .2s ease-in-out;
-      width: 100px !important;
-      background: white;
-      @include breakpoint($breakpoint-medium-width) {
-        width: 120px !important;
-      }
-      &:focus {
-        width: 250px !important;
-      }
-    }
-    &.focus {
-      top: 16px;
-      //width: 100%;
-      left: -20px;
-      padding: 15px 15px 13px;
-      background: rgba(0, 0, 0, .7);
-      margin: 0 20px;
-      @include breakpoint($breakpoint-medium-width) {
-        @include align(v);
-        width: auto;
-        background: transparent;
-        left: inherit;
-        padding: 0;
-        margin: 0;
-      }
-    }
-  }
   a.loginpopup {
-    position: absolute;
-    top: 8px;
+    position: relative;
+    float: right;
+    top: 30px;
     font-size: 12px;
-    right: 5em;
     z-index: 1;
     transition: all .3s ease-in-out;
     @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
-    @include breakpoint($breakpoint-medium-width) {
-      top: 0;
-      right: 2em;
+    text-indent: -9999px;
+    i {
+      display: block;
+      text-indent: 0;
     }
+  }
+  .region-search {
+    float: right;
+    right: 30px;
   }
 }
 

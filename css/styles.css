@@ -616,10 +616,6 @@ footer {
     footer nav ul li {
       list-style-type: none; }
 
-header div:first-child, header div:nth-child(2) {
-  float: left;
-  width: 100%; }
-
 #block-bear-skin-branding {
   padding: 10px 0 20px 0;
   margin-right: 30px; }
@@ -866,8 +862,6 @@ header nav {
     clear: both; }
   .layout-two-sidebars .sidebar-second:last-child {
     margin-right: 0%; }
-  header div:first-child, header div:nth-child(2) {
-    width: auto; }
   header nav ul.main-nav {
     margin: 50px 30px 30px 0; } }
 
