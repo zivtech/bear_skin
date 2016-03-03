@@ -625,14 +625,15 @@ i.icon, i.icons {
     color: #728EAD; }
   #header a.loginpopup span,
   #header a.search-button span {
+    visibility: hidden;
     opacity: 0;
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    transition: all .2s ease-in-out;
-    top: 0; }
+    transition: top .2s ease-in-out;
+    top: -10px; }
   #header a.loginpopup:hover span, #header a.loginpopup:focus span,
   #header a.search-button:hover span,
   #header a.search-button:focus span {
@@ -1072,6 +1073,9 @@ nav.ui.breadcrumb {
     #header a.search-button{
     top: 30px;
     right: 0; }
+  #header a.loginpopup span,
+      #header a.search-button span{
+    visibility: visible; }
   .wrapper--main{
     padding-top: 105px; }
   body.has-sidr header nav{
