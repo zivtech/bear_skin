@@ -28,19 +28,18 @@ header nav {
       }
     }
     li a {
-      font-family: 'Droid Sans', sans-serif;
-      text-transform: uppercase;
       text-decoration: none;
       padding: 8px 12px;
       transition: all .2s ease-in-out;
-      border-radius: 6px;
-      font-size: 14px;
+      font-weight: bold;
+      border-radius: 4px;
+      @include link-colors($zivtech-dark, $hover: $zivtech-blue, $active: $zivtech-blue, $focus: $zivtech-blue);
       &:hover,
-      &:focus,
-      &.is-active {
-        background: $zivtech-dark;
-        color: #fff;
+      &:focus {
         text-decoration: none;
+      }
+      &.is-active {
+        background: #ddd;
       }
     }
   }

@@ -49,47 +49,6 @@
 }
 
 //
-// Main Search Form
-//
-#block-searchform {
-  position: relative;
-  transition: all .2s ease-in-out;
-  right: 0;
-  width: auto;
-  z-index: 2;
-  .form-item {
-    margin: 0 !important;
-    position: relative;
-    label {
-      @include element-invisible;
-    }
-    input {
-      width: 100px;
-      transition: width .2s ease-in-out;
-      border: 0;
-      &:focus {
-        width: 250px;
-      }
-    }
-    ::placeholder {
-      opacity: .5 !important;
-    }
-    i {
-      font-size: 16px;
-      text-align: right;
-      top: .5em;
-      opacity: 1;
-      cursor: pointer !important;
-      pointer-events: visible;
-      &:before {
-        text-align: right;
-        padding-top: 2px;
-      }
-    }
-  }
-}
-
-//
 // Support for compact forms
 //
 .compact-form-label {

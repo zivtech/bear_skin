@@ -45,10 +45,10 @@ function bear_coat_preprocess_page(&$variables) {
   $account = \Drupal::currentUser();
   if (theme_get_setting('login_popup')) {
     if ($account->isAnonymous()) {
-      $variables['loginpopup'] = t("<a class='loginpopup item floated in' href='/user/login'><i class='setting icon'></i> <span class=\"login\">Login</span></a>");
+      $variables['loginpopup'] = t("<a class='loginpopup' title='Login' href='/user/login'><span>Login</span><i class='setting icon'></i></a>");
     }
     else {
-      $variables['loginpopup'] = "<a class='loginpopup item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";
+      $variables['loginpopup'] = "<a class='loginpopup' title='Logout' href='/user/logout'><span>Logout</span><i class='setting icon'></i></a>";
     }
   }
   if (theme_get_setting('semantic_ui')) {
@@ -56,8 +56,9 @@ function bear_coat_preprocess_page(&$variables) {
   }
   if (theme_get_setting('sidr')) {
     $variables['#attached']['library'][] = 'bear_coat/sidr';
-    $variables['sidr'] = "<div class=\"responsive-nav\"><div id=\"sidr-bttn\"><a id=\"responsive-menu-button\" href=\"#sidr-main\"><span></span></a></div></div>";
+    $variables['sidr'] = "<div class='responsive-nav'><div id='sidr-bttn'><a id='responsive-menu-button' href='#sidr-main'><span></span></a></div></div>";
   }
+  $variables['searchbutton'] = "<a class='search-button' title='Search' href='/search/node'><span>Search</span><i class='search icon'></i></a>";
 }
 
 function bear_coat_preprocess_select(&$variables) {
@@ -213,9 +214,7 @@ function bear_coat_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
       case 'search_block_form':
         $form['#attributes']['class'][] = 'search-form';
         $form['actions']['submit']['#attributes']['class'][] = 'visually-hidden';
-
         $form['keys']['#attributes']['placeholder'] = t('Search');
-        $form['keys']['#attributes']['class'][] = 'prompt';
         $form['keys']['#theme_wrappers'] = array('search_block_input_wrapper');
         break;
 
