@@ -1,6 +1,60 @@
-//*******
+// Form Elements
+//
+// Styleguide 5.0
+
+//
 // Mixins
-//*******
+//
+
+// Form
+//
+// Markup:
+// <form class="ui form segment">
+//   <p>Simple form wrapper</p>
+// </form>
+//
+// Styleguide 5.1
+
+// Text input
+//
+// Markup:
+// <form class="ui form segment">
+//   <input type="text" name="first-name" placeholder="First Name">
+// </form>
+//
+// Styleguide 5.2
+
+// Text area
+//
+// Markup:
+// <form class="ui form segment">
+//   <label>Your Message:</label>
+//   <textarea></textarea>
+// </form>
+//
+// Styleguide 5.3
+
+// Submit
+//
+// Markup:
+// <form class="ui form segment">
+//   <input class="ui button" type="submit" value="Send" />
+// </form>
+//
+// Styleguide 5.4
+
+// Select List
+//
+// Markup:
+// <form class="ui form segment">
+//   <select class="ui search dropdown" type="submit" value="Send">
+//      <option value="">Your answer</option>
+//      <option value="Yes">Yes</option>
+//      <option value="No">No</option>
+//   </select>
+// </form>
+//
+// Styleguide 5.5
 
 @mixin form-container($margin: $form-input-container-margin) {
   @include cf;
@@ -75,5 +129,109 @@ body:not(.semantic-ui):not(.panels-ipe) {
         color: $black;
       }
     }
+  }
+}
+
+.ui.form {
+  .form-item.labeled {
+    padding-top: 1.2em;
+    margin-bottom: 1em !important;
+    &:first-child {
+      margin-top: -1.2em;
+    }
+    label {
+      position: absolute;
+      top: 2.3em;
+      padding: 0;
+      transition: all .2s ease-in-out;
+      cursor: text;
+      color: $grayer;
+      &.active {
+        top: 2px;
+        font-size: 85%;
+        color: $link-color;
+        &.error {
+          color: $red !important;
+        }
+      }
+    }
+    input {
+      max-width: 30em;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid $grayer;
+      padding: .7em  0;
+      margin-bottom: .3em;
+      -webkit-text-fill-color: transparent;
+      &:focus,
+      &.valued {
+        background: transparent;
+        -webkit-text-fill-color: $black;
+      }
+      &.error {
+        border-bottom-color: $red;
+        -webkit-text-fill-color: $black !important;
+      }
+    }
+    .mt {
+      width: 100%;
+      position: relative;
+      max-width: 30em;
+      &:before, &:after 	{
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 5px;
+        position: absolute;
+        background: $link-color;
+        transition: 0.2s all ease-in-out;
+      }
+      &.error {
+        &:before, &:after {
+          background: $red;
+        }
+      }
+      &:before {
+        left: 50%;
+      }
+      &:after {
+        right: 50%;
+      }
+      &.focus {
+        &:before, &:after {
+          width: 50%;
+        }
+      }
+    }
+  }
+  input.ui.button[type="submit"] {
+    margin-top: 0.5em;
+  }
+}
+
+label {
+  color: $grayer;
+  padding: 0 0 5px 0;
+  display: block;
+  font-size: 90%;
+}
+
+.ui.dropdown {
+  color: $off-black;
+  .text {
+    font-size: 14px;
+  }
+  .default.text {
+    color: $grayer;
+  }
+}
+
+.ui.checkbox,
+.ui.radio.checkbox {
+  margin-right: 15px;
+  label {
+    padding-left: 1.5em;
+    color: $off-black;
   }
 }

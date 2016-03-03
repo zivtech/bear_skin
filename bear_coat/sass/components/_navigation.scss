@@ -70,7 +70,7 @@
             padding: 0 10px;
             display: block;
             a {
-              @include link-colors(white, $hover: $pale, $active: $pale, $focus: $pale);
+              @include link-colors(white, $hover: $white, $active: $white, $focus: $white);
               padding: 5px 0;
             }
             &:last-child {
@@ -273,9 +273,33 @@ nav.ui.breadcrumb {
     color: $off-black;
   }
   a {
-    @include link-colors($blue, $hover: $drenched-blue, $active: $pale, $focus: $pale);
+    @include link-colors($blue, $hover: $drenched-blue, $active: $white, $focus: $white);
   }
   i:last-child {
     display: none;
+  }
+}
+
+//************
+// Local Tasks
+//************
+
+#primary-tabs,
+#secondary-tabs {
+  margin: 1em 0;
+  .reset-appearance {
+    @include element-invisible;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0;
+    &.active {
+      a {
+        color: $link-color-active !important;
+      }
+    }
   }
 }

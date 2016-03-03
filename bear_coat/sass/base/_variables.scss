@@ -2,18 +2,18 @@
 // Color variables
 //
 $black: #261D19;
-$off-black: #404040;
-$browner: #5F5555;
-$brown: #82705B;
-$greyer: #837B80;
-$grey: lighten($greyer, 40%);
-$yellow: #F9B634;
-$green: #40C27A;
+$off-black: #555;
+$grayer: #888;
+$gray: #eaeaea;
+$red: #FF6A40;
 $blue: #728EAD;
 $drenched-blue: saturate($blue, 30%);
-$light-blue: lighten($blue, 10%);
-$pale: #eaeaea;
+$light-blue: lighten($blue, 20%);
+$green: #40C27A;
+$yellow: #F9B634;
 $white: white;
+
+$dotted: #aaa;
 
 //
 // GLOBALS
@@ -77,20 +77,20 @@ $breakpoint-full-width: max-width $site-max-width;
 //
 // TABLES
 //
-$table-border: 1px solid $grey;
+$table-border: 1px solid $gray;
 $table-border-radius: $border-radius;
 $table-header-vertical-align: bottom;
 $table-header-font-color: $off-black;
 $table-header-font-weight: 600;
-$table-header-bg-color: $greyer;
+$table-header-bg-color: $grayer;
 $table-header-text-transform: none;
 $table-row-bg-color: $white;
-$table-row-alt-bg-color: $grey;
-$table-row-hover-color: $grey;
+$table-row-alt-bg-color: $gray;
+$table-row-hover-color: $gray;
 $table-row-transition: background .2s ease, border-color .2s ease, color .2s ease;
 $table-cell-vertical-align: middle;
 $table-cell-font-color: $off-black;
-$table-cell-border: 1px solid $grey;
+$table-cell-border: 1px solid $gray;
 $table-cell-padding: .7em .8em;
 $table-cell-text-align: left; // LTR
 
@@ -129,3 +129,4 @@ $body-text-font-family: "Helvetica Neue", Helvetica, sans-serif;
 $base-font-color: $off-black;
 $link-color: $blue;
 $link-color-hover: darken($link-color, 10%);
+$link-color-active: darken($link-color, 50%);

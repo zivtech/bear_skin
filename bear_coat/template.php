@@ -4,7 +4,7 @@
 
 require_once dirname(__FILE__) . '/preprocess/form.inc';
 require_once dirname(__FILE__) . '/preprocess/breadcrumb.inc';
-// require_once dirname(__FILE__) . '/preprocess/menu.inc';
+require_once dirname(__FILE__) . '/preprocess/menu.inc';
 // require_once dirname(__FILE__) . '/preprocess/message.inc';
 // require_once dirname(__FILE__) . '/preprocess/links.inc';
 // require_once dirname(__FILE__) . '/preprocess/status_report.inc';
@@ -69,8 +69,8 @@ function bear_coat_preprocess_page(&$variables) {
     $variables['loginpopup'] .= "</div>";
     $variables['loginpopup'] .= "</div>";
     $variables['loginpopup'] .= "<a class='loginpopup item floated in' href='#'><i class='setting icon'></i> Login</a>";
-  } 
+  }
   else {
-    $variables['loginpopup'] = "<a class='loginpopup item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";
+    $variables['loginpopup'] = "<a class='loginpopup logout item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";
   }
 }

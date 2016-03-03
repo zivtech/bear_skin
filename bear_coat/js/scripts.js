@@ -14,8 +14,8 @@
 
   'use strict';
 
-  //Use the sample behavior pattern below  
-  
+  //Use the sample behavior pattern below
+
   Drupal.behaviors.bearCoat = {
    attach: function (context, settings) {
      context = context || document;
@@ -105,7 +105,7 @@
       // Markup/Dom modifs
       //******************
 
-      // removing annoying markup 
+      // removing annoying markup
       $('.field-suffix').each(function(){
         $(this)
           .contents()
@@ -154,7 +154,7 @@
             autoReinitialise: true
         });
       });
-      
+
    }
   };
 
@@ -172,7 +172,7 @@
   Drupal.behaviors.bearLoader = {
     attach: function(context, settings) {
       if ($('.form-submit').hasClass('js-hide')) {
-        
+
         var beforeSend = Drupal.ajax.prototype.beforeSend;
 
         // Add a trigger when beforeSend fires.

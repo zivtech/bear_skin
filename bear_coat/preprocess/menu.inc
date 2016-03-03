@@ -8,14 +8,14 @@
 /**
  * Implements theme_menu_tree().
  */
-function semanticui_menu_tree(&$variables) {
+function bear_coat_menu_tree(&$variables) {
   return '<div class="ui fluid vertical menu">' . $variables['tree'] . '</div>';
 }
 
 /**
  * Semanticui theme wrapper function for the submenu links.
  */
-function semanticui_menu_tree__submenu(&$variables) {
+function bear_coat_menu_tree__submenu(&$variables) {
   return '<div class="menu">' . $variables['tree'] . '</div>';
 }
 
@@ -25,21 +25,21 @@ function semanticui_menu_tree__submenu(&$variables) {
  * Here is no need in wrapper as these items are rendered in the page that
  * provides menu markup (see page.tpl.php).
  */
-function semanticui_menu_tree__secondary(&$variables) {
+function bear_coat_menu_tree__secondary(&$variables) {
   return '<div class="ui secondary pointing menu">' . $variables['tree'] . '</div>';
 }
 
 /**
  * Implements theme_menu_tree().
  */
-function semanticui_menu_tree__shortcut_set(&$variables) {
+function bear_coat_menu_tree__shortcut_set(&$variables) {
   return theme_menu_tree($variables);
 }
 
 /**
  * Implements theme_menu_link().
  */
-function semanticui_menu_link(array $variables) {
+function bear_coat_menu_link(array $variables) {
   $element = $variables['element'];
 
   // If there is submenu - render it with wrapper.
@@ -82,7 +82,7 @@ function semanticui_menu_link(array $variables) {
 /**
  * Implements theme_menu_local_tasks().
  */
-function semanticui_menu_local_tasks(&$variables) {
+function bear_coat_menu_local_tasks(&$variables) {
   $primary = isset($variables['primary']) ? $variables['primary'] : NULL;
   if (!empty($primary)) {
     foreach ($primary as $menu_item_key => $menu_item) {
@@ -112,13 +112,13 @@ function semanticui_menu_local_tasks(&$variables) {
   $output = '';
   if (!empty($variables['primary'])) {
     $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] .= '<div class="ui top attached tabular menu">';
+    $variables['primary']['#prefix'] .= '<div id="primary-tabs" class="ui is-horizontal is-collapsible secondary menu stackable" >';
     $variables['primary']['#suffix'] = '</div>';
     $output .= drupal_render($variables['primary']);
   }
   if (!empty($variables['secondary'])) {
     $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
-    $variables['secondary']['#prefix'] .= '<div class="ui secondary attached menu">';
+    $variables['secondary']['#prefix'] .= '<div id="secondary-tabs" class="ui is-horizontal is-collapsible secondary menu stackable">';
     $variables['secondary']['#suffix'] = '</div>';
     $output .= drupal_render($variables['secondary']);
   }
@@ -128,7 +128,7 @@ function semanticui_menu_local_tasks(&$variables) {
 /**
  * Implements theme_menu_local_tasks().
  */
-function semanticui_menu_local_task($variables) {
+function bear_coat_menu_local_task($variables) {
   $link = $variables['element']['#link'];
   $link_text = $link['title'];
 

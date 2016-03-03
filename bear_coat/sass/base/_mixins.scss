@@ -1,0 +1,44 @@
+// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+@mixin element-invisible-off {
+  position: relative !important;
+  height: auto;
+  width: auto;
+  overflow: inherit;;
+  clip: none;
+}
+@mixin ui-icon($content) {
+  &:before {
+    display: inline-block;
+    opacity: 1;
+    margin: 0em 0.25rem 0em 0em;
+    width: 1.18em;
+    height: 1em;
+    font-family: 'Icons';
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    text-align: center;
+    speak: none;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font: Icons;
+    color: $link-color;
+    content: $content;
+    transition: color .2s ease-in-out;
+  }
+  &:hover, &:focus {
+    &:before {
+      color: $link-color-hover;
+    }
+  }
+}

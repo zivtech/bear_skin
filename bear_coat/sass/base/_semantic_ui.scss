@@ -6,7 +6,7 @@ $headers-font: 'Droid Sans', sans-serif;
 $body-font: 'Helvetica Neue', Helvetica,sans-serif;
 
 body.semantic-ui:not(.panels-ipe) {
-  .ui, .ui * {
+  .ui {
     font-size: 100%;
     font-family: $body-font;
     .field {
@@ -26,7 +26,7 @@ body.semantic-ui:not(.panels-ipe) {
   .ui.menu .dropdown.item:focus,
   .ui.menu .link.item:focus,
   .ui.menu a.item:focus {
-    color: blue;
+    color: $link-color;
   }
   #content {
     .ui.fluid.input > input {
@@ -37,19 +37,15 @@ body.semantic-ui:not(.panels-ipe) {
 .sidebar {
   font-size: 90%;
 }
-
 body.semantic-ui:not(.panels-ipe) .ui.form,
 body.semantic-ui:not(.panels-ipe) .ui.search-form {
   font-family: $body-text-font-family;
   padding: 0;
-  box-shadow: 0px 1px 2px 1px rgba(34, 36, 38, 0.15);
   .form-wrapper:not(.form-actions) {
-    background: #f8f8f8;
-    padding: 10px 20px;
     border-radius: 0.285714rem;
-    margin: 5px 0;
+    margin: .5em 0;
     display: inline-block;
-    width:100%;
+    width: 100%;
     .form-wrapper {
       padding: 10px 0;
     }
@@ -57,11 +53,6 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
       margin: 5px 0 20px 0;
       float: left;
       clear: both;
-    }
-    summary {
-      font-weight: bold;
-      margin-bottom: 5px;
-      cursor: pointer;
     }
     .fieldset-description {
       clear: both;
@@ -73,11 +64,11 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   .form-item,
   fieldset {
     position: relative;
-    margin-bottom: 5px;
+    margin: 5px 0;
     display: block;
     clear: both;
     input, .form-select {
-      max-width: 600px;
+      max-width: 30em;
     }
   }
   legend {
@@ -85,19 +76,37 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   }
   .description {
     font-size: 80%;
-    color: $bear-lighten-dark;
+    color: $black;
     font-style: italic;
     padding: 0 10px;
-    margin: 10px 0 20px 0;
+    margin: 10px 0;
     border-left: dotted 1px #aaa;
-    max-width: 600px;
+    max-width: 38em;
   }
-  label {
-    display: block;
-    clear: both;
-    margin: 10px 0 5px 0;
-    font-weight: normal;
-    font-size: 90%;
+  details {
+    summary {
+      cursor: pointer;
+      font-size: 90%;
+      color: $grayer;
+      outline: 0;
+      &::-webkit-details-marker {
+        display: none
+      }
+      &[aria-expanded="true"] {
+        @include ui-icon("\f055");
+      }
+      &[aria-expanded="false"] {
+        @include ui-icon("\f056");
+      }
+      &:hover, &:focus {
+        color: $link-color-hover;
+      }
+    }
+    .form-item {
+      padding: 0 1em;
+      margin: 1em 0;
+      border-left: 1px dotted $dotted;
+    }
   }
   .ui.dropdown {
     .menu {
@@ -113,7 +122,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   &.segment {
     border: 0;
     margin: 0;
-    padding: 20px;
+    box-shadow: none;
   }
   .views-exposed-form {
     position: relative;
@@ -140,10 +149,15 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   }
   .ui.button {
     font-weight: normal;
-    text-shadow: 1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgba(255,255,255, .9);
+    text-shadow: 1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgba(0,0,0, .9);
     opacity: 0.9;
     font-size: 15px;
-    margin-top: 10px;
+    background: $link-color;
+    color: white;
+    transition: background .2s ease-in-out;
+    &:hover, &:focus {
+      background: #445b75;
+    }
   }
 }
 
@@ -151,7 +165,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   margin: 0;
 }
 .ui.cards > .card {
-  box-shadow: 0 0 5px #bbb;
+  @include col();
   @include stack();
   @include breakpoint($breakpoint-medium-width) {
     @include col(1/3, $gutter: 2, $cycle: 3);

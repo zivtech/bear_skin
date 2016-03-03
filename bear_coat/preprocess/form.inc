@@ -73,7 +73,7 @@ function bear_coat_form_alter(array &$form, array &$form_state = array(), $form_
         $form['#attributes']['class'][] = 'segment';
         $form['name']['#attributes']['placeholder'] = t('Username or e-mail address');
         break;
-      
+
       case 'comment_node_forum_form':
         $form['#attributes']['class'][] = 'reply';
         break;
@@ -159,7 +159,7 @@ function bear_coat_form_element($variables) {
 
   // Add element's #type and #name as class to aid with JS/CSS selectors.
   $attributes['class'] = array('form-item');
-  $attributes['class'][] = 'field';
+  //$attributes['class'][] = 'field';
   $attributes['class'][] = $error;
 
   if (!empty($element['#type'])) {
