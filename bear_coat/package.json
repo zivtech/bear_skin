@@ -14,13 +14,16 @@
     "browser-sync": "^2.8.2",
     "css-mqpacker": "^3.1.0",
     "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
     "gulp-css-globbing": "^0.1.8",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^2.3.0",
     "gulp-jshint": "^1.11.2",
+    "gulp-kss": "0.0.2",
     "gulp-livereload": "^3.8.0",
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^5.1.10",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.6",
@@ -29,6 +32,6 @@
     "yargs": "^3.16.1"
   },
   "scripts": {
-    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+    "postinstall": "sh npm_clean.sh"
   }
 }

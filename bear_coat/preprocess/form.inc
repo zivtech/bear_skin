@@ -128,6 +128,8 @@ function bear_coat_form_element($variables) {
   $element = &$variables['element'];
   $is_checkbox = FALSE;
   $is_radio = FALSE;
+  $name = !empty($element['#name']) ? $element['#name'] : FALSE;
+  $type = !empty($element['#type']) ? $element['#type'] : FALSE;
 
   // This function is invoked as theme wrapper, but the rendered form element
   // may not necessarily have been processed by form_builder().
@@ -207,9 +209,21 @@ function bear_coat_form_element($variables) {
       $attributes['class'][] = 'ui';
       $attributes['class'][] = 'input';
     }
-    else if ($element['#type'] == "select") {
+    elseif ($element['#type'] == "select") {
       unset($attributes['class']);
       $attributes['class'][] = 'form-item field';
+    }
+    elseif (
+      $element['#type'] == "textfield" ||
+      $element['#type'] = "email" ||
+      $element['#type'] = "number" ||
+      $element['#type'] == "password" ||
+      $element['#type'] == "tel" ||
+      $element['#type'] == "time" ||
+      $element['#type'] == "url" ||
+      $element['#type'] = "datetime-local"
+    ) {
+      $attributes['class'][] = "labeled";
     }
   }
 
@@ -235,6 +249,7 @@ function bear_coat_form_element($variables) {
   if (!isset($element['#title'])) {
     $element['#title_display'] = 'none';
   }
+
   $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span> ' : '';
   $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
 

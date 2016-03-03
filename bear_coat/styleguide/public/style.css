@@ -5,19 +5,19 @@
   z-index: 1;
   font-size: 100%; }
 
-body:not(.semantic-ui) form input.form-submit {
+body:not(.semantic-ui):not(.panels-ipe) form input.form-submit {
   background: #eee;
   border: 1px solid #ccc;
   padding: 5px 10px 6px 10px;
   border-radius: 3px;
   transition: all .2s ease-in-out;
   margin-top: 5px; }
-  body:not(.semantic-ui) form input.form-submit:hover, body:not(.semantic-ui) form input.form-submit:focus {
+  body:not(.semantic-ui):not(.panels-ipe) form input.form-submit:hover, body:not(.semantic-ui):not(.panels-ipe) form input.form-submit:focus {
     background: #666;
     color: white;
     border-color: #222; }
 
-body:not(.semantic-ui) form .description {
+body:not(.semantic-ui):not(.panels-ipe) form .description {
   font-size: 80%;
   color: #6C6C6C;
   font-style: italic;
@@ -26,22 +26,14 @@ body:not(.semantic-ui) form .description {
   border-left: dotted 1px #aaa;
   max-width: 600px; }
 
-body:not(.semantic-ui) .ui.segment {
-  box-shadow: none;
-  border: 0;
-  padding: 1em 0; }
-
-body:not(.semantic-ui) #breadcrumbs .chevron {
-  margin-right: 10px; }
-  body:not(.semantic-ui) #breadcrumbs .chevron:before {
-    content: ">";
-    padding: 0 8px;
-    color: #261D19; }
+body:not(.semantic-ui):not(.panels-ipe) #breadcrumbs .chevron:before {
+  content: ">";
+  padding: 0 8px;
+  color: #261D19; }
 
 .ui.form .form-item.labeled {
   padding-top: 1.2em;
-  margin-bottom: 1em !important;
-  position: relative; }
+  margin-bottom: 1em !important; }
   .ui.form .form-item.labeled:first-child {
     margin-top: -1.2em; }
   .ui.form .form-item.labeled label {
@@ -120,26 +112,22 @@ label {
 ::-webkit-input-placeholder {
   opacity: 0;
   transition: opacity .2s ease-in-out;
-  color: #eaeaea;
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  color: #eaeaea; }
 
 ::-moz-placeholder {
   opacity: 0;
   transition: opacity .2s ease-in-out;
-  color: #eaeaea;
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  color: #eaeaea; }
 
 :-ms-input-placeholder {
   opacity: 0;
   transition: opacity .2s ease-in-out;
-  color: #eaeaea;
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  color: #eaeaea; }
 
 ::placeholder {
   opacity: 0;
   transition: opacity .2s ease-in-out;
-  color: #eaeaea;
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  color: #eaeaea; }
 
 :focus::-webkit-input-placeholder {
   opacity: .5; }
@@ -834,8 +822,6 @@ body.sidr-open #header #sidr-wrapper-0 {
 nav.ui.breadcrumb {
   padding: 20px 0;
   color: #555; }
-  nav.ui.breadcrumb a, nav.ui.breadcrumb span, nav.ui.breadcrumb i {
-    font-size: 90%; }
   nav.ui.breadcrumb .divider,
   nav.ui.breadcrumb span {
     color: #555; }

@@ -1,0 +1,112 @@
+
+$lighter: #999;
+$border: #ddd;
+
+#kss-main {
+	max-width: 100%;
+}
+.filterform {
+	position: absolute;
+	right: 0;
+	top: 36px;
+	input {
+		border: 2px solid $border;
+		width: 200px;
+		padding-right: 40px;
+	}
+}
+form .search.icon {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	font-size: 1em;
+}
+h1.kss-title {
+	border-bottom: 2px solid $border;
+	padding-bottom: .67em;
+	color: $lighter;
+}
+h2.kss-title {
+	color: $lighter;
+	border-left: 2px dotted #aaa;
+	padding-left: .5em;
+}
+section {
+	transition: opacity .2s ease-in-out;
+	opacity: 1;
+	position: relative;
+	z-index: 1;
+	&.hidden {
+		opacity: 0;
+		z-index: 0;
+		height: 0;
+		* {
+			display: none;
+		}
+	} 
+}
+#kss-nav {
+	background-color: #555;
+	.logo {
+		padding: 1.5em 2em;
+	}
+	ul {
+		li {
+			margin: 5px 0;
+			color: $lighter;
+			a {
+				color: white;
+				&:hover, 
+				&:focus {
+					text-decoration: underline;
+				}
+			}
+			&.active {
+				color: white;
+			}
+		}
+	}
+}
+.pop-up i.icon {
+	font-size: 1em;
+}
+.segment.ui.dimmer {
+	height: 100px;
+	position: relative;
+}
+.kss-box {
+	margin-bottom: 20px;
+}
+.kss-markup {
+	padding: 0 1em;
+	border: 1px solid #ccc;
+	background: #f8f8f8;
+	border-radius: 4px;
+	margin-top: 20px;
+}
+.kss-mod-desc-group {
+	border-top: 1px solid #ddd;
+}
+tr.kss-mod-desc-group {
+	td {
+		padding: 20px 0 10px 0;
+	}
+}
+.bg {
+	width: 75px;
+	height: 75px;
+}
+.kss-mod-desc {
+	font-family: "Courier", sans-serif;
+	color: $lighter;
+}
+.className {
+	color: white;
+	font-family: "Courier", sans-serif;
+	background: #555;
+	padding: 5px 10px;
+	border-radius: 3px;
+	font-size: 110%;
+	position: relative;
+	top: 4px;
+}

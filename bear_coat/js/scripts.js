@@ -58,7 +58,7 @@
       }
       else {
         // Our modal then turns into a regular link
-        $('a.loginpopup', context).attr('href', '/user');
+        $('a.loginpopup:not(.logout)', context).attr('href', '/user');
       }
 
      // build a simple responsive nan if SIDR not enabled
@@ -125,6 +125,40 @@
           $(this)
           .closest('.block-search')
           .removeClass('focus');
+        });
+
+        var $textInput = $('.form-item.labeled input', context);
+        $textInput
+          .on('focus', function(){
+            $(this)
+              .siblings('label, .mt')
+              .addClass('focus active');
+          })
+          .on('blur', function(){
+            if (!$(this).val()) {
+              $(this)
+                .siblings('label, .mt')
+                .removeClass('focus active');
+              }
+            else {
+              $(this)
+                .addClass('valued')
+                .end()
+                .siblings('label, .mt')
+                .removeClass('focus');
+              }
+          });
+        $textInput.each(function(){
+          if ($(this).is(':focus')) {
+            $(this)
+              .siblings('label, .mt')
+              .addClass('focus active');
+          }
+          if ($(this).hasClass('error')) {
+            $(this)
+              .siblings('label, .mt')
+              .addClass('focus active error');
+          }
         });
 
       // adding a class to empty p to remove margin/padding

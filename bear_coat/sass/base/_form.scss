@@ -96,7 +96,7 @@
 // No Semantic Fallbacks
 //**********************
 
-body:not(.semantic-ui):not(.panels-ipe) {
+body:not(.semantic-ui) {
   form {
     input.form-submit {
       background: #eee;
@@ -121,8 +121,14 @@ body:not(.semantic-ui):not(.panels-ipe) {
       max-width: 600px;
     }
   }
+  .ui.segment {
+    box-shadow: none;
+    border: 0;
+    padding: 1em 0;
+  }
   #breadcrumbs {
     .chevron {
+      margin-right: 10px;
       &:before {
         content: ">";
         padding: 0 8px;
@@ -136,6 +142,7 @@ body:not(.semantic-ui):not(.panels-ipe) {
   .form-item.labeled {
     padding-top: 1.2em;
     margin-bottom: 1em !important;
+    position: relative;
     &:first-child {
       margin-top: -1.2em;
     }
@@ -234,4 +241,14 @@ label {
     padding-left: 1.5em;
     color: $off-black;
   }
+}
+
+::placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  color: $gray;
+  font-family: $body-text-font-family;
+}
+:focus::placeholder {
+  opacity: .5;
 }
