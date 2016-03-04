@@ -61,7 +61,7 @@
 //
 // No Semantic Fallbacks
 //
-body:not(.semantic-ui) {
+body:not(.semantic-ui):not(.panels-ipe) {
   form {
     .form-submit {
       background: #eee;
