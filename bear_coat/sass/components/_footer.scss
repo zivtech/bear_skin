@@ -3,11 +3,10 @@
 }
 
 .site-footer {
-  background: $zivtech-off-black;
+  background: $gray;
 }
 
 .site-footer {
-  color: #fff;
   .region-footer {
     padding: 30px 20px;
     @include breakpoint($breakpoint-to-max-width) {
