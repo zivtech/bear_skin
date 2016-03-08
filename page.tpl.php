@@ -1,14 +1,11 @@
 <div class="wrapper wrapper--header">
   <header id="header" role="banner" class="site-header">
-
     <?php if ($logo): ?>
       <a href="<?php print $front_page;?>" title="<?php print t('Home');?>"
          rel="home" class="site-header__logo">
         <img src="<?php print $logo;?>" alt="<?php print t('Home');?>"/>
       </a>
     <?php endif;?>
-
-    <?php print render($page['navigation']); ?>
 
     <?php if ($site_name || $site_slogan): ?>
       <div class="site-header__name-and-slogan">
@@ -28,10 +25,12 @@
         <?php endif;?>
       </div><!-- /.site-header__name-and-slogan -->
     <?php endif;?>
-
     <?php print render($page['header']);?>
-
   </header>
+</div>
+
+<div class="wrapper wrapper--navigation">
+  <?php print render($page['navigation']); ?>
 </div>
 
 <div class="wrapper wrapper--main">

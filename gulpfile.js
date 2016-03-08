@@ -103,7 +103,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('watch', function() {
-  livereload.listen(4002);
+  livereload.listen(4001);
 
   gulp.watch("./sass/**/*.scss", ['sass']);
   gulp.watch("./js/*.js", ['scripts']);

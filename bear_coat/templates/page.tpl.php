@@ -1,6 +1,5 @@
 <div class="wrapper wrapper--header">
   <header id="header" role="banner" class="site-header">
-
     <?php if ($logo): ?>
       <a href="<?php print $front_page;?>" title="<?php print t('Home');?>"
          rel="home" class="site-header__logo">
@@ -8,15 +7,16 @@
       </a>
     <?php endif;?>
 
-    <?php print render($page['navigation']); ?>
-
     <?php print render($page['header']);?>
 
     <?php if (theme_get_setting('login_popup')): ?>
       <?php print render($loginpopup); ?>
     <?php endif;?>
-
   </header>
+</div>
+
+<div class="wrapper wrapper--navigation">
+  <?php print render($page['navigation']); ?>
 </div>
 
 <div class="wrapper wrapper--main">

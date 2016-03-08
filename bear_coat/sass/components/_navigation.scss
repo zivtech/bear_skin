@@ -1,5 +1,4 @@
 .region-navigation {
-  left: 160px;
   transition: left .3s ease-in-out;
   nav.main-menu,
   .block__system-main-menu {
@@ -11,23 +10,6 @@
     ul.menu {
       padding: 0;
       margin: 5px 0;
-    }
-    .main-menu__link,
-    .menu .parent .main-menu__link {
-      font-family: 'Droid Sans', sans-serif;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 8px 12px;
-      transition: all .2s ease-in-out;
-      border-radius: 6px;
-      font-size: 14px;
-      &:hover,
-      &:focus,
-      &.active {
-        background: $black;
-        color: white;
-        text-decoration: none;
-      }
     }
     .main-menu--level-one {
       > li {
@@ -131,118 +113,32 @@
   }
 }
 
-//***********************
-// Regular responsive NAV
-//***********************
-#mobile-nav {
-  position: absolute;
-  right: 0;
-  top: -15px;
-  &.hidden {
-    display: none;
-  }
-  #mobile-button {
-    &.on {
-      span {
-        background: transparent;
-        &:before,
-        &:after {
-          top: 0;
-        }
-        &:before {
-          transform: rotate(45deg);
-        }
-        &:after {
-          transform: rotate(-45deg);
-        }
+// SIDR
+body.sidr-open {
+  #sidr-wrapper-0 {
+    margin-left: 0;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    span {
+      background: transparent;
+      &:before,
+      &:after {
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
       }
     }
   }
 }
 
-// Extra SIDR handling
-body.sidr-open {
-  #header #sidr-wrapper-0 {
-    margin-left: 0;
-    position: relative;
-    left: auto;
-    top: auto;
-  }
-}
 .sidr-animating {
   .wrapper--header {
     position: absolute;
-  }
-}
-
-.region-navigation .main-menu,
-.region-navigation .block__system-main-menu {
-  &.mobile {
-    ul.main-menu--level-one {
-      position: absolute;
-      top: 25px;
-      right: 15px;
-      background: white;
-      border-radius: 4px;
-      width: 200px !important;
-      padding: 10px !important;
-      box-shadow: 0 0 5px #999;
-      opacity: 0;
-      transition: opacity .3s ease-in-out;
-      @include bear-element-invisible;
-      &:before {
-        content: "";
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid dark;
-        position: absolute;
-        right: 7px;
-        top: -8px;
-      }
-      li {
-        clear: both;
-        display: block;
-        padding: 0;
-        &:after {
-          display: none !important;
-        }
-        a {
-          background: transparent !important;
-          transition: none;
-          &:hover,
-          &:focus,
-          &.active {
-            color: blue !important;
-            text-decoration: none;
-          }
-        }
-      }
-      &.show {
-        @include bear-element-invisible-off;
-        position: absolute !important;
-        opacity: 1;
-        overflow: visible;
-      }
-      ul.main-menu--level-two,
-      .parent:hover .menu {
-        @include bear-element-invisible-off;
-        position: relative;
-        border: 0;
-        top: 0;
-        opacity: 1;
-        min-width: auto;
-        padding: 0 0 0 25px;
-        background: transparent;
-        li {
-          a {
-            text-transform: none;
-            color: $black;
-          }
-        }
-      }
-    }
   }
 }
 

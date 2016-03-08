@@ -23,6 +23,7 @@ body {
 //************************************
 
 .site-header,
+.region-navigation,
 .site-main,
 .region--footer,
 #breadcrumbs {
@@ -30,10 +31,8 @@ body {
   max-width: $site-max-width;
   margin: 0 auto;
 }
-.region--navigation {
-  display: inline-block;
-}
 #header,
+.region-navigation,
 .site-main,
 .region--footer,
 .breadcrumbs {
@@ -64,7 +63,7 @@ body {
 //*************
 
 body.fluid-bear {
-  .site-header, 
+  .site-header,
   #breadcrumbs,
   .region--footer {
     max-width: 100%;

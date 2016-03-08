@@ -4,79 +4,24 @@
 }
 
 .region-navigation {
-  .main-menu,
-  .block__system-main-menu {
-    float: left;
-    .menu {
-      margin: 0;
-      padding: 0;
-      &:not(.main-menu--level-one) {
-        @include bear-element-invisible;
-        overflow: visible !important;
-        position: absolute;
-        margin: 0;
-        padding: 10px;
-        background: #fff;
-        min-width: 200px;
-        a {
-          padding: 5px 0;
-          margin: 0;
-        }
-      }
-      .parent {
-        position: relative;
-        ul {
-          border: 1px solid #ccc;
-          a {
-            line-height: 140%;
-            display: block;
-            padding: 5px 0;
-          }
-        }
-      }
-      .parent:hover {
-        > ul.main-menu__link {
-          color: $zivtech-blue;
-        }
-        > .menu {
-          @include bear-element-invisible-off;
-          position: absolute !important;
-          opacity: 1;
-          z-index: 2;
-        }
-      }
-      &.main-menu--level-three {
-        left: 100%;
-        top: 0;
-      }
-    }
-
-    &__item {
-      @include inline-block;
+  .menu {
+    margin: 0;
+    padding: 1em 0;
+    li {
       list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    &__link {
-      font-family: $header-font-family;
-      color: $zivtech-dark;
-      line-height: 30px;
-      padding: 0 10px;
-      &.active {
-        text-decoration: underline;
+      display: inline;
+      a {
+        margin-right: 1em;
       }
     }
   }
 }
 
-// basic responsive nav
-#sidr-wrapper-0,
-#mobile-nav {
+// SIDR handling
+#sidr-wrapper-0 {
   $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
   margin-right: $layout-padding;
-  #sidr-0-button,
-  #mobile-button {
+  #sidr-0-button {
     display: block;
     width: 25px;
     height: 30px;
@@ -108,59 +53,14 @@
     }
   }
 }
-body.sidr-open {
-  #header {
-    .region-navigation {
-      left: $layout-padding;
-    }
-    .site-header__logo {
-      opacity: 0;
-    }
-  }
-  #header #sidr-wrapper-0 {
-    margin-left: 0;
-    position: absolute;
-    left: 20px;
-    top: 40px;
-    span {
-      background: transparent;
-      &:before,
-      &:after {
-        top: 0;
-      }
-      &:before {
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-}
 
 h3.sidr-class-u-hidden {
   @include bear-element-invisible;
 }
 
-.links-inline {
-  margin: $vertical-gutter / 2 0;
-
-  &__list {
-    padding: 0;
-    margin: 0;
-
-    li {
-      @include inline-block;
-      list-style-type: none;
-      margin-right: $vertical-gutter / 2;
-    }
-  }
-}
-
 .breadcrumbs {
   margin: 0;
   padding: 20px 0;
-
   &__item {
     @include inline-block;
     list-style-type: none;

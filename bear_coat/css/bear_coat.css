@@ -569,7 +569,6 @@ i.icon, i.icons {
   padding-top: 55px; }
 
 .region-navigation {
-  left: 160px;
   transition: left .3s ease-in-out; }
   .region-navigation nav.main-menu,
   .region-navigation .block__system-main-menu {
@@ -582,30 +581,6 @@ i.icon, i.icons {
     .region-navigation .block__system-main-menu ul.menu {
       padding: 0;
       margin: 5px 0; }
-    .region-navigation nav.main-menu .main-menu__link,
-    .region-navigation nav.main-menu .menu .parent .main-menu__link,
-    .region-navigation .block__system-main-menu .main-menu__link,
-    .region-navigation .block__system-main-menu .menu .parent .main-menu__link {
-      font-family: 'Droid Sans', sans-serif;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 8px 12px;
-      transition: all .2s ease-in-out;
-      border-radius: 6px;
-      font-size: 14px; }
-      .region-navigation nav.main-menu .main-menu__link:hover, .region-navigation nav.main-menu .main-menu__link:focus, .region-navigation nav.main-menu .main-menu__link.active,
-      .region-navigation nav.main-menu .menu .parent .main-menu__link:hover,
-      .region-navigation nav.main-menu .menu .parent .main-menu__link:focus,
-      .region-navigation nav.main-menu .menu .parent .main-menu__link.active,
-      .region-navigation .block__system-main-menu .main-menu__link:hover,
-      .region-navigation .block__system-main-menu .main-menu__link:focus,
-      .region-navigation .block__system-main-menu .main-menu__link.active,
-      .region-navigation .block__system-main-menu .menu .parent .main-menu__link:hover,
-      .region-navigation .block__system-main-menu .menu .parent .main-menu__link:focus,
-      .region-navigation .block__system-main-menu .menu .parent .main-menu__link.active {
-        background: #261D19;
-        color: white;
-        text-decoration: none; }
     .region-navigation nav.main-menu .main-menu--level-one > li,
     .region-navigation .block__system-main-menu .main-menu--level-one > li {
       padding: 20px 0; }
@@ -710,112 +685,26 @@ i.icon, i.icons {
 .compressed .region-navigation {
   left: 90px; }
 
-#mobile-nav {
+body.sidr-open #sidr-wrapper-0 {
+  margin-left: 0;
   position: absolute;
-  right: 0;
-  top: -15px; }
-  #mobile-nav.hidden {
-    display: none; }
-  #mobile-nav #mobile-button.on span {
+  left: 20px;
+  top: 40px; }
+  body.sidr-open #sidr-wrapper-0 span {
     background: transparent; }
-    #mobile-nav #mobile-button.on span:before, #mobile-nav #mobile-button.on span:after {
+    body.sidr-open #sidr-wrapper-0 span:before, body.sidr-open #sidr-wrapper-0 span:after {
       top: 0; }
-    #mobile-nav #mobile-button.on span:before {
+    body.sidr-open #sidr-wrapper-0 span:before {
       -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
               transform: rotate(45deg); }
-    #mobile-nav #mobile-button.on span:after {
+    body.sidr-open #sidr-wrapper-0 span:after {
       -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg); }
 
-body.sidr-open #header #sidr-wrapper-0 {
-  margin-left: 0;
-  position: relative;
-  left: auto;
-  top: auto; }
-
 .sidr-animating .wrapper--header {
   position: absolute; }
-
-.region-navigation .main-menu.mobile ul.main-menu--level-one,
-.region-navigation .block__system-main-menu.mobile ul.main-menu--level-one {
-  position: absolute;
-  top: 25px;
-  right: 15px;
-  background: white;
-  border-radius: 4px;
-  width: 200px !important;
-  padding: 10px !important;
-  box-shadow: 0 0 5px #999;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  position: absolute !important;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px); }
-  .region-navigation .main-menu.mobile ul.main-menu--level-one:before,
-  .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one:before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid dark;
-    position: absolute;
-    right: 7px;
-    top: -8px; }
-  .region-navigation .main-menu.mobile ul.main-menu--level-one li,
-  .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one li {
-    clear: both;
-    display: block;
-    padding: 0; }
-    .region-navigation .main-menu.mobile ul.main-menu--level-one li:after,
-    .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one li:after {
-      display: none !important; }
-    .region-navigation .main-menu.mobile ul.main-menu--level-one li a,
-    .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one li a {
-      background: transparent !important;
-      transition: none; }
-      .region-navigation .main-menu.mobile ul.main-menu--level-one li a:hover, .region-navigation .main-menu.mobile ul.main-menu--level-one li a:focus, .region-navigation .main-menu.mobile ul.main-menu--level-one li a.active,
-      .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one li a:hover,
-      .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one li a:focus,
-      .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one li a.active {
-        color: blue !important;
-        text-decoration: none; }
-  .region-navigation .main-menu.mobile ul.main-menu--level-one.show,
-  .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one.show {
-    position: static !important;
-    clip: auto;
-    height: auto;
-    width: auto;
-    overflow: auto;
-    position: absolute !important;
-    opacity: 1;
-    overflow: visible; }
-  .region-navigation .main-menu.mobile ul.main-menu--level-one ul.main-menu--level-two,
-  .region-navigation .main-menu.mobile ul.main-menu--level-one .parent:hover .menu,
-  .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one ul.main-menu--level-two,
-  .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one .parent:hover .menu {
-    position: static !important;
-    clip: auto;
-    height: auto;
-    width: auto;
-    overflow: auto;
-    position: relative;
-    border: 0;
-    top: 0;
-    opacity: 1;
-    min-width: auto;
-    padding: 0 0 0 25px;
-    background: transparent; }
-    .region-navigation .main-menu.mobile ul.main-menu--level-one ul.main-menu--level-two li a,
-    .region-navigation .main-menu.mobile ul.main-menu--level-one .parent:hover .menu li a,
-    .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one ul.main-menu--level-two li a,
-    .region-navigation .block__system-main-menu.mobile ul.main-menu--level-one .parent:hover .menu li a {
-      text-transform: none;
-      color: #261D19; }
 
 .pager-wrapper {
   position: relative;

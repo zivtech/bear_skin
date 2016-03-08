@@ -8,8 +8,8 @@
 /**
  * Implements theme_menu_tree().
  */
-function bear_coat_menu_tree(&$variables) {
-  return '<div class="ui fluid vertical menu">' . $variables['tree'] . '</div>';
+function newco_menu_tree(&$variables) {
+  return '<div class="menu-main">' . $variables['tree'] . '</div>';
 }
 
 /**
