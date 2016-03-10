@@ -84,11 +84,31 @@
 }
 
 //
-// CSS classes
+// Variables
 //
 
+// Bearskin uses rem units for fonts. Setting <html> font size ($bear-font-size) to 62.5% resets
+// the browser default font size to 10px, then everything in <body> uses rems (with pixel fallbacks).
+// As a result, with the exception of $bear-font-size, the other font sizes should be listed here
+// in pixel units.
+
+$bear-font-size: 62.5%;
+$bear-line-height: 1.5;
+$body-font-size: 16px;
+$base-font-size: $body-font-size;
+$h1-font-size: 60px;
+$h2-font-size: 36px;
+$h3-font-size: 1.3  * $body-font-size;
+$h4-font-size: 1.2  * $body-font-size;
+$h5-font-size: 0.83 * $body-font-size;
+$h6-font-size: 0.75 * $body-font-size;
 $headers-font: 'Arial', sans-serif;
 $body-font: 'Arial', Helvetica, sans-serif;
+$base-font-color: $off-black;
+$link-color: $blue;
+$link-color-hover: darken($link-color, 25%);
+$link-color-active: darken($link-color, 50%);
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
@@ -121,4 +141,10 @@ h5, h5:last-child {
 img {
   max-width: 100%;
   height: 100%;
+}
+a {
+  color: $link-color;
+  &:hover, &:focus {
+    color: $link-color-hover;
+  }
 }

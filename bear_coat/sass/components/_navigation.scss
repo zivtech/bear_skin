@@ -15,9 +15,13 @@
       vertical-align: top;
       &.item {
         position: relative;
+        &:hover > a {
+          color: $link-color-hover;
+        }
         &:hover > .secondary {
           visibility: visible;
           opacity: 1;
+          top: 2.4em;
         }
       }
       &.secondary {
@@ -25,41 +29,64 @@
         position: absolute;
         visibility: hidden;
         opacity: 0;
-        left: 0;
-        top: 2.4em;
-        width: 100%;
-        background: $lightgray;
+        left: -.5em;
+        top: 1.5em;
+        width: 15em;
+        background: $white;
         border: 1px solid $gray;
         border-top: 0;
-        padding: 0;
+        padding: 1px .5em .5em .5em;
         border-radius: 0 0 3px 3px;
         a {
-          width: 100%;
           font-size: 90%;
-          display: block;
-          padding: .4em .5em;
+          display: inline-block;
+          padding: .2em 0;
+          margin-bottom: .2em;
         }
       }
     }
     a {
-      margin: 0;
-      padding: .8em .5em;
-      border-radius: 3px;
-      &:hover, &:focus, &.active {
-        background: $white;
-        color: $off-black;
+      margin: 0 .5em;
+      padding: 1em 0;
+      &.active {
+        color: $link-color-hover;
       }
     }
   }
 }
 
 // SIDR
+#sidr-wrapper-0 {
+  position: absolute;
+  right: 0;
+  top: .75em;
+}
+.sidr-inner {
+  border-bottom: 1px solid #4d4d4d;
+  padding: 0 !important;
+  a {
+    width: 100%;
+    display: block;
+    padding: .5em 1em;
+    color: $white;
+    line-height: 2.5em;
+    border-bottom: 1px solid #1a1a1a;
+    border-top: 1px solid #4d4d4d;
+    &:focus,
+    &:hover,
+    &.sidr-class-active {
+      box-shadow: inset 0 0 15px 3px #222;
+    }
+    &:last-child {
+      border-bottom: 1px solid #1a1a1a;
+    }
+  }
+}
 body.sidr-open {
   #sidr-wrapper-0 {
     margin-left: 0;
     position: absolute;
-    left: 20px;
-    top: 40px;
+    left: 1em;
     span {
       background: transparent;
       &:before,
@@ -73,6 +100,9 @@ body.sidr-open {
         transform: rotate(-45deg);
       }
     }
+  }
+  #header #logo-container {
+    opacity: 0;
   }
 }
 

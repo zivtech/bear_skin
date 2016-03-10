@@ -5,7 +5,7 @@ $header-height: 55px;
   position: fixed;
   width: 100%;
   border-bottom: 1px solid $gray;
-  background: $lightgray;
+  background: $white;
   z-index: 999;
   transition: all .3s ease-in-out;
   height: $header-height;
@@ -17,6 +17,8 @@ $header-height: 55px;
   #logo-container {
     float: left;
     height: 100%;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
   }
   .site-header__logo {
     max-width: 120px;
@@ -28,51 +30,14 @@ $header-height: 55px;
   .region-header {
     height: 100%;
   }
-  .block-search,
-  .block-views {
-    @include align(v);
-    transition: all .2s ease-in-out;
-    right: 130px;
-    @include breakpoint($breakpoint-medium-width) {
-      right: 20px;
-      transition: none;
-    }
-    input.form-text {
-      transition: width .2s ease-in-out;
-      width: 100px !important;
-      @include breakpoint($breakpoint-medium-width) {
-        width: 120px !important;
-      }
-      &:focus {
-        width: 250px !important;
-      }
-    }
-    &.focus {
-      top: 16px;
-      //width: 100%;
-      left: -20px;
-      padding: 15px 15px 13px;
-      background: rgba(0, 0, 0, .7);
-      margin: 0 20px;
-      @include breakpoint($breakpoint-medium-width) {
-        @include align(v);
-        width: auto;
-        background: transparent;
-        left: inherit;
-        padding: 0;
-        margin: 0;
-      }
-    }
-  }
   a.loginpopup {
-    position: absolute;
-    top: 8px;
-    font-size: 12px;
-    right: 5em;
-    @include link-colors($black, $hover: $blue, $active: $blue, $focus: $blue);
-    @include breakpoint($breakpoint-medium-width) {
-      top: 0;
-      right: 2em;
+    float: right;
+    font-size: 80%;
+    position: relative;
+    top: 3px;
+    right: 4em;
+    @include breakpoint($breakpoint-large-width) {
+      right: 0;
     }
   }
 }

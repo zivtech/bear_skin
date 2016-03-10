@@ -139,6 +139,16 @@
         });
       });
 
+      // extra SIDR code
+      if ($('body').hasClass('resp-nav')) {
+       $(window).on('resize', function(){
+         var $nav = $('.main-menu', context);
+         if($('body').hasClass('sidr-open') && $(window).width() >= 800) {
+           $('#sidr-0-button').click();
+         }
+       });
+     }
+
    }
   };
 
