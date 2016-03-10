@@ -215,15 +215,18 @@ function bear_coat_form_element($variables) {
     }
     elseif (
       $element['#type'] == "textfield" ||
-      $element['#type'] = "email" ||
-      $element['#type'] = "number" ||
+      $element['#type'] == "email" ||
+      $element['#type'] == "number" ||
       $element['#type'] == "password" ||
       $element['#type'] == "tel" ||
       $element['#type'] == "time" ||
       $element['#type'] == "url" ||
-      $element['#type'] = "datetime-local"
+      $element['#type'] == "datetime-local"
     ) {
       $attributes['class'][] = "labeled";
+    }
+    else {
+      $attributes['class'][] = "off-label";
     }
   }
 

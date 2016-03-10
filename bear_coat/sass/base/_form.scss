@@ -128,7 +128,6 @@ body:not(.semantic-ui) {
   }
   #breadcrumbs {
     .chevron {
-      margin-right: 10px;
       &:before {
         content: ">";
         padding: 0 8px;
@@ -173,8 +172,9 @@ body:not(.semantic-ui) {
       -webkit-text-fill-color: transparent;
       &:focus,
       &.valued {
+        outline: 0;
         background: transparent;
-        -webkit-text-fill-color: $black;
+        box-shadow: none;
       }
       &.error {
         border-bottom-color: $red;

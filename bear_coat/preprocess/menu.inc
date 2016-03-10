@@ -8,15 +8,15 @@
 /**
  * Implements theme_menu_tree().
  */
-function newco_menu_tree(&$variables) {
-  return '<div class="menu-main">' . $variables['tree'] . '</div>';
+function bear_coat_menu_tree(&$variables) {
+  return '<div class="primary">' . $variables['tree'] . '</div>';
 }
 
 /**
  * Semanticui theme wrapper function for the submenu links.
  */
 function bear_coat_menu_tree__submenu(&$variables) {
-  return '<div class="menu">' . $variables['tree'] . '</div>';
+  return '<div class="secondary">' . $variables['tree'] . '</div>';
 }
 
 /**
@@ -26,7 +26,7 @@ function bear_coat_menu_tree__submenu(&$variables) {
  * provides menu markup (see page.tpl.php).
  */
 function bear_coat_menu_tree__secondary(&$variables) {
-  return '<div class="ui secondary pointing menu">' . $variables['tree'] . '</div>';
+  return '<div class="ui secondary menu">' . $variables['tree'] . '</div>';
 }
 
 /**
@@ -55,7 +55,7 @@ function bear_coat_menu_link(array $variables) {
       ),
     );
     $submenu_wrapper['title'] = array(
-      '#markup' => $element['#title'],
+      '#markup' => l($element['#title'], $element['#href'], $element['#localized_options']),
       '#prefix' => !empty($element['#prefix']) ? $element['#prefix'] : '',
       '#suffix' => !empty($element['#suffix']) ? $element['#suffix'] : '',
     );

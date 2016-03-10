@@ -1,93 +1,32 @@
 // Configure your header height here depending on the logo size
-$header-height: 105px;
-$header-compressed-height: 55px;
-
-// Our Mixin for compressed header (mobile and scroll)
-@mixin compressHeader {
-  height: $header-compressed-height;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  .site-header__logo {
-    opacity: 1;
-    transition: opacity .2s ease-in-out;
-    overflow: hidden;
-    float: left;
-    margin-right: -60px;
-    img {
-      width: 40%;
-      transition: width .3s ease-in-out;
-    }
-  }
-  #header {
-    .block-search,
-    .block-views {
-      input.form-text {
-        padding: .4em 1em;
-        font-size: 14px;
-      }
-    }
-  }
-}
+$header-height: 55px;
 
 .wrapper--header {
   position: fixed;
   width: 100%;
-  -webkit-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.1));
-  filter: url(../images/shadow.svg#drop-shadow);
-  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180);
-  background: #f5f5f5;
+  border-bottom: 1px solid $gray;
+  background: $lightgray;
   z-index: 999;
   transition: all .3s ease-in-out;
-  @include compressHeader;
-  @include breakpoint($breakpoint-medium-width) {
-    height: $header-height;
-    .site-header__logo {
-      display: block;
-      //width: 120px;
-      clear: both;
-      margin-right: 20px;
-      img {
-        height: auto;
-        width: 100%;
-      }
-    }
-    &.compressed {
-      @include compressHeader;
-      #header {
-        .block-search,
-        .block-views {
-          right: 80px;
-        }
-        a.loginpopup {
-          margin-top: 8px;
-        }
-      }
-    }
-  }
+  height: $header-height;
 }
-
 #header {
   position: relative;
   height: 100%;
-  border: 0;
+  padding: .5em 1em;
+  #logo-container {
+    float: left;
+    height: 100%;
+  }
   .site-header__logo {
     max-width: 120px;
+    position: relative;
     img {
       display: block;
     }
   }
   .region-header {
     height: 100%;
-  }
-  .region-navigation {
-    margin: 0;
-    @include align(v);
-    right: 0;
-    @include breakpoint($breakpoint-medium-width) {
-      @include align(v);
-      margin: 0;
-      right: auto;
-    }
   }
   .block-search,
   .block-views {
@@ -140,8 +79,5 @@ $header-compressed-height: 55px;
 
 // Related to Header
 .wrapper--main {
-  padding-top: $header-compressed-height;
-  @include breakpoint($breakpoint-medium-width) {
-    padding-top: $header-height;
-  }
+  margin-top: $header-height;
 }

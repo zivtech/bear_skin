@@ -1,10 +1,9 @@
 .wrapper--footer {
-  border-top: 1px solid #dedede;
+  border-top: 1px solid $gray;
 }
 
 .site-footer {
-  background: $off-black;
-  color: #fff;
+  background: $lightgray;
   .region-footer {
     padding-top: 30px;
     padding-bottom: 30px;

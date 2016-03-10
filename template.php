@@ -26,7 +26,7 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   $variables['fluid_layout'] = (theme_get_setting('main_layout') == 'fluid');
   if (theme_get_setting('main_layout') == 'fixed') {
     $variables['classes_array'][] = 'fixed-bear';
-  } else if 
+  } else if
     (theme_get_setting('main_layout') == 'fluid') {
       $variables['classes_array'][] = 'fluid-bear';
   }
