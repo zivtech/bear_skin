@@ -56,19 +56,3 @@ input[type="password"] {
 input[type="search"] {
   box-sizing: border-box;
 }
-
-fieldset {
-  font-family: $body-text-font-family;
-  border: 1px solid $bear-grey;
-  background: white;
-  border-radius: 5px;
-  padding: 15px;
-  color: $bear-greyer;
-}
-
-fieldset legend {
-  background: $bear-grey;
-  padding: 5px 10px ;
-  border-radius: 5px;
-  margin-left: 20px;
-}

@@ -222,7 +222,6 @@ function bear_coat_webform_element($variables) {
       $element['#type'] == "webform_number" ||
       $element['#type'] == "password" ||
       $element['#type'] == "tel" ||
-      $element['#type'] == "webform_time" ||
       $element['#type'] == "url" ||
       $element['#type'] == "datetime-local"
     ) {

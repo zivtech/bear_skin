@@ -137,106 +137,109 @@ body:not(.semantic-ui) {
   }
 }
 
-.ui.form {
-  .form-item,
-  fieldset {
-    position: relative;
-    margin: 5px 0;
-    display: block;
-    clear: both;
-    input, .form-select {
-      max-width: 30em;
-    }
-  }
+.form-item,
+fieldset {
+  position: relative;
+  margin: 5px 0;
+  display: block;
+  clear: both;
+  height: auto !important;
+  border: 0;
+  padding: 0;
   legend {
     margin-left: 0;
   }
-  .description {
-    font-size: 80%;
-    color: $black;
-    font-style: italic;
-    padding: 0 10px;
-    margin: 10px 0;
-    border-left: dotted 1px #aaa;
-    max-width: 38em;
+  .fieldset-wrapper {
+    padding: 1em 0 0 1em;
+    border-left: 1px dotted $gray;
+    margin: 1em 0;
   }
-  .form-item.labeled {
-    padding-top: 1.2em;
-    margin-bottom: 1em !important;
-    position: relative;
-    &:first-child {
-      margin-top: -1.2em;
-    }
-    label {
-      position: absolute;
-      top: 2.3em;
-      padding: 0;
-      transition: all .2s ease-in-out;
-      cursor: text;
-      color: $grayer;
-      &.active {
-        top: 2px;
-        font-size: 85%;
-        color: $link-color;
-        &.error {
-          color: $red !important;
-        }
+}
+.description {
+  font-size: 80%;
+  color: $black;
+  font-style: italic;
+  padding: 0 10px;
+  margin: 10px 0;
+  border-left: dotted 1px #aaa;
+  max-width: 38em;
+}
+.form-item.labeled {
+  padding-top: 1.2em;
+  margin-bottom: 1em !important;
+  position: relative;
+  &:first-child {
+    margin-top: -1.2em;
+  }
+  label {
+    position: absolute;
+    top: 2.3em;
+    padding: 0;
+    transition: all .2s ease-in-out;
+    cursor: text;
+    color: $grayer;
+    &.active {
+      top: 2px;
+      font-size: 85%;
+      color: $link-color;
+      &.error {
+        color: $red !important;
       }
     }
-    input {
-      max-width: 30em;
-      border-radius: 0;
+  }
+  input {
+    max-width: 30em;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $grayer;
+    padding: .7em  0;
+    margin-bottom: .3em;
+    //-webkit-text-fill-color: transparent;
+    &:focus,
+    &.valued {
+      outline: 0;
       background: transparent;
-      border: 0;
-      border-bottom: 1px solid $grayer;
-      padding: .7em  0;
-      margin-bottom: .3em;
-      -webkit-text-fill-color: transparent;
-      &:focus,
-      &.valued {
-        outline: 0;
-        background: transparent;
-        box-shadow: none;
-      }
-      &.error {
-        border-bottom-color: $red;
-        -webkit-text-fill-color: $black !important;
+      box-shadow: none;
+    }
+    &.error {
+      border-bottom-color: $red;
+      -webkit-text-fill-color: $black !important;
+    }
+  }
+  .mt {
+    width: 100%;
+    position: relative;
+    max-width: 30em;
+    &:before, &:after 	{
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 5px;
+      position: absolute;
+      background: $link-color;
+      transition: 0.2s all ease-in-out;
+    }
+    &.error {
+      &:before, &:after {
+        background: $red;
       }
     }
-    .mt {
-      width: 100%;
-      position: relative;
-      max-width: 30em;
-      &:before, &:after 	{
-        content: '';
-        height: 2px;
-        width: 0;
-        bottom: 5px;
-        position: absolute;
-        background: $link-color;
-        transition: 0.2s all ease-in-out;
-      }
-      &.error {
-        &:before, &:after {
-          background: $red;
-        }
-      }
-      &:before {
-        left: 50%;
-      }
-      &:after {
-        right: 50%;
-      }
-      &.focus {
-        &:before, &:after {
-          width: 50%;
-        }
+    &:before {
+      left: 50%;
+    }
+    &:after {
+      right: 50%;
+    }
+    &.focus {
+      &:before, &:after {
+        width: 50%;
       }
     }
   }
-  input.ui.button[type="submit"] {
-    margin-top: 0.5em;
-  }
+}
+input.ui.button[type="submit"] {
+  margin-top: 0.5em;
 }
 
 label {
@@ -264,4 +267,5 @@ label {
 }
 :focus::placeholder {
   opacity: .5;
+  color: $grayer;
 }
