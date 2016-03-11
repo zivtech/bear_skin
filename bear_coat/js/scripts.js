@@ -39,16 +39,6 @@
             inline   : true,
             hoverable: true
           });
-        $('.loginpopup', context).click(function(){
-          $('.ui.modal.login').modal('show');
-        });
-        $('.close', context).click(function(){
-          $('.ui.modal.login').modal('hide');
-        });
-      }
-      else {
-        // Our modal then turns into a regular link
-        $('a.loginpopup:not(.logout)', context).attr('href', '/user');
       }
 
       //******************

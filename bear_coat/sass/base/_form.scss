@@ -154,6 +154,20 @@ fieldset {
     border-left: 1px dotted $gray;
     margin: 1em 0;
   }
+  &.required {
+    > label {
+      &:after {
+        margin: -0.2em 0em 0em 0.2em;
+        content: '*';
+        color: #db2828;
+      }
+    }
+  }
+  textarea {
+    &.error {
+      border-color: $red;
+    }
+  }
 }
 .description {
   font-size: 80%;
@@ -164,7 +178,7 @@ fieldset {
   border-left: dotted 1px #aaa;
   max-width: 38em;
 }
-.form-item.labeled {
+.ui .form-item.labeled {
   padding-top: 1.2em;
   margin-bottom: 1em !important;
   position: relative;
@@ -201,6 +215,7 @@ fieldset {
       outline: 0;
       background: transparent;
       box-shadow: none;
+      border-color: transparent;
     }
     &.error {
       border-bottom-color: $red;

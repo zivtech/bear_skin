@@ -61,14 +61,7 @@ function bear_coat_theme($existing, $type, $theme, $path) {
 function bear_coat_preprocess_page(&$variables) {
   global $user;
   if (!user_is_logged_in()) {
-    $variables['loginpopup'] = "<div style='display:none'>" ;
-    $variables['loginpopup'] .= "<div id='login-popup' class='ui modal login'> <i class='close icon'></i><div class='header'>
-    User Login</div>" ;
-    $login = drupal_get_form('user_login');
-    $variables['loginpopup'] .= drupal_render($login);
-    $variables['loginpopup'] .= "</div>";
-    $variables['loginpopup'] .= "</div>";
-    $variables['loginpopup'] .= "<a class='loginpopup item floated in' href='#'><i class='setting icon'></i> Login</a>";
+    $variables['loginpopup'] = "<a class='loginpopup item floated in' href='/user'><i class='setting icon'></i> Login</a>";
   }
   else {
     $variables['loginpopup'] = "<a class='loginpopup logout item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";

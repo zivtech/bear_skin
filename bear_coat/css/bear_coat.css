@@ -52,6 +52,14 @@ fieldset {
     padding: 1em 0 0 1em;
     border-left: 1px dotted #eaeaea;
     margin: 1em 0; }
+  .form-item.required > label:after,
+  fieldset.required > label:after {
+    margin: -0.2em 0em 0em 0.2em;
+    content: '*';
+    color: #db2828; }
+  .form-item textarea.error,
+  fieldset textarea.error {
+    border-color: #FF6A40; }
 
 .description {
   font-size: 80%;
@@ -62,26 +70,26 @@ fieldset {
   border-left: dotted 1px #aaa;
   max-width: 38em; }
 
-.form-item.labeled {
+.ui .form-item.labeled {
   padding-top: 1.2em;
   margin-bottom: 1em !important;
   position: relative; }
-  .form-item.labeled:first-child {
+  .ui .form-item.labeled:first-child {
     margin-top: -1.2em; }
-  .form-item.labeled label {
+  .ui .form-item.labeled label {
     position: absolute;
     top: 2.3em;
     padding: 0;
     transition: all .2s ease-in-out;
     cursor: text;
     color: #888; }
-    .form-item.labeled label.active {
+    .ui .form-item.labeled label.active {
       top: 2px;
       font-size: 85%;
       color: #728EAD; }
-      .form-item.labeled label.active.error {
+      .ui .form-item.labeled label.active.error {
         color: #FF6A40 !important; }
-  .form-item.labeled input {
+  .ui .form-item.labeled input {
     max-width: 30em;
     border-radius: 0;
     background: transparent;
@@ -89,18 +97,19 @@ fieldset {
     border-bottom: 1px solid #888;
     padding: .7em  0;
     margin-bottom: .3em; }
-    .form-item.labeled input:focus, .form-item.labeled input.valued {
+    .ui .form-item.labeled input:focus, .ui .form-item.labeled input.valued {
       outline: 0;
       background: transparent;
-      box-shadow: none; }
-    .form-item.labeled input.error {
+      box-shadow: none;
+      border-color: transparent; }
+    .ui .form-item.labeled input.error {
       border-bottom-color: #FF6A40;
       -webkit-text-fill-color: #261D19 !important; }
-  .form-item.labeled .mt {
+  .ui .form-item.labeled .mt {
     width: 100%;
     position: relative;
     max-width: 30em; }
-    .form-item.labeled .mt:before, .form-item.labeled .mt:after {
+    .ui .form-item.labeled .mt:before, .ui .form-item.labeled .mt:after {
       content: '';
       height: 2px;
       width: 0;
@@ -108,13 +117,13 @@ fieldset {
       position: absolute;
       background: #728EAD;
       transition: 0.2s all ease-in-out; }
-    .form-item.labeled .mt.error:before, .form-item.labeled .mt.error:after {
+    .ui .form-item.labeled .mt.error:before, .ui .form-item.labeled .mt.error:after {
       background: #FF6A40; }
-    .form-item.labeled .mt:before {
+    .ui .form-item.labeled .mt:before {
       left: 50%; }
-    .form-item.labeled .mt:after {
+    .ui .form-item.labeled .mt:after {
       right: 50%; }
-    .form-item.labeled .mt.focus:before, .form-item.labeled .mt.focus:after {
+    .ui .form-item.labeled .mt.focus:before, .ui .form-item.labeled .mt.focus:after {
       width: 50%; }
 
 input.ui.button[type="submit"] {
@@ -194,7 +203,7 @@ label {
 
 body.semantic-ui:not(.panels-ipe) .ui {
   font-size: 100%;
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: "Arial", Helvetica, sans-serif; }
   body.semantic-ui:not(.panels-ipe) .ui .field > label {
     font-size: 100%; }
   body.semantic-ui:not(.panels-ipe) .ui.popup {
@@ -331,7 +340,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
 
 body:not(.semantic-ui) .wrapper .ui {
   font-size: 100%;
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: "Arial", Helvetica, sans-serif; }
 
 .table-ui-container {
   overflow-y: auto;
@@ -389,6 +398,11 @@ i.icon, i.icons {
 .ui.popup {
   font-size: 90%;
   color: #555; }
+
+.ui.modal {
+  padding: 1em; }
+  .ui.modal > .header {
+    font-family: "Arial", sans-serif; }
 
 .wrapper--footer {
   border-top: 1px solid #eaeaea; }

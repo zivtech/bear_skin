@@ -81,3 +81,10 @@ i.icon, i.icons {
 	font-size: 90%;
 	color: $off-black;
 }
+
+.ui.modal {
+	padding: 1em;
+	> .header {
+		font-family: $headers-font;
+	}
+}
