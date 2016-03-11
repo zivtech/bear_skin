@@ -174,7 +174,7 @@ body.with-sticky-footer .wrapper--main {
       @include col(3/4);
     }
   }
-  .region-sidebar-first {
+  .site-sidebars {
     @include breakpoint($breakpoint-medium-width) {
       @include col(1/4);
     }

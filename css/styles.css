@@ -741,7 +741,7 @@ h3.sidr-class-u-hidden {
     clear: both; }
   .sidebar-second main:last-child {
     margin-right: 0%; }
-  .sidebar-second .region-sidebar-first {
+  .sidebar-second .site-sidebars {
     zoom: 1;
     float: left;
     display: inline;
@@ -752,12 +752,12 @@ h3.sidr-class-u-hidden {
     width: 22.75%;
     margin-left: 0%;
     margin-right: 3%; }
-  .sidebar-second .region-sidebar-first:before, .sidebar-second .region-sidebar-first:after {
+  .sidebar-second .site-sidebars:before, .sidebar-second .site-sidebars:after {
     content: '';
     display: table; }
-  .sidebar-second .region-sidebar-first:after {
+  .sidebar-second .site-sidebars:after {
     clear: both; }
-  .sidebar-second .region-sidebar-first:last-child {
+  .sidebar-second .site-sidebars:last-child {
     margin-right: 0%; }
   .two-sidebars main {
     zoom: 1;
