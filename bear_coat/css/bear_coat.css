@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
 .compact-form-label {
   left: 17px;
@@ -35,6 +34,29 @@ body:not(.semantic-ui) #breadcrumbs .chevron:before {
   content: ">";
   padding: 0 8px;
   color: #261D19; }
+
+.ui.form .form-item,
+.ui.form fieldset {
+  position: relative;
+  margin: 5px 0;
+  display: block;
+  clear: both; }
+  .ui.form .form-item input, .ui.form .form-item .form-select,
+  .ui.form fieldset input,
+  .ui.form fieldset .form-select {
+    max-width: 30em; }
+
+.ui.form legend {
+  margin-left: 0; }
+
+.ui.form .description {
+  font-size: 80%;
+  color: #261D19;
+  font-style: italic;
+  padding: 0 10px;
+  margin: 10px 0;
+  border-left: dotted 1px #aaa;
+  max-width: 38em; }
 
 .ui.form .form-item.labeled {
   padding-top: 1.2em;
@@ -107,14 +129,6 @@ label {
     font-size: 14px; }
   .ui.dropdown .default.text {
     color: #888; }
-
-.ui.checkbox,
-.ui.radio.checkbox {
-  margin-right: 15px; }
-  .ui.checkbox label,
-  .ui.radio.checkbox label {
-    padding-left: 1.5em;
-    color: #555; }
 
 ::-webkit-input-placeholder {
   opacity: 0;
@@ -192,6 +206,14 @@ body.semantic-ui:not(.panels-ipe) .ui.menu a.item:focus {
 body.semantic-ui:not(.panels-ipe) #content .ui.fluid.input > input {
   width: auto !important; }
 
+body.semantic-ui:not(.panels-ipe) .ui.checkbox,
+body.semantic-ui:not(.panels-ipe) .ui.radio.checkbox {
+  margin-right: 15px; }
+  body.semantic-ui:not(.panels-ipe) .ui.checkbox label,
+  body.semantic-ui:not(.panels-ipe) .ui.radio.checkbox label {
+    padding-left: 1.5em;
+    color: #555; }
+
 .sidebar {
   font-size: 90%; }
 
@@ -219,104 +241,6 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   body.semantic-ui:not(.panels-ipe) .ui.form input,
   body.semantic-ui:not(.panels-ipe) .ui.search-form input {
     font-family: "Helvetica Neue", Helvetica, sans-serif; }
-  body.semantic-ui:not(.panels-ipe) .ui.form .form-item,
-  body.semantic-ui:not(.panels-ipe) .ui.form fieldset,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form .form-item,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form fieldset {
-    position: relative;
-    margin: 5px 0;
-    display: block;
-    clear: both; }
-    body.semantic-ui:not(.panels-ipe) .ui.form .form-item input, body.semantic-ui:not(.panels-ipe) .ui.form .form-item .form-select,
-    body.semantic-ui:not(.panels-ipe) .ui.form fieldset input,
-    body.semantic-ui:not(.panels-ipe) .ui.form fieldset .form-select,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form .form-item input,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form .form-item .form-select,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form fieldset input,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form fieldset .form-select {
-      max-width: 30em; }
-  body.semantic-ui:not(.panels-ipe) .ui.form legend,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form legend {
-    margin-left: 0; }
-  body.semantic-ui:not(.panels-ipe) .ui.form .description,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form .description {
-    font-size: 80%;
-    color: #261D19;
-    font-style: italic;
-    padding: 0 10px;
-    margin: 10px 0;
-    border-left: dotted 1px #aaa;
-    max-width: 38em; }
-  body.semantic-ui:not(.panels-ipe) .ui.form details summary,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form details summary {
-    cursor: pointer;
-    font-size: 90%;
-    color: #888;
-    outline: 0; }
-    body.semantic-ui:not(.panels-ipe) .ui.form details summary::-webkit-details-marker,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary::-webkit-details-marker {
-      display: none; }
-    body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="true"]:before,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="true"]:before {
-      display: inline-block;
-      opacity: 1;
-      margin: 0em 0.25rem 0em 0em;
-      width: 1.18em;
-      height: 1em;
-      font-family: 'Icons';
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: inherit;
-      text-align: center;
-      speak: none;
-      font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      font: Icons;
-      color: #728EAD;
-      content: "";
-      transition: color .2s ease-in-out; }
-    body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="true"]:hover:before, body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="true"]:focus:before,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="true"]:hover:before,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="true"]:focus:before {
-      color: #577495; }
-    body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="false"]:before,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="false"]:before {
-      display: inline-block;
-      opacity: 1;
-      margin: 0em 0.25rem 0em 0em;
-      width: 1.18em;
-      height: 1em;
-      font-family: 'Icons';
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: inherit;
-      text-align: center;
-      speak: none;
-      font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      font: Icons;
-      color: #728EAD;
-      content: "";
-      transition: color .2s ease-in-out; }
-    body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="false"]:hover:before, body.semantic-ui:not(.panels-ipe) .ui.form details summary[aria-expanded="false"]:focus:before,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="false"]:hover:before,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary[aria-expanded="false"]:focus:before {
-      color: #577495; }
-    body.semantic-ui:not(.panels-ipe) .ui.form details summary:hover, body.semantic-ui:not(.panels-ipe) .ui.form details summary:focus,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary:hover,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form details summary:focus {
-      color: #577495; }
-  body.semantic-ui:not(.panels-ipe) .ui.form details .form-item,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form details .form-item {
-    padding: 0 1em;
-    margin: 1em 0;
-    border-left: 1px dotted #aaa; }
   body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown .menu > .item,
   body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown .menu > .item {
     font-size: 14px;

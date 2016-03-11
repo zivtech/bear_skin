@@ -124,6 +124,174 @@ function bear_coat_form_views_exposed_form_alter(&$form, $form_state) {
 /**
  * Implements theme_form_element().
  */
+function bear_coat_webform_element($variables) {
+
+  dpm($variables);
+
+  $element = &$variables['element'];
+  $is_checkbox = FALSE;
+  $is_radio = FALSE;
+  $name = !empty($element['#name']) ? $element['#name'] : FALSE;
+  $type = !empty($element['#type']) ? $element['#type'] : FALSE;
+
+  // This function is invoked as theme wrapper, but the rendered form element
+  // may not necessarily have been processed by form_builder().
+  $element += array(
+    '#title_display' => 'before',
+  );
+
+  // Add element #id for #type 'item'.
+  if (isset($element['#markup']) && !empty($element['#id'])) {
+    $attributes['id'] = $element['#id'];
+  }
+  // Check for errors and set correct error class.
+  $error_text = form_get_error($element);
+  if (isset($element['#parents']) && $error_text !== NULL && !empty($element['#validated'])) {
+    $element['#attributes']['class'][] = 'error1';
+    _form_set_class($element, array('error'));
+    $error = 'error';
+  }
+  else {
+    $error = '';
+  }
+  // Making popup error message
+  if ($error_text !== NULL && theme_get_setting('bear_coat_error_popups') == 1) {
+    $error_message = '<div class="ui pointing red basic label">' . $error_text . '</div>';
+  }
+  else {
+    $error_message = '';
+  }
+
+  // Add element's #type and #name as class to aid with JS/CSS selectors.
+  $attributes['class'] = array('form-item');
+  //$attributes['class'][] = 'field';
+  $attributes['class'][] = $error;
+
+  if (!empty($element['#type'])) {
+    $attributes['class'][] = drupal_html_class('form-type-' . $element['#type']);
+  }
+  if (!empty($element['#name'])) {
+    $attributes['class'][] = drupal_html_class('form-item-' . $element['#name']);
+  }
+  // for exposed filter search fields
+  //  if ($element['#name'] == "query") {
+  //    $attributes['class'] = array('ui', 'fluid', 'search', 'icon', 'input');
+  //  }
+  // Add a class for disabled elements to facilitate cross-browser styling.
+  if (!empty($element['#attributes']['disabled'])) {
+    $attributes['class'][] = 'disabled';
+  }
+  if (!empty($element['#autocomplete_path']) && drupal_valid_path($element['#autocomplete_path'])) {
+    $attributes['class'][] = 'autocomplete';
+  }
+  if (isset($element['#type'])) {
+    if ($element['#type'] == "radio") {
+      unset($attributes['class']);
+      $attributes['class'][] = 'ui';
+      $attributes['class'][] = 'radio';
+      $attributes['class'][] = 'checkbox';
+      $attributes['class'][] = 'form-item';
+      $is_radio = TRUE;
+    }
+    elseif ($element['#type'] == "checkbox") {
+      unset($attributes['class']);
+      $attributes['class'][] = 'ui';
+      $attributes['class'][] = 'checkbox';
+      $attributes['class'][] = 'form-item';
+      $is_checkbox = TRUE;
+      if (isset($element['#title'])) {
+        if ($element['#title_display'] == 'invisible') {
+          $attributes['class'][] = 'tab-label';
+        }
+      }
+      else {
+        $attributes['class'][] = 'tab-label';
+      }
+    }
+    elseif ($element['#type'] == 'file') {
+      $attributes['class'][] = 'ui';
+      $attributes['class'][] = 'input';
+    }
+    elseif ($element['#type'] == "select") {
+      unset($attributes['class']);
+      $attributes['class'][] = 'form-item field';
+    }
+    elseif (
+      $element['#type'] == "textfield" ||
+      $element['#type'] == "webform_email" ||
+      $element['#type'] == "webform_number" ||
+      $element['#type'] == "password" ||
+      $element['#type'] == "tel" ||
+      $element['#type'] == "webform_time" ||
+      $element['#type'] == "url" ||
+      $element['#type'] == "datetime-local"
+    ) {
+      $attributes['class'][] = "labeled";
+    }
+    else {
+      $attributes['class'][] = "off-label";
+    }
+  }
+
+  // Add requird class to the element wrapper because Semantic UI will use it
+  // to append required aterisk.
+  if (isset($element['#required']) && $element['#required']) {
+    $attributes['class'][] = 'required';
+  }
+
+  // Show field description in a popup.
+  $popup_description = theme_get_setting('bear_coat_popup_description');
+  if (!empty($element['#description']) && $popup_description == 1) {
+    $attributes['data-html'][] = $element['#description'];
+  }
+
+  if (isset($element['#wrapper_attributes'])) {
+    $attributes = drupal_array_merge_deep($attributes, $element['#wrapper_attributes']);
+  }
+
+  $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
+
+  // If #title is not set, we don't display any label or required marker.
+  if (!isset($element['#title'])) {
+    $element['#title_display'] = 'none';
+  }
+
+  $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span> ' : '';
+  $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
+
+  switch ($element['#title_display']) {
+    case 'before':
+    case 'invisible':
+    case 'inline':
+      $output .= ' ' . theme('form_element_label', $variables);
+      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      break;
+
+    case 'none':
+    case 'attribute':
+      // Output no label and no required marker, only the children.
+      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      break;
+  }
+
+  if (!empty($element['#description']) && $popup_description == 0) {
+    $output .= '<p class="description">' . $element['#description'] . "</p>\n";
+  }
+
+  $output .= $error_message;
+  $output .= "</div>\n";
+
+  return $output;
+}
+
+function bear_coat_select($variables) {
+  $element = $variables['element'];
+  element_set_attributes($element, array('id', 'name', 'size'));
+  _form_set_class($element, array('ui search dropdown'));
+
+  return '<select' . drupal_attributes($element ['#attributes']) . '>' . form_select_options($element) . '</select>';
+}
+
 function bear_coat_form_element($variables) {
   $element = &$variables['element'];
   $is_checkbox = FALSE;
@@ -288,14 +456,6 @@ function bear_coat_form_element($variables) {
   $output .= "</div>\n";
 
   return $output;
-}
-
-function bear_coat_select($variables) {
-  $element = $variables['element'];
-  element_set_attributes($element, array('id', 'name', 'size'));
-  _form_set_class($element, array('ui search dropdown'));
-
-  return '<select' . drupal_attributes($element ['#attributes']) . '>' . form_select_options($element) . '</select>';
 }
 
 /**

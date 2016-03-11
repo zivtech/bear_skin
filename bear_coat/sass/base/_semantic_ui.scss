@@ -33,6 +33,14 @@ body.semantic-ui:not(.panels-ipe) {
       width: auto !important;
     }
   }
+  .ui.checkbox,
+  .ui.radio.checkbox {
+    margin-right: 15px;
+    label {
+      padding-left: 1.5em;
+      color: $off-black;
+    }
+  }
 }
 .sidebar {
   font-size: 90%;
@@ -60,53 +68,6 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   }
   input {
     font-family: $body-text-font-family;
-  }
-  .form-item,
-  fieldset {
-    position: relative;
-    margin: 5px 0;
-    display: block;
-    clear: both;
-    input, .form-select {
-      max-width: 30em;
-    }
-  }
-  legend {
-    margin-left: 0;
-  }
-  .description {
-    font-size: 80%;
-    color: $black;
-    font-style: italic;
-    padding: 0 10px;
-    margin: 10px 0;
-    border-left: dotted 1px #aaa;
-    max-width: 38em;
-  }
-  details {
-    summary {
-      cursor: pointer;
-      font-size: 90%;
-      color: $grayer;
-      outline: 0;
-      &::-webkit-details-marker {
-        display: none
-      }
-      &[aria-expanded="true"] {
-        @include ui-icon("\f055");
-      }
-      &[aria-expanded="false"] {
-        @include ui-icon("\f056");
-      }
-      &:hover, &:focus {
-        color: $link-color-hover;
-      }
-    }
-    .form-item {
-      padding: 0 1em;
-      margin: 1em 0;
-      border-left: 1px dotted $dotted;
-    }
   }
   .ui.dropdown {
     .menu {

@@ -138,6 +138,28 @@ body:not(.semantic-ui) {
 }
 
 .ui.form {
+  .form-item,
+  fieldset {
+    position: relative;
+    margin: 5px 0;
+    display: block;
+    clear: both;
+    input, .form-select {
+      max-width: 30em;
+    }
+  }
+  legend {
+    margin-left: 0;
+  }
+  .description {
+    font-size: 80%;
+    color: $black;
+    font-style: italic;
+    padding: 0 10px;
+    margin: 10px 0;
+    border-left: dotted 1px #aaa;
+    max-width: 38em;
+  }
   .form-item.labeled {
     padding-top: 1.2em;
     margin-bottom: 1em !important;
@@ -231,15 +253,6 @@ label {
   }
   .default.text {
     color: $grayer;
-  }
-}
-
-.ui.checkbox,
-.ui.radio.checkbox {
-  margin-right: 15px;
-  label {
-    padding-left: 1.5em;
-    color: $off-black;
   }
 }
 
