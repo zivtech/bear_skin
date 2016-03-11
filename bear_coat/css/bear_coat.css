@@ -462,8 +462,13 @@ i.icon, i.icons {
     float: right;
     font-size: 80%;
     position: relative;
-    top: 3px;
-    right: 4em; }
+    top: .75em;
+    right: 4em;
+    color: #261D19; }
+    #header a.loginpopup i {
+      font-size: 100%; }
+    #header a.loginpopup:focus, #header a.loginpopup:hover {
+      color: #3b4f65; }
 
 .wrapper--main {
   margin-top: 55px; }

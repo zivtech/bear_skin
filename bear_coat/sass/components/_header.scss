@@ -34,8 +34,15 @@ $header-height: 55px;
     float: right;
     font-size: 80%;
     position: relative;
-    top: 3px;
+    top: .75em;
     right: 4em;
+    color: $black;
+    i {
+      font-size: 100%;
+    }
+    &:focus, &:hover {
+      color: $link-color-hover;
+    }
     @include breakpoint($breakpoint-large-width) {
       right: 0;
     }
