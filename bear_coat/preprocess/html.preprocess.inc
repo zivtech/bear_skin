@@ -38,4 +38,12 @@ function bear_coat_preprocess_html(&$vars) {
   if (module_exists('responsive_menus')) :
     $vars['classes_array'][] = "resp-nav";
   endif;
+
+  // adding a body class if node is unpublished
+  $node = menu_get_object();
+  if ($node && isset($node->nid)) {
+    if (!$node->status) {
+      $vars['classes_array'][] = 'unpublished';
+    }
+  }
 }

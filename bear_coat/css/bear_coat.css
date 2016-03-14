@@ -188,6 +188,9 @@ label {
 .field-collection-view {
   margin: 0; }
 
+body.unpublished #main {
+  background-color: #fff4f4; }
+
 .admin-menu .wrapper--header {
   position: relative; }
 

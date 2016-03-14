@@ -28,6 +28,12 @@
   margin: 0;
 }
 
+body.unpublished {
+  #main {
+    background-color: #fff4f4
+  }
+}
+
 // fixes for logged-in users and IPE
 .admin-menu {
 	.wrapper--header {
