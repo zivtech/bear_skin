@@ -13,7 +13,7 @@ reinstall gulp: sudo npm install gulp -g
 After the process finishes, you'll be able to run all the gulp tasks (see below).
 
 Note: The theme relies on Semantic UI for some of its UI/UX elements.
-Go to /admin/appearance/settings/bear_coat to congigure it.
+Go to /admin/appearance/settings/bear_coat to configure it.
 
 
 
