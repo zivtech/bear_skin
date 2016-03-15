@@ -15,7 +15,7 @@
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="public/kss.css">
   <link rel="stylesheet" href="custom/style.css">
-  <link rel="stylesheet" href="../semantic_ui/dist/semantic.css">
+  <link rel="stylesheet" href="/sites/all/libraries/semantic_ui/semantic.css">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="public/style.css">
 
@@ -28,6 +28,7 @@
     <aside>
       <nav><ul>
         <li><a href="index.html">Overview</a></li>
+          <li>1: <a href="section-1.html">Color Palette</a></li>
           <li>2: <a href="section-2.html">Typography</a></li>
           <li>3: <a href="section-3.html">Layout Elements</a></li>
           <li>4: <a href="section-4.html">UI Elements</a></li>
@@ -84,7 +85,43 @@
           
             </section>
            <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">2.3</span> - Links</h1>
+            <h2 class="kss-title"><span class="kss-ref">2.3</span> - Bold</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p><b>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor.</b></p>
+<p><strong>Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</strong></p></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;p&gt;&lt;b&gt;Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/strong&gt;&lt;/p&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.4</span> - Italic</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.</i></p></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;p&gt;&lt;i&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.&lt;/i&gt;&lt;/p&gt;</pre>
+                </div>
+          
+            </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.5</span> - Links</h1>
                 <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <!-- <tr class="kss-mod-desc-group">
@@ -101,7 +138,7 @@
           
             </section>
            <section class="kss-depth-2">
-            <h2 class="kss-title"><span class="kss-ref">2.3</span> - Generic Sizes</h1>
+            <h2 class="kss-title"><span class="kss-ref">2.6</span> - Generic Sizes</h1>
                 <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <!-- <tr class="kss-mod-desc-group">
@@ -165,6 +202,23 @@
                 </div>
           
             </section>
+           <section class="kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.7</span> - blockquote</h1>
+                <div class="kss-box"></div>
+                <table class="kss-mod-list">
+                  <!-- <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr> -->
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><blockquote>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</blockquote></td>
+                  </tr>
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;blockquote&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/blockquote&gt;</pre>
+                </div>
+          
+            </section>
     </article>
   </div>
   <footer>
@@ -174,9 +228,9 @@
   <script src="public/kss.js"></script>
   <script src="public/prettify.js"></script>
   <script src="js/jquery-1.7.min.js"></script>
-  <script src="../semantic_ui/dist/semantic.js"></script>
+  <script src="/sites/all/libraries/semantic_ui/semantic.js"></script>
   <script src="js/index.js"></script>
-  
+
   <script>
     $(document).ready(function(){
       var sidebarAdjust = function() {
