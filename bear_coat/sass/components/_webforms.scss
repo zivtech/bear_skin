@@ -1,0 +1,13 @@
+.ui.form {
+  .webform-container-inline {
+    label {
+      display: inline !important;
+      margin: 0 .5em;
+    }
+    .field {
+      .dropdown {
+        width: auto;
+      }
+    }
+  }
+}

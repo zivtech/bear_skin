@@ -75,18 +75,9 @@
               .addClass('focus active');
           })
           .on('blur', function(){
-            if (!$(this).val()) {
-              $(this)
-                .siblings('label, .mt')
-                .removeClass('focus active');
-              }
-            else {
-              $(this)
-                .addClass('valued')
-                .end()
-                .siblings('label, .mt')
-                .removeClass('focus');
-              }
+            $(this)
+              .siblings('label, .mt')
+              .removeClass('focus active');
           });
         $textInput.each(function(){
           if ($(this).is(':focus')) {
@@ -96,8 +87,8 @@
           }
           if ($(this).hasClass('error')) {
             $(this)
-              .siblings('label, .mt')
-              .addClass('focus active error');
+              .siblings('label')
+              .addClass('error');
           }
         });
 
