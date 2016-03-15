@@ -1,38 +1,35 @@
 // Form Elements
 //
-// Styleguide 5.0
+// Styleguide 4.0
 
 //
 // Mixins
 //
 
-// Form
-//
-// Markup:
-// <form class="ui form segment">
-//   <p>Simple form wrapper</p>
-// </form>
-//
-// Styleguide 5.1
-
 // Text input
 //
 // Markup:
 // <form class="ui form segment">
-//   <input type="text" name="first-name" placeholder="First Name">
+//   <div class="form-item labeled">
+//      <label>Label</label>
+//      <input type="text" name="first-name" placeholder="First Name">
+//      <div class="mt"></div>
+//   </div>
 // </form>
 //
-// Styleguide 5.2
+// Styleguide 4.1
 
 // Text area
 //
 // Markup:
 // <form class="ui form segment">
-//   <label>Your Message:</label>
-//   <textarea></textarea>
+//   <div class="form-item labeled">
+//      <label>Label</label>
+//      <textarea></textarea>
+//   </div>
 // </form>
 //
-// Styleguide 5.3
+// Styleguide 4.2
 
 // Submit
 //
@@ -41,7 +38,7 @@
 //   <input class="ui button" type="submit" value="Send" />
 // </form>
 //
-// Styleguide 5.4
+// Styleguide 4.3
 
 // Select List
 //
@@ -54,7 +51,45 @@
 //   </select>
 // </form>
 //
-// Styleguide 5.5
+// Styleguide 4.4
+
+// Select List (radio)
+//
+// Markup:
+// <div class="form-item form-type-radios off-label required form-item">
+//   <label for="edit-submitted-yes">Yes?</label>
+//   <div id="edit-submitted-yes" class="form-radios">
+//     <div class="ui radio checkbox form-item">
+//       <input required="required" type="radio" id="edit-submitted-yes-1" name="yes" value="Yes" class="form-radio">
+//       <label for="edit-submitted-yes-1">yes</label>
+//     </div>
+//     <div class="ui radio checkbox form-item">
+//       <input required="required" type="radio" id="edit-submitted-yes-2" name="yes" value="No" class="form-radio">
+//       <label for="edit-submitted-yes-2">no</label>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.5
+
+// Select List (checkbox)
+//
+// Markup:
+// <div class="form-item form-type-checkboxes off-label required form-item">
+//   <label for="edit-submitted-yes">When?</label>
+//   <div id="edit-submitted-yes" class="form-radios">
+//     <div class="ui checkbox form-item">
+//       <input required="required" type="checkbox" id="edit-submitted-yes-1" name="yes" value="Yes" class="form-radio">
+//       <label for="edit-submitted-yes-1">Day</label>
+//     </div>
+//     <div class="ui checkbox form-item">
+//       <input required="required" type="checkbox" id="edit-submitted-yes-2" name="yes" value="No" class="form-radio">
+//       <label for="edit-submitted-yes-2">Night</label>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.5
 
 @mixin form-container($margin: $form-input-container-margin) {
   @include cf;
@@ -291,8 +326,8 @@ input.ui.button[type="submit"] {
     display: block;
     font-weight: normal;
   }
-  .form-item label {
-    font-weight: normal;
+  .form-item {
+    margin-bottom: .5em;
   }
 }
 

@@ -186,8 +186,8 @@ input.ui.button[type="submit"] {
   display: block;
   font-weight: normal; }
 
-.form-item .form-item label {
-  font-weight: normal; }
+.form-item .form-item {
+  margin-bottom: .5em; }
 
 .ui.dropdown {
   color: #555; }
