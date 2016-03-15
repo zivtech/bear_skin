@@ -50,17 +50,10 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   font-family: $body-text-font-family;
   padding: 0;
   .form-wrapper:not(.form-actions) {
-    border-radius: 0.285714rem;
-    margin: .5em 0;
-    display: inline-block;
-    width: 100%;
-    .form-wrapper {
-      padding: 10px 0;
-    }
     legend {
-      margin: 5px 0 20px 0;
-      float: left;
-      clear: both;
+      // margin: 5px 0 20px 0;
+      // float: left;
+      // clear: both;
     }
     .fieldset-description {
       clear: both;
@@ -70,6 +63,7 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
     font-family: $body-text-font-family;
   }
   .ui.dropdown {
+    max-width: 30em;
     .menu {
       > .item {
         font-size: 14px;

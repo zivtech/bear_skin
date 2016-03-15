@@ -150,9 +150,11 @@ fieldset {
     margin-left: 0;
   }
   .fieldset-wrapper {
-    padding: 1em 0 0 1em;
-    border-left: 1px dotted $gray;
+    background: $lightgray;
+    padding: 1em;
+    border: 1px dotted $gray;
     margin: 1em 0;
+    overflow: visible !important;
   }
   &.required {
     > label {
@@ -178,17 +180,12 @@ fieldset {
   border-left: dotted 1px #aaa;
   max-width: 38em;
 }
+
 .ui .form-item.labeled {
-  margin-bottom: 1.5em;
   label {
     max-width: 30em;
-    cursor: text;
-    color: $grayer;
-    &.active {
-      top: 2px;
-      &.error {
-        color: $red !important;
-      }
+    &.error {
+      color: $red !important;
     }
   }
   input {
@@ -209,6 +206,21 @@ fieldset {
     &.error {
       border-bottom-color: $red;
       -webkit-text-fill-color: $black !important;
+      &:focus,
+      &.valued {
+        border-bottom-color: transparent !important;
+      }
+    }
+  }
+  textarea {
+    margin: 0;
+    border: 0;
+    border-radius: 0 !important;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.04);
+    padding: .67em .5em;
+    &:focus {
+      border-bottom: 2px solid rgba(0,0,0,0.5);
     }
   }
   .mt {
@@ -227,7 +239,12 @@ fieldset {
     }
     &.error {
       &:before, &:after {
-        background: $red;
+        background: transparent;
+      }
+      &.focus {
+        &:before, &:after {
+          background: rgba(0,0,0,0.5);
+        }
       }
     }
     &:before {
@@ -247,11 +264,36 @@ input.ui.button[type="submit"] {
   margin-top: 0.5em;
 }
 
-label {
-  color: $grayer;
-  padding: 0 0 5px 0;
-  display: block;
-  font-size: 90%;
+.form-type-textarea {
+  max-width: 40em;
+}
+
+.form-item {
+  margin-bottom: 1.5em;
+}
+
+#comments {
+  margin-top: 2em;
+}
+
+.text-format-wrapper {
+  .form-item {
+    margin-bottom: 0;
+  }
+  .ckeditor_links, fieldset {
+    font-size: 90%;
+  }
+}
+
+.form-item {
+  label {
+    color: #000;
+    display: block;
+    font-weight: normal;
+  }
+  .form-item label {
+    font-weight: normal;
+  }
 }
 
 .ui.dropdown {
