@@ -1,6 +1,6 @@
 // UI Elements
 //
-// Styleguide 4.0
+// Styleguide 3.0
 
 // Buttons
 //
@@ -11,7 +11,17 @@
 // .active              -  The active user selection
 // .disabled            -  No interaction
 //
-// Styleguide 4.1
+// Styleguide 3.1
+
+// System Messages
+//
+// Markup:
+// <div class="messages {$modifiers}">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+//
+// .messages--success    - Signaling a sucesseful operation
+// .messages--error      - Signaling an error
+//
+// Styleguide 3.2
 
 // Icons
 //
@@ -22,7 +32,7 @@
 // <i class="map icon"></i>
 // <i class="cloud download icon"></i>
 //
-// Styleguide 4.2
+// Styleguide 3.3
 
 // Loader
 //
@@ -31,7 +41,7 @@
 //   <div class="ui text loader">Loading</div>
 // </div>
 //
-// Styleguide 4.3
+// Styleguide 3.4
 
 // Pager
 //
@@ -42,7 +52,7 @@
 //   <a class="icon next item" title="Go to next page" href="#">next ›</a>
 // </div>
 //
-// Styleguide 4.4
+// Styleguide 3.5
 
 // Tooltips
 //
@@ -51,7 +61,7 @@
 //   Button with tooltip
 // </div>
 //
-// Styleguide 4.5
+// Styleguide 3.6
 
 // Modal window (overlay)
 //
@@ -67,7 +77,7 @@
 //   </div>
 // </div>
 //
-// Styleguide 4.6
+// Styleguide 3.7
 
 .ui.button {
 	font-weight: normal;
