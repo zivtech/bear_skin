@@ -21,13 +21,27 @@
 //
 // Styleguide 2.2
 
+// Bold
+//
+// Markup:
+// <p><b>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor.</b></p>
+// <p><strong>Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</strong></p>
+//
+// Styleguide 2.3
+
+// Italic
+//
+// Markup:
+// <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.</i></p>
+//
+// Styleguide 2.4
+
 // Links
 //
 // Markup:
 // <p>Donec id elit <a href="javascript:;">non mi porta</a> gravida at eget metus.</p>
 //
-// Styleguide 2.3
-
+// Styleguide 2.5
 
 // Generic Sizes
 //
@@ -41,7 +55,14 @@
 // .larger      - $black: #261D19;
 // .largest     - $black: #261D19;
 //
-// Styleguide 2.3
+// Styleguide 2.6
+
+// blockquote
+//
+// Markup:
+// <blockquote>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</blockquote>
+//
+// Styleguide 2.7
 
 //
 // Reusable classes
@@ -103,13 +124,17 @@ $h4-font-size: 1.2  * $body-font-size;
 $h5-font-size: 0.83 * $body-font-size;
 $h6-font-size: 0.75 * $body-font-size;
 $headers-font: 'Arial', sans-serif;
-$body-font: 'Arial', Helvetica, sans-serif;
+$body-font: 'Arial', sans-serif;
+$serif: 'Times New Roman', serif;
 $base-font-color: $off-black;
 $link-color: $blue;
-$link-color-hover: darken($link-color, 25%);
-$link-color-active: darken($link-color, 50%);
+$link-color-hover: darken($link-color, 15%);
+$link-color-active: darken($link-color, 30%);
 
 
+body {
+  font-family: $body-font;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
   font-weight: normal;
@@ -146,5 +171,23 @@ a {
   color: $link-color;
   &:hover, &:focus {
     color: $link-color-hover;
+    text-decoration: underline;
+  }
+}
+
+blockquote {
+  margin: 1em 0;
+  padding-left: 2.5em;
+  border-left: 0.5em $gray solid;
+  background: $lightgray;
+  position: relative;
+  font-family: $serif;
+  &:before {
+    content: "\201C";
+    font-size: 3em;
+    position: absolute;
+    color: $grayer;
+    left: 8px;
+    top: -8px;
   }
 }

@@ -1,3 +1,24 @@
+// Color Palette
+//
+// These are the primary colors for the site
+//
+// Markup:
+// <div class="bg {$modifiers}"></div>
+//
+// .black                - $black: #261D19;
+// .off-black            - $off-back: #555;
+// .grayer               - $grayer: #888;
+// .gray                 - $gray: #eaeaea;
+// .lightgray            - $lightgray: #f5f5f5;
+// .red                  - $red: #FF6A40;
+// .blue                 - $blue: #728EAD;
+// .drenched-blue        - $drenched-blue: saturate($blue, 30%);
+// .light-blue           - $light-blue: lighten($blue, 20%);
+// .green                - $green: #40C27A;
+// .yellow               - $yellow: #F9B634;
+//
+// Styleguide 1
+
 //
 // Color variables
 //
@@ -15,6 +36,40 @@ $yellow: #F9B634;
 $white: white;
 
 $dotted: #aaa;
+
+.black {
+	background-color: $black;
+}
+.off-black {
+	background-color: $off-black;
+}
+.grayer {
+  background-color: $grayer;
+}
+.gray {
+	background-color: $gray;
+}
+.lightgray {
+  background-color: $lightgray;
+}
+.red {
+  background-color: $red;
+}
+.blue {
+	background-color: $blue;
+}
+.drenched-blue {
+	background-color: $drenched-blue;
+}
+.light-blue {
+	background-color: $light-blue;
+}
+.green {
+	background-color: $green;
+}
+.yellow {
+	background-color: $yellow;
+}
 
 //
 // GLOBALS
