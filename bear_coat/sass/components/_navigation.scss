@@ -37,6 +37,15 @@
         border-top: 2px solid $gray;
         padding: .5em;
         border-radius: 4px;
+        &:before {
+          content: "";
+          border-left: 8px solid transparent;
+        	border-right: 8px solid transparent;
+        	border-bottom: 8px solid $gray;
+          top: -8px;
+          left: 2em;
+          position: absolute;
+        }
         a {
           font-size: 90%;
           display: inline-block;
@@ -47,7 +56,7 @@
     }
     a {
       margin: 0 .5em;
-      padding: 1em 0;
+      padding: 1.2em 0;
       &.active {
         color: $link-color-hover;
       }

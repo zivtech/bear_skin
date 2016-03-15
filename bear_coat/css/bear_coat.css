@@ -522,6 +522,14 @@ i.icon, i.icons {
         border-top: 2px solid #eaeaea;
         padding: .5em;
         border-radius: 4px; }
+        .region-navigation nav div.secondary:before {
+          content: "";
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-bottom: 8px solid #eaeaea;
+          top: -8px;
+          left: 2em;
+          position: absolute; }
         .region-navigation nav div.secondary a {
           font-size: 90%;
           display: inline-block;
@@ -529,7 +537,7 @@ i.icon, i.icons {
           margin-bottom: .2em; }
     .region-navigation nav a {
       margin: 0 .5em;
-      padding: 1em 0; }
+      padding: 1.2em 0; }
       .region-navigation nav a.active {
         color: #3b4f65; }
 
