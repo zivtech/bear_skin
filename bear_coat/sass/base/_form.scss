@@ -171,7 +171,7 @@ fieldset {
 }
 .description {
   font-size: 80%;
-  color: $black;
+  color: $grayer;
   font-style: italic;
   padding: 0 10px;
   margin: 10px 0;
@@ -179,23 +179,13 @@ fieldset {
   max-width: 38em;
 }
 .ui .form-item.labeled {
-  padding-top: 1.2em;
-  margin-bottom: 1em !important;
-  position: relative;
-  &:first-child {
-    margin-top: -1.2em;
-  }
+  margin-bottom: 1.5em;
   label {
-    position: absolute;
-    top: 2.3em;
-    padding: 0;
-    transition: all .2s ease-in-out;
+    max-width: 30em;
     cursor: text;
     color: $grayer;
     &.active {
       top: 2px;
-      font-size: 85%;
-      color: $link-color;
       &.error {
         color: $red !important;
       }
@@ -203,19 +193,18 @@ fieldset {
   }
   input {
     max-width: 30em;
-    border-radius: 0;
-    background: transparent;
+    margin: 0;
     border: 0;
-    border-bottom: 1px solid $grayer;
-    padding: .7em  0;
-    margin-bottom: .3em;
-    //-webkit-text-fill-color: transparent;
+    border-radius: 0 !important;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.04);
+    padding: .67em .5em;
     &:focus,
     &.valued {
       outline: 0;
-      background: transparent;
       box-shadow: none;
-      border-color: transparent;
+      background: rgba(0,0,0,0.04);
+      border-bottom-color: transparent;
     }
     &.error {
       border-bottom-color: $red;
@@ -226,13 +215,14 @@ fieldset {
     width: 100%;
     position: relative;
     max-width: 30em;
+    margin-bottom: .3em;
     &:before, &:after 	{
       content: '';
       height: 2px;
       width: 0;
-      bottom: 5px;
+      bottom: 0;
       position: absolute;
-      background: $link-color;
+      background: rgba(0,0,0,0.5);
       transition: 0.2s all ease-in-out;
     }
     &.error {
