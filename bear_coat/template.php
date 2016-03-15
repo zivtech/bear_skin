@@ -61,9 +61,9 @@ function bear_coat_theme($existing, $type, $theme, $path) {
 function bear_coat_preprocess_page(&$variables) {
   global $user;
   if (!user_is_logged_in()) {
-    $variables['loginpopup'] = "<a class='loginpopup item floated in' href='/user'><i class='setting icon'></i> Login</a>";
+    $variables['loginpopup'] = '<div class="header-log"><a class="loginpopup item floated in" href="/user"><i class="setting icon"></i> Login</a></div>';
   }
   else {
-    $variables['loginpopup'] = "<a class='loginpopup logout item floated out' href='/user/logout'><i class='setting icon'></i> Logout</a>";
+    $variables['loginpopup'] = '<div class="header-log"><a class="loginpopup logout item floated out" href="/user/logout"><i class="setting icon"></i> Logout</a>';
   }
 }
