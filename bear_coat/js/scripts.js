@@ -36,7 +36,7 @@
           offset: 50
         });
         $('.ui.pop-up', context).popup({
-            inline   : true,
+            inline: true,
             hoverable: true
           });
       }
@@ -137,7 +137,12 @@
            $('#sidr-0-button').click();
          }
        });
-     }
+      }
+
+      // header (if we want sticky)
+      $('#main').waypoint(function() {
+        $('.wrapper--header').toggleClass('sticky');
+      });
 
    }
   };

@@ -29,6 +29,7 @@ function bear_coat_check_library($library_name, $file_name) {
 function bear_coat_preprocess_html(&$vars) {
   if (bear_coat_check_library('semantic_ui', 'semantic.min.css') && bear_coat_check_library('semantic_ui', 'semantic.min.js') && theme_get_setting('semantic_ui') && module_exists('semantic_ui_api')) {
     $vars['classes_array'][] = "semantic-ui";
+
   }
   if (!module_exists('jquery_update')) :
     drupal_set_message(t('This theme requires the <a href="https://www.drupal.org/project/jquery_update/" target="_blank">jQuery Update module</a> to be installed.'), 'error', FALSE);

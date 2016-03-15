@@ -1,55 +1,62 @@
-// Configure your header height here depending on the logo size
-$header-height: 55px;
-
 .wrapper--header {
-  position: fixed;
   width: 100%;
-  border-bottom: 1px solid $gray;
-  background: $white;
   z-index: 999;
-  transition: all .3s ease-in-out;
-  height: $header-height;
+  transition: background .3s ease-in-out;
+  border: 0;
+  background: $white;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  &.sticky {
+    background: $lightgray;
+    position: fixed;
+    border-bottom: 1px solid $gray;
+    #header .site-header__logo img {
+      max-width: 50px;
+    }
+  }
 }
 #header {
   position: relative;
-  height: 100%;
   padding: .5em 1em;
+  display: flex;
+  align-items: center;
   #logo-container {
-    float: left;
-    height: 100%;
     opacity: 1;
-    transition: opacity .2s ease-in-out;
+    //transition: opacity .2s ease-in-out;
   }
   .site-header__logo {
-    max-width: 120px;
     position: relative;
     img {
+      transition: max-width .2s ease-in-out;
+      width: 100%;
+      max-width: 50px;
       display: block;
+      @include breakpoint($breakpoint-large-width) {
+        max-width: 250px;
+      }
     }
   }
   .region-header {
     height: 100%;
   }
-  a.loginpopup {
-    float: right;
-    font-size: 80%;
-    position: relative;
-    top: .75em;
-    right: 4em;
-    color: $black;
-    i {
-      font-size: 100%;
-    }
-    &:focus, &:hover {
-      color: $link-color-hover;
-    }
-    @include breakpoint($breakpoint-large-width) {
-      right: 0;
+  .header-log {
+    flex: 1;
+    text-align: right;
+    a.loginpopup {
+      font-size: 80%;
+      position: relative;
+      top: -.2em;
+      right: 4em;
+      color: $black;
+      i {
+        font-size: 100%;
+      }
+      &:focus, &:hover {
+        color: $link-color-hover;
+      }
+      @include breakpoint($breakpoint-large-width) {
+        right: 0;
+      }
     }
   }
-}
-
-// Related to Header
-.wrapper--main {
-  margin-top: $header-height;
 }

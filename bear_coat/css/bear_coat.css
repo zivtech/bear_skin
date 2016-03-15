@@ -437,44 +437,55 @@ i.icon, i.icons {
           color: blue; }
 
 .wrapper--header {
-  position: fixed;
   width: 100%;
-  border-bottom: 1px solid #eaeaea;
-  background: white;
   z-index: 999;
-  transition: all .3s ease-in-out;
-  height: 55px; }
+  transition: background .3s ease-in-out;
+  border: 0;
+  background: white;
+  border-bottom: 1px solid transparent;
+  position: relative; }
+  .wrapper--header.sticky {
+    background: #f5f5f5;
+    position: fixed;
+    border-bottom: 1px solid #eaeaea; }
+    .wrapper--header.sticky #header .site-header__logo img {
+      max-width: 50px; }
 
 #header {
   position: relative;
-  height: 100%;
-  padding: .5em 1em; }
+  padding: .5em 1em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   #header #logo-container {
-    float: left;
-    height: 100%;
-    opacity: 1;
-    transition: opacity .2s ease-in-out; }
+    opacity: 1; }
   #header .site-header__logo {
-    max-width: 120px;
     position: relative; }
     #header .site-header__logo img {
+      transition: max-width .2s ease-in-out;
+      width: 100%;
+      max-width: 50px;
       display: block; }
   #header .region-header {
     height: 100%; }
-  #header a.loginpopup {
-    float: right;
-    font-size: 80%;
-    position: relative;
-    top: .75em;
-    right: 4em;
-    color: #261D19; }
-    #header a.loginpopup i {
-      font-size: 100%; }
-    #header a.loginpopup:focus, #header a.loginpopup:hover {
-      color: #3b4f65; }
-
-.wrapper--main {
-  margin-top: 55px; }
+  #header .header-log {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: right; }
+    #header .header-log a.loginpopup {
+      font-size: 80%;
+      position: relative;
+      top: -.2em;
+      right: 4em;
+      color: #261D19; }
+      #header .header-log a.loginpopup i {
+        font-size: 100%; }
+      #header .header-log a.loginpopup:focus, #header .header-log a.loginpopup:hover {
+        color: #3b4f65; }
 
 .region-navigation {
   transition: left .3s ease-in-out;
@@ -508,9 +519,9 @@ i.icon, i.icons {
         width: 15em;
         background: white;
         border: 1px solid #eaeaea;
-        border-top: 0;
-        padding: 1px .5em .5em .5em;
-        border-radius: 0 0 3px 3px; }
+        border-top: 2px solid #eaeaea;
+        padding: .5em;
+        border-radius: 4px; }
         .region-navigation nav div.secondary a {
           font-size: 90%;
           display: inline-block;
@@ -525,7 +536,7 @@ i.icon, i.icons {
 #sidr-wrapper-0 {
   position: absolute;
   right: 0;
-  top: .75em; }
+  top: .5em; }
 
 .sidr-inner {
   border-bottom: 1px solid #4d4d4d;
@@ -562,9 +573,6 @@ body.sidr-open #sidr-wrapper-0 {
 
 body.sidr-open #header #logo-container {
   opacity: 0; }
-
-.sidr-animating .wrapper--header {
-  position: absolute; }
 
 .pager-wrapper {
   position: relative;
@@ -655,5 +663,7 @@ nav.ui.breadcrumb {
     padding: 0 50px 20px 0; } }
 
 @media (min-width: 62.5em){
-  #header a.loginpopup{
+  #header .site-header__logo img{
+    max-width: 250px; }
+  #header .header-log a.loginpopup{
     right: 0; } }

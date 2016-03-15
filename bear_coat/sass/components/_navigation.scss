@@ -34,9 +34,9 @@
         width: 15em;
         background: $white;
         border: 1px solid $gray;
-        border-top: 0;
-        padding: 1px .5em .5em .5em;
-        border-radius: 0 0 3px 3px;
+        border-top: 2px solid $gray;
+        padding: .5em;
+        border-radius: 4px;
         a {
           font-size: 90%;
           display: inline-block;
@@ -59,7 +59,7 @@
 #sidr-wrapper-0 {
   position: absolute;
   right: 0;
-  top: .75em;
+  top: .5em;
 }
 .sidr-inner {
   border-bottom: 1px solid #4d4d4d;
@@ -103,12 +103,6 @@ body.sidr-open {
   }
   #header #logo-container {
     opacity: 0;
-  }
-}
-
-.sidr-animating {
-  .wrapper--header {
-    position: absolute;
   }
 }
 
