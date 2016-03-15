@@ -63,7 +63,7 @@ fieldset {
 
 .description {
   font-size: 80%;
-  color: #261D19;
+  color: #888;
   font-style: italic;
   padding: 0 10px;
   margin: 10px 0;
@@ -71,51 +71,43 @@ fieldset {
   max-width: 38em; }
 
 .ui .form-item.labeled {
-  padding-top: 1.2em;
-  margin-bottom: 1em !important;
-  position: relative; }
-  .ui .form-item.labeled:first-child {
-    margin-top: -1.2em; }
+  margin-bottom: 1.5em; }
   .ui .form-item.labeled label {
-    position: absolute;
-    top: 2.3em;
-    padding: 0;
-    transition: all .2s ease-in-out;
+    max-width: 30em;
     cursor: text;
     color: #888; }
     .ui .form-item.labeled label.active {
-      top: 2px;
-      font-size: 85%;
-      color: #728EAD; }
+      top: 2px; }
       .ui .form-item.labeled label.active.error {
         color: #FF6A40 !important; }
   .ui .form-item.labeled input {
     max-width: 30em;
-    border-radius: 0;
-    background: transparent;
+    margin: 0;
     border: 0;
-    border-bottom: 1px solid #888;
-    padding: .7em  0;
-    margin-bottom: .3em; }
+    border-radius: 0 !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.04);
+    padding: .67em .5em; }
     .ui .form-item.labeled input:focus, .ui .form-item.labeled input.valued {
       outline: 0;
-      background: transparent;
       box-shadow: none;
-      border-color: transparent; }
+      background: rgba(0, 0, 0, 0.04);
+      border-bottom-color: transparent; }
     .ui .form-item.labeled input.error {
       border-bottom-color: #FF6A40;
       -webkit-text-fill-color: #261D19 !important; }
   .ui .form-item.labeled .mt {
     width: 100%;
     position: relative;
-    max-width: 30em; }
+    max-width: 30em;
+    margin-bottom: .3em; }
     .ui .form-item.labeled .mt:before, .ui .form-item.labeled .mt:after {
       content: '';
       height: 2px;
       width: 0;
-      bottom: 5px;
+      bottom: 0;
       position: absolute;
-      background: #728EAD;
+      background: rgba(0, 0, 0, 0.5);
       transition: 0.2s all ease-in-out; }
     .ui .form-item.labeled .mt.error:before, .ui .form-item.labeled .mt.error:after {
       background: #FF6A40; }
@@ -599,8 +591,6 @@ body.sidr-open #header #logo-container {
 nav.ui.breadcrumb {
   padding: 20px 0;
   color: #555; }
-  nav.ui.breadcrumb a, nav.ui.breadcrumb span, nav.ui.breadcrumb i {
-    font-size: 90%; }
   nav.ui.breadcrumb .divider,
   nav.ui.breadcrumb span {
     color: #555; }
