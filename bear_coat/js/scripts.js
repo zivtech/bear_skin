@@ -141,7 +141,6 @@
 
       function stickyHeader() {
         var st = $(window).scrollTop();
-        console.log(st);
         if (Math.abs(lastScrollTop - st) <= delta)
         return;
         if (st > lastScrollTop && st > navBarHeight){
