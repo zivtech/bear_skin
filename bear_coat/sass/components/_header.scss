@@ -1,7 +1,7 @@
 // Depending on the logo size, set the height here.
 // Everything else will resize accordingly
-$header-height: 80px;
-$header-compressed-height: calc(#{$header-height} / 1.5);
+$header-height: 100px;
+$header-compressed-height: calc(#{$header-height} / 2);
 
 @keyframes slidedown {
   from {transform: translateY(-$header-height)}
@@ -25,10 +25,10 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
     }
   }
   &.top {
-    height: $header-height;
+    height: $header-compressed-height;
     #header {
       .site-header__logo img {
-        max-width: $header-height;
+        max-width: $header-compressed-height;
       }
     }
   }
@@ -46,6 +46,16 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
     #header {
       .site-header__logo img {
         max-width: $header-compressed-height;
+      }
+    }
+  }
+  @include breakpoint($breakpoint-large-width) {
+    &.top {
+      height: $header-height;
+      #header {
+        .site-header__logo img {
+          max-width: $header-height;
+        }
       }
     }
   }
