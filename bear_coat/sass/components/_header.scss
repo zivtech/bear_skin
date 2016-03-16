@@ -110,7 +110,10 @@ $header-compressed-height: calc(#{$header-height} / 2);
 }
 
 .wrapper--title {
-  margin-top: $header-height;
+  margin-top: $header-compressed-height;
+  @include breakpoint($breakpoint-large-width) {
+    margin-top: $header-height;
+  }
   .title-wrapper {
     max-width: $site-max-width;
     padding: 1em;
