@@ -350,7 +350,8 @@ body.semantic-ui:not(.panels-ipe) .ui {
   font-size: 100%;
   font-family: "PT Serif", serif; }
   body.semantic-ui:not(.panels-ipe) .ui .field > label {
-    font-size: 100%; }
+    font-size: 100%;
+    font-weight: normal; }
   body.semantic-ui:not(.panels-ipe) .ui.popup {
     padding: 10px; }
 
@@ -374,9 +375,6 @@ body.semantic-ui:not(.panels-ipe) .ui.radio.checkbox {
   body.semantic-ui:not(.panels-ipe) .ui.radio.checkbox label {
     padding-left: 1.5em;
     color: #555; }
-
-.sidebar {
-  font-size: 90%; }
 
 body.semantic-ui:not(.panels-ipe) .ui.form,
 body.semantic-ui:not(.panels-ipe) .ui.search-form {
