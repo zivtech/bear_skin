@@ -1,31 +1,35 @@
 // Depending on the logo size, set the height here.
 // Everything else will resize accordingly
-$header-height: 65px;
+$header-height: 80px;
+$header-compressed-height: calc(#{$header-height} / 1.5);
 
 @keyframes slidedown {
   from {transform: translateY(-$header-height)}
   to {transform: translateY(0)}
 }
 
-.header-container {
-  background: $lightblue;
-  margin-bottom: 2em;
-}
 .wrapper--header {
   width: 100%;
   z-index: 999;
   transition: background .3s ease-in-out;
   border: 0;
-  background: transparent;
+  background: $lightblue;
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
-  height: $header-height;
+  height: $header-compressed-height;
   #header {
     height: 100%;
     .site-header__logo img {
-      max-width: $header-height;
-      top: -$header-height;
+      max-width: $header-compressed-height;
+    }
+  }
+  &.top {
+    height: $header-height;
+    #header {
+      .site-header__logo img {
+        max-width: $header-height;
+      }
     }
   }
   &.up {
@@ -34,10 +38,16 @@ $header-height: 65px;
     top: -$header-height;
   }
   &.down {
+    height: $header-compressed-height;
     box-shadow: 0 2px 11px rgba(0,0,0,0.2);
     background: $white;
     position: fixed;
     animation: slidedown .3s;
+    #header {
+      .site-header__logo img {
+        max-width: $header-compressed-height;
+      }
+    }
   }
 }
 #header {
@@ -91,12 +101,9 @@ $header-height: 65px;
 
 .wrapper--title {
   margin-top: $header-height;
-  display: inline-block;
-  width: 100%;
-  padding: 1em 0;
   .title-wrapper {
     max-width: $site-max-width;
-    padding: 0 1em;
+    padding: 1em;
     margin: 0 auto;
   }
 }

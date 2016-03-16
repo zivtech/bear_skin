@@ -155,7 +155,8 @@
         }
         else if (st <= 5) {
           navBar
-            .removeClass('down up');
+            .removeClass('down up')
+            .addClass('top');
         }
         lastScrollTop = st;
       };
