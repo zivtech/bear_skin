@@ -6,6 +6,10 @@ $headers-font: 'Arial', sans-serif;
 $body-font: 'Arial', Helvetica, sans-serif;
 
 body.semantic-ui:not(.panels-ipe) {
+  &.dimmable {
+    width: 100%;
+    position: static;
+  }
   .ui {
     font-size: 100%;
     font-family: $body-font;
