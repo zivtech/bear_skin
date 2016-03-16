@@ -533,16 +533,16 @@ i.icon, i.icons {
 
 @-webkit-keyframes slidedown {
   from {
-    -webkit-transform: translateY(-80px);
-            transform: translateY(-80px); }
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px); }
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
 
 @keyframes slidedown {
   from {
-    -webkit-transform: translateY(-80px);
-            transform: translateY(-80px); }
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px); }
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
@@ -556,28 +556,28 @@ i.icon, i.icons {
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
-  height: calc(80px / 1.5); }
+  height: calc(100px / 2); }
   .wrapper--header #header {
     height: 100%; }
     .wrapper--header #header .site-header__logo img {
-      max-width: calc(80px / 1.5); }
+      max-width: calc(100px / 2); }
   .wrapper--header.top {
-    height: 80px; }
+    height: calc(100px / 2); }
     .wrapper--header.top #header .site-header__logo img {
-      max-width: 80px; }
+      max-width: calc(100px / 2); }
   .wrapper--header.up {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     position: fixed;
-    top: -80px; }
+    top: -100px; }
   .wrapper--header.down {
-    height: calc(80px / 1.5);
+    height: calc(100px / 2);
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     background: white;
     position: fixed;
     -webkit-animation: slidedown .3s;
             animation: slidedown .3s; }
     .wrapper--header.down #header .site-header__logo img {
-      max-width: calc(80px / 1.5); }
+      max-width: calc(100px / 2); }
 
 #header {
   position: relative;
@@ -619,7 +619,7 @@ i.icon, i.icons {
         color: #476a7c; }
 
 .wrapper--title {
-  margin-top: 80px; }
+  margin-top: 100px; }
   .wrapper--title .title-wrapper {
     max-width: 75em;
     padding: 1em;
@@ -792,6 +792,10 @@ nav.ui.breadcrumb {
     clear: both; } }
 
 @media (min-width: 62.5em){
+  .wrapper--header.top{
+    height: 100px; }
+  .wrapper--header.top #header .site-header__logo img{
+    max-width: 100px; }
   #header .site-header__logo img{
     max-width: 250px; }
   #header .header-log a.loginpopup{
