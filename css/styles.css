@@ -671,11 +671,7 @@ h3.sidr-class-u-hidden {
     *zoom: 1;
     *display: inline;
     margin: 0 5px; }
-
-.site-sidebars {
-  margin-top: 40px; }
-
-@media (min-width: 50em) {
+  @media (min-width: 50em) {
   .sidebar-first main {
     zoom: 1;
     float: left;
@@ -810,7 +806,6 @@ h3.sidr-class-u-hidden {
     clear: both; }
   .two-sidebars .region-sidebar-second:last-child {
     margin-right: 0%; } }
-
-@media (min-width: 25em) {
+  @media (min-width: 25em) {
   .is-phone {
     display: none; } }

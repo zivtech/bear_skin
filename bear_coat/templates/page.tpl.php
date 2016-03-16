@@ -1,35 +1,34 @@
-<div class="header-container">
-  <div class="wrapper wrapper--header">
-    <header id="header" role="banner" class="site-header">
-      <?php if ($logo): ?>
-        <div id="logo-container">
-          <a href="<?php print $front_page;?>" title="<?php print t('Home');?>"
-             rel="home" class="site-header__logo">
-            <img src="<?php print $logo;?>" alt="<?php print t('Home');?>"/>
-          </a>
-        </div>
-      <?php endif;?>
-      <?php print render($page['header']);?>
-      <?php print render($page['navigation']); ?>
-
-      <?php if (theme_get_setting('login_popup')): ?>
-        <?php print render($loginpopup); ?>
-      <?php endif;?>
-    </header>
-  </div>
-
-  <?php if (!empty($title)): ?>
-    <?php print render($title_prefix);?>
-    <div class="wrapper wrapper--title">
-      <div class="title-wrapper">
-        <h1 class="main__title" role="heading"><?php print $title;?></h1>
+<div class="wrapper wrapper--header top">
+  <header id="header" role="banner" class="site-header">
+    <?php if ($logo): ?>
+      <div id="logo-container">
+        <a href="<?php print $front_page;?>" title="<?php print t('Home');?>"
+           rel="home" class="site-header__logo">
+          <img src="<?php print $logo;?>" alt="<?php print t('Home');?>"/>
+        </a>
       </div>
-    </div>
-    <?php print render($title_suffix);?>
-  <?php else: // this is needed for ARIA ?>
-    <h1 class="u-hidden"><?php print $bear_page_title; ?></h1>
-  <?php endif;?>
+    <?php endif;?>
+    <?php print render($page['header']);?>
+    <?php print render($page['navigation']); ?>
+
+    <?php if (theme_get_setting('login_popup')): ?>
+      <?php print render($loginpopup); ?>
+    <?php endif;?>
+  </header>
 </div>
+
+<?php if (!empty($title)): ?>
+  <?php print render($title_prefix);?>
+  <div class="wrapper wrapper--title">
+    <div class="title-wrapper">
+      <h1 class="main__title" role="heading"><?php print $title;?></h1>
+    </div>
+  </div>
+  <?php print render($title_suffix);?>
+<?php else: // this is needed for ARIA ?>
+  <h1 class="u-hidden"><?php print $bear_page_title; ?></h1>
+<?php endif;?>
+
 
 <div class="wrapper wrapper--main">
   <div id="main" class="site-main">
