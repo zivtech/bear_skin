@@ -2,7 +2,7 @@
   transition: left .3s ease-in-out;
   padding: .5em;
   margin: 0 2em;
-  float: left;
+  font-weight: 600;
   nav {
     outline: 0;
     margin: 0;
@@ -57,6 +57,7 @@
     a {
       margin: 0 .5em;
       padding: 1.2em 0;
+      text-decoration: none;
       &.active {
         color: $link-color-hover;
       }
@@ -137,9 +138,6 @@ nav.ui.breadcrumb {
   .divider,
   span {
     color: $off-black;
-  }
-  a {
-    @include link-colors($blue, $hover: $drenched-blue, $active: $white, $focus: $white);
   }
   i:last-child {
     display: none;

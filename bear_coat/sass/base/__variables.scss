@@ -12,8 +12,7 @@
 // .lightgray            - $lightgray: #f5f5f5;
 // .red                  - $red: #FF6A40;
 // .blue                 - $blue: #728EAD;
-// .drenched-blue        - $drenched-blue: saturate($blue, 30%);
-// .light-blue           - $light-blue: lighten($blue, 20%);
+// .lightblue            - $lightblue: lighten($blue, 20%);
 // .green                - $green: #40C27A;
 // .yellow               - $yellow: #F9B634;
 //
@@ -28,9 +27,9 @@ $grayer: #888;
 $gray: #eaeaea;
 $lightgray: #f5f5f5;
 $red: #FF6A40;
-$blue: #728EAD;
-$drenched-blue: saturate($blue, 30%);
-$light-blue: lighten($blue, 20%);
+$darkblue: #2f3d45;
+$blue: #6792a8;
+$lightblue: #EEF4F8;
 $green: #40C27A;
 $yellow: #F9B634;
 $white: white;
@@ -58,11 +57,8 @@ $dotted: #aaa;
 .blue {
 	background-color: $blue;
 }
-.drenched-blue {
-	background-color: $drenched-blue;
-}
-.light-blue {
-	background-color: $light-blue;
+.lightblue {
+	background-color: $lightblue;
 }
 .green {
 	background-color: $green;

@@ -148,14 +148,14 @@
           navBar
             .removeClass('down top')
             .addClass('up');
-        } else if (st + $(window).height() < $(document).height()) {
+        } else if (st + $(window).height() < $(document).height() && st > navBarHeight) {
           navBar
             .removeClass('up')
             .addClass('down');
         }
-        if (st == 0) {
+        else if (st <= 5) {
           navBar
-            .addClass('top');
+            .removeClass('down up');
         }
         lastScrollTop = st;
       };
