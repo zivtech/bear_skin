@@ -1,15 +1,24 @@
 // Depending on the logo size, set the height here.
 // Everything else will resize accordingly
-$header-height: 70px;
+$header-height: 65px;
 
+@keyframes slidedown {
+  from {transform: translateY(-$header-height)}
+  to {transform: translateY(0)}
+}
+
+.header-container {
+  background: $lightblue;
+  margin-bottom: 2em;
+}
 .wrapper--header {
   width: 100%;
   z-index: 999;
-  transition: all .3s ease-in-out;
+  transition: background .3s ease-in-out;
   border: 0;
-  background: $white;
+  background: transparent;
   border-bottom: 1px solid transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   height: $header-height;
   #header {
@@ -20,15 +29,15 @@ $header-height: 70px;
     }
   }
   &.up {
-    border-bottom: 1px solid $gray;
-    box-shadow: 0 3px 11px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 11px rgba(0,0,0,0.2);
+    position: fixed;
     top: -$header-height;
   }
   &.down {
-    box-shadow: 0 3px 11px rgba(0,0,0,0.2);
-  }
-  &.top {
-    box-shadow: none;
+    box-shadow: 0 2px 11px rgba(0,0,0,0.2);
+    background: $white;
+    position: fixed;
+    animation: slidedown .3s;
   }
 }
 #header {
@@ -36,9 +45,14 @@ $header-height: 70px;
   padding: .5em 1em;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: $sans-serif;
+  &:before, &:after {
+    display: none;
+  }
   #logo-container {
     opacity: 1;
-    //transition: opacity .2s ease-in-out;
   }
   .site-header__logo {
     position: relative;
@@ -56,14 +70,12 @@ $header-height: 70px;
     height: 100%;
   }
   .header-log {
-    flex: 1;
     text-align: right;
     a.loginpopup {
-      font-size: 80%;
       position: relative;
-      top: -.2em;
       right: 4em;
       color: $black;
+      text-decoration: none;
       i {
         font-size: 100%;
       }
@@ -77,6 +89,14 @@ $header-height: 70px;
   }
 }
 
-.wrapper--main {
+.wrapper--title {
   margin-top: $header-height;
+  display: inline-block;
+  width: 100%;
+  padding: 1em 0;
+  .title-wrapper {
+    max-width: $site-max-width;
+    padding: 0 1em;
+    margin: 0 auto;
+  }
 }
