@@ -258,6 +258,10 @@ body.unpublished #main {
     display: inline;
     list-style-type: none; }
 
+body.semantic-ui:not(.panels-ipe).dimmable {
+  width: 100%;
+  position: static; }
+
 body.semantic-ui:not(.panels-ipe) .ui {
   font-size: 100%;
   font-family: "Arial", Helvetica, sans-serif; }
@@ -683,13 +687,6 @@ body.sidr-open #header #logo-container {
   display: inline-block;
   min-height: 50px;
   margin: 10px 0 0 0; }
-
-.ui.pagination.menu {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%); }
 
 nav.ui.breadcrumb {
   padding: 20px 0;

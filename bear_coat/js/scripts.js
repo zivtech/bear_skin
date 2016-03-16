@@ -130,10 +130,35 @@
        });
       }
 
-      // header (if we want sticky)
-      $('#main').waypoint(function() {
-        $('.wrapper--header').toggleClass('sticky');
-      });
+      // sticky header
+      var lastScrollTop = 0,
+          delta = 5,
+          navBar = $('.wrapper--header'),
+          navBarHeight = navBar.outerHeight();
+
+      var throttledSticky = $.throttle(250, function() {stickyHeader()});
+      $(window).on('scroll', throttledSticky);
+
+      function stickyHeader() {
+        var st = $(window).scrollTop();
+        console.log(st);
+        if (Math.abs(lastScrollTop - st) <= delta)
+        return;
+        if (st > lastScrollTop && st > navBarHeight){
+          navBar
+            .removeClass('down top')
+            .addClass('up');
+        } else if (st + $(window).height() < $(document).height()) {
+          navBar
+            .removeClass('up')
+            .addClass('down');
+        }
+        if (st == 0) {
+          navBar
+            .addClass('top');
+        }
+        lastScrollTop = st;
+      };
 
    }
   };
