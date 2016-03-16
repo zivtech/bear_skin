@@ -13,6 +13,7 @@ body.semantic-ui:not(.panels-ipe) {
     .field {
       > label {
         font-size: 100%;
+        font-weight: normal;
       }
     }
     &.popup {
@@ -42,9 +43,6 @@ body.semantic-ui:not(.panels-ipe) {
       color: $off-black;
     }
   }
-}
-.sidebar {
-  font-size: 90%;
 }
 body.semantic-ui:not(.panels-ipe) .ui.form,
 body.semantic-ui:not(.panels-ipe) .ui.search-form {
