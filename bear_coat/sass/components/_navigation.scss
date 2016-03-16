@@ -139,8 +139,16 @@ nav.ui.breadcrumb {
   span {
     color: $off-black;
   }
-  i:last-child {
-    display: none;
+  i {
+    &:before {
+      font-size: 75%;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+  a {
+    @include link-colors($link-color, $hover: $link-color-hover, $active: $link-color-hover, $focus: $link-color-hover);
   }
 }
 
@@ -159,9 +167,13 @@ nav.ui.breadcrumb {
     padding: 0;
   }
   a {
-    margin: 0 1em 0 0;
+    margin: 0;
+    @include breakpoint($breakpoint-large-width) {
+      margin: 0 1em 0 0;
+    }
     &.active {
-      color: $link-color-active !important;
+      background: $link-color;
+      color: $white;
     }
   }
 }

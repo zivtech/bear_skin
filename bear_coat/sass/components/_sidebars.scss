@@ -1,0 +1,6 @@
+.site-sidebars {
+	margin: 2em 0;
+	@include breakpoint($breakpoint-medium-width) {
+		margin: 0;
+	}
+}
