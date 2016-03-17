@@ -533,16 +533,16 @@ i.icon, i.icons {
 
 @-webkit-keyframes slidedown {
   from {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px); }
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px); }
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
 
 @keyframes slidedown {
   from {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px); }
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px); }
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
@@ -556,28 +556,28 @@ i.icon, i.icons {
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
-  height: calc(100px / 2); }
+  height: calc(70px / 1.5); }
   .wrapper--header #header {
     height: 100%; }
     .wrapper--header #header .site-header__logo img {
-      max-width: calc(100px / 2); }
+      max-width: calc(70px / 1.5); }
   .wrapper--header.top {
-    height: calc(100px / 2); }
+    height: calc(70px / 1.5); }
     .wrapper--header.top #header .site-header__logo img {
-      max-width: calc(100px / 2); }
+      max-width: calc(70px / 1.5); }
   .wrapper--header.up {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     position: fixed;
-    top: -100px; }
+    top: -70px; }
   .wrapper--header.down {
-    height: calc(100px / 2);
+    height: calc(70px / 1.5);
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     background: white;
     position: fixed;
     -webkit-animation: slidedown .3s;
             animation: slidedown .3s; }
     .wrapper--header.down #header .site-header__logo img {
-      max-width: calc(100px / 2); }
+      max-width: calc(70px / 1.5); }
 
 #header {
   position: relative;
@@ -620,7 +620,7 @@ i.icon, i.icons {
         color: #476a7c; }
 
 .wrapper--title {
-  margin-top: calc(100px / 2); }
+  margin-top: calc(70px / 1.5); }
   .wrapper--title .title-wrapper {
     max-width: 75em;
     padding: 1em;
@@ -810,15 +810,15 @@ nav.ui.breadcrumb {
 
 @media (min-width: 62.5em){
   .wrapper--header.top{
-    height: 100px; }
+    height: 70px; }
   .wrapper--header.top #header .site-header__logo img{
-    max-width: 100px; }
+    max-width: 70px; }
   #header .site-header__logo img{
     max-width: 250px; }
   #header .header-log a.loginpopup{
     right: 0; }
   .wrapper--title{
-    margin-top: 100px; }
+    margin-top: 70px; }
   #primary-tabs a,
       #secondary-tabs a{
     margin: 0 1em 0 0; } }
