@@ -19,7 +19,6 @@ require_once dirname(__FILE__) . '/preprocess/table.preprocess.inc';
 /**
  * Implements hook_css_alter().
  */
-
 function bear_coat_css_alter(&$css) {
   $exclude = array(
     'modules/aggregator/aggregator.css' => FALSE,
@@ -34,8 +33,21 @@ function bear_coat_css_alter(&$css) {
     'modules/field/theme/field.css' => FALSE,
     'modules/forum/forum.css' => FALSE,
     'misc/vertical-tabs.css' => FALSE,
+    'profiles/bear/libraries/chosen/chosen.css' => FALSE,
+    'profiles/bear/modules/contrib/chosen/css/chosen-drupal.css' => FALSE,
   );
   $css = array_diff_key($css, $exclude);
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function bear_coat_js_alter(&$js) {
+  $exclude = array(
+    'profiles/bear/libraries/chosen/chosen.jquery.min.js' => FALSE,
+    'profiles/bear/modules/contrib/chosen/chosen.js' => FALSE,
+  );
+  $js = array_diff_key($js, $exclude);
 }
 
 /**

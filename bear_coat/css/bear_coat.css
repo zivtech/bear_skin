@@ -780,7 +780,7 @@ nav.ui.breadcrumb {
   display: inline !important;
   margin: 0 .5em; }
 
-.ui.form .webform-container-inline .field .dropdown {
+.ui.form .webform-container-inline .field div.dropdown {
   width: auto; }
 
 @media (min-width: 50em){
