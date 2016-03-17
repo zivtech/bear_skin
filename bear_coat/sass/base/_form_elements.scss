@@ -172,10 +172,9 @@ body:not(.semantic-ui) {
   }
 }
 
-.form-item,
 fieldset {
   position: relative;
-  margin: 5px 0;
+  margin: 1em 0;
   display: block;
   clear: both;
   height: auto !important;
@@ -183,6 +182,10 @@ fieldset {
   padding: 0;
   legend {
     margin-left: 0;
+  }
+  i.icon {
+    font-size: 1em;
+    text-decoration: none;
   }
   .fieldset-wrapper {
     background: $lightgray;
@@ -203,6 +206,11 @@ fieldset {
   textarea {
     &.error {
       border-color: $red;
+    }
+  }
+  &:not(.collapsed) {
+    i.icon:before {
+      content: "\f056" !important;
     }
   }
 }
@@ -255,7 +263,7 @@ fieldset {
     background: rgba(0,0,0,0.04);
     padding: .67em .5em;
     &:focus {
-      border-bottom: 2px solid rgba(0,0,0,0.5);
+      border-bottom: 2px solid $formblue;
     }
   }
   .mt {
@@ -269,7 +277,7 @@ fieldset {
       width: 0;
       bottom: 0;
       position: absolute;
-      background: rgba(0,0,0,0.5);
+      background: $formblue;
       transition: 0.2s all ease-in-out;
     }
     &.error {
@@ -278,7 +286,7 @@ fieldset {
       }
       &.focus {
         &:before, &:after {
-          background: rgba(0,0,0,0.5);
+          background: transparent;
         }
       }
     }

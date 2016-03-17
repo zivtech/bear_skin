@@ -52,7 +52,7 @@
           .unwrap();
       });
 
-      //addclass to search wrapper on focus
+      // addclass to search wrapper on focus
       var $searchForm = $('#search-block-form', context);
       $searchForm
         .find('.form-text')
@@ -67,6 +67,7 @@
           .removeClass('focus');
         });
 
+        // border animation on input
         var $textInput = $('.form-item.labeled input', context);
         $textInput
           .on('focus', function(){

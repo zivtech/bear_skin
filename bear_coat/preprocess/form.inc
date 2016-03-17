@@ -661,10 +661,10 @@ function bear_coat_fieldset($variables) {
   $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
     if (!empty($element['#collapsed'])) {
-      $caret_icon = '<i class="caret right icon"></i>';
+      $caret_icon = '<i class="add circle icon"></i>';
     }
     else {
-      $caret_icon = '<i class="caret down icon"></i>';
+      $caret_icon = '<i class="minus circle icon"></i>';
     }
     // Always wrap fieldset legends in a SPAN for CSS positioning.
     $output .= '<legend><span class="fieldset-legend">' . $caret_icon . $element['#title'] . '</span></legend>';

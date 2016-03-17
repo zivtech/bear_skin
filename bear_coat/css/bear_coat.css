@@ -154,33 +154,33 @@ body:not(.semantic-ui) #breadcrumbs .chevron:before {
   padding: 0 8px;
   color: #261D19; }
 
-.form-item,
 fieldset {
   position: relative;
-  margin: 5px 0;
+  margin: 1em 0;
   display: block;
   clear: both;
   height: auto !important;
   border: 0;
   padding: 0; }
-  .form-item legend,
   fieldset legend {
     margin-left: 0; }
-  .form-item .fieldset-wrapper,
+  fieldset i.icon {
+    font-size: 1em;
+    text-decoration: none; }
   fieldset .fieldset-wrapper {
     background: #f5f5f5;
     padding: 1em;
     border: 1px dotted #eaeaea;
     margin: 1em 0;
     overflow: visible !important; }
-  .form-item.required > label:after,
   fieldset.required > label:after {
     margin: -0.2em 0em 0em 0.2em;
     content: '*';
     color: #db2828; }
-  .form-item textarea.error,
   fieldset textarea.error {
     border-color: #FF6A40; }
+  fieldset:not(.collapsed) i.icon:before {
+    content: "\f056" !important; }
 
 .description {
   font-size: 80%;
@@ -223,7 +223,7 @@ fieldset {
   background: rgba(0, 0, 0, 0.04);
   padding: .67em .5em; }
   .ui .form-item.labeled textarea:focus {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5); }
+    border-bottom: 2px solid #85b7d9; }
 
 .ui .form-item.labeled .mt {
   width: 100%;
@@ -236,12 +236,12 @@ fieldset {
     width: 0;
     bottom: 0;
     position: absolute;
-    background: rgba(0, 0, 0, 0.5);
+    background: #85b7d9;
     transition: 0.2s all ease-in-out; }
   .ui .form-item.labeled .mt.error:before, .ui .form-item.labeled .mt.error:after {
     background: transparent; }
   .ui .form-item.labeled .mt.error.focus:before, .ui .form-item.labeled .mt.error.focus:after {
-    background: rgba(0, 0, 0, 0.5); }
+    background: transparent; }
   .ui .form-item.labeled .mt:before {
     left: 50%; }
   .ui .form-item.labeled .mt:after {
@@ -349,6 +349,8 @@ body.semantic-ui:not(.panels-ipe).dimmable {
 body.semantic-ui:not(.panels-ipe) .ui {
   font-size: 100%;
   font-family: "PT Serif", serif; }
+  body.semantic-ui:not(.panels-ipe) .ui.form input:focus {
+    border-color: #6792a8; }
   body.semantic-ui:not(.panels-ipe) .ui .field > label {
     font-size: 100%;
     font-weight: normal; }
@@ -594,7 +596,8 @@ i.icon, i.icons {
   #header:before, #header:after {
     display: none; }
   #header #logo-container {
-    opacity: 1; }
+    opacity: 1;
+    min-width: 100px; }
   #header .site-header__logo {
     position: relative; }
     #header .site-header__logo img {
