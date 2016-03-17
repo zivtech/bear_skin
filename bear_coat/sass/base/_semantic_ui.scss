@@ -10,6 +10,9 @@ body.semantic-ui:not(.panels-ipe) {
   .ui {
     font-size: 100%;
     font-family: $body-font;
+    &.form input:focus {
+      border-color: $blue;
+    }
     .field {
       > label {
         font-size: 100%;
@@ -49,11 +52,6 @@ body.semantic-ui:not(.panels-ipe) .ui.search-form {
   font-family: $body-font;
   padding: 0;
   .form-wrapper:not(.form-actions) {
-    legend {
-      // margin: 5px 0 20px 0;
-      // float: left;
-      // clear: both;
-    }
     .fieldset-description {
       clear: both;
     }

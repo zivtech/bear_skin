@@ -73,6 +73,7 @@ $header-compressed-height: calc(#{$header-height} / 2);
   }
   #logo-container {
     opacity: 1;
+    min-width: 100px;
   }
   .site-header__logo {
     position: relative;
