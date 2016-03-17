@@ -24,38 +24,22 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
       max-width: $header-compressed-height;
     }
   }
-  &.top {
-    height: $header-compressed-height;
-    #header {
-      .site-header__logo img {
-        max-width: $header-compressed-height;
-      }
-    }
-  }
   &.up {
     box-shadow: 0 2px 11px rgba(0,0,0,0.2);
     position: fixed;
     top: -$header-height;
   }
   &.down {
-    height: $header-compressed-height;
     box-shadow: 0 2px 11px rgba(0,0,0,0.2);
     background: $white;
     position: fixed;
     animation: slidedown .3s;
-    #header {
-      .site-header__logo img {
-        max-width: $header-compressed-height;
-      }
-    }
   }
   @include breakpoint($breakpoint-large-width) {
-    &.top {
-      height: $header-height;
-      #header {
-        .site-header__logo img {
-          max-width: $header-height;
-        }
+    height: $header-height;
+    #header {
+      .site-header__logo img {
+        max-width: $header-height;
       }
     }
   }
@@ -78,7 +62,7 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
   .site-header__logo {
     position: relative;
     img {
-      transition: max-width .2s ease-in-out;
+      transition: max-width .3s ease-in-out;
       width: 100%;
       max-width: 50px;
       display: block;
@@ -94,9 +78,10 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
     text-align: right;
     a.loginpopup {
       position: relative;
-      right: 4em;
+      right: 3.5em;
       color: $black;
       text-decoration: none;
+      font-size: 80%;
       i {
         font-size: 100%;
       }
@@ -104,6 +89,7 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
         color: $link-color-hover;
       }
       @include breakpoint($breakpoint-large-width) {
+        font-size: 100%;
         right: 0;
       }
     }
