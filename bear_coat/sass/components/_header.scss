@@ -1,7 +1,7 @@
 // Depending on the logo size, set the height here.
 // Everything else will resize accordingly
-$header-height: 100px;
-$header-compressed-height: calc(#{$header-height} / 2);
+$header-height: 70px;
+$header-compressed-height: calc(#{$header-height} / 1.5);
 
 @keyframes slidedown {
   from {transform: translateY(-$header-height)}
