@@ -561,23 +561,16 @@ i.icon, i.icons {
     height: 100%; }
     .wrapper--header #header .site-header__logo img {
       max-width: calc(70px / 1.5); }
-  .wrapper--header.top {
-    height: calc(70px / 1.5); }
-    .wrapper--header.top #header .site-header__logo img {
-      max-width: calc(70px / 1.5); }
   .wrapper--header.up {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: -70px; }
   .wrapper--header.down {
-    height: calc(70px / 1.5);
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     background: white;
     position: fixed;
     -webkit-animation: slidedown .3s;
             animation: slidedown .3s; }
-    .wrapper--header.down #header .site-header__logo img {
-      max-width: calc(70px / 1.5); }
 
 #header {
   position: relative;
@@ -601,7 +594,7 @@ i.icon, i.icons {
   #header .site-header__logo {
     position: relative; }
     #header .site-header__logo img {
-      transition: max-width .2s ease-in-out;
+      transition: max-width .3s ease-in-out;
       width: 100%;
       max-width: 50px;
       display: block; }
@@ -611,9 +604,10 @@ i.icon, i.icons {
     text-align: right; }
     #header .header-log a.loginpopup {
       position: relative;
-      right: 4em;
+      right: 3.5em;
       color: #261D19;
-      text-decoration: none; }
+      text-decoration: none;
+      font-size: 80%; }
       #header .header-log a.loginpopup i {
         font-size: 100%; }
       #header .header-log a.loginpopup:focus, #header .header-log a.loginpopup:hover {
@@ -809,13 +803,14 @@ nav.ui.breadcrumb {
     margin: 0; } }
 
 @media (min-width: 62.5em){
-  .wrapper--header.top{
+  .wrapper--header{
     height: 70px; }
-  .wrapper--header.top #header .site-header__logo img{
+  .wrapper--header #header .site-header__logo img{
     max-width: 70px; }
   #header .site-header__logo img{
     max-width: 250px; }
   #header .header-log a.loginpopup{
+    font-size: 100%;
     right: 0; }
   .wrapper--title{
     margin-top: 70px; }
