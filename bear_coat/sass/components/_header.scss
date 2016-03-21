@@ -13,15 +13,15 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
   z-index: 999;
   transition: background .3s ease-in-out;
   border: 0;
-  background: $lightblue;
+  background: $white;
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
-  height: $header-compressed-height;
+  height: $header-height;
   #header {
     height: 100%;
     .site-header__logo img {
-      max-width: $header-compressed-height;
+      max-width: $header-height;
     }
   }
   &.up {
@@ -31,7 +31,7 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
   }
   &.down {
     box-shadow: 0 2px 11px rgba(0,0,0,0.2);
-    background: $white;
+    background: $lightblue;
     position: fixed;
     animation: slidedown .3s;
   }
@@ -97,7 +97,7 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
 }
 
 .wrapper--title {
-  margin-top: $header-compressed-height;
+  margin-top: $header-height;
   @include breakpoint($breakpoint-large-width) {
     margin-top: $header-height;
   }

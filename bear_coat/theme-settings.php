@@ -44,9 +44,17 @@ function bear_coat_form_system_theme_settings_alter(&$form, &$form_state, $form_
   // create an option for modal login
   $form['bear_options']['login_popup'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Add login link in Header.'),
+    '#title' => t('Add login link in header.'),
     '#description' => t('This login link will open in a the semantic UI modal (popup). <b>Can\'t be used in combination with the user menu (option above)</b>.'),
     '#default_value' =>theme_get_setting('login_popup'),
+  );
+
+  // create an option for modal login
+  $form['bear_options']['fixed_header'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Fixed header on scroll up.'),
+    '#description' => t('Enabling this option will give the header a fixed position when scrolling up.'),
+    '#default_value' =>theme_get_setting('fixed_header'),
   );
 
   // create an option for sticky footers
