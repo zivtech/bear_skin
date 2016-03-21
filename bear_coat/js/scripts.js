@@ -132,13 +132,16 @@
       }
 
       // sticky header
-      var lastScrollTop = 0,
-          delta = 5,
-          navBar = $('.wrapper--header'),
-          navBarHeight = navBar.outerHeight();
+      var fixed_header = Drupal.settings.bear_coat.fixed_header;
+      if (fixed_header === true) {
+        var lastScrollTop = 0,
+            delta = 5,
+            navBar = $('.wrapper--header'),
+            navBarHeight = navBar.outerHeight();
 
-      var throttledSticky = $.throttle(250, function() {stickyHeader()});
-      $(window).on('scroll', throttledSticky);
+        var throttledSticky = $.throttle(250, function() {stickyHeader()});
+        $(window).on('scroll', throttledSticky);
+      }
 
       function stickyHeader() {
         var st = $(window).scrollTop();

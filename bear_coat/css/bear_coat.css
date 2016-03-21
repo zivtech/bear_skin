@@ -552,22 +552,22 @@ i.icon, i.icons {
   z-index: 999;
   transition: background .3s ease-in-out;
   border: 0;
-  background: #EEF4F8;
+  background: white;
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
-  height: calc(70px / 1.5); }
+  height: 70px; }
   .wrapper--header #header {
     height: 100%; }
     .wrapper--header #header .site-header__logo img {
-      max-width: calc(70px / 1.5); }
+      max-width: 70px; }
   .wrapper--header.up {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: -70px; }
   .wrapper--header.down {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
-    background: white;
+    background: #EEF4F8;
     position: fixed;
     -webkit-animation: slidedown .3s;
             animation: slidedown .3s; }
@@ -614,7 +614,7 @@ i.icon, i.icons {
         color: #476a7c; }
 
 .wrapper--title {
-  margin-top: calc(70px / 1.5); }
+  margin-top: 70px; }
   .wrapper--title .title-wrapper {
     max-width: 75em;
     padding: 1em;

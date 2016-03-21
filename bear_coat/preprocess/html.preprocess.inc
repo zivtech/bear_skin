@@ -27,6 +27,12 @@ function bear_coat_check_library($library_name, $file_name) {
  * Implements hook_preprocess_html().
  */
 function bear_coat_preprocess_html(&$vars) {
+  // put some settings into javascript
+  drupal_add_js(array(
+    'bear_coat' => array(
+      'fixed_header' => (bool) theme_get_setting('fixed_header')
+    ),
+  ), 'setting');
   if (bear_coat_check_library('semantic_ui', 'semantic.min.css') && bear_coat_check_library('semantic_ui', 'semantic.min.js') && theme_get_setting('semantic_ui') && module_exists('semantic_ui_api')) {
     $vars['classes_array'][] = "semantic-ui";
 
