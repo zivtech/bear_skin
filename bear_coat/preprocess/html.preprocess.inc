@@ -26,16 +26,17 @@ function bear_coat_check_library($library_name, $file_name) {
 /**
  * Implements hook_preprocess_html().
  */
-function bear_coat_preprocess_html(&$vars) {
+function bear_coat_preprocess_html(&$variables) {
   // put some settings into javascript
   drupal_add_js(array(
     'bear_coat' => array(
       'fixed_header' => (bool) theme_get_setting('fixed_header')
     ),
   ), 'setting');
-  if (bear_coat_check_library('semantic_ui', 'semantic.min.css') && bear_coat_check_library('semantic_ui', 'semantic.min.js') && theme_get_setting('semantic_ui') && module_exists('semantic_ui_api')) {
-    $vars['classes_array'][] = "semantic-ui";
 
+  // adding classes and set messages for Semantic UI
+  if (bear_coat_check_library('semantic_ui', 'semantic.min.css') && bear_coat_check_library('semantic_ui', 'semantic.min.js') && theme_get_setting('semantic_ui') && module_exists('semantic_ui_api')) {
+    $variables['classes_array'][] = "semantic-ui";
   }
   if (!module_exists('jquery_update')) :
     drupal_set_message(t('This theme requires the <a href="https://www.drupal.org/project/jquery_update/" target="_blank">jQuery Update module</a> to be installed.'), 'error', FALSE);
@@ -43,14 +44,19 @@ function bear_coat_preprocess_html(&$vars) {
     drupal_set_message(t('This theme requires at least jQuery 1.7. Please enable it by <a href="/admin/config/development/jquery_update/">clicking here</a>.'), 'error', FALSE);
   endif;
   if (module_exists('responsive_menus')) :
-    $vars['classes_array'][] = "resp-nav";
+    $variables['classes_array'][] = "resp-nav";
   endif;
+
+  // adding a class if home banner is enabled in theme settings
+  if ($variables['is_front'] && theme_get_setting('home_banner')) {
+    $variables['classes_array'][] = 'banner';
+  }
 
   // adding a body class if node is unpublished
   $node = menu_get_object();
   if ($node && isset($node->nid)) {
     if (!$node->status) {
-      $vars['classes_array'][] = 'unpublished';
+      $variables['classes_array'][] = 'unpublished';
     }
   }
 }

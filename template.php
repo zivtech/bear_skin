@@ -40,17 +40,6 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   global $language;
   $variables['language'] = $language->language;
 
-  // ************************************************************
-  // taken from Zen so we can keep our templates variables active
-  // ************************************************************
-
-  // Get settings for HTML5 and responsive support. array_filter() removes
-  // items from the array that have been disabled.
-  $html5_respond_meta = array_filter((array) theme_get_setting('zen_html5_respond_meta'));
-  $variables['add_respond_js']          = in_array('respond', $html5_respond_meta);
-  $variables['add_html5_shim']          = in_array('html5', $html5_respond_meta);
-  $variables['default_mobile_metatags'] = in_array('meta', $html5_respond_meta);
-
   // Attributes for html element.
   $variables['html_attributes_array'] = array(
     $variables['language'] => $language->language,

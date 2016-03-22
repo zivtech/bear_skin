@@ -139,7 +139,7 @@
             navBar = $('.wrapper--header'),
             navBarHeight = navBar.outerHeight();
 
-        var throttledSticky = $.throttle(250, function() {stickyHeader()});
+        var throttledSticky = $.throttle(100, function() {stickyHeader()});
         $(window).on('scroll', throttledSticky);
       }
 
@@ -156,7 +156,7 @@
             .removeClass('up')
             .addClass('down');
         }
-        else if (st <= 5) {
+        else if (st <= 10) {
           navBar
             .removeClass('down up')
             .addClass('top');
