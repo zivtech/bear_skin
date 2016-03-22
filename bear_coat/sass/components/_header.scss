@@ -16,13 +16,13 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
-  height: $header-height;
+  height: $header-compressed-height;
   background: $white;
   animation: none;
   #header {
     height: 100%;
     .site-header__logo img {
-      max-width: $header-height;
+      max-width: $header-compressed-height;
     }
   }
   &.up {
@@ -104,7 +104,7 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
 }
 
 .wrapper--title {
-  margin-top: $header-height;
+  margin-top: $header-compressed-height;
   @include breakpoint($breakpoint-large-width) {
     margin-top: $header-height;
   }
