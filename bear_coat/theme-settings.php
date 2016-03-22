@@ -100,7 +100,7 @@ function bear_coat_form_system_theme_settings_alter(&$form, &$form_state, $form_
   );
 
   $form['home_options']['home_slogan'] = array(
-    '#type' => 'textfield',
+    '#type' => 'textarea',
     '#title' => t('Homepage slogan'),
     '#description' => t('Add a slogan on top of the home page banner. Leave empty for no slogan.'),
     '#default_value' => theme_get_setting('home_slogan'),
@@ -119,7 +119,7 @@ function bear_coat_form_system_theme_settings_alter(&$form, &$form_state, $form_
     In order to enable, you must have <a href-"https://drupal.org/project/libraries" target="_blank">Libraries</a> installed as well as <a href="https://www.drupal.org/project/jquery_update/">jQuery Update</a> enabled and <a href="/admin/config/development/jquery_update/">set to use 1.7</a>.<br><br>
 You also must have the <a href="https://www.drupal.org/project/semantic_ui_api">Semantic UI</a> module and library installed. Run <br>
 <pre>drush pm-enable semantic_ui_api</pre> to install both.<br><br>
-If you are installing the Semantic UI library manually, the path should be look like the following: <br><br>
+If you are installing the Semantic UI library manually, the path should look like this: <br><br>
 <img src="/'. drupal_get_path('theme', 'bear_coat') .'/images/sem-library.png" />'),
     '#default_value' =>theme_get_setting('semantic_ui'),
   );

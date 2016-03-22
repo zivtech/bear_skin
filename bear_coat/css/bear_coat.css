@@ -555,14 +555,14 @@ i.icon, i.icons {
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
-  height: 70px;
+  height: calc(70px / 1.5);
   background: white;
   -webkit-animation: none;
           animation: none; }
   .wrapper--header #header {
     height: 100%; }
     .wrapper--header #header .site-header__logo img {
-      max-width: 70px; }
+      max-width: calc(70px / 1.5); }
   .wrapper--header.up {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -622,7 +622,7 @@ i.icon, i.icons {
         color: #476a7c; }
 
 .wrapper--title {
-  margin-top: 70px; }
+  margin-top: calc(70px / 1.5); }
   .wrapper--title .title-wrapper {
     max-width: 75em;
     padding: 1em;
@@ -776,11 +776,26 @@ nav.ui.breadcrumb {
       color: white; }
 
 .front .home-page-banner {
-  min-height: 500px;
+  min-height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 70px;
-  width: 100%; }
+  background-position: bottom center;
+  margin-top: calc(70px / 1.5);
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .front .home-page-banner header {
+    font-size: 4rem;
+    color: #261D19; }
+  .front .home-page-banner.default {
+    background-image: url("../images/default.jpg"); }
 
 .panel-pane {
   margin-bottom: 30px; }
@@ -834,4 +849,7 @@ nav.ui.breadcrumb {
     margin-top: 70px; }
   #primary-tabs a,
       #secondary-tabs a{
-    margin: 0 1em 0 0; } }
+    margin: 0 1em 0 0; }
+  .front .home-page-banner{
+    min-height: 500px;
+    margin-top: 70px; } }
