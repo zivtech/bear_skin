@@ -550,13 +550,15 @@ i.icon, i.icons {
 .wrapper--header {
   width: 100%;
   z-index: 999;
-  transition: background .3s ease-in-out;
+  transition: opacity .3s ease-in-out, box-shadow .3s ease-in-out;
   border: 0;
-  background: white;
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
-  height: 70px; }
+  height: 70px;
+  background: white;
+  -webkit-animation: none;
+          animation: none; }
   .wrapper--header #header {
     height: 100%; }
     .wrapper--header #header .site-header__logo img {
@@ -564,13 +566,19 @@ i.icon, i.icons {
   .wrapper--header.up {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
     position: fixed;
-    top: -70px; }
+    top: -70px;
+    background: white; }
   .wrapper--header.down {
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
-    background: #EEF4F8;
+    background: white;
     position: fixed;
     -webkit-animation: slidedown .3s;
-            animation: slidedown .3s; }
+            animation: slidedown .3s;
+    opacity: .95; }
+  .wrapper--header.top {
+    background: transparent;
+    -webkit-animation: none;
+            animation: none; }
 
 #header {
   position: relative;
@@ -605,7 +613,7 @@ i.icon, i.icons {
     #header .header-log a.loginpopup {
       position: relative;
       right: 3.5em;
-      color: #261D19;
+      color: #555;
       text-decoration: none;
       font-size: 80%; }
       #header .header-log a.loginpopup i {
@@ -619,6 +627,9 @@ i.icon, i.icons {
     max-width: 75em;
     padding: 1em;
     margin: 0 auto; }
+
+body.banner .wrapper--title {
+  margin-top: 0; }
 
 .region-navigation {
   transition: left .3s ease-in-out;
@@ -763,6 +774,13 @@ nav.ui.breadcrumb {
     #secondary-tabs a.active {
       background: #6792a8;
       color: white; }
+
+.front .home-page-banner {
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 70px;
+  width: 100%; }
 
 .panel-pane {
   margin-bottom: 30px; }

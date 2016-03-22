@@ -11,13 +11,14 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
 .wrapper--header {
   width: 100%;
   z-index: 999;
-  transition: background .3s ease-in-out;
+  transition: opacity .3s ease-in-out, box-shadow .3s ease-in-out;
   border: 0;
-  background: $white;
   border-bottom: 1px solid transparent;
   position: absolute;
   top: 0;
   height: $header-height;
+  background: $white;
+  animation: none;
   #header {
     height: 100%;
     .site-header__logo img {
@@ -28,12 +29,18 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
     box-shadow: 0 2px 11px rgba(0,0,0,0.2);
     position: fixed;
     top: -$header-height;
+    background: $white;
   }
   &.down {
     box-shadow: 0 2px 11px rgba(0,0,0,0.2);
-    background: $lightblue;
+    background: $white;
     position: fixed;
     animation: slidedown .3s;
+    opacity: .95;
+  }
+  &.top {
+    background: transparent;
+    animation: none;
   }
   @include breakpoint($breakpoint-large-width) {
     height: $header-height;
@@ -79,7 +86,7 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
     a.loginpopup {
       position: relative;
       right: 3.5em;
-      color: $black;
+      color: $off-black;
       text-decoration: none;
       font-size: 80%;
       i {
@@ -105,5 +112,11 @@ $header-compressed-height: calc(#{$header-height} / 1.5);
     max-width: $site-max-width;
     padding: 1em;
     margin: 0 auto;
+  }
+}
+
+body.banner {
+  .wrapper--title {
+    margin-top: 0;
   }
 }
