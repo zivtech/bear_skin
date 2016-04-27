@@ -1,25 +1,3 @@
-// Color Palette
-//
-// These are the primary colors for the site
-//
-// Markup:
-// <div class="bg {$modifiers}"></div>
-//
-// .black                - $black: #261D19;
-// .off-black            - $off-back: #555;
-// .grayer               - $grayer: #888;
-// .gray                 - $gray: #eaeaea;
-// .lightgray            - $lightgray: #f5f5f5;
-// .red                  - $red: #FF6A40;
-// .darkblue						 - $darkblue: #2f3d45;
-// .blue                 - $blue: #728EAD;
-// .lightblue            - $lightblue: lighten($blue, 20%);
-// .formblue						 - $formblue: #85b7d9;
-// .green                - $green: #40C27A;
-// .yellow               - $yellow: #F9B634;
-//
-// Styleguide 1
-
 //
 // Color variables
 //
@@ -158,3 +136,8 @@ $tabs-height: 40px;
 $tabs-bg-color: transparent;
 $tabs-bg-color-hover: darken($tabs-bg-color, 5%);
 $tabs-border-radius: $border-radius;
+
+// Depending on the logo size, set the height here.
+// Everything else will resize accordingly
+$header-height: 70px;
+$header-compressed-height: calc(#{$header-height} / 1.5);

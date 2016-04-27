@@ -1,0 +1,35 @@
+.ui.button {
+	font-weight: normal;
+}
+
+i.icon, i.icons {
+  font-size: 1.5em;
+}
+
+.ui.popup {
+	font-size: 90%;
+	color: $off-black;
+}
+
+.ui.modal {
+	padding: 1em;
+	> .header {
+		font-family: $headers-font;
+	}
+}
+
+.ui.dropdown {
+  color: $off-black;
+  .text {
+    font-size: 14px;
+  }
+  .default.text {
+    color: $grayer;
+  }
+}
+
+input.ui.button[type="submit"] {
+  margin-top: 0.5em;
+  font-family: $sans-serif !important;
+  font-weight: 600 !important;
+}

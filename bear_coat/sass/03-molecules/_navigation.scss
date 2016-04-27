@@ -92,6 +92,7 @@
     }
   }
 }
+
 body.sidr-open {
   #sidr-wrapper-0 {
     margin-left: 0;
@@ -152,28 +153,4 @@ nav.ui.breadcrumb {
   }
 }
 
-//************
-// Local Tasks
-//************
 
-#primary-tabs,
-#secondary-tabs {
-  margin: 1em 0;
-  .reset-appearance {
-    @include element-invisible;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  a {
-    margin: 0;
-    @include breakpoint($breakpoint-large-width) {
-      margin: 0 1em 0 0;
-    }
-    &.active {
-      background: $link-color;
-      color: $white;
-    }
-  }
-}
