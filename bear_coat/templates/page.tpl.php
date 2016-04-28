@@ -1,21 +1,3 @@
-
-<?php if (drupal_is_front_page()): ?>
-  <?php if (theme_get_setting('home_banner')): ?>
-    <?php if (theme_get_setting('home_banner_file')): ?>
-      <div class="home-page-banner" style="background-image: url('<?php print $home_banner_file_url ?>');">
-        <?php if (theme_get_setting('home_slogan')): ?>
-          <header><?php print theme_get_setting('home_slogan') ?></header>
-        <?php endif;?>
-      </div>
-    <?php else : ?>
-      <div class="home-page-banner default">
-        <?php if (theme_get_setting('home_slogan')): ?>
-          <header><?php print theme_get_setting('home_slogan') ?></header>
-        <?php endif;?>
-      </div>
-    <?php endif;?>
-  <?php endif;?>
-<?php endif;?>
 <div class="wrapper wrapper--header top">
   <header id="header" role="banner" class="site-header">
     <?php if ($logo): ?>
@@ -34,6 +16,24 @@
     <?php endif;?>
   </header>
 </div>
+
+<?php if (drupal_is_front_page()): ?>
+  <?php if (theme_get_setting('home_banner')): ?>
+    <?php if (theme_get_setting('home_banner_file')): ?>
+      <div class="home-page-banner" style="background-image: url('<?php print $home_banner_file_url ?>');">
+        <?php if (theme_get_setting('home_slogan')): ?>
+          <header><?php print theme_get_setting('home_slogan') ?></header>
+        <?php endif;?>
+      </div>
+    <?php else : ?>
+      <div class="home-page-banner default">
+        <?php if (theme_get_setting('home_slogan')): ?>
+          <header><?php print theme_get_setting('home_slogan') ?></header>
+        <?php endif;?>
+      </div>
+    <?php endif;?>
+  <?php endif;?>
+<?php endif;?>
 
 <?php if (!empty($title)): ?>
   <?php print render($title_prefix);?>
