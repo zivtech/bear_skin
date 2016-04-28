@@ -81,8 +81,11 @@ function bear_coat_preprocess_page(&$variables) {
   // registering the home banner theme setting image URL
   $file = '';
   $fid = theme_get_setting('home_banner_file');
-  $file = file_load($fid);
-  if (isset($file->uri)) {
-    $variables['home_banner_file_url'] = file_create_url($file->uri);
+
+  if(!empty($fid)) {
+    $file = file_load($fid);
+    if (isset($file->uri)) {
+      $variables['home_banner_file_url'] = file_create_url($file->uri);
+    }
   }
 }

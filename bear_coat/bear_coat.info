@@ -40,7 +40,6 @@ settings[login_popup]          = 1
 settings[sticky_footer]        = 1
 settings[fixed_header]         = 1
 settings[home_banner]          = 1
-settings[home_slogan]          = 1
 
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: http://drupal.org/node/495654
