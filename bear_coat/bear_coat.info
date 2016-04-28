@@ -37,6 +37,7 @@ settings[toggle_name]  			   = 0
 settings[main_layout]  			   = fixed
 settings[user_menu]            = 1
 settings[login_popup]          = 1
+settings[semantic_ui]          = 1
 settings[sticky_footer]        = 1
 settings[fixed_header]         = 1
 settings[home_banner]          = 1
