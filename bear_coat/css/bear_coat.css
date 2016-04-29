@@ -942,7 +942,7 @@ body:not(.semantic-ui) .wrapper .ui {
   #header .site-header__logo img{
     max-width: 250px; }
   #header .header-log a.loginpopup{
-    font-size: 100%;
+    font-size: 90%;
     right: 0; }
   .wrapper--title{
     margin-top: 70px; } }
