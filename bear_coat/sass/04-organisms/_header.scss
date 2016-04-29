@@ -91,7 +91,7 @@
         color: $link-color-hover;
       }
       @include breakpoint($breakpoint-large-width) {
-        font-size: 100%;
+        font-size: 90%;
         right: 0;
       }
     }
