@@ -7,6 +7,17 @@ body.semantic-ui:not(.panels-ipe) {
     width: 100%;
     position: static;
   }
+  .form-item {
+    &.required {
+      label {
+        &:before {
+          content: "*";
+          color: $red;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
   .ui {
     font-size: 100%;
     font-family: $body-font;

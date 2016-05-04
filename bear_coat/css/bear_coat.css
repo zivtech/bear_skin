@@ -1,8 +1,92 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Serif);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+/*
+* CSS Styles that are needed by jScrollPane for it to operate correctly.
+*
+* Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+* may not operate correctly without them.
+*/
 @import url(https://fonts.googleapis.com/css?family=PT+Serif);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 @import url("//fonts.googleapis.com/css?family=Droid+Sans");
+.jspContainer {
+  overflow: hidden;
+  position: relative; }
+
+.jspPane {
+  position: absolute; }
+
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: red; }
+
+.jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: transparent; }
+
+.jspCap {
+  display: none; }
+
+.jspHorizontalBar .jspCap {
+  float: left; }
+
+.jspTrack {
+  background: #ddd;
+  position: relative;
+  border-radius: 10px;
+  padding: 4px 0; }
+
+.jspDrag {
+  background: #666;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border-radius: 10px; }
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%; }
+
+.jspArrow {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  margin: 0; }
+
+.jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d; }
+
+.jspVerticalBar .jspArrow {
+  height: 16px; }
+
+.jspHorizontalBar .jspArrow {
+  width: 16px;
+  float: left;
+  height: 100%; }
+
+.jspVerticalBar .jspArrow:focus {
+  outline: none; }
+
+.jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%; }
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner {
+  margin: 0 -3px 0 0; }
+
 .black {
   background-color: #261D19; }
 
@@ -334,63 +418,6 @@ table.ui {
   min-width: 650px;
   margin-bottom: 30px !important; }
 
-body {
-  font-family: "PT Serif", serif;
-  -webkit-font-smoothing: antialiased; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Serif", serif;
-  font-weight: normal;
-  color: #2f3d45; }
-
-header:not(.site-header) {
-  color: #261D19;
-  font-family: "PT Serif", serif;
-  font-size: 120%;
-  margin-bottom: 10px; }
-
-h1, h1:last-child {
-  font-size: 4rem;
-  margin: 0.67em 0px; }
-
-h2, h2:last-child {
-  font-size: 2.5rem;
-  margin: 3rem 0 2rem 0; }
-
-h3, h3:last-child {
-  font-size: 2rem;
-  margin: 2.5rem 0 1rem 0; }
-
-h4, h4:last-child {
-  font-size: 1.5rem; }
-
-h5, h5:last-child {
-  font-size: 1.2rem; }
-
-img {
-  max-width: 100%;
-  height: 100%; }
-
-a {
-  color: #6792a8; }
-  a:hover, a:focus {
-    color: #476a7c;
-    text-decoration: underline; }
-
-blockquote {
-  margin: 1em 0;
-  padding-left: 2.5em;
-  border-left: 0.5em #eaeaea solid;
-  background: #f5f5f5;
-  position: relative; }
-  blockquote:before {
-    content: "\201C";
-    font-size: 3em;
-    position: absolute;
-    color: #888;
-    left: 8px;
-    top: -8px; }
-
 .ui.button {
   font-weight: normal; }
 
@@ -417,6 +444,145 @@ input.ui.button[type="submit"] {
   margin-top: 0.5em;
   font-family: "Open Sans", sans-serif !important;
   font-weight: 600 !important; }
+
+body.semantic-ui:not(.panels-ipe).dimmable {
+  width: 100%;
+  position: static; }
+
+body.semantic-ui:not(.panels-ipe) .form-item.required label:before {
+  content: "*";
+  color: #FF6A40;
+  margin-right: 5px; }
+
+body.semantic-ui:not(.panels-ipe) .ui {
+  font-size: 100%;
+  font-family: "PT Serif", serif; }
+  body.semantic-ui:not(.panels-ipe) .ui.form input:focus {
+    border-color: #6792a8; }
+  body.semantic-ui:not(.panels-ipe) .ui .field > label {
+    font-size: 100%;
+    font-weight: normal; }
+  body.semantic-ui:not(.panels-ipe) .ui.popup {
+    padding: 10px; }
+
+body.semantic-ui:not(.panels-ipe) .ui.link.menu .item:hover,
+body.semantic-ui:not(.panels-ipe) .ui.menu .dropdown.item:hover,
+body.semantic-ui:not(.panels-ipe) .ui.menu .link.item:hover,
+body.semantic-ui:not(.panels-ipe) .ui.menu a.item:hover,
+body.semantic-ui:not(.panels-ipe) .ui.link.menu .item:focus,
+body.semantic-ui:not(.panels-ipe) .ui.menu .dropdown.item:focus,
+body.semantic-ui:not(.panels-ipe) .ui.menu .link.item:focus,
+body.semantic-ui:not(.panels-ipe) .ui.menu a.item:focus {
+  color: #6792a8; }
+
+body.semantic-ui:not(.panels-ipe) #content .ui.fluid.input > input {
+  width: auto !important; }
+
+body.semantic-ui:not(.panels-ipe) .ui.checkbox,
+body.semantic-ui:not(.panels-ipe) .ui.radio.checkbox {
+  margin-right: 15px; }
+  body.semantic-ui:not(.panels-ipe) .ui.checkbox label,
+  body.semantic-ui:not(.panels-ipe) .ui.radio.checkbox label {
+    padding-left: 1.5em;
+    color: #555; }
+
+body.semantic-ui:not(.panels-ipe) .ui.form,
+body.semantic-ui:not(.panels-ipe) .ui.search-form {
+  font-family: "PT Serif", serif;
+  padding: 0; }
+  body.semantic-ui:not(.panels-ipe) .ui.form .form-wrapper:not(.form-actions) .fieldset-description,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .form-wrapper:not(.form-actions) .fieldset-description {
+    clear: both; }
+  body.semantic-ui:not(.panels-ipe) .ui.form input,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form input {
+    font-family: "PT Serif", serif; }
+  body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown {
+    max-width: 30em; }
+    body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown .menu > .item,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown .menu > .item {
+      font-size: 14px;
+      padding-left: 1.1em !important; }
+    body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown > input.search,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown > input.search {
+      z-index: 10; }
+  body.semantic-ui:not(.panels-ipe) .ui.form.segment,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form.segment {
+    border: 0;
+    margin: 0;
+    box-shadow: none; }
+  body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form {
+    position: relative; }
+    body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form .views-exposed-widgets,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form .views-exposed-widgets {
+      transition: opacity .2s ease-in-out; }
+    body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
+      opacity: .2; }
+      body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
+      body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
+        opacity: 0; }
+  body.semantic-ui:not(.panels-ipe) .ui.form .hidden-submit,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .hidden-submit {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    float: none;
+    margin: 0;
+    display: block; }
+  body.semantic-ui:not(.panels-ipe) .ui.form .ui.loading,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.loading {
+    top: -70px !important; }
+  body.semantic-ui:not(.panels-ipe) .ui.form .ui.button,
+  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button {
+    font-weight: normal;
+    text-shadow: 1px 1px 0 black, 1px 1px 0 rgba(0, 0, 0, 0.9);
+    opacity: 0.9;
+    font-size: 15px;
+    background: #6792a8;
+    color: white;
+    transition: background .2s ease-in-out; }
+    body.semantic-ui:not(.panels-ipe) .ui.form .ui.button:hover, body.semantic-ui:not(.panels-ipe) .ui.form .ui.button:focus,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button:hover,
+    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button:focus {
+      background: #445b75; }
+
+.ui.cards {
+  margin: 0; }
+
+.ui.cards > .card {
+  *zoom: 1;
+  float: left;
+  display: inline;
+  clear: none;
+  text-align: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+  display: block;
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .ui.cards > .card:before, .ui.cards > .card:after {
+    content: '';
+    display: table; }
+  .ui.cards > .card:after {
+    clear: both; }
+  .ui.cards > .card:last-child {
+    margin-right: 0%; }
+  .ui.cards > .card:first-child {
+    margin-left: auto; }
+  .ui.cards > .card:last-child {
+    margin-right: auto; }
+
+body:not(.semantic-ui) .wrapper .ui {
+  font-size: 100%;
+  font-family: "PT Serif", serif; }
 
 #comments {
   margin-top: 2em; }
@@ -708,226 +874,6 @@ body.banner .wrapper--title {
 .site-sidebars {
   margin: 2em 0; }
 
-/*
-* CSS Styles that are needed by jScrollPane for it to operate correctly.
-*
-* Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
-* may not operate correctly without them.
-*/
-.jspContainer {
-  overflow: hidden;
-  position: relative; }
-
-.jspPane {
-  position: absolute; }
-
-.jspVerticalBar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 16px;
-  height: 100%;
-  background: red; }
-
-.jspHorizontalBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 16px;
-  background: transparent; }
-
-.jspCap {
-  display: none; }
-
-.jspHorizontalBar .jspCap {
-  float: left; }
-
-.jspTrack {
-  background: #ddd;
-  position: relative;
-  border-radius: 10px;
-  padding: 4px 0; }
-
-.jspDrag {
-  background: #666;
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  border-radius: 10px; }
-
-.jspHorizontalBar .jspTrack,
-.jspHorizontalBar .jspDrag {
-  float: left;
-  height: 100%; }
-
-.jspArrow {
-  background: #50506d;
-  text-indent: -20000px;
-  display: block;
-  cursor: pointer;
-  padding: 0;
-  margin: 0; }
-
-.jspArrow.jspDisabled {
-  cursor: default;
-  background: #80808d; }
-
-.jspVerticalBar .jspArrow {
-  height: 16px; }
-
-.jspHorizontalBar .jspArrow {
-  width: 16px;
-  float: left;
-  height: 100%; }
-
-.jspVerticalBar .jspArrow:focus {
-  outline: none; }
-
-.jspCorner {
-  background: #eeeef4;
-  float: left;
-  height: 100%; }
-
-/* Yuk! CSS Hack for IE6 3 pixel bug :( */
-* html .jspCorner {
-  margin: 0 -3px 0 0; }
-
-body.semantic-ui:not(.panels-ipe).dimmable {
-  width: 100%;
-  position: static; }
-
-body.semantic-ui:not(.panels-ipe) .ui {
-  font-size: 100%;
-  font-family: "PT Serif", serif; }
-  body.semantic-ui:not(.panels-ipe) .ui.form input:focus {
-    border-color: #6792a8; }
-  body.semantic-ui:not(.panels-ipe) .ui .field > label {
-    font-size: 100%;
-    font-weight: normal; }
-  body.semantic-ui:not(.panels-ipe) .ui.popup {
-    padding: 10px; }
-
-body.semantic-ui:not(.panels-ipe) .ui.link.menu .item:hover,
-body.semantic-ui:not(.panels-ipe) .ui.menu .dropdown.item:hover,
-body.semantic-ui:not(.panels-ipe) .ui.menu .link.item:hover,
-body.semantic-ui:not(.panels-ipe) .ui.menu a.item:hover,
-body.semantic-ui:not(.panels-ipe) .ui.link.menu .item:focus,
-body.semantic-ui:not(.panels-ipe) .ui.menu .dropdown.item:focus,
-body.semantic-ui:not(.panels-ipe) .ui.menu .link.item:focus,
-body.semantic-ui:not(.panels-ipe) .ui.menu a.item:focus {
-  color: #6792a8; }
-
-body.semantic-ui:not(.panels-ipe) #content .ui.fluid.input > input {
-  width: auto !important; }
-
-body.semantic-ui:not(.panels-ipe) .ui.checkbox,
-body.semantic-ui:not(.panels-ipe) .ui.radio.checkbox {
-  margin-right: 15px; }
-  body.semantic-ui:not(.panels-ipe) .ui.checkbox label,
-  body.semantic-ui:not(.panels-ipe) .ui.radio.checkbox label {
-    padding-left: 1.5em;
-    color: #555; }
-
-body.semantic-ui:not(.panels-ipe) .ui.form,
-body.semantic-ui:not(.panels-ipe) .ui.search-form {
-  font-family: "PT Serif", serif;
-  padding: 0; }
-  body.semantic-ui:not(.panels-ipe) .ui.form .form-wrapper:not(.form-actions) .fieldset-description,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form .form-wrapper:not(.form-actions) .fieldset-description {
-    clear: both; }
-  body.semantic-ui:not(.panels-ipe) .ui.form input,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form input {
-    font-family: "PT Serif", serif; }
-  body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown {
-    max-width: 30em; }
-    body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown .menu > .item,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown .menu > .item {
-      font-size: 14px;
-      padding-left: 1.1em !important; }
-    body.semantic-ui:not(.panels-ipe) .ui.form .ui.dropdown > input.search,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.dropdown > input.search {
-      z-index: 10; }
-  body.semantic-ui:not(.panels-ipe) .ui.form.segment,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form.segment {
-    border: 0;
-    margin: 0;
-    box-shadow: none; }
-  body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form {
-    position: relative; }
-    body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form .views-exposed-widgets,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form .views-exposed-widgets {
-      transition: opacity .2s ease-in-out; }
-    body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
-      opacity: .2; }
-      body.semantic-ui:not(.panels-ipe) .ui.form .views-exposed-form.ajaxx .views-exposed-widgets,
-      body.semantic-ui:not(.panels-ipe) .ui.search-form .views-exposed-form.ajaxx .views-exposed-widgets {
-        opacity: 0; }
-  body.semantic-ui:not(.panels-ipe) .ui.form .hidden-submit,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form .hidden-submit {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    float: none;
-    margin: 0;
-    display: block; }
-  body.semantic-ui:not(.panels-ipe) .ui.form .ui.loading,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.loading {
-    top: -70px !important; }
-  body.semantic-ui:not(.panels-ipe) .ui.form .ui.button,
-  body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button {
-    font-weight: normal;
-    text-shadow: 1px 1px 0 black, 1px 1px 0 rgba(0, 0, 0, 0.9);
-    opacity: 0.9;
-    font-size: 15px;
-    background: #6792a8;
-    color: white;
-    transition: background .2s ease-in-out; }
-    body.semantic-ui:not(.panels-ipe) .ui.form .ui.button:hover, body.semantic-ui:not(.panels-ipe) .ui.form .ui.button:focus,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button:hover,
-    body.semantic-ui:not(.panels-ipe) .ui.search-form .ui.button:focus {
-      background: #445b75; }
-
-.ui.cards {
-  margin: 0; }
-
-.ui.cards > .card {
-  *zoom: 1;
-  float: left;
-  display: inline;
-  clear: none;
-  text-align: inherit;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-  margin-left: 0%;
-  margin-right: 3%;
-  display: block;
-  clear: both;
-  float: none;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .ui.cards > .card:before, .ui.cards > .card:after {
-    content: '';
-    display: table; }
-  .ui.cards > .card:after {
-    clear: both; }
-  .ui.cards > .card:last-child {
-    margin-right: 0%; }
-  .ui.cards > .card:first-child {
-    margin-left: auto; }
-  .ui.cards > .card:last-child {
-    margin-right: auto; }
-
-body:not(.semantic-ui) .wrapper .ui {
-  font-size: 100%;
-  font-family: "PT Serif", serif; }
-
 @media (min-width: 62.5em){
   #primary-tabs a,
       #secondary-tabs a{
@@ -948,8 +894,6 @@ body:not(.semantic-ui) .wrapper .ui {
     margin-top: 70px; } }
 
 @media (min-width: 50em){
-  .site-sidebars{
-    margin: 0; }
   .ui.cards > .card{
     zoom: 1;
     float: left;
@@ -970,4 +914,6 @@ body:not(.semantic-ui) .wrapper .ui {
     margin-right: 0%;
     float: right; }
   .ui.cards > .card:nth-child(3n + 1){
-    clear: both; } }
+    clear: both; }
+  .site-sidebars{
+    margin: 0; } }

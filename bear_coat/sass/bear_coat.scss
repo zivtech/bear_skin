@@ -11,6 +11,9 @@
 @import "../../sass/reusable";
 @import "../../sass/vendor";
 
+// vendor
+@import 'vendor/jScrollPane';
+
 // from Bear Coat
 @import '01-utilities/all';
 @import '02-atoms/all';
@@ -20,6 +23,3 @@
 
 // external
 @import url('//fonts.googleapis.com/css?family=Droid+Sans');
-
-@import 'vendor/jScrollPane';
-@import 'vendor/semantic_ui';
