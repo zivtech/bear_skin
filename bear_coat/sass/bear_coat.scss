@@ -4,11 +4,12 @@
 @import "../../sass/reusable";
 @import "../../sass/vendor";
 
-// from bear coat
-@import "base/_variables";
-@import "base/_mixins";
-@import "base/*";
-@import "components/*";
+// from Bear Coat
+@import '01-utilities/all';
+@import '02-atoms/all';
+@import '03-molecules/all';
+@import '04-organisms/all';
+@import '05-templates/all';
 
 // external
 @import url('//fonts.googleapis.com/css?family=Droid+Sans');
