@@ -68,3 +68,12 @@
     border: 1px solid $color-error;
   }
 }
+
+@mixin link($color, $text-decoration, $hover-color, $hover-text-decoration) {
+  color: $color;
+  text-decoration: $text-decoration;
+  &:hover, &:focus {
+    color: $hover-color;
+    text-decoration: $hover-text-decoration;
+  }
+}

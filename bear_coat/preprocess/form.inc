@@ -390,7 +390,6 @@ function bear_coat_form_element($variables) {
       $element['#type'] == "datetime-local"
     ) {
       $attributes['class'][] = "labeled";
-      $element['#field_suffix'] = '<div class="mt"></div>';
     }
     else {
       $attributes['class'][] = "off-label";

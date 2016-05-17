@@ -719,6 +719,25 @@ nav.ui.breadcrumb {
 .ui.form .webform-container-inline .field div.dropdown {
   width: auto; }
 
+.wrapper--site-info {
+  background: #2f3d45;
+  position: relative;
+  top: calc(70px / 1.5);
+  min-height: 56px; }
+
+.site-info {
+  max-width: 75em;
+  padding: 1em;
+  margin: 0 auto;
+  color: white; }
+  .site-info .site-header__name a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .site-info .site-header__name a:hover, .site-info .site-header__name a:focus {
+      color: #6792a8;
+      text-decoration: none; }
+
 .home-page-banner {
   min-height: 300px;
   background-size: cover;
@@ -874,6 +893,9 @@ body.banner .wrapper--title {
 .site-sidebars {
   margin: 2em 0; }
 
+.front.banner .wrapper--site-info {
+  top: 0; }
+
 @media (min-width: 62.5em){
   #primary-tabs a,
       #secondary-tabs a{
@@ -915,5 +937,10 @@ body.banner .wrapper--title {
     float: right; }
   .ui.cards > .card:nth-child(3n + 1){
     clear: both; }
+  .wrapper--site-info{
+    top: 70px; }
+  .site-info .site-header__slogan{
+    float: right;
+    clear: none; }
   .site-sidebars{
     margin: 0; } }
