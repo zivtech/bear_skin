@@ -1,4 +1,4 @@
-<div class="wrapper wrapper--header top">
+<div class="wrapper wrapper--header top <?php if ($site_name || $site_slogan): ?>site-info-above<?php endif;?>">
   <header id="header" role="banner" class="site-header">
     <?php if ($logo): ?>
       <div id="logo-container">
@@ -8,12 +8,14 @@
         </a>
       </div>
     <?php endif;?>
+
     <?php print render($page['header']);?>
     <?php print render($page['navigation']); ?>
 
     <?php if (theme_get_setting('login_popup')): ?>
       <?php print render($loginpopup); ?>
     <?php endif;?>
+
   </header>
 </div>
 
@@ -35,23 +37,9 @@
   <?php endif;?>
 <?php endif;?>
 
-<?php if (!empty($title)): ?>
-  <?php print render($title_prefix);?>
-  <div class="wrapper wrapper--title">
-    <div class="title-wrapper">
-      <h1 class="main__title" role="heading"><?php print $title;?></h1>
-    </div>
-  </div>
-  <?php print render($title_suffix);?>
-<?php else: // this is needed for ARIA ?>
-  <h1 class="u-hidden"><?php print $bear_page_title; ?></h1>
-<?php endif;?>
-
-
-<div class="wrapper wrapper--main">
-  <div id="main" class="site-main">
-  <div class="site-info">
-    <?php if ($site_name || $site_slogan): ?>
+<?php if ($site_name || $site_slogan): ?>
+  <div class="wrapper wrapper--site-info">
+    <div class="site-info">
       <div class="site-header__name-and-slogan">
         <?php if ($site_name): ?>
           <span class="site-header__name">
@@ -68,8 +56,25 @@
           </span>
         <?php endif;?>
       </div><!-- /.site-header__name-and-slogan -->
-    <?php endif;?>
     </div>
+  </div>
+<?php endif;?>
+
+<?php if (!empty($title)): ?>
+  <?php print render($title_prefix);?>
+  <div class="wrapper wrapper--title">
+    <div class="title-wrapper">
+      <h1 class="main__title" role="heading"><?php print $title;?></h1>
+    </div>
+  </div>
+  <?php print render($title_suffix);?>
+<?php else: // this is needed for ARIA ?>
+  <h1 class="u-hidden"><?php print $bear_page_title; ?></h1>
+<?php endif;?>
+
+
+<div class="wrapper wrapper--main">
+  <div id="main" class="site-main">
     <main id="content" class="column main" role="main">
       <?php if (!empty($page['highlighted'])): ?>
         <section class="main__highlighted">
