@@ -89,3 +89,88 @@ function bear_coat_preprocess_page(&$variables) {
     }
   }
 }
+
+
+/**
+ * Implements template_preprocess_menu_link()
+ * 1. Make a more specific CSS class for menu list items <li>
+ * 2. Make a CSS class on menu list items <li> referencing their level depth
+ * 3. Make a more specific CSS class for menu links <a>
+ * 4. Set ARIA roles and properties for accessibility
+ * 5. Save the menu name and depth as attributes
+ */
+function bear_coat_preprocess_menu_link(&$variables, $hook) {
+  $menu_name = $variables['element']['#original_link']['menu_name'];
+  $depth_word = _bear_coat_number_to_text($variables['element']['#original_link']['depth']);
+
+  $is_active = in_array('active', $variables['element']['#attributes']['class']);
+  $has_children = $variables['element']['#original_link']['expanded'] && $variables['element']['#original_link']['has_children'];
+
+  // <li> elements
+  $variables['element']['#attributes']['class'] = array();
+  $variables['element']['#attributes']['class'][] = $menu_name . '__item';
+  $variables['element']['#attributes']['class'][] = 'level-' . $depth_word;
+
+  // Add classes based on links.
+  $path_array = explode('/', $variables['element']['#href']);
+  foreach ($path_array as $arg) {
+    if (!isset($class)) {
+      $class = $arg;
+    }
+    else {
+      $class = $class . '-' . $arg;
+    }
+    $variables['element']['#attributes']['class'][] = $class;
+  }
+
+  if ($has_children) {
+    $variables['element']['#attributes']['class'][] = "parent";
+  }
+  if ($is_active) {
+    $variables['element']['#attributes']['class'][] = 'active';
+  }
+  $variables['element']['#attributes']['role'] = 'presentation';
+
+  // <a> elements
+  $variables['element']['#localized_options']['attributes']['class'] = array();
+  $variables['element']['#localized_options']['attributes']['class'][] = $menu_name . '__link';
+  if ($is_active) {
+    $variables['element']['#localized_options']['attributes']['class'][] = 'active';
+  }
+  $variables['element']['#localized_options']['attributes']['role'] = 'menuitem';
+  $variables['element']['#localized_options']['attributes']['aria-haspopup'] = ($has_children) ? 'true' : 'false';
+
+  // save the menu name and depth as data attributes
+  // this is a hack so that the <ul class="menu"> element can ultimately have
+  // CSS classes that reflect the specific menu name and its depth in the tree
+  $variables['element']['#attributes']['data-menu-name'] = $menu_name;
+  $variables['element']['#attributes']['data-menu-depth'] = $depth_word;
+}
+
+
+/**
+ * Convert a number to its word
+ * @param $number
+ * @return string
+ */
+function _bear_coat_number_to_text($number) {
+  $number = (int) $number;
+  switch ($number) {
+    case 0:
+      return 'top';
+    case 1:
+      return 'one';
+    case 2:
+      return 'two';
+    case 3:
+      return 'three';
+    case 4:
+      return 'four';
+    case 5:
+      return 'five';
+    case 6:
+      return 'six';
+    default:
+      return '';
+  }
+}
