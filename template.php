@@ -722,7 +722,7 @@ function _bear_skin_number_to_text($number) {
 }
 
 /**
- * Override theme_menu_link().
+ * Implements theme_menu_link().
  * Add default classes based on system paths to menu links.
  */
 function bear_skin_menu_link($variables) {
