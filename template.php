@@ -341,6 +341,19 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $variables['element']['#attributes']['class'] = array();
   $variables['element']['#attributes']['class'][] = $menu_name . '__item';
   $variables['element']['#attributes']['class'][] = 'level-' . $depth_word;
+
+  // Add classes based on links.
+  $path_array = explode('/', $variables['element']['#href']);
+  foreach ($path_array as $arg) {
+    if (!isset($class)) {
+      $class = $arg;
+    }
+    else {
+      $class = $class . '-' . $arg;
+    }
+    $variables['element']['#attributes']['class'][] = $class;
+  }
+
   if ($has_children) {
     $variables['element']['#attributes']['class'][] = "parent";
   }
@@ -719,22 +732,4 @@ function _bear_skin_number_to_text($number) {
     default:
       return '';
   }
-}
-
-/**
- * Implements theme_menu_link().
- * Add default classes based on system paths to menu links.
- */
-function bear_skin_menu_link($variables) {
-  $path_array = explode('/', $variables['element']['#href']);
-  foreach ($path_array as $arg) {
-    if (!isset($class)) {
-      $class = $arg;
-    }
-    else {
-      $class = $class . '-' . $arg;
-    }
-    $variables['element']['#attributes']['class'][] = $class;
-  }
-  return theme_menu_link($variables);
 }
