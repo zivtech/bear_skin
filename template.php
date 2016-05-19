@@ -344,15 +344,15 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
 
   // Add classes based on links.
   $path_array = explode('/', $variables['element']['#href']);  
-  foreach ($path_array as $arg) {
-    if (!isset($class)) {
-      $class = $arg;
-    }
-    else {
-      $class = $class . '-' . $arg;
-    }
-    $variables['element']['#attributes']['class'][] = $class;
-  }
+  foreach ($path_array as $arg) {
+    if (!isset($class)) {
+      $class = $arg;
+    }
+    else {
+      $class = $class . '-' . $arg;
+    }  
+    $variables['element']['#attributes']['class'][] = $class;
+  }
 
   if ($has_children) {
     $variables['element']['#attributes']['class'][] = "parent";
