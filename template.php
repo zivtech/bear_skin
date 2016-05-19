@@ -720,3 +720,21 @@ function _bear_skin_number_to_text($number) {
       return '';
   }
 }
+
+/**
+ * Override theme_menu_link().
+ * Add default classes based on system paths to menu links.
+ */
+function bear_skin_menu_link($variables) {
+  $path_array = explode('/', $variables['element']['#href']);
+  foreach ($path_array as $arg) {
+    if (!isset($class)) {
+      $class = $arg;
+    }
+    else {
+      $class = $class . '-' . $arg;
+    }
+    $variables['element']['#attributes']['class'][] = $class;
+  }
+  return theme_menu_link($variables);
+}
