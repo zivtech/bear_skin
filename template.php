@@ -350,8 +350,8 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
     }
     else {
       $class = $class . '-' . $arg;
-    }  
-    $variables['element']['#attributes']['class'][] = $class;
+    }
+    $variables['element']['#attributes']['class'][] = $class;  
   }
 
   if ($has_children) {
