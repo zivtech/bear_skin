@@ -343,7 +343,7 @@ function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $variables['element']['#attributes']['class'][] = 'level-' . $depth_word;
 
   // Add classes based on links.
-  $path_array = explode('/', $variables['element']['#href']);  
+  $path_array = explode('/', $variables['element']['#href']);
   foreach ($path_array as $arg) {
     if (!isset($class)) {
       $class = $arg;
