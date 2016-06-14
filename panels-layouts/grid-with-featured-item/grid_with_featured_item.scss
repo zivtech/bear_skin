@@ -1,0 +1,36 @@
+@import "../panels";
+
+.panel-display--grid-with-featured-item {
+
+  .column.main {
+    @include breakpoint($breakpoint-med-small-width) {
+      @include col(4/6, $gutter: 0);
+    }
+  }
+
+  .column.secondary {
+    @include breakpoint($breakpoint-med-small-width) {
+      @include col(2/6, $gutter: 0);
+    }
+  }
+
+  .column.lower-first {
+    @include breakpoint($breakpoint-medium-width) {
+      @include col(2/6, $gutter: 0);
+      clear: left;
+    }
+  }
+
+  .column.lower-second {
+    @include breakpoint($breakpoint-medium-width) {
+      @include col(2/6, $gutter: 0);
+    }
+  }
+
+  .column.lower-third {
+    @include breakpoint($breakpoint-medium-width) {
+      @include col(2/6, $gutter: 0);
+    }
+  }
+
+}

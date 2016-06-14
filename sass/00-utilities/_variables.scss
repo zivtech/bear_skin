@@ -1,0 +1,49 @@
+//
+// COLORS
+//
+
+$black: #261D19;
+$off-black: #555;
+$dark-gray: #888;
+$gray: #eaeaea;
+$light-gray: #f5f5f5;
+$red: #FF6A40;
+$blue: #728EAD;
+$dark-blue: darken($blue, 20%);
+$light-blue: lighten($blue, 20%);
+$green: #40C27A;
+$yellow: #F9B634;
+$white: white;
+
+$dotted: #aaa;
+
+//
+// LAYOUT
+//
+$site-min-width: 25em;
+$site-max-width: 1200px / 16px * 1em;
+
+//
+// TYPOGRAPHY
+//
+
+// see ../vendor/gutenberg/_gutenberg-typography.scss
+
+
+//
+// LAYOUT
+//
+
+// Configure Gutenberg for specific layout options in sass/vendor/gutemberg/_gutenberg-config.scss
+
+
+//
+// BREAKPOINTS
+//
+$breakpoint-min-width: min-width 0 !default;
+$breakpoint-small-width: min-width 25em !default;
+$breakpoint-med-small-width: min-width 40.5em !default;
+$breakpoint-medium-width: min-width 50em !default;
+$breakpoint-large-width: min-width 62.5em !default;
+$breakpoint-to-max-width: min-width $site-max-width !default;
+$breakpoint-full-width: max-width $site-max-width !default;

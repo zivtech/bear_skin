@@ -1,0 +1,13 @@
+.wrapper {
+  min-width: 320px;
+
+  &--site-info {
+    background: $dark-blue;
+    position: relative;
+  }
+
+  &--footer {
+    border-top: 1px solid $gray;
+  }
+  
+}

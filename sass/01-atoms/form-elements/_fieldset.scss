@@ -1,0 +1,38 @@
+fieldset {
+  position: relative;
+  margin: 1em 0;
+  display: block;
+  clear: both;
+  height: auto !important;
+  border: 0;
+  padding: 0;
+
+  &:not(.collapsed) {
+
+    i.icon:before {
+      content: "\f056" !important;
+    }
+
+  }
+
+  &.required {
+
+    > label {
+
+      &:after {
+        margin: -0.2em 0em 0em 0.2em;
+        content: '*';
+        color: #db2828;
+      }
+
+    }
+  }
+}
+
+.fieldset-wrapper {
+  background: $light-gray;
+  padding: 1em;
+  border: 1px dotted $gray;
+  margin: 1em 0;
+  overflow: visible !important;
+}

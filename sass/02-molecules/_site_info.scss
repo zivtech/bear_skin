@@ -1,0 +1,28 @@
+.site-info {
+  max-width: $site-max-width;
+  padding: 1em;
+  margin: 0 auto;
+  color: $white;
+
+  .site-header {
+
+    &__name {
+
+      a {
+        @include link($white, none, $blue, none);
+
+        text-transform: uppercase;
+      }
+    }
+
+    &__slogan {
+
+      @include breakpoint($breakpoint-medium-width) {
+        float: right;
+        clear: none;
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,11 @@
+.table-ui-container {
+  overflow-y: auto;
+  _overflow: auto;
+  margin: 0;
+  position: relative;
+}
+
+table.ui {
+  min-width: 650px;
+  margin-bottom: 30px !important;
+}

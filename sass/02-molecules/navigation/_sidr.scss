@@ -1,0 +1,64 @@
+// SIDR
+#sidr-wrapper-0 {
+  position: absolute;
+  right: 0;
+  top: .5em;
+}
+
+.sidr-inner {
+  border-bottom: 1px solid #4d4d4d;
+  padding: 0 !important;
+
+  a {
+    width: 100%;
+    display: block;
+    padding: .5em 1em;
+    color: $white;
+    line-height: 2.5em;
+    border-bottom: 1px solid #1a1a1a;
+    border-top: 1px solid #4d4d4d;
+
+    &:focus,
+    &:hover,
+    &.sidr-class-active {
+      box-shadow: inset 0 0 15px 3px #222;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+  }
+}
+
+body.sidr-open {
+
+  #sidr-wrapper-0 {
+    margin-left: 0;
+    position: absolute;
+    left: 1em;
+
+    span {
+      background: transparent;
+
+      &:before,
+      &:after {
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+
+    }
+  }
+
+  #header #logo-container {
+    opacity: 0;
+  }
+  
+}

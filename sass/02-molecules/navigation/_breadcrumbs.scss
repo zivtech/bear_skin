@@ -1,0 +1,22 @@
+nav.breadcrumb {
+  padding: 20px 0;
+  color: $off-black;
+
+  .divider,
+  span {
+    color: $off-black;
+  }
+
+  i {
+
+    &:before {
+      font-size: 75%;
+    }
+
+    &:last-child {
+      display: none;
+    }
+
+  }
+
+}

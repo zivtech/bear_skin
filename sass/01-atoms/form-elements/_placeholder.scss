@@ -1,0 +1,9 @@
+::placeholder {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  color: $gray;
+}
+:focus::placeholder {
+  opacity: .5;
+  color: $dark-gray;
+}

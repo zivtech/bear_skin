@@ -1,0 +1,30 @@
+.site-footer {
+  background: $dark-blue;
+  color: $white;
+
+  .region-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+}
+
+#footer {
+  background: transparent;
+  border: 0;
+
+  .block-menu {
+    float: left;
+    margin: 0 50px 0 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+    }
+
+  }
+}
