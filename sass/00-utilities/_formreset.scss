@@ -1,0 +1,298 @@
+// Config -----------------------------
+
+// Font
+$form-font-family: inherit, sans-serif !default;
+$form-font-size: 100% !default;
+$form-font-color: inherit !default;
+
+// Transitions
+$form-transition: all .2s ease-in-out !default;
+
+// Borders
+$form-border-radius: 2px !default;
+$form-border-width: 1px !default;
+$form-border-style: solid !default;
+$form-border-color: $dark-gray !default;
+
+// Inputs, Textareas, Select, Option
+$form-input-height: 2em !default;
+$form-line-height: 1 !default;
+$form-input-width: 100% !default;
+$form-input-max-width: 400px !default;
+$form-input-bg-color: $white !default;
+$form-focus-bg-color: $light-gray !default;
+$form-focus-border-color: $blue !default;
+$form-focus-font-color: $form-font-color !default;
+
+// Select Vendor Styling
+$form-allow-select-vendor-styling: true !default;
+
+// Fieldset & Legend Styling
+$form-fieldset-bare: false !default;
+
+// Buttons & Input Submits
+$form-button-height: auto !default;
+$form-button-width: auto !default;
+$form-button-max-width: 100% !default;
+$form-button-font-color: $form-font-color !default;
+$form-button-bg-color: $form-focus-bg-color !default;
+$form-button-hover-bg-color: $form-border-color !default;
+$form-button-hover-font-color: $white !default;
+$form-button-transition: $form-transition !default;
+
+// Layout
+$form-centered: false !default;
+$form-display: block !default;
+
+// Center/Left-Aligned Layout
+@mixin center-layout {
+	@if $form-centered == true {
+		margin: auto;
+		text-align: center;
+	}
+	@else {
+		margin: auto 0;
+	}
+}
+
+/* Global Reset Styles ------------------ */
+
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+	@include center-layout;
+
+	box-sizing: border-box;
+	outline: none;
+	font-family: $form-font-family;
+	font-size: $form-font-size;
+	color: $form-font-color;
+	vertical-align: top;
+	display: $form-display;
+}
+
+
+datalist {
+	font-family: $form-font-family;
+	font-size: $form-font-size;
+}
+
+
+/* Input & Textarea ------------------ */
+
+/* Fields with standard width */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select,
+textarea {
+	width: $form-input-width;
+	max-width: $form-input-max-width;
+	padding: $form-input-height / 5;
+	background-color: $form-input-bg-color;
+
+	border-radius: $form-border-radius;
+	border: $form-border-width $form-border-style $form-border-color;
+}
+
+/* Fields with standard height */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list] {
+	height: $form-input-height;
+	-webkit-appearance: none;
+}
+
+/* Other */
+
+textarea {
+	-webkit-appearance: none;
+	overflow: auto;
+}
+
+input[type="range"] {
+	height: $form-input-height;
+	width: $form-input-width;
+	max-width: $form-input-max-width;
+}
+
+input[type="file"] {
+	min-height: $form-input-height;
+}
+
+input[type="search"] {
+	height: $form-input-height;
+	-webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Select ------------------ */
+
+select {
+	height: $form-input-height;
+
+	@if $form-allow-select-vendor-styling == false {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+	}
+}
+
+select[multiple] {
+	height: auto;
+	min-height: $form-input-height;
+	padding: 0;
+
+	option {
+		margin: 0;
+		padding: $form-input-height / 5;
+	}
+}
+
+/* Fieldset ------------------ */
+
+fieldset {
+	@if $form-fieldset-bare == true {
+		padding: 0;
+		border: 0;
+	}
+	@else {
+		@include padding(1 , 2, 1, 2);
+		border-radius: $form-border-radius;
+		border: $form-border-width $form-border-style $form-border-color;
+	}
+}
+
+legend {
+	@if $form-fieldset-bare == true {
+		padding: 0;
+		font-weight: inherit;
+	}
+	@else {
+		padding: 0 5px;
+		font-weight: 700;
+	}
+}
+
+/* Buttons, Input Type Submit/Reset ------------------ */
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+	height: $form-button-height;
+	width: $form-button-width;
+	max-width: $form-button-max-width;
+	background-color: $form-button-bg-color;
+	padding: $form-input-height / 5;
+	cursor: pointer;
+	line-height: $form-line-height;
+	transition: $form-button-transition;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	color: $form-button-font-color;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	border-radius: $form-border-radius;
+	border: $form-border-width $form-border-style $form-border-color;
+}
+
+input[type="image"] {
+	text-align: center;
+	padding: $form-input-height / 5;
+}
+
+/* States ------------------ */
+
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+	cursor: not-allowed;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus  {
+	background-color: $form-focus-bg-color;
+	border-color: $form-focus-border-color;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+	outline: $form-focus-border-color solid 1px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+	background-color: $form-button-hover-bg-color;
+	color: $form-button-hover-font-color;
+}
+
+
+// Drupal specific
+
+form {
+
+	.form-item {
+		@include margin-bottom(1);
+	}
+	.description {
+		font-size: 80%;
+	}
+	.form-submit {
+		margin: 0;
+	}
+
+}

@@ -1,81 +1,51 @@
-<div class="wrapper wrapper--header top <?php if ($site_name || $site_slogan): ?>site-info-above<?php endif;?>">
-  <header id="header" role="banner" class="site-header">
-    <?php if ($logo): ?>
-      <div id="logo-container">
-        <a href="<?php print $front_page;?>" title="<?php print t('Home');?>"
-           rel="home" class="site-header__logo">
-          <img src="<?php print $logo;?>" alt="<?php print t('Home');?>"/>
-        </a>
-      </div>
-    <?php endif;?>
+<div class="wrapper wrapper--header">
+  <section id="container-header">
+    <header id="header" role="banner" class="site-header">
 
-    <?php print render($page['header']);?>
-    <?php print render($page['navigation']); ?>
+      <?php if ($logo): ?>
+        <div class="site-header__logo">
+          <a href="<?php print $front_page;?>" title="<?php print t('Home');?>" rel="home">
+            <img src="<?php print $logo;?>" alt="<?php print t('Home');?>"/>
+          </a>
+        </div>
+      <?php endif;?>
 
-    <?php if (theme_get_setting('login_popup')): ?>
-      <?php print render($loginpopup); ?>
-    <?php endif;?>
+      <?php if ($site_name): ?>
+        <span class="site-header__name">
+          <a href="<?php print $front_page;?>"
+             title="<?php print t('Home');?>" rel="home">
+            <span><?php print $site_name;?></span>
+          </a>
+        </span>
+      <?php endif;?>
 
-  </header>
+      <?php if ($site_slogan): ?>
+        <span class="site-header__slogan">
+          <?php print $site_slogan;?>
+        </span>
+      <?php endif;?>
+
+      <?php print render($page['header']);?>
+      <?php print render($page['navigation']); ?>
+
+    </header>
+  </section>
 </div>
-
-<?php if (drupal_is_front_page()): ?>
-  <?php if (theme_get_setting('home_banner')): ?>
-    <?php if (theme_get_setting('home_banner_file')): ?>
-      <div class="home-page-banner" style="background-image: url('<?php print $home_banner_file_url ?>');">
-        <?php if (theme_get_setting('home_slogan')): ?>
-          <header><?php print theme_get_setting('home_slogan') ?></header>
-        <?php endif;?>
-      </div>
-    <?php else : ?>
-      <div class="home-page-banner default">
-        <?php if (theme_get_setting('home_slogan')): ?>
-          <header><?php print theme_get_setting('home_slogan') ?></header>
-        <?php endif;?>
-      </div>
-    <?php endif;?>
-  <?php endif;?>
-<?php endif;?>
-
-<?php if ($site_name || $site_slogan): ?>
-  <div class="wrapper wrapper--site-info">
-    <div class="site-info">
-      <div class="site-header__name-and-slogan">
-        <?php if ($site_name): ?>
-          <span class="site-header__name">
-            <a href="<?php print $front_page;?>"
-               title="<?php print t('Home');?>" rel="home">
-              <span><?php print $site_name;?></span>
-            </a>
-          </span>
-        <?php endif;?>
-
-        <?php if ($site_slogan): ?>
-          <span class="site-header__slogan">
-            <?php print $site_slogan;?>
-          </span>
-        <?php endif;?>
-      </div><!-- /.site-header__name-and-slogan -->
-    </div>
-  </div>
-<?php endif;?>
-
-<?php if (!empty($title)): ?>
-  <?php print render($title_prefix);?>
-  <div class="wrapper wrapper--title">
-    <div class="title-wrapper">
-      <h1 class="main__title" role="heading"><?php print $title;?></h1>
-    </div>
-  </div>
-  <?php print render($title_suffix);?>
-<?php else: // this is needed for ARIA ?>
-  <h1 class="u-hidden"><?php print $bear_page_title; ?></h1>
-<?php endif;?>
 
 
 <div class="wrapper wrapper--main">
-  <div id="main" class="site-main">
+  <section id="container-main" class="site-main">
+
     <main id="content" class="column main" role="main">
+
+      <?php if (!empty($title)): ?>
+        <?php print render($title_prefix);?>
+        <h1 class="main__title" role="heading"><?php print $title;?></h1>
+        <?php print render($title_suffix);?>
+      <?php else: // this is needed for ARIA ?>
+        <h1 class="visually-hidden"><?php print $title; ?></h1>
+      <?php endif;?>
+
       <?php if (!empty($page['highlighted'])): ?>
         <section class="main__highlighted">
           <?php print render($page['highlighted']);?>
@@ -129,19 +99,22 @@
       </aside><!-- /.sidebars -->
     <?php endif;?>
 
-  </div>
+  </section>
   <!-- /#main -->
 </div>
 
 <div class="wrapper wrapper--footer">
-  <div class="breadcrumbs-wrapper">
-    <div id="breadcrumbs">
+
+  <section id="container-footer">
+
+    <div class="site-breadcrumbs">
       <?php print $breadcrumb;?>
     </div>
-  </div>
-  <div class="site-footer">
-     <footer id="footer">
+
+    <footer id="footer" class="site-footer">
       <?php print render($page['footer']);?>
     </footer>
-  </div>
+
+  </section>
+
 </div>

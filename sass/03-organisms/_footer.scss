@@ -1,10 +1,7 @@
 .site-footer {
-  background: $dark-blue;
-  color: $white;
 
   .region-footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    @include padding(1, 0, 1, 0);
   }
 
 }

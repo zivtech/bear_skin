@@ -1,42 +1,97 @@
 // SIDR
 #sidr-wrapper-0 {
+  @include margin(.5, .5, .5, .5);
+
   position: absolute;
   right: 0;
-  top: .5em;
+  top: 0;
+  $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
+
+  span {
+    display: block;
+    position: relative;
+    background: $black;
+    height: 2px;
+    transition: $span-transition;
+    width: 22px;
+    top: 15px;
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      background: $black;
+      height: 2px;
+      margin-top: 0;
+      position: absolute;
+      width: 22px;
+      transition: $span-transition;
+    }
+
+    &:before {
+      top: 7px;
+    }
+    &:after {
+      top: -7px;
+    }
+
+  }
+}
+
+h3.sidr-class-visually-hidden {
+  @include element-invisible;
+}
+
+#sidr-0-button {
+  display: block;
+  width: 25px;
+  height: 30px;
+  position: relative;
 }
 
 .sidr-inner {
   border-bottom: 1px solid #4d4d4d;
   padding: 0 !important;
 
-  a {
-    width: 100%;
-    display: block;
-    padding: .5em 1em;
-    color: $white;
-    line-height: 2.5em;
-    border-bottom: 1px solid #1a1a1a;
-    border-top: 1px solid #4d4d4d;
+  ul {
+    padding: 0;
+    margin: 0;
+    border: 0;
 
-    &:focus,
-    &:hover,
-    &.sidr-class-active {
-      box-shadow: inset 0 0 15px 3px #222;
-    }
+    li {
+      border: 0;
 
-    &:last-child {
-      border-bottom: 1px solid #1a1a1a;
+      a {
+        @include padding(.3, .5, .3, .5);
+
+        width: 100%;
+        display: block;
+        color: $white;
+        border-bottom: 1px solid #1a1a1a;
+        border-top: 1px solid #4d4d4d;
+
+        &:focus,
+        &:hover,
+        &.sidr-class-active {
+          box-shadow: inset 0 0 15px 3px #222;
+          color: $white;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid #1a1a1a;
+        }
+
+      }
+
     }
 
   }
 }
 
-body.sidr-open {
+.sidr-open {
 
   #sidr-wrapper-0 {
-    margin-left: 0;
-    position: absolute;
-    left: 1em;
+
+    right: 260px;
 
     span {
       background: transparent;
@@ -60,5 +115,5 @@ body.sidr-open {
   #header #logo-container {
     opacity: 0;
   }
-  
+
 }

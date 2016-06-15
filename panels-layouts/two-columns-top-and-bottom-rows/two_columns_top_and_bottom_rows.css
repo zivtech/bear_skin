@@ -575,9 +575,9 @@ code {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 50%;
+    width: 46%;
     margin-left: 0%;
-    margin-right: 0%; }
+    margin-right: 8%; }
   .panel-display--two-eq-column .column.left:before, .panel-display--two-eq-column .column.left:after{
     content: '';
     display: table; }
@@ -593,9 +593,9 @@ code {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 50%;
+    width: 46%;
     margin-left: 0%;
-    margin-right: 0%; }
+    margin-right: 8%; }
   .panel-display--two-eq-column .column.right:before, .panel-display--two-eq-column .column.right:after{
     content: '';
     display: table; }

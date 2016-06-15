@@ -1,0 +1,37 @@
+.main-menu {
+
+  @include padding(1, 0, 1, 0);
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--level-two {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &__item {
+    list-style-type: none;
+    display: inline;
+    @include margin(0, 1, 0, 0);
+
+    &--expanded {
+      position: relative;
+
+      &:hover, &:focus {
+
+        .main-menu--level-two  {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+
+}

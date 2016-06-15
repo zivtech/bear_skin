@@ -21,77 +21,6 @@
      context = context || document;
      settings = settings || Drupal.settings;
 
-      // Material
-      if ($('body').hasClass('semantic-ui')) {
-        $('select', context).dropdown();
-        $('.ui.checkbox', context).checkbox();
-        $('.ui.accordion', context).accordion({
-          animateChildren: true,
-          easing: "easeInQuart",
-          duration: 300
-        });
-        $('.tabular.menu .item', context).tab();
-        $('.ui.sticky', context).sticky({
-          context: '#content',
-          offset: 50
-        });
-        $('.ui.pop-up', context).popup({
-            inline: true,
-            hoverable: true
-          });
-      }
-
-      //******************
-      // Markup/Dom modifs
-      //******************
-
-      // removing annoying markup
-      $('.field-suffix', context).each(function(){
-        $(this)
-          .contents()
-          .unwrap();
-      });
-
-      // addclass to search wrapper on focus
-      var $searchForm = $('#search-block-form', context);
-      $searchForm
-        .find('.form-text')
-        .on('focus', function(){
-          $(this)
-            .closest('.block-search')
-            .addClass('focus');
-        })
-        .on('blur', function(){
-          $(this)
-          .closest('.block-search')
-          .removeClass('focus');
-        });
-
-        // border animation on input
-        var $textInput = $('.form-item.labeled input', context);
-        $textInput
-          .on('focus', function(){
-            $(this)
-              .siblings('label, .mt')
-              .addClass('focus active');
-          })
-          .on('blur', function(){
-            $(this)
-              .siblings('label, .mt')
-              .removeClass('focus active');
-          });
-        $textInput.each(function(){
-          if ($(this).is(':focus')) {
-            $(this)
-              .siblings('label, .mt')
-              .addClass('focus active');
-          }
-          if ($(this).hasClass('error')) {
-            $(this)
-              .siblings('label')
-              .addClass('error');
-          }
-        });
 
       // adding a class to empty p to remove margin/padding
       // removing extra space if empty as well
@@ -106,21 +35,6 @@
         return h.replace(/&nbsp;/g,'');
       });
 
-      // adding a class to hidden submit buttons wrappers
-      var $hiddenSubmit = $('input.js-hide', context);
-      $hiddenSubmit.each(function() {
-        $(this).parent('.views-submit-button').addClass('hidden-submit');
-      });
-
-      // Tables handling
-      var $uiTable = $('table.ui', context);
-      $uiTable.each(function() {
-        $(this).once().wrap('<div class="table-ui-container"></div>');
-        $(this).parent().jScrollPane({
-            autoReinitialise: true
-        });
-      });
-
       // extra SIDR code
       if ($('body').hasClass('resp-nav')) {
        $(window).on('resize', function(){
@@ -132,16 +46,14 @@
       }
 
       // sticky header
-      var fixed_header = Drupal.settings.mpgranch_theme.fixed_header;
-      if (fixed_header === true) {
-        var lastScrollTop = 0,
-            delta = 5,
-            navBar = $('.wrapper--header'),
-            navBarHeight = navBar.outerHeight();
 
-        var throttledSticky = $.throttle(100, function() {stickyHeader()});
-        $(window).on('scroll', throttledSticky);
-      }
+      // var lastScrollTop = 0,
+      //     delta = 5,
+      //     navBar = $('.wrapper--header'),
+      //     navBarHeight = navBar.outerHeight();
+      //
+      // var throttledSticky = $.throttle(100, function() {stickyHeader()});
+      // $(window).on('scroll', throttledSticky);
 
       function stickyHeader() {
         var st = $(window).scrollTop();

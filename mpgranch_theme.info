@@ -5,9 +5,7 @@ screenshot  = screenshot.png
 
 stylesheets[all][] = css/mpgranch_theme.css
 
-scripts[] = js/vendor/jquery.easing.1.3.js
 scripts[] = js/vendor/jquery.ba-throttle-debounce.min.js
-; scripts[] = js/vendor/jquery.jscrollpane.min.js
 scripts[] = js/scripts.js
 
 regions[header]         = Header

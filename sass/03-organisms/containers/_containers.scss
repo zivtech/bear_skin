@@ -1,0 +1,12 @@
+section[id^="container-"] {
+
+  @include padding(0, 1);
+
+  overflow: hidden;
+  margin: 0 auto;
+
+}
+
+#container-main {
+  @include margin-bottom(1);
+}

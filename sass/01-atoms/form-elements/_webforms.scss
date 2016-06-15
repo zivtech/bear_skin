@@ -1,18 +1,15 @@
-.ui.form {
+.webform-container-inline {
 
-  .webform-container-inline {
-    
-    label {
-      display: inline !important;
-      margin: 0 .5em;
+  label {
+    display: inline !important;
+    @include margin(.5, 0, .5, 0);
+  }
+
+  .field {
+
+    div.dropdown {
+      width: auto;
     }
 
-    .field {
-
-      div.dropdown {
-        width: auto;
-      }
-
-    }
   }
 }

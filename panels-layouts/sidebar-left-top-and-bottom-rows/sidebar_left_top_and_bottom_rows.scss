@@ -4,23 +4,23 @@
 
   .column.left {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(1/5, $gutter: 0);
-      @include shift(-4/5, $gutter: 0);
+      @include col(1/5, $gutter: 8);
+      @include shift(-4/5, $gutter: 8);
     }
     @include breakpoint($breakpoint-large-width) {
-      @include col(2/7, $gutter: 0);
-      @include shift(-5/7, $gutter: 0);
+      @include col(2/7, $gutter: 8);
+      @include shift(-5/7, $gutter: 8);
     }
   }
 
   .column.center {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(4/5, $gutter: 0);
-      @include shift(1/5, $gutter: 0);
+      @include col(4/5, $gutter: 8);
+      @include shift(1/5, $gutter: 8);
     }
     @include breakpoint($breakpoint-large-width) {
-      @include col(5/7, $gutter: 0);
-      @include shift(2/7, $gutter: 0);
+      @include col(5/7, $gutter: 8);
+      @include shift(2/7, $gutter: 8);
     }
   }
 

@@ -1,6 +1,7 @@
 fieldset {
+  @include margin(.5, 0, .5, 0);
+
   position: relative;
-  margin: 1em 0;
   display: block;
   clear: both;
   height: auto !important;
@@ -20,7 +21,7 @@ fieldset {
     > label {
 
       &:after {
-        margin: -0.2em 0em 0em 0.2em;
+        @include margin(-.1, 0, 0, -.1);
         content: '*';
         color: #db2828;
       }
@@ -30,9 +31,10 @@ fieldset {
 }
 
 .fieldset-wrapper {
+  @include margin(.5, 0, .5, 0);
+  @include padding(.5, .5, .5, .5);
+
   background: $light-gray;
-  padding: 1em;
   border: 1px dotted $gray;
-  margin: 1em 0;
   overflow: visible !important;
 }

@@ -105,52 +105,10 @@ gulp.task('images', function () {
     .pipe(livereload());
 });
 
-gulp.task('styleguide', function () {
-  gutil.log(gutil.colors.yellow('Creating the styleguide!'));
-  gulp.src('./sass/**/*.scss')
-    .pipe(cssGlobbing({
-      extensions: ['.scss']
-    }))
-    .pipe(gulpkss({
-        overview: __dirname + '/styleguide/styleguide.md',
-        templateDirectory: __dirname + '/styleguide/template'
-    }))
-    .pipe(gulp.dest('styleguide'));
-
-  gulp.src('sass/mpgranch_theme.scss')
-    .pipe(cssGlobbing({
-      extensions: ['.scss']
-    }))
-    .pipe(sass())
-    .on('error', handleError('Sass Compiling'))
-    .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
-    .pipe(postcss(processors))
-    .pipe(rename('style.css'))
-    .on('error', handleError('Post CSS Processing'))
-    .pipe(gulp.dest('styleguide/public'))
-});
-
-gulp.task('styleguidesass', function () {
-  gutil.log(gutil.colors.yellow('Compiling the theme CSS!'));
-  return gulp.src('./styleguide/custom/style.scss')
-    .pipe(cssGlobbing({
-      extensions: ['.scss']
-    }))
-    .pipe(gulpif(buildSourceMaps, sourcemaps.init()))
-    .pipe(sass())
-    .on('error', handleError('Sass Compiling'))
-    .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
-    .pipe(postcss(processors))
-    .on('error', handleError('Post CSS Processing'))
-    .pipe(gulp.dest('./styleguide/custom/'))
-    .pipe(livereload());
-});
-
 gulp.task('watch', function() {
   livereload.listen(4002);
 
-  gulp.watch("./styleguide/custom/style.scss", ['styleguidesass']);
-  gulp.watch("./css/mpgranch_theme.css", ['styleguidesass']);
+  gulp.watch("./css/mpgranch_theme.css");
   gulp.watch("./sass/**/*.scss", ['sass'], ['styleguide']);
   gulp.watch("./js/*.js", ['scripts']);
   gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);

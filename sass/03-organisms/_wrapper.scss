@@ -1,5 +1,7 @@
 .wrapper {
   min-width: 320px;
+  max-width: 100%;
+  clear: both;
 
   &--site-info {
     background: $dark-blue;
@@ -9,5 +11,5 @@
   &--footer {
     border-top: 1px solid $gray;
   }
-  
+
 }
