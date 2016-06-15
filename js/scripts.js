@@ -16,7 +16,7 @@
 
   //Use the sample behavior pattern below
 
-  Drupal.behaviors.mpgranch_theme = {
+  Drupal.behaviors.bear_skin = {
    attach: function (context, settings) {
      context = context || document;
      settings = settings || Drupal.settings;

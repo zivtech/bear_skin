@@ -1,6 +1,5 @@
 
-MPG Ranch Theme is a sub theme of Bear Skin aimed at delivering a better appearance out of the box
-(Menus, layouts, Semantic Ui integration, SIDR responsive menu, etc).
+Bear Skin is a base theme to either customize and build upon or use as a base theme for a sub theme.
 
 Getting started
 -----------------
@@ -11,11 +10,6 @@ make sure your local paths are right: npm config set prefix /usr/local
 reinstall gulp: sudo npm install gulp -g
 
 After the process finishes, you'll be able to run all the gulp tasks (see below).
-
-Note: The theme relies on Semantic UI for some of its UI/UX elements.
-Go to /admin/appearance/settings/mpgranch_theme to configure it.
-
-
 
 Gulp tasks
 ------------

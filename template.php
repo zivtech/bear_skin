@@ -6,10 +6,10 @@
  * 2. Include bear skin theme options in Drupal's JS object
  * 3. Include a CSS class on the body tag if the site uses sticky footer
  */
-function mpgranch_theme_preprocess_html(&$variables, $hook) {
+function bear_skin_preprocess_html(&$variables, $hook) {
   // Add variables and paths needed for HTML5 and responsive support.
   $variables['base_path'] = base_path();
-  $variables['path_to_mpgranch_theme'] = drupal_get_path('theme', 'mpgranch_theme');
+  $variables['path_to_bear_skin'] = drupal_get_path('theme', 'bear_skin');
   $variables['skip_link_anchor'] = 'main-content';
 
 
@@ -89,7 +89,7 @@ function mpgranch_theme_preprocess_html(&$variables, $hook) {
     }
 }
 
-function mpgranch_theme_html_head_alter(&$head_elements) {
+function bear_skin_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
   );
@@ -103,7 +103,7 @@ function mpgranch_theme_html_head_alter(&$head_elements) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-function mpgranch_theme_process_html(&$variables, $hook) {
+function bear_skin_process_html(&$variables, $hook) {
   // Flatten out html_attributes.
   $variables['html_attributes'] = drupal_attributes($variables['html_attributes_array']);
 }
@@ -113,7 +113,7 @@ function mpgranch_theme_process_html(&$variables, $hook) {
  * 1. Check if sidebars have content; Add boolean to $variables
  * 2. Setup the user menu (by default displayed in header)
  */
-function mpgranch_theme_preprocess_page(&$variables) {
+function bear_skin_preprocess_page(&$variables) {
 
   $page = $variables['page'];
 
@@ -161,7 +161,7 @@ function mpgranch_theme_preprocess_page(&$variables) {
  * Implements template_preprocess_region()
  * 1. Add SMACCS / BEM style CSS class to regions
  */
-function mpgranch_theme_preprocess_region(&$variables) {
+function bear_skin_preprocess_region(&$variables) {
   $region = $variables['region'];
   $variables['classes_array'][] = 'region--' . str_replace('_', '-', $region);
   $variables['attributes_array']['role'] = 'region';
@@ -172,7 +172,7 @@ function mpgranch_theme_preprocess_region(&$variables) {
  * 1. Add SMACCS / BEM style CSS classes for nodes and node titles
  * 2. Let node teasers have a tpl file called node--teaser.tpl.php
  */
-function mpgranch_theme_preprocess_node(&$variables) {
+function bear_skin_preprocess_node(&$variables) {
   $view_mode = $variables['view_mode'];
   $type = $variables['type'];
 
@@ -195,7 +195,7 @@ function mpgranch_theme_preprocess_node(&$variables) {
  * Implements template_preprocess_block()
  * 1. Add a class to the block to indicate its type and region placement
  */
-function mpgranch_theme_preprocess_block(&$variables) {
+function bear_skin_preprocess_block(&$variables) {
   $module = str_replace('_', '-', $variables['block']->module) . '-' . $variables['block']->delta;
   $region = str_replace('_', '-', $variables['block']->region);
   $variables['classes_array'][] = 'block__' . $module;
@@ -205,7 +205,7 @@ function mpgranch_theme_preprocess_block(&$variables) {
 /**
  * Implements template_form_alter()
  */
-function mpgranch_theme_form_alter(&$form, &$form_state, $form_id) {
+function bear_skin_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'search_block_form':
       $form['search_block_form']['#attributes']['placeholder'] = t('Search');
@@ -217,7 +217,7 @@ function mpgranch_theme_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Implements template_preprocess_views_view()
  */
-function mpgranch_theme_preprocess_views_view(&$variables) {
+function bear_skin_preprocess_views_view(&$variables) {
   $name = $variables['css_name'];
   $display = drupal_clean_css_identifier($variables['view']->current_display);
   $variables['classes_array'][] = $name . '-' . $display . '-view';
@@ -226,7 +226,7 @@ function mpgranch_theme_preprocess_views_view(&$variables) {
 /**
  * Implements template_preprocess_views_view_unformatted()
  */
-function mpgranch_theme_preprocess_views_view_unformatted(&$variables) {
+function bear_skin_preprocess_views_view_unformatted(&$variables) {
   $id = drupal_clean_css_identifier($variables['view']->name) . '-' . drupal_clean_css_identifier($variables['view']->current_display);
   foreach ($variables['classes_array'] as $key => $class) {
     $variables['classes_array'][$key] .= ' ' . $id . '-view__row';
@@ -236,7 +236,7 @@ function mpgranch_theme_preprocess_views_view_unformatted(&$variables) {
 /**
  * Implements template_preprocess_menu_block_wrapper()
  */
-function mpgranch_theme_preprocess_menu_block_wrapper(&$variables) {
+function bear_skin_preprocess_menu_block_wrapper(&$variables) {
   $delta = $variables['delta'];
   $variables['theme_hook_suggestions'][] = 'menu_block_wrapper__menu_' . str_replace('-', '_', $variables['config']['menu_name']);
   $variables['classes_array'] = array($variables['config']['menu_name']);
@@ -248,11 +248,11 @@ function mpgranch_theme_preprocess_menu_block_wrapper(&$variables) {
 
 /**
  * Implements theme_links()
- * for all others with the exception of user_menu (see mpgranch_theme_links__user_menu)
+ * for all others with the exception of user_menu (see bear_skin_links__user_menu)
  * 1. Add SMACCS / BEM style CSS classes
  * 2. Add ARIA roles for accessibility
  */
-function mpgranch_theme_links(&$variables) {
+function bear_skin_links(&$variables) {
   // create a more unique CSS class for the menu
   if (!empty($variables['attributes']['class']) && is_array($variables['attributes']['class'])) {
     $menu_class = implode('-', $variables['attributes']['class']);
@@ -285,7 +285,7 @@ function mpgranch_theme_links(&$variables) {
  * 1. Add a SMACCS / BEM style CSS classes
  * 2. Add ARIA roles for accessibility
  */
-function mpgranch_theme_links__user_menu(&$variables) {
+function bear_skin_links__user_menu(&$variables) {
   // add the ARIA role for accessibility
   $variables['attributes']['role'] = 'menubar';
 
@@ -308,9 +308,9 @@ function mpgranch_theme_links__user_menu(&$variables) {
  * 4. Set ARIA roles and properties for accessibility
  * 5. Save the menu name and depth as attributes
  */
-function mpgranch_theme_preprocess_menu_link(&$variables, $hook) {
+function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $menu_name = $variables['element']['#original_link']['menu_name'];
-  $depth_word = _mpgranch_theme_number_to_text($variables['element']['#original_link']['depth']);
+  $depth_word = _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
 
   $is_active = in_array('active', $variables['element']['#attributes']['class']);
   $has_children = $variables['element']['#original_link']['expanded'] && $variables['element']['#original_link']['has_children'];
@@ -349,7 +349,7 @@ function mpgranch_theme_preprocess_menu_link(&$variables, $hook) {
  *    save them as elements in the $variables array
  *    then the template_menu_tree hook can add them as CSS classes
  */
-function mpgranch_theme_preprocess_menu_tree(&$variables) {
+function bear_skin_preprocess_menu_tree(&$variables) {
   $tree = new DOMDocument();
   @$tree->loadHTML($variables['tree']);
   $links = $tree->getElementsByTagname('li');
@@ -372,7 +372,7 @@ function mpgranch_theme_preprocess_menu_tree(&$variables) {
  * 1. Make CSS classes out of the data attributes stored in
  *    the template_preprocess_menu_tree hook
  */
-function mpgranch_theme_menu_tree(&$variables) {
+function bear_skin_menu_tree(&$variables) {
   $role = ($variables['menu_depth'] === 'top' || $variables['menu_depth'] === 'one') ? 'menubar' : 'menu';
   return '<ul class="menu ' . $variables['menu_name'] . '--level-' . $variables['menu_depth'] . '" role="' . $role . '">' . $variables['tree'] . '</ul>';
 }
@@ -382,7 +382,7 @@ function mpgranch_theme_menu_tree(&$variables) {
  * 1. Add some additional CSS classes
  * 2. Make the alerts accessible using WAI standards
  */
-function mpgranch_theme_status_messages($variables) {
+function bear_skin_status_messages($variables) {
   $display = $variables['display'];
   $output = '';
 
@@ -414,7 +414,7 @@ function mpgranch_theme_status_messages($variables) {
  * 1. Add some additional CSS classes
  * 2. Make the alerts accessible using WAI standards
  */
-function mpgranch_theme_item_list(&$variables) {
+function bear_skin_item_list(&$variables) {
   $items = $variables['items'];
   $title = $variables['title'];
   $type = $variables['type'];
@@ -476,7 +476,7 @@ function mpgranch_theme_item_list(&$variables) {
  * 1. Make the breadcrumbs more accessible using WAI standards
  * 2. Add SMACCS / BEM style CSS classes to HTML elements in breadcrumbs
  */
-function mpgranch_theme_breadcrumb(&$variables) {
+function bear_skin_breadcrumb(&$variables) {
   $breadcrumb = $variables['breadcrumb'];
 
   $crumbs = '';
@@ -501,7 +501,7 @@ function mpgranch_theme_breadcrumb(&$variables) {
  * 1. Make the tabs more accessible using WAI standards
  * 2. Add SMACCS / BEM style CSS classes to HTML elements in tab containers
  */
-function mpgranch_theme_menu_local_tasks(&$variables) {
+function bear_skin_menu_local_tasks(&$variables) {
   $output = '';
 
   // Add theme hook suggestions for tab type.
@@ -539,7 +539,7 @@ function mpgranch_theme_menu_local_tasks(&$variables) {
  * 1. Make the tab items more accessible using WAI standards
  * 2. Add SMACCS / BEM style CSS classes to HTML elements in individual tabs
  */
-function mpgranch_theme_menu_local_task($variables) {
+function bear_skin_menu_local_task($variables) {
   $type = $class = FALSE;
 
   $link = $variables['element']['#link'];
@@ -599,7 +599,7 @@ function mpgranch_theme_menu_local_task($variables) {
  *      each item of a field has a class like node-event-date__content
  * 3. Add aria labels for WAI accessibility
  */
-function mpgranch_theme_field(&$variables) {
+function bear_skin_field(&$variables) {
   // create a CSS class
   // the type of object this field is inside
   if ($variables['element']['#entity_type'] === 'node') {
@@ -652,7 +652,7 @@ function mpgranch_theme_field(&$variables) {
  * 2. Force insertion of CSS as <link> tags instead of @import
  *    if CSS aggregation is turned off
  */
-function mpgranch_theme_css_alter(&$css) {
+function bear_skin_css_alter(&$css) {
   // remove drupal's default message css
   unset($css['modules/system/system.messages.css']);
   unset($css['modules/system/system.menus.css']);
@@ -677,7 +677,7 @@ function mpgranch_theme_css_alter(&$css) {
  * @param $number
  * @return string
  */
-function _mpgranch_theme_number_to_text($number) {
+function _bear_skin_number_to_text($number) {
   $number = (int) $number;
   switch ($number) {
     case 0:

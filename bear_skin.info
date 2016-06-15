@@ -1,9 +1,9 @@
-name = MPG Ranch Theme
-description = This is a sub-theme of bear skin, aimed to give an option for a better looking starter theme
+name = Bear Skin
+description = A theme that ships with Bear, or to be used as a standalone
 core = 7.x
 screenshot  = screenshot.png
 
-stylesheets[all][] = css/mpgranch_theme.css
+stylesheets[all][] = css/bear_skin.css
 
 scripts[] = js/vendor/jquery.ba-throttle-debounce.min.js
 scripts[] = js/scripts.js

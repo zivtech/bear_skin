@@ -1,30 +1,30 @@
 'use strict';
 
 // core utilities
-var gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  notify = require('gulp-notify'),
-  argv = require('yargs').argv,
-  gulpif = require('gulp-if'),
-  clean = require('gulp-clean'),
-  rename = require('gulp-rename'),
-  gulpkss = require('gulp-kss'),
-  livereload = require('gulp-livereload');
+var gulp            = require('gulp'),
+    gutil           = require('gulp-util'),
+    notify          = require('gulp-notify'),
+    argv            = require('yargs').argv,
+    gulpif          = require('gulp-if'),
+    clean           = require('gulp-clean'),
+    rename          = require('gulp-rename'),
+    gulpkss         = require('gulp-kss'),
+    livereload      = require('gulp-livereload');
 
 // css utilities
-var sass = require('gulp-sass'),
-  cssGlobbing = require('gulp-css-globbing'),
-  postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer'),
-  mqpacker = require('css-mqpacker'),
-  sourcemaps = require('gulp-sourcemaps');
+var sass            = require('gulp-sass'),
+    cssGlobbing     = require('gulp-css-globbing'),
+    postcss         = require('gulp-postcss'),
+    autoprefixer    = require('autoprefixer'),
+    mqpacker        = require('css-mqpacker'),
+    sourcemaps      = require('gulp-sourcemaps');
 
 // js utilities
-var jshint = require('gulp-jshint'),
-  stylish = require('jshint-stylish');
+var jshint          = require('gulp-jshint'),
+    stylish         = require('jshint-stylish');
 
 // image utilities
-var imagemin = require('gulp-imagemin');
+var imagemin        = require('gulp-imagemin');
 
 //  should we build sourcemaps? "gulp build --sourcemaps"
 var buildSourceMaps = !!argv.sourcemaps;
@@ -108,7 +108,7 @@ gulp.task('images', function () {
 gulp.task('watch', function() {
   livereload.listen(4002);
 
-  gulp.watch("./css/mpgranch_theme.css");
+  gulp.watch("./css/bear_skin.css");
   gulp.watch("./sass/**/*.scss", ['sass'], ['styleguide']);
   gulp.watch("./js/*.js", ['scripts']);
   gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);

@@ -27,10 +27,10 @@
   <?php print $page_bottom; ?>
 
   <!--[if lt IE 9]>
-  <script src="<?php print $base_path . $path_to_mpgranch_theme; ?>/js/vendor/html5-respond.js"></script>
+  <script src="<?php print $base_path . $path_to_bear_skin; ?>/js/vendor/html5-respond.js"></script>
   <![endif]-->
   <!--[if lt IE 9]>
-  <script src="<?php print $base_path . $path_to_mpgranch_theme; ?>/js/vendor/html5.js"></script>
+  <script src="<?php print $base_path . $path_to_bear_skin; ?>/js/vendor/html5.js"></script>
   <![endif]-->
 </body>
 </html>
