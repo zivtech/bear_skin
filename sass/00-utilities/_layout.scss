@@ -5,14 +5,14 @@
 .sidebar-first {
   main {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(3/4);
-      @include shift(1/4);
+      @include col(3/4, $gutter: 8);
+      @include shift(1/4, $gutter: 8);
     }
   }
   .site-sidebars {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(1/4);
-      @include shift(-3/4);
+      @include col(1/4, $gutter: 8);
+      @include shift(-3/4, $gutter: 8);
     }
   }
 }
@@ -24,12 +24,12 @@
 .sidebar-second {
   main {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(3/4);
+      @include col(3/4, $gutter: 8);
     }
   }
   .site-sidebars {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(1/4);
+      @include col(1/4, $gutter: 8);
     }
   }
 }
@@ -41,19 +41,19 @@
 .two-sidebars {
   main {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(2/4);
-      @include shift(1/4);
+      @include col(2/4, $gutter: 8);
+      @include shift(1/4, $gutter: 8);
     }
   }
   .region-sidebar-first {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(1/4);
-      @include shift(-2/4);
+      @include col(1/4, $gutter: 8);
+      @include shift(-2/4, $gutter: 8);
     }
   }
   .region-sidebar-second {
     @include breakpoint($breakpoint-medium-width) {
-      @include col(1/4);
+      @include col(1/4, $gutter: 8);
     }
   }
 }

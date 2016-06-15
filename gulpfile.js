@@ -1,15 +1,14 @@
 'use strict';
 
 // core utilities
-var gulp            = require('gulp'),
+var config          = require('./config.json'),
+    gulp            = require('gulp'),
     gutil           = require('gulp-util'),
     notify          = require('gulp-notify'),
     argv            = require('yargs').argv,
     gulpif          = require('gulp-if'),
     clean           = require('gulp-clean'),
-    rename          = require('gulp-rename'),
-    gulpkss         = require('gulp-kss'),
-    livereload      = require('gulp-livereload');
+    browserSync     = require('browser-sync').create();
 
 // css utilities
 var sass            = require('gulp-sass'),
@@ -66,7 +65,7 @@ gulp.task('sass', function () {
     .pipe(postcss(processors))
     .on('error', handleError('Post CSS Processing'))
     .pipe(gulp.dest('./css'))
-    .pipe(livereload());
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('panels', function () {
@@ -81,8 +80,7 @@ gulp.task('panels', function () {
     .pipe(gulpif(buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
     .pipe(gulp.dest('./panels-layouts'))
-    .on('error', handleError('Post CSS Processing'))
-    .pipe(livereload());
+    .on('error', handleError('Post CSS Processing'));
 });
 
 gulp.task('scripts', function () {
@@ -101,18 +99,27 @@ gulp.task('images', function () {
       svgoPlugins: [{removeViewBox: false}]
     }))
     .on('error', handleError('Image optimization'))
-    .pipe(gulp.dest('./images/'))
-    .pipe(livereload());
+    .pipe(gulp.dest('./images/'));
 });
 
-gulp.task('watch', function() {
-  livereload.listen(4002);
+gulp.task('browserSync', function() {
+  browserSync.init({
+    proxy: config.browserSync.hostname,
+    open: config.browserSync.openAutomatically,
+    reloadDelay: config.browserSync.reloadDelay,
+    injectChanges: config.browserSync.injectChanges,
+    notify: config.browserSync.notify,
+    online: config.browserSync.online,
+    browser: ["google chrome", "firefox"]
+  });
+});
 
+gulp.task('watch', ['browserSync'], function() {
   gulp.watch("./css/bear_skin.css");
   gulp.watch("./sass/**/*.scss", ['sass'], ['styleguide']);
   gulp.watch("./js/*.js", ['scripts']);
   gulp.watch("./images/**/*.{gif,jpg,png}", ['images']);
-  gulp.watch("./templates/**/*.php").on('change', function() { livereload.reload() });
+  gulp.watch("./templates/**/*.php");
 });
 
 gulp.task('default', ['sass', 'panels', 'watch']);

@@ -1097,11 +1097,11 @@ body.unpublished #main {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 74.25%;
+    width: 73%;
     margin-left: 0%;
-    margin-right: 3%;
+    margin-right: 8%;
     position: relative;
-    left: 25.75%; }
+    left: 27%; }
   .sidebar-first main:before, .sidebar-first main:after{
     content: '';
     display: table; }
@@ -1117,11 +1117,11 @@ body.unpublished #main {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 22.75%;
+    width: 19%;
     margin-left: 0%;
-    margin-right: 3%;
+    margin-right: 8%;
     position: relative;
-    left: -77.25%; }
+    left: -81%; }
   .sidebar-first .site-sidebars:before, .sidebar-first .site-sidebars:after{
     content: '';
     display: table; }
@@ -1137,9 +1137,9 @@ body.unpublished #main {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 74.25%;
+    width: 73%;
     margin-left: 0%;
-    margin-right: 3%; }
+    margin-right: 8%; }
   .sidebar-second main:before, .sidebar-second main:after{
     content: '';
     display: table; }
@@ -1155,9 +1155,9 @@ body.unpublished #main {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 22.75%;
+    width: 19%;
     margin-left: 0%;
-    margin-right: 3%; }
+    margin-right: 8%; }
   .sidebar-second .site-sidebars:before, .sidebar-second .site-sidebars:after{
     content: '';
     display: table; }
@@ -1173,11 +1173,11 @@ body.unpublished #main {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 48.5%;
+    width: 46%;
     margin-left: 0%;
-    margin-right: 3%;
+    margin-right: 8%;
     position: relative;
-    left: 25.75%; }
+    left: 27%; }
   .two-sidebars main:before, .two-sidebars main:after{
     content: '';
     display: table; }
@@ -1193,11 +1193,11 @@ body.unpublished #main {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 22.75%;
+    width: 19%;
     margin-left: 0%;
-    margin-right: 3%;
+    margin-right: 8%;
     position: relative;
-    left: -51.5%; }
+    left: -54%; }
   .two-sidebars .region-sidebar-first:before, .two-sidebars .region-sidebar-first:after{
     content: '';
     display: table; }
@@ -1213,9 +1213,9 @@ body.unpublished #main {
     text-align: inherit;
     padding-left: 0;
     padding-right: 0;
-    width: 22.75%;
+    width: 19%;
     margin-left: 0%;
-    margin-right: 3%; }
+    margin-right: 8%; }
   .two-sidebars .region-sidebar-second:before, .two-sidebars .region-sidebar-second:after{
     content: '';
     display: table; }

@@ -1,0 +1,13 @@
+{
+  "drush": {
+      "alias": "@plbear.local"
+  },
+  "browserSync": {
+      "hostname": "bearskin2016.local",
+      "openAutomatically": true,
+      "reloadDelay": 0,
+      "injectChanges": true,
+      "notify": false,
+      "online": true
+  }
+}

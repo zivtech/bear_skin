@@ -5,6 +5,7 @@ screenshot  = screenshot.png
 
 stylesheets[all][] = css/bear_skin.css
 
+scripts[] = js/flexibility.js
 scripts[] = js/vendor/jquery.ba-throttle-debounce.min.js
 scripts[] = js/scripts.js
 

@@ -74,7 +74,7 @@
             .addClass('top');
         }
         lastScrollTop = st;
-      };
+      }
 
    }
   };
