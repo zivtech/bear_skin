@@ -1,7 +1,7 @@
 'use strict';
 
 // core utilities
-var config          = require('./config.json'),
+var defaultConfig   = require('./config.json'),
     gulp            = require('gulp'),
     gutil           = require('gulp-util'),
     notify          = require('gulp-notify'),
@@ -30,9 +30,24 @@ var buildSourceMaps = !!argv.sourcemaps;
 
 // post CSS processors
 var processors = [
-  autoprefixer({browsers: ['last 2 version', 'IE 9']}), // specify browser compatibility with https://github.com/ai/browserslist
+  autoprefixer({browsers: ['last 2 version']}), // specify browser compatibility with https://github.com/ai/browserslist
   mqpacker // this will reorganize css into media query groups, better for performance
 ];
+
+// create settings from config file and arguments
+var config = {
+  drush: {
+    alias: argv.drushAlias || defaultConfig.drush.alias
+  },
+  browserSync: {
+    hostname: argv.hostname || defaultConfig.browserSync.hostname,
+    openAutomatically: argv.openAutomatically || defaultConfig.browserSync.openAutomatically,
+    reloadDelay: argv.reloadDelay || defaultConfig.browserSync.reloadDelay,
+    injectChanges: argv.injectChanges || defaultConfig.browserSync.injectChanges,
+    notify: argv.notify || defaultConfig.browserSync.notify,
+    online: argv.online || defaultConfig.browserSync.online
+  }
+};
 
 // error notifications
 var handleError = function (task) {
