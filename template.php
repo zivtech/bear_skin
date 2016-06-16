@@ -32,12 +32,12 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   }
 
   // Return early, so the maintenance page does not call any of the code below.
-  if ($hook != 'html') {
+  if ($hook !== 'html') {
     return;
   }
 
   // Serialize RDF Namespaces into an RDFa 1.1 prefix attribute.
-  if ($variables['rdf_namespaces']) {
+  if (!empty($variables['rdf_namespaces'])) {
     $prefixes = array();
     foreach (explode("\n  ", ltrim($variables['rdf_namespaces'])) as $namespace) {
       // Remove xlmns: and ending quote and fix prefix formatting.
@@ -52,43 +52,22 @@ function bear_skin_preprocess_html(&$variables, $hook) {
     // Add unique class for each page.
     $path = drupal_get_path_alias($_GET['q']);
     // Add unique class for each website section.
-    list($section, ) = explode('/', $path, 2);
-    $arg = explode('/', $_GET['q']);
-    if ($arg[0] == 'node' && isset($arg[1])) {
-      if ($arg[1] == 'add') {
-        $section = 'node-add';
-      }
-      elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
-        $section = 'node-' . $arg[2];
-      }
-    }
+    list($section) = explode('/', $path, 2);
     $variables['classes_array'][] = drupal_html_class('section-' . $section);
   }
 
-  // Add class to body when panels renders the page
   $variables['menu_item'] = menu_get_item();
-    if ($variables['menu_item']) {
-      switch ($variables['menu_item']['page_callback']) {
-        case 'page_manager_blog':
-        case 'page_manager_blog_user':
-        case 'page_manager_contact_site':
-        case 'page_manager_contact_user':
-        case 'page_manager_node_add':
-        case 'page_manager_node_edit':
-        case 'page_manager_node_view_page':
-        case 'page_manager_page_execute':
-        case 'page_manager_poll':
-        case 'page_manager_search_page':
-        case 'page_manager_term_view_page':
-        case 'page_manager_user_edit_page':
-        case 'page_manager_user_view_page':
-          // Is this a Panels page?
-          $variables['classes_array'][] = 'page-panels';
-          break;
-      }
+  if (!empty($variables['menu_item']) && !empty($variables['menu_item']['page_callback'])) {
+    // Add class to body when panels renders the page
+    if (FALSE !== strpos($variables['menu_item']['page_callback'], 'page_manager')) {
+      $variables['classes_array'][] = 'page-panels';
     }
+  }
 }
 
+/**
+ * Implements template_html_head_alter().
+ */
 function bear_skin_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
@@ -310,7 +289,7 @@ function bear_skin_links__user_menu(&$variables) {
  */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
   $menu_name = $variables['element']['#original_link']['menu_name'];
-  $depth_word = _bear_skin_number_to_text($variables['element']['#original_link']['depth']);
+  $depth_word = $variables['element']['#original_link']['depth'];
 
   $is_active = in_array('active', $variables['element']['#attributes']['class']);
   $has_children = $variables['element']['#original_link']['expanded'] && $variables['element']['#original_link']['has_children'];
@@ -669,32 +648,5 @@ function bear_skin_css_alter(&$css) {
         $css[$key]['preprocess'] = FALSE;
       }
     }
-  }
-}
-
-/**
- * Convert a number to its word
- * @param $number
- * @return string
- */
-function _bear_skin_number_to_text($number) {
-  $number = (int) $number;
-  switch ($number) {
-    case 0:
-      return 'top';
-    case 1:
-      return 'one';
-    case 2:
-      return 'two';
-    case 3:
-      return 'three';
-    case 4:
-      return 'four';
-    case 5:
-      return 'five';
-    case 6:
-      return 'six';
-    default:
-      return '';
   }
 }
