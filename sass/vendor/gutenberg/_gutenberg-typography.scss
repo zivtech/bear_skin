@@ -85,8 +85,6 @@ html {
     $leading-rem: $leading-rem-desktop;
 
     @include line-height(1);
-    max-width: #{$max-width * $base-desktop + 'px'};
-    max-width: #{$max-width + 'rem'};
   }
 
 }

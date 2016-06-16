@@ -672,6 +672,49 @@ i.icon {
 .field-collection-view {
   margin: 0; }
 
+.messages {
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+  background-color: #c3cfdc;
+  color: white;
+  border: 1px solid #a2b5c9;
+  border-left-width: 10px;
+  margin: 1em 0; }
+  .messages a {
+    color: white;
+    border-bottom: 1px dotted white; }
+  .messages:hover, .messages:active, .messages:focus {
+    color: white; }
+
+.messages--error, .messages.error {
+  border-color: #c9302c;
+  background-color: #d9534f; }
+
+.messages--success, .messages--status, .messages.status, .messages.ok {
+  border-color: #329d62;
+  background-color: #40C27A; }
+
+.messages--warning, .messages.warning {
+  border-color: #ec971f;
+  background-color: #f0ad4e; }
+
+.messages:first-of-type {
+  margin-top: 0; }
+
+.messages__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.5em; }
+
+.messages__item {
+  margin-bottom: 0.5em; }
+
+.messages__item:last-of-type {
+  margin-bottom: 0; }
+
+.messages .krumo-root {
+  color: #404040; }
+
 .site-info {
   max-width: 75em;
   padding: 1em;
@@ -685,8 +728,13 @@ i.icon {
       color: #728EAD;
       text-decoration: none; }
 
-#admin-menu * {
-  line-height: inherit; }
+#toolbar {
+  margin: 0;
+  padding: 0; }
+  #toolbar * {
+    line-height: inherit;
+    margin: 0;
+    padding: 0; }
 
 .breadcrumbs {
   padding: 26px 0px 26px;
@@ -822,11 +870,9 @@ h3.sidr-class-visually-hidden {
     .sidr-open #sidr-wrapper-0 span:before, .sidr-open #sidr-wrapper-0 span:after {
       top: 0; }
     .sidr-open #sidr-wrapper-0 span:before {
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
+      transform: rotate(45deg); }
     .sidr-open #sidr-wrapper-0 span:after {
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
+      transform: rotate(-45deg); }
 
 .sidr-open #header #logo-container {
   opacity: 0; }
@@ -879,7 +925,9 @@ section[id^="container-"] {
   padding: 0px 26px;
   padding: 0rem 1.625rem;
   overflow: hidden;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1350px;
+  max-width: 75rem; }
 
 #container-main {
   margin-bottom: 26px;
@@ -1086,9 +1134,7 @@ body.unpublished #main {
 @media (min-width: 50em){
   *{
     line-height: 26px;
-    line-height: 1.625rem;
-    max-width: 1350px;
-    max-width: 75rem; }
+    line-height: 1.625rem; }
   .sidebar-first main{
     zoom: 1;
     float: left;

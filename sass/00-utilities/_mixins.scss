@@ -14,6 +14,7 @@
   clip: none;
 }
 
+// Site-wide Links
 @mixin link($color, $text-decoration, $hover-color, $hover-text-decoration) {
   color: $color;
   text-decoration: $text-decoration;

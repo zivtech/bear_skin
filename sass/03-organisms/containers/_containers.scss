@@ -4,6 +4,8 @@ section[id^="container-"] {
 
   overflow: hidden;
   margin: 0 auto;
+  max-width: #{$max-width * $base-desktop + 'px'};
+  max-width: #{$max-width + 'rem'};
 
 }
 

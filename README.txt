@@ -15,6 +15,11 @@ Gulp tasks
 ------------
 1. gulp watch - watches sass, images, js, and php files.
    Activate the LiveReload browser plugin to trigger a refresh when files change.
+
+   We are using browsersync which is going to proxy your local site. When using gulp watch, you should add a parameter to tell browsersync which site to proxy. ex: gulp watch --hostname=bearskin.vm
+
+   This will launch your site in the browser(s) defined on line 128 of gulpfile.js
+
 2. gulp sass - compiles Sass into CSS. This is the theme's styles.
    You shouldn't need to add vendor prefixes for CSS because Autoprefixer will do that for you.
 3. gulp panels - compiles Sass in the panels-layouts directory.

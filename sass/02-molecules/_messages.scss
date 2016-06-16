@@ -1,0 +1,43 @@
+.messages {
+  padding: 0.7em 1.5em;
+  border-radius: 2px;
+  background-color: #c3cfdc;
+  color: white;
+  border: 1px solid #a2b5c9;
+  border-left-width: 10px;
+  margin: 1em 0;
+  a {
+    color: white;
+    border-bottom: 1px dotted white; }
+    &:hover, &:active, &:focus {
+      color: white;
+    }
+  }
+
+.messages--error, .messages.error {
+  border-color: #c9302c;
+  background-color: #d9534f; }
+
+.messages--success, .messages--status, .messages.status, .messages.ok {
+  border-color: #329d62;
+  background-color: #40C27A; }
+
+.messages--warning, .messages.warning {
+  border-color: #ec971f;
+  background-color: #f0ad4e; }
+
+.messages:first-of-type {
+  margin-top: 0; }
+
+.messages__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.5em; }
+
+.messages__item {
+  margin-bottom: 0.5em; }
+  .messages__item:last-of-type {
+    margin-bottom: 0; }
+
+.messages .krumo-root {
+  color: #404040; }
