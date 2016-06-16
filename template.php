@@ -637,14 +637,12 @@ function bear_skin_css_alter(&$css) {
   unset($css['modules/system/system.menus.css']);
   unset($css[drupal_get_path('module', 'views') . '/css/views.css']);
 
-  // if css aggregation is off, include css as link tags
+  // if local fetcher environment, include css as link tags
   // this allows livereload / guard to inject css
-  if (!variable_get('preprocess_css')) {
+  $fetcher_environment = variable_get('fetcher_environment', NULL);
+  if (!is_null($fetcher_environment) && $fetcher_environment === 'local') {
     foreach ($css as $key => $value) {
-      // Skip core files.
-      $is_core = (strpos($value['data'], 'misc/') === 0 || strpos($value['data'], 'modules/') === 0);
-      if (!$is_core) {
-        // This option forces embeding with a link element.
+      if (file_exists($value['data'])) {
         $css[$key]['preprocess'] = FALSE;
       }
     }
