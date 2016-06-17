@@ -169,28 +169,9 @@ input[type="radio"] {
 
 /* Select ------------------ */
 
-.select-wrapper {
-	position: relative;
-	max-width: $form-input-max-width;
-
-	&::after {
-		content: "";
-		width: 0;
-		height: 0;
-		border-left: 4px solid transparent;
-		border-right: 4px solid transparent;
-		border-top: 7px solid #666;
-		margin-top: -3px;
-		content: " ";
-		position: absolute;
-		top: 50%;
-		right: 1em;
-		z-index: 2;
-		pointer-events: none;
-	}
-}
-
 select {
+
+
 
 	@if $form-allow-select-vendor-styling == false {
 		-webkit-appearance: none;
