@@ -2,7 +2,7 @@
 Bear Skin is a base theme to either customize and build upon or use as a base theme for a sub theme.
 
 Getting started
------------------
+---------------
 To start building CSS, you have to install all the gulp dependencies first. After changing to the project directory in your terminal, just "npm install" (you need to make sure to have node.js installed). You might run into some errors depending on how your local setup.
 
 if so:
@@ -12,7 +12,7 @@ reinstall gulp: sudo npm install gulp -g
 After the process finishes, you'll be able to run all the gulp tasks (see below).
 
 Gulp tasks
-------------
+----------
 1. gulp watch - watches sass, images, js, and php files.
    Activate the LiveReload browser plugin to trigger a refresh when files change.
 
@@ -28,3 +28,19 @@ Gulp tasks
 4. gulp scripts - checks your JS for errors.
 5. gulp images - optimizes images.
 6. gulp build - combines tasks #2 - #5 into a single build process.
+
+
+Additions
+---------
+
+We have included backstopJS to be able to run css regression test.
+
+Configure your test w/ backstop.json (when in doubt, visit https://github.com/garris/BackstopJS for more config info.)
+
+7. gulp create-reference - will create your reference pointer
+
+after making your changes and compile css, run
+
+8. gulp run-test
+
+Note: you can also just run test between environments

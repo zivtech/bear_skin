@@ -1,17 +1,17 @@
 {
   "viewports": [
     {
-      "name": "phone",
+      "name": "Mobile",
       "width": 320,
       "height": 480
     },
     {
-      "name": "tablet_v",
+      "name": "Tablet",
       "width": 568,
       "height": 1024
     },
     {
-      "name": "tablet_h",
+      "name": "Desktop",
       "width": 1024,
       "height": 768
     }
@@ -20,6 +20,7 @@
     {
       "label": "Bear Skin",
       "url": "http://bearskin.vm/user/register",
+      "referenceUrl": "http://bearskin.vm/user/register",
       "hideSelectors": ["#something"],
       "removeSelectors": [
         "#something"
