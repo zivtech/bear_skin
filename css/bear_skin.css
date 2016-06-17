@@ -273,6 +273,11 @@ figcaption {
   margin-bottom: 0;
   text-align: center; }
 
+dl dd {
+  margin: 0px 0px 13px;
+  margin: 0rem 0rem 0.8125rem;
+  font-size: 80%; }
+
 blockquote {
   font-style: italic;
   padding-left: 1.4375rem; }
@@ -424,8 +429,11 @@ textarea {
   max-width: 400px;
   padding: 0.4em;
   background-color: white;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 1px solid #888; }
+
+textarea {
+  max-width: 100%; }
 
 /* Fields with standard height */
 input[type="text"],
@@ -442,8 +450,8 @@ input[type="time"],
 input[type="url"],
 input[type="week"],
 input[list] {
-  height: 2em;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  display: inline; }
 
 /* Other */
 textarea {
@@ -472,9 +480,6 @@ input[type="radio"] {
   vertical-align: middle; }
 
 /* Select ------------------ */
-select {
-  height: 2em; }
-
 select[multiple] {
   height: auto;
   min-height: 2em;
@@ -487,7 +492,7 @@ select[multiple] {
 fieldset {
   padding: 26px 52px 26px;
   padding: 1.625rem 3.25rem 1.625rem;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 1px solid #888; }
 
 legend {
@@ -503,18 +508,20 @@ input[type="image"] {
   height: auto;
   width: auto;
   max-width: 100%;
-  background-color: #f5f5f5;
+  background-color: #888;
   padding: 0.4em;
   cursor: pointer;
   line-height: 1;
   transition: all 0.2s ease-in-out;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 2px;
-  border: 1px solid #888; }
+  color: white;
+  border-radius: 3px;
+  border: 1px solid #888;
+  font-family: Merriweather, Georgia, serif;
+  display: inline;
+  margin: 0px 13px 0px 0px;
+  margin: 0rem 0.8125rem 0rem 0rem; }
 
 input[type="image"] {
   text-align: center;
@@ -533,12 +540,8 @@ textarea:focus,
 select:focus,
 option:focus,
 button:focus {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   border-color: #728EAD; }
-
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
-  outline: #728EAD solid 1px; }
 
 button:hover,
 input[type="button"]:hover,
@@ -548,18 +551,28 @@ button:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus {
-  background-color: #888;
+  background-color: #555;
   color: white; }
 
 form .form-item {
   margin-bottom: 26px;
   margin-bottom: 1.625rem; }
 
+form .field-suffix {
+  display: inline;
+  position: relative;
+  top: 7px;
+  font-size: 80%; }
+
 form .description {
   font-size: 80%; }
 
-form .form-submit {
-  margin: 0; }
+form .form-type-radio .description,
+form .form-type-checkbox .description {
+  margin-left: 0; }
+
+form .vertical-tabs fieldset.vertical-tabs-pane {
+  clear: none; }
 
 .description {
   padding: 0px 13px 0px;
@@ -721,6 +734,28 @@ i.icon {
     .site-info .site-header__name a:hover, .site-info .site-header__name a:focus {
       color: #728EAD;
       text-decoration: none; }
+
+table {
+  width: 100%; }
+  table tr {
+    width: 100%; }
+  table td, table th {
+    padding: 13px 13px 13px;
+    padding: 0.8125rem 0.8125rem 0.8125rem; }
+  table a.tabledrag-handle .handle {
+    margin: 0px 7.8px 0px 5.2px;
+    margin: 0rem 0.4875rem 0rem 0.325rem;
+    height: 22px;
+    position: relative;
+    top: -1px; }
+  table.sticky-header {
+    z-index: 2;
+    visibility: hidden; }
+    table.sticky-header thead {
+      width: 100%;
+      display: table-row-group !important; }
+      table.sticky-header thead th {
+        background: white; }
 
 #toolbar {
   margin: 0;
@@ -902,8 +937,7 @@ h3.sidr-class-visually-hidden {
   padding: 0.8125rem 0rem 0.8125rem; }
 
 .site-sidebars {
-  margin: 26px 0px 26px;
-  margin: 1.625rem 0rem 1.625rem; }
+  margin: 0; }
 
 .wrapper {
   min-width: 320px;
@@ -1267,4 +1301,5 @@ body.unpublished #main {
     float: right;
     clear: none; }
   .site-sidebars{
-    margin: 0; } }
+    margin: 26px 0px 26px;
+    margin: 1.625rem 0rem 1.625rem; } }

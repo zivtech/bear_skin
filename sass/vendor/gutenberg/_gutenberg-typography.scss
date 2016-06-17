@@ -339,6 +339,16 @@ figcaption {
 
 }
 
+dl {
+
+  dd {
+    @include margin(0, 0, .5, 0);
+
+    font-size: 80%;
+  }
+
+}
+
 blockquote {
   font-style: italic;
   padding-left: 1.4375rem;

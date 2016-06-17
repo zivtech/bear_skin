@@ -9,7 +9,7 @@ $form-font-color: inherit !default;
 $form-transition: all .2s ease-in-out !default;
 
 // Borders
-$form-border-radius: 2px !default;
+$form-border-radius: 3px !default;
 $form-border-width: 1px !default;
 $form-border-style: solid !default;
 $form-border-color: $dark-gray !default;
@@ -20,7 +20,7 @@ $form-line-height: 1 !default;
 $form-input-width: 100% !default;
 $form-input-max-width: 400px !default;
 $form-input-bg-color: $white !default;
-$form-focus-bg-color: $light-gray !default;
+$form-focus-bg-color: $off-white !default;
 $form-focus-border-color: $blue !default;
 $form-focus-font-color: $form-font-color !default;
 
@@ -34,9 +34,9 @@ $form-fieldset-bare: false !default;
 $form-button-height: auto !default;
 $form-button-width: auto !default;
 $form-button-max-width: 100% !default;
-$form-button-font-color: $form-font-color !default;
-$form-button-bg-color: $form-focus-bg-color !default;
-$form-button-hover-bg-color: $form-border-color !default;
+$form-button-font-color: $white !default;
+$form-button-bg-color: $dark-gray !default;
+$form-button-hover-bg-color: $off-black !default;
 $form-button-hover-font-color: $white !default;
 $form-button-transition: $form-transition !default;
 
@@ -112,6 +112,10 @@ textarea {
 	border: $form-border-width $form-border-style $form-border-color;
 }
 
+textarea {
+	max-width: 100%;
+}
+
 /* Fields with standard height */
 input[type="text"],
 input[type="email"],
@@ -127,8 +131,8 @@ input[type="time"],
 input[type="url"],
 input[type="week"],
 input[list] {
-	height: $form-input-height;
 	-webkit-appearance: none;
+	display: inline;
 }
 
 /* Other */
@@ -166,7 +170,6 @@ input[type="radio"] {
 /* Select ------------------ */
 
 select {
-	height: $form-input-height;
 
 	@if $form-allow-select-vendor-styling == false {
 		-webkit-appearance: none;
@@ -232,11 +235,14 @@ input[type="image"] {
 
 	color: $form-button-font-color;
 
-	-webkit-appearance: none;
-	-moz-appearance: none;
 
 	border-radius: $form-border-radius;
 	border: $form-border-width $form-border-style $form-border-color;
+	font-family: $font-body;
+
+	display: inline;
+
+	@include margin(0, .5, 0, 0);
 }
 
 input[type="image"] {
@@ -263,11 +269,6 @@ button:focus  {
 	border-color: $form-focus-border-color;
 }
 
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
-	outline: $form-focus-border-color solid 1px;
-}
-
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
@@ -282,17 +283,32 @@ input[type="reset"]:focus {
 
 
 // Drupal specific
-
 form {
 
 	.form-item {
 		@include margin-bottom(1);
 	}
+
+	.field-suffix {
+		display: inline;
+		position: relative;
+		top: 7px;
+		font-size: 80%;
+	}
+
 	.description {
 		font-size: 80%;
 	}
-	.form-submit {
-		margin: 0;
+
+	.form-type-radio,
+	.form-type-checkbox {
+		.description {
+			margin-left: 0;
+		}
+	}
+
+	.vertical-tabs fieldset.vertical-tabs-pane {
+		clear: none;
 	}
 
 }

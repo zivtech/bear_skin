@@ -1,5 +1,5 @@
 name = Bear Skin
-description = A theme that ships with Bear, or to be used as a standalone
+description = A base theme that ships with Bear, or to be used as a standalone
 core = 7.x
 screenshot  = screenshot.png
 
