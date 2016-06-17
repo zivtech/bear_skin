@@ -194,6 +194,17 @@ function bear_skin_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
+ * Implements theme_select()
+ */
+function bear_skin_select($variables) {
+  $element = $variables['element'];
+  element_set_attributes($element, array('id', 'name', 'size'));
+  _form_set_class($element, array('form-select'));
+
+  return '<div class="select-wrapper"><select' . drupal_attributes($element['#attributes']) . '>' . form_select_options($element) . '</select></div>';
+}
+
+/**
  * Implements template_preprocess_views_view()
  */
 function bear_skin_preprocess_views_view(&$variables) {

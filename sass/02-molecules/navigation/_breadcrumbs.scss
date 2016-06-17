@@ -8,9 +8,17 @@
     list-style-type: none;
     display: inline;
     @include margin(0, .2, 0, 0);
+
+    &:last-child {
+
+      .breadcrumbs__divider:after {
+        display: none;
+      }
+
+    }
   }
 
-  &__divider{
+  &__divider {
     @include margin(0, 0, 0, .2);
 
     color: $off-black;
@@ -18,17 +26,7 @@
     &:after {
       content: ">";
     }
-  }
 
-  i {
-
-    &:before {
-      font-size: 75%;
-    }
-
-    &:last-child {
-      display: none;
-    }
 
   }
 

@@ -1,0 +1,13 @@
+.item-list .pager {
+  @include margin(1, 0, 1, 0);
+
+  li {
+    @include padding(.3, .5, .3, .5);
+    @include margin(0, .3, 0, .3);
+  }
+
+  &-current {
+    border: 1px solid $off-black;
+  }
+
+}

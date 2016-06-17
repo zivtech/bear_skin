@@ -1,7 +1,7 @@
 // Config -----------------------------
 
 // Font
-$form-font-family: inherit, sans-serif !default;
+$form-font-family: $font-body, sans-serif !default;
 $form-font-size: 100% !default;
 $form-font-color: inherit !default;
 
@@ -169,6 +169,27 @@ input[type="radio"] {
 
 /* Select ------------------ */
 
+.select-wrapper {
+	position: relative;
+	max-width: $form-input-max-width;
+
+	&::after {
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 7px solid #666;
+		margin-top: -3px;
+		content: " ";
+		position: absolute;
+		top: 50%;
+		right: 1em;
+		z-index: 2;
+		pointer-events: none;
+	}
+}
+
 select {
 
 	@if $form-allow-select-vendor-styling == false {
@@ -177,6 +198,7 @@ select {
 		-ms-appearance: none;
 		-o-appearance: none;
 	}
+
 }
 
 select[multiple] {
@@ -285,11 +307,17 @@ input[type="reset"]:focus {
 // Drupal specific
 form {
 
-	.form-item {
-		@include margin-bottom(1);
+	.form-item,
+	.exposed-filters .form-item {
+		@include margin-bottom(.5);
+
+		&:last-child {
+			margin: 0;
+		}
 	}
 
-	.field-suffix {
+	.field-suffix,
+	.field-prefix {
 		display: inline;
 		position: relative;
 		top: 7px;
