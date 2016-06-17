@@ -598,8 +598,8 @@ form .vertical-tabs fieldset.vertical-tabs-pane {
   clear: none; }
 
 .description {
-  padding: 0px 13px 0px;
-  padding: 0rem 0.8125rem 0rem;
+  padding: 26px 13px 0px;
+  padding: 1.625rem 0.8125rem 0rem;
   margin: 13px 0px 13px;
   margin: 0.8125rem 0rem 0.8125rem;
   font-size: 80%;

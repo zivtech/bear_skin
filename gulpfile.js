@@ -16,6 +16,7 @@ var sass            = require('gulp-sass'),
     postcss         = require('gulp-postcss'),
     autoprefixer    = require('autoprefixer'),
     mqpacker        = require('css-mqpacker'),
+    run             = require('gulp-run'),
     sourcemaps      = require('gulp-sourcemaps');
 
 // js utilities
@@ -140,3 +141,16 @@ gulp.task('watch', ['browserSync'], function() {
 gulp.task('default', ['sass', 'panels', 'watch']);
 gulp.task('styles', ['sass', 'panels']);
 gulp.task('build', ['sass', 'panels', 'scripts', 'images']);
+
+
+//************************************************************//
+
+
+// CSS regression tools
+gulp.task('create-reference', function() {
+  run('(cd ./node_modules/backstopjs; npm run reference)').exec();
+});
+
+gulp.task('run-test', function() {
+  run('(cd ./node_modules/backstopjs; npm run test)').exec();
+});

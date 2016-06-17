@@ -10,6 +10,7 @@
   "description": "The base theme for Drupal websites built by Zivtech",
   "devDependencies": {
     "autoprefixer": "^5.2.0",
+    "backstopjs": "^1.2.1",
     "browser-sync": "^2.13.0",
     "css-mqpacker": "^3.1.0",
     "gulp": "^3.9.1",
@@ -21,6 +22,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^5.1.10",
     "gulp-rename": "^1.2.2",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.6",

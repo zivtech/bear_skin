@@ -273,6 +273,11 @@ figcaption {
   margin-bottom: 0;
   text-align: center; }
 
+dl dd {
+  margin: 0px 0px 13px;
+  margin: 0rem 0rem 0.8125rem;
+  font-size: 80%; }
+
 blockquote {
   font-style: italic;
   padding-left: 1.4375rem; }
@@ -550,9 +555,7 @@ code {
   @media (min-width: 50em){
   *{
     line-height: 26px;
-    line-height: 1.625rem;
-    max-width: 1350px;
-    max-width: 75rem; }
+    line-height: 1.625rem; }
   .panel-display--top-right-sidebar .column.right{
     zoom: 1;
     float: left;
