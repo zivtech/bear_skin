@@ -17,11 +17,11 @@ var sass            = require('gulp-sass'),
     autoprefixer    = require('autoprefixer'),
     mqpacker        = require('css-mqpacker'),
     run             = require('gulp-run'),
-    sourcemaps      = require('gulp-sourcemaps');
+    sourcemaps      = require('gulp-sourcemaps'),
+    stylelint       = require('gulp-stylelint');;
 
 // js utilities
-var jshint          = require('gulp-jshint'),
-    stylish         = require('jshint-stylish');
+var eslint = require('gulp-eslint');
 
 // image utilities
 var imagemin        = require('gulp-imagemin');
@@ -99,12 +99,25 @@ gulp.task('panels', function () {
     .on('error', handleError('Post CSS Processing'));
 });
 
+gulp.task('sass:lint', function() {
+  gutil.log(gutil.colors.yellow('Reviewing Sass files!'));
+  return gulp.src(['sass/*/*.scss', '!sass/vendor/*'])
+    .pipe(stylelint({
+      syntax: 'scss',
+      reporters: [
+        {formatter: 'string', console: true}
+      ],
+      failAfterError: false
+    }))
+});
+
 gulp.task('scripts', function () {
   gutil.log(gutil.colors.yellow('Reviewing JavaScript files!'));
-  return gulp.src('./js/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish))
-    .on('error', handleError('JS Linting'));
+  return gulp.src(['js/*.js', '!js/vendor/*', '!js/*.min.js'])
+    .pipe(eslint({
+      useEslintrc: true
+    }))
+    .pipe(eslint.format());
 });
 
 gulp.task('images', function () {
