@@ -31,6 +31,14 @@
     "yargs": "^3.16.1"
   },
   "scripts": {
-    "postinstall": "sh npm_clean.sh"
+    "postinstall": "sh npm_clean.sh",
+    "test": "./node_modules/.bin/stylelint sass/**/*.scss -s scss --color ; ./node_modules/.bin/eslint js/scripts.js --color"
+  },
+  "dependencies": {
+    "eslint": "^3.1.1",
+    "eslint-config-probo": "^1.1.0",
+    "stylelint": "^7.0.3",
+    "stylelint-config-standard": "^11.0.0",
+    "stylelint-scss": "^1.2.1"
   }
 }

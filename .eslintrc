@@ -1,0 +1,22 @@
+{
+  "extends": "eslint-config-probo",
+  "env": {
+    "es6": true,
+    "jquery": true,
+    "browser": true
+  },
+  "globals": {
+    "Drupal": true,
+    "Modernizr": true,
+    "debounce": true
+  },
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "strict": [2, "function"],
+    "space-return-throw-case": 0,
+    "no-empty-label": 0,
+    "space-after-keywords": 0,
+    "space-before-function-paren": ["error", { "anonymous": "always", "named": "never" }],
+    "no-eval": 0
+  }
+}
