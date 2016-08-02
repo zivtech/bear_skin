@@ -1,15 +1,12 @@
 .webform-container-inline {
-
   label {
+    @include margin(0.5, 0, 0.5, 0);
     display: inline !important;
-    @include margin(.5, 0, .5, 0);
   }
 
   .field {
-
     div.dropdown {
       width: auto;
     }
-
   }
 }

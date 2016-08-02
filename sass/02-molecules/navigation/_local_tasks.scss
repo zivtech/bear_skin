@@ -1,18 +1,15 @@
 .tabs-primary {
   @include margin-bottom(1);
-
   font-size: 90%;
   padding: 0;
 
   &__tab {
-    @include margin(0, .5, .5, 0);
-
+    @include margin(0, 0.5, 0.5, 0);
     list-style-type: none;
     display: inline-block;
 
     a {
-      @include padding(.3, .5);
-
+      @include padding(0.3, 0.5);
       background: $gray;
       border-radius: 4px;
 
@@ -29,18 +26,16 @@
 
 .tabs-secondary {
   @include margin-bottom(1);
-
   font-size: 90%;
   padding: 0;
 
   &__tab {
-    @include margin(0, .5, .5, 0);
-
+    @include margin(0, 0.5, 0.5, 0);
     list-style-type: none;
     display: inline-block;
 
     a {
-      @include padding(.3, 0);
+      @include padding(0.3, 0);
 
       border-bottom: 2px solid transparent;
 

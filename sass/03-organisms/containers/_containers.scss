@@ -1,12 +1,9 @@
 section[id^="container-"] {
-
   @include padding(0, 1);
-
   overflow: hidden;
   margin: 0 auto;
   max-width: #{$max-width * $base-desktop + 'px'};
   max-width: #{$max-width + 'rem'};
-
 }
 
 #container-main {

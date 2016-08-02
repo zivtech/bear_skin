@@ -1,35 +1,27 @@
 .select-wrapper {
-	position: relative;
-	max-width: $form-input-max-width;
+  position: relative;
+  max-width: $form-input-max-width;
 
-	&::after {
-		content: "";
-		width: 0;
-		height: 0;
-		border-left: 4px solid transparent;
-		border-right: 4px solid transparent;
-		border-top: 7px solid #666;
-		margin-top: -3px;
-		content: " ";
-		position: absolute;
-		top: 50%;
-		right: 1em;
-		z-index: 2;
-		pointer-events: none;
-	}
+  &::after {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 7px solid #666;
+    margin-top: -3px;
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    z-index: 2;
+    pointer-events: none;
+  }
 
-	select {
-		-moz-appearance: none;
-		width: 100%;
-		padding-right: 2em;
-		overflow: -moz-hidden-unscrollable;
-		padding-right: .4em;
-		min-width: 6em;
-		width: 130%;
-		min-width: -moz-calc(0em);
-		width: -moz-calc(100% + 2.4em);
-		min-width: calc(0em);
-		width: calc(100% + 2.4em);
-	}
-
+  select {
+    -moz-appearance: none;
+    overflow: -moz-hidden-unscrollable;
+    padding-right: 0.4em;
+    min-width: 6em;
+    width: 130%;
+  }
 }

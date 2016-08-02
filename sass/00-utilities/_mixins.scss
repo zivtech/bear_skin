@@ -6,6 +6,7 @@
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
+
 @mixin element-invisible-off {
   position: relative;
   height: auto;
@@ -18,8 +19,21 @@
 @mixin link($color, $text-decoration, $hover-color, $hover-text-decoration) {
   color: $color;
   text-decoration: $text-decoration;
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     color: $hover-color;
     text-decoration: $hover-text-decoration;
+  }
+}
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
   }
 }

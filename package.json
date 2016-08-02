@@ -34,7 +34,7 @@
   },
   "scripts": {
     "postinstall": "sh npm_clean.sh",
-    "test": "./node_modules/.bin/stylelint sass/**/*.scss -s scss --color ; ./node_modules/.bin/eslint js/scripts.js --color"
+    "test": "./node_modules/.bin/eslint ./js/scripts.js ; ./node_modules/.bin/stylelint ./sass/**/*.scss -s scss"
   },
   "dependencies": {
     "eslint": "^3.1.1",

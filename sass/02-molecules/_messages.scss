@@ -1,5 +1,5 @@
 .messages {
-  @include padding(.5, 1, .5, 1);
+  @include padding(0.5, 1, 0.5, 1);
   @include margin(1, 0, 1, 0);
 
   border-radius: 2px;

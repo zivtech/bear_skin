@@ -5,24 +5,18 @@
   color: $white;
 
   .site-header {
-
     &__name {
-
       a {
         @include link($white, none, $blue, none);
-
         text-transform: uppercase;
       }
     }
 
     &__slogan {
-
       @include breakpoint($breakpoint-medium-width) {
         float: right;
         clear: none;
       }
-
     }
-
   }
 }
