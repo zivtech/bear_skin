@@ -2,8 +2,8 @@
   @include margin(1, 0, 1, 0);
 
   li {
-    @include padding(.3, .5, .3, .5);
-    @include margin(0, .3, 0, .3);
+    @include padding(0.3, 0.5, 0.3, 0.5);
+    @include margin(0, 0.3, 0, 0.3);
   }
 
   &-current {

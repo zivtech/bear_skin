@@ -1,6 +1,5 @@
 fieldset {
-  @include margin(.5, 0, .5, 0);
-
+  @include margin(0.5, 0, 0.5, 0);
   position: relative;
   display: block;
   clear: both;
@@ -9,31 +8,25 @@ fieldset {
   padding: 0;
 
   &:not(.collapsed) {
-
-    i.icon:before {
+    i.icon::before {
       content: "\f056" !important;
     }
-
   }
 
   &.required {
-
     > label {
-
-      &:after {
-        @include margin(-.1, 0, 0, -.1);
+      &::after {
+        @include margin(-0.1, 0, 0, -0.1);
         content: '*';
         color: #db2828;
       }
-
     }
   }
 }
 
 .fieldset-wrapper {
-  @include margin(.5, 0, .5, 0);
-  @include padding(.5, .5, .5, .5);
-
+  @include margin(0.5, 0, 0.5, 0);
+  @include padding(0.5, 0.5, 0.5, 0.5);
   background: $light-gray;
   border: 1px dotted $gray;
   overflow: hidden;

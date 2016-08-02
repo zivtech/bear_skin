@@ -29,6 +29,15 @@ Gulp tasks
 5. gulp images - optimizes images.
 6. gulp build - combines tasks #2 - #5 into a single build process.
 
+Ensuring Code Quality
+---------------------
+
+Sass and JS can be linted to ensure certain quality standards are met. A single npm script lints by running `npm test`. Alternatively, two gulp tasks, `gulp sass:lint` and `gulp:scripts` can lint individually.
+
+Make the code standards your own by editing the `.eslintrc` or `.styelintrc` files.
+
+1. Sass linting provided by http://stylelint.io
+2. JS linting provided by http://eslint.org
 
 Additions
 ---------

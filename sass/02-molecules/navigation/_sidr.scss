@@ -1,11 +1,11 @@
 // SIDR
 #sidr-wrapper-0 {
-  @include margin(.5, .5, .5, .5);
+  @include margin(0.5, 0.5, 0.5, 0.5);
 
   position: absolute;
   right: 0;
   top: 0;
-  $span-transition: all .3s cubic-bezier(0.7, 0, 0.36, 0.63);
+  $span-transition: all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
 
   span {
     display: block;
@@ -16,7 +16,8 @@
     width: 22px;
     top: 15px;
 
-    &:before, &:after {
+    &::before,
+    &::after {
       content: "";
       display: block;
       background: $black;
@@ -27,10 +28,11 @@
       transition: $span-transition;
     }
 
-    &:before {
+    &::before {
       top: 7px;
     }
-    &:after {
+
+    &::after {
       top: -7px;
     }
 
@@ -61,7 +63,7 @@ h3.sidr-class-visually-hidden {
       border: 0;
 
       a {
-        @include padding(.3, .5, .3, .5);
+        @include padding(0.3, 0.5, 0.3, 0.5);
 
         width: 100%;
         display: block;
@@ -96,16 +98,16 @@ h3.sidr-class-visually-hidden {
     span {
       background: transparent;
 
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         top: 0;
       }
 
-      &:before {
+      &::before {
         transform: rotate(45deg);
       }
 
-      &:after {
+      &::after {
         transform: rotate(-45deg);
       }
 

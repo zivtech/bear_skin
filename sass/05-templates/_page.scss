@@ -1,25 +1,21 @@
 // for drafts
 body.unpublished {
-
   #main {
     background-color: #fff4f4;
   }
-
 }
 
 // fixes for logged-in users and IPE
 .admin-menu {
+  .wrapper--header {
+    position: relative;
+  }
 
-	.wrapper--header {
-		position: relative;
-	}
-
-	.wrapper--title {
-		margin-top: 0;
-	}
+  .wrapper--title {
+    margin-top: 0;
+  }
 
   .home-page-banner {
     margin-top: 0;
   }
-  
 }

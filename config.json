@@ -3,7 +3,7 @@
       "alias": "@plbear.local"
   },
   "browserSync": {
-      "hostname": "bearskin2016.local",
+      "hostname": "bearskinner.vm",
       "openAutomatically": true,
       "reloadDelay": 0,
       "injectChanges": true,

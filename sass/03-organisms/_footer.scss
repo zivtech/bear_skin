@@ -1,9 +1,7 @@
 .site-footer {
-
   .region-footer {
     @include padding(1, 0, 1, 0);
   }
-
 }
 
 #footer {
@@ -22,6 +20,5 @@
     li {
       list-style-type: none;
     }
-
   }
 }

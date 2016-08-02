@@ -1,6 +1,6 @@
 .description {
-  @include padding(0, .5, 0, .5);
-  @include margin(.5, 0, .5, 0);
+  @include padding(0, 0.5, 0, 0.5);
+  @include margin(0.5, 0, 0.5, 0);
 
   font-size: 80%;
   color: $dark-gray;
