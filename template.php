@@ -13,7 +13,6 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   $variables['skip_link_anchor'] = 'main-content';
 
 
-
   // include the selected language
   global $language;
   $variables['language'] = $language->language;
@@ -106,7 +105,8 @@ function bear_skin_preprocess_page(&$variables) {
   $title = drupal_get_title();
   if (drupal_is_front_page() && empty($title)) {
     $variables['bear_page_title'] = variable_get('site_name', '') . ' Homepage';
-  } else {
+  }
+  else {
     $variables['bear_page_title'] = $title;
   }
 
@@ -299,11 +299,12 @@ function bear_skin_links__user_menu(&$variables) {
  * 5. Save the menu name and depth as attributes
  */
 function bear_skin_preprocess_menu_link(&$variables, $hook) {
-  $menu_name = $variables['element']['#original_link']['menu_name'];
-  $depth_word = $variables['element']['#original_link']['depth'];
+  $menu_name = (!empty($variables['element']['#original_link'])) ? $variables['element']['#original_link']['menu_name'] : '';
+  $depth_word = (!empty($variables['element']['#original_link'])) ? $variables['element']['#original_link']['depth'] : '';
 
+  $variables['element']['#attributes']['class'] = (empty($variables['element']['#attributes']['class'])) ? array() : $variables['element']['#attributes']['class'];
   $is_active = in_array('active', $variables['element']['#attributes']['class']);
-  $has_children = $variables['element']['#original_link']['expanded'] && $variables['element']['#original_link']['has_children'];
+  $has_children = (!empty($variables['element']['#original_link'])) ? $variables['element']['#original_link']['expanded'] && $variables['element']['#original_link']['has_children'] : FALSE;
 
   // <li> elements
   $variables['element']['#attributes']['class'] = array();
@@ -409,38 +410,39 @@ function bear_skin_item_list(&$variables) {
   $title = $variables['title'];
   $type = $variables['type'];
   $attributes = $variables['attributes'];
-  // create a more unique CSS identifier for this list
-  if (!empty($attributes['class'])) {
-    $list_class = implode('-', $attributes['class']);
-  }
-  else {
-    // since the classes array on the menu is empty
-    // we'll just give this a class of theme-item-list since
-    // that is the generating function of this item list
-    $list_class = 'theme-item-list';
+
+  if (empty($variables['attributes']['class'])) {
     $variables['attributes']['class'] = array();
   }
-  $variables['attributes']['class'][] = $list_class . '__list';
+  else if (!is_array($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [$variables['attributes']['class']];
+  }
 
   // determine if this is the pagination element
   $pager = FALSE;
   if (in_array('pager', $variables['attributes']['class'])) {
     $pager = TRUE;
+    $variables['attributes']['class'] = array();
   }
+
+  // add generic list class to front of classes
+  $list_class = ($pager) ? 'pager' : 'item-list';
+  array_unshift($variables['attributes']['class'], $list_class . '__list');
 
   // add ARIA role to <ul> element
   $variables['attributes']['role'] = ($pager) ? 'menubar' : 'list';
-
   // add ARIA roles and SMACCS classes to list items
   if (!empty($items)) {
     foreach ($variables['items'] as &$item) {
       if (!is_array($item)) {
         continue;
       }
-
       $item['role'] = ($pager) ? 'presentation' : 'listitem';
-      $item['class'] = (!empty($item['class'])) ? $item['class'] : array();
-      $item['class'][] = $list_class . '__item';
+
+      if (!$pager) {
+        $item['class'] = (!empty($item['class'])) ? $item['class'] : array();
+        $item['class'][] = 'item-list__item';
+      }
 
       if ($pager) {
         $has_label = preg_match('/title="(.*?)"/', $item['data'], $label_text);
@@ -458,6 +460,197 @@ function bear_skin_item_list(&$variables) {
   }
   else {
     return theme_item_list($variables);
+  }
+}
+
+function bear_skin_pager_link(&$variables) {
+  $text = $variables['text'];
+  $page_new = $variables['page_new'];
+  $element = $variables['element'];
+  $parameters = $variables['parameters'];
+  $attributes = $variables['attributes'];
+
+  $attributes['class'] = (empty($attributes['class']) || !is_array($attributes['class'])) ? array() : $attributes['class'];
+  $attributes['class'][] = 'pager__link';
+
+  $page = isset($_GET['page']) ? $_GET['page'] : '';
+  if ($new_page = implode(',', pager_load_array($page_new[$element], $element, explode(',', $page)))) {
+    $parameters['page'] = $new_page;
+  }
+
+  $query = array();
+  if (count($parameters)) {
+    $query = drupal_get_query_parameters($parameters, array());
+  }
+  if ($query_pager = pager_get_query_parameters()) {
+    $query = array_merge($query, $query_pager);
+  }
+
+  // Set each pager link title
+  if (!isset($attributes['title'])) {
+    static $titles = NULL;
+    if (!isset($titles)) {
+      $titles = array(
+        t('« first') => t('Go to first page'),
+        t('‹ previous') => t('Go to previous page'),
+        t('next ›') => t('Go to next page'),
+        t('last »') => t('Go to last page'),
+      );
+    }
+    if (isset($titles[$text])) {
+      $attributes['title'] = $titles[$text];
+    }
+    elseif (is_numeric($text)) {
+      $attributes['title'] = t('Go to page @number', array('@number' => $text));
+    }
+  }
+
+  // @todo l() cannot be used here, since it adds an 'active' class based on the
+  //   path only (which is always the current path for pager links). Apparently,
+  //   none of the pager links is active at any time - but it should still be
+  //   possible to use l() here.
+  // @see http://drupal.org/node/1410574
+  $attributes['href'] = url($_GET['q'], array('query' => $query));
+  return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '</a>';
+}
+
+/**
+ * Overrides theme_pager().
+ */
+function bear_skin_pager(&$variables) {
+  $tags = $variables['tags'];
+  $element = $variables['element'];
+  $parameters = $variables['parameters'];
+  $quantity = $variables['quantity'];
+  global $pager_page_array, $pager_total;
+
+  // Calculate various markers within this pager piece:
+  // Middle is used to "center" pages around the current page.
+  $pager_middle = ceil($quantity / 2);
+  // current is the page we are currently paged to
+  $pager_current = $pager_page_array[$element] + 1;
+  // first is the first page listed by this pager piece (re quantity)
+  $pager_first = $pager_current - $pager_middle + 1;
+  // last is the last page listed by this pager piece (re quantity)
+  $pager_last = $pager_current + $quantity - $pager_middle;
+  // max is the maximum page number
+  $pager_max = $pager_total[$element];
+  // End of marker calculations.
+
+  // Prepare for generation loop.
+  $i = $pager_first;
+  if ($pager_last > $pager_max) {
+    // Adjust "center" if at end of query.
+    $i = $i + ($pager_max - $pager_last);
+    $pager_last = $pager_max;
+  }
+  if ($i <= 0) {
+    // Adjust "center" if at start of query.
+    $pager_last = $pager_last + (1 - $i);
+    $i = 1;
+  }
+  // End of generation loop preparation.
+
+  $li_first = theme('pager_first', array(
+    'text' => (isset($tags[0]) ? $tags[0] : t('« first')),
+    'element' => $element,
+    'parameters' => $parameters
+  ));
+  $li_previous = theme('pager_previous', array(
+    'text' => (isset($tags[1]) ? $tags[1] : t('‹ previous')),
+    'element' => $element,
+    'interval' => 1,
+    'parameters' => $parameters
+  ));
+  $li_next = theme('pager_next', array(
+    'text' => (isset($tags[3]) ? $tags[3] : t('next ›')),
+    'element' => $element,
+    'interval' => 1,
+    'parameters' => $parameters
+  ));
+  $li_last = theme('pager_last', array(
+    'text' => (isset($tags[4]) ? $tags[4] : t('last »')),
+    'element' => $element,
+    'parameters' => $parameters
+  ));
+
+  if ($pager_total[$element] > 1) {
+    if ($li_first) {
+      $items[] = array(
+        'class' => array('pager__item', 'pager--first'),
+        'data' => $li_first,
+      );
+    }
+    if ($li_previous) {
+      $items[] = array(
+        'class' => array('pager__item', 'pager--previous'),
+        'data' => $li_previous,
+      );
+    }
+
+    // When there is more than one page, create the pager list.
+    if ($i != $pager_max) {
+      if ($i > 1) {
+        $items[] = array(
+          'class' => array('pager__item', 'pager--ellipsis'),
+          'data' => '…',
+        );
+      }
+      // Now generate the actual pager piece.
+      for (; $i <= $pager_last && $i <= $pager_max; $i++) {
+        if ($i < $pager_current) {
+          $items[] = array(
+            'class' => array('pager__item'),
+            'data' => theme('pager_previous', array(
+              'text' => $i,
+              'element' => $element,
+              'interval' => ($pager_current - $i),
+              'parameters' => $parameters
+            )),
+          );
+        }
+        if ($i == $pager_current) {
+          $items[] = array(
+            'class' => array('pager__item', 'pager--current'),
+            'data' => $i,
+          );
+        }
+        if ($i > $pager_current) {
+          $items[] = array(
+            'class' => array('pager__item'),
+            'data' => theme('pager_next', array(
+              'text' => $i,
+              'element' => $element,
+              'interval' => ($i - $pager_current),
+              'parameters' => $parameters
+            )),
+          );
+        }
+      }
+      if ($i < $pager_max) {
+        $items[] = array(
+          'class' => array('pager__item', 'pager--ellipsis'),
+          'data' => '…',
+        );
+      }
+    }
+    // End generation.
+    if ($li_next) {
+      $items[] = array(
+        'class' => array('pager__item', 'pager--next'),
+        'data' => $li_next,
+      );
+    }
+    if ($li_last) {
+      $items[] = array(
+        'class' => array('pager__item', 'pager--last'),
+        'data' => $li_last,
+      );
+    }
+    return theme('item_list', array(
+      'items' => $items,
+      'attributes' => array('class' => array('pager')),
+    ));
   }
 }
 
