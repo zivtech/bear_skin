@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*! Gutenberg reset — adapted from Normalize */
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 html {
   -ms-text-size-adjust: 100%;
@@ -8,8 +6,6 @@ html {
 body {
   margin: 0; }
 
-/* HTML5 display definitions
-   ========================================================================== */
 article,
 aside,
 details,
@@ -35,9 +31,7 @@ canvas,
 progress,
 video {
   display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
+  vertical-align: baseline; }
 
 audio:not([controls]) {
   display: none;
@@ -47,8 +41,6 @@ audio:not([controls]) {
 template {
   display: none; }
 
-/* Links
-   ========================================================================== */
 a {
   background: transparent; }
 
@@ -56,8 +48,6 @@ a:active,
 a:hover {
   outline: 0; }
 
-/* Text-level semantics
-   ========================================================================== */
 abbr {
   letter-spacing: 0.1em; }
 
@@ -97,16 +87,12 @@ i {
   position: relative;
   vertical-align: baseline; }
 
-/* Embedded content
-   ========================================================================== */
 img {
   border: 0; }
 
 svg:not(:root) {
   overflow: hidden; }
 
-/* Grouping content
-   ========================================================================== */
 hr {
   box-sizing: content-box;
   height: 0; }
@@ -120,8 +106,6 @@ pre,
 samp {
   font-family: monospace, monospace; }
 
-/* Tables
-   ========================================================================== */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -130,25 +114,10 @@ td,
 th {
   padding: 0; }
 
-/* Images
-   ========================================================================== */
 img {
   max-width: 100%;
   display: block;
   margin: inherit auto; }
-
-/* Configuration
-   ========================================================================== */
-/* Mixins
-   ========================================================================== */
-/* Calculations
-   ========================================================================== */
-/* Mixins
-   ========================================================================== */
-/* Font themes
-   ========================================================================== */
-/* Defaults
-   ========================================================================== */
 
 html {
   font-size: 16px;
@@ -156,18 +125,14 @@ html {
   font-family: Merriweather, Georgia, serif;
   color: #261d19; }
 
-* {
+body {
   line-height: 26px;
   line-height: 1.625rem; }
 
-/* Paragraph
-   ========================================================================== */
 p {
   margin-bottom: 26px;
   margin-bottom: 1.625rem; }
 
-/* Headings
-   ========================================================================== */
 h1 {
   font-size: 40px;
   font-size: 2.5rem;
@@ -246,8 +211,6 @@ h6 {
   font-style: italic;
   font-weight: normal; }
 
-/* Links
-   ========================================================================== */
 a {
   color: #728ead;
   transition: all .3s;
@@ -256,13 +219,8 @@ a {
     color: #445b75; }
   a:visited {
     color: #728ead; }
-    a:visited:hover {
-      color: #445b75; }
   a:active {
     color: #445b75; }
-
-/* Figures & other elements
-   ========================================================================== */
 
 figcaption {
   line-height: 26px;
@@ -327,8 +285,6 @@ code {
   font-size: 19.2px;
   font-size: 1.2rem; }
 
-/* Grid
-   ========================================================================== */
 .grid, .grid-double {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
   background-position: left top;
@@ -339,8 +295,6 @@ code {
 .grid-double {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 13px, rgba(0, 170, 255, 0.2) 13px, transparent 14px, transparent 26px); }
 
-/* Gutenberg defaults
-   ========================================================================== */
 .toggleWrapper {
   display: block;
   position: fixed;
@@ -1037,10 +991,6 @@ body.unpublished #main {
   html{
     font-size: 18px;
     font-size: 1.125rem; }
-  /* Mixins
-   ========================================================================== */
-  /* Mixins
-   ========================================================================== */
   h1{
     font-size: 40px;
     font-size: 2.5rem;
@@ -1096,69 +1046,49 @@ body.unpublished #main {
     margin-bottom: 15.5px;
     margin-bottom: 0.86111rem; }
   h1 + h2{
-    /* Mixins
-   ========================================================================== */
     margin-top: 31px;
     margin-top: 1.72222rem; }
   h2 + h3,
     h3 + h4,
     h4 + h5{
-    /* Mixins
-   ========================================================================== */
     margin-top: 15.5px;
     margin-top: 0.86111rem; }
   h5 + h6{
-    /* Mixins
-   ========================================================================== */
     margin-top: -15.5px;
     margin-top: -0.86111rem; }
   figure.floatLeft,
   figure.floatRight{
-    /* Mixins
-   ========================================================================== */
     max-width: 675px;
     max-width: 37.5rem;
     padding: 0px 31px;
     padding: 0rem 1.72222rem; }
   figure.floatLeft blockquote,
   figure.floatRight blockquote{
-    /* Mixins
-   ========================================================================== */
     padding: 0px;
     padding: 0rem;
     text-align: left; }
   figure.floatLeft blockquote p,
   figure.floatRight blockquote p{
-    /* Mixins
-   ========================================================================== */
     font-size: 19.2px;
     font-size: 1.2rem;
     line-height: 31px;
     line-height: 1.72222rem; }
   figcaption{
-    /* Mixins
-   ========================================================================== */
     line-height: 31px;
     line-height: 1.72222rem;
     margin-bottom: 0; }
   blockquote{
     padding-left: 2rem; }
   figure blockquote{
-    /* Mixins
-   ========================================================================== */
     padding: 62px 0px 31px;
     padding: 3.44444rem 0rem 1.72222rem;
     text-align: center; }
   figure blockquote p{
-    /* Mixins
-   ========================================================================== */
     font-size: 27px;
     font-size: 1.6875rem;
     line-height: 46.5px;
     line-height: 2.58333rem; }
   hr{
-    /* Mixins
-   ========================================================================== */
     margin-top: 62px;
     margin-top: 3.44444rem;
     margin-bottom: 62px;
@@ -1166,19 +1096,13 @@ body.unpublished #main {
     height: 31px;
     height: 1.72222rem; }
   hr{
-    /* Mixins
-   ========================================================================== */
     background-size: 100% 31px;
     background-size: 100% 1.72222rem;
     background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #261d19 13.5px, #261d19 17.5px, transparent 17.5px, transparent 31px); }
   small{
-    /* Mixins
-   ========================================================================== */
     line-height: 15.5px;
     line-height: 0.86111rem; }
   code{
-    /* Mixins
-   ========================================================================== */
     padding: 31px;
     padding: 1.72222rem; }
   .grid, .grid-double{
@@ -1194,7 +1118,7 @@ body.unpublished #main {
     right: 31px; } }
 
 @media (min-width: 50em){
-  *{
+  body{
     line-height: 26px;
     line-height: 1.625rem; }
   .sidebar-first main{
