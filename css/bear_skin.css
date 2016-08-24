@@ -863,16 +863,20 @@ table {
         visibility: visible;
         opacity: 1; }
 
-.item-list .pager {
-  margin: 26px 0px 26px;
-  margin: 1.625rem 0rem 1.625rem; }
-  .item-list .pager li {
-    padding: 7.8px 13px 7.8px;
-    padding: 0.4875rem 0.8125rem 0.4875rem;
-    margin: 0px 7.8px 0px;
-    margin: 0rem 0.4875rem 0rem; }
-  .item-list .pager-current {
-    border: 1px solid #555; }
+.pager .item-list .pager__list {
+  margin: 26px 0px;
+  margin: 1.625rem 0rem; }
+
+.pager .item-list .pager__item {
+  padding: 7.8px 13px;
+  padding: 0.4875rem 0.8125rem;
+  margin: 0px 7.8px;
+  margin: 0rem 0.4875rem;
+  list-style-type: none;
+  display: inline-block; }
+
+.pager .item-list .pager--current {
+  border: 1px solid #555; }
 
 #sidr-wrapper-0 {
   margin: 13px 13px 13px;
