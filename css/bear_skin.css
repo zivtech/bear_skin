@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*! Gutenberg reset — adapted from Normalize */
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
 html {
   -ms-text-size-adjust: 100%;
@@ -8,8 +6,6 @@ html {
 body {
   margin: 0; }
 
-/* HTML5 display definitions
-   ========================================================================== */
 article,
 aside,
 details,
@@ -35,9 +31,7 @@ canvas,
 progress,
 video {
   display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
+  vertical-align: baseline; }
 
 audio:not([controls]) {
   display: none;
@@ -47,8 +41,6 @@ audio:not([controls]) {
 template {
   display: none; }
 
-/* Links
-   ========================================================================== */
 a {
   background: transparent; }
 
@@ -56,8 +48,6 @@ a:active,
 a:hover {
   outline: 0; }
 
-/* Text-level semantics
-   ========================================================================== */
 abbr {
   letter-spacing: 0.1em; }
 
@@ -97,16 +87,12 @@ i {
   position: relative;
   vertical-align: baseline; }
 
-/* Embedded content
-   ========================================================================== */
 img {
   border: 0; }
 
 svg:not(:root) {
   overflow: hidden; }
 
-/* Grouping content
-   ========================================================================== */
 hr {
   box-sizing: content-box;
   height: 0; }
@@ -120,8 +106,6 @@ pre,
 samp {
   font-family: monospace, monospace; }
 
-/* Tables
-   ========================================================================== */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -130,25 +114,10 @@ td,
 th {
   padding: 0; }
 
-/* Images
-   ========================================================================== */
 img {
   max-width: 100%;
   display: block;
   margin: inherit auto; }
-
-/* Configuration
-   ========================================================================== */
-/* Mixins
-   ========================================================================== */
-/* Calculations
-   ========================================================================== */
-/* Mixins
-   ========================================================================== */
-/* Font themes
-   ========================================================================== */
-/* Defaults
-   ========================================================================== */
 
 html {
   font-size: 16px;
@@ -156,23 +125,17 @@ html {
   font-family: Merriweather, Georgia, serif;
   color: #261d19; }
 
-* {
-  line-height: 26px;
-  line-height: 1.625rem; }
+body {
+  line-height: 1.625; }
 
-/* Paragraph
-   ========================================================================== */
 p {
   margin-bottom: 26px;
   margin-bottom: 1.625rem; }
 
-/* Headings
-   ========================================================================== */
 h1 {
   font-size: 40px;
   font-size: 2.5rem;
-  line-height: 52px;
-  line-height: 3.25rem;
+  line-height: 3.25;
   margin-top: 52px;
   margin-top: 3.25rem;
   margin-bottom: 26px;
@@ -181,8 +144,7 @@ h1 {
 h2 {
   font-size: 27px;
   font-size: 1.6875rem;
-  line-height: 39px;
-  line-height: 2.4375rem;
+  line-height: 2.4375;
   margin-top: 32.5px;
   margin-top: 2.03125rem;
   margin-bottom: 13px;
@@ -191,8 +153,7 @@ h2 {
 h3 {
   font-size: 22px;
   font-size: 1.375rem;
-  line-height: 26px;
-  line-height: 1.625rem;
+  line-height: 1.625;
   margin-top: 26px;
   margin-top: 1.625rem;
   margin-bottom: 13px;
@@ -201,8 +162,7 @@ h3 {
 h4 {
   font-size: 19.2px;
   font-size: 1.2rem;
-  line-height: 26px;
-  line-height: 1.625rem;
+  line-height: 1.625;
   margin-top: 19.5px;
   margin-top: 1.21875rem;
   margin-bottom: 13px;
@@ -211,8 +171,7 @@ h4 {
 h5 {
   font-size: 16px;
   font-size: 1rem;
-  line-height: 26px;
-  line-height: 1.625rem;
+  line-height: 1.625;
   margin-top: 32.5px;
   margin-top: 2.03125rem;
   margin-bottom: 13px;
@@ -221,8 +180,7 @@ h5 {
 h6 {
   font-size: 16px;
   font-size: 1rem;
-  line-height: 26px;
-  line-height: 1.625rem;
+  line-height: 1.625;
   margin-top: 32.5px;
   margin-top: 2.03125rem;
   margin-bottom: 13px;
@@ -246,8 +204,6 @@ h6 {
   font-style: italic;
   font-weight: normal; }
 
-/* Links
-   ========================================================================== */
 a {
   color: #728ead;
   transition: all .3s;
@@ -256,17 +212,11 @@ a {
     color: #445b75; }
   a:visited {
     color: #728ead; }
-    a:visited:hover {
-      color: #445b75; }
   a:active {
     color: #445b75; }
 
-/* Figures & other elements
-   ========================================================================== */
-
 figcaption {
-  line-height: 26px;
-  line-height: 1.625rem;
+  line-height: 1.625;
   color: #261d19;
   font-size: .8125rem;
   font-style: italic;
@@ -286,13 +236,12 @@ cite {
   font-style: normal; }
 
 figure blockquote {
-  padding: 26px 0px;
-  padding: 1.625rem 0rem; }
+  padding: 26px 0;
+  padding: 1.625rem 0; }
   figure blockquote p {
     font-size: 27px;
     font-size: 1.6875rem;
-    line-height: 39px;
-    line-height: 2.4375rem; }
+    line-height: 2.4375; }
 
 ul li,
 ol li {
@@ -316,8 +265,7 @@ hr {
   width: 100px; }
 
 small {
-  line-height: 13px;
-  line-height: 0.8125rem; }
+  line-height: 0.8125; }
 
 code {
   padding: 26px;
@@ -327,8 +275,6 @@ code {
   font-size: 19.2px;
   font-size: 1.2rem; }
 
-/* Grid
-   ========================================================================== */
 .grid, .grid-double {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
   background-position: left top;
@@ -339,8 +285,6 @@ code {
 .grid-double {
   background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px, transparent 13px, rgba(0, 170, 255, 0.2) 13px, transparent 14px, transparent 26px); }
 
-/* Gutenberg defaults
-   ========================================================================== */
 .toggleWrapper {
   display: block;
   position: fixed;
@@ -573,16 +517,16 @@ form .vertical-tabs fieldset.vertical-tabs-pane {
 .description {
   padding: 0px 13px 0px;
   padding: 0rem 0.8125rem 0rem;
-  margin: 13px 0px 13px;
-  margin: 0.8125rem 0rem 0.8125rem;
+  margin: 13px 0 13px;
+  margin: 0.8125rem 0 0.8125rem;
   font-size: 80%;
   color: #888;
   font-style: italic;
   border-left: dotted 1px #aaa; }
 
 fieldset {
-  margin: 13px 0px 13px;
-  margin: 0.8125rem 0rem 0.8125rem;
+  margin: 13px 0 13px;
+  margin: 0.8125rem 0 0.8125rem;
   position: relative;
   display: block;
   clear: both;
@@ -598,8 +542,8 @@ fieldset {
     color: #db2828; }
 
 .fieldset-wrapper {
-  margin: 13px 0px 13px;
-  margin: 0.8125rem 0rem 0.8125rem;
+  margin: 13px 0 13px;
+  margin: 0.8125rem 0 0.8125rem;
   padding: 13px 13px 13px;
   padding: 0.8125rem 0.8125rem 0.8125rem;
   background: #f5f5f5;
@@ -687,8 +631,8 @@ legend {
     width: 130%; }
 
 .webform-container-inline label {
-  margin: 13px 0px 13px;
-  margin: 0.8125rem 0rem 0.8125rem;
+  margin: 13px 0 13px;
+  margin: 0.8125rem 0 0.8125rem;
   display: inline !important; }
 
 .webform-container-inline .field div.dropdown {
@@ -707,8 +651,8 @@ i.icon {
 .messages {
   padding: 13px 26px 13px;
   padding: 0.8125rem 1.625rem 0.8125rem;
-  margin: 26px 0px 26px;
-  margin: 1.625rem 0rem 1.625rem;
+  margin: 26px 0 26px;
+  margin: 1.625rem 0 1.625rem;
   border-radius: 2px;
   background-color: #c3cfdc;
   color: white;
@@ -785,8 +729,8 @@ table {
     padding: 0; }
 
 .breadcrumbs {
-  padding: 26px 0px 26px;
-  padding: 1.625rem 0rem 1.625rem;
+  padding: 26px 0 26px;
+  padding: 1.625rem 0 1.625rem;
   margin: 0;
   color: #555; }
   .breadcrumbs__item {
@@ -833,16 +777,16 @@ table {
     list-style-type: none;
     display: inline-block; }
     .tabs-secondary__tab a {
-      padding: 7.8px 0px;
-      padding: 0.4875rem 0rem;
+      padding: 7.8px 0;
+      padding: 0.4875rem 0;
       border-bottom: 2px solid transparent; }
       .tabs-secondary__tab a:hover, .tabs-secondary__tab a:focus, .tabs-secondary__tab a.is-active {
         border-bottom: 2px solid #555;
         color: #555; }
 
 .main-menu {
-  padding: 26px 0px 26px;
-  padding: 1.625rem 0rem 1.625rem; }
+  padding: 26px 0 26px;
+  padding: 1.625rem 0 1.625rem; }
   .main-menu ul {
     margin: 0;
     padding: 0; }
@@ -864,14 +808,14 @@ table {
         opacity: 1; }
 
 .pager .item-list .pager__list {
-  margin: 26px 0px;
-  margin: 1.625rem 0rem; }
+  margin: 26px 0;
+  margin: 1.625rem 0; }
 
 .pager .item-list .pager__item {
   padding: 7.8px 13px;
   padding: 0.4875rem 0.8125rem;
-  margin: 0px 7.8px;
-  margin: 0rem 0.4875rem;
+  margin: 0 7.8px;
+  margin: 0 0.4875rem;
   list-style-type: none;
   display: inline-block; }
 
@@ -967,8 +911,8 @@ h3.sidr-class-visually-hidden {
     list-style-type: none; }
 
 .site-footer .region-footer {
-  padding: 26px 0px 26px;
-  padding: 1.625rem 0rem 1.625rem; }
+  padding: 26px 0 26px;
+  padding: 1.625rem 0 1.625rem; }
 
 #footer {
   background: transparent;
@@ -983,8 +927,8 @@ h3.sidr-class-visually-hidden {
       list-style-type: none; }
 
 #header {
-  padding: 13px 0px 13px;
-  padding: 0.8125rem 0rem 0.8125rem; }
+  padding: 13px 0 13px;
+  padding: 0.8125rem 0 0.8125rem; }
 
 .site-sidebars {
   margin: 0; }
@@ -1000,8 +944,8 @@ h3.sidr-class-visually-hidden {
     border-top: 1px solid #eaeaea; }
 
 section[id^="container-"] {
-  padding: 0px 26px;
-  padding: 0rem 1.625rem;
+  padding: 0 26px;
+  padding: 0 1.625rem;
   overflow: hidden;
   margin: 0 auto;
   max-width: 1350px;
@@ -1041,15 +985,10 @@ body.unpublished #main {
   html{
     font-size: 18px;
     font-size: 1.125rem; }
-  /* Mixins
-   ========================================================================== */
-  /* Mixins
-   ========================================================================== */
   h1{
     font-size: 40px;
     font-size: 2.5rem;
-    line-height: 62px;
-    line-height: 3.44444rem;
+    line-height: 3.44444;
     margin-top: 62px;
     margin-top: 3.44444rem;
     margin-bottom: 31px;
@@ -1057,8 +996,7 @@ body.unpublished #main {
   h2{
     font-size: 27px;
     font-size: 1.6875rem;
-    line-height: 46.5px;
-    line-height: 2.58333rem;
+    line-height: 2.58333;
     margin-top: 38.75px;
     margin-top: 2.15278rem;
     margin-bottom: 15.5px;
@@ -1066,8 +1004,7 @@ body.unpublished #main {
   h3{
     font-size: 22px;
     font-size: 1.375rem;
-    line-height: 31px;
-    line-height: 1.72222rem;
+    line-height: 1.72222;
     margin-top: 31px;
     margin-top: 1.72222rem;
     margin-bottom: 15.5px;
@@ -1075,8 +1012,7 @@ body.unpublished #main {
   h4{
     font-size: 19.2px;
     font-size: 1.2rem;
-    line-height: 31px;
-    line-height: 1.72222rem;
+    line-height: 1.72222;
     margin-top: 23.25px;
     margin-top: 1.29167rem;
     margin-bottom: 15.5px;
@@ -1084,8 +1020,7 @@ body.unpublished #main {
   h5{
     font-size: 16px;
     font-size: 1rem;
-    line-height: 31px;
-    line-height: 1.72222rem;
+    line-height: 1.72222;
     margin-top: 38.75px;
     margin-top: 2.15278rem;
     margin-bottom: 15.5px;
@@ -1093,76 +1028,51 @@ body.unpublished #main {
   h6{
     font-size: 16px;
     font-size: 1rem;
-    line-height: 31px;
-    line-height: 1.72222rem;
+    line-height: 1.72222;
     margin-top: 38.75px;
     margin-top: 2.15278rem;
     margin-bottom: 15.5px;
     margin-bottom: 0.86111rem; }
   h1 + h2{
-    /* Mixins
-   ========================================================================== */
     margin-top: 31px;
     margin-top: 1.72222rem; }
   h2 + h3,
     h3 + h4,
     h4 + h5{
-    /* Mixins
-   ========================================================================== */
     margin-top: 15.5px;
     margin-top: 0.86111rem; }
   h5 + h6{
-    /* Mixins
-   ========================================================================== */
     margin-top: -15.5px;
     margin-top: -0.86111rem; }
   figure.floatLeft,
   figure.floatRight{
-    /* Mixins
-   ========================================================================== */
     max-width: 675px;
     max-width: 37.5rem;
-    padding: 0px 31px;
-    padding: 0rem 1.72222rem; }
+    padding: 0 31px;
+    padding: 0 1.72222rem; }
   figure.floatLeft blockquote,
   figure.floatRight blockquote{
-    /* Mixins
-   ========================================================================== */
-    padding: 0px;
-    padding: 0rem;
+    padding: 0;
     text-align: left; }
   figure.floatLeft blockquote p,
   figure.floatRight blockquote p{
-    /* Mixins
-   ========================================================================== */
     font-size: 19.2px;
     font-size: 1.2rem;
-    line-height: 31px;
-    line-height: 1.72222rem; }
+    line-height: 1.72222; }
   figcaption{
-    /* Mixins
-   ========================================================================== */
-    line-height: 31px;
-    line-height: 1.72222rem;
+    line-height: 1.72222;
     margin-bottom: 0; }
   blockquote{
     padding-left: 2rem; }
   figure blockquote{
-    /* Mixins
-   ========================================================================== */
-    padding: 62px 0px 31px;
-    padding: 3.44444rem 0rem 1.72222rem;
+    padding: 62px 0 31px;
+    padding: 3.44444rem 0 1.72222rem;
     text-align: center; }
   figure blockquote p{
-    /* Mixins
-   ========================================================================== */
     font-size: 27px;
     font-size: 1.6875rem;
-    line-height: 46.5px;
-    line-height: 2.58333rem; }
+    line-height: 2.58333; }
   hr{
-    /* Mixins
-   ========================================================================== */
     margin-top: 62px;
     margin-top: 3.44444rem;
     margin-bottom: 62px;
@@ -1170,19 +1080,12 @@ body.unpublished #main {
     height: 31px;
     height: 1.72222rem; }
   hr{
-    /* Mixins
-   ========================================================================== */
     background-size: 100% 31px;
     background-size: 100% 1.72222rem;
     background-image: linear-gradient(to bottom, transparent 1px, transparent 13.5px, #261d19 13.5px, #261d19 17.5px, transparent 17.5px, transparent 31px); }
   small{
-    /* Mixins
-   ========================================================================== */
-    line-height: 15.5px;
-    line-height: 0.86111rem; }
+    line-height: 0.86111; }
   code{
-    /* Mixins
-   ========================================================================== */
     padding: 31px;
     padding: 1.72222rem; }
   .grid, .grid-double{
@@ -1198,9 +1101,8 @@ body.unpublished #main {
     right: 31px; } }
 
 @media (min-width: 50em){
-  *{
-    line-height: 26px;
-    line-height: 1.625rem; }
+  body{
+    line-height: 1.625; }
   .sidebar-first main{
     zoom: 1;
     float: left;
@@ -1339,5 +1241,5 @@ body.unpublished #main {
     float: right;
     clear: none; }
   .site-sidebars{
-    margin: 26px 0px 26px;
-    margin: 1.625rem 0rem 1.625rem; } }
+    margin: 26px 0 26px;
+    margin: 1.625rem 0 1.625rem; } }

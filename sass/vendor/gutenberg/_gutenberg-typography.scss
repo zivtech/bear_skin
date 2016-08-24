@@ -1,5 +1,6 @@
-/* Calculations
-   ========================================================================== */
+//
+// Calculations
+//
 
 // Mobile base & leading
 $base: 16 * ($base-font-size / 100);
@@ -14,8 +15,9 @@ $leading-rem-desktop: $leading-desktop / $base-desktop;
 @import 'gutenberg-mixins';
 @import '../breakpoint/stylesheets/breakpoint';
 
-/* Font themes
-   ========================================================================== */
+//
+// Font themes
+//
 
 $font-body: null;
 $font-headings: null;
@@ -48,8 +50,9 @@ $font-headings: null;
 }
 
 
-/* Defaults
-   ========================================================================== */
+//
+// Defaults
+//
 
 body,
 html {
@@ -77,7 +80,7 @@ html {
 }
 
 // Line-height & margin reset
-* {
+body {
   @include line-height(1);
 
   @include breakpoint($breakpoint-medium-width) {
@@ -89,9 +92,9 @@ html {
 
 }
 
-
-/* Paragraph
-   ========================================================================== */
+//
+// Paragraph
+//
 
 p {
   @include margin-bottom(1);
@@ -143,8 +146,9 @@ p {
 
 }
 
-/* Headings
-   ========================================================================== */
+//
+// Headings
+//
 
 // Set headings sizes, line-heights and margins
 @each $heading, $properties in $headings {
@@ -235,8 +239,9 @@ h6 {
   }
 }
 
-/* Links
-   ========================================================================== */
+//
+// Links
+//
 
 a {
   color: $color-link-normal;
@@ -249,10 +254,6 @@ a {
 
   &:visited {
     color: $color-link-visited;
-
-    &:hover {
-      color: $color-link-hover;
-    }
   }
 
   &:active {
@@ -260,8 +261,9 @@ a {
   }
 }
 
-/* Figures & other elements
-   ========================================================================== */
+//
+// Figures & other elements
+//
 
 figure.floatLeft,
 figure.floatRight {
@@ -499,8 +501,9 @@ code {
 }
 
 
-/* Grid
-   ========================================================================== */
+//
+// Grid
+//
 
 // Grid background
 .grid {
