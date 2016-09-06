@@ -415,7 +415,7 @@ function bear_skin_item_list(&$variables) {
     $variables['attributes']['class'] = array();
   }
   else if (!is_array($variables['attributes']['class'])) {
-    $variables['attributes']['class'] = [$variables['attributes']['class']];
+    $variables['attributes']['class'] = array($variables['attributes']['class']);
   }
 
   // determine if this is the pagination element
