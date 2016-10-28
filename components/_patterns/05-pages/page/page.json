@@ -11,8 +11,15 @@
       "pattern": "organisms-header"
     }
   },
-  "region_navigation": "Navigation Region",
-  "content": "Page content will live here",
+  "region_content": {
+    "include()": {
+      "pattern": "layouts-base-layout"
+    }
+  },
   "region_breadcrumb": "Breadcrumb Region",
-  "region_footer": "Footer Region"
+  "region_footer": {
+    "include()": {
+      "pattern": "organisms-region-footer"
+    }
+  }
 }
