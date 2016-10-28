@@ -79,6 +79,7 @@ hr.pl {
 
 .container-fluid {
   margin-top: 1rem;
+  padding: 1rem 2.5rem !important;
 }
 
 .icon-wrapper {
