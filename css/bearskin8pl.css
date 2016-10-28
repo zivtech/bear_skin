@@ -3831,6 +3831,51 @@ details[open] .summary i, [open].accordion .summary i {
   margin-right: 1em;
 }
 
+.container-fluid {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.row {
+  margin-right: -2rem;
+  margin-left: -2rem;
+}
+
+.single-row {
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+.col-xs,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-offset-0,
+.col-xs-offset-1,
+.col-xs-offset-2,
+.col-xs-offset-3,
+.col-xs-offset-4,
+.col-xs-offset-5,
+.col-xs-offset-6,
+.col-xs-offset-7,
+.col-xs-offset-8,
+.col-xs-offset-9,
+.col-xs-offset-10,
+.col-xs-offset-11,
+.col-xs-offset-12 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
 .ui--grey body {
   color: #251c18;
   font-family: "Noto Serif";
@@ -4016,7 +4061,8 @@ details[open] .summary i, [open].accordion .summary i {
   opacity: 1;
 }
 
-.ui--grey .form-checkboxes label {
+.ui--grey .js-form-type-checkbox label,
+.ui--grey .js-form-type-radio label {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -4025,7 +4071,8 @@ details[open] .summary i, [open].accordion .summary i {
   cursor: pointer;
 }
 
-.ui--grey .form-checkboxes input {
+.ui--grey .js-form-type-checkbox input,
+.ui--grey .js-form-type-radio input {
   margin: 0 5px 0 0;
 }
 
@@ -4763,7 +4810,8 @@ details[open] .summary i, [open].accordion .summary i {
   opacity: 1;
 }
 
-.ui--blue .form-checkboxes label {
+.ui--blue .js-form-type-checkbox label,
+.ui--blue .js-form-type-radio label {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -4772,7 +4820,8 @@ details[open] .summary i, [open].accordion .summary i {
   cursor: pointer;
 }
 
-.ui--blue .form-checkboxes input {
+.ui--blue .js-form-type-checkbox input,
+.ui--blue .js-form-type-radio input {
   margin: 0 5px 0 0;
 }
 
@@ -5510,7 +5559,8 @@ details[open] .summary i, [open].accordion .summary i {
   opacity: 1;
 }
 
-.ui--green .form-checkboxes label {
+.ui--green .js-form-type-checkbox label,
+.ui--green .js-form-type-radio label {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -5519,7 +5569,8 @@ details[open] .summary i, [open].accordion .summary i {
   cursor: pointer;
 }
 
-.ui--green .form-checkboxes input {
+.ui--green .js-form-type-checkbox input,
+.ui--green .js-form-type-radio input {
   margin: 0 5px 0 0;
 }
 

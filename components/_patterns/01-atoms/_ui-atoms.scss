@@ -172,7 +172,8 @@ fieldset {
   }
 }
 
-.form-checkboxes {
+.js-form-type-checkbox,
+.js-form-type-radio {
 
   label {
     display: inline-block;
