@@ -1,0 +1,11 @@
+.indented:first-of-type {
+  @include padding(0, 0, 0, 1);
+}
+
+.indented:nth-of-type(2) {
+  @include padding(0, 0, 0, 2);
+}
+
+.indented:nth-of-type(3) {
+  @include padding(0, 0, 0, 3);
+}

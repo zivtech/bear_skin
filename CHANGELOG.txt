@@ -1,6 +1,0 @@
-7.x-2.4
-1. Remove ruby sass and dependencies
-2. Install gulp and setup gulp tasks
-
-7.x-2.3
-1. Removal of bear skin themes to use a more blank CSS instead

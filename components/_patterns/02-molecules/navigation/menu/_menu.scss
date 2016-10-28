@@ -1,0 +1,88 @@
+.menu {
+  margin: 0;
+  padding: 0;
+
+
+  &__item {
+    @include margin(0, .5, 0, 0);
+
+    list-style-type: none;
+    display: inline;
+
+    &--expanded {
+      position: relative;
+
+      &:hover,
+      &:focus {
+
+        .sub-menu {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--main {
+
+    &.open {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .menu {
+        width: 100%;
+
+        &__item {
+          display: block;
+          margin: 0;
+          text-align: center;
+          width: 100%;
+        }
+
+        &__link {
+          display: block;
+          padding: 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.list-group {
+
+  &__link:not(:first-child) {
+
+    @include margin-top(.5);
+  }
+}
+
+#mnav {
+  font-size: 26px;
+  display: block;
+  position: relative;
+  z-index: 6;
+  color: $ui-black;
+
+  i {
+    margin: 0;
+  }
+
+  &.open {
+
+    i {
+      &:before {
+        content: "\f00d";
+      }
+    }
+  }
+
+  @include breakpoint($bp-1024) {
+    display: none;
+  }
+}

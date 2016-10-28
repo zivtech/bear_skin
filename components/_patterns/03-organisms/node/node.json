@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "node"
+      ]
+    }
+  },
+  "content": "Node content will live here"
+}

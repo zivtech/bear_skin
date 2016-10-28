@@ -1,0 +1,275 @@
+{# First Comment #}
+<article{{ attributes.addClass('js-comment') }}>
+
+  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
+
+  <footer class="footer byline comment__byline">
+    {{ user_picture }}
+    <p>Sean Wolfe August 17, 2016 2:49pm</p>
+    {% if parent %}
+      <p class="visually-hidden">{{ parent }}</p>
+    {% endif %}
+
+    {{ permalink }}
+  </footer>
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+  {# Reply Link #}
+  {% if links -%}
+  {%- if heading -%}
+    {%- if heading.level -%}
+      <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
+    {%- else -%}
+      <h2{{ heading.attributes }}>{{ heading.text }}</h2>
+    {%- endif -%}
+  {%- endif -%}
+  <ul{{ attributes }}>
+    {%- for key, item in links -%}
+      <li{{ item.attributes.addClass(key|clean_class) }}>
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- elseif item.text_attributes -%}
+          <span{{ item.text_attributes }}>{{ item.text }}</span>
+        {%- else -%}
+          {{ item.text }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif %}
+</article>
+
+{# Second Comment (Indented) #}
+<div class="indented">
+  <article{{ attributes.addClass('js-comment') }}>
+ 
+  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
+
+  <footer class="footer byline comment__byline">
+    {{ user_picture }}
+    <p>Alban Bailey August 17, 2016 2:56pm</p>
+
+    {% if parent %}
+      <p class="visually-hidden">{{ parent }}</p>
+    {% endif %}
+
+    {{ permalink }}
+  </footer>
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+  {# Reply Link #}
+  {% if links -%}
+  {%- if heading -%}
+    {%- if heading.level -%}
+      <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
+    {%- else -%}
+      <h2{{ heading.attributes }}>{{ heading.text }}</h2>
+    {%- endif -%}
+  {%- endif -%}
+  <ul{{ attributes }}>
+    {%- for key, item in links -%}
+      <li{{ item.attributes.addClass(key|clean_class) }}>
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- elseif item.text_attributes -%}
+          <span{{ item.text_attributes }}>{{ item.text }}</span>
+        {%- else -%}
+          {{ item.text }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif %}
+
+  </article>
+</div>
+
+{# Third Comment (Indented) #}
+<div class="indented">
+  <article{{ attributes.addClass('js-comment') }}>
+ 
+  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
+
+  <footer class="footer byline comment__byline">
+    {{ user_picture }}
+    <p>Alban Bailey August 17, 2016 3:11pm</p>
+
+    {% if parent %}
+      <p class="visually-hidden">{{ parent }}</p>
+    {% endif %}
+
+    {{ permalink }}
+  </footer>
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+  {# Reply Link #}
+  {% if links -%}
+  {%- if heading -%}
+    {%- if heading.level -%}
+      <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
+    {%- else -%}
+      <h2{{ heading.attributes }}>{{ heading.text }}</h2>
+    {%- endif -%}
+  {%- endif -%}
+  <ul{{ attributes }}>
+    {%- for key, item in links -%}
+      <li{{ item.attributes.addClass(key|clean_class) }}>
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- elseif item.text_attributes -%}
+          <span{{ item.text_attributes }}>{{ item.text }}</span>
+        {%- else -%}
+          {{ item.text }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif %}
+
+  </article>
+</div>
+
+{# Fourth Comment #}
+<article{{ attributes.addClass('js-comment') }}>
+
+  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
+
+  <footer class="footer byline comment__byline">
+    {{ user_picture }}
+    <p>James Cole August 17, 2016 3:43pm</p>
+    {% if parent %}
+      <p class="visually-hidden">{{ parent }}</p>
+    {% endif %}
+
+    {{ permalink }}
+  </footer>
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+  {# Reply Link #}
+  {% if links -%}
+  {%- if heading -%}
+    {%- if heading.level -%}
+      <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
+    {%- else -%}
+      <h2{{ heading.attributes }}>{{ heading.text }}</h2>
+    {%- endif -%}
+  {%- endif -%}
+  <ul{{ attributes }}>
+    {%- for key, item in links -%}
+      <li{{ item.attributes.addClass(key|clean_class) }}>
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- elseif item.text_attributes -%}
+          <span{{ item.text_attributes }}>{{ item.text }}</span>
+        {%- else -%}
+          {{ item.text }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif %}
+</article>
+
+{# Fifth Comment #}
+<article{{ attributes.addClass('js-comment') }}>
+
+  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
+
+  <footer class="footer byline comment__byline">
+    {{ user_picture }}
+    <p>Jody Hamilton August 17, 2016 4:19pm</p>
+    {% if parent %}
+      <p class="visually-hidden">{{ parent }}</p>
+    {% endif %}
+
+    {{ permalink }}
+  </footer>
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+  {# Reply Link #}
+  {% if links -%}
+  {%- if heading -%}
+    {%- if heading.level -%}
+      <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
+    {%- else -%}
+      <h2{{ heading.attributes }}>{{ heading.text }}</h2>
+    {%- endif -%}
+  {%- endif -%}
+  <ul{{ attributes }}>
+    {%- for key, item in links -%}
+      <li{{ item.attributes.addClass(key|clean_class) }}>
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- elseif item.text_attributes -%}
+          <span{{ item.text_attributes }}>{{ item.text }}</span>
+        {%- else -%}
+          {{ item.text }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif %}
+</article>
+
+{# Sixth Comment (Indented) #}
+<div class="indented">
+  <article{{ attributes.addClass('js-comment') }}>
+ 
+  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
+
+  <footer class="footer byline comment__byline">
+    {{ user_picture }}
+    <p>Steve Heise August 17, 2016 2:56pm</p>
+
+    {% if parent %}
+      <p class="visually-hidden">{{ parent }}</p>
+    {% endif %}
+
+    {{ permalink }}
+  </footer>
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+  {# Reply Link #}
+  {% if links -%}
+  {%- if heading -%}
+    {%- if heading.level -%}
+      <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
+    {%- else -%}
+      <h2{{ heading.attributes }}>{{ heading.text }}</h2>
+    {%- endif -%}
+  {%- endif -%}
+  <ul{{ attributes }}>
+    {%- for key, item in links -%}
+      <li{{ item.attributes.addClass(key|clean_class) }}>
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- elseif item.text_attributes -%}
+          <span{{ item.text_attributes }}>{{ item.text }}</span>
+        {%- else -%}
+          {{ item.text }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif %}
+
+  </article>
+</div>

@@ -1,5 +1,7 @@
 node_modules
-backstop_data
-.sass-cache
-.idea
+export
 .DS_Store
+; pattern-lab
+gulpfile.yml
+components/vendor/bower/raw
+.idea

@@ -1,0 +1,89 @@
+//
+// BASE COLORS
+//
+$black:              hsla(0, 0%, 0%, 1);
+$zeus:               hsla(18, 21%, 12%, 1);
+$emperor:            hsla(0, 0%, 33%, 1);
+$grey:               hsla(0, 0%, 53%, 1);
+$gallery:            hsla(0, 0%, 92%, 1);
+$wild-sand:          hsla(0, 0%, 96%, 1);
+$white:              hsla(0, 100%, 100%, 1);
+$bermuda-grey:       hsla(212, 26%, 56%, 1);
+$dark-bermuda-grey:  darken($bermuda-grey, 20%);
+$light-bermuda-grey: lighten($bermuda-grey, 20%);
+$emerald:            hsla(147, 52%, 51%, 1);
+$saffron:            hsla(40, 94%, 59%, 1);
+$tangerine:          hsla(40, 100%, 44%, 1);
+$outrageous-orange:  hsla(13, 100%, 63%, 1);
+$persian-red:        hsla(0, 64%, 51%, 1);
+
+$default-body: $zeus;
+$link: $bermuda-grey;
+$link-hover: $dark-bermuda-grey;
+
+
+//
+// UI COLORS
+//
+
+$ui-button-padding: .5rem 1rem;
+$ui-border-radius: 5px;
+
+$ui-black: #222;
+
+// grey color scheme
+$ui-lightest-grey: #F5F5F5;
+$ui-light-grey: #DCDCDC;
+$ui-grey: #808080;
+$ui-dark-grey: #3F3F3F;
+
+// blue color scheme
+$ui-light-blue: #EAF5FF;
+$ui-blue: #548BC3;
+$ui-dark-blue: #004987;
+$ui-blue-button-gradient-top: #427AB3;
+$ui-blue-button-gradient-bottom: #2E6296;
+$ui-blue-button-hover-gradient-top: #225E9A;
+$ui-blue-button-hover-gradient-bottom: #1E4976;
+
+// green color scheme
+$ui-yellow: #E6AB0F;
+$ui-green: #078A80;
+$ui-dark-green: #00635D;
+$ui-green-button-gradient-top: #02978E;
+$ui-green-button-gradient-bottom: #0A8277;
+$ui-green-button-hover-gradient-top: #016F68;
+$ui-green-button-hover-gradient-bottom: #00534C;
+
+
+//
+// LAYOUT
+//
+$site-min-width: 25em;
+$site-max-width: 1200px / 16px * 1em;
+
+//
+// TYPOGRAPHY
+//
+$serif: 'Noto Serif';
+$sans: 'Montserrat';
+// other typography settings see ../vendor/scss/gutenberg/_gutenberg-typography.scss
+
+//
+// LAYOUT
+//
+
+// Configure max-width in sass/vendor/scss/gutemberg/_gutenberg-config.scss
+
+//
+// BREAKPOINTS
+//
+
+@import '../../vendor/scss/gutenberg/gutenberg-config';
+
+$bp-540:    min-width 540 / $base * 1em !default;
+$bp-768:    min-width 768 / $base * 1em !default;
+$bp-1024:   min-width 1024 / $base * 1em !default;
+$bp-1200:   min-width 1200 / $base * 1em !default;
+$bp-1500:   min-width 1500 / $base * 1em !default;
+$bp-1800:   min-width 1800 / $base * 1em !default;

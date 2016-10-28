@@ -1,0 +1,24 @@
+{{pl_open_wrapper_header}}
+{{pl_open_wrapper_header_inner}}
+{{pl_open_region_header}}
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="branding__site-logo">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" class="branding__site-logo-image"/>
+    </a>
+  {% endif %}
+  <div class="branding__flex-container">
+  {% if site_name %}
+    <h2 class="branding__site-name">
+      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+    </h2>
+  {% endif %}
+
+  {% if site_slogan %}
+    <h6 class="branding__site-slogan">{{ site_slogan }}</h6>
+  {% endif %}
+  </div>
+{% endblock %}
+{{pl_close_wrapper_header}}
+{{pl_close_wrapper_header_inner}}
+{{pl_close_region_header}}

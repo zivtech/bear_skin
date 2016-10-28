@@ -1,0 +1,26 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": ["comment"]
+    }
+  },
+    
+  "title": "Comment Title",
+  "content_attributes": {
+    "Attribute()": {
+      "class": ["comment__content"]
+    }
+  },
+  
+  "content": "<p>Comment body field. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+  "links": {
+    "comment-reply": {
+      "link": "<a href=\"\">Reply</a>",
+      "attributes": {
+        "Attribute()": {
+          "class": ["links", "inline"]
+        }
+      }
+    }
+  }
+}

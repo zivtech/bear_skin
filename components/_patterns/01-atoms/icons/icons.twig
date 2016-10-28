@@ -1,0 +1,6 @@
+{% for item in selection %}
+  <div class="icon-wrapper">
+    <i class="icon icon-{{ item.name }}" style="font-size:{{item.prevSize}}px;"></i>
+    <label class="icon-label">icon-{{ item.name }}</label>
+  </div>
+{% endfor %}

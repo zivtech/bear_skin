@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bearskin8pl_retina_default_image
+label: 'Bearskin8pl - Retina Default Image (1600)'
+effects:
+  8d4f85cc-9a2d-4a30-af15-21b0833dc06j:
+    uuid: 8d4f85cc-9a2d-4a30-af15-21b0833dc06j
+    id: image_scale
+    weight: 11
+    data:
+      width: 1600
+third_party_settings: {  }

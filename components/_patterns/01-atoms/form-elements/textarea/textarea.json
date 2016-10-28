@@ -1,0 +1,12 @@
+{
+  "pl_open_form_item": "<div class='js-form-item form-item js-form-type-textarea form-item-textarea js-form-item-textarea'>",
+  "pl_close_form_item": "</div>",
+  "value": "This is a textarea.",
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "form-textarea"
+      ]
+    }
+  }
+}

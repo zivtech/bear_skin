@@ -1,0 +1,11 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "messages",
+        "messages--status"
+      ]
+    }
+  },
+  "messages": ["This is a status message."]
+}

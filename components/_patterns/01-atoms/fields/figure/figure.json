@@ -1,0 +1,18 @@
+{
+  "media": "<img src='http://placekitten.com/400/300'>",
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "figure-class"
+      ]
+    }
+  },
+  "caption": "Here is a caption.",
+  "caption_attributes": {
+    "Attribute()": {
+      "class": [
+        "figure-class"
+      ]
+    }
+  }
+}

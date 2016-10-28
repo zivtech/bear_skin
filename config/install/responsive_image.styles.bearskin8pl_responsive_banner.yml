@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.bearskin8pl_banner_large
+    - image.style.bearskin8pl_banner_medium
+    - image.style.bearskin8pl_banner_small
+    - image.style.bearskin8pl_banner_mobile
+    - image.style.bearskin8pl_banner_retina_large
+    - image.style.bearskin8pl_banner_retina_medium
+    - image.style.bearskin8pl_banner_retina_small
+    - image.style.bearskin8pl_banner_retina_mobile
+  theme:
+    - bearskin8pl
+id: bearskin8pl_responsive_banner
+label: 'Bearskin8pl - Responsive Banner'
+image_style_mappings:
+  -
+    breakpoint_id: bearskin8pl.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_banner_large
+  -
+    breakpoint_id: bearskin8pl.large
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_banner_retina_large
+  -
+    breakpoint_id: bearskin8pl.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_banner_medium
+  -
+    breakpoint_id: bearskin8pl.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_banner_retina_medium
+  -
+    breakpoint_id: bearskin8pl.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_banner_small
+  -
+    breakpoint_id: bearskin8pl.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_banner_retina_small
+  -
+    breakpoint_id: bearskin8pl.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_banner_mobile
+  -
+    breakpoint_id: bearskin8pl.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_banner_retina_mobile
+breakpoint_group: bearskin8pl
+fallback_image_style: bearskin8pl_banner_mobile

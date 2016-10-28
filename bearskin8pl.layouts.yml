@@ -1,0 +1,74 @@
+one_column:
+  label: Main (one column) including top and bottom rows
+  category: Bear Skin layouts
+  template: templates/05-templates/one-column
+  icon: templates/05-templates/icons/one-column.png
+  regions:
+    top_row:
+      label: Top Row
+    main:
+      label: Main content
+    bottom_row:
+      label: Bottom Row
+
+left_sidebar:
+  label: Main with left sidebar including top and bottom rows
+  category: Bear Skin layouts
+  template: templates/05-templates/left-sidebar
+  icon: templates/05-templates/icons/left-sidebar.png
+  regions:
+    top_row:
+      label: Top Row
+    left:
+      label: Left Sidebar
+    main:
+      label: Main content
+    bottom_row:
+      label: Bottom Row
+
+right_sidebar:
+  label: Main with right sidebar including top and bottom rows
+  category: Bear Skin layouts
+  template: templates/05-templates/right-sidebar
+  icon: templates/05-templates/icons/right-sidebar.png
+  regions:
+    top_row:
+      label: Top Row
+    main:
+      label: Main content
+    right:
+      label: Right Sidebar
+    bottom_row:
+      label: Bottom Row
+
+two_sidebars:
+  label: Main with left and right sidebars including top and bottom rows
+  category: Bear Skin layouts
+  template: templates/05-templates/two-sidebars
+  icon: templates/05-templates/icons/two-sidebars.png
+  regions:
+    top_row:
+      label: Top Row
+    left:
+      label: Left Sidebar
+    main:
+      label: Main content
+    right:
+      label: Right Sidebar
+    bottom_row:
+      label: Bottom Row
+
+two_columns:
+  label: Two columns (equal width) including top and bottom rows
+  category: Bear Skin layouts
+  template: templates/05-templates/two-columns
+  icon: templates/05-templates/icons/two-columns.png
+  regions:
+    top_row:
+      label: Top Row
+    left:
+      label: Left
+    right:
+      label: Right
+    bottom_row:
+      label: Bottom Row

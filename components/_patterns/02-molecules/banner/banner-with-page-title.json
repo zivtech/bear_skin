@@ -1,0 +1,16 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "banner-image"
+      ]
+    }
+  },
+  "caption_attributes": {
+    "Attribute()": {
+      "class": [
+        "banner-image__text"
+      ]
+    }
+  }
+}

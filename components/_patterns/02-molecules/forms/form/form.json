@@ -1,0 +1,89 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "action": "/user/login",
+      "method": "post",
+      "id": "user-login-form",
+      "accept-charset": "UTF-8",
+      "class": "form"
+    }
+  },
+  "children": {
+    "join()": [
+      {
+          "include()": {
+            "pattern": "atoms-label",
+            "with": {
+              "title": "Username"
+            }
+          }
+      },
+      {
+          "include()": {
+            "pattern": "atoms-input",
+            "with": {
+             "attributes": {
+                "Attribute()": {
+                  "type": "text",
+                  "class": [
+                    "form-text"
+                  ],
+                  "value": "Swibros"
+                }
+              }
+            }
+          }
+      },
+      
+      "<div class='description'>Enter your username</div>",
+
+      {
+          "include()": {
+            "pattern": "atoms-label",
+            "with": {
+              "title": "Password"
+            }
+          }
+      },
+      {
+          "include()": {
+            "pattern": "atoms-input",
+            "with": {
+             "attributes": {
+                "Attribute()": {
+                  "type": "text",
+                  "class": [
+                    "form-text",
+                    "required"
+                  ],
+                  "required": "required",
+                  "value": "tesliwam"
+                }
+              }
+            }
+          }
+      },
+
+      "<div class='description'>Enter your password</div>",
+
+      {
+          "include()": {
+            "pattern": "atoms-input",
+            "with": {
+              "attributes": {
+                "Attribute()": {
+                  "type": ["submit"],
+                  "value": ["Login"],
+                  "class": [
+                    "button",
+                    "js-form-submit",
+                    "form-submit"
+                    ]
+                }
+              }
+            }
+          }
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+//*********
+// Wrappers
+//*********
+
+.wrapper--inner {
+  @include padding(0, 1);
+  margin: 0 auto;
+  max-width: $site-max-width;
+  width: 100%;
+}
+
+//*************
+// Left Sidebar
+//*************
+
+.layout-sidebar-first {
+
+  .wrapper-main__inner {
+    @include breakpoint($bp-768) {
+      display: flex;
+    }
+  }
+
+  .column.main {
+    @include breakpoint($bp-768) {
+      @include padding(0, 0, 0, 2);
+
+      flex-basis: 75%;
+      order: 2;
+    }
+  }
+
+  .column.sidebar {
+    @include breakpoint($bp-768) {
+      flex-basis: 25%;
+      order: 1;
+    }
+  }
+}
+
+//**************
+// Right Sidebar
+//**************
+
+.layout-sidebar-second {
+  @extend .layout-sidebar-first;
+
+  .column.main {
+    @include breakpoint($bp-768) {
+      @include padding(0, 2, 0, 0);
+
+      order: 1;
+    }
+  }
+
+  .column.sidebar {
+    @include breakpoint($bp-768) {
+      order: 2;
+    }
+  }
+}
+
+//**************
+// Two Sidebars
+//**************
+
+.layout-two-sidebars {
+  .wrapper-main__inner {
+    @include breakpoint($bp-768) {
+      display: flex;
+    }
+  }
+
+  .column.main {
+    @include breakpoint($bp-768) {
+      @include padding(0, 1);
+
+      flex-basis: 75%;
+      order: 2;
+    }
+  }
+
+  .column.sidebar {
+    @include breakpoint($bp-768) {
+      flex-basis: 25%;
+
+      &.sidebar--first {
+        order: 1;
+      }
+
+      &.sidebar--second {
+        order: 3;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "role": "navigation",
+      "aria-labelledby": "heading_id",
+      "class": [
+        "menu",
+        "contextual-region",
+        "nav",
+        "nav--main",
+        "menu--main"
+      ]
+    }
+  },
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "molecules-menu"
+        }
+      }
+    ]
+  },
+  "configuration": {
+    "label": "Menu"
+  },
+  "title_attributes": {
+    "Attribute()": {
+      "class": "visually-hidden"
+    }
+  }
+}

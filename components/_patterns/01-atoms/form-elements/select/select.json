@@ -1,0 +1,43 @@
+{
+  "options": {
+    "option-one": {
+      "type": "optgroup",
+      "value": "option-1",
+      "label": "Option group",
+      "options": {
+        "option-one": {
+          "type": "option",
+          "value": "option-1",
+          "label": "I'm the first sub-option."
+        },
+        "option-two": {
+          "type": "option",
+          "value": "option-2",
+          "label": "I'm the second sub-option."
+        },
+        "option-three": {
+          "type": "option",
+          "value": "option-3",
+          "label": "I'm the third sub-option."
+        }
+      }
+    },
+    "option-two": {
+      "type": "option",
+      "value": "option-2",
+      "label": "I'm the second option."
+    },
+    "option-three": {
+      "type": "option",
+      "value": "option-3",
+      "label": "I'm the third option."
+    }
+  },
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "form-select select-wrapper__select"
+      ]
+    }
+  }
+}

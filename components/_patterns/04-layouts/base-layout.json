@@ -1,0 +1,10 @@
+{
+  "content": {
+    "top_row": "<div class='inner'>Top Row</div>",
+    "left": "<div class='inner'>Left Sidebar</div>",
+    "main": "<div class='inner'>Main Content</div>",
+    "right": "<div class='inner'>Right Sidebar</div>",
+    "bottom_row": "<div class='inner'>Bottom Row</div>"
+  },
+  "plClass": "pl-col"
+}

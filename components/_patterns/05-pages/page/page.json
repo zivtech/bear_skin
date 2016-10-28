@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "page"
+      ]
+    }
+  },
+  "region_header": {
+    "include()": {
+      "pattern": "organisms-header"
+    }
+  },
+  "region_navigation": "Navigation Region",
+  "content": "Page content will live here",
+  "region_breadcrumb": "Breadcrumb Region",
+  "region_footer": "Footer Region"
+}

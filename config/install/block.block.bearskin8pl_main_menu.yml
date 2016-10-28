@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bearskin8pl
+id: bearskin8pl_main_menu
+theme: bearskin8pl
+region: navigation
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: null
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

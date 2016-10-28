@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bearskin8pl_banner_retina_small
+label: 'Bearskin8pl - Banner Retina Small (1990 x 700)'
+effects:
+  8d4f85cc-9a2d-4a30-af15-21b0833dc06w:
+    uuid: 8d4f85cc-9a2d-4a30-af15-21b0833dc06w
+    id: image_scale
+    weight: 7
+    data:
+      width: 1990
+      height: 700
+      anchor: center-center
+third_party_settings: {  }

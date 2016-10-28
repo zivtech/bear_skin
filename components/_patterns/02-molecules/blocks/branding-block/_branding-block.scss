@@ -1,0 +1,44 @@
+.branding {
+
+  &__site-logo {
+    max-width: 50px;
+
+    @include breakpoint($bp-768) {
+      max-width: 100px;
+    }
+  }
+
+  &__flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__site-name {
+    @include element-invisible;
+
+    @include font-size(1);
+    @include margin(0, .5, 0, .5);
+
+    text-transform: uppercase;
+
+    @include breakpoint($bp-768) {
+      @include element-invisible-off;
+    }
+
+    @include breakpoint($bp-768) {
+      @include font-size(1.2);
+      @include margin(0, 1, 0, 1);
+    }
+  }
+
+  &__site-slogan {
+    @include font-size(.7);
+    @include margin(0, .5, 0, .5);
+
+    @include breakpoint($bp-768) {
+      @include font-size(.75);
+      @include margin(0, 1, 0, 1);
+    }
+  }
+}

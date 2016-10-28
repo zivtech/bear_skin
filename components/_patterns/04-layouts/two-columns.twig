@@ -1,0 +1,17 @@
+{% extends '@layouts/base-layout.twig' %}
+
+{% block content %}
+
+  {% block main_content %}
+    <main class="sidebar sidebar--left col-xs-12 col-md-6 {{plClass}}">
+      {{ content.left }}
+    </main>
+  {% endblock %}
+
+  {% block left_sidebar %}
+    <aside class="sidebar sidebar--right col-xs-12 col-md-6 {{plClass}}">
+      {{ content.right }}
+    </aside>
+  {% endblock %}
+
+{% endblock %}

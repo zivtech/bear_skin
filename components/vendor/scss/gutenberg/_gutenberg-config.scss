@@ -1,0 +1,81 @@
+//
+// Configuration
+//
+
+// Base sizes
+$base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
+$base-font-size-desktop: 110 !default; // In %. Used to calculate the desktop font size. Number only, no units.
+
+$line-height: 1.625;
+$line-height-desktop: 1.7;
+
+// DO NOT CHANGE unless values are also changed in our breakpoin variables!!
+$max-width: 43; // Number only, no units. Gets converted to REMs and pixels.
+
+// Mobile base & leading
+$base: 16 * ($base-font-size / 100);
+$leading: round($base * $line-height);
+$leading-rem: $leading / $base;
+
+// Desktop base & leading
+$base-desktop: 16 * ($base-font-size-desktop / 100);
+$leading-desktop: round($base-desktop * $line-height-desktop);
+$leading-rem-desktop: $leading-desktop / $base-desktop;
+
+$edit-mode: false; // [ true / false ] - Enables/disables the grid toggle button.
+
+// Theme / Fonts
+$theme: custom; // [ Merriweather / OpenSans / custom ]
+$custom-font-body: null !default; // [ "Libre Baskerville", Georgia, serif ]
+$custom-font-headings: null !default;
+
+// Paragraph indenting
+$paragraph-indent: false; // [ true / false ]
+
+
+
+// Modular Scale
+$modular-scale: (
+  xxxl: 4.3,
+  xxl: 3.5,
+  xl: 3,
+  l: 2.5,
+  m: 2,
+  s: 1.6875,
+  xs: 1.4375,
+  xxs: 1.2,
+  xxxs: 1,
+  xxxxs: .8125
+) !default;
+
+// Headings Options
+// [ h1: size (in rem), line height (* leading), margin top (* leading), margin bottom (* leading) ]
+$headings: (
+  h1: (2.5, 1, 1, 1),
+  h2: (2, 1, 1.25, .5),
+  h3: (1.25, 1, 1, .5),
+  h4: (1.1, 1, 1, .5),
+  h5: (.815, 1, 1.25, .5),
+  h6: (.75, 1, 1.25, .5)
+) !default;
+
+// Colors
+$color-font-body: $default-body !default;
+$color-font-headings: $default-body !default;
+$color-font-light: $grey;
+$color-font-figcaption: $color-font-body;
+
+$color-link-normal: $link !default;
+$color-link-hover: $link-hover !default;
+$color-link-active: $link-hover !default;
+$color-link-visited: $link !default;
+
+// Horizontal rule
+$hr-style: line; // [ line / type ]
+$hr-type-content: '***'; // [ '***' ]
+$hr-type-char-spacing: .2em; // [ .2em ]
+$hr-margin: 2;
+$hr-margin-desktop: $hr-margin;
+$hr-color: $gallery;
+$hr-width: 200; // [ 100 ] — In pixels, only for line style
+$hr-height: 4; // [ 2 ] — In pixels, only for line style

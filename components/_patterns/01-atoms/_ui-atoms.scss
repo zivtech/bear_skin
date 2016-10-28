@@ -1,0 +1,261 @@
+@mixin ui-atoms($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+
+
+body {
+  color: $zeus;
+  font-family: $serif;
+}
+
+h1,
+h4 {
+  font-family: $sans;
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-family: $sans;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+label {
+  @include font-size(.9);
+
+  display: block;
+  font-family: $sans;
+}
+
+.button {
+  @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+
+  &.link {
+    margin-left: 5px;
+    border: 1px solid $ui-light-grey;
+    font-family: $sans;
+    background: $ui-lightest-grey;
+  }
+}
+
+.form-text,
+.form-email,
+.form-textarea,
+.form-date {
+
+  @include font-size(1);
+
+  font-family: $sans;
+
+  width: 100%;
+  max-width: 30em;
+
+  border: 1px solid $ui-light-grey;
+  transition: border .2s ease-in-out;
+
+  &:focus {
+    outline: 0;
+    border-color: $normal;
+  }
+}
+
+.form-submit {
+  @extend .button;
+}
+
+input[type="search"] {
+  @extend .form-text;
+
+  appearance: initial;
+}
+
+.filter-wrapper {
+  border: 1px solid $ui-light-grey;
+}
+
+.description {
+  @include font-size(.7);
+
+  color: $ui-grey;
+}
+
+.field-suffix {
+  display: block;
+}
+
+.dropbutton-widget {
+  @extend .button;
+
+  .form-submit {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+
+  .secondary-action {
+    margin-top: 5px
+  }
+
+  .dropbutton-toggle {
+    button,
+    a {
+
+    color: $white;
+    }
+  }
+}
+
+.ajax-progress-throbber {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .throbber {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: .3rem solid $normal;
+    border-top-color: $gallery;
+    animation: spin 1s infinite linear;
+  }
+}
+
+div[id^="ajax-wrapper"] {
+  position: relative;
+}
+
+fieldset {
+  border: 1px solid $ui-light-grey;
+}
+
+.checkbox-wrapper {
+  top: 2px;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 2px solid $ui-light-grey;
+  border-radius: $ui-border-radius;
+  z-index: 1;
+  background: $ui-lightest-grey;
+
+  i {
+    color: $normal;
+    font-size: 22px;
+    position: absolute;
+    top: -6px;
+    left: -2px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-checkbox {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
+  }
+}
+
+.form-checkboxes {
+
+  label {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding-left: 25px;
+    margin-left: -20px;
+    cursor: pointer;
+  }
+
+  input {
+    margin: 0 5px 0 0;
+  }
+}
+
+.radio-wrapper {
+  top: 3px;
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $ui-light-grey;
+  border-radius: 50%;
+  z-index: 1;
+  background: $ui-lightest-grey;
+
+  i {
+    color: $normal;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 1.5px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-radio {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
+  }
+}
+
+.select-wrapper {
+  border: 1px solid $gallery;
+  position: relative;
+  max-width: 500px;
+
+  border-radius: $ui-border-radius;
+  background: $ui-lightest-grey;
+
+  &::after {
+    @include font-size(.7);
+
+    position: absolute;
+    content: '\25bc';
+    display: inline-block;
+    pointer-events: none;
+    font-size: 9px;
+    padding: 11px 12px 10px 12px;
+    background: $ui-grey;
+    color: $white;
+    right: 0;
+    top: -1px;
+    border-radius: 0 $ui-border-radius $ui-border-radius 0;
+    max-height: 34px;
+  }
+
+  &__select {
+    font-family: inherit;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    z-index: 2;
+    font-size: 1em;
+    height: 34px;
+    padding: 0 45px 0 10px;
+    min-width: 30px;
+  }
+}
+
+
+} // closing the mixin

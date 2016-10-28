@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bearskin8pl_banner_retina_medium
+label: 'Bearskin8pl - Banner Retina Medium (2250 x 800)'
+effects:
+  8d4f85cc-9a2d-4a30-af15-21b0833dc06v:
+    uuid: 8d4f85cc-9a2d-4a30-af15-21b0833dc06v
+    id: image_scale
+    weight: 6
+    data:
+      width: 2250
+      height: 800
+      anchor: center-center
+third_party_settings: {  }

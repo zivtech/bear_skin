@@ -1,0 +1,52 @@
+.tabs {
+  @include margin(.5, 0);
+
+  @include breakpoint($bp-540) {
+    display: inline-block;
+  }
+
+  &__tab {
+    width: 100%;
+
+    @include breakpoint($bp-540) {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  &__tab-link {
+    @include padding(.3, .5);
+
+    display: inline-block;
+    width: 100%;
+  }
+
+  &--secondary {
+    width: 100%;
+
+    .tabs__tab {
+      @include margin(.5, .5, .5, 0);
+    }
+
+    .tabs__tab-link {
+      padding: 0;
+    }
+  }
+}
+
+
+.js-form-type-vertical-tabs {
+  display: inline-block;
+  width: 100%;
+}
+
+.vertical-tabs {
+
+  &__pane {
+    clear: none;
+  }
+
+  &__menu-item-summary {
+    padding-left: 5px;
+  }
+}

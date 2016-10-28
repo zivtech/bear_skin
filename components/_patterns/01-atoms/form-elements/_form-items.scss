@@ -1,0 +1,50 @@
+::-webkit-input-placeholder {
+   @include placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   @include placeholder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   @include placeholder;
+}
+
+:-ms-input-placeholder {
+   @include placeholder;
+}
+
+form {
+  @include margin(1, 0);
+}
+
+.form-item {
+  @include margin-bottom(.5);
+}
+
+label {
+  @include margin-bottom(.1);
+}
+
+.form-submit {
+  @include margin-bottom(.5);
+}
+
+.description {
+  @include margin-top(.2);
+}
+
+.form-text,
+.form-email,
+.form-textarea,
+.form-date {
+  @include padding(.2, .2);
+}
+
+.field-suffix {
+  @extend .description;
+}
+
+.dropbutton-multiple {
+  margin-right: 5px;
+}

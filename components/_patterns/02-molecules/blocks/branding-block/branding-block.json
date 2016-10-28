@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "branding"
+      ]
+    }
+  },
+  "site_logo": "../../../../logo.svg",
+  "site_name": "Website Title",
+  "site_slogan": "The website slogan",
+  "pl_open_wrapper_header": "<header class='wrapper-header'>",
+  "pl_open_wrapper_header_inner": "<div class='wrapper--inner wrapper-header__inner'>",
+  "pl_open_region_header": "<section class='region region--header'>",
+  "pl_close_wrapper_header": "</section>",
+  "pl_close_wrapper_header_inner": "</div>",
+  "pl_close_region_header": "</header>"
+}

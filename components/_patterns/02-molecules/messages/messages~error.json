@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "messages",
+        "messages--error"
+      ]
+    }
+  },
+  "type": "error",
+  "messages": ["This is an error message."]
+}

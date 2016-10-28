@@ -1,0 +1,9 @@
+@mixin ui-organisms($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+
+
+.wrapper-footer {
+  background: $ui-lightest-grey;
+}
+
+
+} // closing the mixin

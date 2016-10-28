@@ -1,0 +1,4 @@
+.visually-hidden,
+.element-invisible {
+  @include element-invisible;
+}

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bearskin8pl_mobile_image
+label: 'Bearskin8pl - Mobile Image (500)'
+effects:
+  8d4f85cc-9a2d-4a30-af15-21b0833dc06i:
+    uuid: 8d4f85cc-9a2d-4a30-af15-21b0833dc06i
+    id: image_scale
+    weight: 10
+    data:
+      width: 500
+third_party_settings: {  }

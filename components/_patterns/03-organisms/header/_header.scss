@@ -1,0 +1,11 @@
+.wrapper-header {
+
+  &__inner {
+    @include margin-top(1);
+    @include margin-bottom(1);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

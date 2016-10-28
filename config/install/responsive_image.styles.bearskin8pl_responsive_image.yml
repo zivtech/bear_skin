@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.bearskin8pl_default_image
+    - image.style.bearskin8pl_mobile_image
+  theme:
+    - bearskin8pl
+id: bearskin8pl_responsive_image
+label: 'Bearskin8pl - Responsive Image'
+image_style_mappings:
+  -
+    breakpoint_id: bearskin8pl.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_default_image
+  -
+    breakpoint_id: bearskin8pl.large
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_retina_default_image
+  -
+    breakpoint_id: bearskin8pl.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_default_image
+  -
+    breakpoint_id: bearskin8pl.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_retina_default_image
+  -
+    breakpoint_id: bearskin8pl.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_mobile_image
+  -
+    breakpoint_id: bearskin8pl.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_retina_mobile_image
+  -
+    breakpoint_id: bearskin8pl.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_mobile_image
+  -
+    breakpoint_id: bearskin8pl.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bearskin8pl_retina_mobile_image
+breakpoint_group: bearskin8pl
+fallback_image_style: bearskin8pl_mobile_image

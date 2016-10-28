@@ -1,0 +1,16 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": "region region--search"
+    }
+  },
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "molecules-search-block"
+        }
+      }
+    ]
+  }
+}

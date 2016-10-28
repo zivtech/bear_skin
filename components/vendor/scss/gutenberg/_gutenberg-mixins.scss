@@ -1,0 +1,113 @@
+//
+// Mixins
+//
+
+// Font-size
+@mixin font-size($number) {
+  //font-size: #{ $number * $base + 'px'};
+  font-size: #{ $number + 'rem'};
+}
+
+// Margin-top
+@mixin margin-top($number) {
+  @if $number == 0 {
+    margin-top: 0;
+  } @else {
+    //margin-top: #{ $number * $leading + 'px'};
+    margin-top: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
+// Margin-bottom
+@mixin margin-bottom($number) {
+  @if $number == 0 {
+    margin-bottom: 0;
+  } @else {
+    //margin-bottom: #{ $number * $leading + 'px'};
+    margin-bottom: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
+// Margin
+@mixin margin($top, $right: null, $bottom: null, $left: null) {
+  @include padding-or-margin('margin', $top, $right, $bottom, $left);
+}
+
+// Padding
+@mixin padding($top, $right: null, $bottom: null, $left: null) {
+  @include padding-or-margin('padding', $top, $right, $bottom, $left);
+}
+
+@mixin padding-or-margin($type: 'margin', $top: null, $right: null, $bottom: null, $left: null) {
+  @if $top == null and $right == null and $bottom == null and $left == null {
+    @error '@mixin padding-or-margin: You must specify at least specify a $top value for #{$type}.'
+  } @else if $left == null and $bottom == null {
+    @if $top == 0 and $right != 0 {
+      //#{$type}: 0 #{ $right * $leading + 'px'};
+      #{$type}: 0 #{ $right * $leading-rem + 'rem'};
+    } @else if $top != 0 and $right == 0 {
+      //#{$type}: #{ $top * $leading + 'px'} 0;
+      #{$type}: #{ $top * $leading-rem + 'rem'} 0;
+    } @else {
+      //#{$type}: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'};
+      #{$type}: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'};
+    }
+  } @else if $left == null or $left == $right {
+    @if $top == 0 and $right != 0 and $bottom != 0 {
+      //#{$type}: 0 #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'};
+      #{$type}: 0 #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'};
+    } @else if $top != 0 and $right == 0 and $bottom != 0 {
+      //#{$type}: #{ $top * $leading + 'px'} 0 #{ $bottom * $leading + 'px'};
+      #{$type}: #{ $top * $leading-rem + 'rem'} 0 #{ $bottom * $leading-rem + 'rem'};
+    } @else if $top != 0 and $right != 0 and $bottom == 0 {
+      //#{$type}: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} 0;
+      #{$type}: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} 0;
+    } @else {
+      //#{$type}: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'};
+      #{$type}: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'};
+    }
+  } @else {
+    @if $top == 0 and $right != 0 and $bottom != 0 and $left != 0 {
+      //#{$type}: 0 #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'} #{ $left * $leading + 'px'};
+      #{$type}: 0 #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'} #{ $left * $leading-rem + 'rem'};
+    } @else if $top != 0 and $right == 0 and $bottom != 0  and $left != 0 {
+      //#{$type}: #{ $top * $leading + 'px'} 0 #{ $bottom * $leading + 'px'} #{ $left * $leading + 'px'};
+      #{$type}: #{ $top * $leading-rem + 'rem'} 0 #{ $bottom * $leading-rem + 'rem'} #{ $left * $leading-rem + 'rem'};
+    } @else if $top != 0 and $right != 0 and $bottom == 0 and $left != 0 {
+      //#{$type}: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} 0 #{ $left * $leading + 'px'};
+      #{$type}: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} 0 #{ $left * $leading-rem + 'rem'};
+    } @else if $top != 0 and $right != 0 and $bottom != 0 and $left == 0 {
+      //#{$type}: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'} 0;
+      #{$type}: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'} 0;
+    } @else {
+      //#{$type}: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'} #{ $left * $leading + 'px'};
+      #{$type}: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'} #{ $left * $leading-rem + 'rem'};
+    }
+  }
+}
+
+@mixin padding-equal($number) {
+  @if $number == 0 {
+    padding: 0;
+  } @else {
+    //padding: #{ $number * $leading + 'px'};
+    padding: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
+// Line-height
+@mixin line-height($number) {
+  @if $number == 0 or $number < 0 {
+    @error '@mixin line-height: Line height cannot be 0 or less than 0.'
+  } @else {
+    line-height: #{ $number * $leading-rem};
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

@@ -1,9 +1,0 @@
-.description {
-  @include padding(0, 0.5, 0, 0.5);
-  @include margin(0.5, 0, 0.5, 0);
-
-  font-size: 80%;
-  color: $dark-gray;
-  font-style: italic;
-  border-left: dotted 1px #aaa;
-}

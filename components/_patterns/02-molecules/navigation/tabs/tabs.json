@@ -1,0 +1,30 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "menu",
+        "nav",
+        "tab"
+      ]
+    }
+  },
+  "tabs": [
+    {
+      "text": "Tab 1 (active)",
+      "url": "#",
+      "active": true
+    },
+    {
+      "text": "Tab 2",
+      "url": "#"
+    },
+    {
+      "text": "Tab 3",
+      "url": "#"
+    },
+    {
+      "text": "Tab 4",
+      "url": "#"
+    }
+  ]
+}

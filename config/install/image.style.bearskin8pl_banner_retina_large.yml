@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bearskin8pl_banner_retina_large
+label: 'Bearskin8pl - Banner Retina Large (3200 x 1000)'
+effects:
+  8d4f85cc-9a2d-4a30-af15-21b0833dc06u:
+    uuid: 8d4f85cc-9a2d-4a30-af15-21b0833dc06u
+    id: image_scale
+    weight: 5
+    data:
+      width: 3200
+      height: 1000
+      anchor: center-center
+third_party_settings: {  }

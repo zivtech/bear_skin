@@ -1,0 +1,39 @@
+@mixin ui-pages($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+
+.page-404 {
+  background: $ui-lightest-grey;
+
+  .wrapper--inner {
+    height: 100%;
+  }
+
+  h1 {
+    @include font-size(8);
+
+    line-height: 1;
+    color: #D1D2D4;
+    margin: 0;
+  }
+
+  h2 {
+    @include font-size(1.2);
+
+    margin: 0;
+  }
+
+  .button--404 {
+    @include margin-top(1);
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+  }
+}
+
+
+} // closing the mixin

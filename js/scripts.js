@@ -1,33 +1,53 @@
-/**
- * @file
- * A JavaScript file for the theme.
- *
- * In order for this JavaScript to be loaded on pages, see the instructions in
- * the README.txt next to this file.
- */
-
-(function ($, Drupal, window, document) {
+(function ($, Drupal) {
 
   'use strict';
 
-  Drupal.behaviors.bear_skin = {
+  Drupal.behaviors.bsMobileNavigation = {
     attach: function (context, settings) {
-      // adding a class to empty p to remove margin/padding
-      // removing extra space if empty as well
-      var $allP = $('#content p', context);
-      var $emptyP = $('#content p.emptyP', context);
 
-      $allP.filter(function () {
-        var html = $(this).html();
-        if (html === '' || html === '&nbsp;') {
-          return true;
-        }
-      }).addClass('emptyP');
+      // define the navigation to be turned into a mobile one
+      var $mainMenu = $('.menu--main', context);
 
-      $emptyP.html(function (i, h) {
-        return h.replace(/&nbsp;/g, '');
-      });
+      if ($mainMenu.length) {
+        $mainMenu.once('bsMobileNavigation').each(function (i) {
+
+          // elements that toggle mobile menu
+          var $nav = $('#mnav', context);
+
+          $nav.on('click', function () {
+            $(this).toggleClass('open');
+            $mainMenu.toggleClass('open');
+          });
+        });
+      }
     }
   };
 
-})(jQuery, Drupal, window, document);
+  Drupal.behaviors.bsSearchForm = {
+    attach: function (context, settings) {
+
+      // search toggle
+      var $searchToggle = $('#msearch', context);
+
+      // search content
+      var $mainSearch = $('#msearch-content', context);
+
+      if ($searchToggle.length && $mainSearch.length) {
+        $mainSearch.once('bsSearchForm').each(function (i) {
+
+          // search form closing toggle
+          var $closer = $('#msearch-close', context);
+
+          $searchToggle.on('click', function () {
+            $mainSearch.toggleClass('open');
+          });
+
+          $closer.on('click', function () {
+            $mainSearch.removeClass('open');
+          });
+        });
+      }
+    }
+  };
+
+})(jQuery, Drupal);

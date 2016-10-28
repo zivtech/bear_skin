@@ -1,0 +1,22 @@
+.wrapper-breadcrumb {
+  @include margin-top(2);
+}
+
+.breadcrumb {
+  @include padding(.5, 0);
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline;
+    margin-right: 5px;
+  }
+
+  &__link {
+    padding-right: 5px;
+  }
+}

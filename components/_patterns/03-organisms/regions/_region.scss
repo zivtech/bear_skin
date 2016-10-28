@@ -1,0 +1,14 @@
+.region {
+
+  &--header {
+    display: flex;
+  }
+
+  &--search {
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
+
+    margin-right: 1em;
+  }
+}

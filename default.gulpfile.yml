@@ -1,0 +1,81 @@
+#
+# Copy the default.gulpfile.yml, then change any
+# setting to match your system
+#
+
+themeName: "bearskin8pl"
+patternLab:
+  enabled: true
+  configFile: "pattern-lab/config/config.yml"
+  watchedExtensions:
+    - twig
+    - json
+    - yaml
+    - yml
+    - md
+    - jpg
+    - jpeg
+    - png
+  dir: "./pattern-lab"
+  patterns: "components/_patterns/**/*.{twig,json}"
+bower:
+  src: "components/vendor/bower/raw"
+  dest: "components/vendor/bower"
+css:
+  src: ["components/**/*.scss"]
+  dest: "css"
+  buildSourceMaps: false
+  lint:
+    enabled: true
+    failOnError: false
+  browsers: ["last 2 version", "> 5%", "IE 9"]
+js:
+  src: ["js/*.js"]
+  dest: "./js"
+  lint:
+    enabled: true
+    failOnError: false
+images:
+  src: ["images/**/*.{jpg,jpeg,gif,png}"]
+  dest: "./images"
+favicons:
+  src: "images/bearskin-logo.png"
+  dest: "./images/favicons"
+  bgColor: "#FFFFFF"
+templates:
+  src: ["templates/**/*.html.twig"]
+drush:
+  alias: "@bearskin8pl.local"
+browserSync:
+  site:
+    enabled: true
+    proxy: "bearskinner8.vm"
+    port: 3001
+    ui:
+      port: 3002
+    open: "local"
+    reloadDelay: 50
+    reloadDebounce: 750
+    injectChanges: true
+    ghostMode: true
+    injectChanges: true
+    notify: false
+    online: true
+    browser: ["google chrome"]
+  patterns:
+    enabled: true
+    port: 3003
+    ui:
+      port: 3004
+    server:
+      baseDir: "./"
+    startPath: "pattern-lab/public"
+    open: "local"
+    reloadDelay: 50
+    reloadDebounce: 750
+    injectChanges: true
+    ghostMode: true
+    injectChanges: true
+    notify: true
+    online: true
+    browser: ["google chrome"]

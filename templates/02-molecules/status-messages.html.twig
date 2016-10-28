@@ -1,0 +1,10 @@
+{% for type, messages in message_list %}
+  {%
+    include "@molecules/messages/messages.twig" with {
+      type: type,
+      messages: messages,
+      heading: status_headings[type],
+      modifier_class: attributes.addClass('messages--' ~ type).class|safe_join(' ')
+    }
+  %}
+{% endfor %}

@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "region"
+      ]
+    }
+  },
+  "content": "Region content will live here"
+}

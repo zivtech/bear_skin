@@ -1,0 +1,16 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": "region region--navigation"
+    }
+  },
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "molecules-menu-block"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "organisms-region-header"
+        }
+      },
+      {
+        "include()": {
+          "pattern": "organisms-region-search"
+        }
+      },
+      {
+        "include()": {
+          "pattern": "organisms-region-navigation"
+        }
+      }
+    ]
+  }
+}

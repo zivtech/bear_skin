@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "messages",
+        "messages--warning"
+      ]
+    }
+  },
+  "type": "warning",
+  "messages": ["This is a warning message."]
+}

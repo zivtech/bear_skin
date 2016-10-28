@@ -1,0 +1,440 @@
+@mixin ui-molecules($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+
+
+code {
+  border: 1px dotted $ui-light-grey;
+  background: $ui-lightest-grey;
+}
+
+.comment {
+
+  &__content {
+    font-family: $serif;
+  }
+
+  footer {
+    font-family: $sans;
+
+    p {
+      color: $emperor;
+      margin-top: 10px;
+      border-bottom: 1px solid $gallery;
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    a {
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+  }
+}
+
+details {
+
+  .summary {
+    background: $wild-sand;
+    cursor: pointer;
+
+    &__icon,
+    &__title {
+      display: inline-block;
+    }
+  }
+
+  &[open] {
+
+    .summary {
+      border-bottom: 0;
+    }
+
+    .details-wrapper {
+      border: 1px solid $ui-light-grey;
+      border-top: 0;
+      animation-name: fadeInDown;
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+.summary {
+  background: $ui-lightest-grey;
+  border: 1px solid $ui-light-grey;
+
+  outline: 0;
+}
+
+.accordion {
+  @extend details;
+}
+
+.wrapper-breadcrumb {
+  border-top: 1px solid $ui-lightest-grey;
+}
+
+.breadcrumb {
+  @include padding(.5, 0);
+
+  &__item {
+    @include font-size(.8);
+
+    font-family: $sans;
+    text-transform: uppercase;
+  }
+}
+
+.menu {
+  transition: background .2s ease-in-out;
+
+  &--main {
+    position: absolute;
+    top: -200px;
+
+    @include breakpoint($bp-1024) {
+      position: relative;
+      top: 0;
+    }
+
+    a {
+      @include link($ui-black, none, $ui-black, underline);
+    }
+
+    a.is-active,
+    // to show active class styling in PL
+    .menu-item--active-trail a {
+      @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
+      @include font-size(1);
+
+      color: $white;
+      font-family: $serif;
+    }
+
+    &.open {
+      @include font-size(1.4);
+
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: rgba(0, 0, 0, .85);
+
+      .menu {
+        width: 100%;
+
+        &__item {
+          display: block;
+          margin: 0;
+          text-align: center;
+          width: 100%;
+        }
+
+        &__link {
+          @include link($white, none, $white, none);
+
+          font-family: $sans;
+          text-transform: uppercase;
+          display: block;
+          padding: 10px;
+          width: 100%;
+          background: transparent;
+          border-radius: 0 !important;
+
+          &:hover,
+          &:focus,
+          &.is-active {
+            @include font-size(1.4);
+
+            background: $normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sub-menu {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+#mnav {
+  font-size: 26px;
+  position: relative;
+  z-index: 6;
+  color: $ui-black;
+
+  i {
+    transition: all .2s ease-in-out;
+  }
+
+  &.open {
+    color: $white;
+  }
+}
+
+.pager {
+
+  &__item {
+    @include font-size(1);
+
+    font-family: $sans;
+
+    &.is-active {
+      background: $gallery;
+      color: $grey;
+    }
+  }
+
+  &__link {
+    color: $grey;
+  }
+
+  i {
+    color: $white;
+
+    &::before {
+      background: $grey;
+      border-radius: 50%;
+      right: 0;
+      width: 12px;
+      height: 12px;
+      background: $normal;
+      transition: background 0.2s ease-in-out;
+    }
+
+    &:focus,
+    &:hover {
+
+      &:before {
+        background: $dark;
+      }
+    }
+  }
+}
+
+.tabs {
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+
+  &__tab {
+    @include font-size(1);
+
+    overflow: auto;
+    border-bottom: 1px solid $gallery;
+    border-right: 1px solid $gallery;
+    border-top: 1px solid $gallery;
+    border-radius: 5px 5px 0 0;
+
+    &.is-active {
+      border: 1px solid $gallery;
+      border-bottom: 1px solid transparent;
+      border-left: 0;
+    }
+
+    &:first-child {
+      border-left: 1px solid $gallery;
+    }
+  }
+
+  &__tab-link {
+    @include font-size(.8);
+
+    font-family: $sans;
+    text-transform: uppercase;
+    border-radius: $ui-border-radius;
+    color: $ui-grey;
+    background: $wild-sand;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $ui-black;
+      background: transparent;
+    }
+  }
+
+  &--secondary {
+
+    .tabs__tab {
+      border: 0;
+      border-radius: 0;
+    }
+
+    .tabs__tab-link {
+      background: transparent;
+
+      &.is-active {
+        border-bottom: 2px solid $emperor;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.vertical-tabs {
+
+  &__menu-item-title {
+    text-decoration: none !important;
+  }
+
+  .summary,
+  .details-wrapper {
+    border: none !important;
+  }
+}
+
+.progress {
+  @include margin(1, 0);
+
+  &__track {
+    border: 1px solid $ui-light-grey;
+    background: $ui-lightest-grey;
+    height: 25px;
+    border-radius: $ui-border-radius;
+  }
+
+  &__bar {
+    height: 100%;
+    background: $normal;
+    border-radius: $ui-border-radius;
+  }
+
+  &__percentage {
+    @include padding(.5, .5);
+
+    color: $normal;
+    font-family: $sans;
+    text-align: center;
+  }
+}
+
+table {
+  @include margin(1, 0);
+
+  width: 100%;
+  border: 1px solid $ui-light-grey;
+
+  .form-item {
+    margin: 0;
+  }
+
+  thead {
+    background: $ui-lightest-grey;
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: 1px solid $ui-light-grey;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+
+  td,
+  th {
+    @include padding(.3, .5);
+
+    text-align: left;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  .form-item {
+
+    label {
+      display: block;
+    }
+  }
+
+  .checkbox-wrapper {
+    display: block;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+
+    .form-checkbox {
+      display: block;
+    }
+
+    .icon-check {
+      display: none;
+    }
+  }
+}
+
+#msearch {
+  font-size: 22px;
+  color: $zeus;
+
+  transition: .2s color ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $normal;
+  }
+}
+
+#msearch-close {
+  display: flex;
+  align-items: center;
+
+  margin-left: 2em;
+  font-size: 26px;
+  color: $white;
+}
+
+#msearch-content {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -200px;
+  z-index: 15;
+
+  background: rgba(0, 0, 0, .85);
+  transition: all .2s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+
+  &.open {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#search-block-form {
+  display: flex;
+  align-items: center;
+
+  .form-item {
+    margin: 0;
+  }
+
+  .form-submit {
+    @include margin(0, 0, 0, .5);
+  }
+
+  &__site-slogan {
+    @include margin(0, 0, 0, 1);
+  }
+}
+
+
+} // closing the mixin

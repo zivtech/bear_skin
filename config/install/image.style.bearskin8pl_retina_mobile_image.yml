@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bearskin8pl_retina_mobile_image
+label: 'Bearskin8pl - Retina Mobile Image (1000)'
+effects:
+  8d4f85cc-9a2d-4a30-af15-21b0833dc06k:
+    uuid: 8d4f85cc-9a2d-4a30-af15-21b0833dc06k
+    id: image_scale
+    weight: 12
+    data:
+      width: 1000
+third_party_settings: {  }

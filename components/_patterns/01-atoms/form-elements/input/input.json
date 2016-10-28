@@ -1,0 +1,13 @@
+{
+  "pl_open_form_item": "<div class='js-form-item form-item'>",
+  "pl_close_form_item": "</div>",
+  "attributes": {
+    "Attribute()": {
+      "type": "text",
+      "class": [
+        "form-text"
+      ],
+      "value": "Swibros tesliwam oprupro gugofric"
+    }
+  }
+}

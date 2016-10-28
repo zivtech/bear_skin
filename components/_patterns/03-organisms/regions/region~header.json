@@ -1,0 +1,24 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": "region region--header"
+    }
+  },
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "molecules-branding-block",
+          "with": {
+            "pl_open_wrapper_header":  false,
+            "pl_open_wrapper_header_inner": false,
+            "pl_open_region_header": false,
+            "pl_close_wrapper_header":  false,
+            "pl_close_wrapper_header_inner": false,
+            "pl_close_region_header": false
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+.pager {
+
+  &__items {
+    @include padding(1, 0);
+
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &--ellipsis {
+      @include padding(0, .2);
+
+      &::after {
+        color: $grey;
+        content: '...';
+      }
+    }
+
+    &--first,
+    &--last {
+
+      a {
+        i {
+          &::before {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 2px 8px;
+    position: relative;
+  }
+
+  i {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      display: block;
+      right: 0;
+      padding: 8px;
+    }
+  }
+}

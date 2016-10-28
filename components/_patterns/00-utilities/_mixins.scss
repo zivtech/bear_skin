@@ -1,0 +1,101 @@
+@mixin element-invisible {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin element-invisible-off {
+  position: relative;
+  height: auto;
+  width: auto;
+  overflow: inherit;
+  clip: none;
+}
+
+@mixin link($color, $text-decoration, $hover-color, $hover-text-decoration) {
+  color: $color;
+  text-decoration: $text-decoration;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    text-decoration: $hover-text-decoration;
+  }
+}
+
+@function hex($color, $percentage) {
+  @if $percentage == .1 {
+    @return lighten($color, 45%);
+  }
+  @if $percentage == .2 {
+    @return lighten($color, 40%);
+  }
+  @if $percentage == .3 {
+    @return lighten($color, 35%);
+  }
+  @if $percentage == .4 {
+    @return lighten($color, 30%);
+  }
+  @if $percentage == .5 {
+    @return lighten($color, 25%);
+  }
+  @if $percentage == .6 {
+    @return lighten($color, 20%);
+  }
+  @if $percentage == .7 {
+    @return lighten($color, 15%);
+  }
+  @if $percentage == .8 {
+    @return lighten($color, 10%);
+  }
+  @if $percentage == .9 {
+    @return lighten($color, 5%);
+  }
+}
+
+// Alpha Color
+// Include in an element to create a transparent background or color with a hex
+// value fallback for older browsers.
+@mixin alpha-color($type, $color, $percentage) {
+  @if $type == color {
+    color: hex($color, $percentage);
+    color: rgba($color, $percentage);
+  }
+  @if $type == background {
+    background-color: hex($color, $percentage);
+    background-color: rgba($color, $percentage);
+  }
+}
+
+@mixin button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+  @include font-size(.8);
+
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  transition: background .2s ease-in-out;
+
+  background: linear-gradient($gradient-top, $gradient-bottom);
+  color: $white;
+  padding: $ui-button-padding;
+  border-radius: $ui-border-radius;
+  font-family: $sans;
+
+  &:hover,
+  &:focus,
+  &:visited {
+    background: linear-gradient($hover-gradient-top, $hover-gradient-bottom);
+    text-decoration: none;
+  }
+}
+
+@mixin placeholder {
+  @include font-size(.8);
+
+  font-weight: 400;
+}
