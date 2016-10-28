@@ -1,41 +1,76 @@
 <div class="container-fluid">
 
-  {% block row_top %}
-    <div class="single-row single-row--top {{plClass}}">
-      {{ content.top_row }}
-    </div>
-  {% endblock %}
+  {% if content.top_row %}
+    {% block row_top %}
+      <div class="single-row single-row--top">
+        <div class="inner">
+          {{ content.top_row }}
+        </div>
+      </div>
+    {% endblock %}
+  {% endif %}
 
-  <div class="row row-center">
+  <div class="row row--center">
 
     {% block content %}
 
-      {% block main_content %}
-        <main class="main-content col-xs-12 col-md-6 {{plClass}}">
-          {{ content.main }}
-        </main>
-      {% endblock %}
+      {% if content.main %}
+        {% block main_content %}
+          <main class="main-content col-xs-12
+            {% if (content.left or content.right) and not (content.left and content.right)  %}
+              col-md-9
+            {% elseif content.left and content.right %}
+              col-md-6
+            {% endif %}">
+            <div class="inner">
+              {{ content.main }}
+            </div>
+          </main>
+        {% endblock %}
+      {% endif %}
 
-      {% block left_sidebar %}
-        <aside class="sidebar sidebar--left col-xs-12 col-md-3 first-md {{plClass}}">
-          {{ content.left }}
-        </aside>
-      {% endblock %}
+      {% if content.left %}
+        {% block left_sidebar %}
+          <aside class="sidebar sidebar--left col-xs-12  first-md
+            {% if not content.main %}
+              col-md-6
+            {% else %}
+              col-md-3
+            {% endif %}">
+            <div class="inner">
+              {{ content.left }}
+            </div>
+          </aside>
+        {% endblock %}
+      {% endif %}
 
-      {% block right_sidebar %}
-        <aside class="sidebar sidebar--right col-xs-12 col-md-3 {{plClass}}">
-          {{ content.right }}
-        </aside>
-      {% endblock %}
+      {% if content.right %}
+        {% block right_sidebar %}
+          <aside class="sidebar sidebar--right col-xs-12 col-md-3
+            {% if not content.main %}
+              col-md-6
+            {% else %}
+              col-md-3
+            {% endif %}">
+            <div class="inner">
+              {{ content.right }}
+            </div>
+          </aside>
+        {% endblock %}
+      {% endif %}
 
     {% endblock %}
 
   </div>
 
-  {% block row_bottom %}
-    <div class="single-row single-row--top {{plClass}}">
-      {{ content.bottom_row }}
-    </div>
-  {% endblock %}
+  {% if content.bottom_row %}
+    {% block row_bottom %}
+      <div class="single-row single-row--top">
+        <div class="inner">
+          {{ content.bottom_row }}
+        </div>
+      </div>
+    {% endblock %}
+  {% endif %}
 
 </div>

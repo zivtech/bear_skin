@@ -1,10 +1,17 @@
 {
-  "content": {
-    "top_row": "<div class='inner'>Top Row</div>",
-    "left": "<div class='inner'>Left Sidebar</div>",
-    "main": "<div class='inner'>Main Content</div>",
-    "right": "<div class='inner'>Right Sidebar</div>",
-    "bottom_row": "<div class='inner'>Bottom Row</div>"
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "row",
+        "row--center"
+      ]
+    }
   },
-  "plClass": "pl-col"
+  "content": {
+    "top_row": "Top Row",
+    "left": "Left Sidebar",
+    "main": "Main Content",
+    "right": "Right Sidebar",
+    "bottom_row": "Bottom Row"
+  }
 }

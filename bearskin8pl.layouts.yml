@@ -1,7 +1,7 @@
 one_column:
   label: Main (one column) including top and bottom rows
   category: Bear Skin layouts
-  template: templates/04-layouts/one-column
+  template: templates/04-layouts/base-layout
   icon: templates/04-layouts/icons/one-column.png
   regions:
     top_row:
@@ -14,7 +14,7 @@ one_column:
 left_sidebar:
   label: Main with left sidebar including top and bottom rows
   category: Bear Skin layouts
-  template: templates/04-layouts/left-sidebar
+  template: templates/04-layouts/base-layout
   icon: templates/04-layouts/icons/left-sidebar.png
   regions:
     top_row:
@@ -29,7 +29,7 @@ left_sidebar:
 right_sidebar:
   label: Main with right sidebar including top and bottom rows
   category: Bear Skin layouts
-  template: templates/04-layouts/right-sidebar
+  template: templates/04-layouts/base-layout
   icon: templates/04-layouts/icons/right-sidebar.png
   regions:
     top_row:
@@ -44,7 +44,7 @@ right_sidebar:
 two_sidebars:
   label: Main with left and right sidebars including top and bottom rows
   category: Bear Skin layouts
-  template: templates/04-layouts/two-sidebars
+  template: templates/04-layouts/base-layout
   icon: templates/04-layouts/icons/two-sidebars.png
   regions:
     top_row:
@@ -61,7 +61,7 @@ two_sidebars:
 two_columns:
   label: Two columns (equal width) including top and bottom rows
   category: Bear Skin layouts
-  template: templates/04-layouts/two-columns
+  template: templates/04-layouts/base-layout
   icon: templates/04-layouts/icons/two-columns.png
   regions:
     top_row:

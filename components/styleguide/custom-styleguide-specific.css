@@ -54,15 +54,9 @@ hr.pl {
   padding: 1rem;
 }*/
 
-.container-fluid {
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-}
-
 .inner {
   text-align: center;
   padding: 2rem;
-  margin-bottom: 2rem;
   background: #eee;
   border: 1px solid #ccc;
   border-radius: 5px;
