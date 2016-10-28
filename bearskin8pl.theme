@@ -31,7 +31,7 @@ function bearskin8pl_preprocess_html(&$variables, $hook) {
 
   // if the sticky footer option is selected, set a class
   if (theme_get_setting('sticky_footer')) {
-    $variables['attributes']['class'][] = 'with-sticky-footer';
+    $variables['attributes']['class'][] = 'sticky-footer';
   }
 
   // adding classes for basic layouts

@@ -1,7 +1,7 @@
 .branding {
 
   &__site-logo {
-    max-width: 50px;
+    max-width: 60px;
 
     @include breakpoint($bp-768) {
       max-width: 100px;

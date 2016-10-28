@@ -1,10 +1,7 @@
 .wrapper-footer {
-  background: $ui-lightest-grey;
+  @include padding(1, 0);
 
-  &__inner {
-    @include margin-top(1);
-    @include margin-bottom(1);
-  }
+  background: $ui-lightest-grey;
 }
 
 .sticky-footer {

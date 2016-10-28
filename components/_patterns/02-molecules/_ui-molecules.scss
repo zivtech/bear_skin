@@ -91,6 +91,8 @@ details {
   transition: background .2s ease-in-out;
 
   &--main {
+    @include font-size(.9);
+
     position: absolute;
     top: -200px;
 
@@ -107,7 +109,6 @@ details {
     // to show active class styling in PL
     .menu-item--active-trail a {
       @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-      @include font-size(1);
 
       color: $white;
       font-family: $serif;
@@ -171,6 +172,7 @@ details {
   position: relative;
   z-index: 6;
   color: $ui-black;
+  top: 2px;
 
   i {
     transition: all .2s ease-in-out;
@@ -395,7 +397,7 @@ table {
   display: flex;
   align-items: center;
 
-  margin-left: 2em;
+  margin-right: 1em;
   font-size: 26px;
   color: $white;
 }
@@ -420,6 +422,8 @@ table {
 }
 
 #search-block-form {
+  @include padding(.5, 1);
+
   display: flex;
   align-items: center;
 

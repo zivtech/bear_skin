@@ -3425,7 +3425,7 @@ code {
 }
 
 .branding__site-logo {
-  max-width: 50px;
+  max-width: 60px;
 }
 
 .branding__flex-container {
@@ -3767,12 +3767,8 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .wrapper-footer {
+  padding: 1.625rem 0;
   background: #F5F5F5;
-}
-
-.wrapper-footer__inner {
-  margin-top: 1.625rem;
-  margin-bottom: 1.625rem;
 }
 
 .sticky-footer {
@@ -4224,6 +4220,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .ui--grey .menu--main {
+  font-size: 0.9rem;
   position: absolute;
   top: -200px;
 }
@@ -4255,7 +4252,6 @@ details[open] .summary i, [open].accordion .summary i {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 1rem;
   color: white;
   font-family: "Noto Serif";
 }
@@ -4327,6 +4323,7 @@ details[open] .summary i, [open].accordion .summary i {
   position: relative;
   z-index: 6;
   color: #222;
+  top: 2px;
 }
 
 .ui--grey #mnav i {
@@ -4529,7 +4526,7 @@ details[open] .summary i, [open].accordion .summary i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 2em;
+  margin-right: 1em;
   font-size: 26px;
   color: white;
 }
@@ -4558,6 +4555,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .ui--grey #search-block-form {
+  padding: 0.8125rem 1.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   -js-display: flex;
@@ -4973,6 +4971,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .ui--blue .menu--main {
+  font-size: 0.9rem;
   position: absolute;
   top: -200px;
 }
@@ -5004,7 +5003,6 @@ details[open] .summary i, [open].accordion .summary i {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 1rem;
   color: white;
   font-family: "Noto Serif";
 }
@@ -5076,6 +5074,7 @@ details[open] .summary i, [open].accordion .summary i {
   position: relative;
   z-index: 6;
   color: #222;
+  top: 2px;
 }
 
 .ui--blue #mnav i {
@@ -5278,7 +5277,7 @@ details[open] .summary i, [open].accordion .summary i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 2em;
+  margin-right: 1em;
   font-size: 26px;
   color: white;
 }
@@ -5307,6 +5306,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .ui--blue #search-block-form {
+  padding: 0.8125rem 1.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   -js-display: flex;
@@ -5722,6 +5722,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .ui--green .menu--main {
+  font-size: 0.9rem;
   position: absolute;
   top: -200px;
 }
@@ -5753,7 +5754,6 @@ details[open] .summary i, [open].accordion .summary i {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 1rem;
   color: white;
   font-family: "Noto Serif";
 }
@@ -5825,6 +5825,7 @@ details[open] .summary i, [open].accordion .summary i {
   position: relative;
   z-index: 6;
   color: #222;
+  top: 2px;
 }
 
 .ui--green #mnav i {
@@ -6027,7 +6028,7 @@ details[open] .summary i, [open].accordion .summary i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 2em;
+  margin-right: 1em;
   font-size: 26px;
   color: white;
 }
@@ -6056,6 +6057,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .ui--green #search-block-form {
+  padding: 0.8125rem 1.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   -js-display: flex;
