@@ -3838,6 +3838,16 @@ details[open] .summary i, [open].accordion .summary i {
   margin-bottom: 2rem;
 }
 
+.row > main,
+.row > aside {
+  margin-bottom: 1rem;
+}
+
+.row > main:last-child,
+.row > aside:last-child {
+  margin-bottom: 0;
+}
+
 .single-row {
   margin-right: -1rem;
   margin-left: -1rem;
@@ -6369,6 +6379,11 @@ details[open] .summary i, [open].accordion .summary i {
 
   #mnav {
     display: none;
+  }
+
+  .row > main,
+  .row > aside {
+    margin-bottom: 0;
   }
 
   .ui--grey .menu--main {

@@ -9,6 +9,19 @@
   margin-right: -2rem;
   margin-left: -2rem;
   margin-bottom: 2rem;
+
+  > main,
+  > aside {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint($bp-1024) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .single-row {

@@ -11,13 +11,13 @@
     "join()": [
       {
         "include()": {
-          "pattern": "atoms-form-element-text",
+          "pattern": "atoms-input-text",
           "with": {
             "description_display": false
           }
         }
       },
-      "atoms-container-submit"
+      "atoms-input-submit"
     ]
   }
 }

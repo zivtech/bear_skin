@@ -54,6 +54,10 @@ hr.pl {
   padding: 1rem;
 }*/
 
+body {
+  position: relative;
+}
+
 .inner {
   text-align: center;
   padding: 2rem;

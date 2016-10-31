@@ -12,9 +12,33 @@
     }
   },
   "region_content": {
-    "include()": {
-      "pattern": "layouts-base-layout"
-    }
+    "join()": [
+      {
+        "include()": {
+          "pattern": "atoms-heading",
+          "with": {
+            "element": "h1",
+            "items": [
+              {
+                "content": "Page Title",
+                "attributes": {
+                  "Attribute()": {
+                    "class": [
+                      "field__item"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "include()": {
+          "pattern": "layouts-base-layout"
+        }
+      }
+    ]
   },
   "region_breadcrumb": {
     "include()": {

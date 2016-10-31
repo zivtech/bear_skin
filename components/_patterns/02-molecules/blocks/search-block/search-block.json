@@ -1,3 +1,7 @@
 {
-
+  "content": {
+    "include()": {
+      "pattern": "molecules-form-search"
+    }
+  }
 }
