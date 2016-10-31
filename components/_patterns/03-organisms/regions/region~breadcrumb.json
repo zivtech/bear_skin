@@ -1,0 +1,16 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "class": "region region--breadcrumb"
+    }
+  },
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "molecules-breadcrumbs"
+        }
+      }
+    ]
+  }
+}

@@ -16,7 +16,11 @@
       "pattern": "layouts-base-layout"
     }
   },
-  "region_breadcrumb": "Breadcrumb Region",
+  "region_breadcrumb": {
+    "include()": {
+      "pattern": "organisms-region-breadcrumb"
+    }
+  },
   "region_footer": {
     "include()": {
       "pattern": "organisms-region-footer"

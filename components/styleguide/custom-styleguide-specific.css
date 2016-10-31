@@ -77,9 +77,12 @@ hr.pl {
   padding: 10rem 2rem;
 }
 
-.container-fluid {
-  margin-top: 1rem;
-  padding: 1rem 2.5rem !important;
+#layouts-base-layout,
+#layouts-base-layout-left-sidebar,
+#layouts-base-layout-one-column,
+#layouts-base-layout-right-sidebar,
+#layouts-base-layout-two-columns {
+  padding: 0 2rem;
 }
 
 .icon-wrapper {
