@@ -30,6 +30,18 @@ label {
   @include margin-bottom(.5);
 }
 
+.form-required::after {
+  content: '';
+  vertical-align: super;
+  display: inline-block;
+  background: url(../images/required.svg) no-repeat left center;
+  background-size: 6px 6px;
+  display: inline-block;
+  margin-left: .3em;
+  width: 6px;
+  height: 6px;
+}
+
 .description {
   @include margin-top(.2);
 }
