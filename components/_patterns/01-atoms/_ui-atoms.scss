@@ -229,6 +229,37 @@ fieldset {
   }
 }
 
+table {
+
+  .js-form-type-radio label {
+    @include element-invisible;
+  }
+
+  .radio-wrapper {
+    top: 3px;
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 0;
+    border-radius: 0;
+    z-index: 1;
+    background: transparent;
+
+    i {
+      display: none;
+    }
+
+    .form-radio {
+      display: block;
+
+      &:checked + i {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .select-wrapper {
   border: 1px solid $gallery;
   position: relative;
