@@ -9,7 +9,6 @@ body {
 h1,
 h4 {
   font-family: $sans;
-  text-transform: uppercase;
 }
 
 h2,
@@ -45,10 +44,22 @@ label {
   }
 }
 
+button {
+
+  &.link {
+    background: $ui-lightest-grey;
+    border: 1px solid $ui-light-grey;
+    cursor: pointer;
+    font-family: $sans;
+    margin-left: 5px;
+  }
+}
+
 .form-text,
 .form-email,
 .form-textarea,
 .form-date {
+
   @include font-size(1);
 
   font-family: $sans;
@@ -214,6 +225,37 @@ fieldset {
 
     &:checked + i {
       opacity: 1;
+    }
+  }
+}
+
+table {
+
+  .js-form-type-radio label {
+    @include element-invisible;
+  }
+
+  .radio-wrapper {
+    top: 3px;
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 0;
+    border-radius: 0;
+    z-index: 1;
+    background: transparent;
+
+    i {
+      display: none;
+    }
+
+    .form-radio {
+      display: block;
+
+      &:checked + i {
+        opacity: 1;
+      }
     }
   }
 }
