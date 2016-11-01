@@ -71,11 +71,12 @@
   "author": "Zivtech <info@zivtech.com>",
   "contributors": [
     "James Cole <james@zivtech.com>",
-    "Alban Bailly <alban@zivtech.com>"
+    "Alban Bailly <alban@zivtech.com>",
+    "Sean Wolfe <sean@zivtech.com>"
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zivtech/ias/issues"
+    "url": "https://github.com/zivtech/bear_skin/issues"
   },
   "homepage": "https://github.com/zivtech/ias#readme",
   "dependencies": {}
