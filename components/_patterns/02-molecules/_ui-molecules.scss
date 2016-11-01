@@ -99,15 +99,17 @@ details {
       top: 0;
     }
 
-    a {
+    .menu__item {
+      @include font-size(.9);
+    }
+
+    .menu__link {
       @include link($ui-black, none, $ui-black, underline);
     }
 
     a.is-active,
-    // to show active class styling in PL
     .menu-item--active-trail a {
       @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-      @include font-size(1);
 
       color: $white;
       font-family: $serif;

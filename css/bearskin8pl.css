@@ -4286,12 +4286,16 @@ details[open] .summary i, [open].accordion .summary i {
   top: -200px;
 }
 
-.ui--grey .menu--main a {
+.ui--grey .menu--main .menu__item {
+  font-size: 0.9rem;
+}
+
+.ui--grey .menu--main .menu__link {
   color: #222;
   text-decoration: none;
 }
 
-.ui--grey .menu--main a:hover, .ui--grey .menu--main a:focus {
+.ui--grey .menu--main .menu__link:hover, .ui--grey .menu--main .menu__link:focus {
   color: #222;
   text-decoration: underline;
 }
@@ -4313,7 +4317,6 @@ details[open] .summary i, [open].accordion .summary i {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 1rem;
   color: white;
   font-family: "Noto Serif";
 }
@@ -5091,12 +5094,16 @@ details[open] .summary i, [open].accordion .summary i {
   top: -200px;
 }
 
-.ui--blue .menu--main a {
+.ui--blue .menu--main .menu__item {
+  font-size: 0.9rem;
+}
+
+.ui--blue .menu--main .menu__link {
   color: #222;
   text-decoration: none;
 }
 
-.ui--blue .menu--main a:hover, .ui--blue .menu--main a:focus {
+.ui--blue .menu--main .menu__link:hover, .ui--blue .menu--main .menu__link:focus {
   color: #222;
   text-decoration: underline;
 }
@@ -5118,7 +5125,6 @@ details[open] .summary i, [open].accordion .summary i {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 1rem;
   color: white;
   font-family: "Noto Serif";
 }
@@ -5896,12 +5902,16 @@ details[open] .summary i, [open].accordion .summary i {
   top: -200px;
 }
 
-.ui--green .menu--main a {
+.ui--green .menu--main .menu__item {
+  font-size: 0.9rem;
+}
+
+.ui--green .menu--main .menu__link {
   color: #222;
   text-decoration: none;
 }
 
-.ui--green .menu--main a:hover, .ui--green .menu--main a:focus {
+.ui--green .menu--main .menu__link:hover, .ui--green .menu--main .menu__link:focus {
   color: #222;
   text-decoration: underline;
 }
@@ -5923,7 +5933,6 @@ details[open] .summary i, [open].accordion .summary i {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: "Montserrat";
-  font-size: 1rem;
   color: white;
   font-family: "Noto Serif";
 }
