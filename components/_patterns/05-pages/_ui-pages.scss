@@ -7,6 +7,10 @@
     height: 100%;
   }
 
+  .main {
+    background: url('../images/bg_bear_tracks.svg') center right no-repeat;
+  }
+
   h1 {
     @include font-size(8);
 

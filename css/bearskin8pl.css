@@ -4662,6 +4662,10 @@ details[open] .summary i, [open].accordion .summary i {
   height: 100%;
 }
 
+.ui--grey .page-404 .main {
+  background: url("../images/bg_bear_tracks.svg") center right no-repeat;
+}
+
 .ui--grey .page-404 h1 {
   font-size: 8rem;
   line-height: 1;
@@ -5461,6 +5465,10 @@ details[open] .summary i, [open].accordion .summary i {
 
 .ui--blue .page-404 .wrapper--inner {
   height: 100%;
+}
+
+.ui--blue .page-404 .main {
+  background: url("../images/bg_bear_tracks.svg") center right no-repeat;
 }
 
 .ui--blue .page-404 h1 {
@@ -6264,6 +6272,10 @@ details[open] .summary i, [open].accordion .summary i {
   height: 100%;
 }
 
+.ui--green .page-404 .main {
+  background: url("../images/bg_bear_tracks.svg") center right no-repeat;
+}
+
 .ui--green .page-404 h1 {
   font-size: 8rem;
   line-height: 1;
@@ -6540,6 +6552,11 @@ details[open] .summary i, [open].accordion .summary i {
 
   #mnav {
     display: none;
+  }
+
+  .row > main,
+  .row > aside {
+    margin-bottom: 0;
   }
 
   .ui--grey .menu--main {
