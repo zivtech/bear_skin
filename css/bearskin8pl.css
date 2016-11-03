@@ -3841,6 +3841,7 @@ details[open] .summary i, [open].accordion .summary i {
 .container-fluid {
   padding-right: 1rem;
   padding-left: 1rem;
+  width: 100%;
 }
 
 .row {

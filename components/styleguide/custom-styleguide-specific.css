@@ -89,6 +89,10 @@ body {
   padding: 0 2rem;
 }
 
+body > .container-fluid {
+  padding: 2rem;
+}
+
 .icon-wrapper {
   display: inline-block;
   padding: 20px;
