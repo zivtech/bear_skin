@@ -4700,6 +4700,54 @@ details[open] .summary i, [open].accordion .summary i {
   height: 100%;
 }
 
+.ui--grey .light {
+  color: #DCDCDC;
+}
+
+.ui--grey .bg--light {
+  background-color: #DCDCDC;
+}
+
+.ui--grey .normal {
+  color: #808080;
+}
+
+.ui--grey .bg--normal {
+  background-color: #808080;
+}
+
+.ui--grey .dark {
+  color: #3F3F3F;
+}
+
+.ui--grey .bg--dark {
+  background-color: #3F3F3F;
+}
+
+.ui--grey .lightest-grey {
+  color: false;
+}
+
+.ui--grey .bg--lightest-grey {
+  background-color: false;
+}
+
+.ui--grey .light-grey {
+  color: false;
+}
+
+.ui--grey .bg--light-grey {
+  background-color: false;
+}
+
+.ui--grey .grey {
+  color: false;
+}
+
+.ui--grey .bg--grey {
+  background-color: false;
+}
+
 .ui--blue body {
   color: #251c18;
   font-family: "Noto Serif";
@@ -5504,6 +5552,54 @@ details[open] .summary i, [open].accordion .summary i {
   height: 100%;
 }
 
+.ui--blue .light {
+  color: #EAF5FF;
+}
+
+.ui--blue .bg--light {
+  background-color: #EAF5FF;
+}
+
+.ui--blue .normal {
+  color: #548BC3;
+}
+
+.ui--blue .bg--normal {
+  background-color: #548BC3;
+}
+
+.ui--blue .dark {
+  color: #004987;
+}
+
+.ui--blue .bg--dark {
+  background-color: #004987;
+}
+
+.ui--blue .lightest-grey {
+  color: #F5F5F5;
+}
+
+.ui--blue .bg--lightest-grey {
+  background-color: #F5F5F5;
+}
+
+.ui--blue .light-grey {
+  color: #DCDCDC;
+}
+
+.ui--blue .bg--light-grey {
+  background-color: #DCDCDC;
+}
+
+.ui--blue .grey {
+  color: #808080;
+}
+
+.ui--blue .bg--grey {
+  background-color: #808080;
+}
+
 .ui--green body {
   color: #251c18;
   font-family: "Noto Serif";
@@ -6306,6 +6402,54 @@ details[open] .summary i, [open].accordion .summary i {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+}
+
+.ui--green .light {
+  color: #E6AB0F;
+}
+
+.ui--green .bg--light {
+  background-color: #E6AB0F;
+}
+
+.ui--green .normal {
+  color: #078A80;
+}
+
+.ui--green .bg--normal {
+  background-color: #078A80;
+}
+
+.ui--green .dark {
+  color: #00635D;
+}
+
+.ui--green .bg--dark {
+  background-color: #00635D;
+}
+
+.ui--green .lightest-grey {
+  color: #F5F5F5;
+}
+
+.ui--green .bg--lightest-grey {
+  background-color: #F5F5F5;
+}
+
+.ui--green .light-grey {
+  color: #DCDCDC;
+}
+
+.ui--green .bg--light-grey {
+  background-color: #DCDCDC;
+}
+
+.ui--green .grey {
+  color: #808080;
+}
+
+.ui--green .bg--grey {
+  background-color: #808080;
 }
 
 @media (min-width: 33.75em) {

@@ -5,6 +5,7 @@
     @include ui-molecules($ui-light-grey, $ui-grey, $ui-dark-grey, false, false, false, false);
     @include ui-organisms($ui-light-grey, $ui-grey, $ui-dark-grey, false, false, false, false);
     @include ui-pages($ui-light-grey, $ui-grey, $ui-dark-grey, false, false, false, false);
+    @include ui-typography($ui-light-grey, $ui-grey, $ui-dark-grey, false, false, false);
   }
 
   &--blue {
@@ -12,6 +13,7 @@
     @include ui-molecules($ui-light-blue, $ui-blue, $ui-dark-blue, $ui-blue-button-gradient-top, $ui-blue-button-gradient-bottom, $ui-blue-button-hover-gradient-top, $ui-blue-button-hover-gradient-bottom);
     @include ui-organisms($ui-light-blue, $ui-blue, $ui-dark-blue, $ui-blue-button-gradient-top, $ui-blue-button-gradient-bottom, $ui-blue-button-hover-gradient-top, $ui-blue-button-hover-gradient-bottom);
     @include ui-pages($ui-light-blue, $ui-blue, $ui-dark-blue, $ui-blue-button-gradient-top, $ui-blue-button-gradient-bottom, $ui-blue-button-hover-gradient-top, $ui-blue-button-hover-gradient-bottom);
+    @include ui-typography($ui-light-blue, $ui-blue, $ui-dark-blue, $ui-lightest-grey, $ui-light-grey, $ui-grey);
   }
 
   &--green {
@@ -19,5 +21,6 @@
     @include ui-molecules($ui-yellow, $ui-green, $ui-dark-green, $ui-green-button-gradient-top, $ui-green-button-gradient-bottom, $ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
     @include ui-organisms($ui-yellow, $ui-green, $ui-dark-green, $ui-green-button-gradient-top, $ui-green-button-gradient-bottom, $ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
     @include ui-pages($ui-yellow, $ui-green, $ui-dark-green, $ui-green-button-gradient-top, $ui-green-button-gradient-bottom, $ui-green-button-hover-gradient-top, $ui-green-button-hover-gradient-bottom);
+    @include ui-typography($ui-yellow, $ui-green, $ui-dark-green, $ui-lightest-grey, $ui-light-grey, $ui-grey);
   }
 }
