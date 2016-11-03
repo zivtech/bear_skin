@@ -39,11 +39,6 @@ details {
   .summary {
     background: $wild-sand;
     cursor: pointer;
-
-    &__icon,
-    &__title {
-      display: inline-block;
-    }
   }
 
   &[open] {

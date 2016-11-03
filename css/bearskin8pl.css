@@ -4240,10 +4240,6 @@ details[open] .summary i, [open].accordion .summary i {
   cursor: pointer;
 }
 
-.ui--grey details .summary__icon, .ui--grey .accordion .summary__icon, .ui--grey details .summary__title, .ui--grey .accordion .summary__title {
-  display: inline-block;
-}
-
 .ui--grey details[open] .summary, .ui--grey [open].accordion .summary {
   border-bottom: 0;
 }
@@ -5048,10 +5044,6 @@ details[open] .summary i, [open].accordion .summary i {
   cursor: pointer;
 }
 
-.ui--blue details .summary__icon, .ui--blue .accordion .summary__icon, .ui--blue details .summary__title, .ui--blue .accordion .summary__title {
-  display: inline-block;
-}
-
 .ui--blue details[open] .summary, .ui--blue [open].accordion .summary {
   border-bottom: 0;
 }
@@ -5854,10 +5846,6 @@ details[open] .summary i, [open].accordion .summary i {
 .ui--green details .summary, .ui--green .accordion .summary {
   background: whitesmoke;
   cursor: pointer;
-}
-
-.ui--green details .summary__icon, .ui--green .accordion .summary__icon, .ui--green details .summary__title, .ui--green .accordion .summary__title {
-  display: inline-block;
 }
 
 .ui--green details[open] .summary, .ui--green [open].accordion .summary {
