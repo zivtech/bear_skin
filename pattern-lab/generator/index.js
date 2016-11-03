@@ -36,18 +36,17 @@ module.exports = yeoman.Base.extend({
       choices: [
         'twig',
         'scss',
-        'yml',
         'json',
         'md'
       ],
       default: [
         'twig',
-        'yml',
+        'json',
         'scss'
       ]
     }, {
       name: 'name',
-      message: 'What shall we name it? ' + chalk.blue('Let\'s stick with a naming convention. Ex: "region--something". It will usually match the template suggestion (don\'t forget to have dev mode turned on). The scss file will be automatically preceded with _)'),
+      message: 'What shall we name it? ' + chalk.blue('Usually something that will depend on the specifity of the component.'),
       filter: function(answer) {
         return answer.replace(/ /g, '-').toLowerCase();
       }
