@@ -18,5 +18,13 @@ $colors: $light $normal $dark $ui-lightest-grey $ui-light-grey $ui-grey;
   }
 }
 
+.serif {
+  font-family: $serif;
+}
+
+.sans {
+  font-family: $sans;
+}
+
 
 } // close the mixin

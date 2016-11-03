@@ -4748,6 +4748,14 @@ details[open] .summary i, [open].accordion .summary i {
   background-color: false;
 }
 
+.ui--grey .serif {
+  font-family: "Noto Serif";
+}
+
+.ui--grey .sans {
+  font-family: "Montserrat";
+}
+
 .ui--blue body {
   color: #251c18;
   font-family: "Noto Serif";
@@ -5600,6 +5608,14 @@ details[open] .summary i, [open].accordion .summary i {
   background-color: #808080;
 }
 
+.ui--blue .serif {
+  font-family: "Noto Serif";
+}
+
+.ui--blue .sans {
+  font-family: "Montserrat";
+}
+
 .ui--green body {
   color: #251c18;
   font-family: "Noto Serif";
@@ -6450,6 +6466,14 @@ details[open] .summary i, [open].accordion .summary i {
 
 .ui--green .bg--grey {
   background-color: #808080;
+}
+
+.ui--green .serif {
+  font-family: "Noto Serif";
+}
+
+.ui--green .sans {
+  font-family: "Montserrat";
 }
 
 @media (min-width: 33.75em) {
