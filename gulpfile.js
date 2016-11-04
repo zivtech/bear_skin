@@ -38,5 +38,6 @@
   gulp.task('default', ['watch']);
   gulp.task('build', ['images:build', 'styles:build', 'pl:build', 'favicons:build']);
   gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
+  gulp.task('rename', ['rename:rename']);
 
 }());

@@ -31,6 +31,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
+    "gulp-replace": "^0.5.4",
     "gulp-require-tasks": "^1.0.5",
     "gulp-sass": "^2.3.2",
     "gulp-sass-glob": "^1.0.6",
@@ -48,6 +49,7 @@
     "path": "^0.12.7",
     "postcss-flexibility": "^1.1.0",
     "postcss-scss": "^0.2.1",
+    "rename-files": "0.0.2",
     "require-gulp-tasks": "^1.0.0",
     "run-sequence": "^1.2.2",
     "slimerjs": "^0.906.2",
@@ -61,7 +63,8 @@
     "lint": "./node_modules/.bin/sass-lint 'components/_patterns/**/*.scss' --verbose --no-exit ; ./node_modules/.bin/eslint js/scripts.js",
     "new": "yo ./pattern-lab/generator/index.js",
     "preinstall": "npm run bowerinstall ; find components/bower/raw/ -name \"*.info\" -type f -delete ; npm run composerinstall",
-    "postinstall": "npm run preinstall ; ./bin/npm_clean.sh"
+    "postinstall": "npm run preinstall ; ./bin/npm_clean.sh",
+    "rename-files": "cd node_modules/.bin; npm run rename-files ./config/ 'bearskin8pl' 'poop'"
   },
   "main": "gulpfile.js",
   "repository": {
