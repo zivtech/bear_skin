@@ -8,6 +8,8 @@ Before getting started, make sure that you have the latest version of node.js an
 
 Also, you will need to have [composer](https://getcomposer.org/doc/00-intro.md) installed. On a Mac, this is easiest with [homebrew](http://brew.sh/).
 
+Lastly, Bear Skin needs the [Components Libraries](https://www.drupal.org/project/components) module to run. You must install it prior to enabling the theme.
+
 ## Documentation
 
 1. [Enabling dev mode](docs/dev_mode.md) in Drupal 8 to provide template suggestions and disabling the cache
@@ -25,7 +27,7 @@ Also, you will need to have [composer](https://getcomposer.org/doc/00-intro.md) 
     - [Forcing usage of specific files from Bower](docs/bower.md#forcing-usage-of-specific-files-from-bower)
 1. [Using Probo.CI](docs/probo.md)
     - [Linting with Probo](docs/probo.md#linting-with-probo)
-
+1. [Sass Structure](docs/sass.md)
 
 * * *
 
