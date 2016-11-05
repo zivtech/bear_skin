@@ -5,10 +5,15 @@ var shell = require('gulp-shell');
 
 module.exports = function (gulp, options) {
 
-  return gulp.src('*')
-    //.pipe(replace('bearskin8pl', 'poop'))
-    //.pipe(gulp.dest('.'));
-    .pipe(shell([
-      'npm run rename-files'
-    ]));
-};
+  process.env.name = options.theme.name;
+
+  gulp.task('rename:files', shell.task([
+    'npm run renamer -- --find=bearskin8pl --replace="<%= process.env.name %>" ./config/install/* --verbose'
+  ]));
+
+  gulp.task('rename:strings', function() {
+    return gulp.src(['*', '!node_modules'])
+      .pipe(replace('bearskin8pl', options.theme.name))
+      .pipe(gulp.dest('.'));
+  });
+}

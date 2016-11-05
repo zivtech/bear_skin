@@ -49,7 +49,7 @@
     "path": "^0.12.7",
     "postcss-flexibility": "^1.1.0",
     "postcss-scss": "^0.2.1",
-    "rename-files": "0.0.2",
+    "renamer": "^0.6.0",
     "require-gulp-tasks": "^1.0.0",
     "run-sequence": "^1.2.2",
     "slimerjs": "^0.906.2",
@@ -64,7 +64,7 @@
     "new": "yo ./pattern-lab/generator/index.js",
     "preinstall": "npm run bowerinstall ; find components/bower/raw/ -name \"*.info\" -type f -delete ; npm run composerinstall",
     "postinstall": "npm run preinstall ; ./bin/npm_clean.sh",
-    "rename-files": "cd node_modules/.bin; npm run rename-files ./config/ 'bearskin8pl' 'poop'"
+    "renamer": "renamer"
   },
   "main": "gulpfile.js",
   "repository": {

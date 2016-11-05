@@ -3,7 +3,8 @@
 # setting to match your system
 #
 
-themeName: "bearskin8pl"
+theme:
+  name: "bearskin8pl"
 patternLab:
   enabled: true
   configFile: "pattern-lab/config/config.yml"

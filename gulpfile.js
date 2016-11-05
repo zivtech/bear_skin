@@ -34,10 +34,12 @@
   var backstopTasks = require('./gulp-tasks/backstop.js');
   backstopTasks(gulp, config);
 
+  var renameTasks = require('./gulp-tasks/rename/rename.js');
+  renameTasks(gulp, config);
+
   gulp.task('watch', ['serve', 'styles:watch', 'scripts:watch', 'pl:watch']);
   gulp.task('default', ['watch']);
   gulp.task('build', ['images:build', 'styles:build', 'pl:build', 'favicons:build']);
   gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
-  gulp.task('rename', ['rename:rename']);
 
 }());
