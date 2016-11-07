@@ -8,20 +8,23 @@ Before getting started, make sure that you have the latest version of node.js an
 
 Also, you will need to have [composer](https://getcomposer.org/doc/00-intro.md) installed. On a Mac, this is easiest with [homebrew](http://brew.sh/).
 
-Lastly, Bear Skin needs the [Components Libraries](https://www.drupal.org/project/components) module to run. You must install it prior to enabling the theme.
+Bear Skin needs the **[Components Libraries]**(https://www.drupal.org/project/components) module to run. You must install it prior to enabling the theme. Additionally, you will need to enable both the **search** and **responsive image** (these two ship with core but need to be enabled since).
+
+When ready to work, refer to [Gulp tasks for front-end development](docs/gulp.md) to get started.
 
 ## Documentation
 
 1. [Enabling dev mode](docs/dev_mode.md) in Drupal 8 to provide template suggestions and disabling the cache
+1. [Gulp tasks for front-end development](docs/gulp.md)
+    - [Building CSS](docs/gulp.md#building-css)
+    - [Generating fav/app icons](docs/gulp.md#generating-favicons)
+    - [Visual regression testing](docs/gulp.md#visual-regression-testing)
+1. [Renaming the theme files and its functions](docs/rename.md)
 1. [Using Pattern Lab](docs/pattern_lab.md)
     - [Generate Pattern Lab files](docs/pattern_lab.md#generate-pattern-lab-files)
     - [Watching Pattern Lab](docs/pattern_lab.md#watching-pattern-lab)
     - [Generate a new pattern](docs/pattern_lab.md#generate-a-pattern)
 1. [Inheritance in Pattern Lab](docs/pattern_lab_inheritance.md) (this applies to inheritance in Twig too)
-1. [Gulp tasks for front-end development](docs/gulp.md)
-    - [Building CSS](docs/gulp.md#building-css)
-    - [Generating fav/app icons](docs/gulp.md#generating-favicons)
-    - [Visual regression testing](docs/gulp.md#visual-regression-testing)
 1. [Bower for front-end plugins](docs/bower.md)
     - [Serving location of Bower files](docs/bower.md#serving-location-of-bower-files)
     - [Forcing usage of specific files from Bower](docs/bower.md#forcing-usage-of-specific-files-from-bower)
