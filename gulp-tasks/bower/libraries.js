@@ -33,7 +33,7 @@ module.exports = function(gulp, options) {
   var librariesYaml = yaml.safeDump(libraries);
   fs.writeFileSync('components/vendor/bower/bower.yml', librariesYaml);
 
-  return gulp.src('bearskin8pl.libraries.yml')
+  return gulp.src('bear_skin.libraries.yml')
     .pipe(inject(gulp.src('components/vendor/bower/bower.yml'), {
       starttag: '# inject:libraries',
       endtag: '# endinject',

@@ -4,7 +4,7 @@
 #
 
 theme:
-  name: "bearskin8pl"
+  name: "bear_skin"
 patternLab:
   enabled: true
   configFile: "pattern-lab/config/config.yml"
@@ -46,7 +46,7 @@ favicons:
 templates:
   src: ["templates/**/*.html.twig"]
 drush:
-  alias: "@bearskin8pl.local"
+  alias: "@bear_skin.local"
 browserSync:
   site:
     enabled: true

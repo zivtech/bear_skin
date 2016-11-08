@@ -1,0 +1,46 @@
+name: Bear Skin 8 Base Theme w/ Pattern Lab
+type: theme
+description: 'An atomic design Drupal 8 base theme including Pattern Lab.'
+package: Bear
+core: 8.x
+
+libraries:
+  - bear_skin/flexboxgrid
+  - bear_skin/flexibility
+  - bear_skin/global-styles
+  - bear_skin/global-scripts
+
+libraries-override:
+  system/base: false
+
+stylesheets-remove:
+  - core/themes/stable/css/file/file.admin.css
+
+regions:
+  header: 'Header'
+  navigation: 'Navigation bar'
+  search: 'Search'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  breadcrumb: 'Breadcrumb'
+  footer: 'Footer'
+
+component-libraries:
+  atoms:
+    paths:
+      - components/_patterns/01-atoms
+  molecules:
+    paths:
+      - components/_patterns/02-molecules
+  organisms:
+    paths:
+      - components/_patterns/03-organisms
+  layouts:
+    paths:
+      - components/_patterns/04-layouts
+  pages:
+    paths:
+      - components/_patterns/05-pages

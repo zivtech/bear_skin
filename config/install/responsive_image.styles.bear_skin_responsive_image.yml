@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.bear_skin_default_image
+    - image.style.bear_skin_mobile_image
+  theme:
+    - bear_skin
+id: bear_skin_responsive_image
+label: 'Bearskin8pl - Responsive Image'
+image_style_mappings:
+  -
+    breakpoint_id: bear_skin.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bear_skin_default_image
+  -
+    breakpoint_id: bear_skin.large
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bear_skin_retina_default_image
+  -
+    breakpoint_id: bear_skin.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bear_skin_default_image
+  -
+    breakpoint_id: bear_skin.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bear_skin_retina_default_image
+  -
+    breakpoint_id: bear_skin.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bear_skin_mobile_image
+  -
+    breakpoint_id: bear_skin.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bear_skin_retina_mobile_image
+  -
+    breakpoint_id: bear_skin.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: bear_skin_mobile_image
+  -
+    breakpoint_id: bear_skin.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: bear_skin_retina_mobile_image
+breakpoint_group: bear_skin
+fallback_image_style: bear_skin_mobile_image

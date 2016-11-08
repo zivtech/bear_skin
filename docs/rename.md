@@ -1,6 +1,6 @@
 # Renaming the theme files and its functions
 
-The theme defaults name is "bearskin8pl". This might not be the name you'd like your theme, functions and filenames to be. In this case you can use the rename functions included here.
+The theme defaults name is "bear_skin". This might not be the name you'd like your theme, functions and filenames to be. In this case you can use the rename functions included here.
 
 1. If enabled, disable and uninstall this theme at /admin/appearance
 1. Rename your root directory manually to [newname]
