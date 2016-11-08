@@ -1,0 +1,16 @@
+.node {
+
+  &--unpublished {
+    background: pink;
+    background: hsla(327, 100%, 92%, 1);
+
+    &:before {
+      content: "DRAFT";
+      font-family: $sans;
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+      display: block;
+    }
+  }
+}

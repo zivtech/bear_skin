@@ -4,14 +4,8 @@ On your Mac, copy and rename the `sites/example.settings.local.php` to be `sites
 ```sh
 $ cp sites/example.settings.local.php sites/default/settings.local.php
 ```
-Open `default.settings.php` file in `sites/default` and uncomment these lines:
 
-```php
-if (file_exists(__DIR__ . '/settings.local.php')) {
-  include __DIR__ . '/settings.local.php';
-}
-```
-Open `settings.php` file in `sites/default` and add these lines:
+Open `settings.php` file in `sites/default` and add these lines at the end of the file (if not there already):
 
 ```php
 if (file_exists(__DIR__ . '/settings.local.php')) {

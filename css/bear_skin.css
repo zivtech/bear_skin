@@ -3817,6 +3817,20 @@ details[open] .summary i, [open].accordion .summary i {
           justify-content: space-between;
 }
 
+.node--unpublished {
+  background: pink;
+  background: #ffd6ed;
+}
+
+.node--unpublished:before {
+  content: "DRAFT";
+  font-family: "Montserrat";
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  display: block;
+}
+
 .region--header {
   display: -webkit-box;
   display: -ms-flexbox;
