@@ -36,7 +36,7 @@ favicons:
   bgColor: # a background color to be used for certain icons
 ```
 
-**Note:** The `themeName` variable must also be set properly for the icons' paths to be properly defined.
+**Note:** The `theme > name` variable (line 7) must also be set properly for the icons' paths to be properly defined.
 
 ## Visual regression testing
 
