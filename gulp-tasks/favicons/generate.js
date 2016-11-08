@@ -6,10 +6,10 @@ var gutil = require('gulp-util');
 module.exports = function (gulp, options) {
   return gulp.src(options.favicons.src)
     .pipe(favicons({
-      appName: options.themeName,
-      appDescription: options.themeName,
+      appName: options.theme.name,
+      appDescription: options.theme.name,
       background: options.favicons.bgColor,
-      path: '/themes/' + options.themeName + '/' + options.favicons.dest,
+      path: '/themes/' + options.theme.name + '/' + options.favicons.dest,
       display: 'standalone',
       orientation: 'portrait',
       start_url: '/?homescreen=1',
