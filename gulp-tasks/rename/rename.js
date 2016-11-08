@@ -8,7 +8,7 @@ module.exports = function (gulp, options) {
   process.env.name = options.theme.name;
 
   gulp.task('rename:files', shell.task([
-    'npm run renamer -- --regex --find=vulture --replace="<%= process.env.name %>" * "config/**" "components/**" "css/**" "js/**" "templates/**" --verbose'
+    'npm run renamer -- --regex --find=bearskin8pl --replace="<%= process.env.name %>" * "config/**" "components/**" "css/**" "js/**" "templates/**" --verbose'
   ]));
 
   gulp.task('rename:strings', function() {
