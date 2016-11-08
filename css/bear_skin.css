@@ -4341,6 +4341,12 @@ details[open] .summary i, [open].accordion .summary i {
   text-decoration: none;
 }
 
+.ui--grey .menu--main a.is-active:hover, .ui--grey .menu--main a.is-active:focus,
+.ui--grey .menu--main .menu-item--active-trail a:hover,
+.ui--grey .menu--main .menu-item--active-trail a:focus {
+  color: white;
+}
+
 .ui--grey .menu--main.open {
   font-size: 1.4rem;
   z-index: 5;
@@ -5201,6 +5207,12 @@ details[open] .summary i, [open].accordion .summary i {
   text-decoration: none;
 }
 
+.ui--blue .menu--main a.is-active:hover, .ui--blue .menu--main a.is-active:focus,
+.ui--blue .menu--main .menu-item--active-trail a:hover,
+.ui--blue .menu--main .menu-item--active-trail a:focus {
+  color: white;
+}
+
 .ui--blue .menu--main.open {
   font-size: 1.4rem;
   z-index: 5;
@@ -6059,6 +6071,12 @@ details[open] .summary i, [open].accordion .summary i {
   background: -webkit-linear-gradient(#016F68, #00534C);
   background: linear-gradient(#016F68, #00534C);
   text-decoration: none;
+}
+
+.ui--green .menu--main a.is-active:hover, .ui--green .menu--main a.is-active:focus,
+.ui--green .menu--main .menu-item--active-trail a:hover,
+.ui--green .menu--main .menu-item--active-trail a:focus {
+  color: white;
 }
 
 .ui--green .menu--main.open {

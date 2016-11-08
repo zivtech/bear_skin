@@ -108,6 +108,11 @@ details {
 
       color: $white;
       font-family: $serif;
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
     }
 
     &.open {
