@@ -46,17 +46,92 @@ label {
   @include margin-top(.2);
 }
 
-.form-text,
-.form-email,
-.form-textarea,
-.form-date {
-  @include padding(.2, .2);
-}
-
 .field-suffix {
   @extend .description;
 }
 
 .dropbutton-multiple {
   margin-right: 5px;
+}
+
+.form-text,
+.form-email,
+.form-textarea,
+.form-date {
+  @include font-size(1);
+  @include padding(.2, .2);
+
+  font-family: $sans;
+
+  width: 100%;
+  max-width: 30em;
+
+  transition: border .2s ease-in-out;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.form-submit {
+  @extend .button;
+}
+
+input[type="search"] {
+  @extend .form-text;
+
+  appearance: initial;
+}
+
+.field-suffix {
+  display: block;
+}
+
+.dropbutton-widget {
+  @extend .button;
+
+  .form-submit {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+
+  .secondary-action {
+    margin-top: 5px
+  }
+
+  .dropbutton-toggle {
+  button,
+    a {
+      color: $white;
+    }
+  }
+}
+
+.description {
+  @include font-size(.7);
+}
+
+.ajax-progress-throbber {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .throbber {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+  }
+}
+
+div[id^="ajax-wrapper"] {
+  position: relative;
 }

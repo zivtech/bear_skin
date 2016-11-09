@@ -1,3 +1,36 @@
+body {
+  color: $zeus;
+  font-family: $serif;
+}
+
+h1,
+h4 {
+  font-family: $sans;
+}
+
+h2,
+h3 {
+  font-family: $sans;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.serif {
+  font-family: $serif;
+}
+
+.sans {
+  font-family: $sans;
+}
+
+
 @mixin ui-typography($light, $normal, $dark, $ui-lightest-grey, $ui-light-grey, $ui-grey) {
 
 $color-names: light normal dark lightest-grey light-grey grey;
@@ -16,14 +49,6 @@ $colors: $light $normal $dark $ui-lightest-grey $ui-light-grey $ui-grey;
       background-color: nth($colors, $i);
     }
   }
-}
-
-.serif {
-  font-family: $serif;
-}
-
-.sans {
-  font-family: $sans;
 }
 
 

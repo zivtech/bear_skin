@@ -12,6 +12,10 @@
   }
 
   &__item {
+    @include font-size(.8);
+
+    font-family: $sans;
+    text-transform: uppercase;
     display: inline;
     margin-right: 5px;
   }

@@ -11,18 +11,18 @@ details {
 
   clear: both;
 
-  .summary {
-    @include padding(.5, .5);
-  }
-
-  .details-wrapper {
-    @include padding(.5, .5);
-  }
-
   &[open] {
 
     .summary {
       @include margin-bottom(.5);
+
+      border-bottom: 0;
+
+      .details-wrapper {
+        border-top: 0;
+        animation-name: fadeInDown;
+        animation-duration: 0.5s;
+      }
 
       &__icon {
         float: right;
@@ -35,14 +35,21 @@ details {
   }
 }
 
+.details-wrapper {
+  @include padding(.5, .5);
+}
+
 .summary {
   @include margin-bottom(1);
+  @include padding(.5, .5);
 
   display: block;
   float: left;
   width: 100%;
   position: relative;
   z-index: 2;
+  cursor: pointer;
+  outline: 0;
 
   &::-webkit-details-marker {
     display: none;

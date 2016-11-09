@@ -1,0 +1,25 @@
+.checkbox-wrapper {
+  top: 2px;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+
+  i {
+    font-size: 22px;
+    position: absolute;
+    top: -6px;
+    left: -2px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-checkbox {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
+  }
+}

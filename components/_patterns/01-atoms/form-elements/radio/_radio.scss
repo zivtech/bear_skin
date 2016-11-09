@@ -1,0 +1,26 @@
+.radio-wrapper {
+  top: 3px;
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  z-index: 1;
+
+  i {
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 1.5px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .form-radio {
+    display: none;
+
+    &:checked + i {
+      opacity: 1;
+    }
+  }
+}

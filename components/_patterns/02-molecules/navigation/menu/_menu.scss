@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 
+  transition: background .2s ease-in-out;
 
   &__item {
     @include margin(0, .5, 0, 0);
@@ -28,11 +29,48 @@
   }
 
   &--main {
+    position: absolute;
+    top: -200px;
+
+    @include breakpoint($bp-1024) {
+      position: relative;
+      top: 0;
+    }
+
+    .menu__item {
+      @include font-size(.9);
+    }
+
+    .menu__link {
+      @include link($ui-black, none, $ui-black, underline);
+    }
+
+    a.is-active,
+    .menu-item--active-trail a {
+
+      color: $white;
+      font-family: $serif;
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
 
     &.open {
+      @include font-size(1.4);
+
       display: flex;
       align-items: center;
       justify-content: center;
+
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: rgba(0, 0, 0, .85);
 
       .menu {
         width: 100%;
@@ -45,13 +83,33 @@
         }
 
         &__link {
+          @include link($white, none, $white, none);
+
+          font-family: $sans;
+          text-transform: uppercase;
           display: block;
           padding: 10px;
           width: 100%;
+          background: transparent;
+          border-radius: 0 !important;
+
+          &:hover,
+          &:focus,
+          &.is-active {
+            @include font-size(1.4);
+          }
         }
       }
     }
   }
+}
+
+.sub-menu {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 .list-group {
@@ -62,18 +120,21 @@
   }
 }
 
+
 #mnav {
   font-size: 26px;
   display: block;
   position: relative;
   z-index: 6;
-  color: $ui-black;
+  color: black;
 
   i {
     margin: 0;
+    transition: all .2s ease-in-out;
   }
 
   &.open {
+    color: $white;
 
     i {
       &:before {

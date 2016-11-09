@@ -1,0 +1,16 @@
+.button {
+
+  &.link {
+    margin-left: 5px;
+    font-family: $sans;
+  }
+}
+
+button {
+
+  &.link {
+    cursor: pointer;
+    font-family: $sans;
+    margin-left: 5px;
+  }
+}

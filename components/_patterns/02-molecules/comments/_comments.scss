@@ -9,3 +9,30 @@
 .indented:nth-of-type(3) {
   @include padding(0, 0, 0, 3);
 }
+
+.comment {
+
+  &__content {
+    font-family: $serif;
+  }
+
+  footer {
+    font-family: $sans;
+
+    p {
+      margin-top: 10px;
+      border-bottom: 1px solid $gallery;
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    a {
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+  }
+}

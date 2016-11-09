@@ -1,0 +1,32 @@
+.select-wrapper {
+  position: relative;
+  max-width: 500px;
+
+  &::after {
+    @include font-size(.7);
+
+    position: absolute;
+    content: '\25bc';
+    display: inline-block;
+    pointer-events: none;
+    font-size: 9px;
+    padding: 11px 12px 10px 12px;
+    color: $white;
+    right: 0;
+    top: -1px;
+    max-height: 34px;
+  }
+
+  &__select {
+    font-family: inherit;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    z-index: 2;
+    font-size: 1em;
+    height: 34px;
+    padding: 0 45px 0 10px;
+    min-width: 30px;
+  }
+}

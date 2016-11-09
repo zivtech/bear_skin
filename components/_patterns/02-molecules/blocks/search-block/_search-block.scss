@@ -1,0 +1,49 @@
+#msearch {
+  font-size: 22px;
+  transition: .2s color ease-in-out;
+}
+
+#msearch-close {
+  display: flex;
+  align-items: center;
+
+  margin-left: 2em;
+  font-size: 26px;
+  color: $white;
+}
+
+#msearch-content {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -200px;
+  z-index: 15;
+
+  background: rgba(0, 0, 0, .85);
+  transition: all .2s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+
+  &.open {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#search-block-form {
+  display: flex;
+  align-items: center;
+
+  .form-item {
+    margin: 0;
+  }
+
+  .form-submit {
+    margin: 0;
+  }
+
+  &__site-slogan {
+    @include margin(0, 0, 0, 1);
+  }
+}

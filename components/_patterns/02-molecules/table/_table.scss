@@ -1,0 +1,77 @@
+table {
+  @include margin(1, 0);
+
+  width: 100%;
+
+  .form-item {
+    margin: 0;
+
+    label {
+      display: block;
+    }
+  }
+
+  .js-form-type-radio label {
+    @include element-invisible;
+  }
+
+  .checkbox-wrapper {
+    display: block;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+
+    .form-checkbox {
+      display: block;
+    }
+
+    .icon-check {
+      display: none;
+    }
+  }
+
+  .radio-wrapper {
+    top: 3px;
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 0;
+    border-radius: 0;
+    z-index: 1;
+    background: transparent;
+
+    i {
+      display: none;
+    }
+
+    .form-radio {
+      display: block;
+
+      &:checked + i {
+        opacity: 1;
+      }
+    }
+  }
+
+  td,
+  th {
+    @include padding(.3, .5);
+
+    text-align: left;
+
+    a.tabledrag-handle .handle {
+      background: url(../images/move.svg) no-repeat left center;
+      background-size: 14px 14px;
+      display: inline-block;
+      margin-right: 14px;
+      width: 14px;
+    }
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+}

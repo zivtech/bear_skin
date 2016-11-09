@@ -6,52 +6,16 @@ code {
   background: $ui-lightest-grey;
 }
 
-.comment {
-
-  &__content {
-    font-family: $serif;
-  }
-
-  footer {
-    font-family: $sans;
-
-    p {
-      color: $emperor;
-      margin-top: 10px;
-      border-bottom: 1px solid $gallery;
-      margin-bottom: 0;
-    }
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-
-    a {
-      text-decoration: underline;
-      text-transform: uppercase;
-    }
-  }
-}
-
 details {
 
   .summary {
     background: $wild-sand;
-    cursor: pointer;
   }
 
   &[open] {
 
-    .summary {
-      border-bottom: 0;
-    }
-
     .details-wrapper {
       border: 1px solid $ui-light-grey;
-      border-top: 0;
-      animation-name: fadeInDown;
-      animation-duration: 0.5s;
     }
   }
 }
@@ -59,99 +23,32 @@ details {
 .summary {
   background: $ui-lightest-grey;
   border: 1px solid $ui-light-grey;
-
-  outline: 0;
 }
 
-.accordion {
-  @extend details;
-}
 
 .wrapper-breadcrumb {
   border-top: 1px solid $ui-lightest-grey;
 }
 
-.breadcrumb {
-  @include padding(.5, 0);
-
-  &__item {
-    @include font-size(.8);
-
-    font-family: $sans;
-    text-transform: uppercase;
-  }
-}
-
 .menu {
-  transition: background .2s ease-in-out;
 
   &--main {
-    position: absolute;
-    top: -200px;
-
-    @include breakpoint($bp-1024) {
-      position: relative;
-      top: 0;
-    }
-
-    .menu__item {
-      @include font-size(.9);
-    }
-
-    .menu__link {
-      @include link($ui-black, none, $ui-black, underline);
-    }
 
     a.is-active,
     .menu-item--active-trail a {
       @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-
-      color: $white;
-      font-family: $serif;
-
-      &:hover,
-      &:focus {
-        color: $white;
-      }
     }
 
     &.open {
-      @include font-size(1.4);
 
-      z-index: 5;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      right: 0;
-      top: 0;
-      background: rgba(0, 0, 0, .85);
 
       .menu {
-        width: 100%;
-
-        &__item {
-          display: block;
-          margin: 0;
-          text-align: center;
-          width: 100%;
-        }
 
         &__link {
-          @include link($white, none, $white, none);
-
-          font-family: $sans;
-          text-transform: uppercase;
-          display: block;
-          padding: 10px;
-          width: 100%;
-          background: transparent;
-          border-radius: 0 !important;
 
           &:hover,
           &:focus,
           &.is-active {
-            @include font-size(1.4);
-
             background: $normal;
           }
         }
@@ -160,57 +57,12 @@ details {
   }
 }
 
-.sub-menu {
-  visibility: hidden;
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-}
-
-#mnav {
-  font-size: 26px;
-  position: relative;
-  z-index: 6;
-  color: $ui-black;
-
-  i {
-    transition: all .2s ease-in-out;
-  }
-
-  &.open {
-    color: $white;
-  }
-}
-
 .pager {
 
-  &__item {
-    @include font-size(1);
-
-    font-family: $sans;
-
-    &.is-active {
-      background: $gallery;
-      color: $grey;
-    }
-  }
-
-  &__link {
-    color: $grey;
-  }
-
   i {
-    color: $white;
 
     &::before {
-      background: $grey;
-      border-radius: 50%;
-      right: 0;
-      width: 12px;
-      height: 12px;
       background: $normal;
-      transition: background 0.2s ease-in-out;
     }
 
     &:focus,
@@ -224,74 +76,20 @@ details {
 }
 
 .tabs {
-  padding: 0;
-  list-style-type: none;
-  font-size: 0;
 
   &__tab {
-    @include font-size(1);
-
-    overflow: auto;
-    border-bottom: 1px solid $gallery;
-    border-right: 1px solid $gallery;
-    border-top: 1px solid $gallery;
-    border-radius: 5px 5px 0 0;
-
-    &.is-active {
-      border: 1px solid $gallery;
-      border-bottom: 1px solid transparent;
-      border-left: 0;
-    }
-
-    &:first-child {
-      border-left: 1px solid $gallery;
-    }
+    border-radius: $ui-border-radius $ui-border-radius 0 0;
   }
 
   &__tab-link {
-    @include font-size(.8);
-
-    font-family: $sans;
-    text-transform: uppercase;
-    border-radius: $ui-border-radius;
+    border-radius: $ui-border-radius $ui-border-radius 0 0;
     color: $ui-grey;
-    background: $wild-sand;
 
     &:hover,
     &:focus,
     &.is-active {
       color: $ui-black;
-      background: transparent;
     }
-  }
-
-  &--secondary {
-
-    .tabs__tab {
-      border: 0;
-      border-radius: 0;
-    }
-
-    .tabs__tab-link {
-      background: transparent;
-
-      &.is-active {
-        border-bottom: 2px solid $emperor;
-        border-radius: 0;
-      }
-    }
-  }
-}
-
-.vertical-tabs {
-
-  &__menu-item-title {
-    text-decoration: none !important;
-  }
-
-  .summary,
-  .details-wrapper {
-    border: none !important;
   }
 }
 
@@ -321,14 +119,7 @@ details {
 }
 
 table {
-  @include margin(1, 0);
-
-  width: 100%;
   border: 1px solid $ui-light-grey;
-
-  .form-item {
-    margin: 0;
-  }
 
   thead {
     background: $ui-light-grey;
@@ -348,57 +139,10 @@ table {
       background: lighten($ui-lightest-grey,2%);
     }
   }
-
-  td,
-  th {
-    @include padding(.3, .5);
-
-    text-align: left;
-
-    a.tabledrag-handle .handle {
-      background: url(../images/move.svg) no-repeat left center;
-      background-size: 14px 14px;
-      display: inline-block;
-      margin-right: 14px;
-      width: 14px;
-    }
-
-  }
-
-  ul {
-    padding-left: 15px;
-  }
-
-  .form-item {
-
-    label {
-      display: block;
-    }
-  }
-
-  .checkbox-wrapper {
-    display: block;
-    width: auto;
-    height: auto;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-
-    .form-checkbox {
-      display: block;
-    }
-
-    .icon-check {
-      display: none;
-    }
-  }
 }
 
 #msearch {
-  font-size: 22px;
   color: $zeus;
-
-  transition: .2s color ease-in-out;
 
   &:hover,
   &:focus {
@@ -406,53 +150,14 @@ table {
   }
 }
 
-#msearch-close {
-  display: flex;
-  align-items: center;
-
-  margin-left: 2em;
-  font-size: 26px;
-  color: $white;
-}
-
-#msearch-content {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: -200px;
-  z-index: 15;
-
-  background: rgba(0, 0, 0, .85);
-  transition: all .2s ease-in-out;
-
-  display: flex;
-  justify-content: center;
-
-  &.open {
-    top: 0;
-    opacity: 1;
-  }
-}
-
 #search-block-form {
-  display: flex;
-  align-items: center;
 
-  .form-item {
-    margin: 0;
-  }
   .form-search {
     border-radius: $ui-border-radius 0 0 $ui-border-radius;
   }
 
   .form-submit {
-    @include margin(0, 0, 0, 0);
-
     border-radius: 0 $ui-border-radius $ui-border-radius 0;
-  }
-
-  &__site-slogan {
-    @include margin(0, 0, 0, 1);
   }
 }
 

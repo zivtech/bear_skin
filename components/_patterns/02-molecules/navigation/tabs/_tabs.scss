@@ -1,12 +1,32 @@
 .tabs {
   @include margin(.5, 0);
 
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+
   @include breakpoint($bp-540) {
     display: inline-block;
   }
 
   &__tab {
+    @include font-size(1);
+
     width: 100%;
+    overflow: auto;
+    border-bottom: 1px solid $gallery;
+    border-right: 1px solid $gallery;
+    border-top: 1px solid $gallery;
+
+    &.is-active {
+      border: 1px solid $gallery;
+      border-bottom: 1px solid transparent;
+      border-left: 0;
+    }
+
+    &:first-child {
+      border-left: 1px solid $gallery;
+    }
 
     @include breakpoint($bp-540) {
       display: inline-block;
@@ -15,10 +35,25 @@
   }
 
   &__tab-link {
+    @include font-size(.8);
     @include padding(.3, .5);
+
+    font-family: $sans;
+    color: $grey;
+    text-transform: uppercase;
 
     display: inline-block;
     width: 100%;
+    background: $wild-sand;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $ui-black;
+      background: transparent;
+    }
+
+
   }
 
   &--secondary {
@@ -26,6 +61,9 @@
 
     .tabs__tab {
       @include margin(.5, .5, .5, 0);
+
+      border: 0;
+      border-radius: 0;
     }
 
     .tabs__tab-link {
@@ -34,7 +72,6 @@
   }
 }
 
-
 .js-form-type-vertical-tabs {
   display: inline-block;
   width: 100%;
@@ -42,11 +79,20 @@
 
 .vertical-tabs {
 
+  &__menu-item-title {
+    text-decoration: none !important;
+  }
+
   &__pane {
     clear: none;
   }
 
   &__menu-item-summary {
     padding-left: 5px;
+  }
+
+  .summary,
+  .details-wrapper {
+    border: none !important;
   }
 }
