@@ -4662,8 +4662,13 @@ details[open] .summary i, [open].accordion .summary i {
   margin: 0;
 }
 
+.ui--grey #search-block-form .form-search {
+  border-radius: 5px 0 0 5px;
+}
+
 .ui--grey #search-block-form .form-submit {
-  margin: 0rem 0rem 0rem 0.8125rem;
+  margin: 0rem 0rem 0rem;
+  border-radius: 0 5px 5px 0;
 }
 
 .ui--grey #search-block-form__site-slogan {
@@ -5528,8 +5533,13 @@ details[open] .summary i, [open].accordion .summary i {
   margin: 0;
 }
 
+.ui--blue #search-block-form .form-search {
+  border-radius: 5px 0 0 5px;
+}
+
 .ui--blue #search-block-form .form-submit {
-  margin: 0rem 0rem 0rem 0.8125rem;
+  margin: 0rem 0rem 0rem;
+  border-radius: 0 5px 5px 0;
 }
 
 .ui--blue #search-block-form__site-slogan {
@@ -6394,8 +6404,13 @@ details[open] .summary i, [open].accordion .summary i {
   margin: 0;
 }
 
+.ui--green #search-block-form .form-search {
+  border-radius: 5px 0 0 5px;
+}
+
 .ui--green #search-block-form .form-submit {
-  margin: 0rem 0rem 0rem 0.8125rem;
+  margin: 0rem 0rem 0rem;
+  border-radius: 0 5px 5px 0;
 }
 
 .ui--green #search-block-form__site-slogan {

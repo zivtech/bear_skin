@@ -441,9 +441,14 @@ table {
   .form-item {
     margin: 0;
   }
+  .form-search {
+    border-radius: $ui-border-radius 0 0 $ui-border-radius;
+  }
 
   .form-submit {
-    @include margin(0, 0, 0, .5);
+    @include margin(0, 0, 0, 0);
+
+    border-radius: 0 $ui-border-radius $ui-border-radius 0;
   }
 
   &__site-slogan {
