@@ -1,6 +1,11 @@
 {%
 set classes = [
-  'container-fluid'
+  'container-fluid',
+  'node--type-' ~ content['#node'].bundle|clean_class,
+  not content['#node'].isPublished() ? 'node--unpublished',
+  content['#node'].isPromoted() ? 'node--promoted',
+  content['#node'].isSticky() ? 'node--sticky',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class
 ]
 %}
 
