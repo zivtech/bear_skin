@@ -1,14 +1,12 @@
 // flexbox overrides
 
 .container-fluid {
-  padding-right: 1rem;
-  padding-left: 1rem;
   width: 100%;
 }
 
 .row {
-  margin-right: -2rem;
-  margin-left: -2rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
   margin-bottom: 2rem;
 
   > main,
@@ -26,8 +24,6 @@
 }
 
 .single-row {
-  margin-right: -1rem;
-  margin-left: -1rem;
   margin-bottom: 2rem;
 }
 
