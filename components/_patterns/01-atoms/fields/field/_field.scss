@@ -1,0 +1,28 @@
+.field {
+
+  &--label-inline {
+    clear: both;
+
+    .field {
+
+      &__label {
+        @include font-size(1);
+
+        float: left;
+        margin: 0 5px 0 0;
+
+        &::after {
+          content: ":"
+        }
+      }
+
+      &__item {
+        overflow: hidden;
+      }
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+}

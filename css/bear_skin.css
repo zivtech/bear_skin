@@ -404,6 +404,28 @@ button.link {
   margin-left: 5px;
 }
 
+.field--label-inline {
+  clear: both;
+}
+
+.field--label-inline .field__label {
+  font-size: 1rem;
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+.field--label-inline .field__label::after {
+  content: ":";
+}
+
+.field--label-inline .field__item {
+  overflow: hidden;
+}
+
+.field--label-inline p:first-child {
+  margin-top: 0;
+}
+
 ::-webkit-input-placeholder {
   font-size: 0.8rem;
   font-weight: 400;
