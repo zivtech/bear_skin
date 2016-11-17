@@ -29,7 +29,7 @@
   }
 
   &--main {
-    position: absolute;
+    position: fixed;
     top: -200px;
 
     @include breakpoint($bp-1024) {
@@ -58,7 +58,7 @@
     }
 
     &.open {
-      @include font-size(1.4);
+      @include font-size(1.2);
 
       display: flex;
       align-items: center;
@@ -96,7 +96,7 @@
           &:hover,
           &:focus,
           &.is-active {
-            @include font-size(1.4);
+            @include font-size(1.2);
           }
         }
       }

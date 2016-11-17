@@ -3964,7 +3964,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .menu--main {
-  position: absolute;
+  position: fixed;
   top: -200px;
 }
 
@@ -3995,7 +3995,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .menu--main.open {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   -js-display: flex;
@@ -4044,7 +4044,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .menu--main.open .menu__link:hover, .menu--main.open .menu__link:focus, .menu--main.open .menu__link.is-active {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .sub-menu {
@@ -4323,6 +4323,10 @@ table ul {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   overflow: hidden;
+}
+
+.wrapper-header {
+  position: relative;
 }
 
 .wrapper-header__inner {
