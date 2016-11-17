@@ -30,6 +30,27 @@ strong {
   font-family: $sans;
 }
 
+a {
+  color: $color-link-normal;
+  transition: color .3s;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-link-normal;
+  }
+
+  &:active {
+    color: $color-link-active;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+
+    &:visited {
+      color: $color-link-hover;
+    }
+  }
+}
 
 @mixin ui-typography($light, $normal, $dark, $ui-lightest-grey, $ui-light-grey, $ui-grey) {
 

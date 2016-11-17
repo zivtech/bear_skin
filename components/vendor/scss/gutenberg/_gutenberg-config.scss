@@ -32,8 +32,6 @@ $custom-font-headings: null !default;
 // Paragraph indenting
 $paragraph-indent: false; // [ true / false ]
 
-
-
 // Modular Scale
 $modular-scale: (
   xxxl: 4.3,
@@ -69,13 +67,3 @@ $color-link-normal: $link !default;
 $color-link-hover: $link-hover !default;
 $color-link-active: $link-hover !default;
 $color-link-visited: $link !default;
-
-// Horizontal rule
-$hr-style: line; // [ line / type ]
-$hr-type-content: '***'; // [ '***' ]
-$hr-type-char-spacing: .2em; // [ .2em ]
-$hr-margin: 2;
-$hr-margin-desktop: $hr-margin;
-$hr-color: $gallery;
-$hr-width: 200; // [ 100 ] — In pixels, only for line style
-$hr-height: 4; // [ 2 ] — In pixels, only for line style
