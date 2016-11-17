@@ -3956,7 +3956,7 @@ details[open] .summary i, [open].accordion .summary i {
 
 .menu--main a.is-active,
 .menu--main .menu-item--active-trail a {
-  font-size: 0rem;
+  font-size: 0.9rem;
   color: white;
   font-family: "Noto Serif";
 }

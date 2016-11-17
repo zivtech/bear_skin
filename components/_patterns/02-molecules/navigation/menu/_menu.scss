@@ -47,7 +47,7 @@
 
     a.is-active,
     .menu-item--active-trail a {
-      @include font-size(0);
+      @include font-size(.9);
 
       color: $white;
       font-family: $serif;
