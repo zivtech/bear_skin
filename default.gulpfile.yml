@@ -39,6 +39,9 @@ js:
 images:
   src: ["images/**/*.{jpg,jpeg,gif,png}"]
   dest: "./images"
+fonts:
+  dest: "./css"
+  list: "./fonts.list"
 favicons:
   src: "images/bearskin-logo.png"
   dest: "./images/favicons"

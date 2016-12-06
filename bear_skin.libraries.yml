@@ -2,14 +2,10 @@ global-styles:
   version: 1.x
   css:
     theme:
+      css/web-fonts.css:
+        minified: true
       css/bear_skin.css:
         minified: false
-      https://fonts.googleapis.com/css?family=Montserrat:400,700:
-        type: external
-        minified: true
-      https://fonts.googleapis.com/css?family=Noto+Serif:400,700:
-        type: external
-        minified: true
   dependencies:
     - bear_skin/flexboxgrid
 
