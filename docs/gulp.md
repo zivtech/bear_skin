@@ -23,6 +23,27 @@ Then reinstall gulp:
 $ sudo npm install gulp -g
 ```
 
+## Adding Google Fonts
+
+Bear Skin uses Gulp to add [Google Fonts](https://fonts.google.com/). Instead of having multiple requests to the server to get fonts (one request for each font style, and one for the CSS), Bear Skin downloads all the fonts from Google. Then, they are base64 encoded into a data uri and embedded directly into the CSS. As a result, only one request is needed to get all fonts! Plus, since CSS is cached in the browser, subsequent page reloads should be faster.
+ 
+To start, simply browse Google Fonts and select all the fonts you want to use to in your theme. Once you have them selected, you receive a `link` embed tag from Google, which looks something like this:
+
+`<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">`
+
+Copy the `family` parameter of the URL, and paste it into the `fonts.list` file, like this:
+
+`Open+Sans:400,400i,600,700`
+
+In the `fonts.list` file, you can add as many rows of fonts as you want. For example:
+
+```
+Source+Sans+Pro&amp;subset=vietnamese
+Open+Sans:400,600i,800i&amp;subset=vietnamese
+```
+
+The CSS file is generated at `css/fonts.css`. This CSS file is included in the theme library's yaml file.
+
 ## Generating Favicons
 
 We use the gulp-favicons plugin to generate fav and app icons and the gulp-inject plugin to inject the appropriate markup into each page's `<head>`. You can find the default settings for these gulp tasks in `default.gulpfile.yml`.
