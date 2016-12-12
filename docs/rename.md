@@ -27,3 +27,4 @@ The theme defaults name is `bear_skin`. This might not be the name you'd like yo
     ```sh
     $ npm install
     ```
+1. Change the name and description of your new theme in `[newname].info.yml`.
