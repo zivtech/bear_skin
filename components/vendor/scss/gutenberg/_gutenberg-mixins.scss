@@ -28,6 +28,26 @@
   }
 }
 
+// Margin-right
+@mixin margin-right($number) {
+  @if $number == 0 {
+    margin-right: 0;
+  } @else {
+    //margin-right: #{ $number * $leading + 'px'};
+    margin-right: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
+// Margin-left
+@mixin margin-left($number) {
+  @if $number == 0 {
+    margin-left: 0;
+  } @else {
+    //margin-left: #{ $number * $leading + 'px'};
+    margin-left: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
 // Margin
 @mixin margin($top, $right: null, $bottom: null, $left: null) {
   @include padding-or-margin('margin', $top, $right, $bottom, $left);
@@ -36,6 +56,55 @@
 // Padding
 @mixin padding($top, $right: null, $bottom: null, $left: null) {
   @include padding-or-margin('padding', $top, $right, $bottom, $left);
+}
+
+@mixin padding-equal($number) {
+  @if $number == 0 {
+    padding: 0;
+  } @else {
+    //padding: #{ $number * $leading + 'px'};
+    padding: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
+// Padding-top
+@mixin padding-top($number) {
+  @if $number == 0 {
+    padding: 0;
+  } @else {
+    //padding-top: #{ $number * $leading + 'px'};
+    padding-top: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
+// Padding-bottom
+@mixin padding-bottom($number) {
+  @if $number == 0 {
+    padding: 0;
+  } @else {
+    //padding-bottom: #{ $number * $leading + 'px'};
+    padding-bottom: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
+// Padding-left
+@mixin padding-left($number) {
+  @if $number == 0 {
+    padding: 0;
+  } @else {
+    //padding-left: #{ $number * $leading + 'px'};
+    padding-left: #{ $number * $leading-rem + 'rem'};
+  }
+}
+
+// Padding-right
+@mixin padding-right($number) {
+  @if $number == 0 {
+    padding: 0;
+  } @else {
+    //padding-right: #{ $number * $leading + 'px'};
+    padding-right: #{ $number * $leading-rem + 'rem'};
+  }
 }
 
 @mixin padding-or-margin($type: 'margin', $top: null, $right: null, $bottom: null, $left: null) {
@@ -83,15 +152,6 @@
       //#{$type}: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'} #{ $left * $leading + 'px'};
       #{$type}: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'} #{ $left * $leading-rem + 'rem'};
     }
-  }
-}
-
-@mixin padding-equal($number) {
-  @if $number == 0 {
-    padding: 0;
-  } @else {
-    //padding: #{ $number * $leading + 'px'};
-    padding: #{ $number * $leading-rem + 'rem'};
   }
 }
 
