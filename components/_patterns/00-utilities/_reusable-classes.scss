@@ -1,6 +1,23 @@
+//
+// Display utilities
+//
+
+.u-hidden,
 .visually-hidden,
 .element-invisible {
   @include element-invisible;
+}
+
+.u-block {
+  display: block;
+}
+
+.u-inline-block {
+  display: inline-block;
+}
+
+.u-inline {
+  display: inline;
 }
 
 // Drupal utilities
@@ -17,10 +34,34 @@
   text-align: right;
 }
 
+//
+// Images utilities
+//
+
 img.align-center {
   margin: 0 auto;
   width: 100%;
   max-width: $site-max-width;
+}
+
+.u-img-centered {
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.desaturate {
+
+  img {
+    filter: grayscale(100%);
+    transition: filter .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      filter: none;
+    }
+  }
 }
 
 // Text utilities
@@ -30,13 +71,6 @@ img.align-center {
 
 .u-text-centered {
   text-align: center;
-}
-
-.u-img-centered {
-
-  img {
-    margin: 0 auto;
-  }
 }
 
 .u-text-right {
@@ -95,6 +129,11 @@ img.align-center {
 .expand-w-bc {
   width: 100vw !important;
   margin-left: calc(-50vw + 50%) !important;
+}
+
+.site-max-width {
+  max-width: $site-max-width;
+  margin: 0 auto;
 }
 
 //
@@ -355,4 +394,105 @@ img.align-center {
 
 .nm-right {
   margin-right: 0 !important;
+}
+
+//
+// Color Utilities
+//
+
+.black {
+  color: #000;
+}
+
+.white {
+  color: #FFF;
+}
+
+// Background Utilities
+.overlay {
+  opacity: .85;
+
+  &--dark {
+    background-color: $ui-black;
+    opacity: .3;
+  }
+
+  &--light {
+    background-color: $ui-light-grey;
+  }
+}
+
+.bg {
+
+  &--light {
+    background-color: $ui-light-grey;
+  }
+
+  &--dark {
+    background-color: $ui-black;
+  }
+
+  &__gradient {
+
+    &--light {
+      background: $ui-light-grey;
+    }
+
+    &--dark {
+      background: $ui-black;
+    }
+  }
+}
+
+// Text Color Utilities
+.text {
+
+  &--black {
+    color: $ui-black !important;
+  }
+
+  &--grey {
+    color: $ui-light-grey !important;
+  }
+}
+
+//
+// Border
+//
+
+.thin-top-border {
+  border-top: 1px solid $ui-light-grey;
+}
+
+.thin-bottom-border {
+  border-bottom: 1px solid $ui-light-grey;
+}
+
+.thick-top-border {
+  border-top: 2px solid $ui-light-grey;
+}
+
+.thick-bottom-border {
+  border-bottom: 2px solid $ui-light-grey;
+}
+
+.bullet {
+
+  &::before {
+    content: '•';
+    padding-right: 4px;
+  }
+}
+
+.collapsible {
+
+  @include breakpoint($bp-768) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+  }
+}
+
+.separate {
+  padding: 0 10px;
 }
