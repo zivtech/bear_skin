@@ -2,6 +2,10 @@
 // Wrappers
 //*********
 
+body {
+  overflow-x: hidden;
+}
+
 .wrapper--inner {
   @include padding(0, 1);
   margin: 0 auto;
