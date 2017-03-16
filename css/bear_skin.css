@@ -4419,6 +4419,15 @@ details[open] .summary i, [open].accordion .summary i {
   text-decoration: none;
 }
 
+.menu--main .menu__link:visited {
+  color: #222;
+}
+
+.menu--main .menu__link:visited:hover, .menu--main .menu__link:visited:focus {
+  color: #222;
+  text-decoration: underline;
+}
+
 .menu--main .menu__link:hover, .menu--main .menu__link:focus {
   color: #222;
   text-decoration: underline;
@@ -4479,6 +4488,15 @@ details[open] .summary i, [open].accordion .summary i {
   width: 100%;
   background: transparent;
   border-radius: 0 !important;
+}
+
+.menu--main.open .menu__link:visited {
+  color: white;
+}
+
+.menu--main.open .menu__link:visited:hover, .menu--main.open .menu__link:visited:focus {
+  color: white;
+  text-decoration: none;
 }
 
 .menu--main.open .menu__link:hover, .menu--main.open .menu__link:focus {

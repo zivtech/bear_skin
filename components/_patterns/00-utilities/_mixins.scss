@@ -18,6 +18,16 @@
   color: $color;
   text-decoration: $text-decoration;
 
+  &:visited {
+    color: $color;
+
+    &:hover,
+    &:focus {
+      color: $hover-color;
+      text-decoration: $hover-text-decoration;
+    }
+  }
+
   &:hover,
   &:focus {
     color: $hover-color;
@@ -67,6 +77,11 @@
     background-color: hex($color, $percentage);
     background-color: rgba($color, $percentage);
   }
+}
+
+@mixin hsla-fallback($property, $hsla, $fallback) {
+  #{$property}: $fallback;
+  #{$property}: $hsla;
 }
 
 @mixin button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
