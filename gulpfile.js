@@ -42,5 +42,6 @@
   gulp.task('build', ['styles:build', 'pl:build', 'favicons:build', 'images:build', 'fonts:download']);
   gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
   gulp.task('wcag', ['tests:wcag']);
+  gulp.task('pa11y', ['tests:pa11y']);
 
 }());

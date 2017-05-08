@@ -31,6 +31,7 @@
     "gulp-imagemin": "^3.0.1",
     "gulp-inject": "^4.1.0",
     "gulp-notify": "^2.2.0",
+    "gulp-pa11y": "0.0.4",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-replace": "^0.5.4",
