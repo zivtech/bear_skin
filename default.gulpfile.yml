@@ -30,6 +30,7 @@ css:
     enabled: true
     failOnError: false
   browsers: ["last 2 version", "> 5%", "IE 9"]
+  wcagCompliance: "AA"
 js:
   src: ["js/*.js"]
   dest: "./js"
