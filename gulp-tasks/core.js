@@ -1,6 +1,8 @@
 'use strict';
 var exec = require('child_process').exec;
 var notifier = require('node-notifier');
+var fs = require('fs');
+var exists = require('fs-exists-sync');
 
 function sh(cmd, exitOnError, cb) {
   console.log('Executing command', cmd);
@@ -33,6 +35,15 @@ function sh(cmd, exitOnError, cb) {
   });
 }
 
+function checkResultsDir() {
+  var resultsDir = 'audit-results';
+  if (!exists(resultsDir)) {
+    console.log('The ' + resultsDir + ' directory does not exist yet. Let\'s make that real quick.');
+    fs.mkdir(resultsDir);
+  }
+}
+
 module.exports = {
-  sh: sh
+  sh: sh,
+  checkResultsDir: checkResultsDir
 };

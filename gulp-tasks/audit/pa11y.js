@@ -7,6 +7,7 @@ module.exports = function (gulp, options) {
   + options.paths.devUrl;
 
   if (options.accessibility.pa11yReporter.toLowerCase() != 'cli') {
+    core.checkResultsDir();
     command += ' > audit-results/' +
     options.accessibility.wcagCompliance +
     '-standards-results.' +
