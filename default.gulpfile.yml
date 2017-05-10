@@ -34,7 +34,7 @@ css:
 accessibility:
   # The accessibility standard to use: Section508, WCAG2A, WCAG2AA, WCAG2AAA
   wcagCompliance: "WCAG2AA"
-  # The reporter to use: cli, html, json, csv, tsv 
+  # The reporter to use: cli, html, json, csv, tsv
   pa11yReporter: "cli"
 js:
   src: ["js/*.js"]
