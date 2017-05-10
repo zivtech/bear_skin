@@ -7,6 +7,7 @@
   var assign = require('lodash.assign');
   var backstopConfig  = require('./backstop.json');
   var argv = require('yargs').argv;
+  var runSequence = require('run-sequence').use(gulp);
 
   // read default config settings
   var config = yaml.safeLoad(fs.readFileSync('default.gulpfile.yml', 'utf8'), {json: true});
@@ -41,5 +42,6 @@
   gulp.task('default', ['watch']);
   gulp.task('build', ['styles:build', 'pl:build', 'favicons:build', 'images:build', 'fonts:download']);
   gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
+  gulp.task('audit', ['audit:specificity', 'audit:pa11y', 'audit:analyze']);
 
 }());
