@@ -1,23 +1,18 @@
-{% if content %}
-  {% if element is not empty %}
-    <{{ element ?: "div" }}{{ attributes.addClass(classes) }}>
-  {% endif %}
+{% if element is not empty %}
+  <{{ element ?: "div" }}{{ attributes.addClass(classes) }}>
+{% endif %}
 
-  {{ title_prefix }}
-  {% if display_title != false  %}
-    {% if label %}
-      {% set title_classes = title_classes ?: "block__content" %}
-      <{{ label_element ?: "h2" }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_element ?: "h2" }}>
-    {% endif %}
-  {% endif %}
-  {{ title_suffix }}
+{{ title_prefix }}
+{% if label_display %}
+  {% set title_classes = title_classes ?: "block__title" %}
+  <{{ label_element ?: "h2" }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_element ?: "h2" }}>
+{% endif %}
+{{ title_suffix }}
 
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+{% block content %}
+  {{ content }}
+{% endblock %}
 
-    {% if element is not empty %}
-      </{{ element ?: "div" }}>
-    {% endif %}
-
+{% if element is not empty %}
+  </{{ element ?: "div" }}>
 {% endif %}
