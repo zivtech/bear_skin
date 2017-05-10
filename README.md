@@ -20,6 +20,8 @@ When ready to work, refer to [Gulp tasks for front-end development](docs/gulp.md
     - [Adding Google Fonts](docs/gulp.md#adding-google-fonts)
     - [Generating fav/app icons](docs/gulp.md#generating-favicons)
     - [Visual regression testing](docs/gulp.md#visual-regression-testing)
+    - [Accessibility testing](docs/gulp.md#accessibility-testing)
+    - [CSS Analysis](docs/gulp.md#css-analysis)
 1. [Renaming the theme files and its functions](docs/rename.md)
 1. [Using Pattern Lab](docs/pattern_lab.md)
     - [Generate Pattern Lab files](docs/pattern_lab.md#generate-pattern-lab-files)
