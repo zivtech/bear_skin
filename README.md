@@ -34,7 +34,6 @@ When ready to work, refer to [Gulp tasks for front-end development](docs/gulp.md
 1. [Using Probo.CI](docs/probo.md)
     - [Linting with Probo](docs/probo.md#linting-with-probo)
 1. [Sass Structure](docs/sass.md)
-1. [Local Google Fonts](docs/local_google_fonts.md)
 
 * * *
 
