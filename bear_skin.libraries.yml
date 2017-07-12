@@ -1,5 +1,5 @@
 global-styles:
-  version: 1.x
+  version: 1.x
   css:
     theme:
       css/web-fonts.css:
