@@ -66,6 +66,20 @@ function bear_skin_preprocess_block(&$variables) {
   // All blocks get block and block__title classes.
   $variables['attributes']['class'][] = 'block';
   $variables['title_attributes']['class'][] = 'block__title';
+  $block = \Drupal::entityTypeManager()->getStorage('block')->load($variables['elements']['#id']);
+  $region = $block->getRegion();
+  $region_class = \Drupal\Component\Utility\Html::getClass($region);
+  $module = $block->getPlugin()->getPluginId();
+  $module = str_replace('block', '', $module);
+  $module_class = \Drupal\Component\Utility\Html::getClass($module);
+
+  // All blocks get block and block__title classes.
+  $variables['attributes']['class'][] = 'block-' . $module_class;
+  $variables['attributes']['class'][] = 'block-' . $region_class;
+  $variables['attributes']['class'][] = 'block-' . $module_class . '-' . $region_class;
+  $variables['title_attributes']['class'][] = 'block-' . $module_class . '__title';
+  $variables['title_attributes']['class'][] = 'block-' . $region_class . '__title';
+  $variables['title_attributes']['class'][] = 'block-' . $module_class . '-' . $region_class . '__title';
 
   // plugin_id => class
   $map = array(
@@ -93,6 +107,32 @@ function bear_skin_preprocess_block(&$variables) {
     // Menu blocks, including main navigation.
     $variables['attributes']['class'][] = 'nav';
     $variables['attributes']['class'][] = 'nav--' . substr($variables['plugin_id'], 18);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ */
+function bear_skin_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook) {
+  $element = $variables['elements'];
+
+  if (!empty($element['content']['#block_content'])) {
+    $block_bundle = $element['content']['#block_content']->bundle();
+    $suggestions_name = 'block__block_content__' . $block_bundle;
+    array_splice($suggestions, -2, 0, $suggestions_name);
+  }
+
+  $block = entity_load('block', $element['#id']);
+  if (!empty($block) && !empty($region = $block->get('region'))) {
+    $suggestions_name = 'block__block_content__' . $region;
+    array_splice($suggestions, -2, 0, $suggestions_name);
+
+    $settings = $block->get('settings');
+    if (!empty($settings)) {
+      $suggestions_name = 'block__block_content__' . $settings['provider'];
+      array_splice($suggestions, -2, 0, $suggestions_name);
+      array_splice($suggestions, -2, 0, 'block__' . $region . '__' . $settings['provider']);
+    }
   }
 }
 
