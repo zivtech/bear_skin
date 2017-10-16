@@ -2,7 +2,7 @@ global-styles:
   version: 1.x
   css:
     theme:
-      css/web-fonts.css:
+      css/fonts.css:
         minified: true
       css/bear_skin.css:
         minified: false
