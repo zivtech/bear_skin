@@ -16,7 +16,10 @@
 #}
 <details{{ attributes }}>
   {%- if title -%}
-    <summary{{ summary_attributes }} {{attributes.addClass(modifier_class)}}><div class="icon summary__icon" aria-hidden="true">&nbsp;<i></i></div><div class="summary__title">{{ title }}</div></summary>
+    <summary{{ summary_attributes }} {{attributes.addClass(modifier_class)}}>
+    <div class="summary__title">{{ title }}</div>
+    <div class="icon summary__icon" aria-hidden="true">&nbsp;<i></i></div>
+  </summary>
   {%- endif -%}
   <div class="details-wrapper">
     {% if errors %}

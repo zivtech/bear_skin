@@ -304,7 +304,6 @@ img.align-center {
 .desaturate img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  -webkit-transition: -webkit-filter .3s ease-in-out;
   transition: -webkit-filter .3s ease-in-out;
   transition: filter .3s ease-in-out;
   transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
@@ -890,7 +889,6 @@ label {
   font-family: "Montserrat";
   width: 100%;
   max-width: 30em;
-  -webkit-transition: border .2s ease-in-out;
   transition: border .2s ease-in-out;
 }
 
@@ -976,7 +974,6 @@ div[id^="ajax-wrapper"] {
   top: -6px;
   left: -2px;
   opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
 }
 
@@ -1020,7 +1017,6 @@ label {
   top: 0;
   left: 1.5px;
   opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
 }
 
@@ -4042,7 +4038,6 @@ strong {
 
 a {
   color: #728dac;
-  -webkit-transition: color .3s;
   transition: color .3s;
   text-decoration: none;
 }
@@ -4131,7 +4126,6 @@ code {
 
 #msearch {
   font-size: 22px;
-  -webkit-transition: .2s color ease-in-out;
   transition: .2s color ease-in-out;
 }
 
@@ -4155,7 +4149,6 @@ code {
   top: -200px;
   z-index: 15;
   background: rgba(0, 0, 0, 0.85);
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4232,7 +4225,6 @@ code {
 .details-wrapper {
   padding: 0.8125rem 0.8125rem;
   position: relative;
-  z-index: 1;
   border: 0;
 }
 
@@ -4242,26 +4234,22 @@ details, .accordion {
 }
 
 details[open] .summary, [open].accordion .summary {
-  margin-bottom: 0.8125rem;
+  margin-bottom: 0;
   border-bottom: 0;
-}
-
-details[open] .summary .details-wrapper, [open].accordion .summary .details-wrapper {
-  border-top: 0;
-  -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-
-details[open] .summary__icon, [open].accordion .summary__icon {
-  float: right;
 }
 
 details[open] .summary i, [open].accordion .summary i {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+details[open] .details-wrapper, [open].accordion .details-wrapper {
+  border-top: 0 !important;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .details-wrapper {
@@ -4271,11 +4259,13 @@ details[open] .summary i, [open].accordion .summary i {
 .summary {
   margin-bottom: 1.625rem;
   padding: 0.8125rem 0.8125rem;
-  display: block;
-  float: left;
-  width: 100%;
-  position: relative;
-  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   cursor: pointer;
   outline: 0;
 }
@@ -4285,8 +4275,6 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .summary__icon {
-  float: right;
-  text-indent: -9999px;
   display: -webkit-box;
   display: -ms-flexbox;
   -js-display: flex;
@@ -4297,19 +4285,14 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .summary i {
-  -webkit-transition: -webkit-transform .2s linear;
-  transition: -webkit-transform .2s linear;
-  transition: transform .2s linear;
-  transition: transform .2s linear, -webkit-transform .2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 7px solid black;
-}
-
-.summary__title {
-  float: left;
 }
 
 .messages {
@@ -4382,7 +4365,6 @@ details[open] .summary i, [open].accordion .summary i {
 .menu {
   margin: 0;
   padding: 0;
-  -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
 }
 
@@ -4513,7 +4495,6 @@ details[open] .summary i, [open].accordion .summary i {
   position: absolute;
   left: 0;
   opacity: 0;
-  -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
 }
 
@@ -4531,7 +4512,6 @@ details[open] .summary i, [open].accordion .summary i {
 
 #mnav i {
   margin: 0;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -4598,7 +4578,6 @@ details[open] .summary i, [open].accordion .summary i {
   right: 0;
   width: 12px;
   height: 12px;
-  -webkit-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
 }
 
@@ -4950,9 +4929,7 @@ table ul {
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
-  background: -webkit-linear-gradient(false, false);
   background: linear-gradient(false, false);
   color: white;
   padding: 0.5rem 1rem;
@@ -4961,7 +4938,6 @@ table ul {
 }
 
 .ui--grey .button:hover, .ui--grey .form-submit:hover, .ui--grey .dropbutton-widget:hover, .ui--grey .button:focus, .ui--grey .form-submit:focus, .ui--grey .dropbutton-widget:focus, .ui--grey .button:visited, .ui--grey .form-submit:visited, .ui--grey .dropbutton-widget:visited {
-  background: -webkit-linear-gradient(false, false);
   background: linear-gradient(false, false);
   text-decoration: none;
 }
@@ -5068,9 +5044,7 @@ table ul {
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
-  background: -webkit-linear-gradient(false, false);
   background: linear-gradient(false, false);
   color: white;
   padding: 0.5rem 1rem;
@@ -5084,7 +5058,6 @@ table ul {
 .ui--grey .menu--main .menu-item--active-trail a:hover,
 .ui--grey .menu--main .menu-item--active-trail a:focus,
 .ui--grey .menu--main .menu-item--active-trail a:visited {
-  background: -webkit-linear-gradient(false, false);
   background: linear-gradient(false, false);
   text-decoration: none;
 }
@@ -5280,9 +5253,7 @@ table ul {
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
-  background: -webkit-linear-gradient(#427AB3, #2E6296);
   background: linear-gradient(#427AB3, #2E6296);
   color: white;
   padding: 0.5rem 1rem;
@@ -5291,7 +5262,6 @@ table ul {
 }
 
 .ui--blue .button:hover, .ui--blue .form-submit:hover, .ui--blue .dropbutton-widget:hover, .ui--blue .button:focus, .ui--blue .form-submit:focus, .ui--blue .dropbutton-widget:focus, .ui--blue .button:visited, .ui--blue .form-submit:visited, .ui--blue .dropbutton-widget:visited {
-  background: -webkit-linear-gradient(#225E9A, #1E4976);
   background: linear-gradient(#225E9A, #1E4976);
   text-decoration: none;
 }
@@ -5398,9 +5368,7 @@ table ul {
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
-  background: -webkit-linear-gradient(#427AB3, #2E6296);
   background: linear-gradient(#427AB3, #2E6296);
   color: white;
   padding: 0.5rem 1rem;
@@ -5414,7 +5382,6 @@ table ul {
 .ui--blue .menu--main .menu-item--active-trail a:hover,
 .ui--blue .menu--main .menu-item--active-trail a:focus,
 .ui--blue .menu--main .menu-item--active-trail a:visited {
-  background: -webkit-linear-gradient(#225E9A, #1E4976);
   background: linear-gradient(#225E9A, #1E4976);
   text-decoration: none;
 }
@@ -5610,9 +5577,7 @@ table ul {
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
-  background: -webkit-linear-gradient(#02978E, #0A8277);
   background: linear-gradient(#02978E, #0A8277);
   color: white;
   padding: 0.5rem 1rem;
@@ -5621,7 +5586,6 @@ table ul {
 }
 
 .ui--green .button:hover, .ui--green .form-submit:hover, .ui--green .dropbutton-widget:hover, .ui--green .button:focus, .ui--green .form-submit:focus, .ui--green .dropbutton-widget:focus, .ui--green .button:visited, .ui--green .form-submit:visited, .ui--green .dropbutton-widget:visited {
-  background: -webkit-linear-gradient(#016F68, #00534C);
   background: linear-gradient(#016F68, #00534C);
   text-decoration: none;
 }
@@ -5728,9 +5692,7 @@ table ul {
   text-decoration: none;
   cursor: pointer;
   border-style: none;
-  -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
-  background: -webkit-linear-gradient(#02978E, #0A8277);
   background: linear-gradient(#02978E, #0A8277);
   color: white;
   padding: 0.5rem 1rem;
@@ -5744,7 +5706,6 @@ table ul {
 .ui--green .menu--main .menu-item--active-trail a:hover,
 .ui--green .menu--main .menu-item--active-trail a:focus,
 .ui--green .menu--main .menu-item--active-trail a:visited {
-  background: -webkit-linear-gradient(#016F68, #00534C);
   background: linear-gradient(#016F68, #00534C);
   text-decoration: none;
 }
@@ -6012,7 +5973,6 @@ table ul {
   .collapsible{
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: max-height 1s ease-in-out;
     transition: max-height 1s ease-in-out;
   }
   .layout-sidebar-first .wrapper-main__inner, .layout-sidebar-second .wrapper-main__inner{
