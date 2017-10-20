@@ -5,8 +5,8 @@
 
   font-family: $sans;
   color: $grey;
-  background-color: $wild-sand;
-  border: 2px solid darken($gallery, 5%);
+  background-color: $grey-lighter;
+  border: 2px solid darken($grey-light, 5%);
 
   display: flex;
   align-items: center;
@@ -18,20 +18,20 @@
   }
 
   &--status {
-    color: $emerald;
-    background-color: lighten($emerald, 45%);
-    border: 2px solid lighten($emerald, 35%);
+    color: $green;
+    background-color: lighten($green, 45%);
+    border: 2px solid lighten($green, 35%);
   }
 
   &--warning {
-    color: $tangerine;
-    background-color: lighten($tangerine, 50%);
-    border: 2px solid lighten($tangerine, 40%);
+    color: $gold-dark;
+    background-color: lighten($gold-dark, 50%);
+    border: 2px solid lighten($gold-dark, 40%);
   }
 
   &--error {
-    color: $outrageous-orange;
-    background-color: lighten($outrageous-orange, 35%);
-    border: 2px solid lighten($outrageous-orange, 25%);
+    color: $orange;
+    background-color: lighten($orange, 35%);
+    border: 2px solid lighten($orange, 25%);
   }
 }

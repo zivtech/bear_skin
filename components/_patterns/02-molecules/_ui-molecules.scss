@@ -9,7 +9,7 @@ code {
 details {
 
   .summary {
-    background: $wild-sand;
+    background: $grey-lighter;
   }
 
   &[open] {
@@ -144,7 +144,7 @@ table {
 }
 
 #msearch {
-  color: $zeus;
+  color: $black-light;
 
   &:hover,
   &:focus {

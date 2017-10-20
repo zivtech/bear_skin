@@ -40,7 +40,7 @@ button {
 
   .throbber {
     border: .3rem solid $normal;
-    border-top-color: $gallery;
+    border-top-color: $grey-light;
   }
 }
 
@@ -68,7 +68,7 @@ fieldset {
 }
 
 .select-wrapper {
-  border: 1px solid $gallery;
+  border: 1px solid $grey-light;
   border-radius: $ui-border-radius;
   background: $ui-lightest-grey;
 
