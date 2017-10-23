@@ -4244,6 +4244,9 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
           justify-content: space-between;
   cursor: pointer;
   outline: 0;
+  /* Using a vendor prefix because it is currently the prescribed way to remove
+  the default details element arrow – see
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#Example_with_styling */
 }
 
 .summary::-webkit-details-marker {
