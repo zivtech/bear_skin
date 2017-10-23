@@ -80,7 +80,7 @@
 .vertical-tabs {
 
   &__menu-item-title {
-    text-decoration: none !important;
+    text-decoration: none;
   }
 
   &__pane {
@@ -93,6 +93,6 @@
 
   .summary,
   .details-wrapper {
-    border: none !important;
+    border: none;
   }
 }

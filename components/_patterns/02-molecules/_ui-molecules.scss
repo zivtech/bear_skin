@@ -11,13 +11,6 @@
     .summary {
       background: $grey-lighter;
     }
-
-    &[open] {
-
-      .details-wrapper {
-        border: 1px solid $ui-light-grey;
-      }
-    }
   }
 
   .summary {
