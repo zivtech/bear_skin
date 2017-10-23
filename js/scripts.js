@@ -12,7 +12,7 @@
         $mainMenu.once('bsMobileNavigation').each(function (i) {
 
           // elements that toggle mobile menu
-          var $nav = $('#mnav', context);
+          var $nav = $('.mnav', context);
 
           $nav.on('click', function () {
             $(this).toggleClass('open');
@@ -27,16 +27,16 @@
     attach: function (context, settings) {
 
       // search toggle
-      var $searchToggle = $('#msearch', context);
+      var $searchToggle = $('.msearch', context);
 
       // search content
-      var $mainSearch = $('#msearch-content', context);
+      var $mainSearch = $('.msearch-content', context);
 
       if ($searchToggle.length && $mainSearch.length) {
         $mainSearch.once('bsSearchForm').each(function (i) {
 
           // search form closing toggle
-          var $closer = $('#msearch-close', context);
+          var $closer = $('.msearch-close', context);
 
           $searchToggle.on('click', function () {
             $mainSearch.toggleClass('open');

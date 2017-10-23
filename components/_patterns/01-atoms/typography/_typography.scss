@@ -1,5 +1,5 @@
 body {
-  color: $zeus;
+  color: $black-light;
   font-family: $serif;
 }
 
@@ -54,23 +54,21 @@ a {
 
 @mixin ui-typography($light, $normal, $dark, $ui-lightest-grey, $ui-light-grey, $ui-grey) {
 
-$color-names: light normal dark lightest-grey light-grey grey;
-$colors: $light $normal $dark $ui-lightest-grey $ui-light-grey $ui-grey;
+  $color-names: light normal dark lightest-grey light-grey grey;
+  $colors: $light $normal $dark $ui-lightest-grey $ui-light-grey $ui-grey;
 
 
-@for $i from 1 through length($colors) {
+  @for $i from 1 through length($colors) {
 
-  .#{nth($color-names, $i)} {
-    color: nth($colors, $i);
-  }
+    .#{nth($color-names, $i)} {
+      color: nth($colors, $i);
+    }
 
-  .bg {
+    .bg {
 
-    &--#{nth($color-names, $i)} {
-      background-color: nth($colors, $i);
+      &--#{nth($color-names, $i)} {
+        background-color: nth($colors, $i);
+      }
     }
   }
 }
-
-
-} // close the mixin

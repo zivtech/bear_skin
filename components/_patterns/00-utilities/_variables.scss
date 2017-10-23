@@ -1,25 +1,41 @@
 //
 // BASE COLORS
 //
-$black:              hsla(0, 0%, 0%, 1);
-$zeus:               hsla(18, 21%, 12%, 1);
-$emperor:            hsla(0, 0%, 33%, 1);
-$grey:               hsla(0, 0%, 53%, 1);
-$gallery:            hsla(0, 0%, 92%, 1);
-$wild-sand:          hsla(0, 0%, 96%, 1);
-$white:              hsla(0, 100%, 100%, 1);
-$bermuda-grey:       hsla(212, 26%, 56%, 1);
-$dark-bermuda-grey:  darken($bermuda-grey, 20%);
-$light-bermuda-grey: lighten($bermuda-grey, 20%);
-$emerald:            hsla(147, 52%, 51%, 1);
-$saffron:            hsla(40, 94%, 59%, 1);
-$tangerine:          hsla(40, 100%, 44%, 1);
-$outrageous-orange:  hsla(13, 100%, 63%, 1);
-$persian-red:        hsla(0, 64%, 51%, 1);
+// $black:              hsla(0, 0%, 0%, 1);
+// $zeus:               hsla(18, 21%, 12%, 1);
+// $emperor:            hsla(0, 0%, 33%, 1);
+// $grey:               hsla(0, 0%, 53%, 1);
+// $gallery:            hsla(0, 0%, 92%, 1);
+// $wild-sand:          hsla(0, 0%, 96%, 1);
+// $white:              hsla(0, 100%, 100%, 1);
+// $bermuda-grey:       hsla(212, 26%, 56%, 1);
+// $dark-bermuda-grey:  darken($bermuda-grey, 20%);
+// $light-bermuda-grey: lighten($bermuda-grey, 20%);
+// $emerald:            hsla(147, 52%, 51%, 1);
+// $saffron:            hsla(40, 94%, 59%, 1);
+// $tangerine:          hsla(40, 100%, 44%, 1);
+// $outrageous-orange:  hsla(13, 100%, 63%, 1);
+// $persian-red:        hsla(0, 64%, 51%, 1);
 
-$default-body: $zeus;
-$link: $bermuda-grey;
-$link-hover: $dark-bermuda-grey;
+$black:           hsla(0, 0%, 0%, 1);
+$black-light:     hsla(18, 21%, 12%, 1);
+$grey-dark:       hsla(0, 0%, 33%, 1);
+$grey:            hsla(0, 0%, 53%, 1);
+$grey-light:      hsla(0, 0%, 92%, 1);
+$grey-lighter:    hsla(0, 0%, 96%, 1);
+$white:           hsla(0, 100%, 100%, 1);
+$bluegrey:        hsla(212, 26%, 56%, 1);
+$bluegrey-dark:   darken($bluegrey, 20%);
+$bluegrey-light:  lighten($bluegrey, 20%);
+$green:           hsla(147, 52%, 51%, 1);
+$gold:            hsla(40, 94%, 59%, 1);
+$gold-dark:       hsla(40, 100%, 44%, 1);
+$orange:          hsla(13, 100%, 63%, 1);
+$red:             hsla(0, 64%, 51%, 1);
+
+$default-body: $black-light;
+$link: $bluegrey;
+$link-hover: $bluegrey-dark;
 
 
 //

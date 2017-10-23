@@ -70,17 +70,14 @@
 // value fallback for older browsers.
 @mixin alpha-color($type, $color, $percentage) {
   @if $type == color {
-    color: hex($color, $percentage);
     color: rgba($color, $percentage);
   }
   @if $type == background {
-    background-color: hex($color, $percentage);
     background-color: rgba($color, $percentage);
   }
 }
 
 @mixin hsla-fallback($property, $hsla, $fallback) {
-  #{$property}: $fallback;
   #{$property}: $hsla;
 }
 

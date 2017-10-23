@@ -1,8 +1,7 @@
 .details-wrapper {
-  @include padding(.5, .5);
+  @include padding(0.5, 0.5);
 
   position: relative;
-  z-index: 1;
   border: 0;
 }
 
@@ -14,66 +13,56 @@ details {
   &[open] {
 
     .summary {
-      @include margin-bottom(.5);
-
+      margin-bottom: 0;
       border-bottom: 0;
-
-      .details-wrapper {
-        border-top: 0;
-        animation-name: fadeInDown;
-        animation-duration: 0.5s;
-      }
-
-      &__icon {
-        float: right;
-      }
 
       i {
         transform: rotate(180deg);
       }
     }
+
+    .details-wrapper {
+      border-top: 0;
+      animation-name: fadeInDown;
+      animation-duration: 0.5s;
+    }
   }
 }
 
 .details-wrapper {
-  @include padding(.5, .5);
+  @include padding(0.5, 0.5);
+
+  border: 1px solid $ui-light-grey;
 }
 
 .summary {
   @include margin-bottom(1);
-  @include padding(.5, .5);
+  @include padding(0.5, 0.5);
 
-  display: block;
-  float: left;
-  width: 100%;
-  position: relative;
-  z-index: 2;
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
   outline: 0;
 
+  /* Using a vendor prefix because it is currently the prescribed way to remove
+  the default details element arrow – see
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#Example_with_styling */
   &::-webkit-details-marker {
     display: none;
   }
 
   &__icon {
-    float: right;
-    text-indent: -9999px;
-
     display: flex;
     align-items: center;
   }
 
   i {
-    transition: transform .2s linear;
+    transition: transform 0.2s linear;
     width: 0;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 7px solid black;
-  }
-
-  &__title {
-    float: left;
   }
 }
 
