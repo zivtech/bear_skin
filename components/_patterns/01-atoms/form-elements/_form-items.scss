@@ -1,18 +1,18 @@
-::-webkit-input-placeholder {
-   @include placeholder;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   @include placeholder;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   @include placeholder;
-}
-
-:-ms-input-placeholder {
-   @include placeholder;
-}
+// ::-webkit-input-placeholder {
+//   @include placeholder;
+// }
+//
+// :-moz-placeholder { /* Firefox 18- */
+//   @include placeholder;
+// }
+//
+// ::-moz-placeholder {  /* Firefox 19+ */
+//   @include placeholder;
+// }
+//
+// :-ms-input-placeholder {
+//   @include placeholder;
+// }
 
 form {
   @include margin(1, 0);
@@ -34,9 +34,8 @@ label {
   content: '';
   vertical-align: super;
   display: inline-block;
-  background: url(../images/required.svg) no-repeat left center;
+  background: url('../images/required.svg') no-repeat left center;
   background-size: 6px 6px;
-  display: inline-block;
   margin-left: .3em;
   width: 6px;
   height: 6px;
@@ -77,7 +76,7 @@ label {
   @extend .button;
 }
 
-input[type="search"] {
+input[type='search'] {
   @extend .form-text;
 
   appearance: initial;
@@ -97,11 +96,11 @@ input[type="search"] {
   }
 
   .secondary-action {
-    margin-top: 5px
+    margin-top: 5px;
   }
 
   .dropbutton-toggle {
-  button,
+    button,
     a {
       color: $white;
     }
@@ -132,6 +131,6 @@ input[type="search"] {
   }
 }
 
-div[id^="ajax-wrapper"] {
+div[id^='ajax-wrapper'] {
   position: relative;
 }
