@@ -1,9 +1,9 @@
-#msearch {
+.msearch {
   font-size: 22px;
   transition: .2s color ease-in-out;
 }
 
-#msearch-close {
+.msearch-close {
   display: flex;
   align-items: center;
 
@@ -12,7 +12,7 @@
   color: $white;
 }
 
-#msearch-content {
+.msearch-content {
   position: absolute;
   width: 100%;
   left: 0;
