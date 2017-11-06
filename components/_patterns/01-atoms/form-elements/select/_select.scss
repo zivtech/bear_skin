@@ -1,6 +1,9 @@
 .select-wrapper {
   position: relative;
   max-width: 500px;
+  border: 1px solid $gallery;
+  border-radius: $ui-border-radius;
+  background: $ui-lightest-grey;
 
   &::after {
     position: absolute;
@@ -13,6 +16,8 @@
     right: 0;
     top: -1px;
     max-height: 34px;
+    background: $ui-grey;
+    border-radius: 0 $ui-border-radius $ui-border-radius 0;
   }
 
   &__select {

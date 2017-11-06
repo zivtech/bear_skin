@@ -1,7 +1,26 @@
 table {
+  border: 1px solid $ui-light-grey;
   margin: 1rem 0;
-
   width: 100%;
+
+  thead {
+    background: $ui-light-grey;
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: 1px solid $ui-light-grey;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    tr:nth-child(odd) {
+      background: lighten($ui-lightest-grey,2%);
+    }
+  }
 
   .form-item {
     margin: 0;

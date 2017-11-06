@@ -5,6 +5,9 @@
   width: 16px;
   height: 16px;
   z-index: 1;
+  border: 2px solid $ui-light-grey;
+  border-radius: $ui-border-radius;
+  background: $ui-lightest-grey;
 
   i {
     font-size: 22px;
@@ -13,6 +16,7 @@
     left: -2px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
+    color: $emerald;
   }
 
   .form-checkbox {

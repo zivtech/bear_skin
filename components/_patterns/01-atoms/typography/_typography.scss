@@ -52,6 +52,11 @@ a {
   }
 }
 
+code {
+  border: 1px dotted $ui-light-grey;
+  background: $ui-lightest-grey;
+}
+
 @mixin ui-typography($light, $normal, $dark, $ui-lightest-grey, $ui-light-grey, $ui-grey) {
 
 $color-names: light normal dark lightest-grey light-grey grey;

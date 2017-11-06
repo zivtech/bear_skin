@@ -84,7 +84,7 @@
   #{$property}: $hsla;
 }
 
-@mixin button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
+@mixin button($color, $background-color, $background-hover) {
   font-size: 14px;
   position: relative;
   display: inline-block;
@@ -94,16 +94,15 @@
   border-style: none;
   transition: background .2s ease-in-out;
 
-  background: linear-gradient($gradient-top, $gradient-bottom);
+  background: $background-color;
   color: $white;
   padding: $ui-button-padding;
   border-radius: $ui-border-radius;
   font-family: $sans;
 
   &:hover,
-  &:focus,
-  &:visited {
-    background: linear-gradient($hover-gradient-top, $hover-gradient-bottom);
+  &:focus {
+    background: $background-hover;
     text-decoration: none;
   }
 }

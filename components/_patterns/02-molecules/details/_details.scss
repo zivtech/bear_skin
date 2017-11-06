@@ -17,9 +17,9 @@ details {
       border-bottom: 0;
 
       .details-wrapper {
-        border-top: 0;
         animation-name: fadeInDown;
         animation-duration: 0.5s;
+        border: 1px solid $ui-light-grey;
       }
 
       &__icon {
@@ -47,6 +47,14 @@ details {
   z-index: 2;
   cursor: pointer;
   outline: 0;
+  background: $wild-sand;
+
+  &[open] {
+
+    .details-wrapper {
+
+    }
+  }
 
   &::-webkit-details-marker {
     display: none;

@@ -1,5 +1,3 @@
-@mixin ui-pages($light, $normal, $dark, $gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
-
 .page-404 {
   background: $ui-lightest-grey;
 
@@ -35,6 +33,3 @@
     height: 100%;
   }
 }
-
-
-} // closing the mixin

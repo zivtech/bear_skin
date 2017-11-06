@@ -62,9 +62,11 @@ label {
   width: 100%;
   max-width: 30em;
   transition: border .2s ease-in-out;
+  border: 1px solid $ui-light-grey;
 
   &:focus {
     outline: 0;
+    border-color: $emerald;
   }
 }
 
@@ -103,8 +105,13 @@ input[type="search"] {
   }
 }
 
+fieldset {
+  border: 1px solid $ui-light-grey;
+}
+
 .description {
   font-size: 12px;
+  color: $ui-grey;
 }
 
 .ajax-progress-throbber {
@@ -124,9 +131,18 @@ input[type="search"] {
     height: 30px;
     border-radius: 50%;
     animation: spin 1s infinite linear;
+    border: .3rem solid $emerald;
+    border-top-color: $white;
   }
 }
 
 div[id^="ajax-wrapper"] {
   position: relative;
+}
+
+.ajax-progress-throbber {
+
+  .throbber {
+
+  }
 }

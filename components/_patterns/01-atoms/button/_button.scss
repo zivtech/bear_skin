@@ -1,16 +1,18 @@
+
 .button {
+  @include button($white, $grey, $black);
 
   &.link {
-    margin-left: 5px;
-    font-family: $sans;
+    border: 1px solid $ui-light-grey;
+    background: $ui-lightest-grey;
+    cursor: pointer;
   }
 }
 
 button {
 
   &.link {
-    cursor: pointer;
-    font-family: $sans;
-    margin-left: 5px;
+    background: $ui-lightest-grey;
+    border: 1px solid $ui-light-grey;
   }
 }

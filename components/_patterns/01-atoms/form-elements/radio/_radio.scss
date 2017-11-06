@@ -6,6 +6,8 @@
   height: 18px;
   border-radius: 50%;
   z-index: 1;
+  border: 2px solid $ui-light-grey;
+  background: $ui-lightest-grey;
 
   i {
     font-size: 14px;
@@ -14,6 +16,7 @@
     left: 1.5px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
+    color: $emerald;
   }
 
   .form-radio {
