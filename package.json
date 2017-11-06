@@ -88,5 +88,7 @@
     "url": "https://github.com/zivtech/bear_skin/issues"
   },
   "homepage": "https://github.com/zivtech/ias#readme",
-  "dependencies": {}
+  "dependencies": {
+    "postcss-responsive-type": "^1.0.0"
+  }
 }

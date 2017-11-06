@@ -1,9 +1,9 @@
 .wrapper-breadcrumb {
-  @include margin-top(2);
+  margin-top: 2em;
 }
 
 .breadcrumb {
-  @include padding(.5, 0);
+  padding: .5em 0;
 
   &__list {
     list-style-type: none;
@@ -12,8 +12,7 @@
   }
 
   &__item {
-    @include font-size(.8);
-
+    font-size: 14px;
     font-family: $sans;
     text-transform: uppercase;
     display: inline;

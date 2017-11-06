@@ -7,7 +7,7 @@ body {
 }
 
 .wrapper--inner {
-  @include padding(0, 1);
+  padding: 0 1em;
   margin: 0 auto;
   max-width: $site-max-width;
   width: 100%;
@@ -27,8 +27,7 @@ body {
 
   .column.main {
     @include breakpoint($bp-768) {
-      @include padding(0, 0, 0, 2);
-
+      padding: 0 0 0 2em;
       flex-basis: 75%;
       order: 2;
     }
@@ -51,7 +50,7 @@ body {
 
   .column.main {
     @include breakpoint($bp-768) {
-      @include padding(0, 2, 0, 0);
+      padding: 0 2em 0 0;
 
       order: 1;
     }
@@ -77,8 +76,7 @@ body {
 
   .column.main {
     @include breakpoint($bp-768) {
-      @include padding(0, 1);
-
+      padding: 0 2em;
       flex-basis: 75%;
       order: 2;
     }

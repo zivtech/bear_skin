@@ -1,7 +1,3 @@
-flexibility:
-  js:
-    components/vendor/bower/js/flexibility.js:
-      minified: false
 flexboxgrid:
   css:
     theme:

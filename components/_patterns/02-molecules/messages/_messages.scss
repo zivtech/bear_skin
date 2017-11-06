@@ -1,7 +1,6 @@
 .messages {
-  @include font-size(.9);
-  @include padding(1, 1);
-  @include margin-bottom(.5);
+  padding: 1em 1em;
+  margin-bottom: .5em;
 
   font-family: $sans;
   color: $grey;

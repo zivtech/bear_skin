@@ -21,14 +21,9 @@ global-scripts:
     - core/jquery.once
     - bear_skin/flexibility
 
-
 # Do not modify the library info within the injection points below. They
 # will be overridden by gulp later if you do!
 # inject:libraries
-flexibility:
-  js:
-    components/vendor/bower/js/flexibility.js:
-      minified: false
 flexboxgrid:
   css:
     theme:

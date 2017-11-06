@@ -141,109 +141,109 @@ img.align-center {
 //
 
 // Padding on all sides (equal)
-.padd-all-05 {
-  @include padding(.5, .5);
-}
-
-.padd-all-1 {
-  @include padding(1, 1);
-}
-
-.padd-all-2 {
-  @include padding(2, 2);
-}
-
-.padd-all-3 {
-  @include padding(3, 3);
-}
-
-.padd-all-4 {
-  @include padding(4, 4);
-}
-
-// Padding-top
-.padd-top-05 {
-  @include padding-top(.5);
-}
-
-.padd-top-1 {
-  @include padding-top(1);
-}
-
-.padd-top-2 {
-  @include padding-top(2);
-}
-
-.padd-top-3 {
-  @include padding-top(3);
-}
-
-.padd-top-4 {
-  @include padding-top(4);
-}
-
-// Padding-bottom
-.padd-bottom-05 {
-  @include padding-bottom(.5);
-}
-
-.padd-bottom-1 {
-  @include padding-bottom(1);
-}
-
-.padd-bottom-2 {
-  @include padding-bottom(2);
-}
-
-.padd-bottom-3 {
-  @include padding-bottom(3);
-}
-
-.padd-bottom-4 {
-  @include padding-bottom(4);
-}
-
-// Padding-left
-.padd-left-05 {
-  @include padding-left(.5);
-}
-
-.padd-left-1 {
-  @include padding-left(1);
-}
-
-.padd-left-2 {
-  @include padding-left(2);
-}
-
-.padd-left-3 {
-  @include padding-left(3);
-}
-
-.padd-left-4 {
-  @include padding-left(4);
-}
-
-// Padding-right
-.padd-right-05 {
-  @include padding-right(.5);
-}
-
-.padd-right-1 {
-  @include padding-right(1);
-}
-
-.padd-right-2 {
-  @include padding-right(2);
-}
-
-.padd-right-3 {
-  @include padding-right(3);
-}
-
-.padd-right-4 {
-  @include padding-right(4);
-}
+//.padd-all-05 {
+//  @include padding(.5, .5);
+//}
+//
+//.padd-all-1 {
+//  @include padding(1, 1);
+//}
+//
+//.padd-all-2 {
+//  @include padding(2, 2);
+//}
+//
+//.padd-all-3 {
+//  @include padding(3, 3);
+//}
+//
+//.padd-all-4 {
+//  @include padding(4, 4);
+//}
+//
+//// Padding-top
+//.padd-top-05 {
+//  @include padding-top(.5);
+//}
+//
+//.padd-top-1 {
+//  @include padding-top(1);
+//}
+//
+//.padd-top-2 {
+//  @include padding-top(2);
+//}
+//
+//.padd-top-3 {
+//  @include padding-top(3);
+//}
+//
+//.padd-top-4 {
+//  @include padding-top(4);
+//}
+//
+//// Padding-bottom
+//.padd-bottom-05 {
+//  @include padding-bottom(.5);
+//}
+//
+//.padd-bottom-1 {
+//  @include padding-bottom(1);
+//}
+//
+//.padd-bottom-2 {
+//  @include padding-bottom(2);
+//}
+//
+//.padd-bottom-3 {
+//  @include padding-bottom(3);
+//}
+//
+//.padd-bottom-4 {
+//  @include padding-bottom(4);
+//}
+//
+//// Padding-left
+//.padd-left-05 {
+//  @include padding-left(.5);
+//}
+//
+//.padd-left-1 {
+//  @include padding-left(1);
+//}
+//
+//.padd-left-2 {
+//  @include padding-left(2);
+//}
+//
+//.padd-left-3 {
+//  @include padding-left(3);
+//}
+//
+//.padd-left-4 {
+//  @include padding-left(4);
+//}
+//
+//// Padding-right
+//.padd-right-05 {
+//  @include padding-right(.5);
+//}
+//
+//.padd-right-1 {
+//  @include padding-right(1);
+//}
+//
+//.padd-right-2 {
+//  @include padding-right(2);
+//}
+//
+//.padd-right-3 {
+//  @include padding-right(3);
+//}
+//
+//.padd-right-4 {
+//  @include padding-right(4);
+//}
 
 // No Padding
 .np {
@@ -271,109 +271,109 @@ img.align-center {
 //
 
 // Margin on all sides (equal)
-.marg-all-05 {
-  @include margin(.5, .5);
-}
-
-.marg-all-1 {
-  @include margin(1, 1);
-}
-
-.marg-all-2 {
-  @include margin(2, 2);
-}
-
-.marg-all-3 {
-  @include margin(3, 3);
-}
-
-.marg-all-4 {
-  @include margin(4, 4);
-}
-
-// Margin-top
-.marg-top-05 {
-  @include margin-top(.5);
-}
-
-.marg-top-1 {
-  @include margin-top(1);
-}
-
-.marg-top-2 {
-  @include margin-top(2);
-}
-
-.marg-top-3 {
-  @include margin-top(3);
-}
-
-.marg-top-4 {
-  @include margin-top(4);
-}
-
-// Padding-bottom
-.marg-bottom-05 {
-  @include margin-bottom(.5);
-}
-
-.marg-bottom-1 {
-  @include margin-bottom(1);
-}
-
-.marg-bottom-2 {
-  @include margin-bottom(2);
-}
-
-.marg-bottom-3 {
-  @include margin-bottom(3);
-}
-
-.marg-bottom-4 {
-  @include margin-bottom(4);
-}
-
-// Margin-left
-.marg-left-05 {
-  @include margin-left(.5);
-}
-
-.marg-left-1 {
-  @include margin-left(1);
-}
-
-.marg-left-2 {
-  @include margin-left(2);
-}
-
-.marg-left-3 {
-  @include margin-left(3);
-}
-
-.marg-left-4 {
-  @include margin-left(4);
-}
-
-// Margin-right
-.marg-right-05 {
-  @include margin-right(.5);
-}
-
-.marg-right-1 {
-  @include margin-right(1);
-}
-
-.marg-right-2 {
-  @include margin-right(2);
-}
-
-.marg-right-3 {
-  @include margin-right(3);
-}
-
-.marg-right-4 {
-  @include margin-right(4);
-}
+//.marg-all-05 {
+//  @include margin(.5, .5);
+//}
+//
+//.marg-all-1 {
+//  @include margin(1, 1);
+//}
+//
+//.marg-all-2 {
+//  @include margin(2, 2);
+//}
+//
+//.marg-all-3 {
+//  @include margin(3, 3);
+//}
+//
+//.marg-all-4 {
+//  @include margin(4, 4);
+//}
+//
+//// Margin-top
+//.marg-top-05 {
+//  @include margin-top(.5);
+//}
+//
+//.marg-top-1 {
+//  @include margin-top(1);
+//}
+//
+//.marg-top-2 {
+//  @include margin-top(2);
+//}
+//
+//.marg-top-3 {
+//  @include margin-top(3);
+//}
+//
+//.marg-top-4 {
+//  @include margin-top(4);
+//}
+//
+//// Padding-bottom
+//.marg-bottom-05 {
+//  @include margin-bottom(.5);
+//}
+//
+//.marg-bottom-1 {
+//  @include margin-bottom(1);
+//}
+//
+//.marg-bottom-2 {
+//  @include margin-bottom(2);
+//}
+//
+//.marg-bottom-3 {
+//  @include margin-bottom(3);
+//}
+//
+//.marg-bottom-4 {
+//  @include margin-bottom(4);
+//}
+//
+//// Margin-left
+//.marg-left-05 {
+//  @include margin-left(.5);
+//}
+//
+//.marg-left-1 {
+//  @include margin-left(1);
+//}
+//
+//.marg-left-2 {
+//  @include margin-left(2);
+//}
+//
+//.marg-left-3 {
+//  @include margin-left(3);
+//}
+//
+//.marg-left-4 {
+//  @include margin-left(4);
+//}
+//
+//// Margin-right
+//.marg-right-05 {
+//  @include margin-right(.5);
+//}
+//
+//.marg-right-1 {
+//  @include margin-right(1);
+//}
+//
+//.marg-right-2 {
+//  @include margin-right(2);
+//}
+//
+//.marg-right-3 {
+//  @include margin-right(3);
+//}
+//
+//.marg-right-4 {
+//  @include margin-right(4);
+//}
 
 // No Margin
 .nm {

@@ -31,23 +31,23 @@ strong {
 }
 
 a {
-  color: $color-link-normal;
+  color: $link;
   transition: color .3s;
   text-decoration: none;
 
   &:visited {
-    color: $color-link-normal;
+    color: $link;
   }
 
   &:active {
-    color: $color-link-active;
+    color: $link-hover;
   }
 
   &:hover {
-    color: $color-link-hover;
+    color: $link-hover;
 
     &:visited {
-      color: $color-link-hover;
+      color: $link-hover;
     }
   }
 }

@@ -1,5 +1,5 @@
 table {
-  @include margin(1, 0);
+  margin: 1em 0;
 
   width: 100%;
 
@@ -58,8 +58,7 @@ table {
 
   td,
   th {
-    @include padding(.3, .5);
-
+    padding: .3em .5em;
     text-align: left;
 
     a.tabledrag-handle .handle {

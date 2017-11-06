@@ -5,8 +5,7 @@
   transition: background .2s ease-in-out;
 
   &__item {
-    @include margin(0, .5, 0, 0);
-
+    margin-right: .5em;
     list-style-type: none;
     display: inline;
 
@@ -38,7 +37,7 @@
     }
 
     .menu__item {
-      @include font-size(.9);
+      font-size: 14px;
     }
 
     .menu__link {
@@ -47,8 +46,7 @@
 
     a.is-active,
     .menu-item--active-trail a {
-      @include font-size(.9);
-
+      font-size: 14px;
       color: $white;
       font-family: $serif;
 
@@ -59,8 +57,7 @@
     }
 
     &.open {
-      @include font-size(1.2);
-
+      font-size: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -97,7 +94,7 @@
           &:hover,
           &:focus,
           &.is-active {
-            @include font-size(1.2);
+            font-size: 18px;
           }
         }
       }
@@ -116,8 +113,7 @@
 .list-group {
 
   &__link:not(:first-child) {
-
-    @include margin-top(.5);
+    margin-top: .5em;
   }
 }
 
@@ -127,7 +123,7 @@
   display: block;
   position: relative;
   z-index: 6;
-  color: black;
+  color: $black;
 
   i {
     margin: 0;

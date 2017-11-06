@@ -21,7 +21,6 @@ $default-body: $zeus;
 $link: $bermuda-grey;
 $link-hover: $dark-bermuda-grey;
 
-
 //
 // UI COLORS
 //
@@ -73,17 +72,14 @@ $sans: 'Montserrat';
 // LAYOUT
 //
 
-// Configure max-width in sass/vendor/scss/gutemberg/_gutenberg-config.scss
 
 //
 // BREAKPOINTS
 //
 
-@import '../../vendor/scss/gutenberg/gutenberg-config';
-
-$bp-540:    min-width 540 / $base * 1em !default;
-$bp-768:    min-width 768 / $base * 1em !default;
-$bp-1024:   min-width 1024 / $base * 1em !default;
-$bp-1200:   min-width 1200 / $base * 1em !default;
-$bp-1500:   min-width 1500 / $base * 1em !default;
-$bp-1800:   min-width 1800 / $base * 1em !default;
+$bp-540:    min-width 540;
+$bp-768:    min-width 768;
+$bp-1024:   min-width 1024;
+$bp-1200:   min-width 1200;
+$bp-1500:   min-width 1500;
+$bp-1800:   min-width 1800;

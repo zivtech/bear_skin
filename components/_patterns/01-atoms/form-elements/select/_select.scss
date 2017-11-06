@@ -3,8 +3,6 @@
   max-width: 500px;
 
   &::after {
-    @include font-size(.7);
-
     position: absolute;
     content: '\25bc';
     display: inline-block;

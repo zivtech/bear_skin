@@ -1,9 +1,7 @@
 .pager {
 
   &__items {
-    @include font-size(1);
-    @include padding(1, 0);
-
+    padding: 1em 0;
     list-style: none;
     margin: 0 auto;
     text-align: center;
@@ -19,7 +17,7 @@
     }
 
     &--ellipsis {
-      @include padding(0, .2);
+      padding: 0 2em;
 
       &::after {
         color: $grey;
@@ -60,7 +58,6 @@
       right: 0;
       padding: 8px;
       border-radius: 50%;
-      right: 0;
       width: 12px;
       height: 12px;
       transition: background 0.2s ease-in-out;

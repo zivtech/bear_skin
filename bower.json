@@ -2,7 +2,7 @@
   "name": "bearskin",
   "license": "MIT",
   "dependencies": {
-    "flexibility": "1.0.6",
-    "flexboxgrid": "^6.3.2"
+    "flexboxgrid": "^6.3.2",
+    "postcss-responsive-type": "1.0.0"
   }
 }

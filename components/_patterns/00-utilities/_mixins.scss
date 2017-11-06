@@ -85,8 +85,7 @@
 }
 
 @mixin button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
-  @include font-size(.8);
-
+  font-size: 14px;
   position: relative;
   display: inline-block;
   outline: none;
@@ -110,7 +109,6 @@
 }
 
 @mixin placeholder {
-  @include font-size(.8);
-
+  font-size: 12px;
   font-weight: 400;
 }

@@ -1,5 +1,5 @@
 .details-wrapper {
-  @include padding(.5, .5);
+  padding: .5em .5em;
 
   position: relative;
   z-index: 1;
@@ -7,15 +7,13 @@
 }
 
 details {
-  @include margin(1, 0);
-
+  margin: 1em 0;
   clear: both;
 
   &[open] {
 
     .summary {
-      @include margin-bottom(.5);
-
+      margin-bottom: .5em;
       border-bottom: 0;
 
       .details-wrapper {
@@ -36,13 +34,12 @@ details {
 }
 
 .details-wrapper {
-  @include padding(.5, .5);
+  padding: .5em .5em;
 }
 
 .summary {
-  @include margin-bottom(1);
-  @include padding(.5, .5);
-
+  margin-bottom: .5em;
+  padding: .5em .5em;
   display: block;
   float: left;
   width: 100%;
