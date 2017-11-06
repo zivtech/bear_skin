@@ -1,5 +1,5 @@
 .tabs {
-  margin: .5em 0;
+  margin: .5rem 0;
   padding: 0;
   list-style-type: none;
   font-size: 0;
@@ -33,7 +33,7 @@
 
   &__tab-link {
     font-size: 14px;
-    padding: .3em .5em;
+    padding: .3rem .5rem;
     font-family: $sans;
     color: $grey;
     text-transform: uppercase;
@@ -56,7 +56,7 @@
     width: 100%;
 
     .tabs__tab {
-      margin: .5em .5em .5em 0;
+      margin: .5rem .5rem .5rem 0;
       border: 0;
       border-radius: 0;
     }

@@ -1,13 +1,13 @@
 .indented:first-of-type {
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 .indented:nth-of-type(2) {
-  padding-left: 2em;
+  padding-left: 2rem;
 }
 
 .indented:nth-of-type(3) {
-  padding-left: 3em;
+  padding-left: 3rem;
 }
 
 .comment {
@@ -20,7 +20,7 @@
     font-family: $sans;
 
     p {
-      margin-top: 1em;
+      margin-top: 1rem;
       border-bottom: 1px solid $gallery;
       margin-bottom: 0;
     }

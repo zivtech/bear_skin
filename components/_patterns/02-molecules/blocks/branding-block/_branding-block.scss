@@ -19,14 +19,14 @@
   &__site-name {
     @include element-invisible;
 
-    margin: 0 .5em;
+    margin: 0 .5rem;
 
     @include breakpoint($bp-768) {
       @include element-invisible-off;
     }
 
     @include breakpoint($bp-768) {
-      margin: 0 1em;
+      margin: 0 1rem;
     }
   }
 
@@ -36,7 +36,7 @@
 
     @include breakpoint($bp-768) {
       font-size: 14px;
-      margin: 0 1em;
+      margin: 0 1rem;
     }
   }
 }

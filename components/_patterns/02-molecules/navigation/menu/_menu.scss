@@ -5,7 +5,7 @@
   transition: background .2s ease-in-out;
 
   &__item {
-    margin-right: .5em;
+    margin-right: .5rem;
     list-style-type: none;
     display: inline;
 
@@ -113,7 +113,7 @@
 .list-group {
 
   &__link:not(:first-child) {
-    margin-top: .5em;
+    margin-top: .5rem;
   }
 }
 

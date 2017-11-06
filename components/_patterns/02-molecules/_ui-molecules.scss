@@ -37,7 +37,6 @@ details {
     a.is-active,
     .menu-item--active-trail a {
       @include button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom);
-      @include font-size(.9);
 
       font-family: $serif;
     }
@@ -96,7 +95,7 @@ details {
 }
 
 .progress {
-  @include margin(1, 0);
+   margin: 1rem 0;
 
   &__track {
     border: 1px solid $ui-light-grey;
@@ -112,8 +111,8 @@ details {
   }
 
   &__percentage {
-    @include padding(.5, .5);
 
+    padding: .5rem .5rem;
     color: $normal;
     font-family: $sans;
     text-align: center;

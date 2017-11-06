@@ -15,19 +15,19 @@
 }
 
 form {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .form-item {
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
 }
 
 label {
-  margin-bottom: .1em;
+  margin-bottom: .1rem;
 }
 
 .form-submit {
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
 }
 
 .form-required::after {
@@ -36,14 +36,13 @@ label {
   display: inline-block;
   background: url(../images/required.svg) no-repeat left center;
   background-size: 6px 6px;
-  display: inline-block;
-  margin-left: .3em;
+  margin-left: .3rem;
   width: 6px;
   height: 6px;
 }
 
 .description {
-  margin-top: .2em;
+  margin-top: .2rem;
 }
 
 .field-suffix {
@@ -58,7 +57,7 @@ label {
 .form-email,
 .form-textarea,
 .form-date {
-  padding: .2em .2em;
+  padding: .2rem .2rem;
   font-family: $sans;
   width: 100%;
   max-width: 30em;
