@@ -4304,6 +4304,14 @@ details[open] .summary i, [open].accordion .summary i {
   margin: .5rem 0;
   padding: 0;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .tabs__tab {
@@ -4725,7 +4733,22 @@ table ul {
   height: 100%;
 }
 
-@media (min-width: 768) {
+@media (min-width: 540px) {
+
+  .tabs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .tabs__tab {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
 
   .layout-sidebar-first .wrapper-main__inner, .layout-sidebar-second .wrapper-main__inner {
     display: -webkit-box;
@@ -4820,7 +4843,7 @@ table ul {
   }
 }
 
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
 
   .menu--main {
     position: relative;
@@ -4834,17 +4857,5 @@ table ul {
   .row > main,
   .row > aside {
     margin-bottom: 0;
-  }
-}
-
-@media (min-width: 540) {
-
-  .tabs {
-    display: inline-block;
-  }
-
-  .tabs__tab {
-    display: inline-block;
-    width: auto;
   }
 }

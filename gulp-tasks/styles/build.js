@@ -19,7 +19,6 @@ module.exports = function (gulp, options) {
 
   var processors = [
     autoprefixer({browsers: options.css.browsers}),
-    responsiveType(),
     mqpacker({sort: true}),
     flexibility()
   ];
