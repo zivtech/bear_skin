@@ -1,4 +1,6 @@
 .wrapper-footer {
+  @include fontsize(16, all);
+
   padding: 1rem 0;
   background: $ui-lightest-grey;
 }

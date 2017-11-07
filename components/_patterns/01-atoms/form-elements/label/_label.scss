@@ -1,6 +1,9 @@
 label {
+  @include sans;
+  @include fontsize(16, all);
+
+  line-height: 0;
   display: block;
-  font-family: unquote(map-get($bodytype, font-family));
 }
 
 .js-form-type-checkbox,

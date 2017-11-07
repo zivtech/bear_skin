@@ -33,9 +33,10 @@
   }
 
   &__tab-link {
-    font-size: 14px;
+    @include sans;
+    @include fontsize(14, all);
+
     padding: .3rem .5rem;
-    font-family: unquote(map-get($bodytype, font-family));
     color: $grey;
     text-transform: uppercase;
 

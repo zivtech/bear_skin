@@ -1,7 +1,8 @@
 .menu {
+  @include sans;
+
   margin: 0;
   padding: 0;
-
   transition: background .2s ease-in-out;
 
   &__item {
@@ -33,22 +34,28 @@
 
     @include breakpoint(break-3) {
       position: relative;
-      top: 0;
+      top: -2px;
     }
 
     .menu__link {
-      @include link($black, none, $black, underline);
+      @include fontsize(24, 1);
+      @include fontsize(14, 2);
+
+      padding: .4rem .5rem .4rem .5rem;
+      text-transform: uppercase;
+      border-radius: 4px;
+
+      &:hover,
+      &:focus {
+
+      }
     }
 
     a.is-active,
     .menu-item--active-trail a {
-      color: $white;
-      font-family: unquote(map-get($headingtype, font-family));;
+      @include link($white, none, $white, none);
 
-      &:hover,
-      &:focus {
-        color: $white;
-      }
+      background-color: $linkColour;
     }
 
     &.open {
@@ -77,7 +84,6 @@
         &__link {
           @include link($white, none, $white, none);
 
-          font-family: unquote(map-get($bodytype, font-family));
           text-transform: uppercase;
           display: block;
           padding: 10px;

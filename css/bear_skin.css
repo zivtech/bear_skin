@@ -60,7 +60,6 @@ body {
 a {
   color: #728dac;
   text-decoration: none;
-  transition: color .1s, background-color .1s;
 }
 
 a:hover, a:active, a:focus {
@@ -72,11 +71,6 @@ a:hover, a:active, a:focus {
   background-position: 0 93%;
   background-repeat: repeat-x;
   background-size: 100% 0.15rem;
-  text-shadow: 0.1rem 0 #FCFCFC, 0.15rem 0 #FCFCFC, -0.1rem 0 #FCFCFC, -0.15rem 0 #FCFCFC;
-}
-
-.typeset p a:hover, .typeset p a:active, .typeset p a:focus, .typeset li a:hover, .typeset li a:active, .typeset li a:focus {
-  background-image: linear-gradient(to bottom, transparent 50%, #728dac 50%);
 }
 
 .typeset p {
@@ -99,21 +93,21 @@ a:hover, a:active, a:focus {
 .typeset h1, .typeset .alpha {
   line-height: 3rem;
   font-size: 2.33333rem;
-  margin-bottom: 0.26999rem;
+  margin-bottom: 1.26999rem;
   padding-top: 0.73001rem;
 }
 
 .typeset h2, .typeset .beta {
   line-height: 3rem;
   font-size: 2.08333rem;
-  margin-bottom: 0.18749rem;
+  margin-bottom: 1.18749rem;
   padding-top: 0.81251rem;
 }
 
 .typeset h3, .typeset .gamma {
   line-height: 3rem;
   font-size: 1.86667rem;
-  margin-bottom: 0.11599rem;
+  margin-bottom: 1.11599rem;
   padding-top: 0.88401rem;
 }
 
@@ -801,7 +795,6 @@ body {
 }
 
 .button, .form-submit, .dropbutton-widget {
-  font-size: 14px;
   position: relative;
   display: inline-block;
   outline: none;
@@ -1028,8 +1021,10 @@ div[id^="ajax-wrapper"] {
 }
 
 label {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.33333rem;
+  line-height: 0;
   display: block;
-  font-family: Noto Serif, serif;
 }
 
 .js-form-type-checkbox label,
@@ -4121,6 +4116,7 @@ code {
 .branding__site-logo {
   width: 50px;
   height: 50px;
+  display: block;
 }
 
 .branding__flex-container {
@@ -4405,6 +4401,7 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .menu {
+  font-family: Montserrat, sans-serif;
   margin: 0;
   padding: 0;
   transition: background .2s ease-in-out;
@@ -4435,34 +4432,37 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .menu--main .menu__link {
-  color: black;
-  text-decoration: none;
-}
-
-.menu--main .menu__link:visited {
-  color: black;
-}
-
-.menu--main .menu__link:visited:hover, .menu--main .menu__link:visited:focus {
-  color: black;
-  text-decoration: underline;
-}
-
-.menu--main .menu__link:hover, .menu--main .menu__link:focus {
-  color: black;
-  text-decoration: underline;
+  font-size: 1.71429rem;
+  font-size: 0.93333rem;
+  padding: .4rem .5rem .4rem .5rem;
+  text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .menu--main a.is-active,
 .menu--main .menu-item--active-trail a {
   color: white;
-  font-family: Montserrat, sans-serif;
+  text-decoration: none;
+  background-color: #728dac;
+}
+
+.menu--main a.is-active:visited,
+.menu--main .menu-item--active-trail a:visited {
+  color: white;
+}
+
+.menu--main a.is-active:visited:hover, .menu--main a.is-active:visited:focus,
+.menu--main .menu-item--active-trail a:visited:hover,
+.menu--main .menu-item--active-trail a:visited:focus {
+  color: white;
+  text-decoration: none;
 }
 
 .menu--main a.is-active:hover, .menu--main a.is-active:focus,
 .menu--main .menu-item--active-trail a:hover,
 .menu--main .menu-item--active-trail a:focus {
   color: white;
+  text-decoration: none;
 }
 
 .menu--main.open {
@@ -4499,7 +4499,6 @@ details[open] .summary i, [open].accordion .summary i {
 .menu--main.open .menu__link {
   color: white;
   text-decoration: none;
-  font-family: Noto Serif, serif;
   text-transform: uppercase;
   display: block;
   padding: 10px;
@@ -4648,9 +4647,9 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .tabs__tab-link {
-  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.16667rem;
   padding: .3rem .5rem;
-  font-family: Noto Serif, serif;
   color: #878787;
   text-transform: uppercase;
   display: inline-block;
@@ -4822,6 +4821,7 @@ table ul {
 }
 
 .wrapper-footer {
+  font-size: 1.33333rem;
   padding: 1rem 0;
   background: #F5F5F5;
 }
@@ -4884,12 +4884,26 @@ table ul {
   display: -ms-flexbox;
   -js-display: flex;
   display: flex;
-}
-
-.region--search {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.region--navigation {
+  margin: 0 1rem;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
+
+.region--search {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -4897,7 +4911,6 @@ table ul {
   display: -ms-flexbox;
   -js-display: flex;
   display: flex;
-  margin-right: 1rem;
 }
 
 .container-fluid {
@@ -5065,19 +5078,19 @@ table ul {
 
   .typeset h1, .typeset .alpha {
     font-size: 2.14286rem;
-    margin-bottom: 0.20713rem;
+    margin-bottom: 1.20713rem;
     padding-top: 0.79287rem;
   }
 
   .typeset h2, .typeset .beta {
     font-size: 1.9rem;
-    margin-bottom: 0.12699rem;
+    margin-bottom: 1.12699rem;
     padding-top: 0.87301rem;
   }
 
   .typeset h3, .typeset .gamma {
     font-size: 1.71429rem;
-    margin-bottom: 0.0657rem;
+    margin-bottom: 1.0657rem;
     padding-top: 0.9343rem;
   }
 
@@ -5151,6 +5164,10 @@ table ul {
     font-size: 0.97143rem;
   }
 
+  label {
+    font-size: 1.14286rem;
+  }
+
   .tabs {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -5161,6 +5178,14 @@ table ul {
   .tabs__tab {
     display: inline-block;
     width: auto;
+  }
+
+  .tabs__tab-link {
+    font-size: 1rem;
+  }
+
+  .wrapper-footer {
+    font-size: 1.14286rem;
   }
 }
 
@@ -5181,19 +5206,19 @@ table ul {
 
   .typeset h1, .typeset .alpha {
     font-size: 2.13333rem;
-    margin-bottom: 0.20399rem;
+    margin-bottom: 1.20399rem;
     padding-top: 0.79601rem;
   }
 
   .typeset h2, .typeset .beta {
     font-size: 1.87333rem;
-    margin-bottom: 0.11819rem;
+    margin-bottom: 1.11819rem;
     padding-top: 0.88181rem;
   }
 
   .typeset h3, .typeset .gamma {
     font-size: 1.70667rem;
-    margin-bottom: 0.06319rem;
+    margin-bottom: 1.06319rem;
     padding-top: 0.93681rem;
   }
 
@@ -5325,6 +5350,10 @@ table ul {
     order: 3;
   }
 
+  label {
+    font-size: 1.06667rem;
+  }
+
   .branding__site-logo {
     width: 100px;
     height: 100px;
@@ -5336,15 +5365,24 @@ table ul {
     width: auto;
     overflow: inherit;
     clip: none;
-  }
-
-  .branding__site-name {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
     margin: 0 1rem;
+    font-weight: 700;
   }
 
   .branding__site-slogan {
     font-size: 14px;
     margin: 0 1rem;
+  }
+
+  .tabs__tab-link {
+    font-size: 0.93333rem;
+  }
+
+  .wrapper-footer {
+    font-size: 1.06667rem;
   }
 }
 
@@ -5365,19 +5403,19 @@ table ul {
 
   .typeset h1, .typeset .alpha {
     font-size: 2.35294rem;
-    margin-bottom: 0.27646rem;
+    margin-bottom: 1.27646rem;
     padding-top: 0.72354rem;
   }
 
   .typeset h2, .typeset .beta {
     font-size: 2.08824rem;
-    margin-bottom: 0.18911rem;
+    margin-bottom: 1.18911rem;
     padding-top: 0.81089rem;
   }
 
   .typeset h3, .typeset .gamma {
     font-size: 1.76471rem;
-    margin-bottom: 0.08234rem;
+    margin-bottom: 1.08234rem;
     padding-top: 0.91766rem;
   }
 
@@ -5439,13 +5477,25 @@ table ul {
     font-size: 0.88235rem;
   }
 
+  label {
+    font-size: 0.94118rem;
+  }
+
   .menu--main {
     position: relative;
-    top: 0;
+    top: -2px;
   }
 
   #mnav {
     display: none;
+  }
+
+  .tabs__tab-link {
+    font-size: 0.82353rem;
+  }
+
+  .wrapper-footer {
+    font-size: 0.94118rem;
   }
 
   .row > main,
@@ -5471,19 +5521,19 @@ table ul {
 
   .typeset h1, .typeset .alpha {
     font-size: 2.63158rem;
-    margin-bottom: 0.36841rem;
+    margin-bottom: 1.36841rem;
     padding-top: 0.63159rem;
   }
 
   .typeset h2, .typeset .beta {
     font-size: 2.31053rem;
-    margin-bottom: 0.26246rem;
+    margin-bottom: 1.26246rem;
     padding-top: 0.73754rem;
   }
 
   .typeset h3, .typeset .gamma {
     font-size: 1.85789rem;
-    margin-bottom: 0.1131rem;
+    margin-bottom: 1.1131rem;
     padding-top: 0.8869rem;
   }
 
@@ -5543,5 +5593,17 @@ table ul {
 
   .typeset code {
     font-size: 0.82105rem;
+  }
+
+  label {
+    font-size: 0.84211rem;
+  }
+
+  .tabs__tab-link {
+    font-size: 0.73684rem;
+  }
+
+  .wrapper-footer {
+    font-size: 0.84211rem;
   }
 }

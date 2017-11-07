@@ -85,7 +85,6 @@
 }
 
 @mixin button($color, $background-color, $background-hover) {
-  font-size: 14px;
   position: relative;
   display: inline-block;
   outline: none;
@@ -110,4 +109,12 @@
 @mixin placeholder {
   font-size: 12px;
   font-weight: 400;
+}
+
+@mixin serif {
+  font-family: unquote(map-get($bodytype, font-family));
+}
+
+@mixin sans {
+  font-family: unquote(map-get($headingtype, font-family));
 }

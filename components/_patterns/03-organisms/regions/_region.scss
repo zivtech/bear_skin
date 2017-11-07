@@ -2,12 +2,18 @@
 
   &--header {
     display: flex;
+    flex-grow: 1;
+  }
+
+  &--navigation {
+    margin: 0 1rem;
+    order: 1;
+    display: flex;
   }
 
   &--search {
-    flex-grow: 1;
+    order: 2;
     justify-content: flex-end;
     display: flex;
-    margin-right: 1rem;
   }
 }
