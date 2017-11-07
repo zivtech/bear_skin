@@ -13,7 +13,6 @@ var notify = require('gulp-notify');
 var flatten = require('gulp-flatten');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
-var responsiveType = require('postcss-responsive-type');
 
 module.exports = function (gulp, options) {
 

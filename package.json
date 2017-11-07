@@ -36,7 +36,7 @@
     "gulp-postcss": "^6.1.1",
     "gulp-replace": "^0.5.4",
     "gulp-require-tasks": "^1.0.5",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^2.1.2",
     "gulp-sass-glob": "^1.0.6",
     "gulp-sass-lint": "^1.2.0",
     "gulp-shell": "^0.5.2",
@@ -87,5 +87,9 @@
   "bugs": {
     "url": "https://github.com/zivtech/bear_skin/issues"
   },
-  "homepage": "https://github.com/zivtech/ias#readme"
+  "homepage": "https://github.com/zivtech/ias#readme",
+  "dependencies": {
+    "node-sass": "^4.6.0",
+    "sassline": "^2.1.2"
+  }
 }

@@ -31,7 +31,7 @@
     position: fixed;
     top: -200px;
 
-    @include breakpoint($bp-1024) {
+    @include breakpoint(break-3) {
       position: relative;
       top: 0;
     }
@@ -140,7 +140,7 @@
     }
   }
 
-  @include breakpoint($bp-1024) {
+  @include breakpoint(break-3) {
     display: none;
   }
 }

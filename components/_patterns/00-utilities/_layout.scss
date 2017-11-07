@@ -20,13 +20,13 @@ body {
 .layout-sidebar-first {
 
   .wrapper-main__inner {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       display: flex;
     }
   }
 
   .column.main {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       padding: 0 0 0 2rem;
       flex-basis: 75%;
       order: 2;
@@ -34,7 +34,7 @@ body {
   }
 
   .column.sidebar {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       flex-basis: 25%;
       order: 1;
     }
@@ -49,7 +49,7 @@ body {
   @extend .layout-sidebar-first;
 
   .column.main {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       padding: 0 2rem 0 0;
 
       order: 1;
@@ -57,7 +57,7 @@ body {
   }
 
   .column.sidebar {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       order: 2;
     }
   }
@@ -69,13 +69,13 @@ body {
 
 .layout-two-sidebars {
   .wrapper-main__inner {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       display: flex;
     }
   }
 
   .column.main {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       padding: 0 2rem;
       flex-basis: 75%;
       order: 2;
@@ -83,7 +83,7 @@ body {
   }
 
   .column.sidebar {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       flex-basis: 25%;
 
       &.sidebar--first {
