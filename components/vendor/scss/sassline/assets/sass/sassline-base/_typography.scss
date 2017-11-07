@@ -36,7 +36,6 @@ a {
 
   // Nice underlines for text links.
   p a, li a {
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
     background-position: 0 93%;
     background-repeat: repeat-x;
     background-size: 100% 0.15rem;
@@ -231,10 +230,11 @@ a {
   // Bold.
   b, strong, .bold {
     font-weight: map-get($bodytype, bold);
+
   }
 
   // Italic.
-  em, i, .italic {
+  em, .italic {
     font-style: map-get($bodytype, italic);
   }
 

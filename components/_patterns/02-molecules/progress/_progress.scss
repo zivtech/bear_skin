@@ -18,7 +18,7 @@
 
     padding: .5rem .5rem;
     color: $emerald;
-    font-family: $sans;
+    font-family: unquote(map-get($bodytype, font-family));
     text-align: center;
   }
 }

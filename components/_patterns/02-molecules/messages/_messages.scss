@@ -2,7 +2,7 @@
   padding: 1rem 1rem;
   margin-bottom: .5rem;
 
-  font-family: $sans;
+  font-family: unquote(map-get($bodytype, font-family));
   color: $grey;
   background-color: $wild-sand;
   border: 2px solid darken($gallery, 5%);

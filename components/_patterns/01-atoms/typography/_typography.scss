@@ -1,81 +1,18 @@
-body {
-  color: $zeus;
-  font-family: $serif;
-}
-
-h1,
-h4 {
-  font-family: $sans;
-}
-
-h2,
-h3 {
-  font-family: $sans;
-}
-
 b,
 strong {
   font-weight: 700;
 }
 
-.clearfix {
-  clear: both;
-}
-
 .serif {
-  font-family: $serif;
+  font-family: unquote(map-get($headingtype, font-family));;
 }
 
 .sans {
-  font-family: $sans;
+  font-family: unquote(map-get($bodytype, font-family));
 }
 
 a {
-  color: $link;
-  transition: color .3s;
-  text-decoration: none;
+  @include link($linkColour, none, $hoverColour, none);
 
-  &:visited {
-    color: $link;
-  }
-
-  &:active {
-    color: $link-hover;
-  }
-
-  &:hover {
-    color: $link-hover;
-
-    &:visited {
-      color: $link-hover;
-    }
-  }
+  transition: color .3s ease-in-out;
 }
-
-code {
-  border: 1px dotted $ui-light-grey;
-  background: $ui-lightest-grey;
-}
-
-@mixin ui-typography($light, $normal, $dark, $ui-lightest-grey, $ui-light-grey, $ui-grey) {
-
-$color-names: light normal dark lightest-grey light-grey grey;
-$colors: $light $normal $dark $ui-lightest-grey $ui-light-grey $ui-grey;
-
-
-@for $i from 1 through length($colors) {
-
-  .#{nth($color-names, $i)} {
-    color: nth($colors, $i);
-  }
-
-  .bg {
-
-    &--#{nth($color-names, $i)} {
-      background-color: nth($colors, $i);
-    }
-  }
-}
-
-
-} // close the mixin

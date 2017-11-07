@@ -98,7 +98,7 @@
   color: $white;
   padding: $ui-button-padding;
   border-radius: $ui-border-radius;
-  font-family: $sans;
+  font-family: unquote(map-get($bodytype, font-family));
 
   &:hover,
   &:focus {

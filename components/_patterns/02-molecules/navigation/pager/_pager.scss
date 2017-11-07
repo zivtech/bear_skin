@@ -9,7 +9,7 @@
 
   &__item {
     display: inline-block;
-    font-family: $sans;
+    font-family: unquote(map-get($bodytype, font-family));
 
     &.is-active {
       background: $gallery;

@@ -58,7 +58,7 @@ label {
 .form-textarea,
 .form-date {
   padding: .2rem .2rem;
-  font-family: $sans;
+  font-family: unquote(map-get($bodytype, font-family));
   width: 100%;
   max-width: 30em;
   transition: border .2s ease-in-out;

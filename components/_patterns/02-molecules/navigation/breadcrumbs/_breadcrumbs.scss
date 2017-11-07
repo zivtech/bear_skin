@@ -14,7 +14,7 @@
 
   &__item {
     font-size: 14px;
-    font-family: $sans;
+    font-family: unquote(map-get($bodytype, font-family));
     text-transform: uppercase;
     display: inline;
     margin-right: 5px;

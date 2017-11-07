@@ -36,19 +36,14 @@
       top: 0;
     }
 
-    .menu__item {
-      font-size: 14px;
-    }
-
     .menu__link {
-      @include link($ui-black, none, $ui-black, underline);
+      @include link($black, none, $black, underline);
     }
 
     a.is-active,
     .menu-item--active-trail a {
-      font-size: 14px;
       color: $white;
-      font-family: $serif;
+      font-family: unquote(map-get($headingtype, font-family));;
 
       &:hover,
       &:focus {
@@ -57,7 +52,6 @@
     }
 
     &.open {
-      font-size: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,7 +77,7 @@
         &__link {
           @include link($white, none, $white, none);
 
-          font-family: $sans;
+          font-family: unquote(map-get($bodytype, font-family));
           text-transform: uppercase;
           display: block;
           padding: 10px;
