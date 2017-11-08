@@ -85,6 +85,9 @@
 }
 
 @mixin button($color, $background-color, $background-hover) {
+  @include sans;
+  @include fontsize(12, all);
+
   position: relative;
   display: inline-block;
   outline: none;
@@ -92,12 +95,12 @@
   cursor: pointer;
   border-style: none;
   transition: background .2s ease-in-out;
+  text-transform: uppercase;
 
   background: $background-color;
   color: $white;
   padding: $ui-button-padding;
   border-radius: $ui-border-radius;
-  font-family: unquote(map-get($bodytype, font-family));
 
   &:hover,
   &:focus {

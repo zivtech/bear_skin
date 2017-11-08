@@ -4,7 +4,6 @@
 $black:              hsla(0, 0%, 0%, 1);
 $emperor:            hsla(0, 0%, 33%, 1);
 $grey:               hsla(0, 0%, 53%, 1);
-$gallery:            hsla(0, 0%, 92%, 1);
 $wild-sand:          hsla(0, 0%, 96%, 1);
 $white:              hsla(0, 100%, 100%, 1);
 $bermuda-grey:       hsla(212, 26%, 56%, 1);
@@ -21,16 +20,16 @@ $link: $bermuda-grey;
 $link-hover: $dark-bermuda-grey;
 
 //
-// UI COLORS
+// UI ELEMENTS (form items, buttons etc)
 //
 $ui-button-padding: .5rem 1rem;
-$ui-border-radius: 5px;
-
-// grey color scheme
+$ui-border-radius: 4px;
 $ui-lightest-grey: #F5F5F5;
 $ui-light-grey: #DCDCDC;
 $ui-grey: #808080;
 $ui-dark-grey: #3F3F3F;
+$ui-border-color: $ui-light-grey;
+$ui-active-form-element: $black;
 
 //
 // LAYOUT

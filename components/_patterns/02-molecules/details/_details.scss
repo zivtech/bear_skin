@@ -13,33 +13,33 @@ details {
   &[open] {
 
     .summary {
-      margin-bottom: .5rem;
+      margin-bottom: 0;
       border-bottom: 0;
-
-      .details-wrapper {
-        animation-name: fadeInDown;
-        animation-duration: 0.5s;
-        border: 1px solid $ui-light-grey;
-      }
-
-      &__icon {
-        float: right;
-      }
 
       i {
         transform: rotate(180deg);
       }
     }
+
+    .details-wrapper {
+      animation-name: fadeInDown;
+      animation-duration: 0.5s;
+      border: 1px solid $ui-light-grey;
+      border-top: 0;
+    }
   }
 }
 
 .details-wrapper {
-  padding: .5rem .5rem;
+  padding: 1rem 1rem;
+  clear: both;
 }
 
 .summary {
+  @include fontsize(18, all);
+
   margin-bottom: .5rem;
-  padding: .5rem .5rem;
+  padding: .5rem 1rem;
   display: block;
   float: left;
   width: 100%;
@@ -48,6 +48,7 @@ details {
   cursor: pointer;
   outline: 0;
   background: $wild-sand;
+  border: 1px solid $ui-light-grey;
 
   &[open] {
 

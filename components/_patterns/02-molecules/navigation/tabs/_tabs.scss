@@ -12,18 +12,18 @@
   &__tab {
     width: 100%;
     overflow: auto;
-    border-bottom: 1px solid $gallery;
-    border-right: 1px solid $gallery;
-    border-top: 1px solid $gallery;
+    border-bottom: 1px solid $ui-border-color;
+    border-right: 1px solid $ui-border-color;
+    border-top: 1px solid $ui-border-color;
 
     &.is-active {
-      border: 1px solid $gallery;
+      border: 1px solid $ui-light-grey;
       border-bottom: 1px solid transparent;
       border-left: 0;
     }
 
     &:first-child {
-      border-left: 1px solid $gallery;
+      border-left: 1px solid $ui-border-color;
     }
 
     @include breakpoint(break-1) {
@@ -36,7 +36,7 @@
     @include sans;
     @include fontsize(14, all);
 
-    padding: .3rem .5rem;
+    padding: .3rem 1rem;
     color: $grey;
     text-transform: uppercase;
 

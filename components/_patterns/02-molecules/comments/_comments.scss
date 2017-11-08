@@ -12,16 +12,11 @@
 
 .comment {
 
-  &__content {
-    font-family: unquote(map-get($headingtype, font-family));;
-  }
-
   footer {
-    font-family: unquote(map-get($bodytype, font-family));
 
     p {
       margin-top: 1rem;
-      border-bottom: 1px solid $gallery;
+      border-bottom: 1px solid $ui-border-color;
       margin-bottom: 0;
     }
   }

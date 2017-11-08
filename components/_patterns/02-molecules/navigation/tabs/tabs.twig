@@ -4,7 +4,7 @@
 <ul class="tabs clearfix {{modifier_class}}">
   {% for tab in tabs %}
     {% set activeClass = tab.active ? 'is-active' : '' %}
-    <li class="tabs__tab {{ activeClass }}">
+    <li class="tabs__tab nm {{ activeClass }}">
       {% block link %}
         <a href="{{ tab.url }}" class="tabs__tab-link {{ activeClass }}">
           {{ tab.text }}

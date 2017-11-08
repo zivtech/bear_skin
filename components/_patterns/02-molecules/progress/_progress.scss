@@ -2,7 +2,7 @@
   margin: 1rem 0;
 
   &__track {
-    border: 1px solid $ui-light-grey;
+    border: 1px solid $ui-border-color;
     background: $ui-lightest-grey;
     height: 25px;
     border-radius: $ui-border-radius;
@@ -10,14 +10,14 @@
 
   &__bar {
     height: 100%;
-    background: $emerald;
+    background: $black;
     border-radius: $ui-border-radius;
   }
 
   &__percentage {
 
     padding: .5rem .5rem;
-    color: $emerald;
+    color: $black;
     font-family: unquote(map-get($bodytype, font-family));
     text-align: center;
   }

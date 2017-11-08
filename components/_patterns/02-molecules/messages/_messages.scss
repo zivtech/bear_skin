@@ -1,11 +1,9 @@
 .messages {
   padding: 1rem 1rem;
   margin-bottom: .5rem;
-
-  font-family: unquote(map-get($bodytype, font-family));
   color: $grey;
   background-color: $wild-sand;
-  border: 2px solid darken($gallery, 5%);
+  border: 2px solid $ui-border-color;
 
   display: flex;
   align-items: center;

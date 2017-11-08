@@ -811,6 +811,8 @@ body {
 }
 
 .button, .form-submit, .dropbutton-widget {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
   position: relative;
   display: inline-block;
   outline: none;
@@ -818,11 +820,11 @@ body {
   cursor: pointer;
   border-style: none;
   transition: background .2s ease-in-out;
+  text-transform: uppercase;
   background: #878787;
   color: white;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-family: Noto Serif, serif;
+  border-radius: 4px;
 }
 
 .button:hover, .form-submit:hover, .dropbutton-widget:hover, .button:focus, .form-submit:focus, .dropbutton-widget:focus {
@@ -889,7 +891,7 @@ form {
 }
 
 .form-item {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 label {
@@ -912,7 +914,11 @@ label {
 }
 
 .description, .field-suffix {
-  margin-top: .2rem;
+  font-size: 1rem;
+  margin-bottom: rem;
+  padding: .2rem 0;
+  line-height: 1.5;
+  color: #808080;
 }
 
 .dropbutton-multiple {
@@ -938,7 +944,7 @@ label {
 .form-date:focus,
 .form-password:focus {
   outline: 0;
-  border-color: #41c37c;
+  border-color: black;
 }
 
 input[type="search"] {
@@ -970,11 +976,6 @@ fieldset {
   border: 1px solid #DCDCDC;
 }
 
-.description, .field-suffix {
-  font-size: 12px;
-  color: #808080;
-}
-
 .ajax-progress-throbber {
   position: absolute;
   top: 0;
@@ -1000,7 +1001,7 @@ fieldset {
   border-radius: 50%;
   -webkit-animation: spin 1s infinite linear;
           animation: spin 1s infinite linear;
-  border: 0.3rem solid #41c37c;
+  border: 0.3rem solid black;
   border-top-color: white;
 }
 
@@ -1009,25 +1010,25 @@ div[id^="ajax-wrapper"] {
 }
 
 .checkbox-wrapper {
-  top: 2px;
+  top: 4px;
   display: inline-block;
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   z-index: 1;
   border: 2px solid #DCDCDC;
-  border-radius: 5px;
+  border-radius: 4px;
   background: #F5F5F5;
 }
 
 .checkbox-wrapper i {
   font-size: 22px;
   position: absolute;
-  top: -6px;
+  top: -4px;
   left: -2px;
   opacity: 0;
   transition: opacity .2s ease-in-out;
-  color: #41c37c;
+  color: black;
 }
 
 .checkbox-wrapper .form-checkbox {
@@ -1074,7 +1075,7 @@ label {
   left: 1.5px;
   opacity: 0;
   transition: opacity .2s ease-in-out;
-  color: #41c37c;
+  color: black;
 }
 
 .radio-wrapper .form-radio {
@@ -1086,11 +1087,12 @@ label {
 }
 
 .select-wrapper {
+  margin: .5rem 0;
   position: relative;
   max-width: 500px;
-  border: 1px solid #ebebeb;
-  border-radius: 5px;
-  background: #F5F5F5;
+  border: 1px solid #DCDCDC;
+  border-radius: 4px;
+  background: whitesmoke;
 }
 
 .select-wrapper::after {
@@ -1098,14 +1100,14 @@ label {
   content: '\25bc';
   display: inline-block;
   pointer-events: none;
-  font-size: 9px;
-  padding: 11px 12px 10px 12px;
+  font-size: 12px;
+  padding: 4px 15px 4px 15px;
   color: white;
-  right: 0;
+  right: -1px;
   top: -1px;
-  max-height: 34px;
+  max-height: 30px;
   background: #808080;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .select-wrapper__select {
@@ -4164,7 +4166,7 @@ code {
 }
 
 #msearch:hover, #msearch:focus {
-  color: #41c37c;
+  color: #3F3F3F;
 }
 
 #msearch-close {
@@ -4236,17 +4238,9 @@ code {
   padding-left: 3rem;
 }
 
-.comment__content {
-  font-family: Montserrat, sans-serif;
-}
-
-.comment footer {
-  font-family: Noto Serif, serif;
-}
-
 .comment footer p {
   margin-top: 1rem;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #DCDCDC;
   margin-bottom: 0;
 }
 
@@ -4273,20 +4267,8 @@ details, .accordion {
 }
 
 details[open] .summary, [open].accordion .summary {
-  margin-bottom: .5rem;
+  margin-bottom: 0;
   border-bottom: 0;
-}
-
-details[open] .summary .details-wrapper, [open].accordion .summary .details-wrapper {
-  -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  border: 1px solid #DCDCDC;
-}
-
-details[open] .summary__icon, [open].accordion .summary__icon {
-  float: right;
 }
 
 details[open] .summary i, [open].accordion .summary i {
@@ -4295,13 +4277,24 @@ details[open] .summary i, [open].accordion .summary i {
           transform: rotate(180deg);
 }
 
+details[open] .details-wrapper, [open].accordion .details-wrapper {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  border: 1px solid #DCDCDC;
+  border-top: 0;
+}
+
 .details-wrapper {
-  padding: .5rem .5rem;
+  padding: 1rem 1rem;
+  clear: both;
 }
 
 .summary {
+  font-size: 1.5rem;
   margin-bottom: .5rem;
-  padding: .5rem .5rem;
+  padding: .5rem 1rem;
   display: block;
   float: left;
   width: 100%;
@@ -4310,6 +4303,7 @@ details[open] .summary i, [open].accordion .summary i {
   cursor: pointer;
   outline: 0;
   background: whitesmoke;
+  border: 1px solid #DCDCDC;
 }
 
 .summary::-webkit-details-marker {
@@ -4346,10 +4340,9 @@ details[open] .summary i, [open].accordion .summary i {
 .messages {
   padding: 1rem 1rem;
   margin-bottom: .5rem;
-  font-family: Noto Serif, serif;
   color: #878787;
   background-color: whitesmoke;
-  border: 2px solid #dedede;
+  border: 2px solid #DCDCDC;
   display: -webkit-box;
   display: -ms-flexbox;
   -js-display: flex;
@@ -4585,11 +4578,10 @@ details[open] .summary i, [open].accordion .summary i {
 
 .pager__item {
   display: inline-block;
-  font-family: Noto Serif, serif;
 }
 
 .pager__item.is-active {
-  background: #ebebeb;
+  background: whitesmoke;
   color: #878787;
 }
 
@@ -4649,25 +4641,25 @@ details[open] .summary i, [open].accordion .summary i {
 .tabs__tab {
   width: 100%;
   overflow: auto;
-  border-bottom: 1px solid #ebebeb;
-  border-right: 1px solid #ebebeb;
-  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #DCDCDC;
+  border-right: 1px solid #DCDCDC;
+  border-top: 1px solid #DCDCDC;
 }
 
 .tabs__tab.is-active {
-  border: 1px solid #ebebeb;
+  border: 1px solid #DCDCDC;
   border-bottom: 1px solid transparent;
   border-left: 0;
 }
 
 .tabs__tab:first-child {
-  border-left: 1px solid #ebebeb;
+  border-left: 1px solid #DCDCDC;
 }
 
 .tabs__tab-link {
   font-family: Montserrat, sans-serif;
   font-size: 1.16667rem;
-  padding: .3rem .5rem;
+  padding: .3rem 1rem;
   color: #878787;
   text-transform: uppercase;
   display: inline-block;
@@ -4724,18 +4716,18 @@ details[open] .summary i, [open].accordion .summary i {
   border: 1px solid #DCDCDC;
   background: #F5F5F5;
   height: 25px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .progress__bar {
   height: 100%;
-  background: #41c37c;
-  border-radius: 5px;
+  background: black;
+  border-radius: 4px;
 }
 
 .progress__percentage {
   padding: .5rem .5rem;
-  color: #41c37c;
+  color: black;
   font-family: Noto Serif, serif;
   text-align: center;
 }
@@ -5182,8 +5174,20 @@ table ul {
     font-size: 0.97143rem;
   }
 
+  .button, .form-submit, .dropbutton-widget {
+    font-size: 0.85714rem;
+  }
+
+  .description, .field-suffix {
+    font-size: 0.85714rem;
+  }
+
   label {
     font-size: 1.14286rem;
+  }
+
+  .summary {
+    font-size: 1.28571rem;
   }
 
   .breadcrumb__item {
@@ -5372,6 +5376,14 @@ table ul {
     order: 3;
   }
 
+  .button, .form-submit, .dropbutton-widget {
+    font-size: 0.8rem;
+  }
+
+  .description, .field-suffix {
+    font-size: 0.8rem;
+  }
+
   label {
     font-size: 1.06667rem;
   }
@@ -5397,6 +5409,10 @@ table ul {
   .branding__site-slogan {
     font-size: 14px;
     margin: 0 1rem;
+  }
+
+  .summary {
+    font-size: 1.2rem;
   }
 
   .breadcrumb__item {
@@ -5503,8 +5519,20 @@ table ul {
     font-size: 0.88235rem;
   }
 
+  .button, .form-submit, .dropbutton-widget {
+    font-size: 0.70588rem;
+  }
+
+  .description, .field-suffix {
+    font-size: 0.70588rem;
+  }
+
   label {
     font-size: 0.94118rem;
+  }
+
+  .summary {
+    font-size: 1.05882rem;
   }
 
   .breadcrumb__item {
@@ -5625,8 +5653,20 @@ table ul {
     font-size: 0.82105rem;
   }
 
+  .button, .form-submit, .dropbutton-widget {
+    font-size: 0.63158rem;
+  }
+
+  .description, .field-suffix {
+    font-size: 0.63158rem;
+  }
+
   label {
     font-size: 0.84211rem;
+  }
+
+  .summary {
+    font-size: 0.94737rem;
   }
 
   .breadcrumb__item {
