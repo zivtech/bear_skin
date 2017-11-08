@@ -699,6 +699,10 @@ img.align-center {
   margin-right: 0 !important;
 }
 
+.no-list {
+  list-style: none;
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -906,8 +910,9 @@ label {
 .form-text, input[type="search"],
 .form-email,
 .form-textarea,
-.form-date {
-  padding: .2rem .2rem;
+.form-date,
+.form-password {
+  padding: .5rem .5rem;
   font-family: Noto Serif, serif;
   width: 100%;
   max-width: 30em;
@@ -918,7 +923,8 @@ label {
 .form-text:focus, input[type="search"]:focus,
 .form-email:focus,
 .form-textarea:focus,
-.form-date:focus {
+.form-date:focus,
+.form-password:focus {
   outline: 0;
   border-color: #41c37c;
 }
@@ -1023,7 +1029,7 @@ div[id^="ajax-wrapper"] {
 label {
   font-family: Montserrat, sans-serif;
   font-size: 1.33333rem;
-  line-height: 0;
+  line-height: 1;
   display: block;
 }
 
@@ -4433,17 +4439,33 @@ details[open] .summary i, [open].accordion .summary i {
 
 .menu--main .menu__link {
   font-size: 1.71429rem;
-  font-size: 0.93333rem;
+  font-size: 0.8rem;
+  color: black;
+  text-decoration: none;
   padding: .4rem .5rem .4rem .5rem;
   text-transform: uppercase;
   border-radius: 4px;
+}
+
+.menu--main .menu__link:visited {
+  color: black;
+}
+
+.menu--main .menu__link:visited:hover, .menu--main .menu__link:visited:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.menu--main .menu__link:hover, .menu--main .menu__link:focus {
+  color: black;
+  text-decoration: none;
 }
 
 .menu--main a.is-active,
 .menu--main .menu-item--active-trail a {
   color: white;
   text-decoration: none;
-  background-color: #728dac;
+  background-color: black;
 }
 
 .menu--main a.is-active:visited,

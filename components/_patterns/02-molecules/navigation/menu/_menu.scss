@@ -39,7 +39,8 @@
 
     .menu__link {
       @include fontsize(24, 1);
-      @include fontsize(14, 2);
+      @include fontsize(12, 2);
+      @include link($black, none, $black, none);
 
       padding: .4rem .5rem .4rem .5rem;
       text-transform: uppercase;
@@ -55,7 +56,7 @@
     .menu-item--active-trail a {
       @include link($white, none, $white, none);
 
-      background-color: $linkColour;
+      background-color: $black;
     }
 
     &.open {

@@ -16,19 +16,6 @@ function bear_skin_preprocess_html(&$variables, $hook) {
   // Add a class that tells us whether the page is viewed by an authenticated user or not.
   $variables['attributes']['class'][] = $variables['logged_in'] ? 'logged-in' : 'not-logged-in';
 
-  // add class depending on Theme layout settings
-  $variables['grey_ui'] = (theme_get_setting('ui') == 'grey_ui');
-  $variables['blue_ui'] = (theme_get_setting('ui') == 'blue_ui');
-  $variables['green_ui'] = (theme_get_setting('ui') == 'green_ui');
-
-  if (theme_get_setting('ui') == 'grey_ui') {
-    $variables['attributes']['class'][] = 'ui ui--grey';
-  } else if (theme_get_setting('ui') == 'blue_ui') {
-    $variables['attributes']['class'][] = 'ui ui--blue';
-  } else if (theme_get_setting('ui') == 'green_ui') {
-    $variables['attributes']['class'][] = 'ui ui--green';
-  }
-
   // if the sticky footer option is selected, set a class
   if (theme_get_setting('sticky_footer')) {
     $variables['attributes']['class'][] = 'sticky-footer';

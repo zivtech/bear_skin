@@ -16,21 +16,7 @@
   $form['bearskin_options'] = array(
     '#type' => 'fieldset',
     '#title' => t('Bear Skin Options'),
-    '#description' => t('<p style="color: red; padding: 10px 0 0 0;">You may need to clear your caches after enabling or disabling these options.</p>'),
-  );
-
-  // create an option to choose between fixed and fluid layouts
-  $form['bearskin_options']['ui'] = array(
-    '#type' => 'radios',
-    '#title' => t('UI -- Bear Skin comes either as a base theme or with a UI, which supports most of the default Drupal components.'),
-    '#description' => t('Choose among the following options to add an user interface to the base theme.<br><br>'),
-    '#options' => array(
-      'no_ui' => t('No UI'),
-      'grey_ui' => t('Grey UI'),
-      'blue_ui' => t('Blue UI'),
-      'green_ui' => t('Green UI'),
-    ),
-    '#default_value' => theme_get_setting('ui'),
+    '#description' => t('<p style="color: red; padding: 10px 0 0 0;">You may need to clear your caches after enabling or disabling this option.</p>'),
   );
 
   // create an option for sticky footers
