@@ -4337,6 +4337,12 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
   float: left;
 }
 
+.user-pass p {
+  font-size: 1rem;
+  color: #808080;
+  margin-top: -1.5rem;
+}
+
 .messages {
   padding: 1rem 1rem;
   margin-bottom: .5rem;
@@ -5190,6 +5196,10 @@ table ul {
     font-size: 1.28571rem;
   }
 
+  .user-pass p {
+    font-size: 0.85714rem;
+  }
+
   .breadcrumb__item {
     font-size: 1rem;
   }
@@ -5415,6 +5425,10 @@ table ul {
     font-size: 1.2rem;
   }
 
+  .user-pass p {
+    font-size: 0.8rem;
+  }
+
   .breadcrumb__item {
     font-size: 0.93333rem;
   }
@@ -5533,6 +5547,10 @@ table ul {
 
   .summary {
     font-size: 1.05882rem;
+  }
+
+  .user-pass p {
+    font-size: 0.70588rem;
   }
 
   .breadcrumb__item {
@@ -5667,6 +5685,10 @@ table ul {
 
   .summary {
     font-size: 0.94737rem;
+  }
+
+  .user-pass p {
+    font-size: 0.63158rem;
   }
 
   .breadcrumb__item {

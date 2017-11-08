@@ -1,0 +1,9 @@
+.user-pass {
+
+  p {
+    @include fontsize(12, all);
+
+    color: $ui-grey;
+    margin-top: -1.5rem;
+  }
+}
