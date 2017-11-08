@@ -3,14 +3,6 @@ strong {
   font-weight: 700;
 }
 
-.serif {
-  font-family: unquote(map-get($headingtype, font-family));;
-}
-
-.sans {
-  font-family: unquote(map-get($bodytype, font-family));
-}
-
 a {
   @include link($linkColour, none, $hoverColour, none);
 

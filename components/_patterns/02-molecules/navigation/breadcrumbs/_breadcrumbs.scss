@@ -1,20 +1,13 @@
 .wrapper-breadcrumb {
-  margin-top: 2rem;
   border-top: 1px solid $ui-lightest-grey;
 }
 
 .breadcrumb {
   padding: .5rem 0;
 
-  &__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
   &__item {
-    font-size: 14px;
-    font-family: unquote(map-get($bodytype, font-family));
+    @include fontsize(14, all);
+
     text-transform: uppercase;
     display: inline;
     margin-right: 5px;

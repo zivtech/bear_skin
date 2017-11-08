@@ -1,7 +1,6 @@
 //
 // Display utilities
 //
-
 .u-hidden,
 .visually-hidden,
 .element-invisible {
@@ -21,7 +20,6 @@
 }
 
 // Drupal utilities
-
 .align-center {
   text-align: center;
 }
@@ -64,7 +62,15 @@ img.align-center {
   }
 }
 
-// Text utilities
+// Typography utilities
+.sans {
+  @include sans;
+}
+
+.serif {
+  @include serif;
+}
+
 .text-italic {
   font-style: italic;
 }
@@ -382,5 +388,9 @@ img.align-center {
 
 // Various
 .no-list {
-  list-style: none;
+  list-style-type: none;
+
+  li::before {
+    display: none;
+  }
 }

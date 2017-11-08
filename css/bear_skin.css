@@ -405,6 +405,14 @@ img.align-center {
           filter: none;
 }
 
+.sans {
+  font-family: Montserrat, sans-serif;
+}
+
+.serif {
+  font-family: Noto Serif, serif;
+}
+
 .text-italic {
   font-style: italic;
 }
@@ -700,7 +708,11 @@ img.align-center {
 }
 
 .no-list {
-  list-style: none;
+  list-style-type: none;
+}
+
+.no-list li::before {
+  display: none;
 }
 
 @-webkit-keyframes fadeIn {
@@ -4058,14 +4070,6 @@ strong {
   font-weight: 700;
 }
 
-.serif {
-  font-family: Montserrat, sans-serif;
-}
-
-.sans {
-  font-family: Noto Serif, serif;
-}
-
 a {
   color: #728dac;
   text-decoration: none;
@@ -4380,7 +4384,6 @@ details[open] .summary i, [open].accordion .summary i {
 }
 
 .wrapper-breadcrumb {
-  margin-top: 2rem;
   border-top: 1px solid #F5F5F5;
 }
 
@@ -4388,15 +4391,8 @@ details[open] .summary i, [open].accordion .summary i {
   padding: .5rem 0;
 }
 
-.breadcrumb__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 .breadcrumb__item {
-  font-size: 14px;
-  font-family: Noto Serif, serif;
+  font-size: 1.16667rem;
   text-transform: uppercase;
   display: inline;
   margin-right: 5px;
@@ -5190,6 +5186,10 @@ table ul {
     font-size: 1.14286rem;
   }
 
+  .breadcrumb__item {
+    font-size: 1rem;
+  }
+
   .tabs {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -5399,6 +5399,10 @@ table ul {
     margin: 0 1rem;
   }
 
+  .breadcrumb__item {
+    font-size: 0.93333rem;
+  }
+
   .tabs__tab-link {
     font-size: 0.93333rem;
   }
@@ -5501,6 +5505,10 @@ table ul {
 
   label {
     font-size: 0.94118rem;
+  }
+
+  .breadcrumb__item {
+    font-size: 0.82353rem;
   }
 
   .menu--main {
@@ -5619,6 +5627,10 @@ table ul {
 
   label {
     font-size: 0.84211rem;
+  }
+
+  .breadcrumb__item {
+    font-size: 0.73684rem;
   }
 
   .tabs__tab-link {
