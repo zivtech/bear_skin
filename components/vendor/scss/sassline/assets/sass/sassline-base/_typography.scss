@@ -203,7 +203,7 @@ a {
 
   // Tables.
   table {
-    @include sassline(eta, $headingtype, 2, 0, all);
+    @include sassline(eta, $headingtype, 2, 2, all);
 
     font-family: unquote(map-get($headingtype, font-family));
     font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
@@ -215,7 +215,6 @@ a {
 
       th {
         @include sassline(zeta, $headingtype, 2, 0, all);
-        padding-bottom: 1px;
       }
     }
   }

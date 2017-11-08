@@ -11,8 +11,11 @@
     display: inline-block;
 
     &.is-active {
-      background: $wild-sand;
-      color: $grey;
+      background: $ui-active-form-element;
+
+      a {
+        color: $white;
+      }
     }
 
     &--ellipsis {
@@ -40,12 +43,12 @@
   &__link {
     color: $grey;
     display: block;
-    padding: 2px 8px;
+    padding: .25rem 1rem;
     position: relative;
   }
 
   i {
-    color: $white;
+    color: $black;
     display: inline-block;
     font-size: 12px;
     margin: 0;

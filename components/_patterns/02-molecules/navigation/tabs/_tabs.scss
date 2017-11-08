@@ -78,12 +78,23 @@
 
 .vertical-tabs {
 
+  &__menu {
+    padding: 0 !important;
+  }
+
+  &__menu-item {
+    @include fontsize(16, all);
+    @include sans;
+  }
+
   &__menu-item-title {
     text-decoration: none !important;
   }
 
   &__pane {
+    padding: 0 1rem;
     clear: none;
+    display: inline;
   }
 
   &__menu-item-summary {

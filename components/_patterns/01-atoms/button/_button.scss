@@ -16,3 +16,9 @@ button {
     border: 1px solid $ui-light-grey;
   }
 }
+
+a.button {
+  @include link($white, none, $white, none);
+
+  line-height: 1.3;
+}

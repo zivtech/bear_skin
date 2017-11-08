@@ -22,10 +22,6 @@ form {
   margin-bottom: 1rem;
 }
 
-label {
-  margin-bottom: .1rem;
-}
-
 .form-submit {
   margin-bottom: .5rem;
 }
@@ -41,13 +37,29 @@ label {
   height: 6px;
 }
 
-.description {
+.description,
+.filter-guidelines {
   @include fontsize(12, all);
 
+  clear: both;
   margin-bottom: rem;
   padding: .2rem 0;
   line-height: 1.5;
   color: $ui-grey;
+
+  ul {
+    line-height: 1.5;
+  }
+}
+
+.filter-help {
+  @include fontsize(14, all);
+
+  float: none;
+}
+
+.filter-wrapper {
+  border: 1px solid $ui-border-color;
 }
 
 .field-suffix {
@@ -62,7 +74,8 @@ label {
 .form-email,
 .form-textarea,
 .form-date,
-.form-password {
+.form-password,
+.form-date {
   @include fontsize(16, all);
 
   padding: .5rem .5rem;
@@ -75,6 +88,16 @@ label {
     outline: 0;
     border-color: $ui-active-form-element;
   }
+}
+
+.form-date {
+  @include sans;
+
+  max-width: 10em;
+}
+
+.form-textarea {
+  @include sans;
 }
 
 .form-submit {
