@@ -3,6 +3,13 @@
 
   padding: 1rem 0;
   background: $ui-lightest-grey;
+
+  .menu__link {
+    @include link($black, none, $black, underline);
+    @include fontsize(14, all);
+
+    text-transform: uppercase;
+  }
 }
 
 .sticky-footer {
