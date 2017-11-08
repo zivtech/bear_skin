@@ -62,7 +62,11 @@
     }
 
     .tabs__tab-link {
-      padding: 0;
+      background: transparent;
+
+      &.is-active {
+        background: $wild-sand;
+      }
     }
   }
 }

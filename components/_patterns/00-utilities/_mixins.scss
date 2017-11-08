@@ -86,7 +86,7 @@
 
 @mixin button($color, $background-color, $background-hover) {
   @include sans;
-  @include fontsize(12, all);
+  @include fontsize(13, all);
 
   position: relative;
   display: inline-block;

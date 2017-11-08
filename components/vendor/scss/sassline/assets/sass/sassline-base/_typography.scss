@@ -90,6 +90,8 @@ a {
   ul, ol {
     @include baseline(zeta, $bodytype, 2, 2, all);
 
+    padding-left: 2rem;
+
     li {
       font-feature-settings: 'kern', 'onum', 'liga';
       margin-left: 2rem;
@@ -225,7 +227,7 @@ a {
   }
 
   // Italic.
-  em, .italic {
+  em, i, .italic {
     font-style: map-get($bodytype, italic);
   }
 

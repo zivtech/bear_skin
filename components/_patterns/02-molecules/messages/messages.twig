@@ -9,11 +9,11 @@
   {% block icon %}
     <div class="messages__icon">
       {% if type == 'error' %}
-        <i class="icon icon-frown-o"></i>
+        <i class="icon icon-exclamation-circle"></i>
       {% elseif type == 'warning' %}
-          <i class="icon icon-meh-o"></i>
+          <i class="icon icon-bell"></i>
       {% else %}
-          <i class="icon icon-smile-o"></i>
+          <i class="icon icon-check-circle"></i>
       {% endif %}
     </div>
   {% endblock icon %}
