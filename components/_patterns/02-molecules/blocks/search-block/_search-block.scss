@@ -13,8 +13,11 @@
   display: flex;
   align-items: center;
   margin-left: 2rem;
-  font-size: 26px;
+  font-size: 30px;
   color: $white;
+  position: absolute;
+  right: 2rem;
+  top: 3rem;
 }
 
 #msearch-content {
@@ -39,13 +42,92 @@
 #search-block-form {
   display: flex;
   align-items: center;
+  margin: 2rem 0;
 
   .form-item {
     margin: 0;
   }
 
+  .form-search {
+    @include fontsize(40, all);
+
+    border: 0;
+    padding: .5rem 3rem .5rem 0;
+    color: $white;
+    background: transparent;
+    width: 200px;
+
+    @include breakpoint(break-1) {
+      width: 400px;
+    }
+
+    &::-webkit-input-placeholder {
+      @include fontsize(40, all);
+
+      color: $ui-grey;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      @include fontsize(40, all);
+
+      color: $ui-grey;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+      @include fontsize(40, all);
+
+      color: $ui-grey;
+    }
+
+    &:-ms-input-placeholder {
+      @include fontsize(40, all);
+
+      color: $ui-grey;
+    }
+  }
+
+  .js-form-type-search {
+    position: relative;
+
+    &::after {
+      content: '';
+      height: 2px;
+      background: $white;
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      transition: width .5s ease-in-out;
+    }
+
+    &.active {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .form-actions {
+    @extend .icon;
+
+    //position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -3.5rem;
+
+    &::after {
+      content: "\e905";
+      color: $white;
+      position: absolute;
+      font-size: 30px;
+    }
+  }
+
   .form-submit {
-    margin: 0;
+    opacity: 0;
+    position: relative;
+    z-index: 2;
   }
 
   &__site-slogan {

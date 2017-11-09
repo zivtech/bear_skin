@@ -1192,7 +1192,9 @@ label {
 }
 
 [class^="icon-"],
-[class*=" icon-"] {
+[class*=" icon-"],
+.icon,
+#search-block-form .form-actions {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'bearskin' !important;
   speak: none;
@@ -1316,6 +1318,12 @@ code {
   width: 50px;
   height: 50px;
   display: block;
+  position: relative;
+}
+
+.branding__site-logo object {
+  position: absolute;
+  z-index: -1;
 }
 
 .branding__flex-container {
@@ -1365,8 +1373,11 @@ code {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 2rem;
-  font-size: 26px;
+  font-size: 30px;
   color: white;
+  position: absolute;
+  right: 2rem;
+  top: 3rem;
 }
 
 #msearch-content {
@@ -1399,14 +1410,88 @@ code {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 2rem 0;
 }
 
 #search-block-form .form-item {
   margin: 0;
 }
 
+#search-block-form .form-search {
+  font-size: 3.33333rem;
+  border: 0;
+  padding: .5rem 3rem .5rem 0;
+  color: white;
+  background: transparent;
+  width: 200px;
+}
+
+#search-block-form .form-search::-webkit-input-placeholder {
+  font-size: 3.33333rem;
+  color: #808080;
+}
+
+#search-block-form .form-search:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 3.33333rem;
+  color: #808080;
+}
+
+#search-block-form .form-search::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 3.33333rem;
+  color: #808080;
+}
+
+#search-block-form .form-search:-ms-input-placeholder {
+  font-size: 3.33333rem;
+  color: #808080;
+}
+
+#search-block-form .js-form-type-search {
+  position: relative;
+}
+
+#search-block-form .js-form-type-search::after {
+  content: '';
+  height: 2px;
+  background: white;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  transition: width .5s ease-in-out;
+}
+
+#search-block-form .js-form-type-search.active::after {
+  width: 100%;
+}
+
+#search-block-form .form-actions {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -3.5rem;
+}
+
+#search-block-form .form-actions::after {
+  content: "\e905";
+  color: white;
+  position: absolute;
+  font-size: 30px;
+}
+
 #search-block-form .form-submit {
-  margin: 0;
+  opacity: 0;
+  position: relative;
+  z-index: 2;
 }
 
 #search-block-form__site-slogan {
@@ -2444,6 +2529,30 @@ table ul {
     font-size: 1rem;
   }
 
+  #search-block-form .form-search {
+    font-size: 2.85714rem;
+  }
+
+  #search-block-form .form-search {
+    width: 400px;
+  }
+
+  #search-block-form .form-search::-webkit-input-placeholder {
+    font-size: 2.85714rem;
+  }
+
+  #search-block-form .form-search:-moz-placeholder {
+    font-size: 2.85714rem;
+  }
+
+  #search-block-form .form-search::-moz-placeholder {
+    font-size: 2.85714rem;
+  }
+
+  #search-block-form .form-search:-ms-input-placeholder {
+    font-size: 2.85714rem;
+  }
+
   .summary {
     font-size: 1.28571rem;
   }
@@ -2700,6 +2809,26 @@ table ul {
     margin: 0 1rem;
   }
 
+  #search-block-form .form-search {
+    font-size: 2.66667rem;
+  }
+
+  #search-block-form .form-search::-webkit-input-placeholder {
+    font-size: 2.66667rem;
+  }
+
+  #search-block-form .form-search:-moz-placeholder {
+    font-size: 2.66667rem;
+  }
+
+  #search-block-form .form-search::-moz-placeholder {
+    font-size: 2.66667rem;
+  }
+
+  #search-block-form .form-search:-ms-input-placeholder {
+    font-size: 2.66667rem;
+  }
+
   .summary {
     font-size: 1.2rem;
   }
@@ -2849,6 +2978,26 @@ table ul {
   .js-form-type-checkbox label,
   .js-form-type-radio label {
     font-size: 0.82353rem;
+  }
+
+  #search-block-form .form-search {
+    font-size: 2.35294rem;
+  }
+
+  #search-block-form .form-search::-webkit-input-placeholder {
+    font-size: 2.35294rem;
+  }
+
+  #search-block-form .form-search:-moz-placeholder {
+    font-size: 2.35294rem;
+  }
+
+  #search-block-form .form-search::-moz-placeholder {
+    font-size: 2.35294rem;
+  }
+
+  #search-block-form .form-search:-ms-input-placeholder {
+    font-size: 2.35294rem;
   }
 
   .summary {
@@ -3014,6 +3163,26 @@ table ul {
   .js-form-type-checkbox label,
   .js-form-type-radio label {
     font-size: 0.73684rem;
+  }
+
+  #search-block-form .form-search {
+    font-size: 2.10526rem;
+  }
+
+  #search-block-form .form-search::-webkit-input-placeholder {
+    font-size: 2.10526rem;
+  }
+
+  #search-block-form .form-search:-moz-placeholder {
+    font-size: 2.10526rem;
+  }
+
+  #search-block-form .form-search::-moz-placeholder {
+    font-size: 2.10526rem;
+  }
+
+  #search-block-form .form-search:-ms-input-placeholder {
+    font-size: 2.10526rem;
   }
 
   .summary {

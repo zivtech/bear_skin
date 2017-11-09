@@ -4,6 +4,12 @@
     width: 50px;
     height: 50px;
     display: block;
+    position: relative;
+
+    object {
+      position: absolute;
+      z-index: -1;
+    }
 
     @include breakpoint(break-2) {
       width: 100px;

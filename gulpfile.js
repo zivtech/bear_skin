@@ -38,7 +38,7 @@
   var renameTasks = require('./gulp-tasks/rename/rename.js');
   renameTasks(gulp, config);
 
-  gulp.task('watch', ['fonts:download', 'serve', 'styles:watch', 'scripts:watch', 'pl:watch']);
+  gulp.task('watch', ['fonts:download', 'serve', 'styles:watch', 'pl:watch']);
   gulp.task('default', ['watch']);
   gulp.task('build', ['styles:build', 'pl:build', 'favicons:build', 'images:build', 'fonts:download']);
   gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
