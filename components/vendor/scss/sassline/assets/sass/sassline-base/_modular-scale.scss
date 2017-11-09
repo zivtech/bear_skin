@@ -39,17 +39,17 @@ $modular-scale: (
     theta:   14.4,
     iota:    13.1
   ),
-  // Perfect Fourth http://www.modularscale.com/?20,40&px&1.333&web&text
+  // Major Third http://www.modularscale.com/?18,32&px&1.25&web&text
   scale-3: (
-    alpha:   53.3,
-    beta:    47.3,
-    gamma:   40,
-    delta:   35.5,
-    epsilon: 30,
-    zeta:    26.6,
-    eta:     22.5,
-    theta:   20,
-    iota:    16.8
+    alpha:   40,
+    beta:    35.1,
+    gamma:   32,
+    delta:   28.1,
+    epsilon: 25.6,
+    zeta:    18,
+    eta:     16.3,
+    theta:   14.4,
+    iota:    13.1
   ),
   // Aug. Fourth http://www.modularscale.com/?22,50&px&1.414&web&text
   scale-4: (
@@ -58,7 +58,7 @@ $modular-scale: (
     gamma:   43.9,
     delta:   35.3,
     epsilon: 31.1,
-    zeta:    25,
+    zeta:    22,
     eta:     22,
     theta:   17.6,
     iota:    15.5

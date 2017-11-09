@@ -91,10 +91,10 @@ a:hover, a:active, a:focus {
 }
 
 .typeset h1, .typeset .alpha {
-  line-height: 4rem;
+  line-height: 3rem;
   font-size: 2.33333rem;
-  margin-bottom: 1.76999rem;
-  padding-top: 1.23001rem;
+  margin-bottom: 2.26999rem;
+  padding-top: 0.73001rem;
 }
 
 .typeset h2, .typeset .beta {
@@ -2413,8 +2413,8 @@ table ul {
 
   .typeset h1, .typeset .alpha {
     font-size: 2.14286rem;
-    margin-bottom: 1.70713rem;
-    padding-top: 1.29287rem;
+    margin-bottom: 2.20713rem;
+    padding-top: 0.79287rem;
   }
 
   .typeset h2, .typeset .beta {
@@ -2612,8 +2612,8 @@ table ul {
 
   .typeset h1, .typeset .alpha {
     font-size: 2.13333rem;
-    margin-bottom: 1.70399rem;
-    padding-top: 1.29601rem;
+    margin-bottom: 2.20399rem;
+    padding-top: 0.79601rem;
   }
 
   .typeset h2, .typeset .beta {
@@ -2866,88 +2866,88 @@ table ul {
   }
 
   body {
-    font-size: 1.56471rem;
+    font-size: 1.05882rem;
   }
 
   .typeset p {
-    margin-bottom: 1.51634rem;
-    padding-top: 0.48366rem;
+    margin-bottom: 1.3494rem;
+    padding-top: 0.6506rem;
   }
 
   .typeset h1, .typeset .alpha {
-    font-size: 3.13529rem;
-    margin-bottom: 2.03464rem;
-    padding-top: 0.96536rem;
-  }
-
-  .typeset h2, .typeset .beta {
-    font-size: 2.78235rem;
-    margin-bottom: 1.41817rem;
-    padding-top: 0.58183rem;
-  }
-
-  .typeset h3, .typeset .gamma {
     font-size: 2.35294rem;
-    margin-bottom: 1.27646rem;
+    margin-bottom: 2.27646rem;
     padding-top: 0.72354rem;
   }
 
+  .typeset h2, .typeset .beta {
+    font-size: 2.06471rem;
+    margin-bottom: 1.18134rem;
+    padding-top: 0.81866rem;
+  }
+
+  .typeset h3, .typeset .gamma {
+    font-size: 1.88235rem;
+    margin-bottom: 1.12117rem;
+    padding-top: 0.87883rem;
+  }
+
   .typeset h4, .typeset .delta {
-    font-size: 2.08824rem;
-    margin-bottom: -0.31089rem;
-    padding-top: 0.31089rem;
+    font-size: 1.65294rem;
+    margin-bottom: -0.45454rem;
+    padding-top: 0.45454rem;
   }
 
   .typeset h5, .typeset .epsilon {
-    font-size: 1.76471rem;
-    margin-bottom: -0.41766rem;
-    padding-top: 0.41766rem;
+    font-size: 1.50588rem;
+    margin-bottom: -0.50307rem;
+    padding-top: 0.50307rem;
   }
 
   .typeset h6, .typeset .zeta {
-    font-size: 1.56471rem;
-    margin-bottom: -0.48366rem;
-    padding-top: 0.48366rem;
+    font-size: 1.05882rem;
+    margin-bottom: -0.6506rem;
+    padding-top: 0.6506rem;
   }
 
   .typeset ul, .typeset ol {
-    margin-bottom: 1.51634rem;
-    padding-top: 0.48366rem;
+    margin-bottom: 1.3494rem;
+    padding-top: 0.6506rem;
   }
 
   .typeset dl {
-    margin-bottom: 1.51634rem;
-    padding-top: 0.48366rem;
+    margin-bottom: 1.3494rem;
+    padding-top: 0.6506rem;
   }
 
   .typeset table {
-    font-size: 1.32353rem;
-    margin-bottom: 1.43675rem;
-    padding-top: 0.56325rem;
+    font-size: 0.95882rem;
+    margin-bottom: 1.3164rem;
+    padding-top: 0.6836rem;
   }
 
   .typeset table thead th {
-    font-size: 1.56471rem;
-    margin-bottom: -0.48366rem;
-    padding-top: 0.48366rem;
+    font-size: 1.05882rem;
+    margin-bottom: -0.6506rem;
+    padding-top: 0.6506rem;
   }
 
   .typeset small, .typeset .caption {
-    font-size: 1.17647rem;
+    font-size: 0.84706rem;
   }
 
   .typeset .caption {
-    margin-bottom: 1.38823rem;
-    padding-top: 0.61177rem;
+    margin-bottom: 1.27952rem;
+    padding-top: 0.72048rem;
   }
 
   .typeset blockquote p {
-    margin-bottom: 2.0327rem;
-    padding-bottom: 0.48366rem;
+    margin-bottom: 1.69881rem;
+    padding-bottom: 0.6506rem;
   }
 
   .typeset code {
-    font-size: 1.17647rem;
+    font-size: 0.84706rem;
   }
 
   .button, .form-submit, .dropbutton-widget {
@@ -3051,18 +3051,18 @@ table ul {
   }
 
   body {
-    font-size: 1.31579rem;
+    font-size: 1.15789rem;
   }
 
   .typeset p {
-    margin-bottom: 1.4342rem;
-    padding-top: 0.5658rem;
+    margin-bottom: 1.3821rem;
+    padding-top: 0.6179rem;
   }
 
   .typeset h1, .typeset .alpha {
     font-size: 3.27368rem;
-    margin-bottom: 2.08031rem;
-    padding-top: 0.91969rem;
+    margin-bottom: 2.58031rem;
+    padding-top: 0.41969rem;
   }
 
   .typeset h2, .typeset .beta {
@@ -3090,19 +3090,19 @@ table ul {
   }
 
   .typeset h6, .typeset .zeta {
-    font-size: 1.31579rem;
-    margin-bottom: -0.5658rem;
-    padding-top: 0.5658rem;
+    font-size: 1.15789rem;
+    margin-bottom: -0.6179rem;
+    padding-top: 0.6179rem;
   }
 
   .typeset ul, .typeset ol {
-    margin-bottom: 1.4342rem;
-    padding-top: 0.5658rem;
+    margin-bottom: 1.3821rem;
+    padding-top: 0.6179rem;
   }
 
   .typeset dl {
-    margin-bottom: 1.4342rem;
-    padding-top: 0.5658rem;
+    margin-bottom: 1.3821rem;
+    padding-top: 0.6179rem;
   }
 
   .typeset table {
@@ -3112,9 +3112,9 @@ table ul {
   }
 
   .typeset table thead th {
-    font-size: 1.31579rem;
-    margin-bottom: -0.5658rem;
-    padding-top: 0.5658rem;
+    font-size: 1.15789rem;
+    margin-bottom: -0.6179rem;
+    padding-top: 0.6179rem;
   }
 
   .typeset small, .typeset .caption {
@@ -3127,8 +3127,8 @@ table ul {
   }
 
   .typeset blockquote p {
-    margin-bottom: 1.86841rem;
-    padding-bottom: 0.5658rem;
+    margin-bottom: 1.7642rem;
+    padding-bottom: 0.6179rem;
   }
 
   .typeset code {
