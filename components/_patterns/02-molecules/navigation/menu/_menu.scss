@@ -84,6 +84,7 @@
 
         &__link {
           @include link($white, none, $white, none);
+          @include fontsize(22, all);
 
           text-transform: uppercase;
           display: block;
@@ -91,12 +92,6 @@
           width: 100%;
           background: transparent;
           border-radius: 0 !important;
-
-          &:hover,
-          &:focus,
-          &.is-active {
-            font-size: 18px;
-          }
         }
       }
     }
@@ -136,7 +131,7 @@
 
     i {
       &:before {
-        content: "\f00d";
+        content: "\e907";
       }
     }
   }

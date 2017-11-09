@@ -810,6 +810,14 @@ body {
   width: 100%;
 }
 
+.wrapper-main {
+  padding: 2rem 0;
+}
+
+img {
+  display: block;
+}
+
 .button, .form-submit, .dropbutton-widget {
   font-family: Montserrat, sans-serif;
   font-size: 1.08333rem;
@@ -882,6 +890,35 @@ a.button:hover, a.form-submit:hover, a.dropbutton-widget:hover, a.button:focus, 
 
 .field--label-inline p:first-child {
   margin-top: 0;
+}
+
+figure img {
+  width: 100%;
+  max-width: 100%;
+}
+
+figure.align-left {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+figure.align-right {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+figure.align-center {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+figure figcaption {
+  font-size: 1.33333rem;
+  color: #808080;
+  padding: .5rem 1rem;
+  text-align: left;
 }
 
 ::-webkit-input-placeholder {
@@ -1790,6 +1827,7 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
 .menu--main.open .menu__link {
   color: white;
   text-decoration: none;
+  font-size: 1.83333rem;
   text-transform: uppercase;
   display: block;
   padding: 10px;
@@ -1810,10 +1848,6 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
 .menu--main.open .menu__link:hover, .menu--main.open .menu__link:focus {
   color: white;
   text-decoration: none;
-}
-
-.menu--main.open .menu__link:hover, .menu--main.open .menu__link:focus, .menu--main.open .menu__link.is-active {
-  font-size: 18px;
 }
 
 .sub-menu {
@@ -1846,7 +1880,7 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
 }
 
 #mnav.open i:before {
-  content: "\f00d";
+  content: "\e907";
 }
 
 .pager__items {
@@ -2503,6 +2537,24 @@ table ul {
     font-size: 0.92857rem;
   }
 
+  figure.align-left {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    float: left;
+    width: auto;
+  }
+
+  figure.align-right {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    float: right;
+    width: auto;
+  }
+
+  figure figcaption {
+    font-size: 1.14286rem;
+  }
+
   .description, .field-suffix,
   .filter-guidelines {
     font-size: 0.85714rem;
@@ -2564,6 +2616,10 @@ table ul {
 
   .breadcrumb__item {
     font-size: 1rem;
+  }
+
+  .menu--main.open .menu__link {
+    font-size: 1.57143rem;
   }
 
   .tabs {
@@ -2760,6 +2816,10 @@ table ul {
     font-size: 0.86667rem;
   }
 
+  figure figcaption {
+    font-size: 1.06667rem;
+  }
+
   .description, .field-suffix,
   .filter-guidelines {
     font-size: 0.8rem;
@@ -2840,6 +2900,10 @@ table ul {
 
   .breadcrumb__item {
     font-size: 0.93333rem;
+  }
+
+  .menu--main.open .menu__link {
+    font-size: 1.46667rem;
   }
 
   .tabs__tab-link {
@@ -2954,6 +3018,10 @@ table ul {
     font-size: 0.76471rem;
   }
 
+  figure figcaption {
+    font-size: 0.94118rem;
+  }
+
   .description, .field-suffix,
   .filter-guidelines {
     font-size: 0.70588rem;
@@ -3018,6 +3086,10 @@ table ul {
     top: -2px;
   }
 
+  .menu--main.open .menu__link {
+    font-size: 1.29412rem;
+  }
+
   #mnav {
     display: none;
   }
@@ -3072,9 +3144,9 @@ table ul {
   }
 
   .typeset h3, .typeset .gamma {
-    font-size: 2.31053rem;
-    margin-bottom: 1.26246rem;
-    padding-top: 0.73754rem;
+    font-size: 2.04737rem;
+    margin-bottom: 1.17562rem;
+    padding-top: 0.82438rem;
   }
 
   .typeset h4, .typeset .delta {
@@ -3139,6 +3211,10 @@ table ul {
     font-size: 0.68421rem;
   }
 
+  figure figcaption {
+    font-size: 0.84211rem;
+  }
+
   .description, .field-suffix,
   .filter-guidelines {
     font-size: 0.63158rem;
@@ -3196,6 +3272,10 @@ table ul {
 
   .breadcrumb__item {
     font-size: 0.73684rem;
+  }
+
+  .menu--main.open .menu__link {
+    font-size: 1.15789rem;
   }
 
   .tabs__tab-link {
