@@ -2,6 +2,7 @@
 @import 'vendor/scss/all';
 
 // Theme
+@import '_patterns/00-utilities/functions';
 @import '_patterns/00-utilities/all';
 @import '_patterns/01-atoms/**/*';
 @import '_patterns/02-molecules/**/*';

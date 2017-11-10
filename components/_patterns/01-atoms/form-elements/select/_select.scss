@@ -2,7 +2,7 @@
   margin: .5rem 0;
   position: relative;
   max-width: 500px;
-  border: 1px solid $ui-border-color;
+  border: 1px solid $c-ui-border;
   border-radius: $ui-border-radius;
   background: $wild-sand;
 
@@ -17,7 +17,7 @@
     right: -1px;
     top: -1px;
     max-height: 30px;
-    background: $ui-grey;
+    background: $c-ui-grey;
     border-radius: 0 $ui-border-radius $ui-border-radius 0;
   }
 

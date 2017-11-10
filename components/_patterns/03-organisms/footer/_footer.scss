@@ -2,7 +2,7 @@
   @include fontsize(16, all);
 
   padding: 1rem 0;
-  background: $ui-lightest-grey;
+  background: $c-ui-lightest-grey;
 
   .menu__link {
     @include link($black, none, $black, underline);

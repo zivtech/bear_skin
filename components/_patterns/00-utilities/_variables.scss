@@ -1,5 +1,5 @@
 //
-// BASE COLORS
+// BEAR SKIN COLORS
 //
 $black:              hsla(0, 0%, 0%, 1);
 $emperor:            hsla(0, 0%, 33%, 1);
@@ -15,21 +15,72 @@ $tangerine:          hsla(40, 100%, 44%, 1);
 $outrageous-orange:  hsla(13, 100%, 63%, 1);
 $persian-red:        hsla(0, 64%, 51%, 1);
 
-$body-color: $black;
-$link: $bermuda-grey;
-$link-hover: $dark-bermuda-grey;
+//
+// COLOR CONFIGURATION
+//
 
-//
-// UI ELEMENTS (form items, buttons etc)
-//
-$ui-button-padding: .7rem 1rem;
-$ui-border-radius: 4px;
-$ui-lightest-grey: #F5F5F5;
-$ui-light-grey: #DCDCDC;
-$ui-grey: #808080;
-$ui-dark-grey: #3F3F3F;
-$ui-border-color: $ui-light-grey;
-$ui-active-form-element: $black;
+  // COLOR PALETTE
+  // These are the colors you will use for design elements throughout the site.
+  // You can set the keys to whatever you like. For example, keys like "blue"
+  // will work. We recommend using numbers, though, in case you one day your
+  // "blue" color becomes a shade of, say, red.
+  //
+  // Access via c() function.
+  //
+  // Examples:
+  //  color: c(1);
+  //  color: c(blue);
+  //  background: linear-gradient(45deg, c(1), c(blue));
+  //
+  $c-palette: (
+    1: $emerald,
+    2: purple,
+    3: #000000,
+    4: #4f8d9c
+  );
+
+  // CLASS CONFIGURATION
+  // Configure which classes are generated based on your color palette.
+  //
+  $c-config: (
+    key-classes: (
+      bg-enabled: false,  // Generates classes based on c-palette map keys.
+      bg-light: false,    // Generates classes for lightened colors.
+      bg-dark: false      // Generates classes for darkened colors.
+    ),
+    value-classes: (
+      bg-enabled: false,  // Generates classes based on c-palette map values.
+      bg-light: false,    // Generates classes for lightened colors.
+      bg-dark: false      // Generates classes for darkened colors.
+    ),
+    lighten-percent: 10%, // The amount lightened classes will be lightened.
+    darken-percent: 10%   // The amount darkened classes will be darkened.
+  );
+
+  // MESSAGES
+  // Set colors for Drupal messages.
+  //
+  $c-status: $emerald;
+  $c-warning: $tangerine;
+  $c-error: $persian-red;
+
+  // TYPOGRAPHY
+  // Set typography colors.
+  //
+  $c-font-primary: $black;
+  $c-link: $bermuda-grey;
+  $c-link-hover: $dark-bermuda-grey;
+
+  // UI ELEMENTS
+  // Colors for form items, buttons, etc.
+  //
+  $c-ui-lightest-grey: #F5F5F5;
+  $c-ui-light-grey: #DCDCDC;
+  $c-ui-light-grey: #DCDCDC;
+  $c-ui-grey: #808080;
+  $c-ui-dark-grey: #3F3F3F;
+  $c-ui-border: $c-ui-light-grey;
+  $c-ui-active-form-element: $black;
 
 //
 // LAYOUT
@@ -42,3 +93,6 @@ $site-max-width: 1200px;
 //
 // See ../../vendor/scss/sassline/sass/sassline-base
 
+
+$ui-button-padding: .7rem 1rem;
+$ui-border-radius: 4px;
