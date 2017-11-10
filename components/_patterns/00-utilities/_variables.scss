@@ -82,6 +82,10 @@ $persian-red:        hsla(0, 64%, 51%, 1);
   $c-ui-border: $c-ui-light-grey;
   $c-ui-active-form-element: $black;
 
+
+$ui-button-padding: .7rem 1rem;
+$ui-border-radius: 4px;
+
 //
 // LAYOUT
 //
@@ -93,6 +97,71 @@ $site-max-width: 1200px;
 //
 // See ../../vendor/scss/sassline/sass/sassline-base
 
+$breakpoints: (
+  break-0: 0,     // 0px       Mobile first
+  break-1: 640,   // 640px   ~ Small tablet up
+  break-2: 800,   // 800px   ~ Large tablet up
+  break-3: 1024,  // 1024px  ~ Desktop up
+  break-4: 1600   // 1600px  ~ Large desktop up
+);
 
-$ui-button-padding: .7rem 1rem;
-$ui-border-radius: 4px;
+$rootsizes: (
+  rootsize-0: 12,   // 24px line-height body text
+  rootsize-1: 14,   // 28px line-height body text
+  rootsize-2: 15,   // 30px line-height body text
+  rootsize-3: 17,   // 34px line-height body text
+  rootsize-4: 19    // 38px line-height body text
+);
+
+$measures: (
+  measure-0: 500,  // 500px wide
+  measure-1: 550,  // 550px wide
+  measure-2: 600,  // 600px wide
+  measure-3: 680,  // 680px wide
+  measure-4: 750   // 750px wide
+);
+
+$maxwidths: (
+  width-0: 500,  // 500px wide
+  width-1: 600,  // 600px wide
+  width-2: 800,  // 800px wide
+  width-3: 1100, // 110px wide
+  width-4: 1300  // 1300px wide
+);
+
+$gutterwidths: (
+  small: 1rem,
+  medium: 2rem,
+  large: 4rem
+);
+
+$bodytype: (
+  font-family: 'Noto Serif, serif',
+  regular: 400,
+  bold: 700,
+  italic: italic,
+  cap-height: 0.66
+);
+
+$headingtype: (
+  font-family: 'Montserrat, sans-serif',
+  regular: 400,
+  bold: 300,
+  cap-height: 0.66
+);
+
+$monospacetype: (
+  font-family: 'Menlo, monospace',
+  regular: 400,
+  cap-height: 0.68
+);
+
+$headingColour: $c-font-primary;
+$bodyColour: $c-font-primary;
+$linkColour: $c-link;
+$hoverColour: $c-link-hover;
+// $captionColour: ;
+$white: $white;
+
+// $backgroundColour: ;
+// $codeBackgroundColour: ;
