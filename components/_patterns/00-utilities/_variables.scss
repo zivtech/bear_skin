@@ -1,5 +1,12 @@
 //
+// ABOUT THIS FILE:
+// This file serves as a home for all your variables and also acts as a
+// configuration file for certain Bear Skin behaviors.
+//
+
+//
 // BEAR SKIN COLORS
+// Default colors that come packaged with Bear Skin.
 //
 $black:              hsla(0, 0%, 0%, 1);
 $emperor:            hsla(0, 0%, 33%, 1);
@@ -22,8 +29,8 @@ $persian-red:        hsla(0, 64%, 51%, 1);
   // COLOR PALETTE
   // These are the colors you will use for design elements throughout the site.
   // You can set the keys to whatever you like. For example, keys like "blue"
-  // will work. We recommend using numbers, though, in case you one day your
-  // "blue" color becomes a shade of, say, red.
+  // will work. We recommend using numbers, though, in case one day your "blue"
+  // color becomes a shade of, say, red.
   //
   // Access via c() function.
   //
@@ -33,14 +40,17 @@ $persian-red:        hsla(0, 64%, 51%, 1);
   //  background: linear-gradient(45deg, c(1), c(blue));
   //
   $c-palette: (
-    1: $emerald,
-    2: purple,
-    3: #000000,
-    4: #4f8d9c
+    1: $white,
+    2: $black,
+    3: $emperor,
+    4: $grey,
+    5: $wild-sand
   );
 
   // CLASS CONFIGURATION
-  // Configure which classes are generated based on your color palette.
+  // Configure which classes are generated based on your color palette. Bear
+  // Skin recommends using key classes for most sites since they are more
+  // modular. Using value classes only makes sense if your site has a mechanism // for generating classes based on values.
   //
   $c-config: (
     key-classes: (        // Generates classes based on c-palette map keys.
@@ -53,35 +63,28 @@ $persian-red:        hsla(0, 64%, 51%, 1);
       bg-light: false,    // e.g. .bg-f1f1f1-light
       bg-dark: false      // e.g. .bg-f1f1f1-dark
     ),
-    lighten-percent: 10%, // The amount lightened classes will be lightened.
-    darken-percent: 10%   // The amount darkened classes will be darkened.
+    lighten-percent: 10%, // The amount light classes will be lightened.
+    darken-percent: 10%   // The amount dark classes will be darkened.
   );
 
-  // MESSAGES
-  // Set colors for Drupal messages.
-  //
-  $c-status: $emerald;
-  $c-warning: $tangerine;
-  $c-error: $persian-red;
+//
+// MESSAGES
+// Set colors for Drupal messages.
+//
+$c-status: $emerald;
+$c-warning: $tangerine;
+$c-error: $persian-red;
 
-  // TYPOGRAPHY
-  // Set typography colors.
-  //
-  $c-font-primary: $black;
-  $c-link: $bermuda-grey;
-  $c-link-hover: $dark-bermuda-grey;
-
-  // UI ELEMENTS
-  // Colors for form items, buttons, etc.
-  //
-  $c-ui-lightest-grey: #F5F5F5;
-  $c-ui-light-grey: #DCDCDC;
-  $c-ui-light-grey: #DCDCDC;
-  $c-ui-grey: #808080;
-  $c-ui-dark-grey: #3F3F3F;
-  $c-ui-border: $c-ui-light-grey;
-  $c-ui-active-form-element: $black;
-
+//
+// UI APPEARANCE
+// Set defaults for form items, buttons, etc.
+//
+$c-ui-lightest-grey: #F5F5F5;
+$c-ui-light-grey: #DCDCDC;
+$c-ui-grey: #808080;
+$c-ui-dark-grey: #3F3F3F;
+$c-ui-border: $c-ui-light-grey;
+$c-ui-active-form-element: $black;
 
 $ui-button-padding: .7rem 1rem;
 $ui-border-radius: 4px;
@@ -95,8 +98,11 @@ $site-max-width: 1200px;
 //
 // TYPOGRAPHY
 //
-// See ../../vendor/scss/sassline/sass/sassline-base
+$c-font-primary: $black;
+$c-link: $bermuda-grey;
+$c-link-hover: $dark-bermuda-grey;
 
+// Overrides Sassline defaults. See ../../vendor/scss/sassline/sass/sassline-base
 $breakpoints: (
   break-0: 0,     // 0px       Mobile first
   break-1: 640,   // 640px   ~ Small tablet up

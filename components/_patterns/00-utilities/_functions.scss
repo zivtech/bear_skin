@@ -5,6 +5,8 @@
   @return map-get($map, $key);
 }
 
+// Authored by Hugo Giraudel.
+// See https://css-tricks.com/snippets/sass/str-replace-function/.
 @function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
   @if $index {
@@ -13,6 +15,8 @@
   @return $string;
 }
 
+// Authored by Hugo Giraudel.
+// See https://css-tricks.com/snippets/sass/deep-getset-maps/.
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
     $map: map-get($map, $key);
