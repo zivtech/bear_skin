@@ -39,14 +39,16 @@
 // Background colors
 @each $key, $value in $c-palette {
   @if map-deep-get($c-config, 'key-classes', 'bg-enabled') {
-    // Generates classes identified by key.
-    //
-    // Examples:
-    //  .bg-1
-    //  .bg-blue
-    //
-    .bg-#{$key} {
-      background-color: #{$value};
+    @if map-deep-get($c-config, 'key-classes', 'bg-regular') {
+      // Generates classes identified by key.
+      //
+      // Examples:
+      //  .bg-1
+      //  .bg-blue
+      //
+      .bg-#{$key} {
+        background-color: #{$value};
+      }
     }
 
     @if map-deep-get($c-config, 'key-classes', 'bg-light') {
@@ -78,13 +80,15 @@
     // Strip # from hex codes for use in class names.
     $clean-value: str-replace(#{$value}, '#', '');
 
-    // Generates classes identified by value.
-    //
-    // Example:
-    //  .bg-f3f3f3
-    //
-    .bg-#{$clean-value} {
-      background-color: #{$value};
+    @if map-deep-get($c-config, 'value-classes', 'bg-regular') {
+      // Generates classes identified by value.
+      //
+      // Example:
+      //  .bg-f3f3f3
+      //
+      .bg-#{$clean-value} {
+        background-color: #{$value};
+      }
     }
 
     @if map-deep-get($c-config, 'value-classes', 'bg-light') {
