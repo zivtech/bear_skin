@@ -29,22 +29,44 @@ $persian-red:        hsla(0, 64%, 51%, 1);
   // COLOR PALETTE
   // These are the colors you will use for design elements throughout the site.
   // You can set the keys to whatever you like. For example, keys like "blue"
-  // will work. We recommend using numbers, though, in case one day your "blue"
-  // color becomes a shade of, say, red.
+  // will work.
   //
-  // Access via c() function.
+  // For each key, the only sub-key that is required is "color".
+  //
+  // Access via c() function. See _functions.scss
   //
   // Examples:
-  //  color: c(1);
-  //  color: c(blue);
-  //  background: linear-gradient(45deg, c(1), c(blue));
+  //    Access base color:
+  //      color: c(1);
+  //      color: c(blue);
+  //      background: linear-gradient(45deg, c(1), c(blue));
+  //
+  //    Accessing variants:
+  //      color: c(1, dark);
+  //      color: c(blue, light);
+  //      background: linear-gradient(45deg, c(1, light), c(blue, dark));
   //
   $c-palette: (
-    1: $white,
-    2: $black,
-    3: $emperor,
-    4: $grey,
-    5: $wild-sand
+    1: (
+      base: $bermuda-grey,
+      dark: $dark-bermuda-grey,
+      light: $light-bermuda-grey
+    ),
+    2: (
+      base: $emerald,
+      dark: darken($emerald, 10%),
+      light: lighten($emerald, 10%)
+    ),
+    persian-red: (
+      base: hsla(0, 64%, 51%, 1),
+      dark: hsla(0, 64%, 35%, 1),
+    ),
+    // Your turn!
+    // key: (
+    //   base: ,
+    //   dark: ,
+    //   light: ,
+    // ),
   );
 
   // CLASS CONFIGURATION
@@ -52,6 +74,7 @@ $persian-red:        hsla(0, 64%, 51%, 1);
   // Skin recommends using key classes for most sites since they are more
   // modular. Using value classes only makes sense if your site has a mechanism // for generating classes based on values.
   //
+
   $c-config: (
     key-classes: (        // Generates classes based on c-palette map keys.
       bg-enabled: false,  // Turn generated background classes on or off.

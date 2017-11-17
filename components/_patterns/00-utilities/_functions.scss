@@ -1,10 +1,3 @@
-@function c($key, $map: $c-palette) {
-  @if not map-has-key($map, $key) {
-    @error "Key '#{$key}' not found in map: #{$map}";
-  }
-  @return map-get($map, $key);
-}
-
 // Authored by Hugo Giraudel.
 // See https://css-tricks.com/snippets/sass/str-replace-function/.
 @function str-replace($string, $search, $replace: '') {
@@ -22,4 +15,11 @@
     $map: map-get($map, $key);
   }
   @return $map;
+}
+
+@function c($key, $variant: 'base', $map: $c-palette) {
+  @if not map-has-key($map, $key) {
+    @error "Key '#{$key}' not found in map: #{$map}";
+  }
+  @return map-deep-get($map, $key, $variant);
 }
