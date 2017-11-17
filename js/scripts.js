@@ -58,7 +58,7 @@
             $searchWrapper
               .removeClass('active');
           });
-
+ 
           $('.wrapper-main').on('click', function (e) {
             $mainSearch.removeClass('open');
             $searchField
