@@ -1413,7 +1413,7 @@ code {
   color: white;
   position: absolute;
   right: 2rem;
-  top: 3rem;
+  top: 2.5rem;
 }
 
 #msearch-content {
@@ -1422,7 +1422,7 @@ code {
   left: 0;
   top: -200px;
   z-index: 15;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.95);
   transition: all .2s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
