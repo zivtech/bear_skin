@@ -1455,7 +1455,7 @@ code {
 }
 
 #search-block-form .form-search {
-  font-size: 3.33333rem;
+  font-size: 2.16667rem;
   border: 0;
   padding: .5rem 3rem .5rem 0;
   color: white;
@@ -1464,24 +1464,24 @@ code {
 }
 
 #search-block-form .form-search::-webkit-input-placeholder {
-  font-size: 3.33333rem;
+  font-size: 2.16667rem;
   color: #808080;
 }
 
 #search-block-form .form-search:-moz-placeholder {
   /* Firefox 18- */
-  font-size: 3.33333rem;
+  font-size: 2.16667rem;
   color: #808080;
 }
 
 #search-block-form .form-search::-moz-placeholder {
   /* Firefox 19+ */
-  font-size: 3.33333rem;
+  font-size: 2.16667rem;
   color: #808080;
 }
 
 #search-block-form .form-search:-ms-input-placeholder {
-  font-size: 3.33333rem;
+  font-size: 2.16667rem;
   color: #808080;
 }
 
@@ -1491,7 +1491,7 @@ code {
 
 #search-block-form .js-form-type-search::after {
   content: '';
-  height: 2px;
+  height: 1px;
   background: white;
   width: 0;
   position: absolute;
@@ -1522,7 +1522,7 @@ code {
   content: "\e905";
   color: white;
   position: absolute;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #search-block-form .form-submit {
@@ -2583,7 +2583,7 @@ table ul {
   }
 
   #search-block-form .form-search {
-    font-size: 2.85714rem;
+    font-size: 1.85714rem;
   }
 
   #search-block-form .form-search {
@@ -2591,19 +2591,19 @@ table ul {
   }
 
   #search-block-form .form-search::-webkit-input-placeholder {
-    font-size: 2.85714rem;
+    font-size: 1.85714rem;
   }
 
   #search-block-form .form-search:-moz-placeholder {
-    font-size: 2.85714rem;
+    font-size: 1.85714rem;
   }
 
   #search-block-form .form-search::-moz-placeholder {
-    font-size: 2.85714rem;
+    font-size: 1.85714rem;
   }
 
   #search-block-form .form-search:-ms-input-placeholder {
-    font-size: 2.85714rem;
+    font-size: 1.85714rem;
   }
 
   .summary {
@@ -2871,23 +2871,23 @@ table ul {
   }
 
   #search-block-form .form-search {
-    font-size: 2.66667rem;
+    font-size: 1.73333rem;
   }
 
   #search-block-form .form-search::-webkit-input-placeholder {
-    font-size: 2.66667rem;
+    font-size: 1.73333rem;
   }
 
   #search-block-form .form-search:-moz-placeholder {
-    font-size: 2.66667rem;
+    font-size: 1.73333rem;
   }
 
   #search-block-form .form-search::-moz-placeholder {
-    font-size: 2.66667rem;
+    font-size: 1.73333rem;
   }
 
   #search-block-form .form-search:-ms-input-placeholder {
-    font-size: 2.66667rem;
+    font-size: 1.73333rem;
   }
 
   .summary {
@@ -3050,23 +3050,23 @@ table ul {
   }
 
   #search-block-form .form-search {
-    font-size: 2.35294rem;
+    font-size: 1.52941rem;
   }
 
   #search-block-form .form-search::-webkit-input-placeholder {
-    font-size: 2.35294rem;
+    font-size: 1.52941rem;
   }
 
   #search-block-form .form-search:-moz-placeholder {
-    font-size: 2.35294rem;
+    font-size: 1.52941rem;
   }
 
   #search-block-form .form-search::-moz-placeholder {
-    font-size: 2.35294rem;
+    font-size: 1.52941rem;
   }
 
   #search-block-form .form-search:-ms-input-placeholder {
-    font-size: 2.35294rem;
+    font-size: 1.52941rem;
   }
 
   .summary {
@@ -3243,23 +3243,23 @@ table ul {
   }
 
   #search-block-form .form-search {
-    font-size: 2.10526rem;
+    font-size: 1.36842rem;
   }
 
   #search-block-form .form-search::-webkit-input-placeholder {
-    font-size: 2.10526rem;
+    font-size: 1.36842rem;
   }
 
   #search-block-form .form-search:-moz-placeholder {
-    font-size: 2.10526rem;
+    font-size: 1.36842rem;
   }
 
   #search-block-form .form-search::-moz-placeholder {
-    font-size: 2.10526rem;
+    font-size: 1.36842rem;
   }
 
   #search-block-form .form-search:-ms-input-placeholder {
-    font-size: 2.10526rem;
+    font-size: 1.36842rem;
   }
 
   .summary {

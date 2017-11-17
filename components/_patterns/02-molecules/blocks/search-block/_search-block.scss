@@ -49,7 +49,7 @@
   }
 
   .form-search {
-    @include fontsize(40, all);
+    @include fontsize(26, all);
 
     border: 0;
     padding: .5rem 3rem .5rem 0;
@@ -62,25 +62,25 @@
     }
 
     &::-webkit-input-placeholder {
-      @include fontsize(40, all);
+      @include fontsize(26, all);
 
       color: $ui-grey;
     }
 
     &:-moz-placeholder { /* Firefox 18- */
-      @include fontsize(40, all);
+      @include fontsize(26, all);
 
       color: $ui-grey;
     }
 
     &::-moz-placeholder {  /* Firefox 19+ */
-      @include fontsize(40, all);
+      @include fontsize(26, all);
 
       color: $ui-grey;
     }
 
     &:-ms-input-placeholder {
-      @include fontsize(40, all);
+      @include fontsize(26, all);
 
       color: $ui-grey;
     }
@@ -91,7 +91,7 @@
 
     &::after {
       content: '';
-      height: 2px;
+      height: 1px;
       background: $white;
       width: 0;
       position: absolute;
@@ -120,7 +120,7 @@
       content: "\e905";
       color: $white;
       position: absolute;
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 
