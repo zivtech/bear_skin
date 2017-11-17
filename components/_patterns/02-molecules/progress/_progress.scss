@@ -1,0 +1,26 @@
+.progress {
+  margin: 1rem 0;
+
+  &__track {
+    border: 1px solid $ui-border-color;
+    background: $ui-lightest-grey;
+    height: 34px;
+    border-radius: $ui-border-radius;
+  }
+
+  &__bar {
+    height: 100%;
+    background: $ui-active-form-element;
+    border-radius: $ui-border-radius;
+    position: relative;
+    left: -1px;
+  }
+
+  &__percentage {
+
+    padding: .5rem .5rem;
+    color: $ui-active-form-element;
+    font-family: unquote(map-get($bodytype, font-family));
+    text-align: center;
+  }
+}

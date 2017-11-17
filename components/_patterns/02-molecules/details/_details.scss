@@ -1,5 +1,5 @@
 .details-wrapper {
-  @include padding(.5, .5);
+  padding: .5rem .5rem;
 
   position: relative;
   z-index: 1;
@@ -7,42 +7,39 @@
 }
 
 details {
-  @include margin(1, 0);
-
+  margin: 1em 0;
   clear: both;
 
   &[open] {
 
     .summary {
-      @include margin-bottom(.5);
-
+      margin-bottom: 0;
       border-bottom: 0;
-
-      .details-wrapper {
-        border-top: 0;
-        animation-name: fadeInDown;
-        animation-duration: 0.5s;
-      }
-
-      &__icon {
-        float: right;
-      }
 
       i {
         transform: rotate(180deg);
       }
     }
+
+    .details-wrapper {
+      animation-name: fadeInDown;
+      animation-duration: 0.5s;
+      border: 1px solid $ui-light-grey;
+      border-top: 0;
+    }
   }
 }
 
 .details-wrapper {
-  @include padding(.5, .5);
+  padding: 1rem 1rem;
+  clear: both;
 }
 
 .summary {
-  @include margin-bottom(1);
-  @include padding(.5, .5);
+  @include fontsize(18, all);
 
+  margin-bottom: .5rem;
+  padding: .25rem 1rem;
   display: block;
   float: left;
   width: 100%;
@@ -50,6 +47,15 @@ details {
   z-index: 2;
   cursor: pointer;
   outline: 0;
+  background: $wild-sand;
+  border: 1px solid $ui-light-grey;
+
+  &[open] {
+
+    .details-wrapper {
+
+    }
+  }
 
   &::-webkit-details-marker {
     display: none;

@@ -1,0 +1,11 @@
+{% extends "item-list.html.twig" %}
+
+{%
+set classes = [
+  'search-results',
+  context.plugin ~ '-results',
+  'no-list',
+  'np'
+]
+%}
+{% set attributes = attributes.addClass(classes) %}

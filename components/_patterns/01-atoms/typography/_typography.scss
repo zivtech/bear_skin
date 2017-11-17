@@ -1,76 +1,19 @@
-body {
-  color: $zeus;
-  font-family: $serif;
-}
-
-h1,
-h4 {
-  font-family: $sans;
-}
-
-h2,
-h3 {
-  font-family: $sans;
-}
-
 b,
 strong {
   font-weight: 700;
 }
 
-.clearfix {
-  clear: both;
-}
+q {
+  @include fontsize(20, 0);
 
-.serif {
-  font-family: $serif;
-}
-
-.sans {
-  font-family: $sans;
+  &::after {
+    position: relative;
+    top: 1rem;
+  }
 }
 
 a {
-  color: $color-link-normal;
-  transition: color .3s;
-  text-decoration: none;
+  @include link($linkColour, none, $hoverColour, none);
 
-  &:visited {
-    color: $color-link-normal;
-  }
-
-  &:active {
-    color: $color-link-active;
-  }
-
-  &:hover {
-    color: $color-link-hover;
-
-    &:visited {
-      color: $color-link-hover;
-    }
-  }
+  transition: color .3s ease-in-out;
 }
-
-@mixin ui-typography($light, $normal, $dark, $ui-lightest-grey, $ui-light-grey, $ui-grey) {
-
-$color-names: light normal dark lightest-grey light-grey grey;
-$colors: $light $normal $dark $ui-lightest-grey $ui-light-grey $ui-grey;
-
-
-@for $i from 1 through length($colors) {
-
-  .#{nth($color-names, $i)} {
-    color: nth($colors, $i);
-  }
-
-  .bg {
-
-    &--#{nth($color-names, $i)} {
-      background-color: nth($colors, $i);
-    }
-  }
-}
-
-
-} // close the mixin

@@ -1,18 +1,26 @@
+.js-form-type-checkbox {
+  margin: 0;
+}
+
 .checkbox-wrapper {
-  top: 2px;
+  top: 4px;
   display: inline-block;
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   z-index: 1;
+  border: 2px solid $ui-border-color;
+  border-radius: $ui-border-radius;
+  background: $ui-lightest-grey;
 
   i {
     font-size: 22px;
     position: absolute;
-    top: -6px;
+    top: -4px;
     left: -2px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
+    color: $ui-active-form-element;
   }
 
   .form-checkbox {

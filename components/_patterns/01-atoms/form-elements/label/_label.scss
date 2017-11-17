@@ -1,19 +1,27 @@
 label {
-  @include font-size(.9);
+  @include sans;
+  @include fontsize(12, all);
 
+  line-height: 1;
   display: block;
-  font-family: $sans;
+  padding-bottom: .3rem;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .js-form-type-checkbox,
 .js-form-type-radio {
 
   label {
+    @include fontsize(14, all);
+
     display: inline-block;
     position: relative;
     z-index: 2;
     padding-left: 25px;
     margin-left: -20px;
     cursor: pointer;
+    text-transform: none;
+    font-weight: normal;
   }
 }

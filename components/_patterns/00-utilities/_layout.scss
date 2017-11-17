@@ -7,35 +7,42 @@ body {
 }
 
 .wrapper--inner {
-  @include padding(0, 1);
+  padding: 0 1rem;
   margin: 0 auto;
   max-width: $site-max-width;
   width: 100%;
 }
 
-//*************
+.wrapper-main {
+  padding: 2rem 0;
+}
+
+img {
+  display: block;
+}
+
+  //*************
 // Left Sidebar
 //*************
 
 .layout-sidebar-first {
 
   .wrapper-main__inner {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       display: flex;
     }
   }
 
   .column.main {
-    @include breakpoint($bp-768) {
-      @include padding(0, 0, 0, 2);
-
+    @include breakpoint(break-2) {
+      padding: 0 0 0 2rem;
       flex-basis: 75%;
       order: 2;
     }
   }
 
   .column.sidebar {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       flex-basis: 25%;
       order: 1;
     }
@@ -50,15 +57,15 @@ body {
   @extend .layout-sidebar-first;
 
   .column.main {
-    @include breakpoint($bp-768) {
-      @include padding(0, 2, 0, 0);
+    @include breakpoint(break-2) {
+      padding: 0 2rem 0 0;
 
       order: 1;
     }
   }
 
   .column.sidebar {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       order: 2;
     }
   }
@@ -70,22 +77,21 @@ body {
 
 .layout-two-sidebars {
   .wrapper-main__inner {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       display: flex;
     }
   }
 
   .column.main {
-    @include breakpoint($bp-768) {
-      @include padding(0, 1);
-
+    @include breakpoint(break-2) {
+      padding: 0 2rem;
       flex-basis: 75%;
       order: 2;
     }
   }
 
   .column.sidebar {
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       flex-basis: 25%;
 
       &.sidebar--first {

@@ -84,8 +84,9 @@
   #{$property}: $hsla;
 }
 
-@mixin button($gradient-top, $gradient-bottom, $hover-gradient-top, $hover-gradient-bottom) {
-  @include font-size(.8);
+@mixin button($color, $background-color, $background-hover) {
+  @include sans;
+  @include fontsize(13, all);
 
   position: relative;
   display: inline-block;
@@ -94,23 +95,29 @@
   cursor: pointer;
   border-style: none;
   transition: background .2s ease-in-out;
+  text-transform: uppercase;
 
-  background: linear-gradient($gradient-top, $gradient-bottom);
+  background: $background-color;
   color: $white;
   padding: $ui-button-padding;
   border-radius: $ui-border-radius;
-  font-family: $sans;
 
   &:hover,
-  &:focus,
-  &:visited {
-    background: linear-gradient($hover-gradient-top, $hover-gradient-bottom);
+  &:focus {
+    background: $background-hover;
     text-decoration: none;
   }
 }
 
 @mixin placeholder {
-  @include font-size(.8);
-
+  font-size: 12px;
   font-weight: 400;
+}
+
+@mixin serif {
+  font-family: unquote(map-get($bodytype, font-family));
+}
+
+@mixin sans {
+  font-family: unquote(map-get($headingtype, font-family));
 }

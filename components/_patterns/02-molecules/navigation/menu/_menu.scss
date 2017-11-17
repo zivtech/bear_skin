@@ -1,12 +1,12 @@
 .menu {
+  @include sans;
+
   margin: 0;
   padding: 0;
-
   transition: background .2s ease-in-out;
 
   &__item {
-    @include margin(0, .5, 0, 0);
-
+    margin-right: .5rem;
     list-style-type: none;
     display: inline;
 
@@ -32,35 +32,34 @@
     position: fixed;
     top: -200px;
 
-    @include breakpoint($bp-1024) {
+    @include breakpoint(break-3) {
       position: relative;
-      top: 0;
-    }
-
-    .menu__item {
-      @include font-size(.9);
+      top: -2px;
     }
 
     .menu__link {
-      @include link($ui-black, none, $ui-black, underline);
+      @include fontsize(24, 1);
+      @include fontsize(12, 2);
+      @include link($black, none, $black, none);
+
+      padding: .4rem .5rem .4rem .5rem;
+      text-transform: uppercase;
+      border-radius: 4px;
+
+      &:hover,
+      &:focus {
+
+      }
     }
 
     a.is-active,
     .menu-item--active-trail a {
-      @include font-size(.9);
+      @include link($white, none, $white, none);
 
-      color: $white;
-      font-family: $serif;
-
-      &:hover,
-      &:focus {
-        color: $white;
-      }
+      background-color: $black;
     }
 
     &.open {
-      @include font-size(1.2);
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -85,20 +84,14 @@
 
         &__link {
           @include link($white, none, $white, none);
+          @include fontsize(22, all);
 
-          font-family: $sans;
           text-transform: uppercase;
           display: block;
           padding: 10px;
           width: 100%;
           background: transparent;
           border-radius: 0 !important;
-
-          &:hover,
-          &:focus,
-          &.is-active {
-            @include font-size(1.2);
-          }
         }
       }
     }
@@ -116,8 +109,7 @@
 .list-group {
 
   &__link:not(:first-child) {
-
-    @include margin-top(.5);
+    margin-top: .5rem;
   }
 }
 
@@ -127,7 +119,7 @@
   display: block;
   position: relative;
   z-index: 6;
-  color: black;
+  color: $black;
 
   i {
     margin: 0;
@@ -139,12 +131,12 @@
 
     i {
       &:before {
-        content: "\f00d";
+        content: "\e907";
       }
     }
   }
 
-  @include breakpoint($bp-1024) {
+  @include breakpoint(break-3) {
     display: none;
   }
 }

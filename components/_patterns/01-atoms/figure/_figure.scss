@@ -1,0 +1,46 @@
+figure {
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &.align-left {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @include breakpoint(break-1) {
+      margin-right: 2rem;
+      margin-bottom: 1rem;
+      float: left;
+      width: auto;
+    }
+  }
+
+  &.align-right {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @include breakpoint(break-1) {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+      float: right;
+      width: auto;
+    }
+  }
+
+  &.align-center {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    @include fontsize(16, all);
+
+    color: $ui-grey;
+    padding: .5rem 1rem;
+    text-align: left;
+  }
+}

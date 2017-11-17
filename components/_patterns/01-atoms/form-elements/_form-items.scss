@@ -15,19 +15,15 @@
 }
 
 form {
-  @include margin(1, 0);
+  margin: 1rem 0;
 }
 
 .form-item {
-  @include margin-bottom(.5);
-}
-
-label {
-  @include margin-bottom(.1);
+  margin-bottom: 1rem;
 }
 
 .form-submit {
-  @include margin-bottom(.5);
+  margin-bottom: .5rem;
 }
 
 .form-required::after {
@@ -36,14 +32,34 @@ label {
   display: inline-block;
   background: url(../images/required.svg) no-repeat left center;
   background-size: 6px 6px;
-  display: inline-block;
-  margin-left: .3em;
+  margin-left: .3rem;
   width: 6px;
   height: 6px;
 }
 
-.description {
-  @include margin-top(.2);
+.description,
+.filter-guidelines {
+  @include fontsize(12, all);
+
+  clear: both;
+  margin-bottom: rem;
+  padding: .2rem 0;
+  line-height: 1.5;
+  color: $ui-grey;
+
+  ul {
+    line-height: 1.5;
+  }
+}
+
+.filter-help {
+  @include fontsize(14, all);
+
+  float: none;
+}
+
+.filter-wrapper {
+  border: 1px solid $ui-border-color;
 }
 
 .field-suffix {
@@ -57,20 +73,31 @@ label {
 .form-text,
 .form-email,
 .form-textarea,
+.form-date,
+.form-password,
 .form-date {
-  @include font-size(1);
-  @include padding(.2, .2);
+  @include fontsize(16, all);
 
-  font-family: $sans;
-
+  padding: .5rem .5rem;
   width: 100%;
   max-width: 30em;
-
   transition: border .2s ease-in-out;
+  border: 1px solid $ui-border-color;
 
   &:focus {
     outline: 0;
+    border-color: $ui-active-form-element;
   }
+}
+
+.form-date {
+  @include sans;
+
+  max-width: 10em;
+}
+
+.form-textarea {
+  @include sans;
 }
 
 .form-submit {
@@ -108,8 +135,9 @@ input[type="search"] {
   }
 }
 
-.description {
-  @include font-size(.7);
+fieldset {
+  padding: 1rem;
+  border: 1px solid $ui-border-color;
 }
 
 .ajax-progress-throbber {
@@ -129,6 +157,8 @@ input[type="search"] {
     height: 30px;
     border-radius: 50%;
     animation: spin 1s infinite linear;
+    border: .3rem solid $black;
+    border-top-color: $white;
   }
 }
 

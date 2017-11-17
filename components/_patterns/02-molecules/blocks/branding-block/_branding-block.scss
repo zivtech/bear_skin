@@ -1,10 +1,19 @@
 .branding {
 
   &__site-logo {
-    max-width: 50px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
 
-    @include breakpoint($bp-768) {
-      max-width: 100px;
+    object {
+      position: absolute;
+      z-index: -1;
+    }
+
+    @include breakpoint(break-2) {
+      width: 75px;
+      height: 75px;
     }
   }
 
@@ -17,26 +26,26 @@
   &__site-name {
     @include element-invisible;
 
-    @include font-size(1);
-    @include margin(0, .5, 0, .5);
+    margin: 0 .5rem;
 
-    @include breakpoint($bp-768) {
+    @include breakpoint(break-2) {
       @include element-invisible-off;
-    }
+      @include sans;
+      @include fontsize(12, 0);
 
-    @include breakpoint($bp-768) {
-      @include font-size(1.2);
-      @include margin(0, 1, 0, 1);
+      text-transform: uppercase;
+      margin: 0 1rem;
+      font-weight: 700;
     }
   }
 
   &__site-slogan {
-    @include font-size(.7);
-    @include margin(0, .5, 0, .5);
+    font-size: 12px;
+    margin: 0 .5em;
 
-    @include breakpoint($bp-768) {
-      @include font-size(.75);
-      @include margin(0, 1, 0, 1);
+    @include breakpoint(break-2) {
+      font-size: 14px;
+      margin: 0 1rem;
     }
   }
 }

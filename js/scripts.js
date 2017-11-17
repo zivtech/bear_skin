@@ -28,22 +28,43 @@
 
       // search toggle
       var $searchToggle = $('#msearch', context);
+      var $searchWrapper = $('#msearch-content').find('.js-form-type-search');
+      var $searchField = $('#msearch-content').find('.form-search');
 
       // search content
       var $mainSearch = $('#msearch-content', context);
-
       if ($searchToggle.length && $mainSearch.length) {
         $mainSearch.once('bsSearchForm').each(function (i) {
+
+          $searchField.attr('placeholder', 'Search');
 
           // search form closing toggle
           var $closer = $('#msearch-close', context);
 
           $searchToggle.on('click', function () {
             $mainSearch.toggleClass('open');
+            $searchField
+              .focus();
+            setTimeout(function() {
+              $searchWrapper
+                .addClass('active');
+            }, 100);
           });
 
-          $closer.on('click', function () {
+          $closer.on('click', function (e) {
             $mainSearch.removeClass('open');
+            $searchField
+              .blur();
+            $searchWrapper
+              .removeClass('active');
+          });
+
+          $('.wrapper-main').on('click', function (e) {
+            $mainSearch.removeClass('open');
+            $searchField
+              .blur();
+            $searchWrapper
+              .removeClass('active');
           });
         });
       }

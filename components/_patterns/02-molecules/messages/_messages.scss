@@ -1,19 +1,17 @@
 .messages {
-  @include font-size(.9);
-  @include padding(1, 1);
-  @include margin-bottom(.5);
-
-  font-family: $sans;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
   color: $grey;
   background-color: $wild-sand;
-  border: 2px solid darken($gallery, 5%);
-
+  border: 2px solid $ui-border-color;
+  line-height: 1.4;
   display: flex;
   align-items: center;
 
   &__icon {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 1rem;
+    margin-top: 4px;
     font-size: 22px;
   }
 

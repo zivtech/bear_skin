@@ -1,44 +1,42 @@
 .tabs {
-  @include margin(.5, 0);
-
+  margin: .5rem 0;
   padding: 0;
   list-style-type: none;
-  font-size: 0;
+  display: flex;
+  flex-direction: column;
 
-  @include breakpoint($bp-540) {
-    display: inline-block;
+  @include breakpoint(break-1) {
+    flex-direction: row;
   }
 
   &__tab {
-    @include font-size(1);
-
     width: 100%;
     overflow: auto;
-    border-bottom: 1px solid $gallery;
-    border-right: 1px solid $gallery;
-    border-top: 1px solid $gallery;
+    border-bottom: 1px solid $ui-border-color;
+    border-right: 1px solid $ui-border-color;
+    border-top: 1px solid $ui-border-color;
 
     &.is-active {
-      border: 1px solid $gallery;
+      border: 1px solid $ui-light-grey;
       border-bottom: 1px solid transparent;
       border-left: 0;
     }
 
     &:first-child {
-      border-left: 1px solid $gallery;
+      border-left: 1px solid $ui-border-color;
     }
 
-    @include breakpoint($bp-540) {
+    @include breakpoint(break-1) {
       display: inline-block;
       width: auto;
     }
   }
 
   &__tab-link {
-    @include font-size(.8);
-    @include padding(.3, .5);
+    @include sans;
+    @include fontsize(14, all);
 
-    font-family: $sans;
+    padding: .3rem 1rem;
     color: $grey;
     text-transform: uppercase;
 
@@ -49,25 +47,26 @@
     &:hover,
     &:focus,
     &.is-active {
-      color: $ui-black;
+      color: $black;
       background: transparent;
     }
-
-
   }
 
   &--secondary {
     width: 100%;
 
     .tabs__tab {
-      @include margin(.5, .5, .5, 0);
-
+      margin: .5rem .5rem .5rem 0;
       border: 0;
       border-radius: 0;
     }
 
     .tabs__tab-link {
-      padding: 0;
+      background: transparent;
+
+      &.is-active {
+        background: $wild-sand;
+      }
     }
   }
 }
@@ -79,12 +78,23 @@
 
 .vertical-tabs {
 
+  &__menu {
+    padding: 0 !important;
+  }
+
+  &__menu-item {
+    @include fontsize(16, all);
+    @include sans;
+  }
+
   &__menu-item-title {
     text-decoration: none !important;
   }
 
   &__pane {
+    padding: 0 1rem;
     clear: none;
+    display: inline;
   }
 
   &__menu-item-summary {

@@ -1,20 +1,24 @@
 .select-wrapper {
+  margin: .5rem 0;
   position: relative;
   max-width: 500px;
+  border: 1px solid $ui-border-color;
+  border-radius: $ui-border-radius;
+  background: $wild-sand;
 
   &::after {
-    @include font-size(.7);
-
     position: absolute;
     content: '\25bc';
     display: inline-block;
     pointer-events: none;
-    font-size: 9px;
-    padding: 11px 12px 10px 12px;
+    font-size: 12px;
+    padding: 4px 15px 4px 15px;
     color: $white;
-    right: 0;
+    right: -1px;
     top: -1px;
-    max-height: 34px;
+    max-height: 30px;
+    background: $ui-grey;
+    border-radius: 0 $ui-border-radius $ui-border-radius 0;
   }
 
   &__select {
@@ -24,7 +28,7 @@
     background-color: transparent;
     width: 100%;
     z-index: 2;
-    font-size: 1em;
+    font-size: 16px;
     height: 34px;
     padding: 0 45px 0 10px;
     min-width: 30px;

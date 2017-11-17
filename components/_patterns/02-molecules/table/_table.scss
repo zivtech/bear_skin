@@ -1,7 +1,26 @@
 table {
-  @include margin(1, 0);
-
+  border: 1px solid $ui-light-grey;
+  margin: 1rem 0;
   width: 100%;
+
+  thead {
+    background: $ui-light-grey;
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: 1px solid $ui-light-grey;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    tr:nth-child(odd) {
+      background: lighten($ui-lightest-grey,2%);
+    }
+  }
 
   .form-item {
     margin: 0;
@@ -58,8 +77,7 @@ table {
 
   td,
   th {
-    @include padding(.3, .5);
-
+    padding: .3rem .5rem;
     text-align: left;
 
     a.tabledrag-handle .handle {
@@ -69,6 +87,10 @@ table {
       margin-right: 14px;
       width: 14px;
     }
+  }
+
+  td.description {
+    padding: .3rem .5rem;
   }
 
   ul {
