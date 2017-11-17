@@ -9,8 +9,8 @@
   font-style: normal;
 }
 
-[class^="icon-"],
-[class*=" icon-"],
+[class^='con-'],
+[class*='icon-'],
 .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'bearskin' !important;
@@ -20,38 +20,37 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
 }
 
 .icon-bell:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-circle:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-check-circle:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-check:before {
-  content: "\e903";
+  content: '\e903';
 }
 .icon-exclamation-circle:before {
-  content: "\e904";
+  content: '\e904';
 }
 .icon-search:before {
-  content: "\e905";
+  content: '\e905';
 }
 .icon-bars:before {
-  content: "\e906";
+  content: '\e906';
 }
 .icon-close:before {
-  content: "\e907";
+  content: '\e907';
 }
 .icon-chevron-left:before {
-  content: "\e909";
+  content: '\e909';
 }
 .icon-chevron-right:before {
-  content: "\e908";
+  content: '\e908';
 }

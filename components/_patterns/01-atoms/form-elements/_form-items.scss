@@ -1,17 +1,17 @@
 ::-webkit-input-placeholder {
-   @include placeholder;
+  @include placeholder;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   @include placeholder;
+  @include placeholder;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   @include placeholder;
+  @include placeholder;
 }
 
 :-ms-input-placeholder {
-   @include placeholder;
+  @include placeholder;
 }
 
 form {
@@ -30,7 +30,7 @@ form {
   content: '';
   vertical-align: super;
   display: inline-block;
-  background: url(../images/required.svg) no-repeat left center;
+  background: url('../images/required.svg') no-repeat left center;
   background-size: 6px 6px;
   margin-left: .3rem;
   width: 6px;
@@ -104,7 +104,7 @@ form {
   @extend .button;
 }
 
-input[type="search"] {
+input[type='search'] {
   @extend .form-text;
 
   appearance: initial;
@@ -124,12 +124,11 @@ input[type="search"] {
   }
 
   .secondary-action {
-    margin-top: 5px
+    margin-top: 5px;
   }
 
   .dropbutton-toggle {
-  button,
-    a {
+    button, a {
       color: $white;
     }
   }
@@ -162,6 +161,6 @@ fieldset {
   }
 }
 
-div[id^="ajax-wrapper"] {
+div[id^='ajax-wrapper'] {
   position: relative;
 }
