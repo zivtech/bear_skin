@@ -10,15 +10,17 @@
 //
 
 $c-config: (
-  bg: (                   // Generate background-color classes.
-    base: false,          // e.g. .bg-1, .bg-blue
-    light: false,         // e.g. .bg-1-light, .bg-blue-light
-    dark: false           // e.g. .bg-1-dark, .bg-blue-dark
+  bg: (                            // Generate background-color classes.
+    property: 'background-color',
+    base: false,                   // e.g. .bg-1, .bg-blue
+    light: false,                  // e.g. .bg-1-light, .bg-blue-light
+    dark: false                    // e.g. .bg-1-dark, .bg-blue-dark
   ),
-  c: (                    // Generate font color classes.
-    base: false,          // e.g. .c-1, .c-blue
-    light: false,         // e.g. .c-1-light, .c-blue-light
-    dark: false           // e.g. .c-1-dark, .c-blue-dark
+  c: (                             // Generate font color classes.
+    property: 'color',
+    base: false,                   // e.g. .c-1, .c-blue
+    light: false,                  // e.g. .c-1-light, .c-blue-light
+    dark: false                    // e.g. .c-1-dark, .c-blue-dark
   ),
 );
 
@@ -28,18 +30,20 @@ $c-config: (
   @each $c-key, $c-value in $c-config {
     // Loop over options and create classes if they are enabled.
     @each $option, $toggle in $c-value {
+      $property: map-get($c-value, 'property');
+
       @if $toggle {
         $color: map-get($value, $option);
 
         @if $option == 'base' {
           .#{$c-key}-#{$key} {
-            background-color: $color;
+            #{$property}: $color;
           }
         }
         @else {
           @if map-has-key($value, $option) {
             .#{$c-key}-#{$key}-#{$option} {
-              background-color: $color;
+              #{$property}: $color;
             }
           }
         }

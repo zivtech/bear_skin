@@ -10,15 +10,17 @@
 //
 
 $c-config: (
-  bg: (                   // Generate background-color classes.
-    base: false,          // e.g. .bg-f3f3f3
-    light: false,         // e.g. .bg-f3f3f3-light
-    dark: false           // e.g. .bg-f3f3f3-dark
+  bg: (                            // Generate background-color classes.
+    property: 'background-color',
+    base: false,                   // e.g. .bg-f3f3f3
+    light: false,                  // e.g. .bg-f3f3f3-light
+    dark: false                    // e.g. .bg-f3f3f3-dark
   ),
-  c: (                    // Generate font color classes.
-    base: false,          // e.g. .c-f3f3f3
-    light: false,         // e.g. .c-f3f3f3-light
-    dark: false           // e.g. .c-f3f3f3-dark
+  c: (                             // Generate font color classes.
+    property: 'color',
+    base: false,                   // e.g. .c-f3f3f3
+    light: false,                  // e.g. .c-f3f3f3-light
+    dark: false                    // e.g. .c-f3f3f3-dark
   ),
 );
 
@@ -28,6 +30,8 @@ $c-config: (
   @each $c-key, $c-value in $c-config {
     // Loop over options and create classes if they are enabled.
     @each $option, $toggle in $c-value {
+      $property: map-get($c-value, 'property');
+
       @if $toggle {
         // Strip # from hex codes for use in class names.
         $color: map-get($value, 'base');
@@ -35,7 +39,7 @@ $c-config: (
 
         @if $option == 'base' {
           .#{$c-key}-#{$clean-color} {
-            background-color: $color;
+            #{$property}: $color;
           }
         }
         @else {
@@ -43,7 +47,7 @@ $c-config: (
             $color: map-get($value, $option);
 
             .#{$c-key}-#{$clean-color}-#{$option} {
-              background-color: $color;
+              #{$property}: $color;
             }
           }
         }
@@ -51,66 +55,3 @@ $c-config: (
     }
   }
 }
-
-
-
-// // Generates classes based on c-palette map color values.
-// $c-config: (
-//   bg: (
-//     original: false,     // e.g. .bg-f3f3f3
-//     light: false,        // e.g. .bg-f3f3f3-light
-//     dark: false          // e.g. .bg-f3f3f3-dark
-//   ),
-//   color: (
-//     original: false,      // e.g. .c-f3f3f3
-//     light: false,         // e.g. .c-f3f3f3-light
-//     dark: false           // e.g. .c-f3f3f3-dark
-//   ),
-// );
-//
-// @each $key, $value in $c-palette {
-//   $color: map-get($value, color);
-//   $color-light: map-get($value, light);
-//   $color-dark: map-get($value, dark);
-//
-//   // Strip # from hex codes for use in class names.
-//   $clean-color: str-replace(#{$color}, '#', '');
-//
-//   // Background classes
-//   @if map-deep-get($c-config, 'bg', 'original') {
-//     .bg-#{$clean-color} {
-//       background-color: $color;
-//     }
-//   }
-//
-//   @if map-deep-get($c-config, 'bg', 'light') {
-//     .bg-#{$clean-color}-light {
-//       background-color: $color-light;
-//     }
-//   }
-//
-//   @if map-deep-get($c-config, 'bg', 'dark') {
-//     .bg-#{$clean-color}-dark {
-//       background-color: $color-dark;
-//     }
-//   }
-//
-//   // Color classes
-//   @if map-deep-get($c-config, 'color', 'original') {
-//     .c-#{$clean-color} {
-//       color: $color;
-//     }
-//   }
-//
-//   @if map-deep-get($c-config, 'color', 'light') {
-//     .c-#{$clean-color}-light {
-//       color: $color-light;
-//     }
-//   }
-//
-//   @if map-deep-get($c-config, 'color', 'dark') {
-//     .c-#{$clean-color}-dark {
-//       color: $color-dark;
-//     }
-//   }
-// }
