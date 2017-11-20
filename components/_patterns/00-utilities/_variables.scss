@@ -69,29 +69,6 @@ $persian-red:        hsla(0, 64%, 51%, 1);
     // ),
   );
 
-  // CLASS CONFIGURATION
-  // Configure which classes are generated based on your color palette. Bear
-  // Skin recommends using key classes for most sites since they are more
-  // modular. Using value classes only makes sense if your site has a mechanism // for generating classes based on values.
-  //
-
-  $c-config: (
-    key-classes: (        // Generates classes based on c-palette map keys.
-      bg-enabled: false,  // Turn generated background classes on or off.
-      bg-regular: false,  // e.g. .bg-1
-      bg-light: false,    // e.g. .bg-1-light
-      bg-dark: false      // e.g. .bg-1-dark
-    ),
-    value-classes: (      // Generates classes based on c-palette map values.
-      bg-enabled: false,  // Turn generated background classes on or off.
-      bg-regular: false,  // e.g. .bg-f1f1f1
-      bg-light: false,    // e.g. .bg-f1f1f1-light
-      bg-dark: false      // e.g. .bg-f1f1f1-dark
-    ),
-    lighten-percent: 10%, // The amount light classes will be lightened.
-    darken-percent: 10%   // The amount dark classes will be darkened.
-  );
-
 //
 // MESSAGES
 // Set colors for Drupal messages.
