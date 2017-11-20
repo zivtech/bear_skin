@@ -1,15 +1,8 @@
 //
-// ABOUT THIS FILE:
-// This file serves as a home for all your variables and also acts as a
-// configuration file for certain Bear Skin behaviors.
-//
-
-//
 // BEAR SKIN COLORS
 // Default colors that come packaged with Bear Skin.
 //
 $black:              hsla(0, 0%, 0%, 1);
-$emperor:            hsla(0, 0%, 33%, 1);
 $grey:               hsla(0, 0%, 53%, 1);
 $wild-sand:          hsla(0, 0%, 96%, 1);
 $white:              hsla(0, 100%, 100%, 1);
@@ -17,9 +10,7 @@ $bermuda-grey:       hsla(212, 26%, 56%, 1);
 $dark-bermuda-grey:  darken($bermuda-grey, 20%);
 $light-bermuda-grey: lighten($bermuda-grey, 20%);
 $emerald:            hsla(147, 52%, 51%, 1);
-$saffron:            hsla(40, 94%, 59%, 1);
 $tangerine:          hsla(40, 100%, 44%, 1);
-$outrageous-orange:  hsla(13, 100%, 63%, 1);
 $persian-red:        hsla(0, 64%, 51%, 1);
 
 //
