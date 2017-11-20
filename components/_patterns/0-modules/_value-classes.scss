@@ -1,8 +1,8 @@
-// Generates classes based on c-palette map keys.
+// Generates classes based on c-palette map hex values.
 // First level keys, e.g. 'bg', are prefixes for generated class names.
 // Second level keys, e.g. 'light', are suffixes for generated class names.
 //
-// Classes will only be generated for each color if the corresponding key is
+// Classes will only be generated for each color if the corresponding variant is
 // found. For example, if my first c-palette color only has values for "color"
 // and "dark", no "light" class will be generated.
 //

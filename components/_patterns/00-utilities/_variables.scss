@@ -31,7 +31,9 @@ $persian-red:        hsla(0, 64%, 51%, 1);
   // You can set the keys to whatever you like. For example, keys like "blue"
   // will work.
   //
-  // For each key, the only sub-key that is required is "color".
+  // Each key has sub-keys to reflect the variants of a color. The only sub-key
+  // that is required is "base". You can add sub-keys for additional variants
+  // of your colors.
   //
   // Access via c() function. See _functions.scss
   //
