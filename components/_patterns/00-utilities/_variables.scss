@@ -23,53 +23,51 @@ $outrageous-orange:  hsla(13, 100%, 63%, 1);
 $persian-red:        hsla(0, 64%, 51%, 1);
 
 //
-// COLOR CONFIGURATION
+// COLOR PALETTE
 //
-
-  // COLOR PALETTE
-  // These are the colors you will use for design elements throughout the site.
-  // You can set the keys to whatever you like. For example, keys like "blue"
-  // will work.
-  //
-  // Each key has sub-keys to reflect the variants of a color. The only sub-key
-  // that is required is "base". You can add sub-keys for additional variants
-  // of your colors.
-  //
-  // Access via c() function. See _functions.scss
-  //
-  // Examples:
-  //    Access base color:
-  //      color: c(1);
-  //      color: c(blue);
-  //      background: linear-gradient(45deg, c(1), c(blue));
-  //
-  //    Accessing variants:
-  //      color: c(1, dark);
-  //      color: c(blue, light);
-  //      background: linear-gradient(45deg, c(1, light), c(blue, dark));
-  //
-  $c-palette: (
-    1: (
-      base: $bermuda-grey,
-      dark: $dark-bermuda-grey,
-      light: $light-bermuda-grey
-    ),
-    2: (
-      base: $emerald,
-      dark: darken($emerald, 10%),
-      light: lighten($emerald, 10%)
-    ),
-    persian-red: (
-      base: hsla(0, 64%, 51%, 1),
-      dark: hsla(0, 64%, 35%, 1),
-    ),
-    // Your turn!
-    // key: (
-    //   base: ,
-    //   dark: ,
-    //   light: ,
-    // ),
-  );
+// These are the colors you will use for design elements throughout the site.
+// You can set the keys to whatever you like. For example, keys like "blue"
+// will work.
+//
+// Each key has sub-keys to reflect the variants of a color. The only sub-key
+// that is required is "base". You can add sub-keys for additional variants
+// of your colors.
+//
+// Access via c() function. See _functions.scss
+//
+// Examples:
+//    Access base color:
+//      color: c(1);
+//      color: c(blue);
+//      background: linear-gradient(45deg, c(1), c(blue));
+//
+//    Accessing variants:
+//      color: c(1, dark);
+//      color: c(blue, light);
+//      background: linear-gradient(45deg, c(1, light), c(blue, dark));
+//
+$c-palette: (
+  1: (
+    base: $bermuda-grey,
+    dark: $dark-bermuda-grey,
+    light: $light-bermuda-grey
+  ),
+  2: (
+    base: $emerald,
+    dark: darken($emerald, 10%),
+    light: lighten($emerald, 10%)
+  ),
+  persian-red: (
+    base: hsla(0, 64%, 51%, 1),
+    dark: hsla(0, 64%, 35%, 1),
+  ),
+  // Your turn!
+  // key: (
+  //   base: ,
+  //   dark: ,
+  //   light: ,
+  // ),
+);
 
 //
 // MESSAGES
