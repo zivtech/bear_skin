@@ -5,7 +5,7 @@
 
   &:hover,
   &:focus {
-    color: $c-ui-dark-grey;
+    color: $c-ui-font-dark;
   }
 }
 
@@ -64,25 +64,25 @@
     &::-webkit-input-placeholder {
       @include fontsize(26, all);
 
-      color: $c-ui-grey;
+      color: $c-ui-font;
     }
 
     &:-moz-placeholder { /* Firefox 18- */
       @include fontsize(26, all);
 
-      color: $c-ui-grey;
+      color: $c-ui-font;
     }
 
     &::-moz-placeholder {  /* Firefox 19+ */
       @include fontsize(26, all);
 
-      color: $c-ui-grey;
+      color: $c-ui-font;
     }
 
     &:-ms-input-placeholder {
       @include fontsize(26, all);
 
-      color: $c-ui-grey;
+      color: $c-ui-font;
     }
   }
 

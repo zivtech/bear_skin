@@ -1693,7 +1693,7 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
 }
 
 .wrapper-breadcrumb {
-  border-top: 1px solid #F5F5F5;
+  border-top: 1px solid #DCDCDC;
 }
 
 .breadcrumb {
@@ -2072,7 +2072,7 @@ table {
 }
 
 table thead {
-  background: #DCDCDC;
+  background: #F5F5F5;
 }
 
 table tbody tr {

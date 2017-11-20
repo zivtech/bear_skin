@@ -83,12 +83,11 @@ $c-error: $persian-red;
 // UI APPEARANCE
 // Set defaults for form items, buttons, etc.
 //
-$c-ui-lightest-grey: #F5F5F5;
-$c-ui-light-grey: #DCDCDC;
-$c-ui-grey: #808080;
-$c-ui-dark-grey: #3F3F3F;
-$c-ui-border: $c-ui-light-grey;
 $c-ui-active-form-element: $black;
+$c-ui-background: #F5F5F5;
+$c-ui-border: #DCDCDC;
+$c-ui-font: #808080;
+$c-ui-font-dark: #3F3F3F;
 
 $ui-button-padding: .7rem 1rem;
 $ui-border-radius: 4px;

@@ -3,8 +3,8 @@
   @include button($white, $grey, $black);
 
   &.link {
-    border: 1px solid $c-ui-light-grey;
-    background: $c-ui-lightest-grey;
+    border: 1px solid $c-ui-border;
+    background: $c-ui-background;
     cursor: pointer;
   }
 }
@@ -12,8 +12,8 @@
 button {
 
   &.link {
-    background: $c-ui-lightest-grey;
-    border: 1px solid $c-ui-light-grey;
+    background: $c-ui-background;
+    border: 1px solid $c-ui-border;
   }
 }
 
