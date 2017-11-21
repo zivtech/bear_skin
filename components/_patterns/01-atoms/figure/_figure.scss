@@ -39,7 +39,7 @@ figure {
   figcaption {
     @include fontsize(16, all);
 
-    color: $ui-grey;
+    color: $c-ui-font;
     padding: .5rem 1rem;
     text-align: left;
   }

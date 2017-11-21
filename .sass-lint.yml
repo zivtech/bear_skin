@@ -24,11 +24,11 @@ rules:
         - src
   no-empty-rulesets: 1
   no-extends: 0
-  no-ids: 1
+  no-ids: 0
   no-important: 1
   no-misspelled-properties:
     - 1
-  no-vendor-prefixes: 2
+  no-vendor-prefixes: 1
   placeholder-in-extend: 0
   quotes:
     - 1

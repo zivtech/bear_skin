@@ -13,7 +13,7 @@ q {
 }
 
 a {
-  @include link($linkColour, none, $hoverColour, none);
+  @include link($c-link, none, $c-link-hover, none);
 
   transition: color .3s ease-in-out;
 }

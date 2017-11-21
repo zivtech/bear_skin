@@ -5,7 +5,7 @@
 
   &:hover,
   &:focus {
-    color: $ui-dark-grey;
+    color: $c-ui-font-dark;
   }
 }
 
@@ -17,7 +17,7 @@
   color: $white;
   position: absolute;
   right: 2rem;
-  top: 3rem;
+  top: 2.5rem;
 }
 
 #msearch-content {
@@ -27,7 +27,7 @@
   top: -200px;
   z-index: 15;
 
-  background: rgba(0, 0, 0, .85);
+  background: rgba(0, 0, 0, .95);
   transition: all .2s ease-in-out;
 
   display: flex;
@@ -49,7 +49,7 @@
   }
 
   .form-search {
-    @include fontsize(40, all);
+    @include fontsize(26, all);
 
     border: 0;
     padding: .5rem 3rem .5rem 0;
@@ -62,27 +62,27 @@
     }
 
     &::-webkit-input-placeholder {
-      @include fontsize(40, all);
+      @include fontsize(26, all);
 
-      color: $ui-grey;
+      color: $c-ui-font;
     }
 
     &:-moz-placeholder { /* Firefox 18- */
-      @include fontsize(40, all);
+      @include fontsize(26, all);
 
-      color: $ui-grey;
+      color: $c-ui-font;
     }
 
     &::-moz-placeholder {  /* Firefox 19+ */
-      @include fontsize(40, all);
+      @include fontsize(26, all);
 
-      color: $ui-grey;
+      color: $c-ui-font;
     }
 
     &:-ms-input-placeholder {
-      @include fontsize(40, all);
+      @include fontsize(26, all);
 
-      color: $ui-grey;
+      color: $c-ui-font;
     }
   }
 
@@ -91,7 +91,7 @@
 
     &::after {
       content: '';
-      height: 2px;
+      height: 1px;
       background: $white;
       width: 0;
       position: absolute;
@@ -117,10 +117,10 @@
     margin-left: -3.5rem;
 
     &::after {
-      content: "\e905";
+      content: '\e905';
       color: $white;
       position: absolute;
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 

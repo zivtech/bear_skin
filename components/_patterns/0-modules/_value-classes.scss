@@ -1,0 +1,58 @@
+// Generates classes based on c-palette map hex values.
+// First level keys, e.g. 'bg', are prefixes for generated class names.
+// Second level keys, e.g. 'light', are suffixes for generated class names.
+//
+// Classes will only be generated for each color if the corresponding variant is
+// found. For example, if my first c-palette color only has values for "color"
+// and "dark", no "light" class will be generated.
+//
+// See ../00-utilities/_variables.scss
+//
+
+$c-config: (
+  bg: (                            // Generate background-color classes.
+    property: 'background-color',
+    base: false,                   // e.g. .bg-f3f3f3
+    light: false,                  // e.g. .bg-f3f3f3-light
+    dark: false,                   // e.g. .bg-f3f3f3-dark
+  ),
+  c: (                             // Generate font color classes.
+    property: 'color',
+    base: false,                   // e.g. .c-f3f3f3
+    light: false,                  // e.g. .c-f3f3f3-light
+    dark: false,                   // e.g. .c-f3f3f3-dark
+  ),
+);
+
+// Loop over colors in $c-palette.
+@each $color-key, $color-map in $c-palette {
+  // Loop through option groups in $c-config.
+  @each $prefix, $options in $c-config {
+    $property: map-get($options, 'property');
+
+    // Loop over options and create classes if they are enabled.
+    @each $variant, $toggle in $options {
+
+      @if $toggle {
+        // Strip # from hex codes for use in class names.
+        $color: map-get($color-map, 'base');
+        $clean-color: str-replace(#{$color}, '#', '');
+
+        @if $variant == 'base' {
+          .#{$prefix}-#{$clean-color} {
+            #{$property}: $color;
+          }
+        }
+        @else {
+          @if map-has-key($color-map, $variant) {
+            $color: map-get($color-map, $variant);
+
+            .#{$prefix}-#{$clean-color}-#{$variant} {
+              #{$property}: $color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

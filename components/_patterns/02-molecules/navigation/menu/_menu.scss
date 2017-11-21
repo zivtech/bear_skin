@@ -45,11 +45,6 @@
       padding: .4rem .5rem .4rem .5rem;
       text-transform: uppercase;
       border-radius: 4px;
-
-      &:hover,
-      &:focus {
-
-      }
     }
 
     a.is-active,
@@ -91,7 +86,7 @@
           padding: 10px;
           width: 100%;
           background: transparent;
-          border-radius: 0 !important;
+          border-radius: 0;
         }
       }
     }
@@ -131,7 +126,7 @@
 
     i {
       &:before {
-        content: "\e907";
+        content: '\e907';
       }
     }
   }

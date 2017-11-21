@@ -12,18 +12,18 @@
   &__tab {
     width: 100%;
     overflow: auto;
-    border-bottom: 1px solid $ui-border-color;
-    border-right: 1px solid $ui-border-color;
-    border-top: 1px solid $ui-border-color;
+    border-bottom: 1px solid $c-ui-border;
+    border-right: 1px solid $c-ui-border;
+    border-top: 1px solid $c-ui-border;
 
     &.is-active {
-      border: 1px solid $ui-light-grey;
+      border: 1px solid $c-ui-border;
       border-bottom: 1px solid transparent;
       border-left: 0;
     }
 
     &:first-child {
-      border-left: 1px solid $ui-border-color;
+      border-left: 1px solid $c-ui-border;
     }
 
     @include breakpoint(break-1) {

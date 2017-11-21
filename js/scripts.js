@@ -1,7 +1,5 @@
 (function ($, Drupal) {
 
-  'use strict';
-
   Drupal.behaviors.bsMobileNavigation = {
     attach: function (context, settings) {
 
@@ -28,8 +26,9 @@
 
       // search toggle
       var $searchToggle = $('#msearch', context);
-      var $searchWrapper = $('#msearch-content').find('.js-form-type-search');
-      var $searchField = $('#msearch-content').find('.form-search');
+      var $searchContainer = $('#msearch-content', context);
+      var $searchWrapper = $searchContainer.find('.js-form-type-search');
+      var $searchField = $searchContainer.find('.form-search');
 
       // search content
       var $mainSearch = $('#msearch-content', context);
@@ -45,13 +44,13 @@
             $mainSearch.toggleClass('open');
             $searchField
               .focus();
-            setTimeout(function() {
+            setTimeout(function () {
               $searchWrapper
                 .addClass('active');
             }, 100);
           });
 
-          $closer.on('click', function (e) {
+          $closer.on('click', function () {
             $mainSearch.removeClass('open');
             $searchField
               .blur();
