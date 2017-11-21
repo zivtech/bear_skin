@@ -14,39 +14,40 @@ $c-config: (
     property: 'background-color',
     base: false,                   // e.g. .bg-f3f3f3
     light: false,                  // e.g. .bg-f3f3f3-light
-    dark: false                    // e.g. .bg-f3f3f3-dark
+    dark: false,                   // e.g. .bg-f3f3f3-dark
   ),
   c: (                             // Generate font color classes.
     property: 'color',
     base: false,                   // e.g. .c-f3f3f3
     light: false,                  // e.g. .c-f3f3f3-light
-    dark: false                    // e.g. .c-f3f3f3-dark
+    dark: false,                   // e.g. .c-f3f3f3-dark
   ),
 );
 
 // Loop over colors in $c-palette.
-@each $key, $value in $c-palette {
+@each $color-key, $color-map in $c-palette {
   // Loop through option groups in $c-config.
-  @each $c-key, $c-value in $c-config {
+  @each $prefix, $options in $c-config {
+    $property: map-get($options, 'property');
+
     // Loop over options and create classes if they are enabled.
-    @each $option, $toggle in $c-value {
-      $property: map-get($c-value, 'property');
+    @each $variant, $toggle in $options {
 
       @if $toggle {
         // Strip # from hex codes for use in class names.
-        $color: map-get($value, 'base');
+        $color: map-get($color-map, 'base');
         $clean-color: str-replace(#{$color}, '#', '');
 
-        @if $option == 'base' {
-          .#{$c-key}-#{$clean-color} {
+        @if $variant == 'base' {
+          .#{$prefix}-#{$clean-color} {
             #{$property}: $color;
           }
         }
         @else {
-          @if map-has-key($value, $option) {
-            $color: map-get($value, $option);
+          @if map-has-key($color-map, $variant) {
+            $color: map-get($color-map, $variant);
 
-            .#{$c-key}-#{$clean-color}-#{$option} {
+            .#{$prefix}-#{$clean-color}-#{$variant} {
               #{$property}: $color;
             }
           }
