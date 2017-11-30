@@ -94,6 +94,7 @@
   "homepage": "https://github.com/zivtech/ias#readme",
   "dependencies": {
     "node-sass": "^4.6.0",
+    "psd": "^3.2.0",
     "sassline": "^2.1.2"
   }
 }
