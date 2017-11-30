@@ -10,18 +10,28 @@
 //
 
 $c-config: (
-  bg: (                            // Generate background-color classes.
-    property: 'background-color',
-    base: false,                   // e.g. .bg-f3f3f3
-    light: false,                  // e.g. .bg-f3f3f3-light
-    dark: false,                   // e.g. .bg-f3f3f3-dark
+  bg: (                            // Set generated class prefix.
+    property: 'background-color',  // Set property for generated classes.
+    variants: (                    // Set the variant classes to be generated.
+      'base',                      // e.g. bg-f2f2f2
+      'dark',                      // e.g. bg-f2f2f2-dark
+      'light'                      // e.g. bg-f2f2f2-light
+    )
   ),
-  c: (                             // Generate font color classes.
-    property: 'color',
-    base: false,                   // e.g. .c-f3f3f3
-    light: false,                  // e.g. .c-f3f3f3-light
-    dark: false,                   // e.g. .c-f3f3f3-dark
+  c: (                             // Set generated class prefix.
+    property: 'color',             // Set property for generated classes.
+    variants: (                    // Set the variant classes to be generated.
+      'base',                      // e.g. c-f2f2f2
+      'dark',                      // e.g. c-f2f2f2-dark
+      'light'                      // e.g. c-f2f2f2-light
+    )
   ),
+  bc: (
+    property: 'border-color',
+    variants: (
+      'dark'
+    )
+  )
 );
 
 // Loop over colors in $c-palette.
@@ -30,26 +40,24 @@ $c-config: (
   @each $prefix, $options in $c-config {
     $property: map-get($options, 'property');
 
-    // Loop over options and create classes if they are enabled.
-    @each $variant, $toggle in $options {
+    // Loop over variants and create classes.
+    @each $variant in map-get($options, 'variants') {
 
-      @if $toggle {
-        // Strip # from hex codes for use in class names.
-        $color: map-get($color-map, 'base');
-        $clean-color: str-replace(#{$color}, '#', '');
+      // Strip # from hex codes for use in class names.
+      $color: map-get($color-map, 'base');
+      $clean-color: str-replace(#{$color}, '#', '');
 
-        @if $variant == 'base' {
-          .#{$prefix}-#{$clean-color} {
-            #{$property}: $color;
-          }
+      @if $variant == 'base' {
+        .#{$prefix}-#{$clean-color} {
+          #{$property}: $color;
         }
-        @else {
-          @if map-has-key($color-map, $variant) {
-            $color: map-get($color-map, $variant);
+      }
+      @else {
+        @if map-has-key($color-map, $variant) {
+          $color: map-get($color-map, $variant);
 
-            .#{$prefix}-#{$clean-color}-#{$variant} {
-              #{$property}: $color;
-            }
+          .#{$prefix}-#{$clean-color}-#{$variant} {
+            #{$property}: $color;
           }
         }
       }
