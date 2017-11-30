@@ -1187,21 +1187,7 @@ label {
   border: 1px solid #DCDCDC;
   border-radius: 4px;
   background: whitesmoke;
-}
-
-.select-wrapper::after {
-  position: absolute;
-  content: '\25bc';
-  display: inline-block;
-  pointer-events: none;
-  font-size: 12px;
-  padding: 4px 15px 4px 15px;
-  color: white;
-  right: -1px;
-  top: -1px;
-  max-height: 30px;
-  background: #808080;
-  border-radius: 0 4px 4px 0;
+  max-height: 36px;
 }
 
 .select-wrapper__select {
@@ -1214,9 +1200,40 @@ label {
   width: 100%;
   z-index: 2;
   font-size: 16px;
-  height: 34px;
+  height: 36px;
   padding: 0 45px 0 10px;
   min-width: 30px;
+  position: relative;
+  top: -4px;
+}
+
+.select-wrapper__icon {
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  font-size: 12px;
+  color: white;
+  top: -1px;
+  height: 36px;
+  width: 36px;
+  background: #878787;
+  border-radius: 0 4px 4px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.select-wrapper__icon i {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 @font-face {
