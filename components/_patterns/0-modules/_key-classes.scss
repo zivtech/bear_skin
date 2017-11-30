@@ -11,7 +11,7 @@
 
 $config: (
   bg: (                            // Generate background-color classes.
-    property: 'background-color',
+    property: 'background-color',  // Set property for generated classes.
     variants: (                    // Set the variant classes to be generated.
       'base',                      // e.g. bg-blue
       'dark',                      // e.g. bg-blue-dark
@@ -19,7 +19,7 @@ $config: (
     )
   ),
   c: (                             // Generate font color classes.
-    property: 'color',
+    property: 'color',             // Set property for generated classes.
     variants: (                    // Set the variant classes to be generated.
       'base',                      // e.g. c-blue
       'dark',                      // e.g. c-blue-dark
