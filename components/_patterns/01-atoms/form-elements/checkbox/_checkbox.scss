@@ -9,9 +9,9 @@
   width: 20px;
   height: 20px;
   z-index: 1;
-  border: 2px solid $ui-border-color;
+  border: 2px solid $c-ui-border;
   border-radius: $ui-border-radius;
-  background: $ui-lightest-grey;
+  background: $c-ui-background;
 
   i {
     font-size: 22px;
@@ -20,7 +20,7 @@
     left: -2px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
-    color: $ui-active-form-element;
+    color: $c-ui-active-form-element;
   }
 
   .form-checkbox {

@@ -1,16 +1,16 @@
 table {
-  border: 1px solid $ui-light-grey;
+  border: 1px solid $c-ui-border;
   margin: 1rem 0;
   width: 100%;
 
   thead {
-    background: $ui-light-grey;
+    background: $c-ui-background;
   }
 
   tbody {
 
     tr {
-      border-bottom: 1px solid $ui-light-grey;
+      border-bottom: 1px solid $c-ui-border;
 
       &:last-child {
         border: 0;
@@ -18,7 +18,7 @@ table {
     }
 
     tr:nth-child(odd) {
-      background: lighten($ui-lightest-grey, 2%);
+      background: lighten($c-ui-background,2%);
     }
   }
 

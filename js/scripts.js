@@ -26,7 +26,7 @@
 
       // search toggle
       var $searchToggle = $('#msearch', context);
-      var $searchContainer = $('#msearch-content');
+      var $searchContainer = $('#msearch-content', context);
       var $searchWrapper = $searchContainer.find('.js-form-type-search');
       var $searchField = $searchContainer.find('.form-search');
 

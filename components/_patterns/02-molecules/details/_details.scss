@@ -24,7 +24,7 @@ details {
     .details-wrapper {
       animation-name: fadeInDown;
       animation-duration: 0.5s;
-      border: 1px solid $ui-light-grey;
+      border: 1px solid $c-ui-border;
       border-top: 0;
     }
   }
@@ -48,7 +48,7 @@ details {
   cursor: pointer;
   outline: 0;
   background: $wild-sand;
-  border: 1px solid $ui-light-grey;
+  border: 1px solid $c-ui-border;
 
   &::-webkit-details-marker {
     display: none;

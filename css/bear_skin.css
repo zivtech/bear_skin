@@ -1688,13 +1688,13 @@ details[open] .details-wrapper, [open].accordion .details-wrapper {
 }
 
 .messages--error {
-  color: #ff6b42;
-  background-color: #fff7f5;
-  border: 2px solid #ffcfc2;
+  color: #d23232;
+  background-color: #f2c4c4;
+  border: 2px solid #e99b9b;
 }
 
 .wrapper-breadcrumb {
-  border-top: 1px solid #F5F5F5;
+  border-top: 1px solid #DCDCDC;
 }
 
 .breadcrumb {
@@ -2073,7 +2073,7 @@ table {
 }
 
 table thead {
-  background: #DCDCDC;
+  background: #F5F5F5;
 }
 
 table tbody tr {
