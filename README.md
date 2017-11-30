@@ -8,7 +8,7 @@ Before getting started, make sure that you have the latest version of node.js an
 
 Also, you will need to have [composer](https://getcomposer.org/doc/00-intro.md) installed. On a Mac, this is easiest with [homebrew](http://brew.sh/).
 
-Bear Skin needs the [**Components Libraries**](https://www.drupal.org/project/components) module to run. You must install it prior to enabling the theme. Additionally, you will need to enable both the **search** and **responsive image** modules (these two ship with core but need to be enabled) before installing the theme.
+Bear Skin needs the [**Components Libraries**](https://www.drupal.org/project/components) module to run. You must install it prior to enabling the theme. Additionally, you will need to enable both **search** (core) and **responsive image** (part of the Picture module).
 
 When ready to work, refer to [Gulp tasks for front-end development](docs/gulp.md) to get started.
 
