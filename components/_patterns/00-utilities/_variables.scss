@@ -1,6 +1,7 @@
 //
 // BEAR SKIN COLORS
-// Default colors that come packaged with Bear Skin.
+// Default colors that come packaged with Bear Skin. These are used in
+// boilerplate style rules. Feel free to delete or replace them.
 //
 $black:              hsla(0, 0%, 0%, 1);
 $grey:               hsla(0, 0%, 53%, 1);
@@ -17,14 +18,14 @@ $persian-red:        hsla(0, 64%, 51%, 1);
 // COLOR PALETTE
 //
 // These are the colors you will use for design elements throughout the site.
-// You can set the keys to whatever you like. For example, keys like "blue"
-// will work.
+// You can set the keys to whatever you like. For example, keys like "1",
+// "blue", or "blue-1" will all work.
 //
 // Each key has sub-keys to reflect the variants of a color. The only sub-key
 // that is required is "base". You can add sub-keys for additional variants
 // of your colors.
 //
-// Access via c() function. See _functions.scss
+// Access color palette values via c() function. See _functions.scss
 //
 // Examples:
 //    Access base color:
@@ -38,20 +39,24 @@ $persian-red:        hsla(0, 64%, 51%, 1);
 //      background: linear-gradient(45deg, c(1, light), c(blue, dark));
 //
 $c-palette: (
-  1: (
-    base: $bermuda-grey,
-    dark: $dark-bermuda-grey,
-    light: $light-bermuda-grey
-  ),
-  2: (
-    base: $emerald,
-    dark: darken($emerald, 10%),
-    light: lighten($emerald, 10%)
-  ),
-  persian-red: (
-    base: hsla(0, 64%, 51%, 1),
-    dark: hsla(0, 64%, 35%, 1),
-  ),
+  // Example 1
+  // 1: (
+  //   base: $bermuda-grey,
+  //   dark: $dark-bermuda-grey,
+  //   light: $light-bermuda-grey
+  // ),
+  // Example 2
+  // 2: (
+  //   base: $emerald,
+  //   dark: darken($emerald, 10%),
+  //   light: lighten($emerald, 10%)
+  // ),
+  // Example 3
+  // persian-red: (
+  //   base: hsla(0, 64%, 51%, 1),
+  //   dark: hsla(0, 64%, 35%, 1),
+  //   transparent: hsla(0, 64%, 35%, .5),
+  // ),
   // Your turn!
   // key: (
   //   base: ,
