@@ -1493,6 +1493,7 @@ code {
   height: 1px;
   background: white;
   width: 0;
+  left: 0;
   position: absolute;
   bottom: 0;
   transition: width .5s ease-in-out;
