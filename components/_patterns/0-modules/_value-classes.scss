@@ -1,60 +1,41 @@
-// Generates classes based on c-palette map hex values.
-// First level keys, e.g. 'bg', are prefixes for generated class names.
-// Second level keys, e.g. 'light', are suffixes for generated class names.
+// Generates classes based on map values.
 //
 // Classes will only be generated for each color if the corresponding variant is
-// found. For example, if my first c-palette color only has values for "color"
+// found. For example, if my first c-palette color only has values for "base"
 // and "dark", no "light" class will be generated.
 //
 // See ../00-utilities/_variables.scss
 //
 
-$c-config: (
-  bg: (                            // Set generated class prefix.
-    property: 'background-color',  // Set property for generated classes.
-    variants: (                    // Set the variant classes to be generated.
-      'base',                      // e.g. bg-f2f2f2
-      'dark',                      // e.g. bg-f2f2f2-dark
-      'light'                      // e.g. bg-f2f2f2-light
-    )
-  ),
-  c: (                             // Set generated class prefix.
-    property: 'color',             // Set property for generated classes.
-    variants: (                    // Set the variant classes to be generated.
-      'base',                      // e.g. c-f2f2f2
-      'dark',                      // e.g. c-f2f2f2-dark
-      'light'                      // e.g. c-f2f2f2-light
-    )
-  )
-);
+@mixin generate-value-classes($map, $config, $prefix, $property) {
+  @each $key, $value in $map {
+    @each $variant in $config {
+      // Strip any # from hex codes for use in class names.
+      $base-value: map-get($value, 'base');
+      $clean-value: str-replace(#{$base-value}, '#', '');
 
-// Loop over colors in $c-palette.
-@each $color-key, $color-map in $c-palette {
-  // Loop through option groups in $c-config.
-  @each $prefix, $options in $c-config {
-    $property: map-get($options, 'property');
-
-    // Loop over variants and create classes.
-    @each $variant in map-get($options, 'variants') {
-
-      // Strip # from hex codes for use in class names.
-      $color: map-get($color-map, 'base');
-      $clean-color: str-replace(#{$color}, '#', '');
+      $prop-value: map-get($value, $variant);
 
       @if $variant == 'base' {
-        .#{$prefix}-#{$clean-color} {
-          #{$property}: $color;
+        .#{$prefix}-#{$clean-value} {
+          #{$property}: $prop-value;
         }
       }
       @else {
-        @if map-has-key($color-map, $variant) {
-          $color: map-get($color-map, $variant);
-
-          .#{$prefix}-#{$clean-color}-#{$variant} {
-            #{$property}: $color;
+        @if map-has-key($value, $variant) {
+          .#{$prefix}-#{$clean-value}--#{$variant} {
+            #{$property}: $prop-value;
           }
         }
       }
     }
   }
 }
+
+$config: (
+  'base',
+  'dark',
+  'light'
+);
+
+@include generate-value-classes($c-palette, $config, bg, background-color);

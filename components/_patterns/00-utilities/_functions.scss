@@ -21,5 +21,11 @@
   @if not map-has-key($map, $key) {
     @error "Key '#{$key}' not found in map: #{$map}";
   }
+
+  $color: map-get($map, $key);
+  @if not map-has-key($color, $variant) {
+    @error "Variant '#{$variant}' not found in map: #{$color}";
+  }
+
   @return map-deep-get($map, $key, $variant);
 }

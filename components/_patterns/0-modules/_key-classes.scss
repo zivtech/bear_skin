@@ -1,55 +1,37 @@
-// Generates classes based on c-palette map keys.
-// First level keys, e.g. 'bg', are prefixes for generated class names.
-// Second level keys, e.g. 'light', are suffixes for generated class names.
+// Generates classes based on map keys.
 //
-// Classes will only be generated for each color if the corresponding key is
-// found. For example, if my first c-palette color only has values for "color"
+// Classes will only be generated for each color if the corresponding variant is
+// found. For example, if my first c-palette color only has values for "base"
 // and "dark", no "light" class will be generated.
 //
 // See ../00-utilities/_variables.scss
 //
 
-$config: (
-  bg: (                            // Generate background-color classes.
-    property: 'background-color',  // Set property for generated classes.
-    variants: (                    // Set the variant classes to be generated.
-      'base',                      // e.g. bg-blue
-      'dark',                      // e.g. bg-blue-dark
-      'light'                      // e.g. bg-blue-light
-    )
-  ),
-  c: (                             // Generate font color classes.
-    property: 'color',             // Set property for generated classes.
-    variants: (                    // Set the variant classes to be generated.
-      'base',                      // e.g. c-blue
-      'dark',                      // e.g. c-blue-dark
-      'light'                      // e.g. c-blue-light
-    )
-  ),
-);
-
-// Loop over colors in $c-palette.
-@each $color-key, $color-map in $c-palette {
-  // Loop through option groups in $config.
-  @each $prefix, $options in $config {
-    $property: map-get($options, 'property');
-
-    // Loop over variants and create classes.
-    @each $variant in map-get($options, 'variants') {
-      $color: map-get($color-map, $variant);
+@mixin generate-key-classes($map, $config, $prefix, $property) {
+  @each $key, $value in $map {
+    @each $variant in $config {
+      $prop-value: map-get($value, $variant);
 
       @if $variant == 'base' {
-        .#{$prefix}-#{$color-key} {
-          #{$property}: $color;
+        .#{$prefix}-#{$key} {
+          #{$property}: $prop-value;
         }
       }
       @else {
-        @if map-has-key($color-map, $variant) {
-          .#{$prefix}-#{$color-key}-#{$variant} {
-            #{$property}: $color;
+        @if map-has-key($value, $variant) {
+          .#{$prefix}-#{$key}--#{$variant} {
+            #{$property}: $prop-value;
           }
         }
       }
     }
   }
 }
+
+$config: (
+  'base',
+  'dark',
+  'light'
+);
+
+@include generate-key-classes($c-palette, $config, bg, background-color);
