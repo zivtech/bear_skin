@@ -1,37 +1,14 @@
-// Generates classes based on map keys.
-//
-// Classes will only be generated for each color if the corresponding variant is
-// found. For example, if my first c-palette color only has values for "base"
-// and "dark", no "light" class will be generated.
-//
-// See ../00-utilities/_variables.scss
-//
-
-@mixin generate-key-classes($map, $config, $prefix, $property) {
-  @each $key, $value in $map {
-    @each $variant in $config {
-      $prop-value: map-get($value, $variant);
-
-      @if $variant == 'base' {
-        .#{$prefix}-#{$key} {
-          #{$property}: $prop-value;
-        }
-      }
-      @else {
-        @if map-has-key($value, $variant) {
-          .#{$prefix}-#{$key}--#{$variant} {
-            #{$property}: $prop-value;
-          }
-        }
-      }
-    }
-  }
-}
-
 $config: (
   'base',
   'dark',
   'light'
 );
 
+// Generate background-color classes
 @include generate-key-classes($c-palette, $config, bg, background-color);
+
+// Generate color classes
+@include generate-key-classes($c-palette, $config, c, color);
+
+// Generate border-color classes
+@include generate-key-classes($c-palette, $config, bc, border-color);

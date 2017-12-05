@@ -114,3 +114,79 @@
 @mixin sans {
   font-family: unquote(map-get($headingtype, font-family));
 }
+
+// Generates classes based on map keys.
+//
+// @param $map
+//   A map full of maps. See $c-palette in _variables.scss.
+// @param $config
+//   A Sass list of variants classes should be generated for.
+// @param $prefix
+//   A string that will be appended to the front of the generated class names.
+// @param $property
+//   The CSS property the generated classes will set. A string.
+//
+// Classes will only be generated for each color if the corresponding variant is
+// found. For example, if my first c-palette color only has values for "base"
+// and "dark", no "light" class will be generated.
+//
+@mixin generate-key-classes($map, $config, $prefix, $property) {
+  @each $key, $value in $map {
+    @each $variant in $config {
+      $prop-value: map-get($value, $variant);
+
+      @if $variant == 'base' {
+        .#{$prefix}-#{$key} {
+          #{$property}: $prop-value;
+        }
+      }
+      @else {
+        @if map-has-key($value, $variant) {
+          .#{$prefix}-#{$key}--#{$variant} {
+            #{$property}: $prop-value;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Generates classes based on map values.
+//
+// @param $map
+//   A map full of maps. See $c-palette in _variables.scss.
+// @param $config
+//   A Sass list of variants classes should be generated for.
+// @param $prefix
+//   A string that will be appended to the front of the generated class names.
+// @param $property
+//   The CSS property the generated classes will set. A string.
+//
+// Classes will only be generated for each color if the corresponding variant is
+// found. For example, if my first c-palette color only has values for "base"
+// and "dark", no "light" class will be generated.
+//
+@mixin generate-value-classes($map, $config, $prefix, $property) {
+  @each $key, $value in $map {
+    @each $variant in $config {
+      // Strip any # from hex codes for use in class names.
+      $base-value: map-get($value, 'base');
+      $clean-value: str-replace(#{$base-value}, '#', '');
+
+      $prop-value: map-get($value, $variant);
+
+      @if $variant == 'base' {
+        .#{$prefix}-#{$clean-value} {
+          #{$property}: $prop-value;
+        }
+      }
+      @else {
+        @if map-has-key($value, $variant) {
+          .#{$prefix}-#{$clean-value}--#{$variant} {
+            #{$property}: $prop-value;
+          }
+        }
+      }
+    }
+  }
+}
