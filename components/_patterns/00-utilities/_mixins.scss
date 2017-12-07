@@ -119,7 +119,7 @@
 //
 // @param $map
 //   A map full of maps. See $c-palette in _variables.scss.
-// @param $config
+// @param $variants
 //   A Sass list of variants classes should be generated for.
 // @param $prefix
 //   A string that will be appended to the front of the generated class names.
@@ -127,12 +127,12 @@
 //   The CSS property the generated classes will set. A string.
 //
 // Classes will only be generated for each color if the corresponding variant is
-// found. For example, if my first c-palette color only has values for "base"
+// found. For example, if my first $c-palette color only has values for "base"
 // and "dark", no "light" class will be generated.
 //
-@mixin generate-key-classes($map, $config, $prefix, $property) {
+@mixin generate-key-classes($map, $variants, $prefix, $property) {
   @each $key, $value in $map {
-    @each $variant in $config {
+    @each $variant in $variants {
       $prop-value: map-get($value, $variant);
 
       @if $variant == 'base' {
@@ -155,7 +155,7 @@
 //
 // @param $map
 //   A map full of maps. See $c-palette in _variables.scss.
-// @param $config
+// @param $variants
 //   A Sass list of variants classes should be generated for.
 // @param $prefix
 //   A string that will be appended to the front of the generated class names.
@@ -163,12 +163,12 @@
 //   The CSS property the generated classes will set. A string.
 //
 // Classes will only be generated for each color if the corresponding variant is
-// found. For example, if my first c-palette color only has values for "base"
+// found. For example, if my first $c-palette color only has values for "base"
 // and "dark", no "light" class will be generated.
 //
-@mixin generate-value-classes($map, $config, $prefix, $property) {
+@mixin generate-value-classes($map, $variants, $prefix, $property) {
   @each $key, $value in $map {
-    @each $variant in $config {
+    @each $variant in $variants {
       // Strip any # from hex codes for use in class names.
       $base-value: map-get($value, 'base');
       $clean-value: str-replace(#{$base-value}, '#', '');
