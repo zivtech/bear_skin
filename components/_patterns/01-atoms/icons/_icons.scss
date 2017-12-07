@@ -22,6 +22,17 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
+
+  &.no-text {
+    display: block;
+    text-indent: -9999px;
+
+    &:before {
+      display: block;
+      text-indent: 0;
+      float: left;
+    }
+  }
 }
 
 .icon-bell:before {
@@ -53,4 +64,9 @@
 }
 .icon-chevron-right:before {
   content: '\e908';
+}
+.icon-feed:before {
+  content: '\e90a';
+  color: orange;
+  font-size: 30px;
 }

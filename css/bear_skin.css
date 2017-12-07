@@ -1260,6 +1260,23 @@ label {
   -moz-osx-font-smoothing: greyscale;
 }
 
+[class^='con-'].no-text,
+[class*='icon-'].no-text,
+.icon.no-text,
+#search-block-form .no-text.form-actions {
+  display: block;
+  text-indent: -9999px;
+}
+
+[class^='con-'].no-text:before,
+[class*='icon-'].no-text:before,
+.icon.no-text:before,
+#search-block-form .no-text.form-actions:before {
+  display: block;
+  text-indent: 0;
+  float: left;
+}
+
 .icon-bell:before {
   content: '\e900';
 }
@@ -1298,6 +1315,12 @@ label {
 
 .icon-chevron-right:before {
   content: '\e908';
+}
+
+.icon-feed:before {
+  content: '\e90a';
+  color: orange;
+  font-size: 30px;
 }
 
 b,
