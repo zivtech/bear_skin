@@ -7,7 +7,7 @@ paths:
 theme:
   name: "bear_skin"
 patternLab:
-  enabled: true
+  enabled: false
   configFile: "pattern-lab/config/config.yml"
   watchedExtensions:
     - twig
@@ -24,7 +24,7 @@ bower:
   src: "components/vendor/bower/raw"
   dest: "components/vendor/bower"
 css:
-  src: ["components/**/*.scss"]
+  src: ["components/**/*.css"]
   dest: "css"
   buildSourceMaps: false
   lint:
