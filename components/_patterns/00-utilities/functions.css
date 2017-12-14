@@ -1,31 +1,31 @@
-// Authored by Hugo Giraudel.
-// See https://css-tricks.com/snippets/sass/str-replace-function/.
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-  @return $string;
-}
+/*Authored by Hugo Giraudel*/
+/*// See https://css-tricks.com/snippets/sass/str-replace-function/.*/
+/*@function str-replace($string, $search, $replace: '') {*/
+  /*$index: str-index($string, $search);*/
+  /*@if $index {*/
+    /*@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);*/
+  /*}*/
+  /*@return $string;*/
+/*}*/
 
-// Authored by Hugo Giraudel.
-// See https://css-tricks.com/snippets/sass/deep-getset-maps/.
-@function map-deep-get($map, $keys...) {
-  @each $key in $keys {
-    $map: map-get($map, $key);
-  }
-  @return $map;
-}
+/*// Authored by Hugo Giraudel.*/
+/*// See https://css-tricks.com/snippets/sass/deep-getset-maps/.*/
+/*@function map-deep-get($map, $keys...) {*/
+  /*@each $key in $keys {*/
+    /*$map: map-get($map, $key);*/
+  /*}*/
+  /*@return $map;*/
+/*}*/
 
-@function c($key, $variant: 'base', $map: $c-palette) {
-  @if not map-has-key($map, $key) {
-    @error "Key '#{$key}' not found in map: #{$map}";
-  }
+/*@function c($key, $variant: 'base', $map: $c-palette) {*/
+  /*@if not map-has-key($map, $key) {*/
+    /*@error "Key '#{$key}' not found in map: #{$map}";*/
+  /*}*/
 
-  $color: map-get($map, $key);
-  @if not map-has-key($color, $variant) {
-    @error "Variant '#{$variant}' not found in map: #{$color}";
-  }
+  /*$color: map-get($map, $key);*/
+  /*@if not map-has-key($color, $variant) {*/
+    /*@error "Variant '#{$variant}' not found in map: #{$color}";*/
+  /*}*/
 
-  @return map-deep-get($map, $key, $variant);
-}
+  /*@return map-deep-get($map, $key, $variant);*/
+/*}*/

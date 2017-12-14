@@ -1,4 +1,4 @@
-// mostly used for details/summary and accordions
+/*mostly used for details/summary and accordions*/
 
 @keyframes fadeIn {
 
@@ -35,7 +35,7 @@
   }
 }
 
-// ajax spinner
+/*ajax spinner*/
 @keyframes spin {
 
   0% {

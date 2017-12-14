@@ -7,7 +7,7 @@ var cssnext = require('cssnext');
 var cached = require('gulp-cached');
 var mqpacker = require('css-mqpacker');
 var plumber = require('gulp-plumber');
-var notify = require('gulp-notify');
+//var notify = require('gulp-notify');
 var flatten = require('gulp-flatten');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
@@ -15,26 +15,27 @@ var browserSync = require('browser-sync');
 module.exports = function (gulp, options) {
 
   var processors = [
-    cssnext({
-      'browsers': [options.css.browsers],
-      'compress': true
-    }),
-    mqpacker({sort: true}),
-    flexibility()
+      require('postcss-easy-import'),
+      cssnext({
+        'browsers': options.css.browsers,
+        'compress': true
+      }),
+      mqpacker({sort: true}),
+      flexibility()
   ];
 
   return gulp.src(options.css.src)
     .pipe(plumber({
       errorHandler: function (error) {
-        notify.onError({
-          title: 'CSS <%= error.name %> - Line <%= error.line %>',
-          message: '<%= error.message %>'
-        })(error);
+        // notify.onError({
+        //   title: 'CSS <%= error.name %> - Line <%= error.line %>',
+        //   message: '<%= error.message %>'
+        // })(error);
         this.emit('end');
       }
     }))
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})))
-    .on('error', sass.logError)
+    //.on('error', sass.logError)
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
     .pipe(flatten())

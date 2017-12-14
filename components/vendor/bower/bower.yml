@@ -1,5 +1,0 @@
-flexboxgrid:
-  css:
-    theme:
-      components/vendor/bower/css/flexboxgrid.css:
-        minified: false

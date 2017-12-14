@@ -1,6 +1,4 @@
-//*********
-// Wrappers
-//*********
+/*Wrappers*/
 
 body {
   overflow-x: hidden;
@@ -9,7 +7,7 @@ body {
 .wrapper--inner {
   padding: 0 1rem;
   margin: 0 auto;
-  max-width: $site-max-width;
+  /*max-width: $site-max-width;*/
   width: 100%;
 }
 
@@ -21,86 +19,81 @@ img {
   display: block;
 }
 
-//*************
-// Left Sidebar
-//*************
+/*Left Sidebar*/
 
-.layout-sidebar-first {
+/*.layout-sidebar-first {*/
 
-  .wrapper-main__inner {
-    @include breakpoint(break-2) {
-      display: flex;
-    }
-  }
+  /*.wrapper-main__inner {*/
+    /*@include breakpoint(break-2) {*/
+      /*display: flex;*/
+    /*}*/
+  /*}*/
 
-  .column.main {
-    @include breakpoint(break-2) {
-      padding: 0 0 0 2rem;
-      flex-basis: 75%;
-      order: 2;
-    }
-  }
+  /*.column.main {*/
+    /*@include breakpoint(break-2) {*/
+      /*padding: 0 0 0 2rem;*/
+      /*flex-basis: 75%;*/
+      /*order: 2;*/
+    /*}*/
+  /*}*/
 
-  .column.sidebar {
-    @include breakpoint(break-2) {
-      flex-basis: 25%;
-      order: 1;
-    }
-  }
-}
+  /*.column.sidebar {*/
+    /*@include breakpoint(break-2) {*/
+      /*flex-basis: 25%;*/
+      /*order: 1;*/
+    /*}*/
+  /*}*/
+/*}*/
 
-//**************
-// Right Sidebar
-//**************
 
-.layout-sidebar-second {
-  @extend .layout-sidebar-first;
+/*!*Right Sidebar*!*/
 
-  .column.main {
-    @include breakpoint(break-2) {
-      padding: 0 2rem 0 0;
+/*.layout-sidebar-second {*/
+  /*@extend .layout-sidebar-first;*/
 
-      order: 1;
-    }
-  }
+  /*.column.main {*/
+    /*@include breakpoint(break-2) {*/
+      /*padding: 0 2rem 0 0;*/
 
-  .column.sidebar {
-    @include breakpoint(break-2) {
-      order: 2;
-    }
-  }
-}
+      /*order: 1;*/
+    /*}*/
+  /*}*/
 
-//**************
-// Two Sidebars
-//**************
+  /*.column.sidebar {*/
+    /*@include breakpoint(break-2) {*/
+      /*order: 2;*/
+    /*}*/
+  /*}*/
+/*}*/
 
-.layout-two-sidebars {
-  .wrapper-main__inner {
-    @include breakpoint(break-2) {
-      display: flex;
-    }
-  }
+/*!*Two Sidebars*!*/
 
-  .column.main {
-    @include breakpoint(break-2) {
-      padding: 0 2rem;
-      flex-basis: 75%;
-      order: 2;
-    }
-  }
+/*.layout-two-sidebars {*/
+  /*.wrapper-main__inner {*/
+    /*@include breakpoint(break-2) {*/
+      /*display: flex;*/
+    /*}*/
+  /*}*/
 
-  .column.sidebar {
-    @include breakpoint(break-2) {
-      flex-basis: 25%;
+  /*.column.main {*/
+    /*@include breakpoint(break-2) {*/
+      /*padding: 0 2rem;*/
+      /*flex-basis: 75%;*/
+      /*order: 2;*/
+    /*}*/
+  /*}*/
 
-      &.sidebar--first {
-        order: 1;
-      }
+  /*.column.sidebar {*/
+    /*@include breakpoint(break-2) {*/
+      /*flex-basis: 25%;*/
 
-      &.sidebar--second {
-        order: 3;
-      }
-    }
-  }
-}
+      /*&.sidebar--first {*/
+        /*order: 1;*/
+      /*}*/
+
+      /*&.sidebar--second {*/
+        /*order: 3;*/
+      /*}*/
+    /*}*/
+  /*}*/
+/*}*/
