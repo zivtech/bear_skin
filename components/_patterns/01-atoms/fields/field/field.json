@@ -1,0 +1,35 @@
+{
+  "label": "Field Label",
+  "label_hidden": false,
+  "label_element": "h3",
+  "title_attributes": {
+    "Attribute()": {
+      "id": "here-is-my-class-id",
+      "class": [
+        "field__label"
+      ]
+    }
+  },
+  "attributes": {
+    "Attribute()": {
+      "aria-labelledby": "here-is-my-class-id",
+      "class": [
+        "field"
+      ]
+    }
+  },
+  "multiple": true,
+  "items": [
+    {
+      "content": "Field Content",
+      "attributes": {
+        "Attribute()": {
+          "class": [
+            "field__item"
+          ]
+        }
+      }
+    }
+  ],
+  "element": "div"
+}

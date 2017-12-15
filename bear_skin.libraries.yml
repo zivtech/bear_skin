@@ -6,8 +6,6 @@ global-styles:
         minified: true
       css/theme.css:
         minified: false
-  dependencies:
-    - bear_skin/flexboxgrid
 
 global-scripts:
   version: 1.x
@@ -24,10 +22,6 @@ global-scripts:
 # Do not modify the library info within the injection points below. They
 # will be overridden by gulp later if you do!
 # inject:libraries
-flexboxgrid:
-  css:
-    theme:
-      components/vendor/bower/css/flexboxgrid.css:
-        minified: false
+
 
 # endinject
