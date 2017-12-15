@@ -1,19 +1,16 @@
-.region {
+.region--header {
+  display: flex;
+  flex-grow: 1;
+}
 
-  &--header {
-    display: flex;
-    flex-grow: 1;
-  }
+.region--navigation {
+  margin: 0 1rem;
+  order: 1;
+  display: flex;
+}
 
-  &--navigation {
-    margin: 0 1rem;
-    order: 1;
-    display: flex;
-  }
-
-  &--search {
-    order: 2;
-    justify-content: flex-end;
-    display: flex;
-  }
+.region--search {
+  order: 2;
+  justify-content: flex-end;
+  display: flex;
 }

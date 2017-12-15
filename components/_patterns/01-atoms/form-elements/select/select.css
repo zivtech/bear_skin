@@ -2,43 +2,43 @@
   margin: .5rem 0;
   position: relative;
   max-width: 500px;
-  border: 1px solid $c-ui-border;
-  border-radius: $ui-border-radius;
-  background: $wild-sand;
+  /*border: 1px solid $ c-ui-border;*/
+  /*border-radius: $ ui-border-radius;*/
+  /*background: $ wild-sand;*/
   max-height: 36px;
+}
 
-  &__select {
-    font-family: inherit;
-    appearance: none;
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    z-index: 2;
-    font-size: 16px;
-    height: 36px;
-    padding: 0 45px 0 10px;
-    min-width: 30px;
-    position: relative;
-    top: -4px;
-  }
+.select-wrapper__select {
+  font-family: inherit;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  z-index: 2;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 45px 0 10px;
+  min-width: 30px;
+  position: relative;
+  top: -4px;
+}
 
-  &__icon {
-    position: absolute;
-    right: 0;
-    pointer-events: none;
-    font-size: 12px;
-    color: $white;
-    top: -1px;
-    height: 36px;
-    width: 36px;
-    background: $grey;
-    border-radius: 0 $ui-border-radius $ui-border-radius 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.select-wrapper__icon {
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  font-size: 12px;
+  /*color: $ white;*/
+  top: -1px;
+  height: 36px;
+  width: 36px;
+  /*background: $ grey;*/
+  /*border-radius: 0 $ ui-border-radius $ ui-border-radius 0;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    i {
-      transform: rotate(-90deg);
-    }
-  }
+.select-wrapper__icon  i {
+  transform: rotate(-90deg);
 }

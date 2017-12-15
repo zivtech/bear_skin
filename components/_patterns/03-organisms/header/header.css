@@ -1,12 +1,12 @@
 .wrapper-header {
   position: relative;
+}
 
-  &__inner {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.wrapper-header__inner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

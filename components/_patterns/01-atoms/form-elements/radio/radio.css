@@ -10,24 +10,24 @@
   height: 18px;
   border-radius: 50%;
   z-index: 1;
-  border: 2px solid $c-ui-border;
-  background: $c-ui-background;
+  /*border: 2px solid $ c-ui-border;*/
+  /*background: $c-ui-background;*/
+}
 
-  i {
-    font-size: 14px;
-    position: absolute;
-    top: 0;
-    left: 1.5px;
-    opacity: 0;
-    transition: opacity .2s ease-in-out;
-    color: $black;
-  }
+.radio-wrapper  i {
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 1.5px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  /*color: $black;*/
+}
 
-  .form-radio {
-    display: none;
+.radio-wrapper .form-radio {
+  display: none;
+}
 
-    &:checked + i {
-      opacity: 1;
-    }
-  }
+.radio-wrapper .form-radio:checked + i {
+  opacity: 1;
 }

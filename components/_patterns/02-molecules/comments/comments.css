@@ -10,24 +10,18 @@
   padding-left: 3rem;
 }
 
-.comment {
+.comment footer p {
+  margin-top: 1rem;
+  /*border-bottom: 1px solid $ c-ui-border;*/
+  margin-bottom: 0;
+}
 
-  footer {
+.comment ul {
+  list-style: none;
+  padding: 0;
+}
 
-    p {
-      margin-top: 1rem;
-      border-bottom: 1px solid $c-ui-border;
-      margin-bottom: 0;
-    }
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-
-    a {
-      text-decoration: underline;
-      text-transform: uppercase;
-    }
-  }
+.comment ul a {
+  text-decoration: underline;
+  text-transform: uppercase;
 }

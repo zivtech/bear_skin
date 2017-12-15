@@ -1,9 +1,5 @@
-.user-pass {
-
-  p {
-    @include fontsize(12, all);
-
-    color: $c-ui-font;
-    margin-top: -1.5rem;
-  }
+.user-pass p {
+  /*@include fontsize(12, all);*/
+  /*color: $c-ui-font;*/
+  margin-top: -1.5rem;
 }

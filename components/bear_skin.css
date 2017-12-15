@@ -14,8 +14,3 @@
 @import '_patterns/03-organisms/**/*';
 @import '_patterns/04-layouts/**/*';
 @import '_patterns/05-pages/**/*';
-
-
-body {
-  display: none;
-}

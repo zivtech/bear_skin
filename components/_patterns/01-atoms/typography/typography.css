@@ -4,16 +4,16 @@ strong {
 }
 
 q {
-  @include fontsize(20, 0);
+  /*@include fontsize(20, 0);*/
+}
 
-  &::after {
-    position: relative;
-    top: 1rem;
-  }
+q::after {
+  position: relative;
+  top: 1rem;
 }
 
 a {
-  @include link($c-link, none, $c-link-hover, none);
+  /*@include link($c-link, none, $c-link-hover, none);*/
 
   transition: color .3s ease-in-out;
 }

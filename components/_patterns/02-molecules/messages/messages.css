@@ -1,35 +1,35 @@
 .messages {
   padding: 1rem 1rem;
   margin: 1rem 0;
-  color: $grey;
-  background-color: $wild-sand;
-  border: 2px solid $c-ui-border;
+  /*color: $ grey;*/
+  /*background-color: $ wild-sand;*/
+  /*border: 2px solid $ c-ui-border;*/
   line-height: 1.4;
   display: flex;
   align-items: center;
+}
 
-  &__icon {
-    display: inline-block;
-    margin-right: 1rem;
-    margin-top: 4px;
-    font-size: 22px;
-  }
+.messages__icon {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 4px;
+  font-size: 22px;
+}
 
-  &--status {
-    color: $c-status;
-    background-color: lighten($c-status, 45%);
-    border: 2px solid lighten($c-status, 35%);
-  }
+.messages--status {
+  /*color: $c-status;*/
+  /*background-color: lighten($c-status, 45%);*/
+  /*border: 2px solid lighten($c-status, 35%);*/
+}
 
-  &--warning {
-    color: $c-warning;
-    background-color: lighten($c-warning, 50%);
-    border: 2px solid lighten($c-warning, 40%);
-  }
+.messages--warning {
+  /*color: $c-warning;*/
+  /*background-color: lighten($c-warning, 50%);*/
+  /*border: 2px solid lighten($c-warning, 40%);*/
+}
 
-  &--error {
-    color: $c-error;
-    background-color: lighten($c-error, 35%);
-    border: 2px solid lighten($c-error, 25%);
-  }
+.messages--error {
+  /*color: $c-error;*/
+  /*background-color: lighten($c-error, 35%);*/
+  /*border: 2px solid lighten($c-error, 25%);*/
 }

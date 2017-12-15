@@ -7,7 +7,7 @@ var cssnext = require('cssnext');
 var cached = require('gulp-cached');
 var mqpacker = require('css-mqpacker');
 var plumber = require('gulp-plumber');
-//var notify = require('gulp-notify');
+var notify = require('gulp-notify');
 var flatten = require('gulp-flatten');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
@@ -27,10 +27,10 @@ module.exports = function (gulp, options) {
   return gulp.src(options.css.src)
     .pipe(plumber({
       errorHandler: function (error) {
-        // notify.onError({
-        //   title: 'CSS <%= error.name %> - Line <%= error.line %>',
-        //   message: '<%= error.message %>'
-        // })(error);
+        notify.onError({
+          title: 'CSS <%= error.name %> - Line <%= error.line %>',
+          message: '<%= error.message %>'
+        })(error);
         this.emit('end');
       }
     }))

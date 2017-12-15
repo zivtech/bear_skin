@@ -1,25 +1,25 @@
 .wrapper-footer {
-  @include fontsize(16, all);
+  /*@include fontsize(16, all);*/
 
   padding: 1rem 0;
-  background: $c-ui-background;
+  /*background: $ c-ui-background;*/
+}
 
-  .menu__link {
-    @include link($black, none, $black, underline);
-    @include fontsize(14, all);
+.wrapper-footer .menu__link {
+  /*@include link($black, none, $black, underline);*/
+  /*@include fontsize(14, all);*/
 
-    text-transform: uppercase;
-  }
+  text-transform: uppercase;
 }
 
 .sticky-footer {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
 
-  .wrapper-main {
-    position: relative;
-    flex: 1 0 auto;
-    overflow: hidden;
-  }
+.sticky-footer .wrapper-main {
+  position: relative;
+  flex: 1 0 auto;
+  overflow: hidden;
 }

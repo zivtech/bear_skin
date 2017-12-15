@@ -1,15 +1,11 @@
-.node {
+.node--unpublished {
+  background: hsla(327, 100%, 92%, 1);
+}
 
-  &--unpublished {
-    background: hsla(327, 100%, 92%, 1);
-
-    &:before {
-      content: 'DRAFT';
-      font-family: unquote(map-get($bodytype, font-family));
-      width: 100%;
-      text-align: center;
-      padding: 30px 0;
-      display: block;
-    }
-  }
+.node--unpublished:before {
+  content: 'DRAFT';
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  display: block;
 }

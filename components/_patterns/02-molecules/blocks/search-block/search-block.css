@@ -1,12 +1,12 @@
 #msearch {
   font-size: 22px;
   transition: .2s color ease-in-out;
-  color: $black;
+  /*color: $ black;*/
+}
 
-  &:hover,
-  &:focus {
-    color: $c-ui-font-dark;
-  }
+#msearch:hover,
+#msearch:focus {
+  /*color: $c-ui-font-dark;*/
 }
 
 #msearch-close {
@@ -14,7 +14,7 @@
   align-items: center;
   margin-left: 2rem;
   font-size: 30px;
-  color: $white;
+  /*color: $white;*/
   position: absolute;
   right: 2rem;
   top: 2.5rem;
@@ -26,112 +26,112 @@
   left: 0;
   top: -200px;
   z-index: 15;
-
   background: rgba(0, 0, 0, .95);
   transition: all .2s ease-in-out;
-
   display: flex;
   justify-content: center;
+}
 
-  &.open {
-    top: 0;
-    opacity: 1;
-  }
+#msearch-content.open {
+  top: 0;
+  opacity: 1;
 }
 
 #search-block-form {
   display: flex;
   align-items: center;
   margin: 2rem 0;
+}
 
-  .form-item {
-    margin: 0;
-  }
+#search-block-form  .form-item {
+  margin: 0;
+}
 
-  .form-search {
-    @include fontsize(26, all);
+#search-block-form .form-search {
+  /*@include fontsize(26, all);*/
 
-    border: 0;
-    padding: .5rem 3rem .5rem 0;
-    color: $white;
-    background: transparent;
-    width: 200px;
+  border: 0;
+  padding: .5rem 3rem .5rem 0;
+  /*color: $ white;*/
+  background: transparent;
+  width: 200px;
 
-    @include breakpoint(break-1) {
-      width: 400px;
-    }
+  /*@include breakpoint(break-1) {*/
+    /*width: 400px;*/
+  /*}*/
+}
 
-    &::-webkit-input-placeholder {
-      @include fontsize(26, all);
 
-      color: $c-ui-font;
-    }
 
-    &:-moz-placeholder { /* Firefox 18- */
-      @include fontsize(26, all);
+#search-block-form .form-search::-webkit-input-placeholder {
+  /*@include fontsize(26, all);*/
 
-      color: $c-ui-font;
-    }
+  /*color: $c-ui-font;*/
+}
 
-    &::-moz-placeholder {  /* Firefox 19+ */
-      @include fontsize(26, all);
+#search-block-form .form-search:-moz-placeholder { /* Firefox 18- */
+  /*@include fontsize(26, all);*/
 
-      color: $c-ui-font;
-    }
+  /*color: $c-ui-font;*/
+}
 
-    &:-ms-input-placeholder {
-      @include fontsize(26, all);
+#search-block-form .form-search::-moz-placeholder {  /* Firefox 19+ */
+  /*@include fontsize(26, all);*/
 
-      color: $c-ui-font;
-    }
-  }
+  /*color: $c-ui-font;*/
+}
 
-  .js-form-type-search {
-    position: relative;
+#search-block-form .form-search:-ms-input-placeholder {
+  /*@include fontsize(26, all);*/
 
-    &::after {
-      content: '';
-      height: 1px;
-      background: $white;
-      width: 0;
-      left: 0;
-      position: absolute;
-      bottom: 0;
-      transition: width .5s ease-in-out;
-    }
+  /*color: $c-ui-font;*/
+}
 
-    &.active {
-      &::after {
-        width: 100%;
-      }
-    }
-  }
+#search-block-form  .js-form-type-search {
+  position: relative;
+}
 
-  .form-actions {
-    @extend .icon;
+#search-block-form  .js-form-type-search::after {
+  content: '';
+  height: 1px;
+  /*background: $white;*/
+  width: 0;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  transition: width .5s ease-in-out;
+}
 
-    //position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -3.5rem;
+#search-block-form .js-form-type-search.active::after {
+  width: 100%;
+}
 
-    &::after {
-      content: '\e905';
-      color: $white;
-      position: absolute;
-      font-size: 20px;
-    }
-  }
 
-  .form-submit {
-    opacity: 0;
-    position: relative;
-    z-index: 2;
-  }
+#search-block-form .form-actions {
+  /*@extend .icon;*/
 
-  &__site-slogan {
-    margin-left: 1rem;
-  }
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -3.5rem;
+}
+
+#search-block-form .form-actions::after {
+  content: '\e905';
+  /*color: $white;*/
+  position: absolute;
+  font-size: 20px;
+}
+
+
+#search-block-form  .form-submit {
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+}
+
+#search-block-form__site-slogan {
+  margin-left: 1rem;
 }

@@ -38,32 +38,32 @@ form {
 }
 
 .description,
-.filter-guidelines {
-  @include fontsize(12, all);
-
+.filter-guidelines,
+.field-suffix {
+  /*@include fontsize(12, all);*/
   clear: both;
-  margin-bottom: rem;
+  margin-bottom: 1rem;
   padding: .2rem 0;
   line-height: 1.5;
-  color: $c-ui-font;
+  /*color: $c-ui-font;*/
+}
 
-  ul {
-    line-height: 1.5;
-  }
+.description ul,
+.filter-guidelines ul {
+  line-height: 1.5;
 }
 
 .filter-help {
-  @include fontsize(14, all);
-
+  /*@include fontsize(14, all);*/
   float: none;
 }
 
 .filter-wrapper {
-  border: 1px solid $c-ui-border;
+  /*border: 1px solid $c-ui-border;*/
 }
 
 .field-suffix {
-  @extend .description;
+  /*@extend .description;*/
 }
 
 .dropbutton-multiple {
@@ -76,37 +76,41 @@ form {
 .form-date,
 .form-password,
 .form-date {
-  @include fontsize(16, all);
-
+  /*@include fontsize(16, all);*/
   padding: .5rem .5rem;
   width: 100%;
   max-width: 30em;
   transition: border .2s ease-in-out;
-  border: 1px solid $c-ui-border;
+  /*border: 1px solid $ c-ui-border;*/
+}
 
-  &:focus {
-    outline: 0;
-    border-color: $c-ui-active-form-element;
-  }
+
+.form-text:focus,
+.form-email:focus,
+.form-textarea:focus,
+.form-date:focus,
+.form-password:focus,
+.form-date:focus {
+  outline: 0;
+  /*border-color: $c-ui-active-form-element;*/
 }
 
 .form-date {
-  @include sans;
+  /*@include sans;*/
 
   max-width: 10em;
 }
 
 .form-textarea {
-  @include sans;
+  /*@include sans;*/
 }
 
 .form-submit {
-  @extend .button;
+  /*@extend .button;*/
 }
 
 input[type='search'] {
-  @extend .form-text;
-
+  /*@extend .form-text;*/
   appearance: initial;
 }
 
@@ -114,29 +118,24 @@ input[type='search'] {
   display: block;
 }
 
-.dropbutton-widget {
-  @extend .button;
+.dropbutton-widget .form-submit {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
 
-  .form-submit {
-    padding: 0;
-    margin: 0;
-    background: transparent;
-  }
+.dropbutton-widget .secondary-action {
+  margin-top: 5px;
+}
 
-  .secondary-action {
-    margin-top: 5px;
-  }
-
-  .dropbutton-toggle {
-    button, a {
-      color: $white;
-    }
-  }
+.dropbutton-widget.dropbutton-toggle button,
+.dropbutton-widget.dropbutton-toggle a {
+  /*color: $white;*/
 }
 
 fieldset {
   padding: 1rem;
-  border: 1px solid $c-ui-border;
+  /*border: 1px solid $c-ui-border;*/
 }
 
 .ajax-progress-throbber {
@@ -146,19 +145,18 @@ fieldset {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, .8);
-
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  .throbber {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    animation: spin 1s infinite linear;
-    border: .3rem solid $black;
-    border-top-color: $white;
-  }
+.ajax-progress-throbber .throbber {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  /*border: .3rem solid $black;*/
+  /*border-top-color: $white;*/
 }
 
 div[id^='ajax-wrapper'] {

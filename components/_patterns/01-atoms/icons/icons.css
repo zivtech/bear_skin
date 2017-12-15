@@ -22,17 +22,21 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
+}
 
-  &.no-text {
-    display: block;
-    text-indent: -9999px;
+[class^='con-'].no-text,
+[class*='icon-'].no-text,
+.icon.no-text {
+  display: block;
+  text-indent: -9999px;
+}
 
-    &:before {
-      display: block;
-      text-indent: 0;
-      float: left;
-    }
-  }
+[class^='con-'].no-text::before,
+[class*='icon-'].no-text::before,
+.icon.no-text::before {
+  display: block;
+  text-indent: 0;
+  float: left;
 }
 
 .icon-bell:before {

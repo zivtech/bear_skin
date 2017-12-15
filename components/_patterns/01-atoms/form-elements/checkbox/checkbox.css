@@ -9,25 +9,25 @@
   width: 20px;
   height: 20px;
   z-index: 1;
-  border: 2px solid $c-ui-border;
-  border-radius: $ui-border-radius;
-  background: $c-ui-background;
+  /*border: 2px solid $ c-ui-border;*/
+  /*border-radius: $ ui-border-radius;*/
+  /*background: $ c-ui-background;*/
+}
 
-  i {
-    font-size: 22px;
-    position: absolute;
-    top: -4px;
-    left: -2px;
-    opacity: 0;
-    transition: opacity .2s ease-in-out;
-    color: $c-ui-active-form-element;
-  }
+.checkbox-wrapper i {
+  font-size: 22px;
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  /*color: $c-ui-active-form-element;*/
+}
 
-  .form-checkbox {
-    display: none;
+.checkbox-wrapper .form-checkbox {
+  display: none;
+}
 
-    &:checked + i {
-      opacity: 1;
-    }
-  }
+.checkbox-wrapper .form-checkbox:checked + i {
+  opacity: 1;
 }

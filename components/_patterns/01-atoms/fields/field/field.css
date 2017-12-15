@@ -1,26 +1,20 @@
-.field {
+.field--label-inline {
+  clear: both;
+}
 
-  &--label-inline {
-    clear: both;
+.field--label-inline .field__label {
+  float: left;
+  margin: 0 5px 0 0;
+}
 
-    .field {
+.field--label-inline .field__label::after {
+  content: ':';
+}
 
-      &__label {
-        float: left;
-        margin: 0 5px 0 0;
+.field--label-inline .field__item {
+  overflow: hidden;
+}
 
-        &::after {
-          content: ':';
-        }
-      }
-
-      &__item {
-        overflow: hidden;
-      }
-    }
-
-    p:first-child {
-      margin-top: 0;
-    }
-  }
+.field--label-inline p:first-child {
+  margin-top: 0;
 }

@@ -1,19 +1,19 @@
 .wrapper-breadcrumb {
-  border-top: 1px solid $c-ui-border;
+  /*border-top: 1px solid $c-ui-border;*/
 }
 
 .breadcrumb {
   padding: .5rem 0;
+}
 
-  &__item {
-    @include fontsize(14, all);
+.breadcrumb__item {
+    /*@include fontsize(14, all);*/
 
-    text-transform: uppercase;
-    display: inline;
-    margin-right: 5px;
-  }
+  text-transform: uppercase;
+  display: inline;
+  margin-right: 5px;
+}
 
-  &__link {
-    padding-right: 5px;
-  }
+.breadcrumb__link {
+  padding-right: 5px;
 }

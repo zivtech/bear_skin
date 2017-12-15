@@ -1,99 +1,96 @@
 table {
-  border: 1px solid $c-ui-border;
+  /*border: 1px solid $ c-ui-border;*/
   margin: 1rem 0;
   width: 100%;
+}
 
-  thead {
-    background: $c-ui-background;
+table thead {
+    /*background: $c-ui-background;*/
   }
 
-  tbody {
+tr {
+  /*border-bottom: 1px solid $ c-ui-border;*/
+}
 
-    tr {
-      border-bottom: 1px solid $c-ui-border;
+tr:last-child {
+  border: 0;
+}
 
-      &:last-child {
-        border: 0;
-      }
-    }
+tr:nth-child(odd) {
+  /*background: lighten($ c-ui-background, 2%);*/
+}
 
-    tr:nth-child(odd) {
-      background: lighten($c-ui-background,2%);
-    }
-  }
+ table .form-item {
+   margin: 0;
+ }
 
-  .form-item {
-    margin: 0;
+table .form-item label {
+  display: block;
+}
 
-    label {
-      display: block;
-    }
-  }
-
-  .js-form-type-radio label {
+ table .js-form-type-radio label {
     @include element-invisible;
   }
 
-  .checkbox-wrapper {
-    display: block;
-    width: auto;
-    height: auto;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
+ table .checkbox-wrapper {
+   display: block;
+   width: auto;
+   height: auto;
+   border: 0;
+   border-radius: 0;
+   background: transparent;
+ }
 
-    .form-checkbox {
-      display: block;
-    }
+table .form-checkbox {
+  display: block;
+}
 
-    .icon-check {
-      display: none;
-    }
-  }
+ table .icon-check {
+   display: none;
+ }
 
-  .radio-wrapper {
-    top: 3px;
-    display: inline-block;
-    position: relative;
-    width: 18px;
-    height: 18px;
-    border: 0;
-    border-radius: 0;
-    z-index: 1;
-    background: transparent;
+table .radio-wrapper {
+  top: 3px;
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 0;
+  z-index: 1;
+  background: transparent;
+}
 
-    i {
-      display: none;
-    }
+table .radio-wrapper i {
+  display: none;
+}
 
-    .form-radio {
-      display: block;
+table .form-radio {
+  display: block;
+}
 
-      &:checked + i {
-        opacity: 1;
-      }
-    }
-  }
+table .form-radio:checked + i {
+  opacity: 1;
+}
 
-  td,
-  th {
-    padding: .3rem .5rem;
-    text-align: left;
+td, th {
+  padding: .3rem .5rem;
+  text-align: left;
+}
 
-    a.tabledrag-handle .handle {
-      background: url('../images/move.svg') no-repeat left center;
-      background-size: 14px 14px;
-      display: inline-block;
-      margin-right: 14px;
-      width: 14px;
-    }
-  }
+td a.tabledrag-handle .handle,
+th a.tabledrag-handle .handle {
+  background: url('../images/move.svg') no-repeat left center;
+  background-size: 14px 14px;
+  display: inline-block;
+  margin-right: 14px;
+  width: 14px;
+}
 
-  td.description {
-    padding: .3rem .5rem;
-  }
+td.description {
+  padding: .3rem .5rem;
+}
 
-  ul {
-    padding-left: 15px;
-  }
+table  ul {
+  padding-left: 15px;
 }

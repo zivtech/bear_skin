@@ -1,24 +1,17 @@
 
-.button {
-  @include button($white, $grey, $black);
-
-  &.link {
-    border: 1px solid $c-ui-border;
-    background: $c-ui-background;
-    cursor: pointer;
-  }
+.button.link {
+  /*@include button($white, $grey, $black);*/
+  /*border: 1px solid $c-ui-border;*/
+  /*background: $c-ui-background;*/
+  cursor: pointer;
 }
 
-button {
-
-  &.link {
-    background: $c-ui-background;
-    border: 1px solid $c-ui-border;
-  }
+button.link {
+  /*background: $c-ui-background;*/
+  /*border: 1px solid $c-ui-border;*/
 }
 
 a.button {
-  @include link($white, none, $white, none);
-
+  /*@include link($white, none, $white, none);*/
   line-height: 1.3;
 }
