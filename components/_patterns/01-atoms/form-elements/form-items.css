@@ -1,17 +1,17 @@
 ::-webkit-input-placeholder {
-  @include placeholder;
+  /*@include placeholder;*/
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  @include placeholder;
+  /*@include placeholder;*/
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  @include placeholder;
+  /*@include placeholder;*/
 }
 
 :-ms-input-placeholder {
-  @include placeholder;
+  /*@include placeholder;*/
 }
 
 form {

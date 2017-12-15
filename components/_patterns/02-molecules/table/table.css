@@ -29,7 +29,7 @@ table .form-item label {
 }
 
  table .js-form-type-radio label {
-    @include element-invisible;
+    /*@include element-invisible;*/
   }
 
  table .checkbox-wrapper {

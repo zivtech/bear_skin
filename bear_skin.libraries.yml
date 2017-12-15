@@ -4,7 +4,7 @@ global-styles:
     theme:
       css/fonts.css:
         minified: true
-      css/bear_skin.css:
+      css/theme.css:
         minified: false
   dependencies:
     - bear_skin/flexboxgrid
