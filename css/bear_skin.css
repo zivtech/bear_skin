@@ -56,15 +56,1539 @@
 
 /*}*/
 
-/*@import '_patterns/00-utilities/all';*/
+/* vendor */
 
-/*!*Then import any modules*!*/
+/* utilities */
 
-/*!*@import '_patterns/0-modules/key-classes';*!*/
+/*//*/
 
-/*!*@import '_patterns/0-modules/value-classes';*!*/
+/*// BEAR SKIN COLORS*/
 
-/*!*Lastly, import everything else*!*/
+/*// Default colors that come packaged with Bear Skin. These are used in*/
+
+/*// boilerplate style rules. Feel free to delete or replace them.*/
+
+/*//*/
+
+/*$black:              hsla(0, 0%, 0%, 1);*/
+
+/*$grey:               hsla(0, 0%, 53%, 1);*/
+
+/*$wild-sand:          hsla(0, 0%, 96%, 1);*/
+
+/*$white:              hsla(0, 100%, 100%, 1);*/
+
+/*$bermuda-grey:       hsla(212, 26%, 56%, 1);*/
+
+/*$dark-bermuda-grey:  darken($bermuda-grey, 20%);*/
+
+/*$light-bermuda-grey: lighten($bermuda-grey, 20%);*/
+
+/*$emerald:            hsla(147, 52%, 51%, 1);*/
+
+/*$tangerine:          hsla(40, 100%, 44%, 1);*/
+
+/*$persian-red:        hsla(0, 64%, 51%, 1);*/
+
+/*//*/
+
+/*// COLOR PALETTE*/
+
+/*//*/
+
+/*// These are the colors you will use for design elements throughout the site.*/
+
+/*// You can set the keys to whatever you like. For example, keys like "1",*/
+
+/*// "blue", or "blue-1" will all work.*/
+
+/*//*/
+
+/*// Each key has sub-keys to reflect the variants of a color. The only sub-key*/
+
+/*// that is required is "base". You can add sub-keys for additional variants*/
+
+/*// of your colors.*/
+
+/*//*/
+
+/*// Access color palette values via c() function. See _functions.scss*/
+
+/*//*/
+
+/*// Examples:*/
+
+/*//    Access base color:*/
+
+/*//      color: c(1);*/
+
+/*//      color: c(blue);*/
+
+/*//      background: linear-gradient(45deg, c(1), c(blue));*/
+
+/*//*/
+
+/*//    Accessing variants:*/
+
+/*//      color: c(1, dark);*/
+
+/*//      color: c(blue, light);*/
+
+/*//      background: linear-gradient(45deg, c(1, light), c(blue, dark));*/
+
+/*//*/
+
+/*$c-palette: (*/
+
+/*// Example 1*/
+
+/*// primary: (*/
+
+/*//   base: $bermuda-grey,*/
+
+/*//   dark: $dark-bermuda-grey,*/
+
+/*//   light: $light-bermuda-grey*/
+
+/*// ),*/
+
+/*// Example 2*/
+
+/*// 2: (*/
+
+/*//   base: $emerald,*/
+
+/*//   dark: darken($emerald, 10%),*/
+
+/*//   light: lighten($emerald, 10%)*/
+
+/*// ),*/
+
+/*// Example 3*/
+
+/*// persian-red: (*/
+
+/*//   base: hsla(0, 64%, 51%, 1),*/
+
+/*//   dark: hsla(0, 64%, 35%, 1),*/
+
+/*//   transparent: hsla(0, 64%, 35%, .5),*/
+
+/*// ),*/
+
+/*// Your turn!*/
+
+/*// key: (*/
+
+/*//   base: ,*/
+
+/*//   dark: ,*/
+
+/*//   light: ,*/
+
+/*//   some-other-variant: ,*/
+
+/*// ),*/
+
+/*);*/
+
+/*//*/
+
+/*// MESSAGES*/
+
+/*// Set colors for Drupal messages.*/
+
+/*//*/
+
+/*$c-status: $emerald;*/
+
+/*$c-warning: $tangerine;*/
+
+/*$c-error: $persian-red;*/
+
+/*//*/
+
+/*// UI APPEARANCE*/
+
+/*// Set defaults for form items, buttons, etc.*/
+
+/*//*/
+
+/*$c-ui-active-form-element: $black;*/
+
+/*$c-ui-background: #F5F5F5;*/
+
+/*$c-ui-border: #DCDCDC;*/
+
+/*$c-ui-font: #808080;*/
+
+/*$c-ui-font-dark: #3F3F3F;*/
+
+/*$ui-button-padding: .7rem 1rem;*/
+
+/*$ui-border-radius: 4px;*/
+
+/*//*/
+
+/*// LAYOUT*/
+
+/*//*/
+
+/*$site-min-width: 25em;*/
+
+/*$site-max-width: 1200px;*/
+
+/*//*/
+
+/*// TYPOGRAPHY*/
+
+/*//*/
+
+/*$c-font-primary: $black;*/
+
+/*$c-link: $bermuda-grey;*/
+
+/*$c-link-hover: $dark-bermuda-grey;*/
+
+/*// Overrides Sassline defaults. See ../../vendor/scss/sassline/sass/sassline-base*/
+
+/*$breakpoints: (*/
+
+/*break-0: 0,     // 0px       Mobile first*/
+
+/*break-1: 640,   // 640px   ~ Small tablet up*/
+
+/*break-2: 800,   // 800px   ~ Large tablet up*/
+
+/*break-3: 1024,  // 1024px  ~ Desktop up*/
+
+/*break-4: 1600   // 1600px  ~ Large desktop up*/
+
+/*);*/
+
+/*$rootsizes: (*/
+
+/*rootsize-0: 12,   // 24px line-height body text*/
+
+/*rootsize-1: 14,   // 28px line-height body text*/
+
+/*rootsize-2: 15,   // 30px line-height body text*/
+
+/*rootsize-3: 17,   // 34px line-height body text*/
+
+/*rootsize-4: 19    // 38px line-height body text*/
+
+/*);*/
+
+/*$measures: (*/
+
+/*measure-0: 500,  // 500px wide*/
+
+/*measure-1: 550,  // 550px wide*/
+
+/*measure-2: 600,  // 600px wide*/
+
+/*measure-3: 680,  // 680px wide*/
+
+/*measure-4: 750   // 750px wide*/
+
+/*);*/
+
+/*$maxwidths: (*/
+
+/*width-0: 500,  // 500px wide*/
+
+/*width-1: 600,  // 600px wide*/
+
+/*width-2: 800,  // 800px wide*/
+
+/*width-3: 1100, // 110px wide*/
+
+/*width-4: 1300  // 1300px wide*/
+
+/*);*/
+
+/*$gutterwidths: (*/
+
+/*small: 1rem,*/
+
+/*medium: 2rem,*/
+
+/*large: 4rem*/
+
+/*);*/
+
+/*$bodytype: (*/
+
+/*font-family: 'Noto Serif, serif',*/
+
+/*regular: 400,*/
+
+/*bold: 700,*/
+
+/*italic: italic,*/
+
+/*cap-height: 0.66*/
+
+/*);*/
+
+/*$headingtype: (*/
+
+/*font-family: 'Montserrat, sans-serif',*/
+
+/*regular: 400,*/
+
+/*bold: 300,*/
+
+/*cap-height: 0.66*/
+
+/*);*/
+
+/*$monospacetype: (*/
+
+/*font-family: 'Menlo, monospace',*/
+
+/*regular: 400,*/
+
+/*cap-height: 0.68*/
+
+/*);*/
+
+/*$headingColour: $c-font-primary;*/
+
+/*$bodyColour: $c-font-primary;*/
+
+/*$linkColour: $c-link;*/
+
+/*$hoverColour: $c-link-hover;*/
+
+/*// $captionColour: ;*/
+
+/*$white: $white;*/
+
+/*// $backgroundColour: ;*/
+
+/*// $codeBackgroundColour: ;*/
+
+/*@mixin element-invisible {*/
+
+/*position: absolute;*/
+
+/*height: 0;*/
+
+/*width: 0;*/
+
+/*overflow: hidden;*/
+
+/*clip: rect(1px, 1px, 1px, 1px);*/
+
+/*}*/
+
+/*@mixin element-invisible-off {*/
+
+/*position: relative;*/
+
+/*height: auto;*/
+
+/*width: auto;*/
+
+/*overflow: inherit;*/
+
+/*clip: none;*/
+
+/*}*/
+
+/*@mixin link($color, $text-decoration, $hover-color, $hover-text-decoration) {*/
+
+/*color: $color;*/
+
+/*text-decoration: $text-decoration;*/
+
+/*&:visited {*/
+
+/*color: $color;*/
+
+/*&:hover,*/
+
+/*&:focus {*/
+
+/*color: $hover-color;*/
+
+/*text-decoration: $hover-text-decoration;*/
+
+/*}*/
+
+/*}*/
+
+/*&:hover,*/
+
+/*&:focus {*/
+
+/*color: $hover-color;*/
+
+/*text-decoration: $hover-text-decoration;*/
+
+/*}*/
+
+/*}*/
+
+/*@function hex($color, $percentage) {*/
+
+/*@if $percentage == .1 {*/
+
+/*@return lighten($color, 45%);*/
+
+/*}*/
+
+/*@if $percentage == .2 {*/
+
+/*@return lighten($color, 40%);*/
+
+/*}*/
+
+/*@if $percentage == .3 {*/
+
+/*@return lighten($color, 35%);*/
+
+/*}*/
+
+/*@if $percentage == .4 {*/
+
+/*@return lighten($color, 30%);*/
+
+/*}*/
+
+/*@if $percentage == .5 {*/
+
+/*@return lighten($color, 25%);*/
+
+/*}*/
+
+/*@if $percentage == .6 {*/
+
+/*@return lighten($color, 20%);*/
+
+/*}*/
+
+/*@if $percentage == .7 {*/
+
+/*@return lighten($color, 15%);*/
+
+/*}*/
+
+/*@if $percentage == .8 {*/
+
+/*@return lighten($color, 10%);*/
+
+/*}*/
+
+/*@if $percentage == .9 {*/
+
+/*@return lighten($color, 5%);*/
+
+/*}*/
+
+/*}*/
+
+/*// Alpha Color*/
+
+/*// Include in an element to create a transparent background or color with a hex*/
+
+/*// value fallback for older browsers.*/
+
+/*@mixin alpha-color($type, $color, $percentage) {*/
+
+/*@if $type == color {*/
+
+/*color: rgba($color, $percentage);*/
+
+/*}*/
+
+/*@if $type == background {*/
+
+/*background-color: rgba($color, $percentage);*/
+
+/*}*/
+
+/*}*/
+
+/*@mixin button($color, $background-color, $background-hover) {*/
+
+/*@include sans;*/
+
+/*@include fontsize(13, all);*/
+
+/*position: relative;*/
+
+/*display: inline-block;*/
+
+/*outline: none;*/
+
+/*text-decoration: none;*/
+
+/*cursor: pointer;*/
+
+/*border-style: none;*/
+
+/*transition: background .2s ease-in-out;*/
+
+/*text-transform: uppercase;*/
+
+/*background: $background-color;*/
+
+/*color: $white;*/
+
+/*padding: $ui-button-padding;*/
+
+/*border-radius: $ui-border-radius;*/
+
+/*&:hover,*/
+
+/*&:focus {*/
+
+/*background: $background-hover;*/
+
+/*text-decoration: none;*/
+
+/*}*/
+
+/*}*/
+
+/*@mixin placeholder {*/
+
+/*font-size: 12px;*/
+
+/*font-weight: 400;*/
+
+/*}*/
+
+/*@mixin serif {*/
+
+/*font-family: unquote(map-get($bodytype, font-family));*/
+
+/*}*/
+
+/*@mixin sans {*/
+
+/*font-family: unquote(map-get($headingtype, font-family));*/
+
+/*}*/
+
+/*// Generates classes based on map keys.*/
+
+/*//*/
+
+/*// @param $map*/
+
+/*//   A map full of maps. See $c-palette in _variables.scss.*/
+
+/*// @param $variants*/
+
+/*//   A Sass list of variants classes should be generated for.*/
+
+/*// @param $prefix*/
+
+/*//   A string that will be appended to the front of the generated class names.*/
+
+/*// @param $property*/
+
+/*//   The CSS property the generated classes will set. A string.*/
+
+/*//*/
+
+/*// Classes will only be generated for each color if the corresponding variant is*/
+
+/*// found. For example, if my first $c-palette color only has values for "base"*/
+
+/*// and "dark", no "light" class will be generated.*/
+
+/*//*/
+
+/*@mixin generate-key-classes($map, $variants, $prefix, $property) {*/
+
+/*@each $key, $value in $map {*/
+
+/*@each $variant in $variants {*/
+
+/*$prop-value: map-get($value, $variant);*/
+
+/*@if $variant == 'base' {*/
+
+/*.#{$prefix}-#{$key} {*/
+
+/*#{$property}: $prop-value;*/
+
+/*}*/
+
+/*}*/
+
+/*@else {*/
+
+/*@if map-has-key($value, $variant) {*/
+
+/*.#{$prefix}-#{$key}--#{$variant} {*/
+
+/*#{$property}: $prop-value;*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*// Generates classes based on map values.*/
+
+/*//*/
+
+/*// @param $map*/
+
+/*//   A map full of maps. See $c-palette in _variables.scss.*/
+
+/*// @param $variants*/
+
+/*//   A Sass list of variants classes should be generated for.*/
+
+/*// @param $prefix*/
+
+/*//   A string that will be appended to the front of the generated class names.*/
+
+/*// @param $property*/
+
+/*//   The CSS property the generated classes will set. A string.*/
+
+/*//*/
+
+/*// Classes will only be generated for each color if the corresponding variant is*/
+
+/*// found. For example, if my first $c-palette color only has values for "base"*/
+
+/*// and "dark", no "light" class will be generated.*/
+
+/*//*/
+
+/*@mixin generate-value-classes($map, $variants, $prefix, $property) {*/
+
+/*@each $key, $value in $map {*/
+
+/*@each $variant in $variants {*/
+
+/*// Strip any # from hex codes for use in class names.*/
+
+/*$base-value: map-get($value, 'base');*/
+
+/*$clean-value: str-replace(#{$base-value}, '#', '');*/
+
+/*$prop-value: map-get($value, $variant);*/
+
+/*@if $variant == 'base' {*/
+
+/*.#{$prefix}-#{$clean-value} {*/
+
+/*#{$property}: $prop-value;*/
+
+/*}*/
+
+/*}*/
+
+/*@else {*/
+
+/*@if map-has-key($value, $variant) {*/
+
+/*.#{$prefix}-#{$clean-value}--#{$variant} {*/
+
+/*#{$property}: $prop-value;*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+.skip-link {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.skip-link li {
+  list-style-type: none;
+}
+
+/*//*/
+
+/*// Display utilities*/
+
+/*//*/
+
+/*.u-hidden,*/
+
+/*.visually-hidden,*/
+
+/*.element-invisible {*/
+
+/*@include element-invisible;*/
+
+/*}*/
+
+/*.u-block {*/
+
+/*display: block;*/
+
+/*}*/
+
+/*.u-inline-block {*/
+
+/*display: inline-block;*/
+
+/*}*/
+
+/*.u-inline {*/
+
+/*display: inline;*/
+
+/*}*/
+
+/*// Drupal utilities*/
+
+/*.align-center {*/
+
+/*text-align: center;*/
+
+/*}*/
+
+/*.align-left {*/
+
+/*text-align: left;*/
+
+/*}*/
+
+/*.align-right {*/
+
+/*text-align: right;*/
+
+/*}*/
+
+/*//*/
+
+/*// Images utilities*/
+
+/*//*/
+
+/*img.align-center {*/
+
+/*margin: 0 auto;*/
+
+/*width: 100%;*/
+
+/*max-width: $site-max-width;*/
+
+/*}*/
+
+/*.u-img-centered {*/
+
+/*img {*/
+
+/*margin: 0 auto;*/
+
+/*}*/
+
+/*}*/
+
+/*.desaturate {*/
+
+/*img {*/
+
+/*filter: grayscale(100%);*/
+
+/*transition: filter .3s ease-in-out;*/
+
+/*&:hover,*/
+
+/*&:focus {*/
+
+/*filter: none;*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*// Typography utilities*/
+
+/*.sans {*/
+
+/*@include sans;*/
+
+/*}*/
+
+/*.serif {*/
+
+/*@include serif;*/
+
+/*}*/
+
+/*.text-italic {*/
+
+/*font-style: italic;*/
+
+/*}*/
+
+/*.text-centered {*/
+
+/*text-align: center;*/
+
+/*}*/
+
+/*.text-right {*/
+
+/*text-align: right;*/
+
+/*}*/
+
+/*.text-left {*/
+
+/*text-align: left;*/
+
+/*}*/
+
+/*.text-highlighted {*/
+
+/*&::selection {*/
+
+/*background: $light-bermuda-grey;*/
+
+/*}*/
+
+/*}*/
+
+/*.line-height-reset {*/
+
+/*line-height: 1 !important;*/
+
+/*}*/
+
+/*.no-decoration {*/
+
+/*text-decoration: none;*/
+
+/*&:hover,*/
+
+/*&:focus {*/
+
+/*text-decoration: none;*/
+
+/*}*/
+
+/*}*/
+
+/*.underline {*/
+
+/*text-decoration: underline;*/
+
+/*}*/
+
+/*// Layout utilities*/
+
+/*.clearfix {*/
+
+/*clear: both;*/
+
+/*}*/
+
+/*.expand-full-width {*/
+
+/*width: 100vw !important;*/
+
+/*margin-left: calc(-50vw + 50%) !important;*/
+
+/*}*/
+
+/*.site-max-width {*/
+
+/*max-width: $site-max-width;*/
+
+/*margin: 0 auto;*/
+
+/*}*/
+
+/*//*/
+
+/*// Padding*/
+
+/*//*/
+
+/*//Padding on all sides (equal)*/
+
+/*.padd-all-05 {*/
+
+/*padding: .5rem;*/
+
+/*}*/
+
+/*.padd-all-1 {*/
+
+/*padding: 1rem;*/
+
+/*}*/
+
+/*.padd-all-2 {*/
+
+/*padding: 2rem;*/
+
+/*}*/
+
+/*.padd-all-3 {*/
+
+/*padding: 3rem;*/
+
+/*}*/
+
+/*.padd-all-4 {*/
+
+/*padding: 4rem;*/
+
+/*}*/
+
+/*// Padding-top*/
+
+/*.padd-top-05 {*/
+
+/*padding-top: .5rem;*/
+
+/*}*/
+
+/*.padd-top-1 {*/
+
+/*padding-top: 1rem;*/
+
+/*}*/
+
+/*.padd-top-2 {*/
+
+/*padding-top: 2rem;*/
+
+/*}*/
+
+/*.padd-top-3 {*/
+
+/*padding-top: 3rem;*/
+
+/*}*/
+
+/*.padd-top-4 {*/
+
+/*padding-top: 4rem;*/
+
+/*}*/
+
+/*// Padding-bottom*/
+
+/*.padd-bottom-05 {*/
+
+/*padding-bottom: .5rem;*/
+
+/*}*/
+
+/*.padd-bottom-1 {*/
+
+/*padding-bottom: 1rem;*/
+
+/*}*/
+
+/*.padd-bottom-2 {*/
+
+/*padding-bottom: 2rem;*/
+
+/*}*/
+
+/*.padd-bottom-3 {*/
+
+/*padding-bottom: 3rem;*/
+
+/*}*/
+
+/*.padd-bottom-4 {*/
+
+/*padding-bottom: 4rem;*/
+
+/*}*/
+
+/*// Padding-left*/
+
+/*.padd-left-05 {*/
+
+/*padding-left: .5rem;*/
+
+/*}*/
+
+/*.padd-left-1 {*/
+
+/*padding-left: 1rem;*/
+
+/*}*/
+
+/*.padd-left-2 {*/
+
+/*padding-left: 2rem;*/
+
+/*}*/
+
+/*.padd-left-3 {*/
+
+/*padding-left: 3rem;*/
+
+/*}*/
+
+/*.padd-left-4 {*/
+
+/*padding-left: 4rem;*/
+
+/*}*/
+
+/*// Padding-right*/
+
+/*.padd-right-05 {*/
+
+/*padding-right: .5rem;*/
+
+/*}*/
+
+/*.padd-right-1 {*/
+
+/*padding-right: 1rem;*/
+
+/*}*/
+
+/*.padd-right-2 {*/
+
+/*padding-right: 2rem;*/
+
+/*}*/
+
+/*.padd-right-3 {*/
+
+/*padding-right: 3rem;*/
+
+/*}*/
+
+/*.padd-right-4 {*/
+
+/*padding-right: 4rem;*/
+
+/*}*/
+
+/*// No Padding*/
+
+/*.np {*/
+
+/*padding: 0 !important;*/
+
+/*}*/
+
+/*.np-top {*/
+
+/*padding-top: 0 !important;*/
+
+/*}*/
+
+/*.np-bottom {*/
+
+/*padding-bottom: 0 !important;*/
+
+/*}*/
+
+/*.np-left {*/
+
+/*padding-left: 0 !important;*/
+
+/*}*/
+
+/*.np-right {*/
+
+/*padding-right: 0 !important;*/
+
+/*}*/
+
+/*//*/
+
+/*// Margin*/
+
+/*//*/
+
+/*// Margin on all sides (equal)*/
+
+/*.marg-all-05 {*/
+
+/*margin: .5rem;*/
+
+/*}*/
+
+/*.marg-all-1 {*/
+
+/*margin: 1rem;*/
+
+/*}*/
+
+/*.marg-all-2 {*/
+
+/*margin: 2rem;*/
+
+/*}*/
+
+/*.marg-all-3 {*/
+
+/*margin: 3rem;*/
+
+/*}*/
+
+/*.marg-all-4 {*/
+
+/*margin: 4rem;*/
+
+/*}*/
+
+/*// Margin-top*/
+
+/*.marg-top-05 {*/
+
+/*margin-top: .5rem;*/
+
+/*}*/
+
+/*.marg-top-1 {*/
+
+/*margin-top: 1rem;*/
+
+/*}*/
+
+/*.marg-top-2 {*/
+
+/*margin-top: 2rem;*/
+
+/*}*/
+
+/*.marg-top-3 {*/
+
+/*margin-top: 3rem;*/
+
+/*}*/
+
+/*.marg-top-4 {*/
+
+/*margin-top: 4rem;*/
+
+/*}*/
+
+/*// Margin-bottom*/
+
+/*.marg-bottom-05 {*/
+
+/*margin-bottom: .5rem;*/
+
+/*}*/
+
+/*.marg-bottom-1 {*/
+
+/*margin-bottom: 1rem;*/
+
+/*}*/
+
+/*.marg-bottom-2 {*/
+
+/*margin-bottom: 2rem;*/
+
+/*}*/
+
+/*.marg-bottom-3 {*/
+
+/*margin-bottom: 3rem;*/
+
+/*}*/
+
+/*.marg-bottom-4 {*/
+
+/*margin-bottom: 4rem;*/
+
+/*}*/
+
+/*// Margin-left*/
+
+/*.marg-left-05 {*/
+
+/*margin-left: .5rem;*/
+
+/*}*/
+
+/*.marg-left-1 {*/
+
+/*margin-left: 1rem;*/
+
+/*}*/
+
+/*.marg-left-2 {*/
+
+/*margin-left: 2rem;*/
+
+/*}*/
+
+/*.marg-left-3 {*/
+
+/*margin-left: 3rem;*/
+
+/*}*/
+
+/*.marg-left-4 {*/
+
+/*margin-left: 4rem;*/
+
+/*}*/
+
+/*// Margin-right*/
+
+/*.marg-right-05 {*/
+
+/*margin-right: .5rem;*/
+
+/*}*/
+
+/*.marg-right-1 {*/
+
+/*margin-right: 1rem;*/
+
+/*}*/
+
+/*.marg-right-2 {*/
+
+/*margin-right: 2rem;*/
+
+/*}*/
+
+/*.marg-right-3 {*/
+
+/*margin-right: 3rem;*/
+
+/*}*/
+
+/*.marg-right-4 {*/
+
+/*margin-right: 4rem;*/
+
+/*}*/
+
+/*// No Margin*/
+
+/*.nm {*/
+
+/*margin: 0 !important;*/
+
+/*}*/
+
+/*.nm-top {*/
+
+/*margin-top: 0 !important;*/
+
+/*}*/
+
+/*.nm-bottom {*/
+
+/*margin-bottom: 0 !important;*/
+
+/*}*/
+
+/*.nm-left {*/
+
+/*margin-left: 0 !important;*/
+
+/*}*/
+
+/*.nm-right {*/
+
+/*margin-right: 0 !important;*/
+
+/*}*/
+
+/*// Various*/
+
+/*.no-list {*/
+
+/*list-style-type: none;*/
+
+/*li::before {*/
+
+/*display: none;*/
+
+/*}*/
+
+/*}*/
+
+/*mostly used for details/summary and accordions*/
+
+@-webkit-keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.25em);
+            transform: translateY(-1.25em);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.25em);
+            transform: translateY(-1.25em);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*ajax spinner*/
+
+@-webkit-keyframes spin {
+
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*Wrappers*/
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper--inner {
+  padding: 0 1rem;
+  margin: 0 auto;
+  /*max-width: $site-max-width;*/
+  width: 100%;
+}
+
+.wrapper-main {
+  padding: 2rem 0;
+}
+
+img {
+  display: block;
+}
+
+/*Left Sidebar*/
+
+/*.layout-sidebar-first {*/
+
+/*.wrapper-main__inner {*/
+
+/*@include breakpoint(break-2) {*/
+
+/*display: flex;*/
+
+/*}*/
+
+/*}*/
+
+/*.column.main {*/
+
+/*@include breakpoint(break-2) {*/
+
+/*padding: 0 0 0 2rem;*/
+
+/*flex-basis: 75%;*/
+
+/*order: 2;*/
+
+/*}*/
+
+/*}*/
+
+/*.column.sidebar {*/
+
+/*@include breakpoint(break-2) {*/
+
+/*flex-basis: 25%;*/
+
+/*order: 1;*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*!*Right Sidebar*!*/
+
+/*.layout-sidebar-second {*/
+
+/*@extend .layout-sidebar-first;*/
+
+/*.column.main {*/
+
+/*@include breakpoint(break-2) {*/
+
+/*padding: 0 2rem 0 0;*/
+
+/*order: 1;*/
+
+/*}*/
+
+/*}*/
+
+/*.column.sidebar {*/
+
+/*@include breakpoint(break-2) {*/
+
+/*order: 2;*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*!*Two Sidebars*!*/
+
+/*.layout-two-sidebars {*/
+
+/*.wrapper-main__inner {*/
+
+/*@include breakpoint(break-2) {*/
+
+/*display: flex;*/
+
+/*}*/
+
+/*}*/
+
+/*.column.main {*/
+
+/*@include breakpoint(break-2) {*/
+
+/*padding: 0 2rem;*/
+
+/*flex-basis: 75%;*/
+
+/*order: 2;*/
+
+/*}*/
+
+/*}*/
+
+/*.column.sidebar {*/
+
+/*@include breakpoint(break-2) {*/
+
+/*flex-basis: 25%;*/
+
+/*&.sidebar--first {*/
+
+/*order: 1;*/
+
+/*}*/
+
+/*&.sidebar--second {*/
+
+/*order: 3;*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*}*/
+
+/*Then import any modules*/
+
+/*@import '_patterns/0-modules/key-classes';*/
+
+/*@import '_patterns/0-modules/value-classes';*/
+
+/*Lastly, import everything else*/
 
 /*@import '_patterns/01-atoms!**!*';*/
 

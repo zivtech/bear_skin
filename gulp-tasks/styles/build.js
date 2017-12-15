@@ -3,7 +3,7 @@
 var sourcemaps = require('gulp-sourcemaps');
 var flexibility = require('postcss-flexibility');
 var postcss = require('gulp-postcss');
-var cssnext = require('cssnext');
+var cssnext = require('postcss-cssnext');
 var cached = require('gulp-cached');
 var mqpacker = require('css-mqpacker');
 var plumber = require('gulp-plumber');
@@ -35,9 +35,8 @@ module.exports = function (gulp, options) {
       }
     }))
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})))
-    //.on('error', sass.logError)
-    .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
     .pipe(postcss(processors))
+    .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
     .pipe(flatten())
     .pipe(gulp.dest(options.css.dest))
     .pipe(gulpif(options.browserSync.patterns.enabled, browserSync.get('patterns').stream({match: '**/*.css'})))
