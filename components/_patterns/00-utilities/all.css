@@ -1,9 +1,0 @@
-/* vendor */
-
-/* utilities */
-@import 'variables';
-@import 'mixins';
-@import 'utility';
-@import 'reusable-classes';
-@import 'animations';
-@import 'layout';

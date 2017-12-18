@@ -1,5 +1,11 @@
-q {
-  /*@include fontsize(20, 0);*/
+@import "../../00-utilities/variables.css";
+
+body, .sans {
+  @apply --bodytype;
+}
+
+h1, h2, h3, h4, h5, .serif {
+  @apply --headingtype;
 }
 
 q::after {

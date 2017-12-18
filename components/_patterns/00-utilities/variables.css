@@ -154,12 +154,6 @@
   /*cap-height: 0.66*/
 /*);*/
 
-/*$monospacetype: (*/
-  /*font-family: 'Menlo, monospace',*/
-  /*regular: 400,*/
-  /*cap-height: 0.68*/
-/*);*/
-
 /*$headingColour: $c-font-primary;*/
 /*$bodyColour: $c-font-primary;*/
 /*$linkColour: $c-link;*/
@@ -169,3 +163,43 @@
 
 /*// $backgroundColour: ;*/
 /*// $codeBackgroundColour: ;*/
+
+:root {
+  --primary-color: blue;
+  --secondary-color: green;
+
+  --bg-primary: {
+    background-color: var(--primary-color);
+  };
+
+  --serif: {
+    font-family: 'Noto Serif', serif;
+  };
+
+  --sans: {
+    font-family: 'Montserrat', sans-serif;
+  };
+
+  --bodytype: {
+    @apply --sans;
+  };
+
+  --headingtype: {
+    @apply --serif;
+  }
+}
+
+
+
+/*$headingtype: (*/
+/*font-family: 'Montserrat, sans-serif',*/
+/*regular: 400,*/
+/*bold: 300,*/
+/*cap-height: 0.66*/
+/*);*/
+
+/*$monospacetype: (*/
+/*font-family: 'Menlo, monospace',*/
+/*regular: 400,*/
+/*cap-height: 0.68*/
+/*);*/

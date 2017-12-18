@@ -6,6 +6,7 @@ var postcss = require('gulp-postcss');
 var corepostcss = require('postcss');
 var cssnext = require('postcss-cssnext');
 var cached = require('gulp-cached');
+var atImport = require("postcss-import");
 var concatCss = require('gulp-concat-css');
 var mqpacker = require('css-mqpacker');
 var plumber = require('gulp-plumber');
@@ -36,7 +37,7 @@ var dataloop = function(css) {
 module.exports = function (gulp, options) {
 
   var processors = [
-      require('postcss-easy-import'),
+      require('postcss-import'),
       cssnext({
         'browsers': options.css.browsers,
         'compress': true
@@ -62,8 +63,8 @@ module.exports = function (gulp, options) {
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})))
     .pipe(postcss(processors))
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
-      .pipe(concatCss('theme.css'))
-      .pipe(postcss(postprocessors))
+    .pipe(concatCss('theme.css'))
+    .pipe(postcss(postprocessors))
     .pipe(gulp.dest(options.css.dest))
     .pipe(gulpif(options.browserSync.patterns.enabled, browserSync.get('patterns').stream({match: '**/*.css'})))
     .pipe(gulpif(options.browserSync.site.enabled, browserSync.get('site').stream({match: '**/*.css'})));
