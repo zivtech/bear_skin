@@ -14,14 +14,21 @@ var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
 
 var categories = require('../../color-scheme.json');
+
 var dataloop = function(css) {
-  for ( var category in categories.colorList ) {
+  var rule ='';
+  for (var category in categories.colorList) {
     var colorSet = categories.colorList[category];
-    var borderTop = colorSet[0];
-    var borderBottom = colorSet[1];
-    var rule = corepostcss.rule({ selector: '.cat-' + category });
-    rule.append({ prop: 'border-top', value: '1px solid ' + borderTop});
-    rule.append({ prop: 'border-bottom', value: '1px solid ' + borderBottom + ";"});
+    var color = colorSet[0];
+    rule = corepostcss.rule({ selector: '.' + category });
+    rule.append({ prop: 'color', value: color});
+    css.append(rule);
+  }
+  for (var category in categories.bgList) {
+    var bgSet = categories.bgList[category];
+    var bgColor = bgSet[0];
+    rule = corepostcss.rule({ selector: '.' + category });
+    rule.append({ prop: 'background-color', value: bgColor});
     css.append(rule);
   }
 };
@@ -34,9 +41,12 @@ module.exports = function (gulp, options) {
         'browsers': options.css.browsers,
         'compress': true
       }),
-      dataloop,
       mqpacker({sort: true}),
       flexibility()
+  ];
+
+  var postprocessors = [
+    dataloop
   ];
 
   return gulp.src(options.css.src)
@@ -53,6 +63,7 @@ module.exports = function (gulp, options) {
     .pipe(postcss(processors))
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
       .pipe(concatCss('theme.css'))
+      .pipe(postcss(postprocessors))
     .pipe(gulp.dest(options.css.dest))
     .pipe(gulpif(options.browserSync.patterns.enabled, browserSync.get('patterns').stream({match: '**/*.css'})))
     .pipe(gulpif(options.browserSync.site.enabled, browserSync.get('site').stream({match: '**/*.css'})));
