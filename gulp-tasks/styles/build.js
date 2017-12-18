@@ -3,6 +3,7 @@
 var sourcemaps = require('gulp-sourcemaps');
 var flexibility = require('postcss-flexibility');
 var postcss = require('gulp-postcss');
+var corepostcss = require('postcss');
 var cssnext = require('postcss-cssnext');
 var cached = require('gulp-cached');
 var concatCss = require('gulp-concat-css');
@@ -12,6 +13,19 @@ var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
 
+var categories = require('../../color-scheme.json');
+var dataloop = function(css) {
+  for ( var category in categories.colorList ) {
+    var colorSet = categories.colorList[category];
+    var borderTop = colorSet[0];
+    var borderBottom = colorSet[1];
+    var rule = corepostcss.rule({ selector: '.cat-' + category });
+    rule.append({ prop: 'border-top', value: '1px solid ' + borderTop});
+    rule.append({ prop: 'border-bottom', value: '1px solid ' + borderBottom + ";"});
+    css.append(rule);
+  }
+};
+
 module.exports = function (gulp, options) {
 
   var processors = [
@@ -20,6 +34,7 @@ module.exports = function (gulp, options) {
         'browsers': options.css.browsers,
         'compress': true
       }),
+      dataloop,
       mqpacker({sort: true}),
       flexibility()
   ];
