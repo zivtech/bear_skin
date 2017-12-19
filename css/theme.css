@@ -2761,7 +2761,7 @@ img {
 /*@import "../../00-utilities/variables.css";*/
 
 .btn {
-  background: #2196F3;
+  background: blue;
   color: white;
   text-transform: uppercase;
 }
@@ -4373,16 +4373,16 @@ code {
   border: none !important;
 }
 
-.c-primary {
-  color: #000000;
+.cPrimary {
+  color: blue;
 }
 
-.c-secondary {
-  color: #000011;
+.cSecondary {
+  color: green;
 }
 
-.c-tertiary {
-  color: #000022;
+.cTertiary {
+  color: black;
 }
 
 .bg-primary {

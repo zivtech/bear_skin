@@ -1,0 +1,16 @@
+{
+  "colorList": {
+    "cPrimary"  : ["blue"],
+    "cSecondary"  : ["green"],
+    "cTertiary"  : ["black"]
+  },
+  "bgList": {
+    "bg-primary"  : ["#000000"],
+    "bg-secondary"  : ["#000011"],
+    "bg-tertiary"  : ["#000022"]
+  },
+  "fontList": {
+    "fSerif": "'Noto Serif', serif",
+    "fSans": "'Montserrat', sans-serif"
+  }
+}

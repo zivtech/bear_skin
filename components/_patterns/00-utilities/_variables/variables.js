@@ -1,6 +1,9 @@
+var styleVariables = require('../../../../theme-settings.json');
+
 module.exports = {
-  "--c-primary": "#2196F3",
-  "--c-secondary": "#E91E63",
-  "--serif": "'Noto Serif', serif",
-  "--sans": "'Montserrat', sans-serif"
+  "--c-primary": styleVariables.colorList.cPrimary,
+  "--c-secondary": styleVariables.colorList.cSecondary,
+  "--c-tertiary": styleVariables.colorList.cTertiary,
+  "--sans": styleVariables.fontList.fSans,
+  "--serif": styleVariables.fontList.fSerif
 };
