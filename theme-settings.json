@@ -1,16 +1,19 @@
 {
   "colorList": {
-    "cPrimary"  : ["blue"],
-    "cSecondary"  : ["green"],
-    "cTertiary"  : ["black"]
+    "c-primary"  : ["blue"],
+    "c-secondary"  : ["green"],
+    "c-tertiary"  : ["black"]
   },
   "bgList": {
     "bg-primary"  : ["#000000"],
     "bg-secondary"  : ["#000011"],
     "bg-tertiary"  : ["#000022"]
   },
+  "layout": {
+    "site-max-width": ["1024px"]
+  },
   "fontList": {
-    "fSerif": "'Noto Serif', serif",
-    "fSans": "'Montserrat', sans-serif"
+    "f-serif": "'Noto Serif', serif",
+    "f-sans": "'Montserrat', sans-serif"
   }
 }

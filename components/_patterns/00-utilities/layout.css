@@ -1,22 +1,13 @@
 /*Wrappers*/
 
 body {
-  overflow-x: hidden;
+  margin: 0;
 }
 
-.wrapper--inner {
-  padding: 0 1rem;
-  margin: 0 auto;
-  /*max-width: $site-max-width;*/
-  width: 100%;
-}
-
-.wrapper-main {
-  padding: 2rem 0;
-}
-
-img {
-  display: block;
+.container {
+  max-width: var(--site-max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Left Sidebar*/

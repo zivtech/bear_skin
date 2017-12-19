@@ -1,7 +1,3 @@
-/*@import "../../00-utilities/variables.css";*/
-
-.btn {
-  background: var(--c-primary);
-  color: white;
-  text-transform: uppercase;
+.caps {
+  letter-spacing: .1em;
 }

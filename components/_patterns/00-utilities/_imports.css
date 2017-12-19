@@ -1,2 +1,11 @@
-@import 'basscss';
 @import 'basscss-btn';
+@import 'basscss-btn-primary';
+@import 'basscss-grid';
+@import 'basscss';
+
+/*@import '../../bear_skin.css';*/
+
+:root {
+  --button-color: black;
+  --button-background-color: #ddd;
+}
