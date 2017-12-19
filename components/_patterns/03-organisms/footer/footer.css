@@ -1,17 +1,3 @@
-.wrapper-footer {
-  /*@include fontsize(16, all);*/
-
-  padding: 1rem 0;
-  /*background: $ c-ui-background;*/
-}
-
-.wrapper-footer .menu__link {
-  /*@include link($black, none, $black, underline);*/
-  /*@include fontsize(14, all);*/
-
-  text-transform: uppercase;
-}
-
 .sticky-footer {
   display: flex;
   min-height: 100vh;

@@ -1,9 +1,3 @@
-{#
-/**
- * @file
- * Form - Input.
- */
-#}
-{{pl_open_form_item}}
+{% set attributes= attributes.addClass('field') %}
+
 <input{{ attributes }} />{{ children }}
-{{pl_close_form_item}}
