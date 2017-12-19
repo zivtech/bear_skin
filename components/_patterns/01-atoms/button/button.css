@@ -1,8 +1,7 @@
-@import "../../00-utilities/variables.css";
+/*@import "../../00-utilities/variables.css";*/
 
 .btn {
-  @apply --bg-primary;
-
+  background: var(--c-primary);
   color: white;
   text-transform: uppercase;
 }

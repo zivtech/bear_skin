@@ -164,30 +164,7 @@
 /*// $backgroundColour: ;*/
 /*// $codeBackgroundColour: ;*/
 
-:root {
-  --primary-color: blue;
-  --secondary-color: green;
 
-  --bg-primary: {
-    background-color: var(--primary-color);
-  };
-
-  --serif: {
-    font-family: 'Noto Serif', serif;
-  };
-
-  --sans: {
-    font-family: 'Montserrat', sans-serif;
-  };
-
-  --bodytype: {
-    @apply --sans;
-  };
-
-  --headingtype: {
-    @apply --serif;
-  }
-}
 
 
 

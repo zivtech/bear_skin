@@ -1,11 +1,9 @@
-@import "../../00-utilities/variables.css";
-
 body, .sans {
-  @apply --bodytype;
+  font-family: var(--sans);
 }
 
 h1, h2, h3, h4, h5, .serif {
-  @apply --headingtype;
+  font-family: var(--serif);
 }
 
 q::after {

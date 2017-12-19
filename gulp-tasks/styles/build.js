@@ -3,10 +3,9 @@
 var sourcemaps = require('gulp-sourcemaps');
 var flexibility = require('postcss-flexibility');
 var postcss = require('gulp-postcss');
-var corepostcss = require('postcss');
 var cssnext = require('postcss-cssnext');
+var corepostcss = require('postcss');
 var cached = require('gulp-cached');
-var atImport = require("postcss-import");
 var concatCss = require('gulp-concat-css');
 var mqpacker = require('css-mqpacker');
 var plumber = require('gulp-plumber');
@@ -15,6 +14,8 @@ var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
 
 var categories = require('../../color-scheme.json');
+var styleVariables = require('../../components/_patterns/00-utilities/_variables/variables');
+// var mediaQueries = require("./src/mediaQueries");
 
 var dataloop = function(css) {
   var rule ='';
@@ -40,7 +41,14 @@ module.exports = function (gulp, options) {
       require('postcss-import'),
       cssnext({
         'browsers': options.css.browsers,
-        'compress': true
+        features: {
+          customProperties: {
+            variables: styleVariables
+          }
+          // customMedia: {
+          //   extensions: mediaQueries
+          // }
+        }
       }),
       mqpacker({sort: true}),
       flexibility()
@@ -61,7 +69,7 @@ module.exports = function (gulp, options) {
       }
     }))
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})))
-    .pipe(postcss(processors))
+    .pipe(postcss((processors)))
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
     .pipe(concatCss('theme.css'))
     .pipe(postcss(postprocessors))
