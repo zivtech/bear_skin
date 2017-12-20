@@ -7,6 +7,10 @@
   transition: box-shadow var(--animation-transition-time) ease-in-out;
 }
 
+.allt {
+  transition: all var(--animation-transition-time) ease-in-out;
+}
+
 @keyframes fadeIn {
 
   0% {

@@ -51,7 +51,6 @@ function bear_skin_preprocess_region(&$variables) {
  */
 function bear_skin_preprocess_block(&$variables) {
   // All blocks get block and block__title classes.
-  $variables['attributes']['class'][] = 'block';
   $variables['title_attributes']['class'][] = 'block__title';
 
   // plugin_id => class

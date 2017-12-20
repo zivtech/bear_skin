@@ -1,42 +1,47 @@
 @font-face {
   font-family: 'bearskin';
-  src:  url('../fonts/bearskin.eot?xghgk1');
-  src:  url('../fonts/bearskin.eot?xghgk1#iefix') format('embedded-opentype'),
-  url('../fonts/bearskin.ttf?xghgk1') format('truetype'),
-  url('../fonts/bearskin.woff?xghgk1') format('woff'),
-  url('../fonts/bearskin.svg?xghgk1#bearskin') format('svg');
+  src:  url('../../../fonts/bearskin.eot?xghgk1');
+  src:  url('../../../fonts/bearskin.eot?xghgk1#iefix') format('embedded-opentype'),
+  url('../../../fonts/bearskin.ttf?xghgk1') format('truetype'),
+  url('../../../fonts/bearskin.woff?xghgk1') format('woff'),
+  url('../../../fonts/bearskin.svg?xghgk1#bearskin') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^='con-'],
+[class^='icon-'],
 [class*='icon-'],
 .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'bearskin' !important;
+  font-family: 'bearskin', sans !important;
   speak: none;
   font-style: normal !important;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
+  text-decoration: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
 }
 
-[class^='con-'].no-text,
+[class^='icon-'].no-text,
 [class*='icon-'].no-text,
 .icon.no-text {
   display: block;
   text-indent: -9999px;
 }
 
-[class^='con-'].no-text::before,
+[class^='icon-'].no-text::before,
 [class*='icon-'].no-text::before,
 .icon.no-text::before {
   display: block;
   text-indent: 0;
   float: left;
+}
+
+.icon-container {
+  text-decoration: none !important;
 }
 
 .icon-bell:before {

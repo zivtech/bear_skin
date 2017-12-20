@@ -12,5 +12,8 @@ module.exports = {
   "--sans": styleVariables.fontList['f-sans'],
   "--serif": styleVariables.fontList['f-serif'],
 
-  "--site-max-width": styleVariables.layout['site-max-width']
+  "--site-max-width": styleVariables.layout['site-max-width'],
+  "--breakpoint-sm": styleVariables.layout['--breakpoint-sm'],
+  "--breakpoint-md": styleVariables.layout['--breakpoint-md'],
+  "--breakpoint-lg": styleVariables.layout['--breakpoint-lg']
 };

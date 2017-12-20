@@ -15,7 +15,6 @@ var browserSync = require('browser-sync');
 
 var categories = require('../../theme-settings.json');
 var styleVariables = require('../../components/_patterns/00-utilities/_variables/variables');
-// var mediaQueries = require("./src/mediaQueries");
 
 var dataloop = function(css) {
   var rule ='';

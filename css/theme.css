@@ -691,6 +691,26 @@ textarea {
   border-radius: 0;
 }
 
+/* Basscss Utility Responsive States */
+
+.sm-show,
+.md-show,
+.lg-show {
+  display: none !important;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 /*at the endfor utility classes to override if needed*/
 
 /*! Basscss | http://basscss.com | MIT License */
@@ -1433,6 +1453,14 @@ textarea {
     -js-display: flex;
     display: flex;
   }
+
+  .sm-show {
+    display: block !important;
+  }
+
+  .sm-hide {
+    display: none !important;
+  }
 }
 
 @media (min-width: 40em) and (max-width: 52em) {
@@ -1507,6 +1535,14 @@ textarea {
     display: -ms-flexbox;
     -js-display: flex;
     display: flex;
+  }
+
+  .md-show {
+    display: block !important;
+  }
+
+  .md-hide {
+    display: none !important;
   }
 }
 
@@ -1584,6 +1620,14 @@ textarea {
     display: flex;
   }
 
+  .lg-show {
+    display: block !important;
+  }
+
+  .lg-hide {
+    display: none !important;
+  }
+
   .lg-hide {
     display: none !important;
   }
@@ -1606,6 +1650,11 @@ textarea {
   transition: -webkit-box-shadow .2s ease-in-out;
   transition: box-shadow .2s ease-in-out;
   transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+}
+
+.allt {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 @-webkit-keyframes fadeIn {
@@ -3242,20 +3291,20 @@ figcaption {
 }
 @font-face {
   font-family: 'bearskin';
-  src: url("01-atoms/fonts/bearskin.eot?xghgk1");
-  src: url("01-atoms/fonts/bearskin.eot?xghgk1#iefix") format('embedded-opentype'),
-  url("01-atoms/fonts/bearskin.ttf?xghgk1") format('truetype'),
-  url("01-atoms/fonts/bearskin.woff?xghgk1") format('woff'),
-  url("01-atoms/fonts/bearskin.svg?xghgk1#bearskin") format('svg');
+  src: url("../fonts/bearskin.eot?xghgk1");
+  src: url("../fonts/bearskin.eot?xghgk1#iefix") format('embedded-opentype'),
+  url("../fonts/bearskin.ttf?xghgk1") format('truetype'),
+  url("../fonts/bearskin.woff?xghgk1") format('woff'),
+  url("../fonts/bearskin.svg?xghgk1#bearskin") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^='con-'],
+[class^='icon-'],
 [class*='icon-'],
 .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'bearskin' !important;
+  font-family: 'bearskin', sans !important;
   speak: none;
   font-style: normal !important;
   font-weight: normal;
@@ -3263,24 +3312,29 @@ figcaption {
   font-feature-settings: normal;
   font-variant: normal;
   text-transform: none;
+  text-decoration: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
 }
 
-[class^='con-'].no-text,
+[class^='icon-'].no-text,
 [class*='icon-'].no-text,
 .icon.no-text {
   display: block;
   text-indent: -9999px;
 }
 
-[class^='con-'].no-text::before,
+[class^='icon-'].no-text::before,
 [class*='icon-'].no-text::before,
 .icon.no-text::before {
   display: block;
   text-indent: 0;
   float: left;
+}
+
+.icon-container {
+  text-decoration: none !important;
 }
 
 .icon-bell:before {
@@ -4229,12 +4283,13 @@ table  ul {
   border-color: #ddd;
 }
 
-input:focus {
+input:focus,
+input:valid {
   border-color: #bbb;
 }
 
 input:invalid:focus {
-  border-color: red;
+  border-color: #bbb;
 }
 label {
   /*@include sans;*/
@@ -4399,7 +4454,7 @@ code {
 }
 
 #msearch {
-  font-size: 22px;
+  font-size: 24px;
   -webkit-transition: .2s color ease-in-out;
   transition: .2s color ease-in-out;
   /*color: $ black;*/
@@ -4570,9 +4625,6 @@ code {
   padding-right: 5px;
 }
 .menu {
-  /*@include sans;*/
-  margin: 0;
-  padding: 0;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
 }
@@ -4596,10 +4648,9 @@ code {
 .menu__item:last-child {
   margin-right: 0;
 }
-
 .menu--main {
-  position: fixed;
-  top: -200px;
+  /*position: fixed;*/
+  /*top: -200px;*/
   /*@include breakpoint(break-3) {*/
   /*position: relative;*/
   /*top: -2px;*/
@@ -4671,19 +4722,9 @@ code {
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
 }
-
 #mnav {
-  font-size: 26px;
-  display: block;
-  position: relative;
-  z-index: 6;
-  /*color: $ black;*/
-}
-
-#mnav i {
-  margin: 0;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  font-size: 25px;
+  z-index: 10;
 }
 
 #mnav.open {

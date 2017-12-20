@@ -1,0 +1,15 @@
+#mnav {
+  font-size: 25px;
+  z-index: 10;
+}
+
+#mnav.open {
+  /*color: $ white;*/
+  /*@include breakpoint(break-3) {*/
+  /*display: none;*/
+  /*}*/
+}
+
+#mnav.open  i:before {
+  content: '\e907';
+}

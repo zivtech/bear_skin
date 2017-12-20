@@ -14,7 +14,10 @@
     "bg-tertiary"  : ["#000022"]
   },
   "layout": {
-    "site-max-width": ["1024px"]
+    "site-max-width": ["1024px"],
+    "breakpoint-sm": ["40em"],
+    "breakpoint-md": ["52em"],
+    "breakpoint-lg": ["64em"]
   },
   "fontList": {
     "f-serif": "'Noto Serif', serif",

@@ -8,7 +8,7 @@
 @import 'basscss-grid';
 @import 'basscss-flexbox';
 @import 'basscss-borders';
-
+@import 'basscss-responsive-states';
 
 /*at the endfor utility classes to override if needed*/
 @import 'basscss';

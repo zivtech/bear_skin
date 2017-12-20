@@ -1,0 +1,69 @@
+.menu--main {
+  /*position: fixed;*/
+  /*top: -200px;*/
+  /*@include breakpoint(break-3) {*/
+  /*position: relative;*/
+  /*top: -2px;*/
+  /*}*/
+}
+
+.menu--main .menu__link {
+  /*@include fontsize(24, 1);*/
+  /*@include fontsize(12, 2);*/
+  /*@include link($black, none, $black, none);*/
+
+  padding: .4rem .5rem .4rem .5rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.menu--main  a.is-active,
+.menu--main    .menu-item--active-trail a {
+  /*@include link($ white, none, $ white, none);*/
+  /*background-color: $ black;*/
+}
+
+.menu--main .open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .85);
+}
+
+.menu--main .open .menu {
+  width: 100%;
+}
+
+.menu--main .open .menu__item {
+  display: block;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.menu--main .open .menu__link {
+  /*@include link($ white, none, $ white, none);*/
+  /*@include fontsize(22, all);*/
+
+  text-transform: uppercase;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  background: transparent;
+  border-radius: 0;
+}
+
+.sub-menu {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}

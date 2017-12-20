@@ -159,10 +159,11 @@
   border-color: var(--border-color-primary);
 }
 
-input:focus {
+input:focus,
+input:valid {
   border-color: var(--border-color-secondary);
 }
 
 input:invalid:focus {
-  border-color: var(--border-color-error);
+  border-color: var(--border-color-secondary);
 }
