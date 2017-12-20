@@ -1597,8 +1597,15 @@ textarea {
 /* background transition */
 
 .bgt {
-  -webkit-transition: background .3s ease-in-out;
-  transition: background .3s ease-in-out;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}
+
+.bst {
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  transition: -webkit-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
 }
 
 @-webkit-keyframes fadeIn {
@@ -3345,8 +3352,8 @@ q::after {
 
 a {
   /*@include link($c-link, none, $c-link-hover, none);*/
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 .banner-image {
   position: relative;
@@ -4853,7 +4860,7 @@ code {
 }
 
 .animation-transition-time {
-  color: .3s;
+  color: .2s;
 }
 
 .bg-primary {
