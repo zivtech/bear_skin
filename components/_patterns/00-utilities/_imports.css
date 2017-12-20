@@ -1,3 +1,4 @@
+@import 'basscss-color-base';
 @import 'basscss-colors';
 @import 'basscss-background-colors';
 @import 'basscss-base-forms';
@@ -16,8 +17,8 @@
 
 :root {
   --space-1: 1rem;
+  --link-color: #0074d9;
   --gray: #999;
   --button-color: black;
   --button-background-color: #ddd;
-  --border-color: var(--border-color-primary);
 }

@@ -1,18 +1,20 @@
-{% if heading %}
-  <h2 class="visually-hidden">{{ heading }}</h2>
-{% endif %}
-<ul class="tabs clearfix {{modifier_class}}">
-  {% for tab in tabs %}
-    {% set activeClass = tab.active ? 'is-active' : '' %}
-    <li class="tabs__tab {{ activeClass }}">
-      {% block link %}
-        <a href="{{ tab.url }}" class="tabs__tab-link {{ activeClass }}">
-          {{ tab.text }}
-          {% if tab.active %}
-            <span class="visually-hidden">{{ activeLabel|default('(active tab)') }}</span>
-          {% endif %}
-        </a>
-      {% endblock link %}
-    </li>
-  {% endfor %}
-</ul>
+<div class="form__container mt1 mb1">
+    {% if heading %}
+      <h2 class="visually-hidden">{{ heading }}</h2>
+    {% endif %}
+    <ul class="tabs clearfix m0 p0 flex flex-wrap flex-start caps list-style-none">
+      {% for tab in tabs %}
+        {% set activeClass = tab.active ? 'is-active' : '' %}
+        <li class="tabs__tab border-top border-bottom border-right {{ activeClass }} {{ loop.first ? 'rounded-left border-left' }} {{ loop.last ? 'rounded-right' }}">
+          {% block link %}
+            <a href="{{ tab.url }}" class="tabs__tab-link block p1 bg-silver black text-decoration-none bgt {{ activeClass }}">
+              {{ tab.text }}
+              {% if tab.active %}
+                <span class="visually-hidden">{{ activeLabel|default('(active tab)') }}</span>
+              {% endif %}
+            </a>
+          {% endblock link %}
+        </li>
+      {% endfor %}
+    </ul>
+</div>

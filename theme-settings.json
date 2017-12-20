@@ -4,8 +4,9 @@
     "c-secondary"  : ["green"],
     "c-tertiary"  : ["black"],
     "border-color-primary": ["#ddd"],
-    "border-color-secondary": ["#aaa"],
-    "border-color-error": ["red"]
+    "border-color-secondary": ["#bbb"],
+    "border-color-error": ["red"],
+    "animation-transition-time": [".3s"]
   },
   "bgList": {
     "bg-primary"  : ["#000000"],

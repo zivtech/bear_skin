@@ -1,4 +1,7 @@
-/*mostly used for details/summary and accordions*/
+/* background transition */
+.bgt {
+  transition: background var(--animation-transition-time) ease-in-out;
+}
 
 @keyframes fadeIn {
 

@@ -7,6 +7,7 @@ module.exports = {
   "--border-color-primary": styleVariables.colorList['border-color-primary'],
   "--border-color-secondary": styleVariables.colorList['border-color-secondary'],
   "--border-color-error": styleVariables.colorList['border-color-error'],
+  "--animation-transition-time": styleVariables.colorList['animation-transition-time'],
 
   "--sans": styleVariables.fontList['f-sans'],
   "--serif": styleVariables.fontList['f-serif'],

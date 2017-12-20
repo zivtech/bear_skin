@@ -151,7 +151,7 @@
   /*position: relative;*/
 /*}*/
 
-input {
+.form-item input {
   box-shadow: none !important;
 }
 
