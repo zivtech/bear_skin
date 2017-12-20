@@ -10,6 +10,26 @@ body {
   margin-right: auto;
 }
 
+/*
+Additional utility classes based on basscss
+*/
+
+.mt025 {
+  margin-top: .25em;
+}
+
+.mb025 {
+  margin-bottom: .25em;
+}
+
+.mt05 {
+  margin-top: .5em;
+}
+
+.mb05 {
+  margin-bottom: .5em;
+}
+
 /*Left Sidebar*/
 
 /*.layout-sidebar-first {*/

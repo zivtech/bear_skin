@@ -2,7 +2,10 @@
   "colorList": {
     "c-primary"  : ["blue"],
     "c-secondary"  : ["green"],
-    "c-tertiary"  : ["black"]
+    "c-tertiary"  : ["black"],
+    "border-color-primary": ["#ddd"],
+    "border-color-secondary": ["#aaa"],
+    "border-color-error": ["red"]
   },
   "bgList": {
     "bg-primary"  : ["#000000"],
@@ -14,6 +17,6 @@
   },
   "fontList": {
     "f-serif": "'Noto Serif', serif",
-    "f-sans": "'Montserrat', sans-serif"
+    "f-sans": "'Roboto', sans-serif"
   }
 }

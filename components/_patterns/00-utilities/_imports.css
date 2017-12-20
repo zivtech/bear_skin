@@ -1,3 +1,4 @@
+@import 'basscss-colors';
 @import 'basscss-background-colors';
 @import 'basscss-base-forms';
 @import 'basscss-color-forms';
@@ -8,13 +9,15 @@
 @import 'basscss-borders';
 
 
-/*at the endfor utitlity classes to override if needed*/
+/*at the endfor utility classes to override if needed*/
 @import 'basscss';
 
 /*@import '../../bear_skin.css';*/
 
 :root {
+  --space-1: 1rem;
+  --gray: #999;
   --button-color: black;
   --button-background-color: #ddd;
-  --border-color: #ddd;
+  --border-color: var(--border-color-primary);
 }

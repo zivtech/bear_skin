@@ -1,12 +1,6 @@
 label {
   /*@include sans;*/
   /*@include fontsize(12, all);*/
-
-  line-height: 1;
-  display: block;
-  padding-bottom: .3rem;
-  text-transform: uppercase;
-  font-weight: 700;
 }
 
 .js-form-type-checkbox label,

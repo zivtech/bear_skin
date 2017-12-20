@@ -6,9 +6,12 @@ h1, h2, h3, h4, h5, .serif {
   font-family: var(--serif);
 }
 
+.caps {
+  letter-spacing: .05em;
+}
+
 q::after {
   position: relative;
-  top: 1rem;
 }
 
 a {

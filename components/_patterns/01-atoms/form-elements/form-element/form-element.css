@@ -150,3 +150,19 @@
 /*div[id^='ajax-wrapper'] {*/
   /*position: relative;*/
 /*}*/
+
+input {
+  box-shadow: none !important;
+}
+
+.field:invalid {
+  border-color: var(--border-color-primary);
+}
+
+input:focus {
+  border-color: var(--border-color-secondary);
+}
+
+input:invalid:focus {
+  border-color: var(--border-color-error);
+}
