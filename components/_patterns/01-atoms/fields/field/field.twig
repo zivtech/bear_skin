@@ -1,4 +1,4 @@
-<{{ element ?: 'div' }}{{ attributes.addClass(classes) }}>
+<{{ element ?: 'div' }}{{ attributes.addClass(classes).removeClass('field') }}>
 {% if not label_hidden %}
     <{{ label_element ?: 'h3' }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_element ?: 'h3' }}>
 {% endif %}
