@@ -1,17 +1,18 @@
 .menu--main {
-  /*position: fixed;*/
-  /*top: -200px;*/
-  /*@include breakpoint(break-3) {*/
-  /*position: relative;*/
-  /*top: -2px;*/
-  /*}*/
+  display: none;
+}
+
+.menu--main.open {
+  display: flex;
+}
+
+@media (--breakpoint-md) {
+  .menu--main {
+    display: flex;
+  }
 }
 
 .menu--main .menu__link {
-  /*@include fontsize(24, 1);*/
-  /*@include fontsize(12, 2);*/
-  /*@include link($black, none, $black, none);*/
-
   padding: .4rem .5rem .4rem .5rem;
   text-transform: uppercase;
   border-radius: 4px;

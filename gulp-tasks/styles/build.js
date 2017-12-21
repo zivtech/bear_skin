@@ -15,6 +15,7 @@ var browserSync = require('browser-sync');
 
 var categories = require('../../theme-settings.json');
 var styleVariables = require('../../components/_patterns/00-utilities/_variables/variables');
+var mediaQueries = require('../../components/_patterns/00-utilities/_variables/mq');
 
 var dataloop = function(css) {
   var rule ='';
@@ -43,10 +44,10 @@ module.exports = function (gulp, options) {
         features: {
           customProperties: {
             variables: styleVariables
+          },
+          customMedia: {
+            extensions: mediaQueries
           }
-          // customMedia: {
-          //   extensions: mediaQueries
-          // }
         }
       }),
       mqpacker({sort: true}),

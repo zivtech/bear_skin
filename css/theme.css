@@ -4649,18 +4649,17 @@ code {
   margin-right: 0;
 }
 .menu--main {
-  /*position: fixed;*/
-  /*top: -200px;*/
-  /*@include breakpoint(break-3) {*/
-  /*position: relative;*/
-  /*top: -2px;*/
-  /*}*/
+  display: none;
+}
+
+.menu--main.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
 }
 
 .menu--main .menu__link {
-  /*@include fontsize(24, 1);*/
-  /*@include fontsize(12, 2);*/
-  /*@include link($black, none, $black, none);*/
   padding: .4rem .5rem .4rem .5rem;
   text-transform: uppercase;
   border-radius: 4px;
@@ -4721,6 +4720,15 @@ code {
   opacity: 0;
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
+}
+
+@media (min-width: 52em) {
+  .menu--main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+  }
 }
 #mnav {
   font-size: 25px;
@@ -4877,41 +4885,41 @@ code {
 }
 
 .c-primary {
-  color: blue;
+  color: b;
 }
 
 .c-secondary {
-  color: green;
+  color: g;
 }
 
 .c-tertiary {
-  color: black;
+  color: b;
 }
 
 .border-color-primary {
-  color: #ddd;
+  color: #;
 }
 
 .border-color-secondary {
-  color: #bbb;
+  color: #;
 }
 
 .border-color-error {
-  color: red;
+  color: r;
 }
 
 .animation-transition-time {
-  color: .2s;
+  color: .;
 }
 
 .bg-primary {
-  background-color: #000000;
+  background-color: #;
 }
 
 .bg-secondary {
-  background-color: #000011;
+  background-color: #;
 }
 
 .bg-tertiary {
-  background-color: #000022;
+  background-color: #;
 }
