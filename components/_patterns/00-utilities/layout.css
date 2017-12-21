@@ -6,8 +6,6 @@ body {
 
 .container {
   max-width: var(--site-max-width);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*
@@ -17,17 +15,26 @@ Additional utility classes based on basscss
 .mt025 {
   margin-top: .25em;
 }
-
 .mb025 {
   margin-bottom: .25em;
 }
-
+.mr025 {
+  margin-right: .25em;
+}
+.ml025 {
+  margin-left: .25em;
+}
 .mt05 {
   margin-top: .5em;
 }
-
 .mb05 {
   margin-bottom: .5em;
+}
+.mr05 {
+  margin-right: .5em;
+}
+.ml05 {
+  margin-left: .5em;
 }
 
 /*Left Sidebar*/

@@ -12,12 +12,6 @@
   }
 }
 
-.menu--main .menu__link {
-  padding: .4rem .5rem .4rem .5rem;
-  text-transform: uppercase;
-  border-radius: 4px;
-}
-
 .menu--main  a.is-active,
 .menu--main    .menu-item--active-trail a {
   /*@include link($ white, none, $ white, none);*/

@@ -8,7 +8,7 @@
     {% if menu_level == 0 %}
     {%
       set ulClasses = [
-        'menu m0 p0 flex items-center'
+        'menu m0 p0 mr05 flex items-center'
       ]
     %}
       <ul {{attributes.addClass(ulClasses)}}>
@@ -18,7 +18,7 @@
     {% for item in items %}
       {%
         set liClasses = [
-          'menu__item',
+          'menu__item ml05 mr05',
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',

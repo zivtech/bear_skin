@@ -17,8 +17,13 @@
 
 :root {
   --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+  --space-5: 5rem;
   --link-color: #0074d9;
   --gray: #999;
+  --silver: #eee;
   --button-color: black;
   --button-background-color: #ddd;
 }

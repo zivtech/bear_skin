@@ -12,7 +12,7 @@
  *   - url: [string] URL of the item (optional).
  */
 #}
-<nav class="breadcrumb {{modifier_class}}" role="navigation" aria-labelledby="system-breadcrumb">
+<nav class="breadcrumb mb1 mt1 {{modifier_class}}" role="navigation" aria-labelledby="system-breadcrumb">
   <h2 class="visually-hidden">{{ heading|default('You are here') }}</h2>
   <ol class="breadcrumb__list m0 p0 list-style-none">
     {% for item in breadcrumb %}
