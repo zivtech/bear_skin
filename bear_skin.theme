@@ -170,4 +170,9 @@ function bear_skin_preprocess_comment(&$variables) {
 
 function bear_skin_preprocess_form(&$variables) {
   $variables['attributes']['class'][] = 'form';
+  $variables['attributes']['class'][] = 'form__' . $variables['element']['#form_id'];
+}
+
+function bear_skin_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
 }

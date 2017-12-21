@@ -1,0 +1,7 @@
+@media (--breakpoint-md) {
+
+  .wrapper-header__inner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}

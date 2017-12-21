@@ -1813,6 +1813,15 @@ body {
   max-width: 1024px;
 }
 
+.panel-action {
+  font-size: 25px;
+  z-index: 10;
+}
+
+.panel-action--close {
+  right: 0;
+}
+
 /*
 Additional utility classes based on basscss
 */
@@ -1847,6 +1856,10 @@ Additional utility classes based on basscss
 
 .ml05 {
   margin-left: .5em;
+}
+
+.opaque {
+  opacity: 0;
 }
 
 /*Left Sidebar*/
@@ -3746,7 +3759,12 @@ table  ul {
   flex: 1 0 auto;
   overflow: hidden;
 }
-
+@media (min-width: 52em) {
+  .wrapper-header__inner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
 .node--unpublished {
   background: hsla(327, 100%, 92%, 1);
 }
@@ -3981,6 +3999,7 @@ table  ul {
 
 /*}*/
 
+
 .field--label-inline {
   clear: both;
 }
@@ -4001,7 +4020,6 @@ table  ul {
 .field--label-inline p:first-child {
   margin-top: 0;
 }
-
 .js-form-type-checkbox {
   margin: 0;
 }
@@ -4467,114 +4485,43 @@ code {
   /*}*/
 }
 
-#msearch {
+.panel-action--search {
   font-size: 24px;
   -webkit-transition: .2s color ease-in-out;
   transition: .2s color ease-in-out;
-  /*color: $ black;*/
 }
 
-#msearch:hover,
-#msearch:focus {
-  /*color: $c-ui-font-dark;*/
-}
-
-#msearch-close {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 2rem;
-  font-size: 30px;
-  /*color: $white;*/
-  position: absolute;
-  right: 2rem;
-  top: 2.5rem;
-}
-
-#msearch-content {
-  position: absolute;
+.msearch-content {
   width: 100%;
   left: 0;
-  top: -200px;
-  z-index: 15;
-  background: rgba(0, 0, 0, .95);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-#msearch-content.open {
   top: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 15;
+  background: rgba(238, 238, 238, .95);
+}
+
+.msearch-content.open {
   opacity: 1;
+  visibility: visible;
 }
 
-#search-block-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 2rem 0;
+.form__search_block_form .form-search {
+  border: 0;
+  padding: .5rem 3rem .5rem 0;
+  background: transparent;
+  width: 200px;
 }
 
-#search-block-form  .form-item {
+.form__search_block_form .js-form-type-search {
+  position: relative;
   margin: 0;
 }
 
-#search-block-form .form-search {
-  /*@include fontsize(26, all);*/
-  border: 0;
-  padding: .5rem 3rem .5rem 0;
-  /*color: $ white;*/
-  background: transparent;
-  width: 200px;
-  /*@include breakpoint(break-1) {*/
-  /*width: 400px;*/
-  /*}*/
-}
-
-#search-block-form .form-search::-webkit-input-placeholder {
-  /*@include fontsize(26, all);*/
-  /*color: $c-ui-font;*/
-}
-
-#search-block-form .form-search:-moz-placeholder {
-  /* Firefox 18- */
-  /*@include fontsize(26, all);*/
-  /*color: $c-ui-font;*/
-}
-
-#search-block-form .form-search::-moz-placeholder {
-  /* Firefox 19+ */
-  /*@include fontsize(26, all);*/
-  /*color: $c-ui-font;*/
-}
-
-#search-block-form .form-search:-ms-input-placeholder {
-  /*@include fontsize(26, all);*/
-  /*color: $c-ui-font;*/
-}
-
-#search-block-form  .js-form-type-search {
-  position: relative;
-}
-
-#search-block-form  .js-form-type-search::after {
+.form__search_block_form  .js-form-type-search::after {
   content: '';
   height: 1px;
-  /*background: $white;*/
+  background: black;
   width: 0;
   left: 0;
   position: absolute;
@@ -4583,12 +4530,11 @@ code {
   transition: width .5s ease-in-out;
 }
 
-#search-block-form .js-form-type-search.active::after {
+.form__search_block_form .js-form-type-search.active::after {
   width: 100%;
 }
 
 #search-block-form .form-actions {
-  /*@extend .icon;*/
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -4606,9 +4552,9 @@ code {
 
 #search-block-form .form-actions::after {
   content: '\e905';
-  /*color: $white;*/
   position: absolute;
   font-size: 20px;
+  top: 16px;
 }
 
 #search-block-form  .form-submit {
@@ -4619,6 +4565,25 @@ code {
 
 #search-block-form__site-slogan {
   margin-left: 1rem;
+}
+
+@media (min-width: 40em) {
+  .form__search_block_form .form-search {
+    width: 400px;
+  }
+}
+
+@media (min-width: 52em) {
+  .form__search_block_form {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .panel-action--close-search {
+    margin-right: 0;
+  }
 }
 .wrapper-breadcrumb {
   /*border-top: 1px solid $c-ui-border;*/
@@ -4658,10 +4623,6 @@ code {
   visibility: visible;
   opacity: 1;
 }
-
-.menu__item:last-child {
-  margin-right: 0;
-}
 .menu--main {
   display: none;
 }
@@ -4677,26 +4638,6 @@ code {
 .menu--main    .menu-item--active-trail a {
   /*@include link($ white, none, $ white, none);*/
   /*background-color: $ black;*/
-}
-
-.menu--main .open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  background: rgba(0, 0, 0, .85);
 }
 
 .menu--main .open .menu {
@@ -4738,21 +4679,38 @@ code {
     display: flex;
   }
 }
-#mnav {
-  font-size: 25px;
-  z-index: 10;
+.menu--main.open {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .9);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
 }
 
-#mnav.open {
-  /*color: $ white;*/
-  /*@include breakpoint(break-3) {*/
-  /*display: none;*/
-  /*}*/
+.menu--main.open .menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 
-#mnav.open  i:before {
-  content: '\e907';
+.menu--main.open .menu__link {
+  display: block;
+  padding: 10px;
+  color: white;
 }
+
+
 .pager__items {
   padding: 1rem 0;
   list-style: none;

@@ -1,5 +1,5 @@
 .menu {
-  transition: background .2s ease-in-out;
+  transition: background var(--animation-transition-time) ease-in-out;
 }
 
 .menu__item {
@@ -16,8 +16,4 @@
 .menu__item--expanded:focus .sub-menu {
   visibility: visible;
   opacity: 1;
-}
-
-.menu__item:last-child {
-  margin-right: 0;
 }

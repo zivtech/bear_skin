@@ -8,6 +8,15 @@ body {
   max-width: var(--site-max-width);
 }
 
+.panel-action {
+  font-size: 25px;
+  z-index: 10;
+}
+
+.panel-action--close {
+  right: 0;
+}
+
 /*
 Additional utility classes based on basscss
 */
@@ -35,6 +44,9 @@ Additional utility classes based on basscss
 }
 .ml05 {
   margin-left: .5em;
+}
+.opaque {
+  opacity: 0;
 }
 
 /*Left Sidebar*/

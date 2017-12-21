@@ -1,15 +1,27 @@
-#mnav {
-  font-size: 25px;
-  z-index: 10;
+.menu--main.open {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .9);
+  justify-content: center;
+  text-transform: uppercase;
 }
 
-#mnav.open {
-  /*color: $ white;*/
-  /*@include breakpoint(break-3) {*/
-  /*display: none;*/
-  /*}*/
+.menu--main.open .menu {
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
-#mnav.open  i:before {
-  content: '\e907';
+.menu--main.open .menu__link {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.panel-action--menu {
+
 }

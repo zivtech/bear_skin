@@ -1,100 +1,61 @@
-#msearch {
+.panel-action--search {
   font-size: 24px;
   transition: .2s color ease-in-out;
-  /*color: $ black;*/
 }
 
-#msearch:hover,
-#msearch:focus {
-  /*color: $c-ui-font-dark;*/
+@media (--breakpoint-lg) {
+
+  .panel-action--close-search {
+    margin-right: 0;
+  }
 }
 
-#msearch-close {
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
-  font-size: 30px;
-  /*color: $white;*/
-  position: absolute;
-  right: 2rem;
-  top: 2.5rem;
-}
-
-#msearch-content {
-  position: absolute;
+.msearch-content {
   width: 100%;
   left: 0;
-  top: -200px;
-  z-index: 15;
-  background: rgba(0, 0, 0, .95);
-  transition: all .2s ease-in-out;
-  display: flex;
-  justify-content: center;
-}
-
-#msearch-content.open {
   top: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 15;
+  background: rgba(238, 238, 238, .95);
+}
+
+.msearch-content.open {
   opacity: 1;
+  visibility: visible;
 }
 
-#search-block-form {
-  display: flex;
-  align-items: center;
-  margin: 2rem 0;
+@media (--breakpoint-md) {
+
+  .form__search_block_form {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
-#search-block-form  .form-item {
+.form__search_block_form .form-search {
+  border: 0;
+  padding: .5rem 3rem .5rem 0;
+  background: transparent;
+  width: 200px;
+}
+
+@media (--breakpoint-sm) {
+
+  .form__search_block_form .form-search {
+    width: 400px;
+  }
+}
+
+.form__search_block_form .js-form-type-search {
+  position: relative;
   margin: 0;
 }
 
-#search-block-form .form-search {
-  /*@include fontsize(26, all);*/
-
-  border: 0;
-  padding: .5rem 3rem .5rem 0;
-  /*color: $ white;*/
-  background: transparent;
-  width: 200px;
-
-  /*@include breakpoint(break-1) {*/
-    /*width: 400px;*/
-  /*}*/
-}
-
-
-
-#search-block-form .form-search::-webkit-input-placeholder {
-  /*@include fontsize(26, all);*/
-
-  /*color: $c-ui-font;*/
-}
-
-#search-block-form .form-search:-moz-placeholder { /* Firefox 18- */
-  /*@include fontsize(26, all);*/
-
-  /*color: $c-ui-font;*/
-}
-
-#search-block-form .form-search::-moz-placeholder {  /* Firefox 19+ */
-  /*@include fontsize(26, all);*/
-
-  /*color: $c-ui-font;*/
-}
-
-#search-block-form .form-search:-ms-input-placeholder {
-  /*@include fontsize(26, all);*/
-
-  /*color: $c-ui-font;*/
-}
-
-#search-block-form  .js-form-type-search {
-  position: relative;
-}
-
-#search-block-form  .js-form-type-search::after {
+.form__search_block_form  .js-form-type-search::after {
   content: '';
   height: 1px;
-  /*background: $white;*/
+  background: black;
   width: 0;
   left: 0;
   position: absolute;
@@ -102,14 +63,11 @@
   transition: width .5s ease-in-out;
 }
 
-#search-block-form .js-form-type-search.active::after {
+.form__search_block_form .js-form-type-search.active::after {
   width: 100%;
 }
 
-
 #search-block-form .form-actions {
-  /*@extend .icon;*/
-
   position: relative;
   z-index: 1;
   display: flex;
@@ -120,9 +78,9 @@
 
 #search-block-form .form-actions::after {
   content: '\e905';
-  /*color: $white;*/
   position: absolute;
   font-size: 20px;
+  top: 16px;
 }
 
 
