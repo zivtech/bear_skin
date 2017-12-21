@@ -361,7 +361,7 @@ textarea {
 
 .btn-primary {
   color: black;
-  background-color: #ddd;
+  background-color: #eee;
   border-radius: 3px;
 }
 
@@ -2954,6 +2954,167 @@ Additional utility classes based on basscss
 .skip-link li {
   list-style-type: none;
 }
+
+figure img {
+  width: 100%;
+  max-width: 100%;
+}
+
+figure.align-left {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+  /*@include breakpoint(break-1) {*/
+  /*margin-right: 2rem;*/
+  /*margin-bottom: 1rem;*/
+  /*float: left;*/
+  /*width: auto;*/
+  /*}*/
+}
+
+figure.align-right {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+  /*@include breakpoint(break-1) {*/
+  /*margin-left: 2rem;*/
+  /*margin-bottom: 1rem;*/
+  /*float: right;*/
+  /*width: auto;*/
+  /*}*/
+}
+
+figure.align-center {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+figcaption {
+  /*@include fontsize(16, all);*/
+  /*color: $c-ui-font;*/
+  padding: .5rem 1rem;
+  text-align: left;
+}
+@font-face {
+  font-family: 'bearskin';
+  src: url("../fonts/bearskin.eot?xghgk1");
+  src: url("../fonts/bearskin.eot?xghgk1#iefix") format('embedded-opentype'),
+  url("../fonts/bearskin.ttf?xghgk1") format('truetype'),
+  url("../fonts/bearskin.woff?xghgk1") format('woff'),
+  url("../fonts/bearskin.svg?xghgk1#bearskin") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='icon-'],
+[class*='icon-'],
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'bearskin', sans !important;
+  speak: none;
+  font-style: normal !important;
+  font-weight: normal;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+}
+
+[class^='icon-'].no-text,
+[class*='icon-'].no-text,
+.icon.no-text {
+  display: block;
+  text-indent: -9999px;
+}
+
+[class^='icon-'].no-text::before,
+[class*='icon-'].no-text::before,
+.icon.no-text::before {
+  display: block;
+  text-indent: 0;
+  float: left;
+}
+
+.icon-container {
+  text-decoration: none !important;
+}
+
+.icon-bell:before {
+  content: '\e900';
+}
+
+.icon-circle:before {
+  content: '\e901';
+}
+
+.icon-check-circle:before {
+  content: '\e902';
+}
+
+.icon-check:before {
+  content: '\e903';
+}
+
+.icon-exclamation-circle:before {
+  content: '\e904';
+}
+
+.icon-search:before {
+  content: '\e905';
+}
+
+.icon-bars:before {
+  content: '\e906';
+}
+
+.icon-close:before {
+  content: '\e907';
+}
+
+.icon-chevron-left:before {
+  content: '\e909';
+}
+
+.icon-chevron-right:before {
+  content: '\e908';
+}
+
+.icon-feed:before {
+  content: '\e90a';
+  color: orange;
+  font-size: 30px;
+}
+body,
+.sans {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.serif {
+  font-family: 'Noto Serif', serif;
+}
+
+.caps {
+  letter-spacing: .05em;
+}
+
+q::after {
+  position: relative;
+}
+
+a {
+  /*@include link($c-link, none, $c-link-hover, none);*/
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
 /*//*/
 
 /*// BEAR SKIN COLORS*/
@@ -3275,167 +3436,6 @@ Additional utility classes based on basscss
 /*cap-height: 0.68*/
 
 /*);*/
-
-figure img {
-  width: 100%;
-  max-width: 100%;
-}
-
-figure.align-left {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 2rem;
-  /*@include breakpoint(break-1) {*/
-  /*margin-right: 2rem;*/
-  /*margin-bottom: 1rem;*/
-  /*float: left;*/
-  /*width: auto;*/
-  /*}*/
-}
-
-figure.align-right {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 2rem;
-  /*@include breakpoint(break-1) {*/
-  /*margin-left: 2rem;*/
-  /*margin-bottom: 1rem;*/
-  /*float: right;*/
-  /*width: auto;*/
-  /*}*/
-}
-
-figure.align-center {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-figcaption {
-  /*@include fontsize(16, all);*/
-  /*color: $c-ui-font;*/
-  padding: .5rem 1rem;
-  text-align: left;
-}
-@font-face {
-  font-family: 'bearskin';
-  src: url("../fonts/bearskin.eot?xghgk1");
-  src: url("../fonts/bearskin.eot?xghgk1#iefix") format('embedded-opentype'),
-  url("../fonts/bearskin.ttf?xghgk1") format('truetype'),
-  url("../fonts/bearskin.woff?xghgk1") format('woff'),
-  url("../fonts/bearskin.svg?xghgk1#bearskin") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^='icon-'],
-[class*='icon-'],
-.icon {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'bearskin', sans !important;
-  speak: none;
-  font-style: normal !important;
-  font-weight: normal;
-  -webkit-font-feature-settings: normal;
-  font-feature-settings: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-decoration: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: greyscale;
-}
-
-[class^='icon-'].no-text,
-[class*='icon-'].no-text,
-.icon.no-text {
-  display: block;
-  text-indent: -9999px;
-}
-
-[class^='icon-'].no-text::before,
-[class*='icon-'].no-text::before,
-.icon.no-text::before {
-  display: block;
-  text-indent: 0;
-  float: left;
-}
-
-.icon-container {
-  text-decoration: none !important;
-}
-
-.icon-bell:before {
-  content: '\e900';
-}
-
-.icon-circle:before {
-  content: '\e901';
-}
-
-.icon-check-circle:before {
-  content: '\e902';
-}
-
-.icon-check:before {
-  content: '\e903';
-}
-
-.icon-exclamation-circle:before {
-  content: '\e904';
-}
-
-.icon-search:before {
-  content: '\e905';
-}
-
-.icon-bars:before {
-  content: '\e906';
-}
-
-.icon-close:before {
-  content: '\e907';
-}
-
-.icon-chevron-left:before {
-  content: '\e909';
-}
-
-.icon-chevron-right:before {
-  content: '\e908';
-}
-
-.icon-feed:before {
-  content: '\e90a';
-  color: orange;
-  font-size: 30px;
-}
-body,
-.sans {
-  font-family: 'Roboto', sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-.serif {
-  font-family: 'Noto Serif', serif;
-}
-
-.caps {
-  letter-spacing: .05em;
-}
-
-q::after {
-  position: relative;
-}
-
-a {
-  /*@include link($c-link, none, $c-link-hover, none);*/
-  -webkit-transition: color .2s ease-in-out;
-  transition: color .2s ease-in-out;
-}
 .banner-image {
   position: relative;
   text-align: center;
@@ -3999,7 +3999,6 @@ table  ul {
 
 /*}*/
 
-
 .field--label-inline {
   clear: both;
 }
@@ -4020,6 +4019,7 @@ table  ul {
 .field--label-inline p:first-child {
   margin-top: 0;
 }
+
 .js-form-type-checkbox {
   margin: 0;
 }
@@ -4309,6 +4309,7 @@ table  ul {
 .form-item input {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+  max-width: 100%;
 }
 
 .field:invalid {
@@ -4770,26 +4771,13 @@ code {
   -webkit-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
 }
-.tabs {
-  /*@include breakpoint(break-1) {*/
-  /*flex-direction: row;*/
-  /*}*/
-}
-
-
-
-
-
 .tabs__tab {
   border-color: #bbb;
 }
 
-
-
 .tabs__tab-link:hover {
-  background-color: #bbb;
+  background-color: #ddd;
   text-decoration: none;
-  color: white;
 }
 
 .tabs__tab__tab-link:hover,
@@ -4813,9 +4801,7 @@ code {
   background: transparent;
 }
 
-.tabs--secondary .tabs__tab-link.is-active {
-  /*background: $ wild-sand;*/
-}
+
 
 .js-form-type-vertical-tabs {
   display: inline-block;

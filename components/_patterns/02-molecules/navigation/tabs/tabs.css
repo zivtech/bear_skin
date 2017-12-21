@@ -1,31 +1,10 @@
-.tabs {
-
-
-  /*@include breakpoint(break-1) {*/
-  /*flex-direction: row;*/
-  /*}*/
-}
-
-.tabs__tab {
-
-}
-
-.tabs__tab.is-active {
-
-}
-
 .tabs__tab {
   border-color: var(--border-color-secondary);
 }
 
-.tabs__tab__tab-link {
-
-}
-
 .tabs__tab-link:hover {
-  background-color: var(--border-color-secondary);
+  background-color: var(--bg-tertiary);
   text-decoration: none;
-  color: white;
 }
 
 .tabs__tab__tab-link:hover,
@@ -50,7 +29,7 @@
 }
 
 .tabs--secondary .tabs__tab-link.is-active {
-  /*background: $ wild-sand;*/
+
 }
 
 .js-form-type-vertical-tabs {

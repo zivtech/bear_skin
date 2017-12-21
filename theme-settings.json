@@ -10,8 +10,8 @@
   },
   "bgList": {
     "bg-primary"  : "#000000",
-    "bg-secondary"  : "#000011",
-    "bg-tertiary"  : "#000022"
+    "bg-secondary"  : "#666",
+    "bg-tertiary"  : "#ddd"
   },
   "layout": {
     "site-max-width": "1024px"

@@ -9,6 +9,10 @@ module.exports = {
   "--border-color-error": styleVariables.colorList['border-color-error'],
   "--animation-transition-time": styleVariables.colorList['animation-transition-time'],
 
+  "--bg-primary": styleVariables.bgList['bg-primary'],
+  "--bg-secondary": styleVariables.bgList['bg-secondary'],
+  "--bg-tertiary": styleVariables.bgList['bg-tertiary'],
+
   "--sans": styleVariables.fontList['f-sans'],
   "--serif": styleVariables.fontList['f-serif'],
 
