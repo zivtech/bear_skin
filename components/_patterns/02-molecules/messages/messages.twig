@@ -1,3 +1,15 @@
+{% set attributes = attributes.addClass([
+  'mt1',
+  'mb1',
+  'p1',
+  'flex',
+  'items-center',
+  'border',
+	type == 'status' ?: 'green',
+	type == 'warning' ?: 'orange',
+	type == 'error' ?: 'red'
+]) %}
+
 <div {% if type == 'error' %} role="alert" {% else %} role="contentinfo" {% endif %} {% if heading %}aria-label="{{ heading }}"{% endif %} {{ attributes }}>
 
   {% block heading %}
@@ -7,7 +19,7 @@
   {% endblock heading %}
 
   {% block icon %}
-    <div class="messages__icon">
+    <div class="messages__icon inline-block mr1">
       {% if type == 'error' %}
         <i class="icon icon-exclamation-circle"></i>
       {% elseif type == 'warning' %}

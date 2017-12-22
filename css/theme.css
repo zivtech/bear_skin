@@ -3280,7 +3280,6 @@ Additional utility classes based on basscss
 /*cap-height: 0.68*/
 
 /*);*/
-
 figure img {
   width: 100%;
   max-width: 100%;
@@ -3445,12 +3444,6 @@ a {
   -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
-@media (min-width: 52em) {
-  .wrapper-header__inner {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
 .sticky-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3469,6 +3462,12 @@ a {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   overflow: hidden;
+}
+@media (min-width: 52em) {
+  .wrapper-header__inner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 .node--unpublished {
   background: hsla(327, 100%, 92%, 1);
@@ -3569,6 +3568,7 @@ a {
   text-decoration: underline;
   text-transform: uppercase;
 }
+
 details[open] .summary__icon {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -3589,45 +3589,21 @@ details[open] .details-wrapper {
 .summary::-webkit-details-marker {
   display: none;
 }
-.messages {
-  padding: 1rem 1rem;
-  margin: 1rem 0;
-  /*color: $ grey;*/
-  /*background-color: $ wild-sand;*/
-  /*border: 2px solid $ c-ui-border;*/
-  line-height: 1.4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .messages__icon {
-  display: inline-block;
-  margin-right: 1rem;
   margin-top: 4px;
   font-size: 22px;
 }
 
 .messages--status {
-  /*color: $c-status;*/
-  /*background-color: lighten($c-status, 45%);*/
-  /*border: 2px solid lighten($c-status, 35%);*/
+  border-color: var(--green);
 }
 
 .messages--warning {
-  /*color: $c-warning;*/
-  /*background-color: lighten($c-warning, 50%);*/
-  /*border: 2px solid lighten($c-warning, 40%);*/
+  border-color: var(--orange);
 }
 
 .messages--error {
-  /*color: $c-error;*/
-  /*background-color: lighten($c-error, 35%);*/
-  /*border: 2px solid lighten($c-error, 25%);*/
+  border-color: var(--red);
 }
 .progress {
   margin: 1rem 0;
