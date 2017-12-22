@@ -16,6 +16,6 @@
   display: none;
 }
 
-.checkbox-wrapper .form-checkbox:checked + i {
+.form-checkbox:checked + i {
   opacity: 1;
 }

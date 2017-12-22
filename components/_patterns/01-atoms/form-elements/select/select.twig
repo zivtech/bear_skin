@@ -1,5 +1,7 @@
+{% set attributes = attributes.addClass('pt0 pb0') %}
+
 {% spaceless %}
-<div class="select-wrapper sans">
+<div class="select-wrapper border mt05 mb05 relative rounded">
   <select{{ attributes }}>
     {% for option in options %}
       {% if option.type == 'optgroup' %}
@@ -13,6 +15,6 @@
       {% endif %}
     {% endfor %}
   </select>
-    <div class="select-wrapper__icon"><i class="icon-chevron-left"></i></div>
+    <div class="select-wrapper__icon"><i class="icon-chevron-left flex items-center"></i></div>
 </div>
 {% endspaceless %}

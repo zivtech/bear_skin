@@ -172,6 +172,7 @@ input:invalid:focus {
 .image-widget .form-file {
   height: 36px;
   margin-right: .5rem;
+  border: 0;
 }
 
 .image-widget .form-submit {
