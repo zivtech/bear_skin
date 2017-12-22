@@ -7,6 +7,13 @@ details[open] .details-wrapper {
   animation-duration: 0.5s;
 }
 
+details.vertical-tabs__pane {
+  display: flex;
+  padding: .5rem;
+  border: 0;
+  margin: 0;
+}
+
 .summary {
   cursor: pointer;
 }

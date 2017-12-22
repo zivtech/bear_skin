@@ -18,6 +18,11 @@
   },
   "fontList": {
     "f-serif": "'Noto Serif', serif",
-    "f-sans": "'Roboto', sans-serif"
+    "f-sans": "'Roboto', sans-serif",
+    "h1": "2rem",
+    "h2": "1.5rem",
+    "h3": "1.17rem",
+    "h4": "1rem",
+    "h5": "0.83rem"
   }
 }

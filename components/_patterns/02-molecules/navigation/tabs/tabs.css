@@ -37,16 +37,6 @@
   width: 100%;
 }
 
-
-.vertical-tabs__menu {
-  padding: 0 !important;
-}
-
-.vertical-tabs__menu-item {
-  /*@include fontsize(16, all);*/
-  /*@include sans;*/
-}
-
 .vertical-tabs__menu-item-title {
   text-decoration: none !important;
 }
