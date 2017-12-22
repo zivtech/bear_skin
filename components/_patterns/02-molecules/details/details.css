@@ -7,11 +7,6 @@ details[open] .details-wrapper {
   animation-duration: 0.5s;
 }
 
-.details-wrapper {
-  padding: 1rem 1rem;
-  clear: both;
-}
-
 .summary {
   cursor: pointer;
 }
