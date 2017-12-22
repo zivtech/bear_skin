@@ -4,30 +4,23 @@
 
 .radio-wrapper {
   top: 3px;
-  display: inline-block;
-  position: relative;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
+  width: 19px;
+  height: 19px;
   z-index: 1;
-  /*border: 2px solid $ c-ui-border;*/
-  /*background: $c-ui-background;*/
 }
 
-.radio-wrapper  i {
-  font-size: 14px;
+.radio-wrapper__icon {
+  font-size: 17px;
   position: absolute;
-  top: 0;
-  left: 1.5px;
+  top: 2px;
+  left: 2px;
   opacity: 0;
-  transition: opacity .2s ease-in-out;
-  /*color: $black;*/
 }
 
 .radio-wrapper .form-radio {
   display: none;
 }
 
-.radio-wrapper .form-radio:checked + i {
+.form-radio:checked + i {
   opacity: 1;
 }

@@ -3980,6 +3980,10 @@ table  ul {
   opacity: 1;
 }
 
+.form-checkboxes .form-item {
+  margin-bottom: .5em;
+}
+
 .form-checkboxes .form-item:last-child {
   margin-bottom: 0;
 }
@@ -4282,32 +4286,24 @@ input:invalid:focus {
 
 .radio-wrapper {
   top: 3px;
-  display: inline-block;
-  position: relative;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
+  width: 19px;
+  height: 19px;
   z-index: 1;
-  /*border: 2px solid $ c-ui-border;*/
-  /*background: $c-ui-background;*/
 }
 
-.radio-wrapper  i {
-  font-size: 14px;
+.radio-wrapper__icon {
+  font-size: 17px;
   position: absolute;
-  top: 0;
-  left: 1.5px;
+  top: 2px;
+  left: 2px;
   opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out;
-  transition: opacity .2s ease-in-out;
-  /*color: $black;*/
 }
 
 .radio-wrapper .form-radio {
   display: none;
 }
 
-.radio-wrapper .form-radio:checked + i {
+.form-radio:checked + i {
   opacity: 1;
 }
 .select-wrapper {
@@ -4340,9 +4336,6 @@ input:invalid:focus {
   transform: rotate(-90deg);
 }
 
-code {
-  margin: .5rem 0;
-}
 .branding__site-logo {
   width: 50px;
   height: 50px;
@@ -4393,6 +4386,9 @@ code {
   /*font-size: 14px;*/
   /*margin: 0 1rem;*/
   /*}*/
+}
+code {
+  margin: .5rem 0;
 }
 
 .panel-action--search {
