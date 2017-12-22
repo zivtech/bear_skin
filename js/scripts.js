@@ -76,6 +76,8 @@
             $mainSearch.removeClass('open');
             $searchField.blur();
             $searchWrapper.removeClass('active');
+            $searchToggle.removeClass('opaque');
+            $menuOpen.removeClass('opaque');
           });
         });
       }

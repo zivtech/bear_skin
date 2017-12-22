@@ -168,3 +168,12 @@ input:valid {
 input:invalid:focus {
   border-color: var(--border-color-secondary);
 }
+
+.image-widget .form-file {
+  height: 36px;
+  margin-right: .5rem;
+}
+
+.image-widget .form-submit {
+  margin: 0;
+}

@@ -79,3 +79,6 @@
   color: orange;
   font-size: 30px;
 }
+.icon-caret-right:before {
+  content: '\e90b';
+}
