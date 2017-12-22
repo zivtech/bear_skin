@@ -19,3 +19,7 @@
 .form-checkbox:checked + i {
   opacity: 1;
 }
+
+.form-checkboxes .form-item:last-child {
+  margin-bottom: 0;
+}

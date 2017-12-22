@@ -45,6 +45,21 @@ Additional utility classes based on basscss
 .ml05 {
   margin-left: .5em;
 }
+.p05 {
+ padding: .5rem;
+}
+.pt05 {
+  padding-top: .5em;
+}
+.pb05 {
+  padding-bottom: .5em;
+}
+.pr05 {
+  padding-right: .5em;
+}
+.pl05 {
+  padding-left: .5em;
+}
 .opaque {
   opacity: 0;
 }

@@ -1,0 +1,42 @@
+{%
+	set classes = [
+	'js-form-item',
+	'form-item',
+	'js-form-wrapper',
+	'form-wrapper',
+	'mb1',
+	'border'
+]
+%}
+
+
+<fieldset{{ attributes.addClass(classes) }}>
+	{%
+		set legend_span_classes = [
+		'fieldset-legend',
+		required ? 'js-form-required',
+		required ? 'form-required',
+	]
+	%}
+	{#  Always wrap fieldset legends in a <span> for CSS positioning. #}
+	<legend{{ legend.attributes.addClass('pl05 pr05') }}>
+		<span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
+	</legend>
+	<div class="fieldset-wrapper">
+		{% if errors %}
+			<div class="form-item--error-message">
+				<strong>{{ errors }}</strong>
+			</div>
+		{% endif %}
+		{% if prefix %}
+			<span class="field-prefix">{{ prefix }}</span>
+		{% endif %}
+		{{ children }}
+		{% if suffix %}
+			<span class="field-suffix">{{ suffix }}</span>
+		{% endif %}
+		{% if description.content %}
+			<div{{ description.attributes.addClass('description') }}>{{ description.content }}</div>
+		{% endif %}
+	</div>
+</fieldset>
