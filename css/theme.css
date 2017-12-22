@@ -35,7 +35,7 @@ a:hover {
 pre,
 code {
   background-color: transparent;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 hr {
@@ -261,7 +261,7 @@ textarea {
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, .125);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .field:focus,
@@ -362,7 +362,7 @@ textarea {
 .btn-primary {
   color: black;
   background-color: #eee;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .btn-primary:hover {
@@ -664,7 +664,7 @@ textarea {
 }
 
 .rounded {
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .circle {
@@ -672,19 +672,19 @@ textarea {
 }
 
 .rounded-top {
-  border-radius: 3px 3px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 .rounded-right {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .rounded-bottom {
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 4px 4px;
 }
 
 .rounded-left {
-  border-radius: 3px 0 0 3px;
+  border-radius: 4px 0 0 4px;
 }
 
 .not-rounded {
@@ -1343,7 +1343,7 @@ textarea {
 }
 
 .rounded {
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .circle {
@@ -1351,19 +1351,19 @@ textarea {
 }
 
 .rounded-top {
-  border-radius: 3px 3px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 .rounded-right {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .rounded-bottom {
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 4px 4px;
 }
 
 .rounded-left {
-  border-radius: 3px 0 0 3px;
+  border-radius: 4px 0 0 4px;
 }
 
 .not-rounded {
@@ -1650,6 +1650,11 @@ textarea {
   transition: -webkit-box-shadow .2s ease-in-out;
   transition: box-shadow .2s ease-in-out;
   transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+}
+
+.opt {
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 
 .allt {
@@ -2954,171 +2959,6 @@ Additional utility classes based on basscss
 .skip-link li {
   list-style-type: none;
 }
-
-figure img {
-  width: 100%;
-  max-width: 100%;
-}
-
-figure.align-left {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 2rem;
-  /*@include breakpoint(break-1) {*/
-  /*margin-right: 2rem;*/
-  /*margin-bottom: 1rem;*/
-  /*float: left;*/
-  /*width: auto;*/
-  /*}*/
-}
-
-figure.align-right {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 2rem;
-  /*@include breakpoint(break-1) {*/
-  /*margin-left: 2rem;*/
-  /*margin-bottom: 1rem;*/
-  /*float: right;*/
-  /*width: auto;*/
-  /*}*/
-}
-
-figure.align-center {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-figcaption {
-  /*@include fontsize(16, all);*/
-  /*color: $c-ui-font;*/
-  padding: .5rem 1rem;
-  text-align: left;
-}
-@font-face {
-  font-family: 'bearskin';
-  src: url("../fonts/bearskin.eot?xghgk1");
-  src: url("../fonts/bearskin.eot?xghgk1#iefix") format('embedded-opentype'),
-  url("../fonts/bearskin.ttf?xghgk1") format('truetype'),
-  url("../fonts/bearskin.woff?xghgk1") format('woff'),
-  url("../fonts/bearskin.svg?xghgk1#bearskin") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^='icon-'],
-[class*='icon-'],
-.icon {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'bearskin', sans !important;
-  speak: none;
-  font-style: normal !important;
-  font-weight: normal;
-  -webkit-font-feature-settings: normal;
-  font-feature-settings: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-decoration: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: greyscale;
-}
-
-[class^='icon-'].no-text,
-[class*='icon-'].no-text,
-.icon.no-text {
-  display: block;
-  text-indent: -9999px;
-}
-
-[class^='icon-'].no-text::before,
-[class*='icon-'].no-text::before,
-.icon.no-text::before {
-  display: block;
-  text-indent: 0;
-  float: left;
-}
-
-.icon-container {
-  text-decoration: none !important;
-}
-
-.icon-bell:before {
-  content: '\e900';
-}
-
-.icon-circle:before {
-  content: '\e901';
-}
-
-.icon-check-circle:before {
-  content: '\e902';
-}
-
-.icon-check:before {
-  content: '\e903';
-}
-
-.icon-exclamation-circle:before {
-  content: '\e904';
-}
-
-.icon-search:before {
-  content: '\e905';
-}
-
-.icon-bars:before {
-  content: '\e906';
-}
-
-.icon-close:before {
-  content: '\e907';
-}
-
-.icon-chevron-left:before {
-  content: '\e909';
-}
-
-.icon-chevron-right:before {
-  content: '\e908';
-}
-
-.icon-feed:before {
-  content: '\e90a';
-  color: orange;
-  font-size: 30px;
-}
-
-.icon-caret-right:before {
-  content: '\e90b';
-}
-body,
-.sans {
-  font-family: 'Roboto', sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-.serif {
-  font-family: 'Noto Serif', serif;
-}
-
-.caps {
-  letter-spacing: .05em;
-}
-
-q::after {
-  position: relative;
-}
-
-a {
-  /*@include link($c-link, none, $c-link-hover, none);*/
-  -webkit-transition: color .2s ease-in-out;
-  transition: color .2s ease-in-out;
-}
 /*//*/
 
 /*// BEAR SKIN COLORS*/
@@ -3440,6 +3280,171 @@ a {
 /*cap-height: 0.68*/
 
 /*);*/
+
+figure img {
+  width: 100%;
+  max-width: 100%;
+}
+
+figure.align-left {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+  /*@include breakpoint(break-1) {*/
+  /*margin-right: 2rem;*/
+  /*margin-bottom: 1rem;*/
+  /*float: left;*/
+  /*width: auto;*/
+  /*}*/
+}
+
+figure.align-right {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+  /*@include breakpoint(break-1) {*/
+  /*margin-left: 2rem;*/
+  /*margin-bottom: 1rem;*/
+  /*float: right;*/
+  /*width: auto;*/
+  /*}*/
+}
+
+figure.align-center {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+figcaption {
+  /*@include fontsize(16, all);*/
+  /*color: $c-ui-font;*/
+  padding: .5rem 1rem;
+  text-align: left;
+}
+@font-face {
+  font-family: 'bearskin';
+  src: url("../fonts/bearskin.eot?xghgk1");
+  src: url("../fonts/bearskin.eot?xghgk1#iefix") format('embedded-opentype'),
+  url("../fonts/bearskin.ttf?xghgk1") format('truetype'),
+  url("../fonts/bearskin.woff?xghgk1") format('woff'),
+  url("../fonts/bearskin.svg?xghgk1#bearskin") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='icon-'],
+[class*='icon-'],
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'bearskin', sans !important;
+  speak: none;
+  font-style: normal !important;
+  font-weight: normal;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+}
+
+[class^='icon-'].no-text,
+[class*='icon-'].no-text,
+.icon.no-text {
+  display: block;
+  text-indent: -9999px;
+}
+
+[class^='icon-'].no-text::before,
+[class*='icon-'].no-text::before,
+.icon.no-text::before {
+  display: block;
+  text-indent: 0;
+  float: left;
+}
+
+.icon-container {
+  text-decoration: none !important;
+}
+
+.icon-bell:before {
+  content: '\e900';
+}
+
+.icon-circle:before {
+  content: '\e901';
+}
+
+.icon-check-circle:before {
+  content: '\e902';
+}
+
+.icon-check:before {
+  content: '\e903';
+}
+
+.icon-exclamation-circle:before {
+  content: '\e904';
+}
+
+.icon-search:before {
+  content: '\e905';
+}
+
+.icon-bars:before {
+  content: '\e906';
+}
+
+.icon-close:before {
+  content: '\e907';
+}
+
+.icon-chevron-left:before {
+  content: '\e909';
+}
+
+.icon-chevron-right:before {
+  content: '\e908';
+}
+
+.icon-feed:before {
+  content: '\e90a';
+  color: orange;
+  font-size: 30px;
+}
+
+.icon-caret-right:before {
+  content: '\e90b';
+}
+body,
+.sans {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.serif {
+  font-family: 'Noto Serif', serif;
+}
+
+.caps {
+  letter-spacing: .05em;
+}
+
+q::after {
+  position: relative;
+}
+
+a {
+  /*@include link($c-link, none, $c-link-hover, none);*/
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
 .banner-image {
   position: relative;
   text-align: center;
@@ -3936,7 +3941,6 @@ table  ul {
 
 /*}*/
 
-
 .field--label-inline {
   clear: both;
 }
@@ -3957,31 +3961,19 @@ table  ul {
 .field--label-inline p:first-child {
   margin-top: 0;
 }
-.js-form-type-checkbox {
-  margin: 0;
-}
 
 .checkbox-wrapper {
-  top: 4px;
-  display: inline-block;
-  position: relative;
-  width: 20px;
-  height: 20px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
   z-index: 1;
-  /*border: 2px solid $ c-ui-border;*/
-  /*border-radius: $ ui-border-radius;*/
-  /*background: $ c-ui-background;*/
 }
 
 .checkbox-wrapper i {
   font-size: 22px;
-  position: absolute;
   top: -4px;
   left: -2px;
   opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out;
-  transition: opacity .2s ease-in-out;
-  /*color: $c-ui-active-form-element;*/
 }
 
 .checkbox-wrapper .form-checkbox {
@@ -4270,14 +4262,11 @@ input:invalid:focus {
 .image-widget .form-submit {
   margin: 0;
 }
-label {
-  /*@include sans;*/
-  /*@include fontsize(12, all);*/
-}
-
 .js-form-type-checkbox label,
 .js-form-type-radio label {
-  /*@include fontsize(14, all);*/
+  font-size: var(--h4);
+  letter-spacing: normal;
+  letter-spacing: initial;
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -4285,7 +4274,6 @@ label {
   margin-left: -20px;
   cursor: pointer;
   text-transform: none;
-  font-weight: normal;
 }
 .js-form-type-radio {
   margin: 0;

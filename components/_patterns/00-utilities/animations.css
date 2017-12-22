@@ -2,11 +2,12 @@
 .bgt {
   transition: background var(--animation-transition-time) ease-in-out;
 }
-
 .bst {
   transition: box-shadow var(--animation-transition-time) ease-in-out;
 }
-
+.opt {
+  transition: opacity var(--animation-transition-time) ease-in-out;
+}
 .allt {
   transition: all var(--animation-transition-time) ease-in-out;
 }

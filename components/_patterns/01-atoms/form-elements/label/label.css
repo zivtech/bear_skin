@@ -1,12 +1,7 @@
-label {
-  /*@include sans;*/
-  /*@include fontsize(12, all);*/
-}
-
 .js-form-type-checkbox label,
 .js-form-type-radio label {
-  /*@include fontsize(14, all);*/
-
+  font-size: var(--h4);
+  letter-spacing: initial;
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -14,5 +9,4 @@ label {
   margin-left: -20px;
   cursor: pointer;
   text-transform: none;
-  font-weight: normal;
 }
