@@ -1,4 +1,8 @@
-body, .sans {
+body {
+  font-size: var(--body-font-size);
+}
+
+.sans {
   font-family: var(--sans);
 }
 

@@ -15,6 +15,7 @@ module.exports = {
 
   "--sans": styleVariables.fontList['f-sans'],
   "--serif": styleVariables.fontList['f-serif'],
+  "--body-font-size": styleVariables.fontList['body-font-size'],
   "--h1": styleVariables.fontList['h1'],
   "--h2": styleVariables.fontList['h2'],
   "--h3": styleVariables.fontList['h3'],

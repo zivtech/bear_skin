@@ -1,7 +1,10 @@
 {% set attributes = attributes.addClass([
   'mt1',
   'mb1',
-  'p1',
+  'pt2',
+  'pb2',
+  'pr1',
+  'pl1',
   'flex',
   'items-center',
   'border',
@@ -32,7 +35,7 @@
 
   {% block content %}
     {% if messages|length > 1 %}
-      <ul class="messages__list">
+      <ul class="messages__list m0 p0">
         {% for message in messages %}
           <li class="messages__item">{{ message }}</li>
         {% endfor %}
