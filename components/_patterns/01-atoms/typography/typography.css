@@ -39,6 +39,5 @@ q::after {
 }
 
 a {
-  /*@include link($c-link, none, $c-link-hover, none);*/
   transition: color var(--animation-transition-time) ease-in-out;
 }

@@ -13,7 +13,7 @@
 }
 
 .menu--main  a.is-active,
-.menu--main    .menu-item--active-trail a {
+.menu--main  .menu-item--active-trail a {
   /*@include link($ white, none, $ white, none);*/
   /*background-color: $ black;*/
 }

@@ -1,18 +1,18 @@
 {% block content %}
   {% if site_logo %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="branding__site-logo">
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="branding__site-logo block relative">
       <object type="image/svg+xml" data="{{ site_logo }}" class="logo">
         <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" class="branding__site-logo-image"/>
       </object>
     </a>
   {% endif %}
-  <div class="branding__flex-container">
+  <div class="branding__meta flex flex-column justify-center">
   {% if site_name %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="branding__site-name">{{ site_name }}</a>
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="branding__site-name ml05 mr05">{{ site_name }}</a>
   {% endif %}
 
   {% if site_slogan %}
-    <h6 class="branding__site-slogan">{{ site_slogan }}</h6>
+    <h6 class="branding__site-slogan ml05 mr05">{{ site_slogan }}</h6>
   {% endif %}
   </div>
 {% endblock %}

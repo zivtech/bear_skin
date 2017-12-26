@@ -1,45 +1,13 @@
 .branding__site-logo {
-  width: 50px;
   height: 50px;
-  display: block;
-  position: relative;
+  width: 50px;
+}
+
+.logo {
+  height: 100%;
 }
 
 .branding__site-logo object {
   position: absolute;
-  z-index: -1;
-
-  /*@include breakpoint(break-2) {*/
-    /*width: 75px;*/
-    /*height: 75px;*/
-  /*}*/
-}
-
-.branding__flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.branding__site-name {
-  /*@include element-invisible;*/
-  margin: 0 .5rem;
-
-  /*@include breakpoint(break-2) {*/
-    /*@include element-invisible-off;*/
-    /*@include sans;*/
-    /*@include fontsize(12, 0);*/
-    /*text-transform: uppercase;*/
-    /*margin: 0 1rem;*/
-    /*font-weight: 700;*/
-  /*}*/
-}
-
-.branding_site-slogan {
-  font-size: 12px;
-  margin: 0 .5em;
-  /*@include breakpoint(break-2) {*/
-    /*font-size: 14px;*/
-    /*margin: 0 1rem;*/
-  /*}*/
+  z-index: -1; /* fix to get link to work over the SVG object */
 }

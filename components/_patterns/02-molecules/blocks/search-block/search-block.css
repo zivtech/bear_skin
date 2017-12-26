@@ -83,8 +83,7 @@
   top: 16px;
 }
 
-
-#search-block-form  .form-submit {
+#search-block-form .form-submit {
   opacity: 0;
   position: relative;
   z-index: 2;

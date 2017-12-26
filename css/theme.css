@@ -1759,59 +1759,6 @@ textarea {
     transform: rotate(360deg);
   }
 }
-/*Authored by Hugo Giraudel*/
-
-/*// See https://css-tricks.com/snippets/sass/str-replace-function/.*/
-
-/*@function str-replace($string, $search, $replace: '') {*/
-
-/*$index: str-index($string, $search);*/
-
-/*@if $index {*/
-
-/*@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);*/
-
-/*}*/
-
-/*@return $string;*/
-
-/*}*/
-
-/*// Authored by Hugo Giraudel.*/
-
-/*// See https://css-tricks.com/snippets/sass/deep-getset-maps/.*/
-
-/*@function map-deep-get($map, $keys...) {*/
-
-/*@each $key in $keys {*/
-
-/*$map: map-get($map, $key);*/
-
-/*}*/
-
-/*@return $map;*/
-
-/*}*/
-
-/*@function c($key, $variant: 'base', $map: $c-palette) {*/
-
-/*@if not map-has-key($map, $key) {*/
-
-/*@error "Key '#{$key}' not found in map: #{$map}";*/
-
-/*}*/
-
-/*$color: map-get($map, $key);*/
-
-/*@if not map-has-key($color, $variant) {*/
-
-/*@error "Variant '#{$variant}' not found in map: #{$color}";*/
-
-/*}*/
-
-/*@return map-deep-get($map, $key, $variant);*/
-
-/*}*/
 /*Wrappers*/
 
 body {
@@ -1834,6 +1781,14 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+.element-invisible,
+.visually-hidden {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 /*
@@ -1899,1091 +1854,6 @@ Additional utility classes based on basscss
 .opaque {
   opacity: 0;
 }
-
-/*Left Sidebar*/
-
-/*.layout-sidebar-first {*/
-
-/*.wrapper-main__inner {*/
-
-/*@include breakpoint(break-2) {*/
-
-/*display: flex;*/
-
-/*}*/
-
-/*}*/
-
-/*.column.main {*/
-
-/*@include breakpoint(break-2) {*/
-
-/*padding: 0 0 0 2rem;*/
-
-/*flex-basis: 75%;*/
-
-/*order: 2;*/
-
-/*}*/
-
-/*}*/
-
-/*.column.sidebar {*/
-
-/*@include breakpoint(break-2) {*/
-
-/*flex-basis: 25%;*/
-
-/*order: 1;*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*!*Right Sidebar*!*/
-
-/*.layout-sidebar-second {*/
-
-/*@extend .layout-sidebar-first;*/
-
-/*.column.main {*/
-
-/*@include breakpoint(break-2) {*/
-
-/*padding: 0 2rem 0 0;*/
-
-/*order: 1;*/
-
-/*}*/
-
-/*}*/
-
-/*.column.sidebar {*/
-
-/*@include breakpoint(break-2) {*/
-
-/*order: 2;*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*!*Two Sidebars*!*/
-
-/*.layout-two-sidebars {*/
-
-/*.wrapper-main__inner {*/
-
-/*@include breakpoint(break-2) {*/
-
-/*display: flex;*/
-
-/*}*/
-
-/*}*/
-
-/*.column.main {*/
-
-/*@include breakpoint(break-2) {*/
-
-/*padding: 0 2rem;*/
-
-/*flex-basis: 75%;*/
-
-/*order: 2;*/
-
-/*}*/
-
-/*}*/
-
-/*.column.sidebar {*/
-
-/*@include breakpoint(break-2) {*/
-
-/*flex-basis: 25%;*/
-
-/*&.sidebar--first {*/
-
-/*order: 1;*/
-
-/*}*/
-
-/*&.sidebar--second {*/
-
-/*order: 3;*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-/*@mixin element-invisible {*/
-
-/*position: absolute;*/
-
-/*height: 0;*/
-
-/*width: 0;*/
-
-/*overflow: hidden;*/
-
-/*clip: rect(1px, 1px, 1px, 1px);*/
-
-/*}*/
-
-/*@mixin element-invisible-off {*/
-
-/*position: relative;*/
-
-/*height: auto;*/
-
-/*width: auto;*/
-
-/*overflow: inherit;*/
-
-/*clip: none;*/
-
-/*}*/
-
-/*@mixin link($color, $text-decoration, $hover-color, $hover-text-decoration) {*/
-
-/*color: $color;*/
-
-/*text-decoration: $text-decoration;*/
-
-/*&:visited {*/
-
-/*color: $color;*/
-
-/*&:hover,*/
-
-/*&:focus {*/
-
-/*color: $hover-color;*/
-
-/*text-decoration: $hover-text-decoration;*/
-
-/*}*/
-
-/*}*/
-
-/*&:hover,*/
-
-/*&:focus {*/
-
-/*color: $hover-color;*/
-
-/*text-decoration: $hover-text-decoration;*/
-
-/*}*/
-
-/*}*/
-
-/*@function hex($color, $percentage) {*/
-
-/*@if $percentage == .1 {*/
-
-/*@return lighten($color, 45%);*/
-
-/*}*/
-
-/*@if $percentage == .2 {*/
-
-/*@return lighten($color, 40%);*/
-
-/*}*/
-
-/*@if $percentage == .3 {*/
-
-/*@return lighten($color, 35%);*/
-
-/*}*/
-
-/*@if $percentage == .4 {*/
-
-/*@return lighten($color, 30%);*/
-
-/*}*/
-
-/*@if $percentage == .5 {*/
-
-/*@return lighten($color, 25%);*/
-
-/*}*/
-
-/*@if $percentage == .6 {*/
-
-/*@return lighten($color, 20%);*/
-
-/*}*/
-
-/*@if $percentage == .7 {*/
-
-/*@return lighten($color, 15%);*/
-
-/*}*/
-
-/*@if $percentage == .8 {*/
-
-/*@return lighten($color, 10%);*/
-
-/*}*/
-
-/*@if $percentage == .9 {*/
-
-/*@return lighten($color, 5%);*/
-
-/*}*/
-
-/*}*/
-
-/*// Alpha Color*/
-
-/*// Include in an element to create a transparent background or color with a hex*/
-
-/*// value fallback for older browsers.*/
-
-/*@mixin alpha-color($type, $color, $percentage) {*/
-
-/*@if $type == color {*/
-
-/*color: rgba($color, $percentage);*/
-
-/*}*/
-
-/*@if $type == background {*/
-
-/*background-color: rgba($color, $percentage);*/
-
-/*}*/
-
-/*}*/
-
-/*@mixin button($color, $background-color, $background-hover) {*/
-
-/*@include sans;*/
-
-/*@include fontsize(13, all);*/
-
-/*position: relative;*/
-
-/*display: inline-block;*/
-
-/*outline: none;*/
-
-/*text-decoration: none;*/
-
-/*cursor: pointer;*/
-
-/*border-style: none;*/
-
-/*transition: background .2s ease-in-out;*/
-
-/*text-transform: uppercase;*/
-
-/*background: $background-color;*/
-
-/*color: $white;*/
-
-/*padding: $ui-button-padding;*/
-
-/*border-radius: $ui-border-radius;*/
-
-/*&:hover,*/
-
-/*&:focus {*/
-
-/*background: $background-hover;*/
-
-/*text-decoration: none;*/
-
-/*}*/
-
-/*}*/
-
-/*@mixin placeholder {*/
-
-/*font-size: 12px;*/
-
-/*font-weight: 400;*/
-
-/*}*/
-
-/*@mixin serif {*/
-
-/*font-family: unquote(map-get($bodytype, font-family));*/
-
-/*}*/
-
-/*@mixin sans {*/
-
-/*font-family: unquote(map-get($headingtype, font-family));*/
-
-/*}*/
-
-/*// Generates classes based on map keys.*/
-
-/*//*/
-
-/*// @param $map*/
-
-/*//   A map full of maps. See $c-palette in _variables.scss.*/
-
-/*// @param $variants*/
-
-/*//   A Sass list of variants classes should be generated for.*/
-
-/*// @param $prefix*/
-
-/*//   A string that will be appended to the front of the generated class names.*/
-
-/*// @param $property*/
-
-/*//   The CSS property the generated classes will set. A string.*/
-
-/*//*/
-
-/*// Classes will only be generated for each color if the corresponding variant is*/
-
-/*// found. For example, if my first $c-palette color only has values for "base"*/
-
-/*// and "dark", no "light" class will be generated.*/
-
-/*//*/
-
-/*@mixin generate-key-classes($map, $variants, $prefix, $property) {*/
-
-/*@each $key, $value in $map {*/
-
-/*@each $variant in $variants {*/
-
-/*$prop-value: map-get($value, $variant);*/
-
-/*@if $variant == 'base' {*/
-
-/*.#{$prefix}-#{$key} {*/
-
-/*#{$property}: $prop-value;*/
-
-/*}*/
-
-/*}*/
-
-/*@else {*/
-
-/*@if map-has-key($value, $variant) {*/
-
-/*.#{$prefix}-#{$key}--#{$variant} {*/
-
-/*#{$property}: $prop-value;*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*// Generates classes based on map values.*/
-
-/*//*/
-
-/*// @param $map*/
-
-/*//   A map full of maps. See $c-palette in _variables.scss.*/
-
-/*// @param $variants*/
-
-/*//   A Sass list of variants classes should be generated for.*/
-
-/*// @param $prefix*/
-
-/*//   A string that will be appended to the front of the generated class names.*/
-
-/*// @param $property*/
-
-/*//   The CSS property the generated classes will set. A string.*/
-
-/*//*/
-
-/*// Classes will only be generated for each color if the corresponding variant is*/
-
-/*// found. For example, if my first $c-palette color only has values for "base"*/
-
-/*// and "dark", no "light" class will be generated.*/
-
-/*//*/
-
-/*@mixin generate-value-classes($map, $variants, $prefix, $property) {*/
-
-/*@each $key, $value in $map {*/
-
-/*@each $variant in $variants {*/
-
-/*// Strip any # from hex codes for use in class names.*/
-
-/*$base-value: map-get($value, 'base');*/
-
-/*$clean-value: str-replace(#{$base-value}, '#', '');*/
-
-/*$prop-value: map-get($value, $variant);*/
-
-/*@if $variant == 'base' {*/
-
-/*.#{$prefix}-#{$clean-value} {*/
-
-/*#{$property}: $prop-value;*/
-
-/*}*/
-
-/*}*/
-
-/*@else {*/
-
-/*@if map-has-key($value, $variant) {*/
-
-/*.#{$prefix}-#{$clean-value}--#{$variant} {*/
-
-/*#{$property}: $prop-value;*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-.element-invisible,
-.visually-hidden {
-  position: absolute;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/*//*/
-
-/*// Display utilities*/
-
-/*//*/
-
-/*.u-hidden,*/
-
-/*.visually-hidden,*/
-
-/*.element-invisible {*/
-
-/*@include element-invisible;*/
-
-/*}*/
-
-/*.u-block {*/
-
-/*display: block;*/
-
-/*}*/
-
-/*.u-inline-block {*/
-
-/*display: inline-block;*/
-
-/*}*/
-
-/*.u-inline {*/
-
-/*display: inline;*/
-
-/*}*/
-
-/*// Drupal utilities*/
-
-/*.align-center {*/
-
-/*text-align: center;*/
-
-/*}*/
-
-/*.align-left {*/
-
-/*text-align: left;*/
-
-/*}*/
-
-/*.align-right {*/
-
-/*text-align: right;*/
-
-/*}*/
-
-/*//*/
-
-/*// Images utilities*/
-
-/*//*/
-
-/*img.align-center {*/
-
-/*margin: 0 auto;*/
-
-/*width: 100%;*/
-
-/*max-width: $site-max-width;*/
-
-/*}*/
-
-/*.u-img-centered {*/
-
-/*img {*/
-
-/*margin: 0 auto;*/
-
-/*}*/
-
-/*}*/
-
-/*.desaturate {*/
-
-/*img {*/
-
-/*filter: grayscale(100%);*/
-
-/*transition: filter .3s ease-in-out;*/
-
-/*&:hover,*/
-
-/*&:focus {*/
-
-/*filter: none;*/
-
-/*}*/
-
-/*}*/
-
-/*}*/
-
-/*// Typography utilities*/
-
-/*.sans {*/
-
-/*@include sans;*/
-
-/*}*/
-
-/*.serif {*/
-
-/*@include serif;*/
-
-/*}*/
-
-/*.text-italic {*/
-
-/*font-style: italic;*/
-
-/*}*/
-
-/*.text-centered {*/
-
-/*text-align: center;*/
-
-/*}*/
-
-/*.text-right {*/
-
-/*text-align: right;*/
-
-/*}*/
-
-/*.text-left {*/
-
-/*text-align: left;*/
-
-/*}*/
-
-/*.text-highlighted {*/
-
-/*&::selection {*/
-
-/*background: $light-bermuda-grey;*/
-
-/*}*/
-
-/*}*/
-
-/*.line-height-reset {*/
-
-/*line-height: 1 !important;*/
-
-/*}*/
-
-/*.no-decoration {*/
-
-/*text-decoration: none;*/
-
-/*&:hover,*/
-
-/*&:focus {*/
-
-/*text-decoration: none;*/
-
-/*}*/
-
-/*}*/
-
-/*.underline {*/
-
-/*text-decoration: underline;*/
-
-/*}*/
-
-/*// Layout utilities*/
-
-/*.clearfix {*/
-
-/*clear: both;*/
-
-/*}*/
-
-/*.expand-full-width {*/
-
-/*width: 100vw !important;*/
-
-/*margin-left: calc(-50vw + 50%) !important;*/
-
-/*}*/
-
-/*.site-max-width {*/
-
-/*max-width: $site-max-width;*/
-
-/*margin: 0 auto;*/
-
-/*}*/
-
-/*//*/
-
-/*// Padding*/
-
-/*//*/
-
-/*//Padding on all sides (equal)*/
-
-/*.padd-all-05 {*/
-
-/*padding: .5rem;*/
-
-/*}*/
-
-/*.padd-all-1 {*/
-
-/*padding: 1rem;*/
-
-/*}*/
-
-/*.padd-all-2 {*/
-
-/*padding: 2rem;*/
-
-/*}*/
-
-/*.padd-all-3 {*/
-
-/*padding: 3rem;*/
-
-/*}*/
-
-/*.padd-all-4 {*/
-
-/*padding: 4rem;*/
-
-/*}*/
-
-/*// Padding-top*/
-
-/*.padd-top-05 {*/
-
-/*padding-top: .5rem;*/
-
-/*}*/
-
-/*.padd-top-1 {*/
-
-/*padding-top: 1rem;*/
-
-/*}*/
-
-/*.padd-top-2 {*/
-
-/*padding-top: 2rem;*/
-
-/*}*/
-
-/*.padd-top-3 {*/
-
-/*padding-top: 3rem;*/
-
-/*}*/
-
-/*.padd-top-4 {*/
-
-/*padding-top: 4rem;*/
-
-/*}*/
-
-/*// Padding-bottom*/
-
-/*.padd-bottom-05 {*/
-
-/*padding-bottom: .5rem;*/
-
-/*}*/
-
-/*.padd-bottom-1 {*/
-
-/*padding-bottom: 1rem;*/
-
-/*}*/
-
-/*.padd-bottom-2 {*/
-
-/*padding-bottom: 2rem;*/
-
-/*}*/
-
-/*.padd-bottom-3 {*/
-
-/*padding-bottom: 3rem;*/
-
-/*}*/
-
-/*.padd-bottom-4 {*/
-
-/*padding-bottom: 4rem;*/
-
-/*}*/
-
-/*// Padding-left*/
-
-/*.padd-left-05 {*/
-
-/*padding-left: .5rem;*/
-
-/*}*/
-
-/*.padd-left-1 {*/
-
-/*padding-left: 1rem;*/
-
-/*}*/
-
-/*.padd-left-2 {*/
-
-/*padding-left: 2rem;*/
-
-/*}*/
-
-/*.padd-left-3 {*/
-
-/*padding-left: 3rem;*/
-
-/*}*/
-
-/*.padd-left-4 {*/
-
-/*padding-left: 4rem;*/
-
-/*}*/
-
-/*// Padding-right*/
-
-/*.padd-right-05 {*/
-
-/*padding-right: .5rem;*/
-
-/*}*/
-
-/*.padd-right-1 {*/
-
-/*padding-right: 1rem;*/
-
-/*}*/
-
-/*.padd-right-2 {*/
-
-/*padding-right: 2rem;*/
-
-/*}*/
-
-/*.padd-right-3 {*/
-
-/*padding-right: 3rem;*/
-
-/*}*/
-
-/*.padd-right-4 {*/
-
-/*padding-right: 4rem;*/
-
-/*}*/
-
-/*// No Padding*/
-
-/*.np {*/
-
-/*padding: 0 !important;*/
-
-/*}*/
-
-/*.np-top {*/
-
-/*padding-top: 0 !important;*/
-
-/*}*/
-
-/*.np-bottom {*/
-
-/*padding-bottom: 0 !important;*/
-
-/*}*/
-
-/*.np-left {*/
-
-/*padding-left: 0 !important;*/
-
-/*}*/
-
-/*.np-right {*/
-
-/*padding-right: 0 !important;*/
-
-/*}*/
-
-/*//*/
-
-/*// Margin*/
-
-/*//*/
-
-/*// Margin on all sides (equal)*/
-
-/*.marg-all-05 {*/
-
-/*margin: .5rem;*/
-
-/*}*/
-
-/*.marg-all-1 {*/
-
-/*margin: 1rem;*/
-
-/*}*/
-
-/*.marg-all-2 {*/
-
-/*margin: 2rem;*/
-
-/*}*/
-
-/*.marg-all-3 {*/
-
-/*margin: 3rem;*/
-
-/*}*/
-
-/*.marg-all-4 {*/
-
-/*margin: 4rem;*/
-
-/*}*/
-
-/*// Margin-top*/
-
-/*.marg-top-05 {*/
-
-/*margin-top: .5rem;*/
-
-/*}*/
-
-/*.marg-top-1 {*/
-
-/*margin-top: 1rem;*/
-
-/*}*/
-
-/*.marg-top-2 {*/
-
-/*margin-top: 2rem;*/
-
-/*}*/
-
-/*.marg-top-3 {*/
-
-/*margin-top: 3rem;*/
-
-/*}*/
-
-/*.marg-top-4 {*/
-
-/*margin-top: 4rem;*/
-
-/*}*/
-
-/*// Margin-bottom*/
-
-/*.marg-bottom-05 {*/
-
-/*margin-bottom: .5rem;*/
-
-/*}*/
-
-/*.marg-bottom-1 {*/
-
-/*margin-bottom: 1rem;*/
-
-/*}*/
-
-/*.marg-bottom-2 {*/
-
-/*margin-bottom: 2rem;*/
-
-/*}*/
-
-/*.marg-bottom-3 {*/
-
-/*margin-bottom: 3rem;*/
-
-/*}*/
-
-/*.marg-bottom-4 {*/
-
-/*margin-bottom: 4rem;*/
-
-/*}*/
-
-/*// Margin-left*/
-
-/*.marg-left-05 {*/
-
-/*margin-left: .5rem;*/
-
-/*}*/
-
-/*.marg-left-1 {*/
-
-/*margin-left: 1rem;*/
-
-/*}*/
-
-/*.marg-left-2 {*/
-
-/*margin-left: 2rem;*/
-
-/*}*/
-
-/*.marg-left-3 {*/
-
-/*margin-left: 3rem;*/
-
-/*}*/
-
-/*.marg-left-4 {*/
-
-/*margin-left: 4rem;*/
-
-/*}*/
-
-/*// Margin-right*/
-
-/*.marg-right-05 {*/
-
-/*margin-right: .5rem;*/
-
-/*}*/
-
-/*.marg-right-1 {*/
-
-/*margin-right: 1rem;*/
-
-/*}*/
-
-/*.marg-right-2 {*/
-
-/*margin-right: 2rem;*/
-
-/*}*/
-
-/*.marg-right-3 {*/
-
-/*margin-right: 3rem;*/
-
-/*}*/
-
-/*.marg-right-4 {*/
-
-/*margin-right: 4rem;*/
-
-/*}*/
-
-/*// No Margin*/
-
-/*.nm {*/
-
-/*margin: 0 !important;*/
-
-/*}*/
-
-/*.nm-top {*/
-
-/*margin-top: 0 !important;*/
-
-/*}*/
-
-/*.nm-bottom {*/
-
-/*margin-bottom: 0 !important;*/
-
-/*}*/
-
-/*.nm-left {*/
-
-/*margin-left: 0 !important;*/
-
-/*}*/
-
-/*.nm-right {*/
-
-/*margin-right: 0 !important;*/
-
-/*}*/
-
-/*// Various*/
-
-/*.no-list {*/
-
-/*list-style-type: none;*/
-
-/*li::before {*/
-
-/*display: none;*/
-
-/*}*/
-
-/*}*/
 .skip-link {
   margin: 0 auto;
   padding: 0;
@@ -3515,9 +2385,77 @@ q::after {
 }
 
 a {
-  /*@include link($c-link, none, $c-link-hover, none);*/
   -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
+}
+@media (min-width: 52em) {
+  .wrapper-header__inner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.sticky-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.sticky-footer .wrapper-main {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+.node--unpublished {
+  background: hsla(327, 100%, 92%, 1);
+}
+
+.node--unpublished:before {
+  content: 'DRAFT';
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  display: block;
+}
+.region--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.region--navigation {
+  margin: 0 1rem;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
+
+.region--search {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
 }
 .banner-image {
   position: relative;
@@ -3545,7 +2483,6 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  /*color: $white;*/
 }
 blockquote {
   margin: 2rem;
@@ -3743,75 +2680,6 @@ td.description {
 
 table  ul {
   padding-left: 15px;
-}
-.sticky-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.sticky-footer .wrapper-main {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  overflow: hidden;
-}
-@media (min-width: 52em) {
-  .wrapper-header__inner {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
-.node--unpublished {
-  background: hsla(327, 100%, 92%, 1);
-}
-
-.node--unpublished:before {
-  content: 'DRAFT';
-  width: 100%;
-  text-align: center;
-  padding: 30px 0;
-  display: block;
-}
-.region--header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.region--navigation {
-  margin: 0 1rem;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-}
-
-.region--search {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
 }
 /*flexbox overrides*/
 
@@ -4023,7 +2891,6 @@ table  ul {
 .field--label-inline p:first-child {
   margin-top: 0;
 }
-
 .checkbox-wrapper {
   top: 2px;
   width: 16px;
@@ -4053,258 +2920,6 @@ table  ul {
 .form-checkboxes .form-item:last-child {
   margin-bottom: 0;
 }
-/*::-webkit-input-placeholder {*/
-
-/*!*@include placeholder;*!*/
-
-/*}*/
-
-/*:-moz-placeholder { !* Firefox 18- *!*/
-
-/*!*@include placeholder;*!*/
-
-/*}*/
-
-/*::-moz-placeholder {  !* Firefox 19+ *!*/
-
-/*!*@include placeholder;*!*/
-
-/*}*/
-
-/*:-ms-input-placeholder {*/
-
-/*!*@include placeholder;*!*/
-
-/*}*/
-
-/*.form-required::after {*/
-
-/*content: '';*/
-
-/*vertical-align: super;*/
-
-/*display: inline-block;*/
-
-/*background: url('../images/required.svg') no-repeat left center;*/
-
-/*background-size: 6px 6px;*/
-
-/*margin-left: .3rem;*/
-
-/*width: 6px;*/
-
-/*height: 6px;*/
-
-/*}*/
-
-/*.description,*/
-
-/*.filter-guidelines,*/
-
-/*.field-suffix {*/
-
-/*!*@include fontsize(12, all);*!*/
-
-/*clear: both;*/
-
-/*margin-bottom: 1rem;*/
-
-/*padding: .2rem 0;*/
-
-/*line-height: 1.5;*/
-
-/*!*color: $c-ui-font;*!*/
-
-/*}*/
-
-/*.description ul,*/
-
-/*.filter-guidelines ul {*/
-
-/*line-height: 1.5;*/
-
-/*}*/
-
-/*.filter-help {*/
-
-/*!*@include fontsize(14, all);*!*/
-
-/*float: none;*/
-
-/*}*/
-
-/*.filter-wrapper {*/
-
-/*!*border: 1px solid $c-ui-border;*!*/
-
-/*}*/
-
-/*.field-suffix {*/
-
-/*!*@extend .description;*!*/
-
-/*}*/
-
-/*.dropbutton-multiple {*/
-
-/*margin-right: 5px;*/
-
-/*}*/
-
-/*.form-text,*/
-
-/*.form-email,*/
-
-/*.form-textarea,*/
-
-/*.form-date,*/
-
-/*.form-password,*/
-
-/*.form-date {*/
-
-/*!*@include fontsize(16, all);*!*/
-
-/*padding: .5rem .5rem;*/
-
-/*width: 100%;*/
-
-/*max-width: 30em;*/
-
-/*transition: border .2s ease-in-out;*/
-
-/*!*border: 1px solid $ c-ui-border;*!*/
-
-/*}*/
-
-/*.form-text:focus,*/
-
-/*.form-email:focus,*/
-
-/*.form-textarea:focus,*/
-
-/*.form-date:focus,*/
-
-/*.form-password:focus,*/
-
-/*.form-date:focus {*/
-
-/*outline: 0;*/
-
-/*!*border-color: $c-ui-active-form-element;*!*/
-
-/*}*/
-
-/*.form-date {*/
-
-/*!*@include sans;*!*/
-
-/*max-width: 10em;*/
-
-/*}*/
-
-/*.form-textarea {*/
-
-/*!*@include sans;*!*/
-
-/*}*/
-
-/*.form-submit {*/
-
-/*!*@extend .button;*!*/
-
-/*}*/
-
-/*input[type='search'] {*/
-
-/*!*@extend .form-text;*!*/
-
-/*appearance: initial;*/
-
-/*}*/
-
-/*.field-suffix {*/
-
-/*display: block;*/
-
-/*}*/
-
-/*.dropbutton-widget .form-submit {*/
-
-/*padding: 0;*/
-
-/*margin: 0;*/
-
-/*background: transparent;*/
-
-/*}*/
-
-/*.dropbutton-widget .secondary-action {*/
-
-/*margin-top: 5px;*/
-
-/*}*/
-
-/*.dropbutton-widget.dropbutton-toggle button,*/
-
-/*.dropbutton-widget.dropbutton-toggle a {*/
-
-/*!*color: $white;*!*/
-
-/*}*/
-
-/*fieldset {*/
-
-/*padding: 1rem;*/
-
-/*!*border: 1px solid $c-ui-border;*!*/
-
-/*}*/
-
-/*.ajax-progress-throbber {*/
-
-/*position: absolute;*/
-
-/*top: 0;*/
-
-/*left: 0;*/
-
-/*width: 100%;*/
-
-/*height: 100%;*/
-
-/*background: rgba(255, 255, 255, .8);*/
-
-/*display: flex;*/
-
-/*align-items: center;*/
-
-/*justify-content: center;*/
-
-/*}*/
-
-/*.ajax-progress-throbber .throbber {*/
-
-/*width: 30px;*/
-
-/*height: 30px;*/
-
-/*border-radius: 50%;*/
-
-/*animation: spin 1s infinite linear;*/
-
-/*!*border: .3rem solid $black;*!*/
-
-/*!*border-top-color: $white;*!*/
-
-/*}*/
-
-/*div[id^='ajax-wrapper'] {*/
-
-/*position: relative;*/
-
-/*}*/
-
 .form-item input {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -4404,61 +3019,20 @@ input:invalid:focus {
 .form-type-textarea + .filter-wrapper {
   margin-top: -1rem;
 }
-code {
-  margin: .5rem 0;
-}
 .branding__site-logo {
-  width: 50px;
   height: 50px;
-  display: block;
-  position: relative;
+  width: 50px;
+}
+
+.logo {
+  height: 100%;
 }
 
 .branding__site-logo object {
   position: absolute;
   z-index: -1;
-  /*@include breakpoint(break-2) {*/
-  /*width: 75px;*/
-  /*height: 75px;*/
-  /*}*/
+  /* fix to get link to work over the SVG object */
 }
-
-.branding__flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.branding__site-name {
-  /*@include element-invisible;*/
-  margin: 0 .5rem;
-  /*@include breakpoint(break-2) {*/
-  /*@include element-invisible-off;*/
-  /*@include sans;*/
-  /*@include fontsize(12, 0);*/
-  /*text-transform: uppercase;*/
-  /*margin: 0 1rem;*/
-  /*font-weight: 700;*/
-  /*}*/
-}
-
-.branding_site-slogan {
-  font-size: 12px;
-  margin: 0 .5em;
-  /*@include breakpoint(break-2) {*/
-  /*font-size: 14px;*/
-  /*margin: 0 1rem;*/
-  /*}*/
-}
-
 .panel-action--search {
   font-size: 24px;
   -webkit-transition: .2s color ease-in-out;
@@ -4531,7 +3105,7 @@ code {
   top: 16px;
 }
 
-#search-block-form  .form-submit {
+#search-block-form .form-submit {
   opacity: 0;
   position: relative;
   z-index: 2;
@@ -4558,24 +3132,6 @@ code {
   .panel-action--close-search {
     margin-right: 0;
   }
-}
-.wrapper-breadcrumb {
-  /*border-top: 1px solid $c-ui-border;*/
-}
-
-.breadcrumb {
-  padding: .5rem 0;
-}
-
-.breadcrumb__item {
-  /*@include fontsize(14, all);*/
-  text-transform: uppercase;
-  display: inline;
-  margin-right: 5px;
-}
-
-.breadcrumb__link {
-  padding-right: 5px;
 }
 .list-group__description {
   padding-left: 1rem;
@@ -4614,7 +3170,7 @@ code {
 }
 
 .menu--main  a.is-active,
-.menu--main    .menu-item--active-trail a {
+.menu--main  .menu-item--active-trail a {
   /*@include link($ white, none, $ white, none);*/
   /*background-color: $ black;*/
 }
