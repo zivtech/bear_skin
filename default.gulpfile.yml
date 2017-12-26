@@ -3,7 +3,7 @@
 # setting to match your system
 #
 paths:
-  devUrl: "bear8.vm"
+  devUrl: "zivtechd8.lndo.site"
 theme:
   name: "bear_skin"
 patternLab:
@@ -24,7 +24,7 @@ bower:
   src: "components/vendor/bower/raw"
   dest: "components/vendor/bower"
 css:
-  src: ["components/**/*.css"]
+  src: ["components/_patterns/**/*.css"]
   dest: "css"
   buildSourceMaps: false
   lint:

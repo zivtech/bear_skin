@@ -1831,6 +1831,10 @@ body {
   right: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*
 Additional utility classes based on basscss
 */
