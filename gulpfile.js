@@ -40,7 +40,7 @@
 
   gulp.task('watch', ['serve', 'styles:watch', 'scripts:watch', 'pl:watch']);
   gulp.task('default', ['watch']);
-  gulp.task('build', ['styles:build', 'pl:build', 'favicons:build', 'images:build', 'fonts:download']);
+  gulp.task('build', ['styles:build']);
   gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
   gulp.task('audit', ['audit:specificity', 'audit:pa11y', 'audit:analyze']);
 

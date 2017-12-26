@@ -5,13 +5,12 @@
     "c-tertiary"  : "black",
     "border-color-primary": "#ddd",
     "border-color-secondary": "#bbb",
-    "border-color-error": "red",
-    "animation-transition-time": ".2s"
+    "border-color-error": "red"
   },
   "bgList": {
-    "bg-primary"  : "#000000",
-    "bg-secondary"  : "#666",
-    "bg-tertiary"  : "#ddd"
+    "bg-primary": "#000000",
+    "bg-secondary": "#666",
+    "bg-tertiary": "#ddd"
   },
   "layout": {
     "site-max-width": "1024px"
@@ -25,5 +24,8 @@
     "h3": "1.17rem",
     "h4": "1rem",
     "h5": "0.83rem"
+  },
+  "ui": {
+    "animation-transition-time": ".2s"
   }
 }

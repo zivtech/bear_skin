@@ -4667,65 +4667,73 @@ code {
 }
 
 
-.pager__items {
-  padding: 1rem 0;
-  list-style: none;
-  margin: 0 auto;
-  text-align: center;
-}
 
-.pager__item {
-  display: inline-block;
-}
 
-.pager__item.is-active {
-  /*background: $ c-ui-active-form-element;*/
-}
+/*.pager__item--ellipsis {*/
 
-.pager__item.is-active a {
-  /*color: $ white;*/
-}
+/*padding: 0 2rem;*/
 
-.pager__item--ellipsis {
-  padding: 0 2rem;
-}
+/*}*/
 
-.pager__item--ellipsis::after {
-  /*color: $ grey;*/
-  content: '...';
-}
+/*.pager__item--ellipsis::after {*/
 
-.pager__item--first a i::before,
-.pager__item--last a i::before {
-  width: auto;
-}
+/*content: '...';*/
 
-.pager__item__link {
-  /*color: $ grey;*/
-  display: block;
-  padding: .25rem 1rem;
-  position: relative;
-}
+/*}*/
 
-.pager__item__link i {
-  /*color: $ black;*/
-  display: inline-block;
-  font-size: 12px;
-  margin: 0;
-  position: relative;
-  text-align: center;
-}
+/*.pager__item--first a i::before,*/
 
-.pager__item__link i::before {
-  display: block;
-  right: 0;
-  padding: 8px;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  -webkit-transition: background 0.2s ease-in-out;
-  transition: background 0.2s ease-in-out;
-}
+/*.pager__item--last a i::before {*/
+
+/*width: auto;*/
+
+/*}*/
+
+/*.pager__item__link {*/
+
+/*!*color: $ grey;*!*/
+
+/*display: block;*/
+
+/*padding: .25rem 1rem;*/
+
+/*position: relative;*/
+
+/*}*/
+
+/*.pager__item__link i {*/
+
+/*!*color: $ black;*!*/
+
+/*display: inline-block;*/
+
+/*font-size: 12px;*/
+
+/*margin: 0;*/
+
+/*position: relative;*/
+
+/*text-align: center;*/
+
+/*}*/
+
+/*.pager__item__link i::before {*/
+
+/*display: block;*/
+
+/*right: 0;*/
+
+/*padding: 8px;*/
+
+/*border-radius: 50%;*/
+
+/*width: 12px;*/
+
+/*height: 12px;*/
+
+/*transition: background 0.2s ease-in-out;*/
+
+/*}*/
 .tabs__tab {
   border-color: #bbb;
 }
@@ -4783,41 +4791,37 @@ code {
 }
 
 .c-primary {
-  color: b;
+  color: blue;
 }
 
 .c-secondary {
-  color: g;
+  color: green;
 }
 
 .c-tertiary {
-  color: b;
+  color: black;
 }
 
 .border-color-primary {
-  color: #;
+  color: #ddd;
 }
 
 .border-color-secondary {
-  color: #;
+  color: #bbb;
 }
 
 .border-color-error {
-  color: r;
-}
-
-.animation-transition-time {
-  color: .;
+  color: red;
 }
 
 .bg-primary {
-  background-color: #;
+  color: #000000;
 }
 
 .bg-secondary {
-  background-color: #;
+  color: #666;
 }
 
 .bg-tertiary {
-  background-color: #;
+  color: #ddd;
 }

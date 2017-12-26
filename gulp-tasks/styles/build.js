@@ -13,24 +13,23 @@ var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
 
-var categories = require('../../theme-settings.json');
+var mColors = require('../../theme-settings.json');
+var bgColors = require('../../theme-settings.json');
 var styleVariables = require('../../components/_patterns/00-utilities/_variables/variables');
 var mediaQueries = require('../../components/_patterns/00-utilities/_variables/mq');
 
 var dataloop = function(css) {
   var rule ='';
-  for (var category in categories.colorList) {
-    var colorSet = categories.colorList[category];
-    var color = colorSet[0];
-    rule = corepostcss.rule({ selector: '.' + category });
-    rule.append({ prop: 'color', value: color});
+  for (var mColor in mColors.colorList) {
+    var colorSet = mColors.colorList[mColor];
+    rule = corepostcss.rule({ selector: '.' + mColor });
+    rule.append({ prop: 'color', value: colorSet});
     css.append(rule);
   }
-  for (var category in categories.bgList) {
-    var bgSet = categories.bgList[category];
-    var bgColor = bgSet[0];
-    rule = corepostcss.rule({ selector: '.' + category });
-    rule.append({ prop: 'background-color', value: bgColor});
+  for (var bgColor in bgColors.bgList) {
+    var colorSet = bgColors.bgList[bgColor];
+    rule = corepostcss.rule({ selector: '.' + bgColor });
+    rule.append({ prop: 'color', value: colorSet});
     css.append(rule);
   }
 };
@@ -38,7 +37,7 @@ var dataloop = function(css) {
 module.exports = function (gulp, options) {
 
   var processors = [
-      require('postcss-import'),
+      require('postcss-import'), 
       cssnext({
         'browsers': options.css.browsers,
         features: {
