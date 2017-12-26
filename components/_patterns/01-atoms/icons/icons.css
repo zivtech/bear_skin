@@ -94,7 +94,6 @@
 }
 .icon-forward:before {
   content: '\e90c';
-  line-height: .9;
 }
 .icon-backwards:before {
   content: '\e90d';
