@@ -44,6 +44,16 @@
   text-decoration: none !important;
 }
 
+.i-topped-1 {
+  position: relative;
+  top: 1px;
+}
+
+.i-topped-2 {
+  position: relative;
+  top: 2px;
+}
+
 .icon-bell:before {
   content: '\e900';
 }
@@ -81,4 +91,11 @@
 }
 .icon-caret-right:before {
   content: '\e90b';
+}
+.icon-forward:before {
+  content: '\e90c';
+  line-height: .9;
+}
+.icon-backwards:before {
+  content: '\e90d';
 }

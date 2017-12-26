@@ -1,6 +1,4 @@
 @import 'basscss-color-base';
-@import 'basscss-colors';
-@import 'basscss-background-colors';
 @import 'basscss-base-forms';
 @import 'basscss-color-forms';
 @import 'basscss-btn';
@@ -9,6 +7,8 @@
 @import 'basscss-flexbox';
 @import 'basscss-borders';
 @import 'basscss-responsive-states';
+@import 'basscss-colors';
+@import 'basscss-background-colors';
 
 /*at the endfor utility classes to override if needed*/
 @import 'basscss';

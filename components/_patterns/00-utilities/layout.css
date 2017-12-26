@@ -21,6 +21,9 @@ body {
 Additional utility classes based on basscss
 */
 
+.m025 {
+  margin: .25em;
+}
 .mt025 {
   margin-top: .25em;
 }
