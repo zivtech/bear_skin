@@ -29,7 +29,7 @@ var dataloop = function(css) {
   for (var bgColor in bgColors.bgList) {
     var colorSet = bgColors.bgList[bgColor];
     rule = corepostcss.rule({ selector: '.' + bgColor });
-    rule.append({ prop: 'color', value: colorSet});
+    rule.append({ prop: 'background-color', value: colorSet});
     css.append(rule);
   }
 };
