@@ -1,5 +1,5 @@
 <div {{ attributes.addClass(classes) }}>
-  
+
   {% if content.top_row %}
     {% block row_top %}
       <div class="single-row single-row--top">
@@ -10,13 +10,13 @@
     {% endblock %}
   {% endif %}
 
-  <div class="row row--center">
+  <div class="row row--center flex mxn2">
 
     {% block content %}
 
       {% if content.main %}
         {% block main_content %}
-          <main class="main-content col-12
+          <main class="main-content col-12 px2
             {% if (content.left or content.right) and not (content.left and content.right)  %}
               md-col-9
             {% elseif content.left and content.right %}
@@ -31,7 +31,7 @@
 
       {% if content.left %}
         {% block left_sidebar %}
-          <aside class="sidebar sidebar--left col-12
+          <aside class="sidebar sidebar--left col-12 px2
             {% if not content.main %}
               md-col-6
             {% else %}
@@ -46,7 +46,7 @@
 
       {% if content.right %}
         {% block right_sidebar %}
-          <aside class="sidebar sidebar--right col-12 md-col-3
+          <aside class="sidebar sidebar--right col-12 md-col-3 px2
             {% if not content.main %}
               md-col-6
             {% else %}

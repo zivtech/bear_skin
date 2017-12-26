@@ -17,6 +17,11 @@ body {
   right: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*
 Additional utility classes based on basscss
 */
