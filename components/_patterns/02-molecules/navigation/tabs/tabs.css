@@ -30,7 +30,7 @@
 }
 
 .tabs--secondary .is-active {
-  color: var(--formItemFocusedColor);
+  color: var(--form-item-focused-color);
 }
 
 .js-form-type-vertical-tabs {

@@ -9,10 +9,8 @@ module.exports = {
   "--border-color-primary": styleVariables.colorList['border-color-primary'],
   "--border-color-secondary": styleVariables.colorList['border-color-secondary'],
   "--border-color-error": styleVariables.colorList['border-color-error'],
-
-  "--formItemBorderWidth": styleVariables.formItems['formItemBorderWidth'],
-  "--formItemBorderColor": styleVariables.formItems['formItemBorderColor'],
-  "--formItemFocusedColor": styleVariables.formItems['formItemFocusedColor'],
+  "--form-item-border-color": styleVariables.colorList['form-item-border-color'],
+  "--form-item-focused-color": styleVariables.colorList['form-item-focused-color'],
 
   "--animation-transition-time": styleVariables.ui['animation-transition-time'],
 

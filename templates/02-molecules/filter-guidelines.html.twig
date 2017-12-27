@@ -1,0 +1,14 @@
+{%
+	set classes = [
+	'filter-guidelines-item',
+	'filter-guidelines-' ~ format.id,
+	'h5',
+	'gray',
+	'm0',
+	'pt1'
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+	<h4 class="label">{{ format.label }}</h4>
+	{{ tips }}
+</div>

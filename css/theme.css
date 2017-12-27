@@ -2292,6 +2292,12 @@ td.description {
 table  ul {
   padding-left: 15px;
 }
+@media (min-width: 52em) {
+  .wrapper-header__inner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
 .sticky-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2310,12 +2316,6 @@ table  ul {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   overflow: hidden;
-}
-@media (min-width: 52em) {
-  .wrapper-header__inner {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
 }
 .node--unpublished {
   background: hsla(327, 100%, 92%, 1);
@@ -2426,11 +2426,11 @@ table  ul {
 }
 
 input:focus {
-  border-color: #0074d9;
+  border-color: var(--formItemFocusedColor);
 }
 
 input:invalid:focus {
-  border-color: #0074d9;
+  border-color: var(--formItemFocusedColor);
 }
 
 .image-widget .form-file {
@@ -2444,8 +2444,11 @@ input:invalid:focus {
 }
 
 .filter-wrapper {
-  font-size: 0.83rem;
-  border-color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.filter-guidelines .filter-guidelines-item {
+  margin-top: 0;
 }
 .js-form-type-checkbox label,
 .js-form-type-radio label {
@@ -2472,10 +2475,10 @@ input:invalid:focus {
 }
 
 .radio-wrapper__icon {
-  font-size: 17px;
+  font-size: 22px;
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: -2px;
+  left: 0;
   opacity: 0;
 }
 
@@ -2828,6 +2831,14 @@ input:invalid:focus {
 
 .border-color-error {
   color: red;
+}
+
+.form-item-border-color {
+  color: #ccc;
+}
+
+.form-item-focused-color {
+  color: #0074d9;
 }
 
 .bg-primary {

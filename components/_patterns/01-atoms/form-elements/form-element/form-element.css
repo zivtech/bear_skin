@@ -1,5 +1,5 @@
 .form-item-border {
-  border: var(--formItemBorderWidth) solid var(--formItemBorderColor)
+  border: 1px solid var(--form-item-border-color);
 }
 
 .form-item input {
@@ -30,6 +30,9 @@ input:invalid:focus {
 }
 
 .filter-wrapper {
-  font-size: var(--h5);
-  border-color: var(--formItemBorderColor);
+  border: 1px solid var(--form-item-border-color);
+}
+
+.filter-guidelines .filter-guidelines-item {
+  margin-top: 0;
 }

@@ -7,17 +7,14 @@
     "link-color-hover": "#00539E",
     "border-color-primary": "#ccc",
     "border-color-secondary": "#eee",
-    "border-color-error": "red"
+    "border-color-error": "red",
+    "form-item-border-color": "#ccc",
+    "form-item-focused-color": "#0074d9"
   },
   "bgList": {
     "bg-primary": "#0074d9",
     "bg-secondary": "#00539E",
     "bg-tertiary": "#eee"
-  },
-  "formItems": {
-    "formItemBorderWidth": "1px",
-    "formItemBorderColor": "#ccc",
-    "formItemFocusedColor": "#0074d9"
   },
   "layout": {
     "site-max-width": "1024px"
