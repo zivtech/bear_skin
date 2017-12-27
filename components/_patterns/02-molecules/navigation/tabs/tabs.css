@@ -7,29 +7,21 @@
   text-decoration: none;
 }
 
-.tabs__tab__tab-link:hover,
-.tabs__tab__tab-link:focus,
-.tabs__tab__tab-link.is-active {
-  /*color: $black;*/
-  background: transparent;
-}
-
 .tabs--secondary {
-  width: 100%;
+  border-left: 4px solid var(--border-color-secondary);
 }
 
-.tabs--secondary  .tabs__tab {
-  margin: .5rem .5rem .5rem 0;
+.tabs--secondary .tabs__tab {
+  margin: 0;
   border: 0;
   border-radius: 0;
+  display: inline;
 }
 
 .tabs--secondary .tabs__tab-link {
   background: transparent;
-}
-
-.tabs--secondary .tabs__tab-link.is-active {
-
+  padding: 0;
+  margin-right: 1rem;
 }
 
 .js-form-type-vertical-tabs {

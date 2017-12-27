@@ -29,9 +29,6 @@
 }
 
 .menu--main .open .menu__link {
-  /*@include link($ white, none, $ white, none);*/
-  /*@include fontsize(22, all);*/
-
   text-transform: uppercase;
   display: block;
   padding: 10px;

@@ -1,8 +1,8 @@
-<div class="form__container inline-block mt05 mb05">
+<div class="form__container mt05 mb05">
     {% if heading %}
       <h2 class="visually-hidden">{{ heading }}</h2>
     {% endif %}
-    <ul class="tabs clearfix m0 p0 flex flex-wrap flex-start caps list-style-none h5">
+    <ul class="tabs {{ modifier_class }} clearfix m0 p0 flex flex-wrap flex-start caps list-style-none h5">
       {% for tab in tabs %}
         {% set activeClass = tab.active ? 'is-active blue' : '' %}
         <li class="tabs__tab border-top border-bottom border-right {{ activeClass }} {{ loop.first ? 'rounded-left border-left' }} {{ loop.last ? 'rounded-right' }}">
