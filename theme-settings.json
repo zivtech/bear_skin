@@ -13,7 +13,7 @@
   },
   "bgList": {
     "bg-primary": "#0074d9",
-    "bg-secondary": "#00539E",
+    "bg-secondary": "#ccc",
     "bg-tertiary": "#eee"
   },
   "layout": {

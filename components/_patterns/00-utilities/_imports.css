@@ -13,7 +13,7 @@
 /* at the end for utility classes to override if needed */
 @import 'basscss';
 
-/* override default basscss values - other default values will be in */
+/* override default basscss values when using default classes */
 :root {
   --link-color: var(--link-color);
   --link-hover-text-decoration: none;
@@ -26,5 +26,5 @@
 
   --border-color: var(--border-color-primary);
   --border-radius: 4px;
-  --button-background-color: #eee;
+  --button-background-color: var(--bg-tertiary);
 }

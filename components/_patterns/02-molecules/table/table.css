@@ -6,8 +6,8 @@ table.sticky-header {
   z-index: 2;
 }
 
-table thead {
-  background: var(--background-primary);
+table th {
+  background-color: var(--bg-secondary);
 }
 
 tr {

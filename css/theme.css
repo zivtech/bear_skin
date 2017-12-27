@@ -1384,7 +1384,7 @@ textarea {
   display: none !important;
 }
 
-/* override default basscss values - other default values will be in */
+/* override default basscss values when using default classes */
 
 @media (min-width: 40em) {
   .sm-col {
@@ -2203,8 +2203,8 @@ table.sticky-header {
   z-index: 2;
 }
 
-table thead {
-  background: var(--background-primary);
+table th {
+  background-color: #ccc;
 }
 
 tr {
@@ -2292,12 +2292,6 @@ td.description {
 table  ul {
   padding-left: 15px;
 }
-@media (min-width: 52em) {
-  .wrapper-header__inner {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
 .sticky-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2316,6 +2310,12 @@ table  ul {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   overflow: hidden;
+}
+@media (min-width: 52em) {
+  .wrapper-header__inner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 .node--unpublished {
   background: hsla(327, 100%, 92%, 1);
@@ -2846,7 +2846,7 @@ input:invalid:focus {
 }
 
 .bg-secondary {
-  background-color: #00539E;
+  background-color: #ccc;
 }
 
 .bg-tertiary {
