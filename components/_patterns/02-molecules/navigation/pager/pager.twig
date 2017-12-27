@@ -33,7 +33,7 @@
             {% else %}
               {% set title = 'Go to page @key'|t({'@key': key}) %}
             {% endif %}
-            <a class="pager__link left btn button-narrow mr05 rounded {{ current == key ? ' bg-black white' : 'bg-tertiary black' }}" href="{{ item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
+            <a class="pager__link left btn button-narrow mr05 rounded {{ current == key ? ' bg-primary white' : 'bg-tertiary black' }}" href="{{ item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
               <span class="visually-hidden">
                 {{ current == key ? 'Current page'|t : 'Page'|t }}
               </span>
