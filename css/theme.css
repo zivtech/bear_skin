@@ -19,7 +19,7 @@
 }
 
 body {
-  color: #111111;
+  color: #222;
   background-color: #FFFFFF;
 }
 
@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 pre,
@@ -42,7 +42,7 @@ hr {
   border: 0;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: rgba(0, 0, 0, .125);
+  border-bottom-color: #ccc;
 }
 
 /* Basscss Base Forms */
@@ -102,7 +102,7 @@ textarea {
 .field {
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, .125);
+  border-color: #ccc;
   border-radius: 4px;
 }
 
@@ -202,7 +202,7 @@ textarea {
 /* Basscss Btn Primary */
 
 .btn-primary {
-  color: black;
+  color: #fff;
   background-color: #eee;
   border-radius: 4px;
 }
@@ -474,31 +474,31 @@ textarea {
 .border {
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, .125);
+  border-color: #ccc;
 }
 
 .border-top {
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: rgba(0, 0, 0, .125);
+  border-top-color: #ccc;
 }
 
 .border-right {
   border-right-style: solid;
   border-right-width: 1px;
-  border-right-color: rgba(0, 0, 0, .125);
+  border-right-color: #ccc;
 }
 
 .border-bottom {
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: rgba(0, 0, 0, .125);
+  border-bottom-color: #ccc;
 }
 
 .border-left {
   border-left-style: solid;
   border-left-width: 1px;
-  border-left-color: rgba(0, 0, 0, .125);
+  border-left-color: #ccc;
 }
 
 .border-none {
@@ -570,11 +570,11 @@ textarea {
 }
 
 .gray {
-  color: #999;
+  color: #AAAAAA;
 }
 
 .silver {
-  color: #eee;
+  color: #DDDDDD;
 }
 
 .white {
@@ -648,11 +648,11 @@ textarea {
 }
 
 .bg-gray {
-  background-color: #999;
+  background-color: #AAAAAA;
 }
 
 .bg-silver {
-  background-color: #eee;
+  background-color: #DDDDDD;
 }
 
 .bg-white {
@@ -711,7 +711,7 @@ textarea {
   background-color: #85144B;
 }
 
-/*at the endfor utility classes to override if needed*/
+/* at the end for utility classes to override if needed */
 
 /*! Basscss | http://basscss.com | MIT License */
 
@@ -1384,11 +1384,7 @@ textarea {
   display: none !important;
 }
 
-/*@import '../../bear_skin.css';*/
-
-/*
-  override default basscss values - other default values will be in
-*/
+/* override default basscss values - other default values will be in */
 
 @media (min-width: 40em) {
   .sm-col {
@@ -1862,327 +1858,6 @@ Additional utility classes based on basscss
 .skip-link li {
   list-style-type: none;
 }
-/*//*/
-
-/*// BEAR SKIN COLORS*/
-
-/*// Default colors that come packaged with Bear Skin. These are used in*/
-
-/*// boilerplate style rules. Feel free to delete or replace them.*/
-
-/*//*/
-
-/*$black:              hsla(0, 0%, 0%, 1);*/
-
-/*$grey:               hsla(0, 0%, 53%, 1);*/
-
-/*$wild-sand:          hsla(0, 0%, 96%, 1);*/
-
-/*$white:              hsla(0, 100%, 100%, 1);*/
-
-/*$bermuda-grey:       hsla(212, 26%, 56%, 1);*/
-
-/*$dark-bermuda-grey:  darken($bermuda-grey, 20%);*/
-
-/*$light-bermuda-grey: lighten($bermuda-grey, 20%);*/
-
-/*$emerald:            hsla(147, 52%, 51%, 1);*/
-
-/*$tangerine:          hsla(40, 100%, 44%, 1);*/
-
-/*$persian-red:        hsla(0, 64%, 51%, 1);*/
-
-/*//*/
-
-/*// COLOR PALETTE*/
-
-/*//*/
-
-/*// These are the colors you will use for design elements throughout the site.*/
-
-/*// You can set the keys to whatever you like. For example, keys like "1",*/
-
-/*// "blue", or "blue-1" will all work.*/
-
-/*//*/
-
-/*// Each key has sub-keys to reflect the variants of a color. The only sub-key*/
-
-/*// that is required is "base". You can add sub-keys for additional variants*/
-
-/*// of your colors.*/
-
-/*//*/
-
-/*// Access color palette values via c() function. See _functions.scss*/
-
-/*//*/
-
-/*// Examples:*/
-
-/*//    Access base color:*/
-
-/*//      color: c(1);*/
-
-/*//      color: c(blue);*/
-
-/*//      background: linear-gradient(45deg, c(1), c(blue));*/
-
-/*//*/
-
-/*//    Accessing variants:*/
-
-/*//      color: c(1, dark);*/
-
-/*//      color: c(blue, light);*/
-
-/*//      background: linear-gradient(45deg, c(1, light), c(blue, dark));*/
-
-/*//*/
-
-/*$c-palette: (*/
-
-/*// Example 1*/
-
-/*// primary: (*/
-
-/*//   base: $bermuda-grey,*/
-
-/*//   dark: $dark-bermuda-grey,*/
-
-/*//   light: $light-bermuda-grey*/
-
-/*// ),*/
-
-/*// Example 2*/
-
-/*// 2: (*/
-
-/*//   base: $emerald,*/
-
-/*//   dark: darken($emerald, 10%),*/
-
-/*//   light: lighten($emerald, 10%)*/
-
-/*// ),*/
-
-/*// Example 3*/
-
-/*// persian-red: (*/
-
-/*//   base: hsla(0, 64%, 51%, 1),*/
-
-/*//   dark: hsla(0, 64%, 35%, 1),*/
-
-/*//   transparent: hsla(0, 64%, 35%, .5),*/
-
-/*// ),*/
-
-/*// Your turn!*/
-
-/*// key: (*/
-
-/*//   base: ,*/
-
-/*//   dark: ,*/
-
-/*//   light: ,*/
-
-/*//   some-other-variant: ,*/
-
-/*// ),*/
-
-/*);*/
-
-/*//*/
-
-/*// MESSAGES*/
-
-/*// Set colors for Drupal messages.*/
-
-/*//*/
-
-/*$c-status: $emerald;*/
-
-/*$c-warning: $tangerine;*/
-
-/*$c-error: $persian-red;*/
-
-/*//*/
-
-/*// UI APPEARANCE*/
-
-/*// Set defaults for form items, buttons, etc.*/
-
-/*//*/
-
-/*$c-ui-active-form-element: $black;*/
-
-/*$c-ui-background: #F5F5F5;*/
-
-/*$c-ui-border: #DCDCDC;*/
-
-/*$c-ui-font: #808080;*/
-
-/*$c-ui-font-dark: #3F3F3F;*/
-
-/*$ui-button-padding: .7rem 1rem;*/
-
-/*$ui-border-radius: 4px;*/
-
-/*//*/
-
-/*// LAYOUT*/
-
-/*//*/
-
-/*$site-min-width: 25em;*/
-
-/*$site-max-width: 1200px;*/
-
-/*//*/
-
-/*// TYPOGRAPHY*/
-
-/*//*/
-
-/*$c-font-primary: $black;*/
-
-/*$c-link: $bermuda-grey;*/
-
-/*$c-link-hover: $dark-bermuda-grey;*/
-
-/*// Overrides Sassline defaults. See ../../vendor/scss/sassline/sass/sassline-base*/
-
-/*$breakpoints: (*/
-
-/*break-0: 0,     // 0px       Mobile first*/
-
-/*break-1: 640,   // 640px   ~ Small tablet up*/
-
-/*break-2: 800,   // 800px   ~ Large tablet up*/
-
-/*break-3: 1024,  // 1024px  ~ Desktop up*/
-
-/*break-4: 1600   // 1600px  ~ Large desktop up*/
-
-/*);*/
-
-/*$rootsizes: (*/
-
-/*rootsize-0: 12,   // 24px line-height body text*/
-
-/*rootsize-1: 14,   // 28px line-height body text*/
-
-/*rootsize-2: 15,   // 30px line-height body text*/
-
-/*rootsize-3: 17,   // 34px line-height body text*/
-
-/*rootsize-4: 19    // 38px line-height body text*/
-
-/*);*/
-
-/*$measures: (*/
-
-/*measure-0: 500,  // 500px wide*/
-
-/*measure-1: 550,  // 550px wide*/
-
-/*measure-2: 600,  // 600px wide*/
-
-/*measure-3: 680,  // 680px wide*/
-
-/*measure-4: 750   // 750px wide*/
-
-/*);*/
-
-/*$maxwidths: (*/
-
-/*width-0: 500,  // 500px wide*/
-
-/*width-1: 600,  // 600px wide*/
-
-/*width-2: 800,  // 800px wide*/
-
-/*width-3: 1100, // 110px wide*/
-
-/*width-4: 1300  // 1300px wide*/
-
-/*);*/
-
-/*$gutterwidths: (*/
-
-/*small: 1rem,*/
-
-/*medium: 2rem,*/
-
-/*large: 4rem*/
-
-/*);*/
-
-/*$bodytype: (*/
-
-/*font-family: 'Noto Serif, serif',*/
-
-/*regular: 400,*/
-
-/*bold: 700,*/
-
-/*italic: italic,*/
-
-/*cap-height: 0.66*/
-
-/*);*/
-
-/*$headingtype: (*/
-
-/*font-family: 'Montserrat, sans-serif',*/
-
-/*regular: 400,*/
-
-/*bold: 300,*/
-
-/*cap-height: 0.66*/
-
-/*);*/
-
-/*$headingColour: $c-font-primary;*/
-
-/*$bodyColour: $c-font-primary;*/
-
-/*$linkColour: $c-link;*/
-
-/*$hoverColour: $c-link-hover;*/
-
-/*// $captionColour: ;*/
-
-/*$white: $white;*/
-
-/*// $backgroundColour: ;*/
-
-/*// $codeBackgroundColour: ;*/
-
-/*$headingtype: (*/
-
-/*font-family: 'Montserrat, sans-serif',*/
-
-/*regular: 400,*/
-
-/*bold: 300,*/
-
-/*cap-height: 0.66*/
-
-/*);*/
-
-/*$monospacetype: (*/
-
-/*font-family: 'Menlo, monospace',*/
-
-/*regular: 400,*/
-
-/*cap-height: 0.68*/
-
-/*);*/
 
 figure img {
   width: 100%;
@@ -2388,74 +2063,10 @@ a {
   -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
-.sticky-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
 
-.sticky-footer .wrapper-main {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  overflow: hidden;
-}
-@media (min-width: 52em) {
-  .wrapper-header__inner {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
-.node--unpublished {
-  background: hsla(327, 100%, 92%, 1);
-}
-
-.node--unpublished:before {
-  content: 'DRAFT';
-  width: 100%;
-  text-align: center;
-  padding: 30px 0;
-  display: block;
-}
-.region--header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.region--navigation {
-  margin: 0 1rem;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-}
-
-.region--search {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
+a:hover,
+a:focus {
+  color: #00539E;
 }
 .banner-image {
   position: relative;
@@ -2487,7 +2098,7 @@ a {
 blockquote {
   margin: 2rem;
   padding: 0 0 0 1rem;
-  border-left: 4px solid #ddd;
+  border-left: 4px solid #ccc;
   font-family: 'Noto Serif', serif;
   font-size: 1.17rem;
 }
@@ -2601,7 +2212,7 @@ tr {
 }
 
 tr:nth-child(odd) {
-  background-color: #ddd;
+  background-color: #eee;
 }
 
 table .form-item {
@@ -2681,6 +2292,75 @@ td.description {
 table  ul {
   padding-left: 15px;
 }
+.sticky-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.sticky-footer .wrapper-main {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+@media (min-width: 52em) {
+  .wrapper-header__inner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.node--unpublished {
+  background: hsla(327, 100%, 92%, 1);
+}
+
+.node--unpublished:before {
+  content: 'DRAFT';
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  display: block;
+}
+.region--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.region--navigation {
+  margin: 0 1rem;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
+
+.region--search {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
 
 .field--label-inline {
   clear: both;
@@ -2731,6 +2411,10 @@ table  ul {
 .form-checkboxes .form-item:last-child {
   margin-bottom: 0;
 }
+.form-item-border {
+  border: 1px solid #ccc;
+}
+
 .form-item input {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -2738,16 +2422,15 @@ table  ul {
 }
 
 .field:invalid {
-  border-color: #ddd;
+  border-color: #ccc;
 }
 
-input:focus,
-input:valid {
-  border-color: #bbb;
+input:focus {
+  border-color: #0074d9;
 }
 
 input:invalid:focus {
-  border-color: #bbb;
+  border-color: #0074d9;
 }
 
 .image-widget .form-file {
@@ -2758,6 +2441,11 @@ input:invalid:focus {
 
 .image-widget .form-submit {
   margin: 0;
+}
+
+.filter-wrapper {
+  font-size: 0.83rem;
+  border-color: #ccc;
 }
 .js-form-type-checkbox label,
 .js-form-type-radio label {
@@ -2827,9 +2515,7 @@ input:invalid:focus {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-.form-type-textarea + .filter-wrapper {
-  margin-top: -1rem;
-}
+
 .branding__site-logo {
   height: 50px;
   width: 50px;
@@ -2947,7 +2633,7 @@ input:invalid:focus {
 .list-group__description {
   padding-left: 1rem;
   margin: .5rem 0 1rem 0;
-  border-left: 2px solid #bbb;
+  border-left: 2px solid #eee;
 }
 .menu {
   -webkit-transition: background .2s ease-in-out;
@@ -2982,7 +2668,7 @@ input:invalid:focus {
 
 .menu--main  a.is-active,
 .menu--main  .menu-item--active-trail a {
-  border-color: var(--link-color);
+  border-color: #0074d9;
 }
 
 .menu--main .open .menu {
@@ -3054,16 +2740,21 @@ input:invalid:focus {
 }
 
 .tabs__tab {
-  border-color: #bbb;
+  border-color: white;
 }
 
-.tabs__tab-link:hover {
-  background-color: #ddd;
+.tabs--primary .tabs__tab-link:hover {
+  background-color: #0074d9;
   text-decoration: none;
+  color: white;
+}
+
+.tabs--primary .is-active {
+  background-color: #0074d9;
 }
 
 .tabs--secondary {
-  border-left: 4px solid #bbb;
+  border-left: 4px solid #eee;
 }
 
 .tabs--secondary .tabs__tab {
@@ -3077,6 +2768,10 @@ input:invalid:focus {
   background: transparent;
   padding: 0;
   margin-right: 1rem;
+}
+
+.tabs--secondary .is-active {
+  color: #0074d9;
 }
 
 .js-form-type-vertical-tabs {
@@ -3104,23 +2799,31 @@ input:invalid:focus {
 }
 
 .c-primary {
-  color: blue;
+  color: #0074d9;
 }
 
 .c-secondary {
-  color: green;
+  color: #00539E;
 }
 
-.c-tertiary {
-  color: black;
+.body-color {
+  color: #222;
+}
+
+.link-color {
+  color: #0074d9;
+}
+
+.link-color-hover {
+  color: #00539E;
 }
 
 .border-color-primary {
-  color: #ddd;
+  color: #ccc;
 }
 
 .border-color-secondary {
-  color: #bbb;
+  color: #eee;
 }
 
 .border-color-error {
@@ -3128,13 +2831,13 @@ input:invalid:focus {
 }
 
 .bg-primary {
-  background-color: #000000;
+  background-color: #0074d9;
 }
 
 .bg-secondary {
-  background-color: #666;
+  background-color: #00539E;
 }
 
 .bg-tertiary {
-  background-color: #ddd;
+  background-color: #eee;
 }

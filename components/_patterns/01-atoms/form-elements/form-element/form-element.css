@@ -1,3 +1,7 @@
+.form-item-border {
+  border: var(--formItemBorderWidth) solid var(--formItemBorderColor)
+}
+
 .form-item input {
   box-shadow: none !important;
   max-width: 100%;
@@ -7,13 +11,12 @@
   border-color: var(--border-color-primary);
 }
 
-input:focus,
-input:valid {
-  border-color: var(--border-color-secondary);
+input:focus {
+  border-color: var(--formItemFocusedColor);
 }
 
 input:invalid:focus {
-  border-color: var(--border-color-secondary);
+  border-color: var(--formItemFocusedColor);
 }
 
 .image-widget .form-file {
@@ -24,4 +27,9 @@ input:invalid:focus {
 
 .image-widget .form-submit {
   margin: 0;
+}
+
+.filter-wrapper {
+  font-size: var(--h5);
+  border-color: var(--formItemBorderColor);
 }

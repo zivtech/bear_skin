@@ -25,7 +25,7 @@
         ]
       %}
       <li{{ item.attributes.addClass(liClasses) }}>
-        {% set linkattributes = { class: ['menu__link p05', item.in_active_trail ? 'border'] } %}
+        {% set linkattributes = { class: ['menu__link p05 rounded', item.in_active_trail ? 'border bg-primary white'] } %}
         {{ link(item.title, item.url, linkattributes) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

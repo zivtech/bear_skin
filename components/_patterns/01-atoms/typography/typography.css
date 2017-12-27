@@ -41,3 +41,8 @@ q::after {
 a {
   transition: color var(--animation-transition-time) ease-in-out;
 }
+
+a:hover,
+a:focus {
+  color: var(--link-color-hover);
+}

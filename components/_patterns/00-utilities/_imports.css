@@ -10,25 +10,21 @@
 @import 'basscss-colors';
 @import 'basscss-background-colors';
 
-/*at the endfor utility classes to override if needed*/
+/* at the end for utility classes to override if needed */
 @import 'basscss';
 
-/*@import '../../bear_skin.css';*/
-
-/*
-  override default basscss values - other default values will be in
-*/
+/* override default basscss values - other default values will be in */
 :root {
+  --link-color: var(--link-color);
+  --link-hover-text-decoration: none;
+
   --space-1: 1rem;
   --space-2: 2rem;
   --space-3: 3rem;
   --space-4: 4rem;
   --space-5: 5rem;
 
+  --border-color: var(--border-color-primary);
   --border-radius: 4px;
-  --link-color: #0074d9;
-  --gray: #999;
-  --silver: #eee;
-  --button-color: black;
   --button-background-color: #eee;
 }

@@ -1,21 +1,28 @@
 {
   "colorList": {
-    "c-primary"  : "blue",
-    "c-secondary"  : "green",
-    "c-tertiary"  : "black",
-    "border-color-primary": "#ddd",
-    "border-color-secondary": "#bbb",
+    "c-primary": "#0074d9",
+    "c-secondary": "#00539E",
+    "body-color": "#222",
+    "link-color": "#0074d9",
+    "link-color-hover": "#00539E",
+    "border-color-primary": "#ccc",
+    "border-color-secondary": "#eee",
     "border-color-error": "red"
   },
   "bgList": {
-    "bg-primary": "#000000",
-    "bg-secondary": "#666",
-    "bg-tertiary": "#ddd"
+    "bg-primary": "#0074d9",
+    "bg-secondary": "#00539E",
+    "bg-tertiary": "#eee"
+  },
+  "formItems": {
+    "formItemBorderWidth": "1px",
+    "formItemBorderColor": "#ccc",
+    "formItemFocusedColor": "#0074d9"
   },
   "layout": {
     "site-max-width": "1024px"
   },
-  "fontList": {
+  "typography": {
     "f-serif": "'Noto Serif', serif",
     "f-sans": "'Roboto', sans-serif",
     "body-font-size": "1rem",

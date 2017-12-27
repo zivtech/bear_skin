@@ -3,10 +3,16 @@ var styleVariables = require('../../../../theme-settings.json');
 module.exports = {
   "--c-primary": styleVariables.colorList['c-primary'],
   "--c-secondary": styleVariables.colorList['c-secondary'],
-  "--c-tertiary": styleVariables.colorList['c-tertiary'],
+  "--body-color": styleVariables.colorList['body-color'],
+  "--link-color": styleVariables.colorList['link-color'],
+  "--link-color-hover": styleVariables.colorList['link-color-hover'],
   "--border-color-primary": styleVariables.colorList['border-color-primary'],
   "--border-color-secondary": styleVariables.colorList['border-color-secondary'],
   "--border-color-error": styleVariables.colorList['border-color-error'],
+
+  "--formItemBorderWidth": styleVariables.formItems['formItemBorderWidth'],
+  "--formItemBorderColor": styleVariables.formItems['formItemBorderColor'],
+  "--formItemFocusedColor": styleVariables.formItems['formItemFocusedColor'],
 
   "--animation-transition-time": styleVariables.ui['animation-transition-time'],
 
@@ -14,14 +20,14 @@ module.exports = {
   "--bg-secondary": styleVariables.bgList['bg-secondary'],
   "--bg-tertiary": styleVariables.bgList['bg-tertiary'],
 
-  "--sans": styleVariables.fontList['f-sans'],
-  "--serif": styleVariables.fontList['f-serif'],
-  "--body-font-size": styleVariables.fontList['body-font-size'],
-  "--h1": styleVariables.fontList['h1'],
-  "--h2": styleVariables.fontList['h2'],
-  "--h3": styleVariables.fontList['h3'],
-  "--h4": styleVariables.fontList['h4'],
-  "--h5": styleVariables.fontList['h5'],
+  "--sans": styleVariables.typography['f-sans'],
+  "--serif": styleVariables.typography['f-serif'],
+  "--body-font-size": styleVariables.typography['body-font-size'],
+  "--h1": styleVariables.typography['h1'],
+  "--h2": styleVariables.typography['h2'],
+  "--h3": styleVariables.typography['h3'],
+  "--h4": styleVariables.typography['h4'],
+  "--h5": styleVariables.typography['h5'],
 
   "--site-max-width": styleVariables.layout['site-max-width'],
   "--breakpoint-sm": styleVariables.layout['breakpoint-sm'],
