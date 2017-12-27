@@ -14,8 +14,7 @@
 
 .menu--main  a.is-active,
 .menu--main  .menu-item--active-trail a {
-  /*@include link($ white, none, $ white, none);*/
-  /*background-color: $ black;*/
+  border-color: var(--link-color);
 }
 
 .menu--main .open .menu {

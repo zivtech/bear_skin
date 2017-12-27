@@ -18,14 +18,14 @@
     {% for item in items %}
       {%
         set liClasses = [
-          'menu__item ml05 mr05',
+          'menu__item',
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
-          item.in_active_trail ? 'menu-item--active-trail underline',
+          item.in_active_trail ? 'menu-item--active-trail',
         ]
       %}
       <li{{ item.attributes.addClass(liClasses) }}>
-        {% set linkattributes = { class: ['menu__link'] } %}
+        {% set linkattributes = { class: ['menu__link p05', item.in_active_trail ? 'border'] } %}
         {{ link(item.title, item.url, linkattributes) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
