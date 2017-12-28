@@ -1792,39 +1792,43 @@ Additional utility classes based on basscss
 */
 
 .m025 {
-  margin: .25em;
+  margin: .25rem;
 }
 
 .mt025 {
-  margin-top: .25em;
+  margin-top: .25rem;
 }
 
 .mb025 {
-  margin-bottom: .25em;
+  margin-bottom: .25rem;
 }
 
 .mr025 {
-  margin-right: .25em;
+  margin-right: .25rem;
 }
 
 .ml025 {
-  margin-left: .25em;
+  margin-left: .25rem;
+}
+
+.m05 {
+  margin: .5rem;
 }
 
 .mt05 {
-  margin-top: .5em;
+  margin-top: .5rem;
 }
 
 .mb05 {
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
 }
 
 .mr05 {
-  margin-right: .5em;
+  margin-right: .5rem;
 }
 
 .ml05 {
-  margin-left: .5em;
+  margin-left: .5rem;
 }
 
 .p05 {
@@ -1832,19 +1836,19 @@ Additional utility classes based on basscss
 }
 
 .pt05 {
-  padding-top: .5em;
+  padding-top: .5rem;
 }
 
 .pb05 {
-  padding-bottom: .5em;
+  padding-bottom: .5rem;
 }
 
 .pr05 {
-  padding-right: .5em;
+  padding-right: .5rem;
 }
 
 .pl05 {
-  padding-left: .5em;
+  padding-left: .5rem;
 }
 
 .opaque {
@@ -2095,6 +2099,17 @@ a:focus {
   -ms-flex-pack: center;
   justify-content: center;
 }
+blockquote {
+  margin: 2rem;
+  padding: 0 0 0 1rem;
+  border-left: 4px solid #ccc;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.17rem;
+}
+
+blockquote p {
+  margin: 0;
+}
 .indented:first-of-type {
   padding-left: 1rem;
 }
@@ -2121,17 +2136,6 @@ a:focus {
 .comment ul a {
   text-decoration: underline;
   text-transform: uppercase;
-}
-blockquote {
-  margin: 2rem;
-  padding: 0 0 0 1rem;
-  border-left: 4px solid #ccc;
-  font-family: 'Noto Serif', serif;
-  font-size: 1.17rem;
-}
-
-blockquote p {
-  margin: 0;
 }
 details[open] .summary__icon {
   -webkit-transform: rotate(90deg);
@@ -2347,6 +2351,9 @@ table  ul {
   display: -ms-flexbox;
   -js-display: flex;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .region--search {
@@ -2546,7 +2553,7 @@ input:invalid:focus {
   visibility: hidden;
   opacity: 0;
   z-index: 15;
-  background: rgba(238, 238, 238, .95);
+  background: rgba(0, 116, 217, .95);
 }
 
 .msearch-content.open {
@@ -2554,11 +2561,16 @@ input:invalid:focus {
   visibility: visible;
 }
 
+.msearch-content .container {
+  background: url("../images/logo-sm-w.png") no-repeat left center;
+}
+
 .form__search_block_form .form-search {
   border: 0;
   padding: .5rem 3rem .5rem 0;
   background: transparent;
   width: 200px;
+  color: white;
 }
 
 .form__search_block_form .js-form-type-search {
@@ -2568,8 +2580,8 @@ input:invalid:focus {
 
 .form__search_block_form  .js-form-type-search::after {
   content: '';
-  height: 1px;
-  background: black;
+  height: 2px;
+  background: white;
   width: 0;
   left: 0;
   position: absolute;
@@ -2582,7 +2594,27 @@ input:invalid:focus {
   width: 100%;
 }
 
-#search-block-form .form-actions {
+.form__search_block_form ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #f3f3f3;
+}
+
+.form__search_block_form ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #f3f3f3;
+}
+
+.form__search_block_form :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #f3f3f3;
+}
+
+.form__search_block_form :-moz-placeholder {
+  /* Firefox 18- */
+  color: #f3f3f3;
+}
+
+.form__search_block_form .form-actions {
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -2598,21 +2630,17 @@ input:invalid:focus {
   margin-left: -3.5rem;
 }
 
-#search-block-form .form-actions::after {
+.form__search_block_form .form-actions::after {
   content: '\e905';
   position: absolute;
   font-size: 20px;
   top: 16px;
 }
 
-#search-block-form .form-submit {
+.form__search_block_form .form-submit {
   opacity: 0;
   position: relative;
   z-index: 2;
-}
-
-#search-block-form__site-slogan {
-  margin-left: 1rem;
 }
 
 @media (min-width: 40em) {

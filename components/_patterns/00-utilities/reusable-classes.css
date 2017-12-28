@@ -12,46 +12,49 @@ Additional utility classes based on basscss
 */
 
 .m025 {
-  margin: .25em;
+  margin: .25rem;
 }
 .mt025 {
-  margin-top: .25em;
+  margin-top: .25rem;
 }
 .mb025 {
-  margin-bottom: .25em;
+  margin-bottom: .25rem;
 }
 .mr025 {
-  margin-right: .25em;
+  margin-right: .25rem;
 }
 .ml025 {
-  margin-left: .25em;
+  margin-left: .25rem;
+}
+.m05 {
+  margin: .5rem;
 }
 .mt05 {
-  margin-top: .5em;
+  margin-top: .5rem;
 }
 .mb05 {
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
 }
 .mr05 {
-  margin-right: .5em;
+  margin-right: .5rem;
 }
 .ml05 {
-  margin-left: .5em;
+  margin-left: .5rem;
 }
 .p05 {
   padding: .5rem;
 }
 .pt05 {
-  padding-top: .5em;
+  padding-top: .5rem;
 }
 .pb05 {
-  padding-bottom: .5em;
+  padding-bottom: .5rem;
 }
 .pr05 {
-  padding-right: .5em;
+  padding-right: .5rem;
 }
 .pl05 {
-  padding-left: .5em;
+  padding-left: .5rem;
 }
 .opaque {
   opacity: 0;

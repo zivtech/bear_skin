@@ -17,12 +17,16 @@
   visibility: hidden;
   opacity: 0;
   z-index: 15;
-  background: rgba(238, 238, 238, .95);
+  background: rgba(0, 116, 217, .95);
 }
 
 .msearch-content.open {
   opacity: 1;
   visibility: visible;
+}
+
+.msearch-content .container {
+  background: url('../../../../images/logo-sm-w.png') no-repeat left center;
 }
 
 @media (--breakpoint-md) {
@@ -38,6 +42,7 @@
   padding: .5rem 3rem .5rem 0;
   background: transparent;
   width: 200px;
+  color: white;
 }
 
 @media (--breakpoint-sm) {
@@ -54,8 +59,8 @@
 
 .form__search_block_form  .js-form-type-search::after {
   content: '';
-  height: 1px;
-  background: black;
+  height: 2px;
+  background: white;
   width: 0;
   left: 0;
   position: absolute;
@@ -67,7 +72,20 @@
   width: 100%;
 }
 
-#search-block-form .form-actions {
+.form__search_block_form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #f3f3f3;
+}
+.form__search_block_form ::-moz-placeholder { /* Firefox 19+ */
+  color: #f3f3f3;
+}
+.form__search_block_form :-ms-input-placeholder { /* IE 10+ */
+  color: #f3f3f3;
+}
+.form__search_block_form :-moz-placeholder { /* Firefox 18- */
+  color: #f3f3f3;
+}
+
+.form__search_block_form .form-actions {
   position: relative;
   z-index: 1;
   display: flex;
@@ -76,19 +94,15 @@
   margin-left: -3.5rem;
 }
 
-#search-block-form .form-actions::after {
+.form__search_block_form .form-actions::after {
   content: '\e905';
   position: absolute;
   font-size: 20px;
   top: 16px;
 }
 
-#search-block-form .form-submit {
+.form__search_block_form .form-submit {
   opacity: 0;
   position: relative;
   z-index: 2;
-}
-
-#search-block-form__site-slogan {
-  margin-left: 1rem;
 }
