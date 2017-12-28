@@ -8,15 +8,15 @@
 }
 
 .field:invalid {
-  border-color: var(--border-color-primary);
+  border-color: var(--form-item-border-color);
 }
 
 input:focus {
-  border-color: var(--formItemFocusedColor);
+  border-color: var(--form-item-focused-color);
 }
 
 input:invalid:focus {
-  border-color: var(--formItemFocusedColor);
+  border-color: var(--form-item-focused-color);
 }
 
 .image-widget .form-file {

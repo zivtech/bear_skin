@@ -2011,7 +2011,7 @@ figcaption {
   content: '\e90c';
 }
 
-.icon-backwards:before {
+.icon-backward:before {
   content: '\e90d';
 }
 body {
@@ -2095,17 +2095,6 @@ a:focus {
   -ms-flex-pack: center;
   justify-content: center;
 }
-blockquote {
-  margin: 2rem;
-  padding: 0 0 0 1rem;
-  border-left: 4px solid #ccc;
-  font-family: 'Noto Serif', serif;
-  font-size: 1.17rem;
-}
-
-blockquote p {
-  margin: 0;
-}
 .indented:first-of-type {
   padding-left: 1rem;
 }
@@ -2132,6 +2121,17 @@ blockquote p {
 .comment ul a {
   text-decoration: underline;
   text-transform: uppercase;
+}
+blockquote {
+  margin: 2rem;
+  padding: 0 0 0 1rem;
+  border-left: 4px solid #ccc;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.17rem;
+}
+
+blockquote p {
+  margin: 0;
 }
 details[open] .summary__icon {
   -webkit-transform: rotate(90deg);
@@ -2426,11 +2426,11 @@ table  ul {
 }
 
 input:focus {
-  border-color: var(--formItemFocusedColor);
+  border-color: #0074d9;
 }
 
 input:invalid:focus {
-  border-color: var(--formItemFocusedColor);
+  border-color: #0074d9;
 }
 
 .image-widget .form-file {

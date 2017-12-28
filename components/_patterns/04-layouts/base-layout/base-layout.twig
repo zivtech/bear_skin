@@ -10,7 +10,7 @@
     {% endblock %}
   {% endif %}
 
-  <div class="row row--center flex mxn2">
+  <div class="row row--center md-flex mxn2">
 
     {% block content %}
 
@@ -20,8 +20,11 @@
             {% if (content.left or content.right) and not (content.left and content.right)  %}
               md-col-9
             {% elseif content.left and content.right %}
-              md-col-6
-            {% endif %}">
+              md-col-6 order-2
+            {% endif %}
+            {% if content.left and not content.right %}
+              order-2
+	          {% endif %}">
             <div class="inner">
               {{ content.main }}
             </div>
@@ -31,7 +34,7 @@
 
       {% if content.left %}
         {% block left_sidebar %}
-          <aside class="sidebar sidebar--left col-12 px2
+          <aside class="sidebar sidebar--left col-12 px2 order-1
             {% if not content.main %}
               md-col-6
             {% else %}
@@ -50,7 +53,7 @@
             {% if not content.main %}
               md-col-6
             {% else %}
-              md-col-3
+              md-col-3 order-3
             {% endif %}">
             <div class="inner">
               {{ content.right }}

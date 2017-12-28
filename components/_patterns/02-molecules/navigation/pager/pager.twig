@@ -7,7 +7,7 @@
         {% if items.first %}
           <li class="pager__item pager__item--first">
             <a class="pager__link left btn button-narrow bg-tertiary rounded mr05" href="{{ items.first.href }}" title="{{ 'Go to first page'|t }}"{{ items.first.attributes|without('href', 'title') }}>
-              <i class="icon-backwards i-topped-1"><span class="visually-hidden">{{ 'First page'|t }}</span></i>
+              <i class="icon-backward i-topped-1"><span class="visually-hidden">{{ 'First page'|t }}</span></i>
             </a>
           </li>
         {% endif %}
