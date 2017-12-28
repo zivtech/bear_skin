@@ -12,6 +12,7 @@ var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
+var cssnano = require('gulp-cssnano');
 
 var mColors = require('../../theme-settings.json');
 var bgColors = require('../../theme-settings.json');
@@ -37,7 +38,7 @@ var dataloop = function(css) {
 module.exports = function (gulp, options) {
 
   var processors = [
-      require('postcss-import'), 
+      require('postcss-import'),
       cssnext({
         'browsers': options.css.browsers,
         features: {
@@ -72,6 +73,7 @@ module.exports = function (gulp, options) {
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
     .pipe(concatCss('theme.css'))
     .pipe(postcss(postprocessors))
+    .pipe(cssnano())
     .pipe(gulp.dest(options.css.dest))
     .pipe(gulpif(options.browserSync.patterns.enabled, browserSync.get('patterns').stream({match: '**/*.css'})))
     .pipe(gulpif(options.browserSync.site.enabled, browserSync.get('site').stream({match: '**/*.css'})));

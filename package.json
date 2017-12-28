@@ -38,6 +38,7 @@
     "gulp-concat-css": "^2.3.0",
     "gulp-css-urls": "^0.2.2",
     "gulp-csslint": "^1.0.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-eslint": "^4.0.0",
     "gulp-favicons": "^2.2.6",
     "gulp-filter": "^4.0.0",
