@@ -3,12 +3,7 @@
   transition: .2s color ease-in-out;
 }
 
-@media (--breakpoint-lg) {
 
-  .panel-action--close-search {
-    margin-right: 0;
-  }
-}
 
 .msearch-content {
   width: 100%;
@@ -25,31 +20,12 @@
   visibility: visible;
 }
 
-.msearch-content .container {
-  background: url('../../../../images/logo-sm-w.png') no-repeat left center;
-}
-
-@media (--breakpoint-md) {
-
-  .form__search_block_form {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
-
 .form__search_block_form .form-search {
   border: 0;
   padding: .5rem 3rem .5rem 0;
   background: transparent;
   width: 200px;
   color: white;
-}
-
-@media (--breakpoint-sm) {
-
-  .form__search_block_form .form-search {
-    width: 400px;
-  }
 }
 
 .form__search_block_form .js-form-type-search {
@@ -105,4 +81,36 @@
   opacity: 0;
   position: relative;
   z-index: 2;
+}
+
+@media (--breakpoint-sm) {
+
+  .form__search_block_form .form-search {
+    width: 400px;
+  }
+
+  .msearch-content .container {
+    background-image: url('../../../../images/logo-sm-w.png');
+    background-repeat: no-repeat;
+    background-position: 1rem center;
+  }
+}
+
+@media (--breakpoint-md) {
+
+  .form__search_block_form {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (--breakpoint-lg) {
+
+  .msearch-content .container {
+    background-position: left center;
+  }
+
+  .panel-action--close-search {
+    margin-right: 0;
+  }
 }
