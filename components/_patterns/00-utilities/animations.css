@@ -13,47 +13,38 @@
 }
 
 @keyframes fadeIn {
-
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeOut {
-
   100% {
     opacity: 1;
   }
-
   0% {
     opacity: 0;
   }
 }
 
 @keyframes fadeInDown {
-
   0% {
     opacity: 0;
     transform: translateY(-1.25em);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/*ajax spinner*/
 @keyframes spin {
-
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }

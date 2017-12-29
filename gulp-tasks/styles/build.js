@@ -74,7 +74,15 @@ module.exports = function (gulp, options) {
     .pipe(gulpif(options.buildSourceMaps, sourcemaps.write()))
     .pipe(concatCss('theme.css'))
     .pipe(postcss(postprocessors))
-    .pipe(cssnano())
+    .pipe(cssnano({
+      autoprefixer: false,
+      reduceIdents: {
+        keyframes: false
+      },
+      discardUnused: {
+        keyframes: false
+      }
+    }))
     .pipe(gulp.dest(options.css.dest))
     .pipe(cssInfo())
     .pipe(gulp.dest('docs'))

@@ -6,11 +6,9 @@
       var $toolbarCssIcon = $('#toolbar-icon-css', context);
       var $toolbarCssFrame = $('#toolbar-css-frame', context);
 
-      $('body').toggleClass('css-frame');
-
       $toolbarCssIcon.on('click', function() {
+        $(this).find('.toolbar-icon-css').toggleClass('active');
         $toolbarCssFrame.toggleClass('open');
-
       });
     }
   };

@@ -1,4 +1,4 @@
-<div{{ attributes.addClass('toolbar') }}>
+<div{{ attributes.addClass('toolbar overflow-hidden') }}>
 	<nav{{ toolbar_attributes.addClass('toolbar-bar') }}>
 		<h2 class="visually-hidden">{{ toolbar_heading }}</h2>
 		{% for key, tab in tabs %}
@@ -19,10 +19,9 @@
 				{% endspaceless %}
 			</div>
 		{% endfor %}
-		<div class="toolbar-tab ml05"><a href="javascript:" id="toolbar-icon-css" class="toolbar-icon toolbar-icon-css trigger toolbar-item">Css Doc</a></div>
+		<div class="toolbar-tab ml05"><a href="javascript:" id="toolbar-icon-css" class="toolbar-icon trigger toolbar-item"><span class="toolbar-icon-css inline-block absolute"></span>Css Doc</a></div>
 	</nav>
 	{{ remainder }}
 	{{ attach_library('bear_skin/toolbar') }}
 </div>
-<iframe id="toolbar-css-frame" name="toolbar-css-frame" src="{{ base_path ~ directory }}/docs/theme.html" class="toolbar-css-frame absolute allt" frameborder="0" width="650px" height="100%"></iframe>
-
+<iframe id="toolbar-css-frame" name="toolbar-css-frame" src="{{ base_path ~ directory }}/docs/theme.html" class="toolbar-css-frame fixed allt" frameborder="0" width="650px" height="100%"></iframe>
