@@ -33,7 +33,7 @@ body.css-frame {
   margin-left: -400px;
 }
 
-.gxCDgO {
-  max-width: 390px;
+.toolbar-tray-open .toolbar-css-frame {
+  top: 79px;
 }
 

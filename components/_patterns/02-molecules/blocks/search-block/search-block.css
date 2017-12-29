@@ -17,6 +17,10 @@
   top: 39px;
 }
 
+.toolbar-tray-open .msearch-content {
+  top: 79px;
+}
+
 .msearch-content.open {
   opacity: 1;
   visibility: visible;
