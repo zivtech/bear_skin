@@ -17,13 +17,12 @@
 .toolbar-css-frame {
   z-index: 1001;
   right: 0;
-  margin-right: -650px;
+  margin-right: -400px;
   top: 39px;
-  width: 650px;
-  height: 100vh;
+  width: 400px;
+  height: calc(100% - 39px);
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 1rem;
 }
 
 .toolbar-css-frame.open {
@@ -31,6 +30,10 @@
 }
 
 body.css-frame {
-  margin-left: -650px;
+  margin-left: -400px;
+}
+
+.gxCDgO {
+  max-width: 390px;
 }
 
