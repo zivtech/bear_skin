@@ -19,6 +19,21 @@ global-scripts:
     - core/jquery.once
     - bear_skin/flexibility
 
+toolbar:
+  version: 1.x
+  css:
+    theme:
+      css/toolbar.css:
+        minified: true
+  js:
+    js/toolbar.js:
+      minified: false
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+
 # Do not modify the library info within the injection points below. They
 # will be overridden by gulp later if you do!
 # inject:libraries

@@ -1,0 +1,7 @@
+.toolbar-icon-css {
+  background: transparent url('../images/css.png') no-repeat 3px center !important;
+}
+
+.toolbar-icon-css:hover {
+  background: #282828 url('../images/css.png') no-repeat 3px center !important;
+}

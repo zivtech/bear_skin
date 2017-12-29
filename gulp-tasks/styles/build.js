@@ -13,6 +13,7 @@ var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
 var cssnano = require('gulp-cssnano');
+var cssInfo = require('gulp-css-info');
 
 var mColors = require('../../theme-settings.json');
 var bgColors = require('../../theme-settings.json');
@@ -75,6 +76,8 @@ module.exports = function (gulp, options) {
     .pipe(postcss(postprocessors))
     .pipe(cssnano())
     .pipe(gulp.dest(options.css.dest))
+    .pipe(cssInfo())
+    .pipe(gulp.dest('docs'))
     .pipe(gulpif(options.browserSync.patterns.enabled, browserSync.get('patterns').stream({match: '**/*.css'})))
     .pipe(gulpif(options.browserSync.site.enabled, browserSync.get('site').stream({match: '**/*.css'})));
 };

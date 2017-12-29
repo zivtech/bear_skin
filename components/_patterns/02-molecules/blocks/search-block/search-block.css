@@ -3,8 +3,6 @@
   transition: .2s color ease-in-out;
 }
 
-
-
 .msearch-content {
   width: 100%;
   left: 0;
@@ -13,6 +11,10 @@
   opacity: 0;
   z-index: 15;
   background: rgba(0, 116, 217, .95);
+}
+
+.toolbar-fixed .msearch-content {
+  top: 39px;
 }
 
 .msearch-content.open {

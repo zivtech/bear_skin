@@ -176,3 +176,26 @@ function bear_skin_preprocess_form(&$variables) {
 function bear_skin_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $suggestions[] = 'form__' . $variables['element']['#form_id'];
 }
+
+/**
+ * Implements hook_toolbar().
+ */
+function bear_skin_toolbar_alter(&$items) {
+  $items['contextual']['#cache']['contexts'][] = 'outside_in_is_applied';
+  if (isset($items['contextual']['tab']) && \Drupal::service('outside_in.manager')->isApplicable()) {
+    $items['contextual']['#weight'] = -1000;
+    $items['contextual']['#attached']['library'][] = 'outside_in/drupal.outside_in';
+    $items['contextual']['tab']['#attributes']['data-drupal-outsidein'] = 'toggle';
+
+    // Set a class on items to mark whether they should be active in edit mode.
+    // @todo Create a dynamic method for modules to set their own items.
+    //   https://www.drupal.org/node/2784589
+
+    $edit_mode_items = ['contextual', 'block_place'];
+    foreach ($items as $key => $item) {
+      if (!in_array($key, $edit_mode_items) && (!isset($items[$key]['#wrapper_attributes']['class']) || !in_array('hidden', $items[$key]['#wrapper_attributes']['class']))) {
+        $items[$key]['#wrapper_attributes']['class'][] = 'edit-mode-inactive';
+      }
+    }
+  }
+}
