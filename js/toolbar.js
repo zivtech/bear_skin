@@ -9,6 +9,15 @@
       $toolbarCssIcon.on('click', function() {
         $(this).find('.toolbar-icon-css').toggleClass('active');
         $toolbarCssFrame.toggleClass('open');
+        $toolbarCssFrame.contents().find('.input').focus();
+      });
+
+      $('body').on('click', function(e) {
+        var target = $(e.target);
+        if(!target.is($toolbarCssIcon) && !target.is($toolbarCssFrame)) {
+          $toolbarCssIcon.find('.toolbar-icon-css').removeClass('active');
+          $toolbarCssFrame.removeClass('open');
+        }
       });
 
       var $extraCss = '' +

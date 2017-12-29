@@ -1,7 +1,7 @@
 .toolbar-icon-css {
   width: 24px;
   height: 24px;
-  left: 0;
+  left: 4px;
   top: .5rem;
   background: transparent url('../images/css.png') no-repeat 0 0;
 }
