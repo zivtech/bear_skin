@@ -19,9 +19,10 @@
 				{% endspaceless %}
 			</div>
 		{% endfor %}
-		<div class="toolbar-tab ml05"><a href="javascript:" class="toolbar-icon toolbar-icon-css trigger toolbar-item">Css Doc</a></div>
+		<div class="toolbar-tab ml05"><a href="javascript:" id="toolbar-icon-css" class="toolbar-icon toolbar-icon-css trigger toolbar-item">Css Doc</a></div>
 	</nav>
 	{{ remainder }}
 	{{ attach_library('bear_skin/toolbar') }}
 </div>
+<iframe id="toolbar-css-frame" name="toolbar-css-frame" src="{{ base_path ~ directory }}/docs/theme.html" class="toolbar-css-frame absolute allt" frameborder="0" width="650px" height="100%"></iframe>
 
