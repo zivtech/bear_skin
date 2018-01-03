@@ -11,6 +11,9 @@ module.exports = {
   "--border-color-error": styleVariables.colorList['border-color-error'],
   "--form-item-border-color": styleVariables.colorList['form-item-border-color'],
   "--form-item-focused-color": styleVariables.colorList['form-item-focused-color'],
+  "--green": styleVariables.colorList['green'],
+  "--red": styleVariables.colorList['red'],
+  "--orange": styleVariables.colorList['orange'],
 
   "--animation-transition-time": styleVariables.ui['animation-transition-time'],
 
@@ -28,7 +31,4 @@ module.exports = {
   "--h5": styleVariables.typography['h5'],
 
   "--site-max-width": styleVariables.layout['site-max-width'],
-  "--breakpoint-sm": styleVariables.layout['breakpoint-sm'],
-  "--breakpoint-md": styleVariables.layout['breakpoint-md'],
-  "--breakpoint-lg": styleVariables.layout['breakpoint-lg']
 };

@@ -9,7 +9,10 @@
     "border-color-secondary": "#eee",
     "border-color-error": "red",
     "form-item-border-color": "#ccc",
-    "form-item-focused-color": "#0074d9"
+    "form-item-focused-color": "#0074d9",
+    "green": "green",
+    "red": "red",
+    "orange": "orange"
   },
   "bgList": {
     "bg-primary": "#0074d9",
