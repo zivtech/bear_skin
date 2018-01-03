@@ -1,7 +1,0 @@
-{
-  "directory": "components/vendor/bower/raw",
-  "color": true,
-  "scripts": {
-    "postinstall": "./node_modules/.bin/gulp bower:build"
-  }
-}

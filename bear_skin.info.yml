@@ -5,8 +5,6 @@ package: Bear
 core: 8.x
 
 libraries:
-  - bear_skin/flexboxgrid
-  - bear_skin/flexibility
   - bear_skin/global-styles
   - bear_skin/global-scripts
 

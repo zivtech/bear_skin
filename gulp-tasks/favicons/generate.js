@@ -1,7 +1,7 @@
 'use strict';
 
 var favicons = require('gulp-favicons');
-var gutil = require('gulp-util');
+var log = require('fancy-log');
 
 module.exports = function (gulp, options) {
   return gulp.src(options.favicons.src)
@@ -30,6 +30,6 @@ module.exports = function (gulp, options) {
         yandex: false
       }
     }))
-    .on('error', gutil.log)
+    .on('error', log.error)
     .pipe(gulp.dest(options.favicons.dest));
 };

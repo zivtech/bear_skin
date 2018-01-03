@@ -3,6 +3,5 @@ export
 .DS_Store
 ; pattern-lab
 gulpfile.yml
-components/vendor/bower/raw
 .idea
 audit-results

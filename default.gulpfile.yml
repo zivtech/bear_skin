@@ -20,9 +20,6 @@ patternLab:
     - png
   dir: "./pattern-lab"
   patterns: "components/_patterns/**/*.{twig,json}"
-bower:
-  src: "components/vendor/bower/raw"
-  dest: "components/vendor/bower"
 css:
   src: ["components/_patterns/**/*.css"]
   dest: "css"
