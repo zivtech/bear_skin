@@ -15,6 +15,7 @@ When ready to work, refer to [Gulp tasks for front-end development](docs/gulp.md
 ## Documentation
 
 1. [Enabling dev mode](docs/dev_mode.md) in Drupal 8 to provide template suggestions and disabling the cache
+1. [PostCss setup](docs/postcss.md)
 1. [Gulp tasks for front-end development](docs/gulp.md)
     - [Building CSS](docs/gulp.md#building-css)
     - [Adding Google Fonts](docs/gulp.md#adding-google-fonts)

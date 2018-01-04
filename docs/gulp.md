@@ -6,12 +6,6 @@ You can override any of the settings by duplicating the default file and renamin
 
 Also, individual gulp tasks live in the `gulp-tasks` directory.
 
-# CSS Structure
-
-The css in Bear Skin is organized in an atomic structure. You will find most of the files within their component directory. ex: ```components/_patterns/02-molecules/messages/messages.css```
-
-The ```00-utilities``` directories contains some "setup" css files where you can override BassCSS variables, add animations or additional reusable classes etc. You should get familiar with these prior to starting styling away.
-
 ## Building CSS
 
 To start building CSS, you have to first install all of the gulp dependencies. `cd` to the project directory in your terminal and run:
@@ -29,7 +23,7 @@ Then reinstall gulp:
 $ sudo npm install gulp -g
 ```
 
-####To get started, either use
+#### To get started, either use
 `gulp build` (For building all tasks)
 
 or
