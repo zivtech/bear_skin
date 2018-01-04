@@ -29,11 +29,12 @@ Then reinstall gulp:
 $ sudo npm install gulp -g
 ```
 
-To get started, either use:
+####To get started, either use
+`gulp build` (For building all tasks)
 
-```sh
+or
 
-```
+`gulp watch` (to get a continuous build process as you style the site)
 
 ## Adding Google Fonts
 
@@ -50,8 +51,8 @@ Copy the `family` parameter of the URL, and paste it into the `fonts.list` file,
 In the `fonts.list` file, you can add as many rows of fonts as you want. For example:
 
 ```
-Source+Sans+Pro&amp;subset=vietnamese
-Open+Sans:400,600i,800i&amp;subset=vietnamese
+Roboto:400,700
+Noto+Serif:400,700
 ```
 
 The CSS file is generated at `css/fonts.css`. This CSS file is included in the theme library's yaml file.
@@ -75,7 +76,7 @@ favicons:
 
 ### Accessibility testing
 
-Run this test with `gulp audit:pa11y`.
+Run this test with `gulp audit:pa11y`
 
 We use [Pa11y](https://github.com/pa11y/pa11y) to test your site against a configurable accessibility standard. You can test against any of the following standards:
 
