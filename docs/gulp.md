@@ -61,24 +61,9 @@ favicons:
 
 ## Testing and analysis
 
-### Visual regression testing
-
-We have included backstopJS to be able to run css regression test.
-
-Configure your test with `backstop.json`. **When in doubt, visit [BackstopJS](https://github.com/garris/BackstopJS) for more config info**.
-Create your reference pointer after making your changes and compile css:
-```sh
-$ gulp create-reference
-```
-To test that, run:
-```sh
-$ gulp run-test
-```
-Note: you can also just run test between environments.
-
 ### Accessibility testing
 
-Run this test with `gulp audit:accessibility`.
+Run this test with `gulp audit:pa11y`.
 
 We use [Pa11y](https://github.com/pa11y/pa11y) to test your site against a configurable accessibility standard. You can test against any of the following standards:
 
