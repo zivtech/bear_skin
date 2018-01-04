@@ -27,7 +27,41 @@ css:
   lint:
     enabled: true
     failOnError: false
-  browsers: ["last 2 version", "> 5%", "IE 9"]
+  browsers:
+    - "last 2 version"
+    - "> 5%"
+    - "IE 11"
+  mediaQueries:
+    --breakpoint-sm: "(min-width: 40em)"
+    --breakpoint-md: "(min-width: 52em)"
+    --breakpoint-lg: "(min-width: 64em)"
+  customProperties:
+    c-primary: "#0074d9"
+    c-secondary: "#00539E"
+    body-color: "#222"
+    link-color: "#0074d9"
+    link-color-hover: "#00539E"
+    border-color-primary: "#ccc"
+    border-color-secondary: "#eee"
+    border-color-error: "red"
+    form-item-border-color: "#ccc"
+    form-item-focused-color: "#0074d9"
+    green: "green"
+    red: "red"
+    orange: "orange"
+    bg-primary: "#0074d9"
+    bg-secondary: "#ccc"
+    bg-tertiary: "#eee"
+    site-max-width: "1200px"
+    serif: "'Noto Serif', serif"
+    sans: "'Roboto', sans-serif"
+    body-font-size: "1rem"
+    h1: "2rem"
+    h2: "1.5rem"
+    h3: "1.17rem"
+    h4: "1rem"
+    h5: "0.83rem"
+    animation-transition-time: ".2s"
 accessibility:
   # The accessibility standard to use: Section508, WCAG2A, WCAG2AA, WCAG2AAA
   wcagCompliance: "WCAG2AA"
