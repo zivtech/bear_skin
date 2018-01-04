@@ -1,8 +1,14 @@
-@import 'basscss-addons/modules/colors';
-@import 'basscss-addons/modules/forms';
-@import 'basscss-addons/modules/btn';
-@import 'basscss-addons/modules/btn-primary';
-@import 'basscss-addons/modules/background-colors';
+@import 'basscss-color-base';
+@import 'basscss-base-forms';
+@import 'basscss-color-forms';
+@import 'basscss-btn';
+@import 'basscss-btn-primary';
+@import 'basscss-grid';
+@import 'basscss-flexbox';
+@import 'basscss-borders';
+@import 'basscss-responsive-states';
+@import 'basscss-colors';
+@import 'basscss-background-colors';
 
 /* at the end for utility classes to override if needed */
 @import 'basscss';
