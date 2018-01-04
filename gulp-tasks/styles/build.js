@@ -1,11 +1,9 @@
 'use strict';
 
 var sourcemaps = require('gulp-sourcemaps');
-var flexibility = require('postcss-flexibility');
 var postcss = require('gulp-postcss');
 var cssnext = require('postcss-cssnext');
 var concatCss = require('gulp-concat-css');
-var mqpacker = require('css-mqpacker');
 var pump = require('pump');
 var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
@@ -16,30 +14,30 @@ module.exports = function (gulp, options, cb) {
 
   var processors = [
     require('postcss-import')(),
-    require('postcss-discard-comments')(),
     require('postcss-cssnext')({
       browsers: options.css.browsers,
       features: {
         customProperties: {
           variables: options.css.customProperties,
-          preserve: true,
+          preserve: options.css.buildForIE ? false : true,
         },
         customMedia: {
           extensions: options.css.mediaQueries,
         },
       }
     }),
-    mqpacker({
+    require('postcss-discard-comments')(),
+    require('css-mqpacker')({
       sort: true
     }),
-    flexibility()
+    require('postcss-flexibility')()
   ];
 
   return pump([
     gulp.src(options.css.src),
     gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})),
     postcss(processors),
-    concatCss('theme.css'),
+    gulpif(options.css.buildForIE, concatCss('theme-ie.css'), concatCss('theme.css')),
     gulpif(options.buildSourceMaps, sourcemaps.write()),
     gulp.dest(options.css.dest),
     cssInfo(),
