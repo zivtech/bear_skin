@@ -3,7 +3,7 @@ var core = require('../core.js');
 module.exports = function (gulp, options) {
   return core.sh(
   './node_modules/.bin/specificity-graph ' +
-  'css/bear_skin.css ' +
+  'css/theme.css ' +
   '--output audit-results/specificity-graph ' +
   '--browser ',
   true,

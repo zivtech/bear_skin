@@ -42,6 +42,6 @@
   gulp.task('default', ['watch']);
   gulp.task('build', ['styles:build', 'pl:build', 'favicons:build', 'images:build', 'fonts:download']);
   gulp.task('favicons:build', ['favicons:generate', 'favicons:inject']);
-  gulp.task('audit', ['audit:specificity', 'audit:pa11y', 'audit:analyze']);
+  gulp.task('audit', ['audit:accessibility', 'audit:specificity', 'audit:pa11y', 'audit:analyze']);
 
 }());

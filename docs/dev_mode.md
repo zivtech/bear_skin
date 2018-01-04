@@ -14,6 +14,8 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
 ```
 This will include the local settings file as part of Drupal's settings file.
 
+---
+
 Open `settings.local.php` and uncomment this line to enable the null cache service:
 
 ```php
@@ -34,11 +36,19 @@ $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 ```
 
+**Important!**
+as of Drupal 8.4, you need as well:
+```php
+$settings['cache']['bins']['page'] = 'cache.backend.null';
+```
+
 If you do not want to install test modules and themes, set following to `FALSE`
 
 ```php
 $settings['extension_discovery_scan_tests'] = TRUE;
 ```
+
+---
 
 Open `development.services.yml` in the `/sites` folder and add the following block (to disable twig cache)
 

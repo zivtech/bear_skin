@@ -6,6 +6,12 @@ You can override any of the settings by duplicating the default file and renamin
 
 Also, individual gulp tasks live in the `gulp-tasks` directory.
 
+# CSS Structure
+
+The css in Bear Skin is organized in an atomic structure. You will find most of the files within their component directory. ex: ```components/_patterns/02-molecules/messages/messages.css```
+
+The ```00-utilities``` directories contains some "setup" css files where you can override BassCSS variables, add animations or additional reusable classes etc. You should get familiar with these prior to starting styling away.
+
 ## Building CSS
 
 To start building CSS, you have to first install all of the gulp dependencies. `cd` to the project directory in your terminal and run:
@@ -23,6 +29,13 @@ Then reinstall gulp:
 $ sudo npm install gulp -g
 ```
 
+####To get started, either use
+`gulp build` (For building all tasks)
+
+or
+
+`gulp watch` (to get a continuous build process as you style the site)
+
 ## Adding Google Fonts
 
 Bear Skin uses Gulp to add [Google Fonts](https://fonts.google.com/). Instead of having multiple requests to the server to get fonts (one request for each font style, and one for the CSS), Bear Skin downloads all the fonts from Google. Then, they are base64 encoded into a data uri and embedded directly into the CSS. As a result, only one request is needed to get all fonts! Plus, since CSS is cached in the browser, subsequent page reloads should be faster.
@@ -38,8 +51,8 @@ Copy the `family` parameter of the URL, and paste it into the `fonts.list` file,
 In the `fonts.list` file, you can add as many rows of fonts as you want. For example:
 
 ```
-Source+Sans+Pro&amp;subset=vietnamese
-Open+Sans:400,600i,800i&amp;subset=vietnamese
+Roboto:400,700
+Noto+Serif:400,700
 ```
 
 The CSS file is generated at `css/fonts.css`. This CSS file is included in the theme library's yaml file.
@@ -61,24 +74,9 @@ favicons:
 
 ## Testing and analysis
 
-### Visual regression testing
-
-We have included backstopJS to be able to run css regression test.
-
-Configure your test with `backstop.json`. **When in doubt, visit [BackstopJS](https://github.com/garris/BackstopJS) for more config info**.
-Create your reference pointer after making your changes and compile css:
-```sh
-$ gulp create-reference
-```
-To test that, run:
-```sh
-$ gulp run-test
-```
-Note: you can also just run test between environments.
-
 ### Accessibility testing
 
-Run this test with `gulp audit:accessibility`.
+Run this test with `gulp audit:pa11y`
 
 We use [Pa11y](https://github.com/pa11y/pa11y) to test your site against a configurable accessibility standard. You can test against any of the following standards:
 

@@ -30,7 +30,6 @@ When ready to work, refer to [Gulp tasks for front-end development](docs/gulp.md
 1. [Inheritance in Pattern Lab](docs/pattern_lab_inheritance.md) (this applies to inheritance in Twig too)
 1. [Using Probo.CI](docs/probo.md)
     - [Linting with Probo](docs/probo.md#linting-with-probo)
-1. [Sass Structure](docs/sass.md)
 
 * * *
 
