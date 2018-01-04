@@ -1,11 +1,13 @@
 'use strict';
 
 var sourcemaps = require('gulp-sourcemaps');
+var flexibility = require('postcss-flexibility');
 var postcss = require('gulp-postcss');
 var cssnext = require('postcss-cssnext');
 var corepostcss = require('postcss');
 var cached = require('gulp-cached');
 var concatCss = require('gulp-concat-css');
+var mqpacker = require('css-mqpacker');
 var pump = require('pump');
 var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
@@ -60,7 +62,7 @@ module.exports = function (gulp, options, cb) {
   return pump([
     gulp.src(options.css.src),
     gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})),
-    postcss((processors)),
+    postcss(processors),
     gulpif(options.buildSourceMaps, sourcemaps.write()),
     concatCss('theme.css'),
     postcss(postprocessors),

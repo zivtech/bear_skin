@@ -24,7 +24,6 @@ css:
   src: ["components/_patterns/**/*.css"]
   dest: "css"
   buildSourceMaps: false
-  buildForIE: false
   lint:
     enabled: true
     failOnError: false

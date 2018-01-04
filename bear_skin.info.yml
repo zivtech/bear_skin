@@ -14,11 +14,6 @@ libraries-override:
 stylesheets-remove:
   - core/themes/stable/css/file/file.admin.css
 
-conditional-stylesheets:
-  IE:
-    all:
-      css/theme-ie.css
-
 regions:
   header: 'Header'
   navigation: 'Navigation bar'
