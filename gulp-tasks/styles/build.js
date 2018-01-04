@@ -5,7 +5,6 @@ var flexibility = require('postcss-flexibility');
 var postcss = require('gulp-postcss');
 var cssnext = require('postcss-cssnext');
 var corepostcss = require('postcss');
-var cached = require('gulp-cached');
 var concatCss = require('gulp-concat-css');
 var mqpacker = require('css-mqpacker');
 var pump = require('pump');
