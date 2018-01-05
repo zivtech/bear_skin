@@ -24,6 +24,7 @@
   --space-4: 4rem;
   --space-5: 5rem;
 
+  --button-color: black;
   --border-color: var(--border-color-primary);
   --border-radius: 4px;
   --button-background-color: var(--bg-tertiary);

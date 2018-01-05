@@ -14,6 +14,9 @@ libraries-override:
 stylesheets-remove:
   - core/themes/stable/css/file/file.admin.css
 
+ckeditor_stylesheets:
+  - css/theme.css
+
 regions:
   header: 'Header'
   navigation: 'Navigation bar'
