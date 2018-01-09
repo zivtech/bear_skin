@@ -49,7 +49,7 @@
         ]
       %}
       <li{{ item.attributes.addClass(liClasses) }}>
-        {% set linkattributes = { class: ['menu__link'] } %}
+        {% set linkattributes = { class: ['menu__link', item.below ? 'has-popup'], 'aria-haspopup': item.below|length > 0 ? 'true' : 'false', 'aria-expanded': 'false' } %}
         {{ link(item.title, item.url, linkattributes) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
