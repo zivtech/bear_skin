@@ -17,3 +17,13 @@ global-scripts:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
+
+accessibilityMenu:
+  js:
+    js/accessibilityMenu.js:
+      minified: false
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
