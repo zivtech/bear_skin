@@ -15,12 +15,14 @@
 
         $($popupLinks).parent('li').once().on({
           mouseover: function() {
-            $(this).addClass('is-expanded');
-            $(this).attr('aria-expanded', 'true');
+            $(this).removeClass('is-expanded');
+            $(this).find('> a').addClass('is-expanded');
+            $(this).find('> a').attr('aria-expanded', 'true');
           },
           mouseout: function() {
             $(this).removeClass('is-expanded');
-            $(this).attr('aria-expanded', 'false');
+            $(this).find('> a').removeClass('is-expanded');
+            $(this).find('> a').removeAttr('aria-expanded');
           }
         });
       });

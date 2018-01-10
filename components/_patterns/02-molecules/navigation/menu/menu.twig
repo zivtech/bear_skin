@@ -49,7 +49,7 @@
         ]
       %}
       <li{{ item.attributes.addClass(liClasses) }} role="none">
-        {% set linkattributes = { class: ['menu__link', item.below ? 'has-popup'], 'aria-haspopup': item.below|length > 0 ? 'true' : 'false', 'aria-expanded': 'false', role: 'menuitem' } %}
+        {% set linkattributes = { class: ['menu__link', item.below ? 'has-popup'], 'aria-haspopup': item.below|length > 0 ? 'true' : 'false', role: 'menuitem' } %}
         {{ link(item.title, item.url, linkattributes) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
