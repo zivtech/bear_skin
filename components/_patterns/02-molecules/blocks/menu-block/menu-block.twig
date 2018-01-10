@@ -8,13 +8,22 @@
 
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 
+{#
+ if the configuration.label_display is not checked in the block settings,
+ then configuration.label is not sent by Drupal. Therefore, for accessibility
+ purposes you need to send "override_title" when you include this template.
+
+ {% include menu-block.twig with { override_title: 'My menu title' } %}
+#}
+{% set menu_title = configuration.label_display ? configuration.label : override_title %}
+
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}
   {% endif %}
   {{ title_prefix }}
-  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
+  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ menu_title }}</h2>
   {{ title_suffix }}
   {# Menu. #}
   {% block content %}

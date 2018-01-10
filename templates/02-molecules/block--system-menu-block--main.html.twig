@@ -1,3 +1,5 @@
 {% set attributes = attributes.addClass('flex') %}
 
-{% include "@molecules/blocks/menu-block/menu-block.twig" %}
+{% include "@molecules/blocks/menu-block/menu-block.twig" with {
+override_title: 'Main navigation menu'
+} %}
