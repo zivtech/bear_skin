@@ -13,11 +13,12 @@
  */
 #}
 {% set classes = [
-'column',
-'sidebar',
-'sidebar--second'
+'region',
+'region--' ~ region|clean_class,
 ] %}
 
 {% include "@organisms/regions/region.twig" with {
-role: "complimentary"
-}%}
+  element: "main",
+  role: "main"
+}
+%}

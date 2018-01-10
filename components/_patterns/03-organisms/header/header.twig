@@ -1,6 +1,9 @@
-<header class="wrapper-header">
+<header class="wrapper-header" role="banner">
   <div class="wrapper--inner wrapper-header__inner container mx-auto pl1 pr1 mt1 mb1 flex flex-center flex-justify">
     {{ content }}
-    <a id="menu-open" class="panel-action panel-action--open icon icon-container md-hide flex items-center allt" href="javascript:"><i class="icon-bars nm allt black"></i></a>
+    <a id="menu-open" class="panel-action panel-action--open icon icon-container md-hide flex items-center allt" href="javascript:">
+      <i class="icon-bars nm allt black"></i>
+      <span class="visually-hidden">{{ 'Open mobile menu'|t }}</span>
+    </a>
   </div>
 </header>

@@ -6,7 +6,7 @@
   {% if display_title != false  %}
     {{ title_prefix }}
     {% if label %}
-      {% set title_classes = title_classes ?: "block__content" %}
+      {% set title_classes = title_classes ?: "block__title" %}
       <{{ label_element ?: "h2" }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_element ?: "h2" }}>
     {% endif %}
     {{ title_suffix }}

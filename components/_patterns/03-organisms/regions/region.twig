@@ -1,10 +1,27 @@
-{% embed "@molecules/blocks/block/block.twig"
-with {
-"element": "section"
-} %}
+{% if content %}
+  {% if role %}
+    {% set attributes = attributes.setAttribute('role', role) %}
+  {% endif %}
+
+  {% if element is not empty %}
+    <{{ element ?: "div" }}{{ attributes.addClass(classes) }}>
+  {% endif %}
+
+  {% if display_title != false  %}
+    {{ title_prefix }}
+    {% if label %}
+      {% set title_classes = title_classes ?: "block__content" %}
+      <{{ label_element ?: "h2" }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_element ?: "h2" }}>
+    {% endif %}
+    {{ title_suffix }}
+  {% endif %}
 
   {% block content %}
     {{ content }}
   {% endblock %}
 
-{% endembed %}
+  {% if element is not empty %}
+    </{{ element ?: "div" }}>
+  {% endif %}
+
+{% endif %}
