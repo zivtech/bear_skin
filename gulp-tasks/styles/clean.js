@@ -2,6 +2,6 @@
 
 var del = require('del');
 
-module.exports = function (gulp, options) {
-  return del([options.css.dest]);
+module.exports = function (gulp) {
+  return del([global.OPTIONS.css.dest]);
 };

@@ -1,6 +1,6 @@
 var core = require('../core.js');
 
-module.exports = function (gulp, options) {
+module.exports = function (gulp) {
   return core.sh(
   './node_modules/.bin/specificity-graph ' +
   'css/theme.css ' +

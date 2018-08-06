@@ -2,7 +2,7 @@
 
 var inject = require('gulp-inject');
 
-module.exports = function (gulp, options) {
+module.exports = function (gulp) {
   return gulp.src('templates/html.html.twig')
     .pipe(inject(gulp.src('images/favicons/icons.html'), {
       transform: function (filePath, file) {

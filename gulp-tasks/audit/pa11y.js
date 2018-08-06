@@ -1,17 +1,17 @@
 var core = require('../core.js');
 
-module.exports = function (gulp, options) {
+module.exports = function (gulp) {
   var command = './node_modules/.bin/pa11y '
-  + '--standard ' + options.accessibility.wcagCompliance + ' '
-  + '--reporter ' + options.accessibility.pa11yReporter + ' '
-  + options.paths.devUrl;
+  + '--standard ' + global.OPTIONS.accessibility.wcagCompliance + ' '
+  + '--reporter ' + global.OPTIONS.accessibility.pa11yReporter + ' '
+  + global.OPTIONS.paths.devUrl;
 
-  if (options.accessibility.pa11yReporter.toLowerCase() != 'cli') {
+  if (global.OPTIONS.accessibility.pa11yReporter.toLowerCase() != 'cli') {
     core.checkResultsDir();
     command += ' > audit-results/' +
-    options.accessibility.wcagCompliance +
+    global.OPTIONS.accessibility.wcagCompliance +
     '-standards-results.' +
-    options.accessibility.pa11yReporter.toLowerCase();
+    global.OPTIONS.accessibility.pa11yReporter.toLowerCase();
   }
 
   return core.sh(command, true, function () {

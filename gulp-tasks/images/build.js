@@ -3,10 +3,10 @@
 var del = require('del');
 var imagemin = require('gulp-imagemin');
 
-module.exports = function (gulp, options) {
-  return gulp.src(options.images.src)
+module.exports = function (gulp) {
+  return gulp.src(global.OPTIONS.images.src)
     .pipe(imagemin({
       verbose: true
     }))
-    .pipe(gulp.dest(options.images.dest));
+    .pipe(gulp.dest(global.OPTIONS.images.dest));
 };

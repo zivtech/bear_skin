@@ -19,6 +19,8 @@
     console.log('No custom config found! Proceeding with default config only.');
   }
 
+  global.OPTIONS = config;
+
   //  should we build sourcemaps? "gulp build --sourcemaps"
   var buildSourceMaps = !!argv.sourcemaps;
   config.buildSourceMaps = buildSourceMaps;
@@ -26,7 +28,6 @@
   var gulpRequireTasks = require('gulp-require-tasks');
   gulpRequireTasks({
     path: process.cwd() + '/gulp-tasks',
-    arguments: [config]
   });
 
   var patternLabTasks = require('./gulp-tasks/patternLab.js');

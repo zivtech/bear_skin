@@ -3,7 +3,7 @@
 var shell = require('gulp-shell');
 var backstopConfig = require('../backstop.json');
 
-module.exports = function(gulp, options) {
+module.exports = function(gulp) {
   gulp.task('backstop:ref', shell.task([
     'cd node_modules/backstopjs; npm run reference'
   ]));

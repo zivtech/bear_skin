@@ -6,10 +6,10 @@ var patterns = browserSync.create('patterns');
 var site = browserSync.create('site');
 
 module.exports = function (gulp, options) {
-  if (options.browserSync.patterns.enabled) {
+  if (global.OPTIONS.browserSync.patterns.enabled) {
     var plOptions = merge(
       {},
-      options.browserSync.patterns,
+      global.OPTIONS.browserSync.patterns,
       {
         snippetOptions: {
           rule: {
@@ -25,12 +25,12 @@ module.exports = function (gulp, options) {
     patterns.init(plOptions);
   }
 
-  if (options.browserSync.site.enabled) {
+  if (global.OPTIONS.browserSync.site.enabled) {
     var siteOptions = merge(
       {},
-      options.browserSync.site,
+      global.OPTIONS.browserSync.site,
       {
-        proxy: options.paths.devUrl,
+        proxy: global.OPTIONS.paths.devUrl,
         snippetOptions: {
           rule: {
             match: /<\/body>/i,

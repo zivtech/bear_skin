@@ -6,24 +6,24 @@ var yaml = require('js-yaml');
 var fs = require('fs');
 var browserSync = require('browser-sync');
 
-module.exports = function (gulp, options) {
+module.exports = function (gulp) {
   var plConfig = yaml.safeLoad(
-    fs.readFileSync(options.patternLab.configFile, 'utf8')
+    fs.readFileSync(global.OPTIONS.patternLab.configFile, 'utf8')
   );
-  var plRoot = path.join(options.patternLab.configFile, '../..');
+  var plRoot = path.join(global.OPTIONS.patternLab.configFile, '../..');
   var plSource = path.join(plRoot, plConfig.sourceDir);
   var plPublic = path.join(plRoot, plConfig.publicDir);
   var plMeta = path.join(plSource, '/_meta');
   var consolePath = path.join(plRoot, 'core/console');
-  var watchedExtensions = options.patternLab.watchedExtensions.join(',');
+  var watchedExtensions = global.OPTIONS.patternLab.watchedExtensions.join(',');
 
   function plBuild(cb) {
     core.sh('php ' + consolePath + ' --generate', true, function () {
-      if (options.browserSync.patterns.enabled) {
+      if (global.OPTIONS.browserSync.patterns.enabled) {
         browserSync.get('patterns').reload();
       }
 
-      if (options.browserSync.site.enabled) {
+      if (global.OPTIONS.browserSync.site.enabled) {
         browserSync.get('site').reload();
       }
 
@@ -41,11 +41,11 @@ module.exports = function (gulp, options) {
     gulp.watch(plGlob, function (event) {
       console.log('File ' + path.relative(process.cwd(), event.path) + ' was ' + event.type + ', running tasks...');
       core.sh('php ' + consolePath + ' --generate', false, function () {
-        if (options.browserSync.patterns.enabled) {
+        if (global.OPTIONS.browserSync.patterns.enabled) {
           browserSync.get('patterns').reload();
         }
 
-        if (options.browserSync.site.enabled) {
+        if (global.OPTIONS.browserSync.site.enabled) {
           browserSync.get('site').reload();
         }
       });

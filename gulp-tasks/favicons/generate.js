@@ -3,13 +3,13 @@
 var favicons = require('gulp-favicons');
 var log = require('fancy-log');
 
-module.exports = function (gulp, options) {
-  return gulp.src(options.favicons.src)
+module.exports = function (gulp) {
+  return gulp.src(global.OPTIONS.favicons.src)
     .pipe(favicons({
-      appName: options.theme.name,
-      appDescription: options.theme.name,
-      background: options.favicons.bgColor,
-      path: '/themes/' + options.theme.name + '/' + options.favicons.dest,
+      appName: global.OPTIONS.theme.name,
+      appDescription: global.OPTIONS.theme.name,
+      background: global.OPTIONS.favicons.bgColor,
+      path: '/themes/' + global.OPTIONS.theme.name + '/' + global.OPTIONS.favicons.dest,
       display: 'standalone',
       orientation: 'portrait',
       start_url: '/?homescreen=1',
@@ -31,5 +31,5 @@ module.exports = function (gulp, options) {
       }
     }))
     .on('error', log.error)
-    .pipe(gulp.dest(options.favicons.dest));
+    .pipe(gulp.dest(global.OPTIONS.favicons.dest));
 };

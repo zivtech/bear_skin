@@ -2,8 +2,8 @@
 
 var csslint = require('gulp-csslint');
 
-module.exports = function (gulp, options) {
-  return gulp.src([options.css.dest + '/**/*.css'])
+module.exports = function (gulp) {
+  return gulp.src([global.OPTIONS.css.dest + '/**/*.css'])
     .pipe(csslint('.csslintrc'))
     .pipe(csslint.formatter());
 };

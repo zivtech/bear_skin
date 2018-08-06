@@ -37,14 +37,16 @@ var tailwindcss = require('tailwindcss');
 //   }
 // };
 
-module.exports = function (gulp, options, cb) {
+module.exports = function (gulp, cb) {
+
+
 
   var processors = [
     require('postcss-import'),
-    tailwindcss(options.css.tailwindConfig),
+    tailwindcss(global.OPTIONS.css.tailwindConfig),
     // cssnext({
     postcssPresetEnv({
-      'browsers': options.css.browsers,
+      'browsers': global.OPTIONS.css.browsers,
       // features: {
       //   customProperties: {
       //     variables: styleVariables
@@ -63,10 +65,10 @@ module.exports = function (gulp, options, cb) {
   // ];
 
   return pump([
-    gulp.src(options.css.src),
-    gulpif(options.buildSourceMaps, sourcemaps.init({debug: true})),
+    gulp.src(global.OPTIONS.css.src),
+    gulpif(global.OPTIONS.buildSourceMaps, sourcemaps.init({debug: true})),
     postcss(processors),
-    gulpif(options.buildSourceMaps, sourcemaps.write()),
+    gulpif(global.OPTIONS.buildSourceMaps, sourcemaps.write()),
     concatCss('theme.css'),
     // postcss(postprocessors),
     cssnano({
@@ -78,10 +80,10 @@ module.exports = function (gulp, options, cb) {
         keyframes: false
       }
     }),
-    gulp.dest(options.css.dest),
+    gulp.dest(global.OPTIONS.css.dest),
     cssInfo(),
     gulp.dest('docs'),
-    gulpif(options.browserSync.patterns.enabled, browserSync.get('patterns').stream({match: '**/*.css'})),
-    gulpif(options.browserSync.site.enabled, browserSync.get('site').stream({match: '**/*.css'})),
+    gulpif(global.OPTIONS.browserSync.patterns.enabled, browserSync.get('patterns').stream({match: '**/*.css'})),
+    gulpif(global.OPTIONS.browserSync.site.enabled, browserSync.get('site').stream({match: '**/*.css'})),
   ], cb);
 };
