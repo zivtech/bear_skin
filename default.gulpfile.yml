@@ -6,7 +6,6 @@ paths:
   devUrl: "zivtechd8.lndo.site"
 theme:
   name: "bear_skin"
-tailwindConfig: "tailwind.js"
 patternLab:
   enabled: false
   configFile: "pattern-lab/config/config.yml"
@@ -29,6 +28,7 @@ css:
     enabled: true
     failOnError: false
   browsers: ["last 2 version", "> 5%", "IE 9"]
+  tailwindConfig: "tailwind.js"
 accessibility:
   # The accessibility standard to use: Section508, WCAG2A, WCAG2AA, WCAG2AAA
   wcagCompliance: "WCAG2AA"
