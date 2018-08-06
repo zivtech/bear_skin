@@ -5,3 +5,4 @@ export
 gulpfile.yml
 .idea
 audit-results
+yarn-error.log
