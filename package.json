@@ -101,5 +101,6 @@
   "homepage": "https://github.com/zivtech/bear_skin#readme",
   "devDependencies": {
     "postcss-preset-env": "^5.3.0",
+    "tailwindcss": "^0.6.4"
   }
 }

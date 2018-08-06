@@ -6,6 +6,7 @@ paths:
   devUrl: "zivtechd8.lndo.site"
 theme:
   name: "bear_skin"
+tailwindConfig: "tailwind.js"
 patternLab:
   enabled: false
   configFile: "pattern-lab/config/config.yml"
