@@ -65,7 +65,6 @@
     "pa11y": "^4.10.0",
     "path": "^0.12.7",
     "postcss": "6.0.15",
-    "postcss-cssnext": "^3.0.2",
     "postcss-each-decl": "^1.0.2",
     "postcss-flexibility": "2.0.0",
     "postcss-import": "^11.0.0",
@@ -99,5 +98,8 @@
   "bugs": {
     "url": "https://github.com/zivtech/bear_skin/issues"
   },
-  "homepage": "https://github.com/zivtech/bear_skin#readme"
+  "homepage": "https://github.com/zivtech/bear_skin#readme",
+  "devDependencies": {
+    "postcss-preset-env": "^5.3.0",
+  }
 }
