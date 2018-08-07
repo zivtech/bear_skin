@@ -6,4 +6,6 @@
   --border-color: var(--border-color-primary);
   --border-radius: 4px;
   --button-background-color: var(--bg-tertiary);
+
+  --animation-transition-time: .2s;
 }
