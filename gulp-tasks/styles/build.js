@@ -15,6 +15,13 @@ var browserSync = require('browser-sync');
 var cssnano = require('gulp-cssnano');
 var cssInfo = require('gulp-css-info');
 var tailwindcss = require('tailwindcss');
+var purgecss = require('postcss-purgecss');
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+  }
+}
 
 module.exports = function (gulp, cb) {
   return pump([
@@ -40,6 +47,18 @@ module.exports = function (gulp, cb) {
       mqpacker({sort: true}),
       // Provide polyfill for flexbox.
       flexibility(),
+      purgecss({
+        content: [
+          './components/_patterns/**/*.twig',
+          './templates/**/*.twig',
+        ],
+        extractors: [
+          {
+            extractor: TailwindExtractor,
+            extensions: ['twig'],
+          },
+        ],
+      }),
     ]),
     // Write sourcemaps if option is enabled.
     gulpif(global.OPTIONS.buildSourceMaps, sourcemaps.write()),

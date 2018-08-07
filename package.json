@@ -69,6 +69,7 @@
     "postcss-flexibility": "2.0.0",
     "postcss-import": "^11.0.0",
     "postcss-preset-env": "^5.3.0",
+    "postcss-purgecss": "^1.0.0",
     "psd": "^3.2.0",
     "pump": "2.0.0",
     "renamer": "^0.6.0",
