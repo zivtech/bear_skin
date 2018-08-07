@@ -7,55 +7,11 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/*
-Additional utility classes based on basscss
-*/
+.skip-link {
+  margin: 0 auto;
+  padding: 0;
+}
 
-.m025 {
-  margin: .25rem;
-}
-.mt025 {
-  margin-top: .25rem;
-}
-.mb025 {
-  margin-bottom: .25rem;
-}
-.mr025 {
-  margin-right: .25rem;
-}
-.ml025 {
-  margin-left: .25rem;
-}
-.m05 {
-  margin: .5rem;
-}
-.mt05 {
-  margin-top: .5rem;
-}
-.mb05 {
-  margin-bottom: .5rem;
-}
-.mr05 {
-  margin-right: .5rem;
-}
-.ml05 {
-  margin-left: .5rem;
-}
-.p05 {
-  padding: .5rem;
-}
-.pt05 {
-  padding-top: .5rem;
-}
-.pb05 {
-  padding-bottom: .5rem;
-}
-.pr05 {
-  padding-right: .5rem;
-}
-.pl05 {
-  padding-left: .5rem;
-}
-.opaque {
-  opacity: 0;
+.skip-link li {
+  list-style-type: none;
 }

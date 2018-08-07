@@ -1,76 +1,49 @@
 'use strict';
 
 var sourcemaps = require('gulp-sourcemaps');
-var flexibility = require('postcss-flexibility');
-var postcss = require('gulp-postcss');
-// var cssnext = require('postcss-cssnext');
-var postcssPresetEnv = require('postcss-preset-env');
 var corepostcss = require('postcss');
-var concatCss = require('gulp-concat-css');
+var postcss = require('gulp-postcss');
+var flexibility = require('postcss-flexibility');
+var atImport = require('postcss-import');
+var postcssPresetEnv = require('postcss-preset-env');
 var mqpacker = require('css-mqpacker');
 var pump = require('pump');
 var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
+var concat = require('gulp-concat');
 var browserSync = require('browser-sync');
 var cssnano = require('gulp-cssnano');
 var cssInfo = require('gulp-css-info');
 var tailwindcss = require('tailwindcss');
 
-// var mColors = require('../../theme-settings.json');
-// var bgColors = require('../../theme-settings.json');
-// var styleVariables = require('../../components/_patterns/00-utilities/_variables/variables');
-// var mediaQueries = require('../../components/_patterns/00-utilities/_variables/mq');
-
-// var dataloop = function (css) {
-//   var rule = '';
-//   for (var mColor in mColors.colorList) {
-//     var colorSet = mColors.colorList[mColor];
-//     rule = corepostcss.rule({selector: '.' + mColor});
-//     rule.append({prop: 'color', value: colorSet});
-//     css.append(rule);
-//   }
-//   for (var bgColor in bgColors.bgList) {
-//     var colorSet = bgColors.bgList[bgColor];
-//     rule = corepostcss.rule({selector: '.' + bgColor});
-//     rule.append({prop: 'background-color', value: colorSet});
-//     css.append(rule);
-//   }
-// };
-
 module.exports = function (gulp, cb) {
-
-
-
-  var processors = [
-    require('postcss-import'),
-    tailwindcss(global.OPTIONS.css.tailwindConfig),
-    // cssnext({
-    postcssPresetEnv({
-      'browsers': global.OPTIONS.css.browsers,
-      // features: {
-      //   customProperties: {
-      //     variables: styleVariables
-      //   },
-      //   customMedia: {
-      //     extensions: mediaQueries
-      //   }
-      // }
-    }),
-    mqpacker({sort: true}),
-    flexibility(),
-  ];
-
-  // var postprocessors = [
-  //   dataloop
-  // ];
-
   return pump([
+    // Read all CSS files.
     gulp.src(global.OPTIONS.css.src),
+    // Build sourcemaps if option is enabled.
     gulpif(global.OPTIONS.buildSourceMaps, sourcemaps.init({debug: true})),
-    postcss(processors),
+    // Resolve @import statements.
+    postcss([
+      atImport(),
+    ]),
+    // Tailwind CSS requires all CSS to be in one file for @apply directives to
+    // work. To satisfy this need, we run a simple concatenation of all CSS
+    // files. We must do this after resolving @import statements.
+    concat('theme.css'),
+    // Run remaining PostCSS processors.
+    postcss([
+      // Initialize Tailwind CSS framework.
+      tailwindcss(global.OPTIONS.css.tailwindConfig),
+      // Compile modern CSS down to something older browsers can understand.
+      postcssPresetEnv({'browsers': global.OPTIONS.css.browsers}),
+      // Group media queries for performance.
+      mqpacker({sort: true}),
+      // Provide polyfill for flexbox.
+      flexibility(),
+    ]),
+    // Write sourcemaps if option is enabled.
     gulpif(global.OPTIONS.buildSourceMaps, sourcemaps.write()),
-    concatCss('theme.css'),
-    // postcss(postprocessors),
+    // Minify CSS.
     cssnano({
       autoprefixer: false,
       reduceIdents: {

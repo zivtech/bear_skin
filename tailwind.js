@@ -54,9 +54,10 @@ let colors = {
   'link': '#0074d9',
   'link-hover': '#00539e',
 
+  'black': '#000',
   'grey': '#ccc',
   'grey-light': '#eee',
-
+  'white': '#fff',
   'green': 'green',
   'red': 'red',
   'orange': 'orange',

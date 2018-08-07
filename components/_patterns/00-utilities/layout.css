@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  max-width: var(--site-max-width);
+  @apply .max-w-site;
 }
 
 .panel-action {

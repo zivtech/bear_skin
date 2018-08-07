@@ -2,12 +2,6 @@
   --link-color: var(--link-color);
   --link-hover-text-decoration: none;
 
-  --space-1: 1rem;
-  --space-2: 2rem;
-  --space-3: 3rem;
-  --space-4: 4rem;
-  --space-5: 5rem;
-
   --button-color: black;
   --border-color: var(--border-color-primary);
   --border-radius: 4px;
