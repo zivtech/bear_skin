@@ -1,12 +1,12 @@
 {% if items %}
   <nav class="pager clearfix" role="navigation" aria-labelledby="pagination-heading">
     <h4 id="pagination-heading" class="visually-hidden">{{ 'Pagination'|t }}</h4>
-    <ul class="pager__items js-pager__items list-style-none flex flex-wrap justify-between p0 m0">
-      <div class="pager__left flex mb025">
+    <ul class="pager__items js-pager__items list-style-none flex flex-wrap justify-between p-0 m-0">
+      <div class="pager__left flex mb-1">
         {# Print first item if we are not on the first page. #}
         {% if items.first %}
           <li class="pager__item pager__item--first">
-            <a class="pager__link left btn button-narrow bg-tertiary rounded mr05" href="{{ items.first.href }}" title="{{ 'Go to first page'|t }}"{{ items.first.attributes|without('href', 'title') }}>
+            <a class="pager__link left btn button-narrow bg-tertiary rounded mr-2" href="{{ items.first.href }}" title="{{ 'Go to first page'|t }}"{{ items.first.attributes|without('href', 'title') }}>
               <i class="icon-backward i-topped-1"><span class="visually-hidden">{{ 'First page'|t }}</span></i>
             </a>
           </li>
@@ -14,8 +14,8 @@
         {# Print previous item if we are not on the first page. #}
         {% if items.previous %}
           <li class="pager__item pager__item--previous">
-            <a class="pager__link left flex btn button-narrow bg-tertiary rounded mr05" href="{{ items.previous.href }}" title="{{ 'Go to previous page'|t }}" rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}>
-              <i class="icon-chevron-left i-topped-2"></i><span class="ml05 regular md-show">{{ 'Previous'|t }}</span>
+            <a class="pager__link left flex btn button-narrow bg-tertiary rounded mr-2" href="{{ items.previous.href }}" title="{{ 'Go to previous page'|t }}" rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}>
+              <i class="icon-chevron-left i-topped-2"></i><span class="ml-2 regular md-show">{{ 'Previous'|t }}</span>
             </a>
           </li>
         {% endif %}
@@ -25,7 +25,7 @@
         {% endif %}
       </div>
       {# Now generate the actual pager piece. #}
-      <div class="pager__central flex flex-grow mb025">
+      <div class="pager__central flex flex-grow mb-1">
         {% for key, item in items.pages %}
           <li class="pager__item{{ current == key ? ' is-active' : '' }}">
             {% if current == key %}
@@ -33,7 +33,7 @@
             {% else %}
               {% set title = 'Go to page @key'|t({'@key': key}) %}
             {% endif %}
-            <a class="pager__link left btn button-narrow mr05 rounded {{ current == key ? ' bg-primary white' : 'bg-tertiary black' }}" href="{{ item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
+            <a class="pager__link left btn button-narrow mr-2 rounded {{ current == key ? ' bg-primary white' : 'bg-tertiary black' }}" href="{{ item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
               <span class="visually-hidden">
                 {{ current == key ? 'Current page'|t : 'Page'|t }}
               </span>
@@ -42,7 +42,7 @@
           </li>
         {% endfor %}
       </div>
-      <div class="pager__right flex mb025">
+      <div class="pager__right flex mb-1">
         {# Add an ellipsis if there are further next pages. #}
         {% if ellipses.next %}
           <li class="pager__item pager__item--ellipsis" role="presentation"></li>
@@ -51,14 +51,14 @@
         {% if items.next %}
           <li class="pager__item pager__item--next">
             <a class="pager__link left flex btn button-narrow bg-tertiary rounded" href="{{ items.next.href }}" title="{{ 'Go to next page'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>
-              <span class="mr05 regular md-show">{{ 'Next'|t }}</span><i class="icon-chevron-right i-topped-2"></i>
+              <span class="mr-2 regular md-show">{{ 'Next'|t }}</span><i class="icon-chevron-right i-topped-2"></i>
             </a>
           </li>
         {% endif %}
         {# Print last item if we are not on the last page. #}
         {% if items.last %}
           <li class="pager__item pager__item--last">
-            <a class="pager__link left btn button-narrow bg-tertiary ml05 rounded" href="{{ items.last.href }}" title="{{ 'Go to last page'|t }}"{{ items.last.attributes|without('href', 'title') }}>
+            <a class="pager__link left btn button-narrow bg-tertiary ml-2 rounded" href="{{ items.last.href }}" title="{{ 'Go to last page'|t }}"{{ items.last.attributes|without('href', 'title') }}>
               <i class="icon-forward i-topped-1"><span class="visually-hidden">{{ 'Last page'|t }}</span></i>
             </a>
           </li>

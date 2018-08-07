@@ -1,6 +1,6 @@
-{% set attributes = attributes.removeClass('mt2 mb2').addClass('mt1 mb1 col-12 relative flex justify-center items-center white') %}
+{% set attributes = attributes.removeClass('my-8').addClass('my-4 col-12 relative flex justify-center items-center white') %}
 
 <form{{ attributes }}>
 	{{ children }}
-	<a id="search-close" class="panel-action panel-action--close panel-action--close-search icon-container block absolute mr1" href="javascript:" title="Close Search"><i class="icon-close white"><span class="visually-hidden">Close search panel</span></i></a>
+	<a id="search-close" class="panel-action panel-action--close panel-action--close-search icon-container block absolute mr-4" href="javascript:" title="Close Search"><i class="icon-close white"><span class="visually-hidden">Close search panel</span></i></a>
 </form>

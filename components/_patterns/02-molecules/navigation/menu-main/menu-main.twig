@@ -8,7 +8,7 @@
     {% if menu_level == 0 %}
     {%
       set ulClasses = [
-        'menu m0 p0 mr05 flex items-center'
+        'menu m-0 p-0 mr-2 flex items-center'
       ]
     %}
       <ul {{attributes.addClass(ulClasses)}} role="menubar">
@@ -25,7 +25,7 @@
         ]
       %}
       <li{{ item.attributes.addClass(liClasses) }} role="none">
-        {% set linkattributes = { class: ['menu__link p05 rounded', item.in_active_trail ? 'border bg-primary white', item.below ? 'has-popup'], 'aria-haspopup': item.below|length > 0 ? 'true' : 'false', role: 'menuitem' } %}
+        {% set linkattributes = { class: ['menu__link p-8 rounded', item.in_active_trail ? 'border bg-primary white', item.below ? 'has-popup'], 'aria-haspopup': item.below|length > 0 ? 'true' : 'false', role: 'menuitem' } %}
         {{ link(item.title, item.url, linkattributes) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
@@ -37,7 +37,7 @@
 
         {% if menu_level == 0 %}
   <div class="container mx-auto">
-    <a id="menu-close" class="panel-action panel-action--close icon-container absolute mt1 mr1" href="javascript:">
+    <a id="menu-close" class="panel-action panel-action--close icon-container absolute mt-4 mr-1" href="javascript:">
       <i class="icon-close nm allt white"></i>
       <span class="visually-hidden">{{ 'Close mobile menu'|t }}</span>
     </a>

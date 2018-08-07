@@ -1,7 +1,7 @@
-{% set attributes = attributes.addClass('pt0 pb0') %}
+{% set attributes = attributes.addClass('py-0') %}
 
 {% spaceless %}
-<div class="select-wrapper border mt05 mb05 relative rounded">
+<div class="select-wrapper border my-2 relative rounded">
   <select{{ attributes }}>
     {% for option in options %}
       {% if option.type == 'optgroup' %}

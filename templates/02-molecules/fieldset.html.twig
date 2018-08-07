@@ -4,7 +4,7 @@
 	'form-item',
 	'js-form-wrapper',
 	'form-wrapper',
-	'mb1',
+	'mb-4',
 	'border'
 ]
 %}
@@ -19,10 +19,10 @@
 	]
 	%}
 	{#  Always wrap fieldset legends in a <span> for CSS positioning. #}
-	<legend{{ legend.attributes.addClass('pl05 pr05') }}>
+	<legend{{ legend.attributes.addClass('px-2') }}>
 		<span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
 	</legend>
-	<div class="fieldset-wrapper p05">
+	<div class="fieldset-wrapper p-2">
 		{% if errors %}
 			<div class="form-item--error-message">
 				<strong>{{ errors }}</strong>

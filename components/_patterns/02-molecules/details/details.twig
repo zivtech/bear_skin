@@ -1,5 +1,5 @@
-{% set attributes = attributes.addClass('mt1 mb1 border') %}
-{% set summary_attributes = summary_attributes.addClass('summary p1 flex items-center justify-between') %}
+{% set attributes = attributes.addClass('mt-4 mb-1 border') %}
+{% set summary_attributes = summary_attributes.addClass('summary p-4 flex items-center justify-between') %}
 
 <details{{ attributes }}>
   {%- if title -%}
@@ -8,14 +8,14 @@
       <div class="icon summary__icon allt" aria-hidden="true"><i class="icon-caret-right"></i></div>
     </summary>
   {%- endif -%}
-  <div class="details-wrapper p1 clearfix">
+  <div class="details-wrapper p-4 clearfix">
     {% if errors %}
       <div class="form-item--error-message">
         <strong>{{ errors }}</strong>
       </div>
     {% endif %}
     {%- if description -%}
-      <div class="details-descriptions h5 gray mb1">{{ description }}</div>
+      <div class="details-descriptions h5 gray mb-1">{{ description }}</div>
     {%- endif -%}
     {%- if children -%}
       {{ children }}

@@ -1,10 +1,10 @@
 {% set attributes = attributes.addClass([
-  'mt1',
-  'mb1',
-  'pt1',
-  'pb1',
-  'pr1',
-  'pl1',
+  'mt-4',
+  'mb-1',
+  'pt-4',
+  'pb-4',
+  'pr-4',
+  'pl-4',
   'flex',
   'items-center',
   'border',
@@ -22,7 +22,7 @@
   {% endblock heading %}
 
   {% block icon %}
-    <div class="messages__icon inline-block mr1">
+    <div class="messages__icon inline-block mr-1">
       {% if type == 'error' %}
         <i class="icon icon-exclamation-circle"></i>
       {% elseif type == 'warning' %}
@@ -35,7 +35,7 @@
 
   {% block content %}
     {% if messages|length > 1 %}
-      <ul class="messages__list m0 p0">
+      <ul class="messages__list m-0 p-0">
         {% for message in messages %}
           <li class="messages__item">{{ message }}</li>
         {% endfor %}

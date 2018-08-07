@@ -1,13 +1,13 @@
-<div class="form__container {{ modifier_class }} mt05 mb05">
+<div class="form__container {{ modifier_class }} my-2">
     {% if heading %}
       <h2 class="visually-hidden">{{ heading }}</h2>
     {% endif %}
-    <ul class="tabs clearfix m0 p0 flex flex-wrap flex-start caps list-style-none h5">
+    <ul class="tabs clearfix m-0 p-0 flex flex-wrap flex-start caps list-style-none h5">
       {% for tab in tabs %}
         {% set activeClass = tab.active ? 'is-active white' : '' %}
         <li class="tabs__tab border-top border-bottom border-right {{ activeClass }} {{ loop.first ? 'rounded-left border-left' }} {{ loop.last ? 'rounded-right' }}">
           {% block link %}
-            <a href="{{ tab.url }}" class="tabs__tab-link block p1 bg-tertiary black text-decoration-none allt {{ activeClass }} {{ loop.first ? 'rounded-left' }} {{ loop.last ? 'rounded-right' }}">
+            <a href="{{ tab.url }}" class="tabs__tab-link block p-4 bg-tertiary black text-decoration-none allt {{ activeClass }} {{ loop.first ? 'rounded-left' }} {{ loop.last ? 'rounded-right' }}">
               {{ tab.text }}
               {% if tab.active %}
                 <span class="visually-hidden">{{ activeLabel|default('(active tab)') }}</span>

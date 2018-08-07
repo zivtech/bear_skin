@@ -8,11 +8,11 @@
   {% endif %}
   <div class="branding__meta flex flex-column justify-center">
   {% if site_name %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="branding__site-name ml05 mr05">{{ site_name }}</a>
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="branding__site-name mx-2">{{ site_name }}</a>
   {% endif %}
 
   {% if site_slogan %}
-    <h6 class="branding__site-slogan ml05 mr05 mt025 mb025">{{ site_slogan }}</h6>
+    <h6 class="branding__site-slogan mx-2 my-1">{{ site_slogan }}</h6>
   {% endif %}
   </div>
 {% endblock %}
