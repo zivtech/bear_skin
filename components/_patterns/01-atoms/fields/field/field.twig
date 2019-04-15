@@ -1,3 +1,18 @@
+{#
+  Master field template.
+
+  This template allows themers to:
+    - choose which HTML element to use,
+    - add classes,
+    - set other attributes
+  for:
+    - the field wrapper,
+    - the field label,
+    - the field items element,
+    - the field item element.
+#}
+
+{# Define classes that should be applied to all field wrappers. #}
 {%
   set global_wrapper_classes = [
     'field',
@@ -7,6 +22,7 @@
   ]
 %}
 
+{# Define classes that should be applied to all field labels. #}
 {%
   set global_label_classes = [
     'field__label',
