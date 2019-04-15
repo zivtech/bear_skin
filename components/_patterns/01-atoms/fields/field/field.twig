@@ -14,7 +14,16 @@
   ]
 %}
 
-{% set items_attributes = create_attribute() %}
+{# Handle Items Attributes #}
+{% set default_items_attributes = create_attribute({
+  'class': items_classes ?: 'field__items'
+}) %}
+
+{% if items_attributes %}
+  {% for key, value in items_attributes %}
+    {% set default_items_attributes = default_items_attributes.setAttribute(key, value) %}
+  {% endfor %}
+{% endif %}
 
 <{{ wrapper_element ?: 'div' }}{{ attributes.addClass(global_wrapper_classes, wrapper_classes ?: wrapper_classes).removeClass('field') }}>
 
@@ -28,12 +37,12 @@
 
   {% block content %}
   {% if multiple %}
-    <{{ items_element ?: 'div'}}{{ items_attributes.addClass(items_classes ?: 'field__items')}}>
+    <{{ items_element ?: 'div'}}{{ default_items_attributes }}>
   {% endif %}
 
   {% for item in items %}
     <{{ item_element ?: 'div'}}{{ item.attributes.addClass(item_classes ?: 'field__item') }}>
-        {{ item.content }}
+      {{ item.content }}
     </{{ item_element ?: 'div'}}>
   {% endfor %}
 
