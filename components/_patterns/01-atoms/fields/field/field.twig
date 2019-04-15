@@ -18,10 +18,18 @@
 {% set default_items_attributes = create_attribute({
   'class': items_classes ?: 'field__items'
 }) %}
-
 {% if items_attributes %}
   {% for key, value in items_attributes %}
     {% set default_items_attributes = default_items_attributes.setAttribute(key, value) %}
+  {% endfor %}
+{% endif %}
+
+{# Handle Item Attributes #}
+{% if item_attributes %}
+  {% for item in items %}
+    {% for key, value in item_attributes %}
+      {% set item = item.attributes.setAttribute(key, value) %}
+    {% endfor %}
   {% endfor %}
 {% endif %}
 

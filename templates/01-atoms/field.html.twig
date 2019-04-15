@@ -48,12 +48,21 @@
  *
  * Override markup elements:
   {% include "@atoms/fields/field/field.twig" with {
-      "wrapper_element": "article",
-      "label_element": "h2",
-      "items_element": "ul",
-      "item_element": "li"
-    }
-  %}
+    "wrapper_element": "article",
+    "label_element": "h2",
+    "items_element": "ul",
+    "item_element": "li"
+  } %}
+  *
+ * Set attributes:
+  {% include "@atoms/fields/field/field.twig" with {
+    'items_attributes': {
+      'data-foo': 'bar',
+    },
+    'item_attributes': {
+      'aria-label': 'button',
+    },
+   } %}
  *
  * Completely override field markup:
   {% embed "@atoms/fields/field/field.twig" %}
