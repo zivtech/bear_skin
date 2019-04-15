@@ -1,78 +1,77 @@
-{#
-  Master field template.
+{% set config = {
+  "wrapper": {
+    'element': field_wrapper.element ?: 'div',
+    'classes': (field_wrapper.classes ?: [])|merge([
+      'field',
+      'field--name-' ~ field_name|clean_class,
+      'field--type-' ~ field_type|clean_class,
+      'field--label-' ~ label_display
+    ]),
+    'attributes': field_wrapper.attributes ?: {},
+  },
+  "label": {
+    'element': field_label.element ?: 'h3',
+    'classes': (field_label.classes ?: [])|merge([
+      'field__label',
+      label_display == 'visually_hidden' ? 'visually-hidden',
+    ]),
+    'attributes': field_label.attributes ?: {},
+  },
+  "items": {
+    'element': field_items.element ?: 'div',
+    'classes': field_items.classes ?: ['field__items'],
+    'attributes': field_items.attributes ?: {},
+  },
+  "item": {
+    'element': field_item.element ?: 'div',
+    'classes': field_item.classes ?: ['field__item'],
+    'attributes': field_item.attributes ?: {},
+  },
+} %}
 
-  This template allows themers to:
-    - choose which HTML element to use,
-    - add classes,
-    - set other attributes
-  for:
-    - the field wrapper,
-    - the field label,
-    - the field items element,
-    - the field item element.
-#}
+{# Configure Attributes #}
+{% for key, value in config.wrapper.attributes %}
+  {% set attributes = attributes.setAttribute(key, value) %}
+{% endfor %}
 
-{# Define classes that should be applied to all field wrappers. #}
-{%
-  set global_wrapper_classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display
-  ]
-%}
+{% for key, value in config.label.attributes %}
+  {% set title_attributes = title_attributes.setAttribute(key, value) %}
+{% endfor %}
 
-{# Define classes that should be applied to all field labels. #}
-{%
-  set global_label_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
+{% set items_attributes = create_attribute() %}
+{% for key, value in config.items.attributes %}
+  {% set items_attributes = items_attributes.setAttribute(key, value) %}
+{% endfor %}
 
-{# Handle Items Attributes #}
-{% set default_items_attributes = create_attribute({
-  'class': items_classes ?: 'field__items'
-}) %}
-{% if items_attributes %}
-  {% for key, value in items_attributes %}
-    {% set default_items_attributes = default_items_attributes.setAttribute(key, value) %}
+{% for item in items %}
+  {% for key, value in config.item.attributes %}
+    {% set item = item.attributes.setAttribute(key, value) %}
   {% endfor %}
-{% endif %}
+{% endfor %}
 
-{# Handle Item Attributes #}
-{% if item_attributes %}
-  {% for item in items %}
-    {% for key, value in item_attributes %}
-      {% set item = item.attributes.setAttribute(key, value) %}
-    {% endfor %}
-  {% endfor %}
-{% endif %}
-
-<{{ wrapper_element ?: 'div' }}{{ attributes.addClass(global_wrapper_classes, wrapper_classes ?: wrapper_classes).removeClass('field') }}>
-
+<{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
   {% block label %}
   {% if not label_hidden %}
-    <{{ label_element ?: 'h3' }}{{ title_attributes.addClass(global_label_classes, label_classes ?: label_classes) }}>
+    <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
       {{ label }}
-    </{{ label_element ?: 'h3' }}>
+    </{{ config.label.element }}>
   {% endif %}
   {% endblock %}
 
   {% block content %}
   {% if multiple %}
-    <{{ items_element ?: 'div'}}{{ default_items_attributes }}>
+    <{{ config.items.element }}{{ items_attributes.addClass(config.items.classes) }}>
   {% endif %}
 
   {% for item in items %}
-    <{{ item_element ?: 'div'}}{{ item.attributes.addClass(item_classes ?: 'field__item') }}>
+    <{{ config.item.element }}{{ item.attributes.addClass(config.item.classes) }}>
       {{ item.content }}
-    </{{ item_element ?: 'div'}}>
+    </{{ config.item.element }}>
   {% endfor %}
 
   {% if multiple %}
-    </{{ items_element ?: 'div'}}>
+    </{{ config.items.element }}>
   {% endif %}
   {% endblock %}
 
-</{{ wrapper_element ?: 'div' }}>
+</{{ config.wrapper.element }}>
