@@ -3,22 +3,6 @@
  * @file
  * Theme override for a field.
  *
- * To override output, copy the "field.html.twig" from the templates directory
- * to your theme's directory and customize it, just like customizing other
- * Drupal templates such as page.html.twig or node.html.twig.
- *
- * Instead of overriding the theming for all fields, you can also just override
- * theming for a subset of fields using
- * @link themeable Theme hook suggestions. @endlink For example,
- * here are some theme hook suggestions that can be used for a field_foo field
- * on an article node type:
- * - field--node--field-foo--article.html.twig
- * - field--node--field-foo.html.twig
- * - field--node--article.html.twig
- * - field--field-foo.html.twig
- * - field--text-with-summary.html.twig
- * - field.html.twig
- *
  * Available variables:
  * - attributes: HTML attributes for the containing element.
  * - label_hidden: Whether to show the field label or not.
@@ -37,30 +21,50 @@
  * @see template_preprocess_field()
  */
 #}
-{%
-  set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-  ]
-%}
-{%
-  set title_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
 
-{% embed "@atoms/fields/field/field.twig"
-  with {
-  "label": label,
-  "label_hidden": label_hidden,
-  "label_element": "h3",
-  "attributes": attributes,
-  "multiple": multiple,
-  "items": items,
-  "element": "div"
-  }
-%}
-{% endembed %}
+{# Examples
+  # Add classes, change element markup, etc.
+  {% include "@atoms/fields/field/field.twig" with {
+    'field_wrapper': {
+      'element': 'article',
+      'classes': [
+        'button-group',
+        multiple ? 'button-group--multiple' : '',
+      ],
+      'attributes': {
+        'data-foo': 'bar',
+      }
+    },
+    'field_label': {
+      'element': 'h1',
+      'attributes': {
+        'aria-hidden': 'false',
+      },
+    },
+    'field_items': {
+      'element': 'ul',
+      'classes': ['button-group__list'],
+    },
+    'field_item': {
+      'element': 'li',
+      'classes': ['button'],
+      'attributes': {
+        'aria-role': 'button',
+      },
+    },
+  } %}
+
+  # Completely override field markup:
+  {% embed "@atoms/fields/field/field.twig" %}
+    {% block label %}
+      <h2 class="label">{{ label }}</h2>
+    {% endblock %}
+    {% block content %}
+      <div class="field-content">
+        {{ item.content }}
+      </div>
+    {% endblock %}
+  {% endembed %}
+#}
+
+{% include "@atoms/fields/field/field.twig" %}

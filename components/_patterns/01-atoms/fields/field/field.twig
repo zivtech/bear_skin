@@ -1,14 +1,77 @@
-<{{ element ?: 'div' }}{{ attributes.addClass(classes).removeClass('field') }}>
-{% if not label_hidden %}
-    <{{ label_element ?: 'h3' }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_element ?: 'h3' }}>
-{% endif %}
+{% set config = {
+  "wrapper": {
+    'element': field_wrapper.element ?: 'div',
+    'classes': (field_wrapper.classes ?: [])|merge([
+      'field',
+      'field--name-' ~ field_name|clean_class,
+      'field--type-' ~ field_type|clean_class,
+      'field--label-' ~ label_display
+    ]),
+    'attributes': field_wrapper.attributes ?: {},
+  },
+  "label": {
+    'element': field_label.element ?: 'h3',
+    'classes': (field_label.classes ?: [])|merge([
+      'field__label',
+      label_display == 'visually_hidden' ? 'visually-hidden',
+    ]),
+    'attributes': field_label.attributes ?: {},
+  },
+  "items": {
+    'element': field_items.element ?: 'div',
+    'classes': field_items.classes ?: ['field__items'],
+    'attributes': field_items.attributes ?: {},
+  },
+  "item": {
+    'element': field_item.element ?: 'div',
+    'classes': field_item.classes ?: ['field__item'],
+    'attributes': field_item.attributes ?: {},
+  },
+} %}
+
+{# Configure Attributes #}
+{% for key, value in config.wrapper.attributes %}
+  {% set attributes = attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% for key, value in config.label.attributes %}
+  {% set title_attributes = title_attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% set items_attributes = create_attribute() %}
+{% for key, value in config.items.attributes %}
+  {% set items_attributes = items_attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% for item in items %}
+  {% for key, value in config.item.attributes %}
+    {% set item = item.attributes.setAttribute(key, value) %}
+  {% endfor %}
+{% endfor %}
+
+<{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
+  {% block label %}
+  {% if not label_hidden %}
+    <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
+      {{ label }}
+    </{{ config.label.element }}>
+  {% endif %}
+  {% endblock %}
+
+  {% block content %}
   {% if multiple %}
-<div class="field__items">
-    {% endif %}
-    {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
-</div>
-{% endif %}
-</{{ element ?: 'div' }}>
+    <{{ config.items.element }}{{ items_attributes.addClass(config.items.classes) }}>
+  {% endif %}
+
+  {% for item in items %}
+    <{{ config.item.element }}{{ item.attributes.addClass(config.item.classes) }}>
+      {{ item.content }}
+    </{{ config.item.element }}>
+  {% endfor %}
+
+  {% if multiple %}
+    </{{ config.items.element }}>
+  {% endif %}
+  {% endblock %}
+
+</{{ config.wrapper.element }}>
