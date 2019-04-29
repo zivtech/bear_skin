@@ -95,6 +95,14 @@
         'id': 'unique-id__label',
       },
     },
+    'node_author': {
+      'element': 'div',
+      'display': true,
+      'classes': ['accordion__author'],
+      'attributes': {
+        'data-bar': 'baz',
+      },
+    },
     'node_content': {
       'classes': ['accordion__content'],
       'attributes': {
@@ -106,18 +114,14 @@
   # Completely override node markup:
   {% embed "@organisms/node/node.twig" %}
     {% block label %}
-      <h2 class="label">{{ label }}</h2>
+      <div class="node__label-inner">{{ label }}</div>
     {% endblock %}
     {% block author_info %}
-      <div class="author-info">
-        <span class="name">{{ author_name }}</span>
-        <span class="date">{{ date }}</span>
-      </div>
+      <span class="name">{{ author_name }}</span>
+      <span class="date">{{ date }}</span>
     {% endblock %}
     {% block content %}
-      <div class="node-content">
-        {{ content }}
-      </div>
+      {{ content|without('field_example') }}
     {% endblock %}
   {% endembed %}
 #}

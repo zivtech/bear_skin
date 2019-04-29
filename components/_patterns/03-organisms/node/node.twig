@@ -15,9 +15,19 @@
       'display': node_label.display ?: not page,
       'link': node_label.link is defined ? node_label.link : true,
       'classes': (node_label.classes ?: [])|merge([
+        'node__title',
         'node--' ~ node.bundle|clean_class ~ '__title',
       ]),
       'attributes': node_label.attributes ?: {},
+    },
+    'author': {
+      'element': node_author.element ?: 'footer',
+      'display': node_author.display is defined ? node_author.display : display_submitted,
+      'classes': (node_author.classes ?: [])|merge([
+        'node__author-info',
+        'node--' ~ node.bundle|clean_class ~ '__author-info',
+      ]),
+      'attributes': node_author.attributes ?: {},
     },
     'content': {
       'element': node_content.element ?: 'div',
@@ -37,6 +47,10 @@
 
 {% for key, value in config.label.attributes %}
   {% set title_attributes = title_attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% for key, value in config.author.attributes %}
+  {% set author_attributes = author_attributes.setAttribute(key, value) %}
 {% endfor %}
 
 {% for key, value in config.content.attributes %}
@@ -61,15 +75,15 @@
   {% endblock %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
+  {% if config.author.display %}
     {% block author_info %}
-      <footer>
+      <{{ config.author.element }}{{ author_attributes.addClass(config.author.classes) }}>
         {{ author_picture }}
-        <div{{ author_attributes }}>
+        <div class="node__author-inner">
           {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
           {{ metadata }}
         </div>
-      </footer>
+      </{{ config.author.element }}>
     {% endblock %}
   {% endif %}
 
