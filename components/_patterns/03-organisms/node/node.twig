@@ -60,9 +60,9 @@
 <{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
 
   {{ title_prefix }}
-  {% block label %}
-    {% if config.label.display %}
-      <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
+  {% if config.label.display %}
+    <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
+      {% block label %}
         {% if config.label.link %}
         <a href="{{ url }}" rel="bookmark">
         {% endif %}
@@ -70,27 +70,27 @@
         {% if config.label.link %}
         </a>
         {% endif %}
-      </{{ config.label.element }}>
-    {% endif %}
-  {% endblock %}
+      {% endblock %}
+    </{{ config.label.element }}>
+  {% endif %}
   {{ title_suffix }}
 
   {% if config.author.display %}
-    {% block author_info %}
-      <{{ config.author.element }}{{ author_attributes.addClass(config.author.classes) }}>
+    <{{ config.author.element }}{{ author_attributes.addClass(config.author.classes) }}>
+      {% block author_info %}
         {{ author_picture }}
         <div class="node__author-inner">
           {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
           {{ metadata }}
         </div>
-      </{{ config.author.element }}>
-    {% endblock %}
+      {% endblock %}
+    </{{ config.author.element }}>
   {% endif %}
 
-  {% block content %}
-    <{{ config.content.element }}{{ content_attributes.addClass(config.content.classes) }}>
+  <{{ config.content.element }}{{ content_attributes.addClass(config.content.classes) }}>
+    {% block content %}
       {{ content }}
-    </{{ config.content.element }}>
-  {% endblock %}
+    {% endblock %}
+  </{{ config.content.element }}>
 
 </{{ config.wrapper.element }}>
