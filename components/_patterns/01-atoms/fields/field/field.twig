@@ -50,13 +50,13 @@
 {% endfor %}
 
 <{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
-  {% block label %}
   {% if not label_hidden %}
     <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
-      {{ label }}
+      {% block label %}
+        {{ label }}
+      {% endblock %}
     </{{ config.label.element }}>
   {% endif %}
-  {% endblock %}
 
   {% block content %}
   {% if multiple %}
