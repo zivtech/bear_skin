@@ -1,7 +1,82 @@
-{% embed "@molecules/blocks/block/block.twig" with {
-"element": "article",
-"display_title": false,
-"content": content
-} %}
+{%
+  set config = {
+    'wrapper': {
+      'element': node_wrapper.element ?: 'article',
+      'classes': (node_wrapper.classes ?: [])|merge([
+        node.isPromoted() ? 'node--promoted',
+        node.isSticky() ? 'node--sticky',
+        not node.isPublished() ? 'node--unpublished',
+        view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+      ]),
+      'attributes': node_wrapper.attributes ?: {},
+    },
+    'label': {
+      'element': node_label.element ?: 'h2',
+      'display': node_label.display ?: not page,
+      'link': node_label.link is defined ? node_label.link : true,
+      'classes': (node_label.classes ?: [])|merge([
+        'node--' ~ node.bundle|clean_class ~ '__title',
+      ]),
+      'attributes': node_label.attributes ?: {},
+    },
+    'content': {
+      'element': node_content.element ?: 'div',
+      'classes': (node_content.classes ?: [])|merge([
+        'node__content',
+        'node--' ~ node.bundle|clean_class ~ '__content'
+      ]),
+      'attributes': node_content.attributes ?: {},
+    },
+  }
+%}
 
-{% endembed %}
+{# Configure Attributes #}
+{% for key, value in config.wrapper.attributes %}
+  {% set attributes = attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% for key, value in config.label.attributes %}
+  {% set title_attributes = title_attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% for key, value in config.content.attributes %}
+  {% set content_attributes = content_attributes.setAttribute(key, value) %}
+{% endfor %}
+
+<{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
+
+  {{ title_prefix }}
+  {% block label %}
+    {% if config.label.display %}
+      <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
+        {% if config.label.link %}
+        <a href="{{ url }}" rel="bookmark">
+        {% endif %}
+          {{ label }}
+        {% if config.label.link %}
+        </a>
+        {% endif %}
+      </{{ config.label.element }}>
+    {% endif %}
+  {% endblock %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    {% block author_info %}
+      <footer>
+        {{ author_picture }}
+        <div{{ author_attributes }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+      </footer>
+    {% endblock %}
+  {% endif %}
+
+  {% block content %}
+    <{{ config.content.element }}{{ content_attributes.addClass(config.content.classes) }}>
+      {{ content }}
+    </{{ config.content.element }}>
+  {% endblock %}
+
+</{{ config.wrapper.element }}>
