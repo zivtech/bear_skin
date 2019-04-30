@@ -62,10 +62,10 @@ Each element accepts an object of HTML attributes as key-value pairs. For exampl
 
 ### Overall Example
 
-`field--list.html.twig`
 The following template will output an unordered list of all the field values. It also applies some extra classes to these elements, and in one case sets a data attribute.
 
 ```
+{# field--list.html.twig #}
 {% include 'field.html.twig' with {
   field_wrapper: {
     'element': 'article',
@@ -93,6 +93,7 @@ Each of the base templates has overridable Twig blocks. These can be used to fur
 
 #### Facilitate a two-column appearance
 ```
+{# node--article--teaser.html.twig #}
 {% extends 'node.html.twig' %}
 {% block content %}
   <div class="left">
@@ -106,13 +107,14 @@ Each of the base templates has overridable Twig blocks. These can be used to fur
 
 ### Use embed statement to combine config and block overrides
 ```
+{# field--cta-text.html.twig #}
 {% embed 'field.html.twig' with {
-  'node_wrapper': {
-    'classes': ['node__content--outer'],
+  'field_wrapper': {
+    'classes': ['field__content--outer'],
   },
 } %}
   {% block content %}
-    <div class="node__content--inner">
+    <div class="field__content--inner">
       {{ content }}
     </div>
   {% endblock %}
@@ -125,6 +127,7 @@ If you need to take matters into your own hands, you have the option to complete
 The benefit of using this instead of writing your own template from scratch is that you still have access to the base template's variables. E.g.
 
 ```
+{# node--press-release--full.html.twig #}
 {% extends 'node.html.twig' %}
 {% block override %}
   <section{{ attributes }}>
