@@ -1,3 +1,4 @@
+{# Set defaults and stage additions and overrides #}
 {%
   set config = {
     'wrapper': {
@@ -22,7 +23,6 @@
     },
     'author': {
       'element': node_author.element ?: 'footer',
-      'display': node_author.display is defined ? node_author.display : display_submitted,
       'classes': (node_author.classes ?: [])|merge([
         'node__author-info',
         'node--' ~ node.bundle|clean_class ~ '__author-info',
@@ -40,28 +40,34 @@
   }
 %}
 
-{# Configure Attributes #}
+{# Configure attributes and apply classes #}
 {% for key, value in config.wrapper.attributes %}
   {% set attributes = attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set attributes = attributes.addClass(config.wrapper.classes) %}
 
 {% for key, value in config.label.attributes %}
   {% set title_attributes = title_attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set title_attributes = title_attributes.addClass(config.label.classes) %}
 
 {% for key, value in config.author.attributes %}
   {% set author_attributes = author_attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set author_attributes = author_attributes.addClass(config.author.classes) %}
 
 {% for key, value in config.content.attributes %}
   {% set content_attributes = content_attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set content_attributes = content_attributes.addClass(config.content.classes) %}
 
-<{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
+{# Render markup #}
+{% block override %}
+<{{ config.wrapper.element }}{{ attributes }}>
 
   {{ title_prefix }}
   {% if config.label.display %}
-    <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
+    <{{ config.label.element }}{{ title_attributes }}>
       {% block label %}
         {% if config.label.link %}
         <a href="{{ url }}" rel="bookmark">
@@ -75,8 +81,8 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if config.author.display %}
-    <{{ config.author.element }}{{ author_attributes.addClass(config.author.classes) }}>
+  {% if display_submitted %}
+    <{{ config.author.element }}{{ author_attributes }}>
       {% block author_info %}
         {{ author_picture }}
         <div class="node__author-inner">
@@ -87,10 +93,11 @@
     </{{ config.author.element }}>
   {% endif %}
 
-  <{{ config.content.element }}{{ content_attributes.addClass(config.content.classes) }}>
+  <{{ config.content.element }}{{ content_attributes }}>
     {% block content %}
       {{ content }}
     {% endblock %}
   </{{ config.content.element }}>
 
 </{{ config.wrapper.element }}>
+{% endblock %}

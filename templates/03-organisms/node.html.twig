@@ -97,7 +97,6 @@
     },
     'node_author': {
       'element': 'div',
-      'display': true,
       'classes': ['accordion__author'],
       'attributes': {
         'data-bar': 'baz',
@@ -111,19 +110,24 @@
     }
   } %}
 
-  # Override markup:
-  {% embed "@organisms/node/node.twig" %}
-    {% block label %}
-      <div class="node__label-inner">{{ label }}</div>
-    {% endblock %}
-    {% block author_info %}
-      <span class="name">{{ author_name }}</span>
-      <span class="date">{{ date }}</span>
-    {% endblock %}
-    {% block content %}
-      {{ content|without('field_example') }}
-    {% endblock %}
-  {% endembed %}
+  # Override blocks
+  {% extends "@organisms/node/node.twig" %}
+  {% block label %}
+    <div class="node__label-inner">{{ label }}</div>
+  {% endblock %}
+  {% block author_info %}
+    <span class="name">{{ author_name }}</span>
+    <span class="date">{{ date }}</span>
+  {% endblock %}
+  {% block content %}
+    {{ content|without('field_example') }}
+  {% endblock %}
+
+  # Completely override template
+  {% extends "@organisms/node/node.twig" %}
+  {% block override %}
+    <div{{ attributes}}>Bar</div>
+  {% endblock %}
 #}
 
 {% include "@organisms/node/node.twig" %}
