@@ -1,3 +1,4 @@
+{# Set defaults and stage additions and overrides #}
 {% set config = {
   'wrapper': {
     'element': block_wrapper.element ?: 'div',
@@ -28,25 +29,31 @@
   },
 } %}
 
+{# Configure attributes and apply classes #}
 {% for key, value in config.wrapper.attributes %}
   {% set attributes = attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set attributes = attributes.addClass(config.wrapper.classes) %}
 
 {% for key, value in config.label.attributes %}
   {% set title_attributes = title_attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set title_attributes = title_attributes.addClass(config.label.classes) %}
 
 {% set content_attributes = create_attribute() %}
 {% for key, value in config.content.attributes %}
   {% set content_attributes = content_attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set content_attributes = content_attributes.addClass(config.content.classes) %}
 
+{# Render markup #}
+{% block override %}
 {% if content %}
-  <{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
+  <{{ config.wrapper.element }}{{ attributes }}>
 
   {% if configuration.label_display %}
     {{ title_prefix }}
-    <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
+    <{{ config.label.element }}{{ title_attributes }}>
       {% block label %}
         {{ configuration.label }}
       {% endblock %}
@@ -55,7 +62,7 @@
   {% endif %}
 
   {% if config.content.element %}
-    <{{ config.content.element }}{{ content_attributes.addClass(config.content.classes) }}>
+    <{{ config.content.element }}{{ content_attributes }}>
   {% endif %}
     {% block content %}
       {{ content }}
@@ -66,3 +73,4 @@
 
   </{{ config.wrapper.element }}>
 {% endif %}
+{% endblock %}

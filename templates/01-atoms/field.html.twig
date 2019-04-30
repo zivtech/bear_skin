@@ -55,16 +55,15 @@
   } %}
 
   # Override blocks
-  {% embed "@atoms/fields/field/field.twig" %}
-    {% block label %}
-      <h2 class="label">{{ label }}</h2>
-    {% endblock %}
-    {% block content %}
-      <div class="field-content">
-        {{ item.content }}
-      </div>
-    {% endblock %}
-  {% endembed %}
+  {% extends "@atoms/fields/field/field.twig" %}
+  {% block label %}
+    <h2 class="label">{{ label }}</h2>
+  {% endblock %}
+  {% block content %}
+    <div class="field-content">
+      {{ item.content }}
+    </div>
+  {% endblock %}
 
   # Completely override template
   {% extends "@atoms/fields/field/field.twig" %}
