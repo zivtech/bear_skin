@@ -70,45 +70,60 @@
  *   in different view modes.
  */
 #}
-{%
-set classes = [
-  'node',
-  'node--type-' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-]
-%}
-{% set title_classes = [
-"node--type-" ~ node.bundle|clean_class ~ "__title"
-]
-%}
-{% set content_classes = [
-  "node__content",
-  "node--type-" ~ node.bundle|clean_class ~ "__content"
-]
-%}
 
-{% embed "@organisms/node/node.twig" with {
-  "element": "article",
-  "label_element": "h1",
-  "title_attributes": title_attributes
-} %}
+{# Examples
+  # Add classes, change element markup, etc.
+  {% include "@organisms/node/node.twig" with {
+    'node_wrapper': {
+      'element': 'details',
+      'classes': ['accordion'],
+      'attributes': {
+        'data-foo': 'bar',
+        'id': 'unique-id',
+      }
+    },
+    'node_label': {
+      'element': 'summary',
+      'display': true,
+      'link': false,
+      'classes': ['accordion__label', 'js-accordion-toggle'],
+      'attributes': {
+        'aria-role': 'button',
+        'aria-pressed': 'false',
+        'aria-expanded': 'false',
+        'aria-controls': 'unique-id',
+        'id': 'unique-id__label',
+      },
+    },
+    'node_author': {
+      'element': 'div',
+      'display': true,
+      'classes': ['accordion__author'],
+      'attributes': {
+        'data-bar': 'baz',
+      },
+    },
+    'node_content': {
+      'classes': ['accordion__content'],
+      'attributes': {
+        'aria-labelledby': 'unique-id__label',
+      }
+    }
+  } %}
 
-  {% block content %}
-    {{ content }}
+  # Completely override node markup:
+  {% embed "@organisms/node/node.twig" %}
+    {% block label %}
+      <div class="node__label-inner">{{ label }}</div>
+    {% endblock %}
+    {% block author_info %}
+      <span class="name">{{ author_name }}</span>
+      <span class="date">{{ date }}</span>
+    {% endblock %}
+    {% block content %}
+      {{ content|without('field_example') }}
+    {% endblock %}
+  {% endembed %}
+#}
 
-    {% if display_submitted %}
-      <footer class="node__meta">
-        {{ author_picture }}
-        <div{{ author_attributes.addClass('node__submitted') }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-          {{ metadata }}
-        </div>
-      </footer>
-    {% endif %}
-
-  {% endblock %}
-
-{% endembed %}
+{% include "@organisms/node/node.twig" %}
