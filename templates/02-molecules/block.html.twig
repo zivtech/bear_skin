@@ -25,32 +25,42 @@
  * @see template_preprocess_block()
  */
 #}
-{%
-set classes = [
-'block',
-'block-' ~ configuration.provider|clean_class,
-'block-' ~ plugin_id|clean_class,
-]
-%}
-{%
-set title_classes = [
-'block__title',
-'block-' ~ configuration.provider|clean_class ~ '__title',
-'block-' ~ plugin_id|clean_class ~ '__title',
-]
-%}
 
-{% embed "@molecules/blocks/block/block.twig"
-    with {
-        "element": "",
-        "label_element": "h2",
-        "label": label,
-        "display_title": configuration.label_display != '0',
-        "title_prefix": title_prefix,
-        "title_suffix": title_suffix
-    }
-%}
-    {% block content %}
-        {{ content }}
+{# Examples
+  # Add classes, change element markup, etc.
+  {% include "@molecules/blocks/block/block.twig" with {
+    'block_wrapper': {
+      'element': 'section',
+      'classes': ['foo'],
+      'attributes': {
+        'data-foo': 'bar',
+      },
+    },
+    'block_label': {
+      'element': 'h3',
+      'classes': ['bar'],
+      'attributes': {
+        'aria-hidden': 'false',
+      },
+    },
+    'block_content': {
+      'element': 'div',
+      'classes': ['baz'],
+      'attributes': {
+        'data-bar': 'baz',
+      },
+    },
+  } %}
+
+  # Override markup:
+  {% embed "@molecules/blocks/block/block.twig" %}
+    {% block label %}
+      <span class="small">{{ label }}</span>
     {% endblock %}
-{% endembed %}
+    {% block content %}
+      <div class="block-content__inner">{{ content }}</div>
+    {% endblock %}
+  {% endembed %}
+#}
+
+{% include "@molecules/blocks/block/block.twig" %}

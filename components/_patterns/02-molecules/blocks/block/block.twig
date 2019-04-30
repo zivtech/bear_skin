@@ -1,23 +1,68 @@
-{% if content %}
-  {% if element is not empty %}
-    <{{ element ?: "div" }}{{ attributes.addClass(classes) }}>
-  {% endif %}
+{% set config = {
+  'wrapper': {
+    'element': block_wrapper.element ?: 'div',
+    'classes': (block_wrapper.classes ?: [])|merge([
+      'block',
+      'block-' ~ configuration.provider|clean_class,
+      'block-' ~ plugin_id|clean_class,
+    ]),
+    'attributes': block_wrapper.attributes ?: {},
+  },
+  'label': {
+    'element': block_label.element ?: 'h2',
+    'classes': (block_label.classes ?: [])|merge([
+      'block__title',
+      'block-' ~ configuration.provider|clean_class ~ '__title',
+      'block-' ~ plugin_id|clean_class ~ '__title',
+    ]),
+    'attributes': block_label.attributes ?: {},
+  },
+  'content': {
+    'element': block_content.element,
+    'classes': (block_content.classes ?: [])|merge([
+      'block__content',
+      'block-' ~ configuration.provider|clean_class ~ '__content',
+      'block-' ~ plugin_id|clean_class ~ '__content',
+    ]),
+    'attributes': block_content.attributes ?: {},
+  },
+} %}
 
-  {% if display_title != false  %}
+{% for key, value in config.wrapper.attributes %}
+  {% set attributes = attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% for key, value in config.label.attributes %}
+  {% set title_attributes = title_attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% set content_attributes = create_attribute() %}
+{% for key, value in config.content.attributes %}
+  {% set content_attributes = content_attributes.setAttribute(key, value) %}
+{% endfor %}
+
+{% if content %}
+  <{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
+
+  {% if configuration.label_display %}
     {{ title_prefix }}
-    {% if label %}
-      {% set title_classes = title_classes ?: "block__title" %}
-      <{{ label_element ?: "h2" }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_element ?: "h2" }}>
-    {% endif %}
+    <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
+      {% block label %}
+        {{ configuration.label }}
+      {% endblock %}
+    </{{ config.label.element }}>
     {{ title_suffix }}
   {% endif %}
 
+  {% if config.content.element %}
+    <{{ config.content.element }}{{ content_attributes.addClass(config.content.classes) }}>
+  {% endif %}
     {% block content %}
       {{ content }}
     {% endblock %}
+  {% if config.content.element %}
+    </{{ config.content.element }}>
+  {% endif %}
 
-    {% if element is not empty %}
-      </{{ element ?: "div" }}>
-    {% endif %}
-
+  </{{ config.wrapper.element }}>
 {% endif %}
