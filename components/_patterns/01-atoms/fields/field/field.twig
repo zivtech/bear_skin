@@ -1,3 +1,4 @@
+{# Set defaults and stage additions and overrides #}
 {% set config = {
   "wrapper": {
     'element': field_wrapper.element ?: 'div',
@@ -29,29 +30,36 @@
   },
 } %}
 
-{# Configure Attributes #}
+{# Configure attributes and apply classes #}
 {% for key, value in config.wrapper.attributes %}
   {% set attributes = attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set attributes = attributes.addClass(config.wrapper.classes) %}
 
 {% for key, value in config.label.attributes %}
   {% set title_attributes = title_attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set title_attributes = title_attributes.addClass(config.label.classes) %}
 
 {% set items_attributes = create_attribute() %}
 {% for key, value in config.items.attributes %}
   {% set items_attributes = items_attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set items_attributes = items_attributes.addClass(config.items.classes) %}
 
 {% for item in items %}
   {% for key, value in config.item.attributes %}
-    {% set item = item.attributes.setAttribute(key, value) %}
+    {% set item = item|merge({'attributes': item.attributes.setAttribute(key, value)}) %}
   {% endfor %}
+  {% set item = item|merge({'attributes': item.attributes.addClass(config.item.classes)}) %}
 {% endfor %}
 
-<{{ config.wrapper.element }}{{ attributes.addClass(config.wrapper.classes) }}>
+{# Render markup #}
+{% block override %}
+<{{ config.wrapper.element }}{{ attributes }}>
+
   {% if not label_hidden %}
-    <{{ config.label.element }}{{ title_attributes.addClass(config.label.classes) }}>
+    <{{ config.label.element }}{{ title_attributes }}>
       {% block label %}
         {{ label }}
       {% endblock %}
@@ -60,11 +68,11 @@
 
   {% block content %}
   {% if multiple %}
-    <{{ config.items.element }}{{ items_attributes.addClass(config.items.classes) }}>
+    <{{ config.items.element }}{{ items_attributes }}>
   {% endif %}
 
   {% for item in items %}
-    <{{ config.item.element }}{{ item.attributes.addClass(config.item.classes) }}>
+    <{{ config.item.element }}{{ item.attributes }}>
       {{ item.content }}
     </{{ config.item.element }}>
   {% endfor %}
@@ -75,3 +83,4 @@
   {% endblock %}
 
 </{{ config.wrapper.element }}>
+{% endblock %}
