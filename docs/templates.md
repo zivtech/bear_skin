@@ -25,7 +25,7 @@ Each element accepts a string in the 'element' key, which changes the HTML eleme
 
 ```
 {% include 'paragraph.html.twig' with {
-  'paragraph': {
+  'paragraph_wrapper': {
     'element': 'section',
   },
 } %}

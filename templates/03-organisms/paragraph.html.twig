@@ -42,7 +42,7 @@
 {# Examples
   # Add classes, change element markup, etc.
   {% include "@organisms/paragraph/paragraph.twig" with {
-    'paragraph': {
+    'paragraph_wrapper': {
       'element': 'section',
       'classes': ['new-class'],
       'attributes': {
@@ -51,17 +51,22 @@
     }
   } %}
 
-  # Override markup
-  {% embed "@organisms/paragraph/paragraph.twig" %}
-    {% block content %}
-      <div class="left">
-          {{ content.field_image }}
-      </div>
-      <div class="right">
-          {{ content|without('field_image') }}
-      </div>
-    {% endblock %}
-  {% endembed %}
+  # Override blocks
+  {% extends "@organisms/paragraph/paragraph.twig" %}
+  {% block content %}
+    <div class="left">
+        {{ content.field_image }}
+    </div>
+    <div class="right">
+        {{ content|without('field_image') }}
+    </div>
+  {% endblock %}
+
+  # Completely override template
+  {% extends "@organisms/paragraph/paragraph.twig" %}
+  {% block override %}
+    <div{{ attributes}}>Bar</div>
+  {% endblock %}
 #}
 
 {% include "@organisms/paragraph/paragraph.twig" %}

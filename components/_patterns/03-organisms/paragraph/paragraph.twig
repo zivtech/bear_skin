@@ -1,20 +1,26 @@
+{# Set defaults and stage additions and overrides #}
 {% set config = {
-  'element': paragraph.element ?: 'div',
-  'classes': (paragraph.classes ?: [])|merge([
+  'element': paragraph_wrapper.element ?: 'div',
+  'classes': (paragraph_wrapper.classes ?: [])|merge([
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
   ]),
-  'attributes': paragraph.attributes ?: {},
+  'attributes': paragraph_wrapper.attributes ?: {},
 } %}
 
+{# Configure attributes and apply classes #}
 {% for key, value in config.attributes %}
   {% set attributes = attributes.setAttribute(key, value) %}
 {% endfor %}
+{% set attributes = attributes.addClass(config.classes) %}
 
-<{{ config.element }}{{ attributes.addClass(config.classes) }}>
+{# Render markup #}
+{% block override %}
+<{{ config.element }}{{ attributes }}>
   {% block content %}
     {{ content }}
   {% endblock %}
 </{{ config.element }}>
+{% endblock %}
