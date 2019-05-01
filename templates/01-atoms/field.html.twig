@@ -54,17 +54,22 @@
     },
   } %}
 
-  # Completely override field markup:
-  {% embed "@atoms/fields/field/field.twig" %}
-    {% block label %}
-      <h2 class="label">{{ label }}</h2>
-    {% endblock %}
-    {% block content %}
-      <div class="field-content">
-        {{ item.content }}
-      </div>
-    {% endblock %}
-  {% endembed %}
+  # Override blocks
+  {% extends "@atoms/fields/field/field.twig" %}
+  {% block label %}
+    <h2 class="label">{{ label }}</h2>
+  {% endblock %}
+  {% block content %}
+    <div class="field-content">
+      {{ item.content }}
+    </div>
+  {% endblock %}
+
+  # Completely override template
+  {% extends "@atoms/fields/field/field.twig" %}
+  {% block override %}
+    <div{{ attributes}}>Bar</div>
+  {% endblock %}
 #}
 
 {% include "@atoms/fields/field/field.twig" %}

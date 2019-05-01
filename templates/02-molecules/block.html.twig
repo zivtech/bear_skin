@@ -52,15 +52,20 @@
     },
   } %}
 
-  # Override markup:
-  {% embed "@molecules/blocks/block/block.twig" %}
-    {% block label %}
-      <span class="small">{{ label }}</span>
-    {% endblock %}
-    {% block content %}
-      <div class="block-content__inner">{{ content }}</div>
-    {% endblock %}
-  {% endembed %}
+  # Override blocks
+  {% extends "@molecules/blocks/block/block.twig" %}
+  {% block label %}
+    <span class="small">{{ label }}</span>
+  {% endblock %}
+  {% block content %}
+    <div class="block-content__inner">{{ content }}</div>
+  {% endblock %}
+
+  # Completely override template
+  {% extends "@molecules/blocks/block/block.twig" %}
+  {% block override %}
+    <div{{ attributes}}>Bar</div>
+  {% endblock %}
 #}
 
 {% include "@molecules/blocks/block/block.twig" %}
